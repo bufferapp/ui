@@ -73,7 +73,7 @@ const Text = style.h1`
 `;
 
 
-const Header = ({  }) => {
+const Header = ({ title }) => {
 	return (
         <Wrapper>
             <Top>
