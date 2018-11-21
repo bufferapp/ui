@@ -11,17 +11,4 @@ test('toggles input type when show/hid password is clicked', ()=> {
     //Password input should have password type initially
     expect(wrapper.find({type: 'password'})).toHaveLength(1)
     expect(wrapper.find({type:'text'})).toHaveLength(0)
-
-    // wrapper.find('a').simulate('click');
-    // //Password input should have password type initially
-    // expect(wrapper.find({type: 'password'})).toHaveLength(0)
-    // expect(wrapper.find({type:'text'})).toHaveLength(1)
-})
-
-test('hides password by default', () => {
-    const tree = renderer
-        .create(<PasswordInput htmlId={"test"} name={"test"} onChange={() => {}} value={"TesEkasn&#23"}/>)
-        .toJSON();
-
-    expect(tree).toMatchSnapshot();
 })
