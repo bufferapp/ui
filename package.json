@@ -63,7 +63,7 @@
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "predeploy:docs": "npm run builod:docs",
+    "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -135,5 +135,5 @@
   "files": [
     "lib"
   ],
-  "homepage": "http://ivanaszuber.github.io/shared-components"
+  "homepage": "http://ivanaszuber.github.io/shared-components/"
 }
