@@ -4,6 +4,8 @@ let chalk = require('chalk'); //for coloring the command line output
 let parse = require('react-docgen').parse; // lib that will look at our components and pull out the metadata out of our components code
 let chokidar = require('chokidar'); //used to watch files and then run a function in a cross-platform way
 
+
+//get the paths of examples and components and output the component data to the config folder
 let paths = {
     examples: path.join(__dirname, '../src', 'docs', 'examples'),
     components: path.join(__dirname, '../src', 'components'),
@@ -20,26 +22,27 @@ else {
 }
 
 
-//keeps track of an array or errors
-//iterates over our
+/** Generate our component documentation by getting all the components
+ * directories, and fo each component, generating component data and
+ * writing that to our output file*/
 function generate(paths) {
     let errors = [];
     let componentData = getDirectories(paths.components).map(componentName => {
-
-       // try {
+        try {
             return getComponentData(paths, componentName)
-        // } catch (error) {
-        //     errors.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
-        // }
+        } catch (error) {
+            errors.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
+        }
     });
     //write the array of data to our output file
     writeFile(paths.output, "module.exports = " + JSON.stringify(errors.length ? errors : componentData));
 }
 
+/** react-doc-gen's parse method reads the content of our components
+ * and returns the metadata (comments, proptypes, examples...) */
 function getComponentData(paths, componentName) {
     let content = readFile(path.join(paths.components, componentName, componentName + '.jsx'));
-    //react-doc-get reads the content of our source code
-    //and return the meta data
+
     let info = parse(content);
     return {
         name: componentName,
@@ -56,7 +59,7 @@ function getExampleData(examplesPath, componentName) {
         let filePath = path.join(examplesPath, componentName, file);
         let content = readFile(filePath);
 
-        //a little hack to account for possible multiple components
+        // a little hack to account for possible multiple components
         // in a single example
         let newContent = content.replace('[', '<div>').replace(']', '</div>')
         let info = parse(newContent);

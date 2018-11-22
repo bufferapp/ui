@@ -1,11 +1,10 @@
 import React from 'react';
-import renderer from 'react-test-renderer';
 import PasswordInput from './PasswordInput';
 import Enzyme, {shallow} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 Enzyme.configure({ adapter: new Adapter() });
 
-test('toggles input type when show/hid password is clicked', ()=> {
+test('password input should be of type password', ()=> {
     const wrapper = shallow(<PasswordInput htmlId={"test"} name={"name"} onChange={()=>{}} value={""}/>)
 
     //Password input should have password type initially

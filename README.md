@@ -1,28 +1,54 @@
-# Buffer Shared Components
+# Shared Components
 
-## Available Scripts
+[![Build Status](https://travis-ci.org/ivanaszuber/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/buffer-components)
 
-In the project directory, you can run:
+A shared set of UI Components using React and Styled Components.
 
-### `npm start`
+Demo: https://ivanaszuber.github.io/shared-components/
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+To use this in your project start at the [usage](#usage) section. If you'd like to add to this
+library skip to [component development](#component-development).
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Component Development
 
-### `npm test`
+- [Quick Start](#quick-start)
+- [Test](#test)
+- [Component Anatomy](#component-anatomy)
+- [FAQ](#faq)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Quick Start
 
-### `npm run build`
+Install Node Modules
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```sh
+npm i
+```
 
-The build is minified and the filenames include the hashes.<br>
-The app is ready to be deployed!
+Start Documentation App
+
+```sh
+npm start
+```
+
+Open http://localhost:3000 where you'll find the components documentation system.
+
+## Test
+
+Run Linter And Test
+
+```sh
+npm run t
+```
 
 
+## Adding a new Components
+
+- Create a new folder with the component name under components
+- In that folder create:
+    - `ComponentName.jsx` file with the component code,
+    - `index.js` with the default export,
+    - `style.js` with components styles using styled-components library
+    - `ComponentName.test.js` with a snapshot test
+- The documentation site should be automatically refreshed and you should see your new component there
+- In the examples folder create a new folder named after your component
+    - add a new file for each version of your component, named `ExampleVersion.jsx`
