@@ -55,6 +55,15 @@ const Text = style.h2`
     border-left-color: #2E5DF8;
 `;
 
+const Description = style.p`
+    font-size: 14px;
+    line-height: 24px;
+`;
+
+const PropTitle = style.h3`
+    margin-top: 50px;
+`;
+
 
 const ComponentPage = ({component}) => {
     const {name, description, props, examples} = component;
@@ -64,10 +73,10 @@ const ComponentPage = ({component}) => {
                 <Body>
                 <Header>
                     <Title>
-                        <Text>{name}</Text>
+                        <Text>{name + 's'}</Text>
                     </Title>
                 </Header>
-                <p>{description}</p>
+                <Description>{description}</Description>
 
                 <h3>Example{examples.length > 1 && "s"}</h3>
                 {
@@ -76,7 +85,7 @@ const ComponentPage = ({component}) => {
                         "No examples exist."
                 }
 
-                <h3> Props</h3>
+                <PropTitle> Props</PropTitle>
                 {
                     props ?
                         <Props props={props}/> :

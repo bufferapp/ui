@@ -25,11 +25,12 @@ else {
 function generate(paths) {
     let errors = [];
     let componentData = getDirectories(paths.components).map(componentName => {
-        try {
+
+       // try {
             return getComponentData(paths, componentName)
-        } catch (error) {
-            errors.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
-        }
+        // } catch (error) {
+        //     errors.push('An error occurred while attempting to generate metadata for ' + componentName + '. ' + error);
+        // }
     });
     //write the array of data to our output file
     writeFile(paths.output, "module.exports = " + JSON.stringify(errors.length ? errors : componentData));
@@ -54,7 +55,11 @@ function getExampleData(examplesPath, componentName) {
     return examples.map((file) => {
         let filePath = path.join(examplesPath, componentName, file);
         let content = readFile(filePath);
-        let info = parse(content);
+
+        //a little hack to account for possible multiple components
+        // in a single example
+        let newContent = content.replace('[', '<div>').replace(']', '</div>')
+        let info = parse(newContent);
 
         return {
             // By convention, component name should match the filename

@@ -37,7 +37,9 @@ export default class Docs extends React.Component {
         const {route} = this.state;
         //by convention, the route in the url should match the components name
         //if there's no component specified, just show the first component in the list
-        const component = route ? componentData.filter( component => component.name === route) [0] : componentData[0];
+
+        console.log(componentData)
+        const component = route ? componentData.filter( component => component.name === route)[0] : componentData[0];
 
         return (
             <Container>

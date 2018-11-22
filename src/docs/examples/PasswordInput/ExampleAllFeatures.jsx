@@ -1,5 +1,5 @@
 import React from 'react';
-import PasswordInput from 'ps-react/PasswordInput';
+import PasswordInput from '@bufferapp/components/PasswordInput';
 
 
 export default class ExampleAllFeatures extends React.Component {

@@ -19,6 +19,7 @@ const Row = style.tr`
 const Item = style.td`
     padding: 10px 0px;
     padding-right: 25px;
+    font-size: 14px;
 `;
 
 const Props = ({ props }) => {
@@ -38,6 +39,7 @@ const Props = ({ props }) => {
                     Object.keys(props).map(key => {
                         return (
                             <Row key={key}>
+                                <Item>{key}</Item>
                                 <Item>{props[key].description}</Item>
                                 <Item>{props[key].type.name}</Item>
                                 <Item>{props[key].defaultValue && props[key].defaultValue.value}</Item>

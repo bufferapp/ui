@@ -1,5 +1,5 @@
 import React from 'react';
-import TextInput from 'ps-react/TextInput';
+import TextInput from '@bufferapp/components/TextInput';
 
 /** Optional Textbox */
 export default function ExampleOptional() {
