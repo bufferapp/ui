@@ -124,7 +124,6 @@
     "chokidar": "^2.0.4",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.7.0",
-    "fsevents": "^2.0.1",
     "gh-pages": "^2.0.1",
     "npm-run-all": "4.0.2",
     "prop-types": "15.6.2",
