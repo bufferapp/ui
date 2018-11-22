@@ -13,7 +13,7 @@ library skip to [component development](#component-development).
 
 - [Quick Start](#quick-start)
 - [Test](#test)
-- [Adding a new Components](#adding-a-new-component)
+- [Adding a new Component](#adding-a-new-component)
 
 ## Quick Start
 
@@ -40,7 +40,7 @@ npm run t
 ```
 
 
-## Adding a new Components
+## Adding a new Component
 
 - Create a new folder with the component name under components
 - In that folder create:
