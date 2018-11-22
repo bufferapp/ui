@@ -13,8 +13,7 @@ library skip to [component development](#component-development).
 
 - [Quick Start](#quick-start)
 - [Test](#test)
-- [Component Anatomy](#component-anatomy)
-- [FAQ](#faq)
+- [Adding a new Components](#adding-a-new-component)
 
 ## Quick Start
 
