@@ -4,10 +4,8 @@
 
 A shared set of UI Components using React and Styled Components.
 
-Demo: https://ivanaszuber.github.io/shared-components/
+Documentation and Style Guide: https://ivanaszuber.github.io/shared-components/
 
-To use this in your project start at the [usage](#usage) section. If you'd like to add to this
-library skip to [component development](#component-development).
 
 ## Component Development
 
@@ -32,6 +30,17 @@ npm start
 Open http://localhost:3000 where you'll find the components documentation system.
 
 ## Test
+
+For testing we're using automated snapshot testing with `jest-auto-snapshots`. In order to create a new snapshot test, just create the test file for the given component and add:
+
+```
+import snap from 'jest-auto-snapshots';
+import MyComponent from '../MyComponent';
+
+snap(MyComponent, '../MyComponent.jsx');
+```
+
+This will generate snapshot tests for all the different possible rendering state of that component by detecting the different prop types that component uses.
 
 Run Linter And Test
 

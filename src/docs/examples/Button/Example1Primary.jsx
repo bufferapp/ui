@@ -9,3 +9,6 @@ export default function ExamplePrimary() {
         <Button primary small onClick={()=>{}}>Primary Small</Button>
    ]
 }
+
+
+
