@@ -256,7 +256,7 @@ Button.defaultProps = {
 export default NewComponentStyled;
 
 
-``
+```
 
 
 
