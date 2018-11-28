@@ -1,19 +1,22 @@
-import styled from 'styled-components';
+import { css } from 'styled-components';
+import {
+  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow,
+} from '../style/colors';
+import {
+  fontFamily, fontSize, lineHeight, fontWeightMedium,
+} from '../style/fonts';
+import { borderRadius } from '../style/borders';
 
-export const ButtonStyled = styled.div`
-  height:  ${props =>
-    (props.large ? '48px' :
-        props.small ? '32px' :
-                '40px')};
+
+/* styles common to all buttons */
+export const buttonbase = css`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  padding-left: ${props=> (props.small ? '8px' : '16px')};
-  padding-right:  ${props=> (props.small ? '8px' : '16px')};
-  font-size: 14px;
-  line-height: 14px;
-  font-weight: 500;
-  border-radius: 4px;
+  font-size: ${fontSize};
+  line-height: ${lineHeight};
+  font-weight: ${fontWeightMedium};
+  border-radius: ${borderRadius};
   cursor: pointer;
   user-select: none;
   border: 0;
@@ -27,41 +30,75 @@ export const ButtonStyled = styled.div`
   text-overflow: ellipsis;
   min-width: 0;
   flex: 0 0 auto;
-  font-family: Roboto,serif;
-  background-color: ${props =>
-    (props.primary ? '#2c4bff' :
-        props.secondary ? '#fff' :
-            props.link || props.text ? 'transparent' :
-                'white')};
-  color: ${props =>
-    (props.primary ? '#fff' :
-        props.secondary ? '636363' :
-            props.link ? '#2C4BFF' :
-                '#77797a')};
-  border: ${props => (props.secondary ? '1px solid #B8B8B8' : '0')};
-  
-  :hover {
+  font-family: ${fontFamily};
+  background-color: ${white};
+  color:${grayDefault};
+    :hover {
       transition-property: background-color, border-color, color;
       transition-duration: 0.1s;
       transition-timing-function: ease-in;
-      background-color: ${props => (props.primary ? '#1f35b3' : 'inherit')};
-      border-color: ${props => (props.secondary ? '#636363' : 'inherit')};
-      color: ${props =>
-    (props.secondary ? '#3d3d3d' :
-        props.text ? '#3d3d3d' :
-            props.link ? '#1F35B3' :
-                '#fff')};
   }
-  
   :active {
     top: 1px;
   }
-  
   :focus {
-      box-shadow: 0 0 0 3px #ABB7FF;
+      box-shadow: 0 0 0 3px ${boxShadow};
       outline: 0;
-      border-color: ${props => (props.secondary ? '#2c4bff' : 'inherit')};
-      color: ${props => (props.secondary ? '#3d3d3d' : 'inherit')};
-    }
+  }
+  
 `;
 
+/* theme variants */
+export const primary = css`
+  background-color: ${blue};
+  color: ${white};
+  :hover {
+    background-color: ${blueDarker};
+    color: ${white};
+  }
+`;
+export const secondary = css`
+  background-color: ${white};
+  color: ${grayDark};
+  border: 1px solid ${gray};
+ 
+  :hover {
+    color: ${grayDarker};
+    border-color: ${grayDark};
+  }
+  
+  :focus {
+      border-color: ${blue};
+      color: ${grayDarker};
+    }
+`;
+export const link = css`
+  background-color: transparent;
+  color:${blue};
+  :hover {
+    color: ${blueDarker};
+  }
+`;
+export const text = css`
+  background-color: transparent;
+  :hover {
+    color: ${grayDarker};
+  }
+`;
+
+/* size variants */
+export const small = css`
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 32px;
+`;
+export const medium = css`
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 40px;
+`;
+export const large = css`
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 48px;
+`;

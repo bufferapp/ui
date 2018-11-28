@@ -1,0 +1,19 @@
+export const blue = '#2c4bff';
+export const blueDarker = '#1F35B3';
+export const purple = '#9C2BFF';
+export const pink = '#D925AC';
+export const teal = '#00C8CF';
+export const red = '#E0364F';
+export const orange = '#FF702C';
+export const yellow = '#FADE2A';
+export const green = '#87C211';
+
+export const white = '#FFFFFF';
+export const grayLighter = '#F5F5F5';
+export const grayLight = '#E0E0E0';
+export const gray = '#B8B8B8';
+export const grayDark = '#636363';
+export const grayDarker = '#3D3D3D';
+export const grayDefault = '#77797a';
+
+export const boxShadow = '#ABB7FF';

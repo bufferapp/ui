@@ -3,5 +3,5 @@ import Button from '@bufferapp/components/Button';
 
 /** Text type buttons */
 export default function ExampleText() {
-    return <Button text onClick={()=>{}}>Text Button</Button>
+  return <Button type="text" onClick={() => {}}>Text Button</Button>;
 }
