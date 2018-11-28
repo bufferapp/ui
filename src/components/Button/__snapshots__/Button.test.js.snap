@@ -1,147 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Button renders correctly 1`] = `
-<div
-  aria-label={null}
-  className="sc-bdVaJa fThgCj"
-  disabled={false}
-  onClick={[Function]}
->
-  Primary Button
-</div>
-`;
-
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"
   disabled={false}
-  large={true}
-  link={true}
   onClick={[MockFunction]}
-  primary={true}
-  primarySplit={true}
-  secondary={true}
-  small={true}
-  text={true}
->
-  <NodeFixture />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "large" is set to: "false" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  large={false}
-  link={true}
-  onClick={[MockFunction]}
-  primary={true}
-  primarySplit={true}
-  secondary={true}
-  small={true}
-  text={true}
->
-  <NodeFixture />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "link" is set to: "false" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  large={true}
-  link={false}
-  onClick={[MockFunction]}
-  primary={true}
-  primarySplit={true}
-  secondary={true}
-  small={true}
-  text={true}
->
-  <NodeFixture />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "primary" is set to: "false" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  large={true}
-  link={true}
-  onClick={[MockFunction]}
-  primary={false}
-  primarySplit={true}
-  secondary={true}
-  small={true}
-  text={true}
->
-  <NodeFixture />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "primarySplit" is set to: "false" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  large={true}
-  link={true}
-  onClick={[MockFunction]}
-  primary={true}
-  primarySplit={false}
-  secondary={true}
-  small={true}
-  text={true}
->
-  <NodeFixture />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "secondary" is set to: "false" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  large={true}
-  link={true}
-  onClick={[MockFunction]}
-  primary={true}
-  primarySplit={true}
-  secondary={false}
-  small={true}
-  text={true}
->
-  <NodeFixture />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "small" is set to: "false" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  large={true}
-  link={true}
-  onClick={[MockFunction]}
-  primary={true}
-  primarySplit={true}
-  secondary={true}
-  small={false}
-  text={true}
->
-  <NodeFixture />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "text" is set to: "false" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  large={true}
-  link={true}
-  onClick={[MockFunction]}
-  primary={true}
-  primarySplit={true}
-  secondary={true}
-  small={true}
-  text={false}
+  size="small"
+  type="link"
 >
   <NodeFixture />
 </ForwardRef>
@@ -151,14 +16,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
-  large={true}
-  link={true}
   onClick={[MockFunction]}
-  primary={true}
-  primarySplit={true}
-  secondary={true}
-  small={true}
-  text={true}
+  size="small"
+  type="link"
 >
   <NodeFixture />
 </ForwardRef>
@@ -166,16 +26,11 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
 <ForwardRef
-  aria-label={null}
+  aria-label="jest-auto-snapshots String Fixture"
   disabled={false}
-  large={false}
-  link={false}
   onClick={[MockFunction]}
-  primary={false}
-  primarySplit={false}
-  secondary={false}
-  small={false}
-  text={false}
+  size="medium"
+  type="link"
 >
   <NodeFixture />
 </ForwardRef>

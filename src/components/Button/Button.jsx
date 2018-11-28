@@ -39,7 +39,7 @@ Button.propTypes = {
   disabled: PropTypes.bool,
 
   /** Is the Button large */
-  size: PropTypes.oneOf(['small', 'large']),
+  size: PropTypes.oneOf(['small', 'large', 'medium']),
 
   /** OnClick handler */
   onClick: PropTypes.func.isRequired,
