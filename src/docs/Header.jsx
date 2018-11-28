@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from 'styled-components';
 
 const Wrapper = style.div`
@@ -73,23 +74,26 @@ const Text = style.h1`
 `;
 
 
-const Header = ({ title }) => {
-	return (
-        <Wrapper>
-            <Top>
-                <Middle>
-                    <Title>
-                        <Logo>
-                            <Image src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/spaces%2F-LFNym8ScnaWKWBQFWTw%2Favatar.png?generation=1529427935328806&alt=media"/>
-                        </Logo>
-                        <TextWrapper>
-                            <Text>{title}</Text>
-                        </TextWrapper>
-                    </Title>
-                </Middle>
-            </Top>
-        </Wrapper>
-		);
+const Header = ({ title }) => (
+  <Wrapper>
+    <Top>
+      <Middle>
+        <Title>
+          <Logo>
+            <Image src="https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/spaces%2F-LFNym8ScnaWKWBQFWTw%2Favatar.png?generation=1529427935328806&alt=media" />
+          </Logo>
+          <TextWrapper>
+            <Text>{ title }</Text>
+          </TextWrapper>
+        </Title>
+      </Middle>
+    </Top>
+  </Wrapper>
+);
+
+Header.propTypes = {
+  title: PropTypes.string.isRequired,
 };
+
 
 export default Header;

@@ -22,39 +22,45 @@ const Item = style.td`
     font-size: 14px;
 `;
 
-const Props = ({ props }) => {
-	return (
-			<Table>
-                <tbody>
-                    <tr>
-                        <Label>Name</Label>
-                        <Label>Description</Label>
-                        <Label>Type</Label>
-                        <Label>Default</Label>
-                        <Label>Required</Label>
-                    </tr>
-                </tbody>
-                <tbody>
-                {
-                    Object.keys(props).map(key => {
-                        return (
-                            <Row key={key}>
-                                <Item>{key}</Item>
-                                <Item>{props[key].description}</Item>
-                                <Item>{props[key].type.name}</Item>
-                                <Item>{props[key].defaultValue && props[key].defaultValue.value}</Item>
-                                <Item>{props[key].required && "X"}</Item>
-                            </Row>
-                        )
-                    })
-                }
-                </tbody>
-            </Table>
-		);
-};
+const Props = ({ props }) => (
+  <Table>
+    <tbody>
+      <tr>
+        <Label>Name</Label>
+        <Label>Description</Label>
+        <Label>Type</Label>
+        <Label>Default</Label>
+        <Label>Required</Label>
+      </tr>
+    </tbody>
+    <tbody>
+      {
+        Object.keys(props).map(key => (
+          <Row key={key}>
+            <Item>{key}</Item>
+            <Item>{props[key].description}</Item>
+            <Item>{props[key].type.name}</Item>
+            <Item>{props[key].defaultValue && props[key].defaultValue.value}</Item>
+            <Item>{props[key].required && 'X'}</Item>
+          </Row>
+        ))
+      }
+    </tbody>
+  </Table>
+);
+
 
 Props.propTypes = {
-    props: PropTypes.object.isRequired
+  props: PropTypes.shape({
+    description: PropTypes.string,
+    type: PropTypes.shape({
+      name: PropTypes.string,
+    }),
+    defaultValue: PropTypes.shape({
+      value: PropTypes.string,
+    }),
+    required: PropTypes.bool,
+  }).isRequired,
 };
 
-export default Props
+export default Props;

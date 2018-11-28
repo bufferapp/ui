@@ -1,17 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types'
-import CodeExample from './CodeExample';
+import PropTypes from 'prop-types';
 import style from 'styled-components';
+import CodeExample from './CodeExample';
+
 
 const Wrapper = style.div`
-	padding: 0px 25px;
-    background: #f6f7f9;
-    border: 1px solid #e6ecf1;
-    border-radius: 2px;
-    margin-bottom: 20px;
+  padding: 0px 25px;
+  background: #f6f7f9;
+  border: 1px solid #e6ecf1;
+  border-radius: 2px;
+  margin-bottom: 20px;
 `;
 
-const Link = style.a`
+const CodeButton = style.a`
   color: #2d4bff;
   font-size: 14px;
 `;
@@ -24,46 +25,51 @@ const ExampleWrapper = style.div`
 `;
 
 export default class Example extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showCode: false
-        }
-    }
-
-    toggleCode = event => {
-        event.preventDefault();
-        this.setState(prevState => {
-            return {showCode: !prevState.showCode}
-        })
+  constructor(props) {
+    super(props);
+    this.state = {
+      showCode: false,
     };
+  }
+
+  toggleCode = (event) => {
+    event.preventDefault();
+    const { showCode } = this.state;
+    this.setState({ showCode: !showCode });
+  };
 
 
-    render() {
-        const {showCode} = this.state;
-        const {code, description, name} = this.props.example;
-        //Must use CommonJS require here to dynamically require components
-        const ExampleComponent = require(`./examples/${this.props.componentName}/${name}`).default;
+  render() {
+    const { showCode } = this.state;
+    const { example, componentName } = this.props;
+    const { code, description, name } = example;
 
-        return (
-            <Wrapper>
-                {description && <h4>{description}</h4>}
-                <ExampleWrapper>
-                    <ExampleComponent/>
-                </ExampleWrapper>
-                <p>
-                    <Link href={"#"} onClick={this.toggleCode}>
-                        {showCode ? "Hide" : "Show"} Code
-                    </Link>
-                </p>
-                {showCode && <CodeExample>{code}</CodeExample>}
-            </Wrapper>
-        );
-    }
+    // Must use CommonJS require here to dynamically require components
+    const ExampleComponent = require(`./examples/${componentName}/${name}`).default;
+
+    return (
+      <Wrapper>
+        {description && <h4>{description}</h4>}
+        <ExampleWrapper>
+          <ExampleComponent />
+        </ExampleWrapper>
+        <p>
+          <CodeButton onClick={this.toggleCode}>
+            {showCode ? 'Hide' : 'Show'}
+            Code
+          </CodeButton>
+        </p>
+        {showCode && <CodeExample>{code}</CodeExample>}
+      </Wrapper>
+    );
+  }
 }
 
 Example.propTypes = {
-    example: PropTypes.object.isRequired,
-    componentName: PropTypes.string.isRequired
-
+  example: PropTypes.shape({
+    code: PropTypes.string,
+    description: PropTypes.string,
+    name: PropTypes.string,
+  }).isRequired,
+  componentName: PropTypes.string.isRequired,
 };

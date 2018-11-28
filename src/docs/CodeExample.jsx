@@ -5,22 +5,23 @@ import javascript from 'highlight.js/lib/languages/javascript';
 
 
 export default class CodeExample extends React.Component {
-	componentDidMount() {
-		hljs.registerLanguage('javascript', javascript);
-        hljs.highlightBlock(this.element)
-	}
-	render() {
-		return (
-			<pre ref={ref => {this.element = ref}}>
-                <code>
-                    {this.props.children}
-                </code>
-            </pre>
-		);
-	}
+  componentDidMount() {
+    hljs.registerLanguage('javascript', javascript);
+    hljs.highlightBlock(this.element);
+  }
+
+  render() {
+    const { children } = this.props;
+    return (
+      <pre ref={(ref) => { this.element = ref; }}>
+        <code>
+          { children }
+        </code>
+      </pre>
+    );
+  }
 }
 
 CodeExample.propTypes = {
-   children: PropTypes.string.isRequired
+  children: PropTypes.string.isRequired,
 };
-

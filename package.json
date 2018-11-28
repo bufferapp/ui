@@ -124,6 +124,7 @@
     "chokidar": "^2.0.4",
     "enzyme": "3.7.0",
     "enzyme-adapter-react-16": "1.7.0",
+    "eslint-config-airbnb": "^17.1.0",
     "gh-pages": "^2.0.1",
     "jest-auto-snapshots": "^3.0.1",
     "npm-run-all": "4.0.2",

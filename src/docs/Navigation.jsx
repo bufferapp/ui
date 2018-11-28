@@ -16,9 +16,9 @@ const Sidebar = style.div`
 
 const SidebarList = style.ul`
     list-style: none;
-	display: flex;
-	flex-direction: column;
-	display: block;
+    display: flex;
+    flex-direction: column;
+    display: block;
     margin: 0px;
     padding: 0px;
     width: 100%;
@@ -30,8 +30,8 @@ const SidebarList = style.ul`
 `;
 
 const SidebarListItem = style.li`
-	text-decoration: none;
-	color: #5C6975;
+    text-decoration: none;
+    color: #5C6975;
     margin-left: 0px;
     border-left-color: transparent;
     display: block;
@@ -42,7 +42,7 @@ const SidebarListItem = style.li`
 `;
 
 const SidebarListItemLink = style.a`
-	text-decoration: none;
+    text-decoration: none;
     position: relative;
     display: flex;
     align-items: center;
@@ -55,24 +55,24 @@ const SidebarListItemLink = style.a`
 `;
 
 
-const Navigation = ({components}) => {
-    return (
-        <Sidebar>
-            <SidebarList>
-                {
-                    components.map(name => {
-                        return <SidebarListItem key={name}>
-                            <SidebarListItemLink href={`#${name}`}>{name}</SidebarListItemLink>
-                        </SidebarListItem>
-                    })
-                }
-            </SidebarList>
-        </Sidebar>
-    );
-};
+const Navigation = ({ components }) => (
+  <Sidebar>
+    <SidebarList>
+      {
+        components.map(name => (
+          <SidebarListItem key={name}>
+            <SidebarListItemLink href={`#${name}`}>{name}</SidebarListItemLink>
+          </SidebarListItem>
+        ))
+      }
+    </SidebarList>
+  </Sidebar>
+);
 
 Navigation.propTypes = {
-    components: PropTypes.array.isRequired
+  components: PropTypes.arrayOf(PropTypes.shape({
+    name: PropTypes.string,
+  })).isRequired,
 };
 
-export default Navigation
+export default Navigation;

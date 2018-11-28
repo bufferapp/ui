@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import style from 'styled-components';
 import Example from './Example';
 import Props from './Props';
-import style from 'styled-components';
 
 const Wrapper = style.div`
     margin: 0px;
@@ -65,36 +66,46 @@ const PropTitle = style.h3`
 `;
 
 
-const ComponentPage = ({component}) => {
-    const {name, description, props, examples} = component;
-    return (
-        <Wrapper>
-            <Container>
-                <Body>
-                <Header>
-                    <Title>
-                        <Text>{name + 's'}</Text>
-                    </Title>
-                </Header>
-                <Description>{description}</Description>
+const ComponentPage = ({ component }) => {
+  const {
+    name, description, props, examples,
+  } = component;
+  return (
+    <Wrapper>
+      <Container>
+        <Body>
+          <Header>
+            <Title>
+              <Text>{ name }</Text>
+            </Title>
+          </Header>
+          <Description>{description}</Description>
 
-                <h3>Example{examples.length > 1 && "s"}</h3>
-                {
-                    examples.length > 0 ?
-                        examples.map(example => <Example key={example.code} example={example} componentName={name}/>) :
-                        "No examples exist."
-                }
+          <h3>
+            Example
+            {examples.length > 1 && 's'}
+          </h3>
+          {
+            examples.length > 0
+              ? examples
+                .map(example => <Example key={example.code} example={example} componentName={name} />)
+              : 'No examples exist.'
+          }
 
-                <PropTitle> Props</PropTitle>
-                {
-                    props ?
-                        <Props props={props}/> :
-                        "This component accepts no props."
-                }
-                </Body>
-            </Container>
-        </Wrapper>
-    );
+          <PropTitle> Props</PropTitle>
+          {
+            props ? <Props props={props} />
+              : 'This component accepts no props.'
+          }
+        </Body>
+      </Container>
+    </Wrapper>
+  );
 };
 
-export default ComponentPage
+ComponentPage.propTypes = {
+  component: PropTypes.node.isRequired,
+};
+
+
+export default ComponentPage;

@@ -23,7 +23,7 @@ else {
 
 
 /** Generate our component documentation by getting all the components
- * directories, and fo each component, generating component data and
+ * directories, and for each component, generating component data and
  * writing that to our output file*/
 function generate(paths) {
     let errors = [];
