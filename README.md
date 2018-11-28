@@ -12,15 +12,17 @@
   <strong>Buffer's Component library and Style Guide for the Buffer Platform and the community</strong>
   <br />
   <br />
-[![Build Status](https://travis-ci.org/ivanaszuber/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/buffer-components)
 </div>
 
-Hi there!
+[![Build Status](https://travis-ci.org/ivanaszuber/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/buffer-components)
+
+
+**Hi there!**
 
 Welcome to the official Buffer components library 🎉! This is where we host all the components used by the Buffer applications ([Publish](https://publish.buffer.com), [Analyze](https://analyze.buffer.com) and [Reply](https://reply.buffer.com)), as well as our official [Style Documentation](https://ivanaszuber.github.io/shared-components/#Button).
 This library is open source and free for you to explore and use!
 
-If you'd like to dive into our components and how to use them in your projects, please head to our [Documentation site](https://ivanaszuber.github.io/shared-components/#Button).
+If you'd like to dive into our components and how to use them in your projects, please head to our ➡️ [Documentation site](https://ivanaszuber.github.io/shared-components/#Button).
 
 If you'd like to contribute to this project, keep reading and check out the relevant information below 😊.
 
@@ -34,6 +36,7 @@ Here are some useful links to get started with:
 - [Quick Start](#quick-start)
 - [Test](#test)
 - [Adding a new Component](#adding-a-new-component)
+- [FAQ](#faq)
 
 ## Quick Start
 
@@ -147,7 +150,7 @@ To make the documentation complete, there are a few steps needed for every new c
 
 ## FAQ
 
-**What is a component**
+**What is a component?**
 
 In the current implementation components are all [functional and stateless](https://medium.com/@housecor/react-stateless-functional-components-nine-wins-you-might-have-overlooked-997b0d933dbc#.ukhlhrqlw).
 
@@ -157,7 +160,7 @@ This means that UI is a function of state since we're using pure functions to bu
 UI = f(state)
 ```
 
-**How do I determine the scope of a component**
+**How do I determine the scope of a component?**
 
 This is a tough question, it really depends. But as a general rule, a component should be simple enough to be reusable across multiple applications and be not much longer than 150 lines of code. This is a good one to seek advice if you're not sure.
 
