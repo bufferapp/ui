@@ -62,6 +62,7 @@
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
     "test": "node scripts/test.js",
+    "t": "npm run test && codecov",
     "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build"
   },
@@ -76,9 +77,11 @@
   ],
   "jest": {
     "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
+      "src/components/**/*.{js,jsx,ts,tsx}",
+      "!src/components/**/*.d.ts"
     ],
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true,
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
       "react-app-polyfill/jsdom"

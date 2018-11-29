@@ -14,15 +14,15 @@
   <br />
 </div>
 
-[![Build Status](https://travis-ci.org/ivanaszuber/shared-components.svg?branch=master)](https://travis-ci.org/ivanaszuber/shared-components)
+[![Build Status](https://travis-ci.org/ivanaszuber/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/shared-components)
 
 
 **Hi there!**
 
-Welcome to the official Buffer components library 🎉! This is where we host all the components used by the Buffer applications ([Publish](https://publish.buffer.com), [Analyze](https://analyze.buffer.com) and [Reply](https://reply.buffer.com)), as well as our official [Style Documentation](https://ivanaszuber.github.io/shared-components/#Button).
+Welcome to the official Buffer components library 🎉! This is where we host all the components used by the Buffer applications ([Publish](https://publish.buffer.com), [Analyze](https://analyze.buffer.com) and [Reply](https://reply.buffer.com)), as well as our official [Style Documentation](https://bufferapp.github.io/shared-components/#Button).
 This library is open source and free for you to explore and use!
 
-If you'd like to dive into our components and learn how to use them in your projects, please head to our ➡️ [Documentation site](https://ivanaszuber.github.io/shared-components/#Button).
+If you'd like to dive into our components and learn how to use them in your projects, please head to our ➡️ [Documentation site](https://bufferapp.github.io/shared-components/#Button).
 
 If you'd like to contribute to this project, keep reading and check out the relevant information below 😊.
 

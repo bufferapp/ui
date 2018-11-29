@@ -4,3 +4,7 @@ node_js:
 cache: yarn
 notifications:
   email: false
+install:
+  - npm install -g codecov
+script:
+  - codecov
