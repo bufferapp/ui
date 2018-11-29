@@ -9,6 +9,10 @@ const ButtonStyled = style.div`
   ${props => Styles[props.type]};
 `;
 
+const ButtonArrow = style.div`
+  ${Styles.split};
+`;
+
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
 const Button = ({
@@ -18,15 +22,18 @@ const Button = ({
   type,
   size,
   label,
+  isSplit,
 }) => (
   <ButtonStyled
     onClick={onClick}
     disabled={disabled}
     size={size}
     type={type}
+    isSplit={isSplit}
     aria-label={label || null}
   >
     {children}
+    {isSplit && <ButtonArrow>▾</ButtonArrow>}
   </ButtonStyled>
 );
 
@@ -38,7 +45,7 @@ Button.propTypes = {
   /** Is the button disabled */
   disabled: PropTypes.bool,
 
-  /** Is the Button large */
+  /** Size of the Button */
   size: PropTypes.oneOf(['small', 'large', 'medium']),
 
   /** OnClick handler */
@@ -49,11 +56,15 @@ Button.propTypes = {
 
   /** Type of button */
   type: PropTypes.oneOf(['link', 'primarySplit', 'primary', 'secondary', 'text']).isRequired,
+
+  /** Is the Button Split  */
+  isSplit: PropTypes.bool,
 };
 
 
 Button.defaultProps = {
   disabled: false,
+  isSplit: false,
   size: 'medium',
 };
 

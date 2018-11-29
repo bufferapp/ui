@@ -1,11 +1,12 @@
+/* eslint-disable no-confusing-arrow */
 import { css } from 'styled-components';
 import {
-  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow,
-} from '../style/colors';
+  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, blueLighter,
+} from '../../style/colors';
 import {
   fontFamily, fontSize, lineHeight, fontWeightMedium,
-} from '../style/fonts';
-import { borderRadius } from '../style/borders';
+} from '../../style/fonts';
+import { borderRadius } from '../../style/borders';
 
 
 /* styles common to all buttons */
@@ -44,8 +45,7 @@ export const buttonbase = css`
   :focus {
       box-shadow: 0 0 0 3px ${boxShadow};
       outline: 0;
-  }
-  
+  }  
 `;
 
 /* theme variants */
@@ -83,6 +83,20 @@ export const text = css`
   background-color: transparent;
   :hover {
     color: ${grayDarker};
+  }
+`;
+
+export const split = css`
+  padding-left: 32px;
+  :before {
+    background-color: ${props => props.primary ? blueLighter : gray};
+    content: "";
+    height: 24px;
+    position: absolute;
+    right: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
   }
 `;
 

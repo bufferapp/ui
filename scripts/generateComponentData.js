@@ -28,10 +28,20 @@ function readFile(filePath) {
   return fs.readFileSync(filePath, 'utf-8');
 }
 
-function getExampleFiles(examplesPath, componentName) {
+function getExampleFiles(examplesPath, componentName, folder) {
   let exampleFiles = [];
   try {
-    exampleFiles = getFiles(path.join(examplesPath, componentName));
+    exampleFiles = getFiles(path.join(examplesPath, componentName, folder));
+  } catch (e) {
+    console.log(chalk.red(`No examples found for ${componentName},`));
+  }
+  return exampleFiles;
+}
+
+function getExampleFolders(examplesPath, componentName) {
+  let exampleFiles = [];
+  try {
+    exampleFiles = getDirectories(path.join(examplesPath, componentName));
   } catch (e) {
     console.log(chalk.red(`No examples found for ${componentName},`));
   }
@@ -39,23 +49,23 @@ function getExampleFiles(examplesPath, componentName) {
 }
 
 function getExampleData(examplesPath, componentName) {
-  const examples = getExampleFiles(examplesPath, componentName);
-  return examples.map((file) => {
-    const filePath = path.join(examplesPath, componentName, file);
-    const content = readFile(filePath);
+  const folders = getExampleFolders(examplesPath, componentName);
+  return folders.map((folder) => {
+    const examples = getExampleFiles(examplesPath, componentName, folder);
+    return examples.map((file) => {
+      const filePath = path.join(examplesPath, componentName, folder, file);
+      const content = readFile(filePath);
+      const info = parse(content);
 
-    // a little hack to account for possible multiple components
-    // in a single example
-    const newContent = content.replace('[', '<div>').replace(']', '</div>');
-    const info = parse(newContent);
-
-    return {
-      // By convention, component name should match the filename
-      // So remove the .js extension to get the component name
-      name: file.slice(0, -4),
-      description: info.description,
-      code: content,
-    };
+      return {
+        // By convention, component name should match the filename
+        // So remove the .js extension to get the component name
+        name: file.slice(0, -4),
+        description: info.description,
+        code: content,
+        title: folder,
+      };
+    });
   });
 }
 

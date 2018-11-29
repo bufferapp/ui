@@ -1,5 +1,6 @@
 export const blue = '#2c4bff';
 export const blueDarker = '#1F35B3';
+export const blueLighter = '#6B81FF';
 export const purple = '#9C2BFF';
 export const pink = '#D925AC';
 export const teal = '#00C8CF';

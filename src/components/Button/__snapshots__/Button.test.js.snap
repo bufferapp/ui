@@ -4,6 +4,23 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"
   disabled={false}
+  isSplit={true}
+  onClick={[MockFunction]}
+  size="small"
+  type="link"
+>
+  <NodeFixture />
+  <ForwardRef>
+    ▾
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  isSplit={false}
   onClick={[MockFunction]}
   size="small"
   type="link"
@@ -16,11 +33,15 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
+  isSplit={true}
   onClick={[MockFunction]}
   size="small"
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    ▾
+  </ForwardRef>
 </ForwardRef>
 `;
 
@@ -28,6 +49,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"
   disabled={false}
+  isSplit={false}
   onClick={[MockFunction]}
   size="medium"
   type="link"

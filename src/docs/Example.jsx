@@ -5,16 +5,24 @@ import CodeExample from './CodeExample';
 
 
 const Wrapper = style.div`
-  padding: 0px 25px;
+  padding: 25px 25px 5px 25px;
   background: #f6f7f9;
   border: 1px solid #e6ecf1;
   border-radius: 2px;
   margin-bottom: 20px;
+  min-width: 42%;
+  max-width: 42%;
+  margin-right: 20px;
+  min-height: 100px;
 `;
 
 const CodeButton = style.a`
-  color: #2d4bff;
+  color: #828485;
+  padding-top: 10px;
   font-size: 14px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
 `;
 
 /** Wrap the buttons for display in a flex div */
@@ -42,10 +50,12 @@ export default class Example extends React.Component {
   render() {
     const { showCode } = this.state;
     const { example, componentName } = this.props;
-    const { code, description, name } = example;
+    const {
+      code, description, name, title,
+    } = example;
 
     // Must use CommonJS require here to dynamically require components
-    const ExampleComponent = require(`./examples/${componentName}/${name}`).default;
+    const ExampleComponent = require(`./examples/${componentName}/${title}/${name}`).default;
 
     return (
       <Wrapper>
@@ -55,7 +65,7 @@ export default class Example extends React.Component {
         </ExampleWrapper>
         <p>
           <CodeButton onClick={this.toggleCode}>
-            {showCode ? 'Hide' : 'Show'}
+            {showCode ? 'Hide ' : 'Show '}
             Code
           </CodeButton>
         </p>

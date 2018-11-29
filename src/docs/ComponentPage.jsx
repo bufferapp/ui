@@ -28,7 +28,7 @@ const Body = style.div`
     padding: 0px;
     flex: 1 1 auto;
     min-width: 0px;
-    max-width: 750px;
+    max-width: 980px;
     margin: 0px 88px;
 `;
 
@@ -65,6 +65,12 @@ const PropTitle = style.h3`
     margin-top: 50px;
 `;
 
+const ExampleWrapper = style.div`
+    display: flex;
+    flex-wrap: wrap;
+    align-items: end;
+`;
+
 
 const ComponentPage = ({ component }) => {
   const {
@@ -76,27 +82,34 @@ const ComponentPage = ({ component }) => {
         <Body>
           <Header>
             <Title>
-              <Text>{ name }</Text>
+              <Text>{name}</Text>
             </Title>
           </Header>
           <Description>{description}</Description>
 
           <h3>
-            Example
+          Example
             {examples.length > 1 && 's'}
           </h3>
-          {
-            examples.length > 0
-              ? examples
-                .map(example => <Example key={example.code} example={example} componentName={name} />)
-              : 'No examples exist.'
-          }
+          {examples.map(folder => [
+            <h4>
+              {name + ' ' + folder[0].title + 's'}
+            </h4>,
+            <ExampleWrapper>
+              {
+              folder.length > 0
+                ? folder
+                  .map(example => <Example key={example.code} example={example} componentName={name} />)
+                : 'No examples exist.'
+            }
+            </ExampleWrapper>,
+          ])}
 
           <PropTitle> Props</PropTitle>
           {
-            props ? <Props props={props} />
-              : 'This component accepts no props.'
-          }
+          props ? <Props props={props} />
+            : 'This component accepts no props.'
+        }
         </Body>
       </Container>
     </Wrapper>
