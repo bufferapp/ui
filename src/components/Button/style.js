@@ -1,7 +1,7 @@
 /* eslint-disable no-confusing-arrow */
 import { css } from 'styled-components';
 import {
-  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, blueLighter,
+  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, blueLighter, grayLight,
 } from '../../style/colors';
 import {
   fontFamily, fontSize, lineHeight, fontWeightMedium,
@@ -115,4 +115,10 @@ export const large = css`
   padding-right: 16px;
   padding-left: 16px;
   height: 48px;
+`;
+
+/* state variants */
+export const disabled = css`
+  background-color: ${grayLight};
+  cursor: not-allowed;
 `;

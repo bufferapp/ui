@@ -6,7 +6,7 @@ import * as Styles from './style';
 const ButtonStyled = style.div`  
   ${Styles.buttonbase};
   ${props => Styles[props.size]};
-  ${props => Styles[props.type]};
+  ${props => Styles[props.disabled ? 'disabled' : props.type]};
 `;
 
 const ButtonArrow = style.div`
@@ -25,7 +25,7 @@ const Button = ({
   isSplit,
 }) => (
   <ButtonStyled
-    onClick={onClick}
+    onClick={!disabled && onClick}
     disabled={disabled}
     size={size}
     type={type}

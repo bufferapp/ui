@@ -19,9 +19,9 @@ const Wrapper = style.div`
 const CodeButton = style.a`
   color: #828485;
   padding-top: 10px;
-  font-size: 14px;
+  font-size: 12px;
   display: flex;
-  justify-content: center;
+  justify-content: end;
   cursor: pointer;
 `;
 
@@ -29,11 +29,11 @@ const CodeButton = style.a`
 const ExampleWrapper = style.div`
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
 `;
 
 const Title = style.div`
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 600;
     text-align: center;
     margin-block-start: 1.33em;
@@ -69,16 +69,14 @@ export default class Example extends React.Component {
 
     return (
       <Wrapper>
-        {description && <Title>{description}</Title>}
         <ExampleWrapper>
+          {description && <Title>{description}</Title>}
           <ExampleComponent />
         </ExampleWrapper>
-        <p>
-          <CodeButton onClick={this.toggleCode}>
-            {showCode ? 'Hide ' : 'Show '}
-            Code
-          </CodeButton>
-        </p>
+        <CodeButton onClick={this.toggleCode}>
+          {showCode ? 'Hide ' : 'Show '}
+          Code
+        </CodeButton>
         {showCode && <CodeExample>{code}</CodeExample>}
       </Wrapper>
     );
