@@ -13,6 +13,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   <ForwardRef>
     ▾
   </ForwardRef>
+  <ForwardRef
+    alt="loading"
+    src="/images/loading-gray.svg"
+  />
 </ForwardRef>
 `;
 
@@ -26,6 +30,26 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   type="link"
 >
   <NodeFixture />
+  <ForwardRef
+    alt="loading"
+    src="/images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  <NodeFixture />
+  <ForwardRef>
+    ▾
+  </ForwardRef>
 </ForwardRef>
 `;
 
@@ -42,6 +66,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   <ForwardRef>
     ▾
   </ForwardRef>
+  <ForwardRef
+    alt="loading"
+    src="/images/loading-gray.svg"
+  />
 </ForwardRef>
 `;
 

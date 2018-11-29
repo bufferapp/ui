@@ -13,6 +13,11 @@ const ButtonArrow = style.div`
   ${Styles.split};
 `;
 
+const Loading = style.img`
+  width: 24px;
+  padding-left: 10px;
+`;
+
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
 const Button = ({
@@ -23,6 +28,7 @@ const Button = ({
   size,
   label,
   isSplit,
+  loading,
 }) => (
   <ButtonStyled
     onClick={!disabled && onClick}
@@ -34,6 +40,7 @@ const Button = ({
   >
     {children}
     {isSplit && <ButtonArrow>▾</ButtonArrow>}
+    {loading && <Loading src="/images/loading-gray.svg" alt="loading" />}
   </ButtonStyled>
 );
 
@@ -59,12 +66,16 @@ Button.propTypes = {
 
   /** Is the Button Split  */
   isSplit: PropTypes.bool,
+
+  /** Is the Button Loading  */
+  loading: PropTypes.bool,
 };
 
 
 Button.defaultProps = {
   disabled: false,
   isSplit: false,
+  loading: false,
   size: 'medium',
 };
 

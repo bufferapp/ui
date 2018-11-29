@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from '@bufferapp/components/Button';
 
-/** Disabled Button */
-export default function ExampleTypePrimaryDisabled() {
+/** Disabled */
+export default function ExampleDisabled() {
   return (
     <Button
       type="primary"
