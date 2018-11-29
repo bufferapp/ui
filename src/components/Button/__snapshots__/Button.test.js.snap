@@ -21,7 +21,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   isSplit={false}
-  onClick={[MockFunction]}
+  onClick={false}
   size="small"
   type="link"
 >
@@ -34,7 +34,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   isSplit={true}
-  onClick={[MockFunction]}
+  onClick={false}
   size="small"
   type="link"
 >
