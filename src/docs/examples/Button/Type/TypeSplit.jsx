@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@bufferapp/components/Button';
 
+/** Split Button */
 export default function ExampleTypeSplit() {
   return (
     <Button
@@ -8,7 +9,7 @@ export default function ExampleTypeSplit() {
       isSplit
       onClick={() => {}}
     >
-      Split Button
+      Click Me
     </Button>
   );
 }

@@ -5,7 +5,7 @@ import CodeExample from './CodeExample';
 
 
 const Wrapper = style.div`
-  padding: 25px 25px 5px 25px;
+  padding: 5px 25px;
   background: #f6f7f9;
   border: 1px solid #e6ecf1;
   border-radius: 2px;
@@ -30,6 +30,16 @@ const ExampleWrapper = style.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+`;
+
+const Title = style.div`
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
 `;
 
 export default class Example extends React.Component {
@@ -59,7 +69,7 @@ export default class Example extends React.Component {
 
     return (
       <Wrapper>
-        {description && <h4>{description}</h4>}
+        {description && <Title>{description}</Title>}
         <ExampleWrapper>
           <ExampleComponent />
         </ExampleWrapper>

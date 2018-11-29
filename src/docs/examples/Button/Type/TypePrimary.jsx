@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@bufferapp/components/Button';
 
+/** Primary Button */
 export default function ExampleTypePrimary() {
   return (
     <Button
@@ -8,7 +9,7 @@ export default function ExampleTypePrimary() {
       size="large"
       onClick={() => {}}
     >
-    Primary Button
+      Click Me
     </Button>
   );
 }

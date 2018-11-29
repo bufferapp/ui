@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@bufferapp/components/Button';
 
+/** Small Size Button */
 export default function ExampleSizeSmall() {
   return (
     <Button
@@ -8,7 +9,7 @@ export default function ExampleSizeSmall() {
       size="small"
       onClick={() => {}}
     >
-      Small Button
+      Click Me
     </Button>
   );
 }
