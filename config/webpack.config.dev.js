@@ -149,8 +149,7 @@ module.exports = {
             // Support React Native Web
             // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
             'react-native': 'react-native-web',
-            '@bufferapp/components-new': path.resolve(__dirname, '../src/components'),
-            'src': path.resolve(__dirname, '../src')
+            '@bufferapp/components-new': path.resolve(__dirname, '../src/components')
         },
         plugins: [
             // Adds support for installing with Plug'n'Play, leading to faster installs and adding

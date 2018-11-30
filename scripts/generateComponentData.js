@@ -93,7 +93,7 @@ function generate(componentPaths) {
   const errors = [];
   const componentData = getDirectories(componentPaths.components).map((componentName) => {
     try {
-      return getComponentData(componentPaths, componentName);
+      return componentName !== 'style' ?  getComponentData(componentPaths, componentName) : false;
     } catch (error) {
       errors.push(`An error occurred while attempting to generate metadata for ${componentName}. ${error}`);
     }
