@@ -2,11 +2,11 @@
 import { css } from 'styled-components';
 import {
   grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, blueLighter, grayLight,
-} from '../../assets/style/colors';
+} from '../../style/colors';
 import {
   fontFamily, fontSize, lineHeight, fontWeightMedium,
-} from '../../assets/style/fonts';
-import { borderRadius } from '../../assets/style/borders';
+} from '../../style/fonts';
+import { borderRadius } from '../../style/borders';
 
 
 /* styles common to all buttons */
