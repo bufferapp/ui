@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@bufferapp/components/Button';
+import Button from '@bufferapp/components-new/Button';
 
 /** Secondary Button */
 export default function ExampleTypeSecondary() {
