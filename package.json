@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/components-new--build-template",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "engines": {
     "node": ">=4.0.0"
   },
