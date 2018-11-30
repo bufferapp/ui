@@ -9,6 +9,15 @@
     "jest": true
   },
   "rules": {
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "info",
+          "error"
+        ]
+      }
+    ],
     "consistent-return": 0,
     "func-names": 0,
     "max-len": 0,

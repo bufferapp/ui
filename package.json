@@ -104,8 +104,9 @@
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
+    "lint": "./node_modules/eslint/bin/eslint.js . --ignore-pattern coverage node_modules",
     "test": "node scripts/test.js",
-    "t": "npm run test && codecov",
+    "t": "npm run test && jest --coverage && lint",
     "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build",
     "prepublish": "npm run build:lib"
