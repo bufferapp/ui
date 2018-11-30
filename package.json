@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/components-new--build-template",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -120,7 +120,7 @@
     "prebuild:lib": "rimraf lib",
     "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
     "build:copy-files": "node scripts/copyBuildFiles.js",
-    "build:copy-styles":"cross-env NODE_ENV=production babel ./src/style --out-dir ./lib/style",
+    "build:copy-styles":"cross-env NODE_ENV=production babel ./src/style --out-dir ./lib/src/style",
     "build:copy-components": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore test.js",
     "build:commonjs": "npm-run-all --parallel build:copy-styles build:copy-components",
     "prepublish": "npm run build:lib"
