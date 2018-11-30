@@ -14,7 +14,7 @@
   <br />
 </div>
 
-[![Build Status](https://travis-ci.org/ivanaszuber/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/shared-components)
+[![Build Status](https://travis-ci.org/bufferapp/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/shared-components)
 
 
 **Hi there!**
