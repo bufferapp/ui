@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/components-new--build-template",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -25,6 +25,9 @@
   "files": [
     "lib"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/bufferapp/shared-components/issues"

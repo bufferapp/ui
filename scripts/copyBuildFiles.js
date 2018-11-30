@@ -50,6 +50,7 @@ function createPackageFile() {
         homepage,
         peerDependencies,
         dependencies,
+        publishConfig,
       } = packageData;
 
 
@@ -66,6 +67,7 @@ function createPackageFile() {
         homepage,
         peerDependencies,
         dependencies,
+        publishConfig,
       };
 
       return new Promise((resolve) => {
