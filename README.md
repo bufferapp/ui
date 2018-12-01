@@ -15,6 +15,7 @@
 
 [![npm package](https://img.shields.io/npm/v/@bufferapp/components-new/latest.svg)](https://www.npmjs.com/package/@bufferapp/components-new)
 [![Build Status](https://travis-ci.org/bufferapp/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/shared-components)
+[![codecov](https://codecov.io/gh/bufferapp/shared-components/branch/master/graph/badge.svg)](https://codecov.io/gh/bufferapp/shared-components)
 
 </div>
 
