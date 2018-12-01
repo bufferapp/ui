@@ -49,7 +49,10 @@ function getExampleFolders(examplesPath, componentName) {
 }
 
 function getExampleData(examplesPath, componentName) {
+  // Get all the folders in src/docs/examples
   const folders = getExampleFolders(examplesPath, componentName);
+
+  // for each folder in examples, get the example files and generate the example object
   return folders.map((folder) => {
     const examples = getExampleFiles(examplesPath, componentName, folder);
     return examples.map((file) => {
@@ -59,7 +62,7 @@ function getExampleData(examplesPath, componentName) {
 
       return {
         // By convention, component name should match the filename
-        // So remove the .js extension to get the component name
+        // So remove the .jsx extension to get the component name
         name: file.slice(0, -4),
         description: info.description,
         code: content,
@@ -93,7 +96,8 @@ function generate(componentPaths) {
   const errors = [];
   const componentData = getDirectories(componentPaths.components).map((componentName) => {
     try {
-      return componentName !== 'style' ?  getComponentData(componentPaths, componentName) : false;
+      // we need to exclude the style folder here
+      return componentName !== 'style' ? getComponentData(componentPaths, componentName) : false;
     } catch (error) {
       errors.push(`An error occurred while attempting to generate metadata for ${componentName}. ${error}`);
     }

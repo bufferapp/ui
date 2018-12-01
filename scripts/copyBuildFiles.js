@@ -3,6 +3,7 @@ const fse = require('fs-extra');
 
 const files = [
   'README.md',
+  'LICENCE',
 ];
 
 
