@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/components-new--build-template",
-  "version": "1.0.7",
+  "version": "1.1.0",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -164,9 +164,8 @@
   },
   "babel": {
     "plugins": [
-        "@babel/plugin-transform-modules-commonjs",
-        "@babel/plugin-proposal-class-properties"
-
+      "@babel/plugin-transform-modules-commonjs",
+      "@babel/plugin-proposal-class-properties"
     ],
     "presets": [
       "@babel/preset-env",
