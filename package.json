@@ -44,6 +44,8 @@
   "devDependencies": {
     "@babel/cli": "^7.1.5",
     "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.1.0",
     "@babel/preset-env": "^7.1.6",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
@@ -124,9 +126,6 @@
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
     "prepublish": "npm run build:lib"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
   "browserslist": [
     ">0.2%",
     "not dead",
@@ -160,32 +159,18 @@
       "^.+\\.module\\.(css|sass|scss)$"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web",
-      "^.+\\.module\\.(css|sass|scss)$": "identity-obj-proxy",
       "./src(.*)$": "<rootDir>/src/$1"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "web.ts",
-      "ts",
-      "web.tsx",
-      "tsx",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node"
-    ]
+    }
   },
   "babel": {
     "plugins": [
-      ["module-resolver", {
-        "root": ["./src"]
-      }]
+        "@babel/plugin-transform-modules-commonjs",
+        "@babel/plugin-proposal-class-properties"
+
     ],
     "presets": [
       "@babel/preset-env",
-      "react-app"
+      "@babel/react"
     ]
   }
 }
