@@ -4,9 +4,9 @@ Thanks so much for helping us develop this project and being a part of the Buffe
 
 ## Submitting a pull request
 
-Buffer Shared-Components is an open source project, so pull requests are always welcome, but, before working on a large change, it is best to open an issue first to discuss it with the maintainers.
+Buffer Shared-Components is an open source project, so pull requests are always welcome, although we also recommend opening an issue to discuss your ideas/changes it with the maintainers.
 
-When in doubt, try to keep your pull requests small, by not bundling more than one feature or bug fix per pull request :).
+When in doubt, it's best to keep your pull requests small, by not bundling more than one feature or bug fix per pull request :).
 
 ### Branch Structure
 
