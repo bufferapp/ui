@@ -9,7 +9,7 @@
 <br />
 
 <div align="center">
-  <strong>Buffer's Component library and Style Guide for the Buffer Platform and the community</strong>
+  <strong>Buffer's UI components library and Style Guide for the Buffer Platform and the community</strong>
   <br />
   <br />
 
@@ -19,7 +19,7 @@
 
 </div>
 
-Welcome to the official Buffer components library 🎉! This is where we host all the components used by the Buffer applications ([Publish](https://publish.buffer.com), [Analyze](https://analyze.buffer.com) and [Reply](https://reply.buffer.com)), as well as our official [Style Documentation](https://bufferapp.github.io/ui).
+Welcome to the official Buffer UI library 🎉! This is where we host all the components used by the Buffer applications ([Publish](https://publish.buffer.com), [Analyze](https://analyze.buffer.com) and [Reply](https://reply.buffer.com)), as well as our official [Style Documentation](https://bufferapp.github.io/ui).
 This library is open source and free for you to explore and use!
 
 ## Installation
