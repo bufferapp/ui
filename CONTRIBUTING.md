@@ -10,7 +10,7 @@ When in doubt, it's best to keep your pull requests small, by not bundling more 
 
 ### Branch Structure
 
-All stable releases are tagged ([view tags](https://github.com/bufferapp/shared-components/tags)), and the `master` branch represents the latest development version of the library.
+All stable releases are tagged ([view tags](https://github.com/bufferapp/ui/tags)), and the `master` branch represents the latest development version of the library.
 Patches or hotfix releases are prepared on an independent branch.
 
 
@@ -19,7 +19,7 @@ Patches or hotfix releases are prepared on an independent branch.
 Please create a new branch from an up to date master on your fork.
 
 1. Fork the repository on Github
-2. Clone your fork to your local machine `git clone git@github.com:<yourname>/bufferapp/shared-components.git`
+2. Clone your fork to your local machine `git clone git@github.com:<yourname>/bufferapp/ui.git`
 3. Create a branch `git checkout -b my-topic-branch`
 4. Make your changes, lint, then push to to GitHub with `git push --set-upstream origin my-topic-branch`.
 5. Visit GitHub and make your pull request.
@@ -27,7 +27,7 @@ Please create a new branch from an up to date master on your fork.
 If you have an existing local repository, please update it before you start, to minimise the chance of merge conflicts.
 
 ```sh
-git remote add upstream git@github.com:bufferapp/shared-components.git
+git remote add upstream git@github.com:bufferapp/ui.git
 git checkout master
 git pull upstream master
 git checkout -b my-topic-branch
@@ -148,4 +148,4 @@ To make the documentation complete, there are a few steps needed for every new c
 
 ## License
 
-By contributing your code to the bufferapp/shared-components GitHub repository, you agree to license your contribution under the MIT license.
+By contributing your code to the bufferapp/ui GitHub repository, you agree to license your contribution under the MIT license.

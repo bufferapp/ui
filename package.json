@@ -9,7 +9,7 @@
   "description": "Shared UI components for buffer apps",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bufferapp/shared-components.git"
+    "url": "git+https://github.com/bufferapp/ui.git"
   },
   "author": {
     "name": "Ivana Zuber",
@@ -30,9 +30,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bufferapp/shared-components/issues"
+    "url": "https://github.com/bufferapp/ui/issues"
   },
-  "homepage": "https://github.com/bufferapp/shared-components",
+  "homepage": "https://github.com/bufferapp/ui",
   "peerDependencies": {
     "react": ">= 0.14.0"
   },

@@ -13,13 +13,13 @@
   <br />
   <br />
 
-[![npm package](https://img.shields.io/npm/v/@bufferapp/components-new/latest.svg)](https://www.npmjs.com/package/@bufferapp/components-new)
-[![Build Status](https://travis-ci.org/bufferapp/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/shared-components)
-[![codecov](https://codecov.io/gh/bufferapp/shared-components/branch/master/graph/badge.svg)](https://codecov.io/gh/bufferapp/shared-components)
+[![npm package](https://img.shields.io/npm/v/@bufferapp/components-new/latest.svg)](https://www.npmjs.com/package/@bufferapp/ui)
+[![Build Status](https://travis-ci.org/bufferapp/shared-components.svg?branch=master)](https://travis-ci.org/bufferapp/ui)
+[![codecov](https://codecov.io/gh/bufferapp/shared-components/branch/master/graph/badge.svg)](https://codecov.io/gh/bufferapp/ui)
 
 </div>
 
-Welcome to the official Buffer components library 🎉! This is where we host all the components used by the Buffer applications ([Publish](https://publish.buffer.com), [Analyze](https://analyze.buffer.com) and [Reply](https://reply.buffer.com)), as well as our official [Style Documentation](https://bufferapp.github.io/shared-components/#Button).
+Welcome to the official Buffer components library 🎉! This is where we host all the components used by the Buffer applications ([Publish](https://publish.buffer.com), [Analyze](https://analyze.buffer.com) and [Reply](https://reply.buffer.com)), as well as our official [Style Documentation](https://bufferapp.github.io/ui).
 This library is open source and free for you to explore and use!
 
 ## Installation
