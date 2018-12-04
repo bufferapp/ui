@@ -56,7 +56,7 @@ function createPackageFile() {
 
 
       const minimalPackage = {
-        name: '@bufferapp/components-new',
+        name: '@bufferapp/ui',
         author,
         version,
         description,

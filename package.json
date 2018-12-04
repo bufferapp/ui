@@ -1,5 +1,5 @@
 {
-  "name": "@bufferapp/components-new--build-template",
+  "name": "@bufferapp/ui-template",
   "version": "1.1.0",
   "engines": {
     "node": ">=4.0.0"
