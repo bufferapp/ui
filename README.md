@@ -1,4 +1,4 @@
-# ✨ Shared Components ✨
+# ✨ Buffer UI Components ✨
 
 <div align="center">
   <a href="https://www.styled-components.com">
@@ -24,7 +24,7 @@ This library is open source and free for you to explore and use!
 
 ## Installation
 
-Buffer Shared Components  is available as an `@bufferapp/components-new` [npm package](https://www.npmjs.com/package/@bufferapp/components-new).
+Buffer UI  is available as an `@bufferapp/ui` [npm package](https://www.npmjs.com/package/@bufferapp/ui).
 
 
 ## Usage
@@ -34,7 +34,7 @@ Here is a quick example to get you started, **it's all you need**:
 ```jsx
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Button from '@bufferapp/components-new/Button';
+import Button from '@bufferapp/ui/Button';
 
 function App() {
   return (
@@ -50,7 +50,7 @@ ReactDOM.render(<App />, document.querySelector('#app'));
 
 ## Documentation
 
-Check out our ➡️ [documentation website](https://bufferapp.github.io/shared-components/#Button).
+Check out our ➡️ [documentation website](https://bufferapp.github.io/ui/#Button).
 
 
 ## Contributing
@@ -60,7 +60,7 @@ Want to contribute to this project? That's awesome 🙌! Please check out our [c
 ## Changelog
 
 Curious about the latest changes?
-Please read the [changelog](https://github.com/bufferapp/shared-components/releases).
+Please read the [changelog](https://github.com/bufferapp/ui/releases).
 
 
 ## License
