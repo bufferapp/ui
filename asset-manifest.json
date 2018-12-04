@@ -1,15 +1,15 @@
 {
-  "main.css": "/shared-components/static/css/main.19146603.chunk.css",
-  "main.js": "/shared-components/static/js/main.6fdddb61.chunk.js",
-  "main.js.map": "/shared-components/static/js/main.6fdddb61.chunk.js.map",
-  "static/css/1.7256b537.chunk.css": "/shared-components/static/css/1.7256b537.chunk.css",
-  "static/js/1.7f76ba94.chunk.js": "/shared-components/static/js/1.7f76ba94.chunk.js",
-  "static/js/1.7f76ba94.chunk.js.map": "/shared-components/static/js/1.7f76ba94.chunk.js.map",
-  "runtime~main.js": "/shared-components/static/js/runtime~main.913aa11b.js",
-  "runtime~main.js.map": "/shared-components/static/js/runtime~main.913aa11b.js.map",
-  "static/css/1.7256b537.chunk.css.map": "/shared-components/static/css/1.7256b537.chunk.css.map",
-  "static/css/main.19146603.chunk.css.map": "/shared-components/static/css/main.19146603.chunk.css.map",
-  "index.html": "/shared-components/index.html",
-  "precache-manifest.a4df0ce179b43e3a2c7a7da48639dbe9.js": "/shared-components/precache-manifest.a4df0ce179b43e3a2c7a7da48639dbe9.js",
-  "service-worker.js": "/shared-components/service-worker.js"
+  "main.css": "/ui/static/css/main.19146603.chunk.css",
+  "main.js": "/ui/static/js/main.42fd0dd4.chunk.js",
+  "main.js.map": "/ui/static/js/main.42fd0dd4.chunk.js.map",
+  "static/css/1.7256b537.chunk.css": "/ui/static/css/1.7256b537.chunk.css",
+  "static/js/1.98adb82e.chunk.js": "/ui/static/js/1.98adb82e.chunk.js",
+  "static/js/1.98adb82e.chunk.js.map": "/ui/static/js/1.98adb82e.chunk.js.map",
+  "runtime~main.js": "/ui/static/js/runtime~main.0c1892a6.js",
+  "runtime~main.js.map": "/ui/static/js/runtime~main.0c1892a6.js.map",
+  "static/css/1.7256b537.chunk.css.map": "/ui/static/css/1.7256b537.chunk.css.map",
+  "static/css/main.19146603.chunk.css.map": "/ui/static/css/main.19146603.chunk.css.map",
+  "index.html": "/ui/index.html",
+  "precache-manifest.c423dcef36f959f1446b1679f2e66740.js": "/ui/precache-manifest.c423dcef36f959f1446b1679f2e66740.js",
+  "service-worker.js": "/ui/service-worker.js"
 }
