@@ -65,7 +65,7 @@ export default class Example extends React.Component {
     } = example;
 
     // Must use CommonJS require here to dynamically require components
-    const ExampleComponent = require(`./examples/${componentName}/${title}/${name}`).default;
+    const ExampleComponent = require(`../examples/${componentName}/${title}/${name}`).default;
 
     return (
       <Wrapper>

@@ -1,9 +1,9 @@
 import React from 'react';
 import style from 'styled-components';
-import Navigation from './Navigation';
-import ComponentPage from './ComponentPage';
+import Navigation from './components/Navigation';
+import Component from './components/pages/Component';
 import componentData from '../../config/componentData';
-import Header from './Header';
+import Header from './components/Header';
 
 const Container = style.div`
   width: 100%;
@@ -46,7 +46,7 @@ export default class Docs extends React.Component {
         <Header title="Buffer Components Documentation" />
         <Wrapper>
           <Navigation components={componentData.map(x => x.name)} />
-          <ComponentPage component={component} />
+          <Component component={component} />
         </Wrapper>
       </Container>
     );
