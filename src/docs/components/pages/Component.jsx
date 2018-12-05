@@ -28,9 +28,6 @@ const Body = style.div`
     display: block;
     padding: 0px;
     flex: 1 1 auto;
-    min-width: 0px;
-    max-width: 980px;
-    margin: 0px 88px;
 `;
 
 

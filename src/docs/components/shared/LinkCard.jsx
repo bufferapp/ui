@@ -42,17 +42,17 @@ const CardTitle = style.h3`
 `;
 
 
-const LinkCard = ({ title, href }) => (
-  <CardWrapper href={href}>
+const LinkCard = ({ name, id }) => (
+  <CardWrapper href={`#/${id}`}>
     <CardBody>
-      <CardTitle>{title}</CardTitle>
+      <CardTitle>{name}</CardTitle>
     </CardBody>
   </CardWrapper>
 );
 
 LinkCard.propTypes = {
-  title: PropTypes.string.isRequired,
-  href: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default LinkCard;

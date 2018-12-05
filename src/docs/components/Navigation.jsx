@@ -63,12 +63,16 @@ const Navigation = ({ components, onLocationChange }) => (
       {
         components.map(component => [
           <SidebarListItem key={component.name} level={component.level}>
-            <SidebarListItemLink href={`#${component.id}`}>{component.name}</SidebarListItemLink>
+            <SidebarListItemLink href={`#${component.id}`} onClick={() => onLocationChange(component.parentName, component.id)}>{component.name}</SidebarListItemLink>
           </SidebarListItem>,
+          // we want to exclude children with the same name as the parent
+          // no need to show those as those can be accesses by clicking on the parent
           component.children ? component.children.map(child => (
-            <SidebarListItem key={child.name} level={child.level} onClick={() => onLocationChange(child.parentName, child.id)}>
-              <SidebarListItemLink href={`#${child.id}`}>{child.name}</SidebarListItemLink>
-            </SidebarListItem>
+            child.fileName !== child.parentName ? (
+              <SidebarListItem key={child.name} level={child.level} onClick={() => onLocationChange(child.parentName, child.id)}>
+                <SidebarListItemLink href={`#${child.id}`}>{child.name}</SidebarListItemLink>
+              </SidebarListItem>
+            ) : null
           )) : null,
         ])
       }

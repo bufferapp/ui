@@ -20,30 +20,19 @@ const LinkWrapper = style.div`
     background: #ffffff;
 `;
 
-export default class Document extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      links: [
-        {
-          title: 'Getting Started',
-          href: '/#Button',
-        },
-        {
-          title: 'Getting Started',
-          href: '#',
-        },
-      ],
-    };
-  }
+const Paragraph = style.p`
+    font-size: 16px;
+    line-height: 1.625;
+    font-weight: 400;
+    `;
 
+export default class Document extends React.Component {
   render() {
     const DocHeading = ({ children, ...props }) => (
       <Heading {...props} />
     );
+    const { page, component, links } = this.props;
 
-    const { links } = this.state;
-    const { page, component } = this.props;
     return [
       <Markdown options={{
         overrides: {
@@ -59,13 +48,16 @@ export default class Document extends React.Component {
           a: {
             component: Link,
           },
+          p: {
+            component: Paragraph,
+          },
         },
       }}
       >
         {component}
       </Markdown>,
       <LinkWrapper>
-        {links.map(link => <LinkCard title={link.title} href={link.href} />)}
+        {links[0] && links.map(link => <LinkCard name={link.name} id={link.id} />)}
       </LinkWrapper>,
     ];
   }

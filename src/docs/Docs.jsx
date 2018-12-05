@@ -1,11 +1,14 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import style from 'styled-components';
+import markdownToJsx from 'markdown-to-jsx';
 import Markdown from './components/pages/Document';
 import Navigation from './components/Navigation';
 import Component from './components/pages/Component';
 import componentData from '../../config/componentData';
 import documentationData from '../../config/documentsData';
 import Header from './components/Header';
+import UIComponent from './components/pages/markdown/UI/UI.md';
 
 const Container = style.div`
   width: 100%;
@@ -25,7 +28,8 @@ const PageLayout = style.div`
   display: block;
   width: 100%;
   background: #ffffff;
-  height: calc(100vh - 201px);
+  min-height: calc(100vh - 201px);
+  max-width: 850px;
 `;
 
 
@@ -40,9 +44,28 @@ export default class Docs extends React.Component {
     };
   }
 
+  componentWillMount() {
+    if (!window.location.hash) {
+      window.location = `${window.location.origin}/GettingStarted/#getting-started`;
+    }
+  }
+
   componentDidMount() {
     window.addEventListener('hashchange', () => this.setState({ route: window.location.hash.substr(1) }));
   }
+
+  getFooterLinks = ({ pageParents, route }) => {
+    if (!pageParents) return;
+    // get the index of the navigation link of the current page
+    // in order to show the next and previous links at the bottom of each page
+    const linkIndex = pageParents.children.findIndex(link => link.id === route);
+    const previousLink = pageParents.children[linkIndex - 1];
+    const nextLink = pageParents.children[linkIndex + 1];
+    const links = [];
+    if (previousLink) links.push(previousLink);
+    if (nextLink) links.push(nextLink);
+    return links;
+  };
 
   /** Update the url based on the folder and the file names
    * passed from the Navigation component */
@@ -53,8 +76,13 @@ export default class Docs extends React.Component {
     window.location = `${window.location.origin}/${location}/#${hash}`;
   }
 
+  renderMarkdownComponent = () => <markdownToJsx>{UIComponent}</markdownToJsx>
+
   render() {
     const { route, location } = this.state;
+
+    const isUIRoot = location === 'ui' && route === 'ui';
+
     // by convention, the route in the url should match the components name
     // if there's no component specified, just show the first component in the list
     const component = location === 'ui' ? componentData[0]
@@ -75,14 +103,15 @@ export default class Docs extends React.Component {
     // based on the location and fileName we are currently requesting
     const PageComponent = page && require(`./components/pages/markdown/${location}/${page.fileName}.md`);
 
+
     return (
       <Container>
         <Header title="Buffer Components Documentation" />
         <Wrapper>
           <Navigation components={navigationLinks} onLocationChange={this.onLocationChange} />
           <PageLayout>
-            {component ? <Component component={component} /> : (
-              <Markdown component={PageComponent} page={page} />
+            {isUIRoot ? this.renderMarkdownComponent() : component ? <Component component={component} /> : (
+              <Markdown component={PageComponent} page={page} links={() => this.getFooterLinks(pageParents, route)} />
             )}
           </PageLayout>
         </Wrapper>

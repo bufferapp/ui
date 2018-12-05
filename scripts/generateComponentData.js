@@ -154,14 +154,14 @@ function generate(componentPaths) {
   // we need to exclude the style folder here
   const componentData = getDirectories(componentPaths.components).filter(folder => folder !== 'style').map((componentName) => {
     try {
-      const data = {
+      return {
         id: 'ui',
         fileName: 'ui',
         level: 0,
         name: 'UI Components',
+        parentName: 'ui',
         children: [getComponentData(componentPaths, componentName)],
       };
-      return data;
     } catch (error) {
       errors.push(`An error occurred while attempting to generate metadata for ${componentName}. ${error}`);
     }
