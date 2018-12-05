@@ -39,6 +39,7 @@
   "dependencies": {
     "chalk": "^2.4.1",
     "chokidar": "2.0.4",
+    "npm-run-all": "4.0.2",
     "react": "16.6.3",
     "react-docgen": "2.14.0",
     "react-dom": "16.6.3",
@@ -87,7 +88,6 @@
     "jest-resolve": "23.6.0",
     "markdown-to-jsx": "^6.9.0",
     "mini-css-extract-plugin": "0.4.3",
-    "npm-run-all": "4.0.2",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "pnp-webpack-plugin": "1.1.0",
     "postcss-flexbugs-fixes": "4.1.0",
