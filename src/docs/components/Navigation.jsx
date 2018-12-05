@@ -9,7 +9,7 @@ const Sidebar = style.div`
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    width: calc((100% - 1448px) / 2 );
+    width: 300px;
     padding-left: calc((100% - 1448px) / 2);
     border-right: 1px solid #E6ECF1;
 `;
@@ -39,6 +39,7 @@ const SidebarListItem = style.li`
     padding: 0px;
     position: relative;
     border-left: 1px solid transparent;
+    padding-left: ${props => (props.level === 1 ? '30px' : '0px')}
 `;
 
 const SidebarListItemLink = style.a`
@@ -52,18 +53,24 @@ const SidebarListItemLink = style.a`
     border: 1px solid transparent;
     border-right: 0px;
     cursor: pointer;
+  
 `;
 
 
-const Navigation = ({ components }) => (
+const Navigation = ({ components, onLocationChange }) => (
   <Sidebar>
     <SidebarList>
       {
-        components.map(name => (
-          <SidebarListItem key={name}>
-            <SidebarListItemLink href={`#${name}`}>{name}</SidebarListItemLink>
-          </SidebarListItem>
-        ))
+        components.map(component => [
+          <SidebarListItem key={component.name} level={component.level}>
+            <SidebarListItemLink href={`#${component.id}`}>{component.name}</SidebarListItemLink>
+          </SidebarListItem>,
+          component.children ? component.children.map(child => (
+            <SidebarListItem key={child.name} level={child.level} onClick={() => onLocationChange(child.parentName, child.id)}>
+              <SidebarListItemLink href={`#${child.id}`}>{child.name}</SidebarListItemLink>
+            </SidebarListItem>
+          )) : null,
+        ])
       }
     </SidebarList>
   </Sidebar>
@@ -73,6 +80,7 @@ Navigation.propTypes = {
   components: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
   })).isRequired,
+  onLocationChange: PropTypes.func.isRequired,
 };
 
 export default Navigation;

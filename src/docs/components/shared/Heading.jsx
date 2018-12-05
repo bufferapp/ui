@@ -16,6 +16,9 @@ const Text = style.h2`
     border-left: 2px solid #E6ECF1;
     padding: 0 16px;
     border-left-color: #2E5DF8;
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 500;
 `;
 
 const Header = style.div`
