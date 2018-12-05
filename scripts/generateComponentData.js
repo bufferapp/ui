@@ -115,8 +115,6 @@ function getDocumentsData(documentsPath) {
         const splitByUppercase = fileName.split(/(?=[A-Z])/);
         const fileId = splitByUppercase.join('-').toLowerCase();
         return {
-          // By convention, component name should match the filename
-          // So remove the .jsx extension to get the component name
           id: fileId,
           fileName,
           name: splitByUppercase.join(' '),
