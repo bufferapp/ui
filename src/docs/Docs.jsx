@@ -21,11 +21,11 @@ const Wrapper = style.div`
 `;
 
 const PageLayout = style.div`
-  padding: 0px 88px;
+  padding: 60px 88px;
   display: block;
   width: 100%;
   background: #ffffff;
-      height: calc(100vh - 82px);
+  height: calc(100vh - 201px);
 `;
 
 

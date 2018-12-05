@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import Markdown from 'markdown-to-jsx';
 import LinkCard from '../shared/LinkCard';
 import Heading from '../shared/Heading';
+import InfoCard from '../shared/InfoCard';
+import Link from '../shared/Link';
 
 const LinkWrapper = style.div`
     width: 100%;
@@ -50,6 +52,12 @@ export default class Document extends React.Component {
             props: {
               text: page.name,
             },
+          },
+          h4: {
+            component: InfoCard,
+          },
+          a: {
+            component: Link,
           },
         },
       }}

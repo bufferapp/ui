@@ -4,7 +4,7 @@ import style from 'styled-components';
 
 const Title = style.div`
     margin: 0px;
-    padding: 40px 0px;
+    padding: 0px 0px 40px 0px;
     flex: auto;
     display: flex;
 `;
