@@ -40,7 +40,7 @@ const Button = ({
   >
     {children}
     {isSplit && <ButtonArrow>▾</ButtonArrow>}
-    {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
+    {loading && <Loading src="../images/loading-gray.svg" alt="loading" />}
   </ButtonStyled>
 );
 

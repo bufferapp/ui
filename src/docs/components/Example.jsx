@@ -10,8 +10,8 @@ const Wrapper = style.div`
   border: 1px solid #e6ecf1;
   border-radius: 2px;
   margin-bottom: 20px;
-  min-width: 42%;
-  max-width: 42%;
+  min-width: 40%;
+  max-width: 40%;
   margin-right: 20px;
   min-height: 100px;
 `;
@@ -65,7 +65,7 @@ export default class Example extends React.Component {
     } = example;
 
     // Must use CommonJS require here to dynamically require components
-    const ExampleComponent = require(`./examples/${componentName}/${title}/${name}`).default;
+    const ExampleComponent = require(`../examples/${componentName}/${title}/${name}`).default;
 
     return (
       <Wrapper>
