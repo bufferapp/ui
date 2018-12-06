@@ -22,6 +22,7 @@ const Container = style.div`
 
 const Wrapper = style.div`
   display: flex;
+  max-height: calc(100vh - 100px);
 `;
 
 const PageLayout = style.div`
@@ -31,6 +32,7 @@ const PageLayout = style.div`
   background: #ffffff;
   min-height: calc(100vh - 201px);
   max-width: 850px;
+  overflow: auto;
 `;
 
 
