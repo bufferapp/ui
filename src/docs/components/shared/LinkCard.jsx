@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
+import { Link } from 'react-router-dom';
 
-
-const CardWrapper = style.a`
+const CardWrapper = style(Link)`
     position: relative;
     display: flex;
     flex-direction: row;
@@ -43,7 +43,7 @@ const CardTitle = style.h3`
 
 
 const LinkCard = ({ name, id }) => (
-  <CardWrapper href={`#/${id}`}>
+  <CardWrapper to={`/${id}`}>
     <CardBody>
       <CardTitle>{name}</CardTitle>
     </CardBody>

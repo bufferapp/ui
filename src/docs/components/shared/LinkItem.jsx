@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
+import { Link } from 'react-router-dom';
 
-
-const LinkWrapper = style.a`
+const LinkWrapper = style(Link)`
     position: relative;
     display: flex;
     flex-direction: row;
@@ -42,17 +42,17 @@ const LinkTitle = style.h3`
 `;
 
 
-const LinkCard = ({ children, href }) => (
-  <LinkWrapper href={href}>
+const LinkItem = ({ children, href }) => (
+  <LinkWrapper to={`/${href}`}>
     <LinkBody>
       <LinkTitle>{`→ ${children}`}</LinkTitle>
     </LinkBody>
   </LinkWrapper>
 );
 
-LinkCard.propTypes = {
+LinkItem.propTypes = {
   children: PropTypes.string.isRequired,
   href: PropTypes.string.isRequired,
 };
 
-export default LinkCard;
+export default LinkItem;

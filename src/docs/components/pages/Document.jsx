@@ -5,7 +5,7 @@ import Markdown from 'markdown-to-jsx';
 import LinkCard from '../shared/LinkCard';
 import Heading from '../shared/Heading';
 import InfoCard from '../shared/InfoCard';
-import Link from '../shared/Link';
+import LinkItem from '../shared/LinkItem';
 
 const LinkWrapper = style.div`
     width: 100%;
@@ -46,7 +46,7 @@ export default class Document extends React.Component {
             component: InfoCard,
           },
           a: {
-            component: Link,
+            component: LinkItem,
           },
           p: {
             component: Paragraph,

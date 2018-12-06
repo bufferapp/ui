@@ -9,7 +9,7 @@ import Component from './components/pages/Component';
 import componentData from '../../config/componentData';
 import documentationData from '../../config/documentsData';
 import Header from './components/Header';
-import UIComponent from './components/pages/markdown/UI/UI.md';
+import UIComponent from './components/pages/markdown/UI.md';
 
 const Container = style.div`
   width: 100%;
