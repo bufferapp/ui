@@ -27,10 +27,21 @@ const Paragraph = style.p`
     font-weight: 400;
     `;
 
-const ColorWrapper = style.div`
+const ColorRow = style.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 20px;
+`;
+
+const ColorColumn = style.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 10px;
+    flex-grow: 1;
 `;
 
 export default class Document extends React.Component {
@@ -58,7 +69,8 @@ export default class Document extends React.Component {
           p: {
             component: Paragraph,
           },
-          ColorWrapper,
+          ColorRow,
+          ColorColumn,
           ColorCopy,
         },
       }}
