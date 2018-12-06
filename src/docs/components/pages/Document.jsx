@@ -60,9 +60,6 @@ export default class Document extends React.Component {
               text: page.name,
             },
           },
-          h4: {
-            component: InfoCard,
-          },
           a: {
             component: LinkItem,
           },
@@ -72,6 +69,7 @@ export default class Document extends React.Component {
           ColorRow,
           ColorColumn,
           ColorCopy,
+          InfoCard,
         },
       }}
       >
