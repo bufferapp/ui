@@ -30,7 +30,7 @@ Three distinct font weights are used throughout our design system:
 | Font Weight Name        | Font Weight Value           | CSS Property  |
 | ------------- |:-------------:| -----:|
 | Regular      | 400 | `font-weight: 400` |
-| Medium      | 500      |  `font-weight: 500 |
+| Medium      | 500      |  `font-weight: 500` |
 | Bold | 700      |    `font-weight: 700` |
 
 

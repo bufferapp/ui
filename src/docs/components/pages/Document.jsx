@@ -44,6 +44,19 @@ const ColorColumn = style.div`
     flex-grow: 1;
 `;
 
+const CodeBlock = style.pre`
+    counter-reset: line 0;
+    font-family: "Source Code Pro", Menlo, monospace;
+    font-size: 85%;
+    line-height: 1.7;
+    tab-size: 4;
+    background-color: rgb(245, 247, 249);
+    overflow-x: auto;
+    padding: 15px 20px;
+    border-radius: 3px;
+    margin: 15px 0;
+`;
+
 export default class Document extends React.Component {
   render() {
     const DocHeading = ({ children, ...props }) => (
@@ -70,6 +83,9 @@ export default class Document extends React.Component {
           ColorColumn,
           ColorCopy,
           InfoCard,
+          code: {
+            component: CodeBlock,
+          },
         },
       }}
       >
