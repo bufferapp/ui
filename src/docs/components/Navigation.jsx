@@ -43,7 +43,7 @@ const SidebarListItem = style.li`
     padding-left: ${props => (props.level === 1 ? '30px' : '0px')}
 `;
 
-const SidebarListItemLink = style.a`
+const SidebarListItemLink = style(Link)`
     text-decoration: none;
     position: relative;
     display: flex;
@@ -64,14 +64,14 @@ const Navigation = ({ components }) => (
       {
         components.map(component => [
           <SidebarListItem key={component.name} level={component.level}>
-            <Link to={`/${component.parentName}/${component.id}`}><SidebarListItemLink>{component.name}</SidebarListItemLink></Link>
+            <SidebarListItemLink to={`/${component.parentName}/${component.id}`}>{component.name}</SidebarListItemLink>
           </SidebarListItem>,
           // we want to exclude children with the same name as the parent
           // no need to show those as those can be accesses by clicking on the parent
           component.children ? component.children.map(child => (
             child.fileName !== child.parentName ? (
               <SidebarListItem key={child.name} level={child.level}>
-                <Link to={`/${child.parentName}/${child.id}`}><SidebarListItemLink>{child.name}</SidebarListItemLink></Link>
+                <SidebarListItemLink to={`/${child.parentName}/${child.id}`}>{child.name}</SidebarListItemLink>
               </SidebarListItem>
             ) : null
           )) : null,
