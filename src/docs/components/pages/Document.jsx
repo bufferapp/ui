@@ -6,6 +6,7 @@ import LinkCard from '../shared/LinkCard';
 import Heading from '../shared/Heading';
 import InfoCard from '../shared/InfoCard';
 import LinkItem from '../shared/LinkItem';
+import ColorCopy from '../shared/ColorCopy';
 
 const LinkWrapper = style.div`
     width: 100%;
@@ -25,6 +26,12 @@ const Paragraph = style.p`
     line-height: 1.625;
     font-weight: 400;
     `;
+
+const ColorWrapper = style.div`
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+`;
 
 export default class Document extends React.Component {
   render() {
@@ -51,6 +58,8 @@ export default class Document extends React.Component {
           p: {
             component: Paragraph,
           },
+          ColorWrapper,
+          ColorCopy,
         },
       }}
       >
