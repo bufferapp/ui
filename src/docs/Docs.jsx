@@ -1,5 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
+import PropTypes from 'prop-types';
 import style from 'styled-components';
 import markdownToJsx from 'markdown-to-jsx';
 import Markdown from './components/pages/Document';
@@ -36,22 +37,23 @@ const PageLayout = style.div`
 export default class Docs extends React.Component {
   constructor(props) {
     super(props);
+    const { params } = props.match;
     this.state = {
-      // to keep things simple, we're using hash based urls in state
-      // each time that the url changes, we're going to update the state
-      route: window.location.hash.substr(1),
-      location: window.location.pathname.replace('/', '').replace('/', ''),
+      route: params.route,
+      location: params.location,
     };
   }
 
-  componentWillMount() {
-    if (!window.location.hash) {
-      window.location = `${window.location.origin}/GettingStarted/#getting-started`;
+  componentWillReceiveProps(nextProps) {
+    const { match } = this.props;
+    const { params } = nextProps.match;
+    if (params !== match.params) {
+      const { route, location } = params;
+      this.setState({
+        route,
+        location,
+      });
     }
-  }
-
-  componentDidMount() {
-    window.addEventListener('hashchange', () => this.setState({ route: window.location.hash.substr(1) }));
   }
 
   getFooterLinks = ({ pageParents, route }) => {
@@ -66,15 +68,6 @@ export default class Docs extends React.Component {
     if (nextLink) links.push(nextLink);
     return links;
   };
-
-  /** Update the url based on the folder and the file names
-   * passed from the Navigation component */
-  onLocationChange = (location, hash) => {
-    this.setState({
-      location,
-    });
-    window.location = `${window.location.origin}/${location}/#${hash}`;
-  }
 
   renderMarkdownComponent = () => <markdownToJsx>{UIComponent}</markdownToJsx>
 
@@ -108,7 +101,7 @@ export default class Docs extends React.Component {
       <Container>
         <Header title="Buffer Components Documentation" />
         <Wrapper>
-          <Navigation components={navigationLinks} onLocationChange={this.onLocationChange} />
+          <Navigation components={navigationLinks} />
           <PageLayout>
             {isUIRoot ? this.renderMarkdownComponent() : component ? <Component component={component} /> : (
               <Markdown component={PageComponent} page={page} links={() => this.getFooterLinks(pageParents, route)} />
@@ -119,3 +112,12 @@ export default class Docs extends React.Component {
     );
   }
 }
+
+Docs.propTypes = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      route: PropTypes.string.isRequired,
+      location: PropTypes.string.isRequired,
+    }).isRequired,
+  }).isRequired,
+};

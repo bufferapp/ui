@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Sidebar = style.div`
     z-index: 15;
@@ -57,20 +58,20 @@ const SidebarListItemLink = style.a`
 `;
 
 
-const Navigation = ({ components, onLocationChange }) => (
+const Navigation = ({ components }) => (
   <Sidebar>
     <SidebarList>
       {
         components.map(component => [
           <SidebarListItem key={component.name} level={component.level}>
-            <SidebarListItemLink href={`#${component.id}`} onClick={() => onLocationChange(component.parentName, component.id)}>{component.name}</SidebarListItemLink>
+            <Link to={`/${component.parentName}/${component.id}`}><SidebarListItemLink>{component.name}</SidebarListItemLink></Link>
           </SidebarListItem>,
           // we want to exclude children with the same name as the parent
           // no need to show those as those can be accesses by clicking on the parent
           component.children ? component.children.map(child => (
             child.fileName !== child.parentName ? (
-              <SidebarListItem key={child.name} level={child.level} onClick={() => onLocationChange(child.parentName, child.id)}>
-                <SidebarListItemLink href={`#${child.id}`}>{child.name}</SidebarListItemLink>
+              <SidebarListItem key={child.name} level={child.level}>
+                <Link to={`/${child.parentName}/${child.id}`}><SidebarListItemLink>{child.name}</SidebarListItemLink></Link>
               </SidebarListItem>
             ) : null
           )) : null,
@@ -84,7 +85,6 @@ Navigation.propTypes = {
   components: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string,
   })).isRequired,
-  onLocationChange: PropTypes.func.isRequired,
 };
 
 export default Navigation;
