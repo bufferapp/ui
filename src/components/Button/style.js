@@ -1,7 +1,7 @@
 /* eslint-disable no-confusing-arrow */
 import { css } from 'styled-components';
 import {
-  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, blueLighter, grayLight,
+  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, grayLight,
 } from '../style/colors';
 import {
   fontFamily, fontSize, lineHeight, fontWeightMedium,
@@ -83,20 +83,6 @@ export const text = css`
   background-color: transparent;
   :hover {
     color: ${grayDarker};
-  }
-`;
-
-export const split = css`
-  padding-left: 32px;
-  :before {
-    background-color: ${props => props.primary ? blueLighter : gray};
-    content: "";
-    height: 24px;
-    position: absolute;
-    right: 38px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1px;
   }
 `;
 

@@ -11,7 +11,7 @@ const SelectItemStyled = style.li`
 const SelectItem = ({ item, onClick }) => (
   <SelectItemStyled onClick={onClick}>
     <Styles.selectItemLabel>
-      {item.name}
+      {item.title}
     </Styles.selectItemLabel>
   </SelectItemStyled>
 );
@@ -19,7 +19,7 @@ const SelectItem = ({ item, onClick }) => (
 SelectItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   }).isRequired,
   onClick: PropTypes.func.isRequired,
 };

@@ -10,18 +10,10 @@ const ButtonStyled = style.div`
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
 `;
 
-const ButtonArrow = style.div`
-  ${Styles.split};
-`;
-
 const Loading = style.img`
   width: 24px;
   padding-left: 10px;
 `;
-
-const SplitButton = onButtonClick => (
-  <ButtonArrow onClick={onButtonClick}>▾</ButtonArrow>
-);
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
@@ -46,7 +38,7 @@ const Button = ({
     aria-label={label || null}
   >
     {children}
-    {isSplit && <Select onSelectClick={onSelectClick} Button={selectProps => SplitButton(selectProps.onButtonClick)} items={items} /> }
+    {isSplit && <Select isSplit type="primary" onSelectClick={onSelectClick} items={items} /> }
     {loading && <Loading src="../images/loading-gray.svg" alt="loading" />}
   </ButtonStyled>
 );
@@ -79,7 +71,7 @@ Button.propTypes = {
 
   items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   })),
   onSelectClick: PropTypes.func,
 };

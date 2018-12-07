@@ -7,11 +7,10 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   role="button"
   tabIndex={0}
 >
-  <mockConstructor
-    onButtonClick={[Function]}
-  >
-    jest-auto-snapshots String Fixture
-  </mockConstructor>
+  <ButtonSplit
+    onClick={[Function]}
+    type="primary"
+  />
   <ForwardRef
     isOpen={false}
   >
@@ -20,7 +19,46 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
-            "name": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+  <ForwardRef
+    isOpen={false}
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
+<ForwardRef
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <Button
+    disabled={false}
+    isSplit={false}
+    label="jest-auto-snapshots String Fixture"
+    loading={false}
+    onClick={[Function]}
+    size="medium"
+    type="primary"
+  >
+    jest-auto-snapshots String Fixture
+  </Button>
+  <ForwardRef
+    isOpen={false}
+  >
+    <ForwardRef>
+      <SelectItem
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
         }
         onClick={[Function]}
@@ -40,11 +78,10 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   role="button"
   tabIndex={0}
 >
-  <mockConstructor
-    onButtonClick={[Function]}
-  >
-    jest-auto-snapshots String Fixture
-  </mockConstructor>
+  <ButtonSplit
+    onClick={[Function]}
+    type="primary"
+  />
   <ForwardRef
     isOpen={false}
   >
@@ -53,7 +90,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
-            "name": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
         }
         onClick={[Function]}
@@ -73,11 +110,17 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
   role="button"
   tabIndex={0}
 >
-  <mockConstructor
-    onButtonClick={[Function]}
+  <Button
+    disabled={false}
+    isSplit={false}
+    label=""
+    loading={false}
+    onClick={[Function]}
+    size="medium"
+    type="secondary"
   >
     
-  </mockConstructor>
+  </Button>
   <ForwardRef
     isOpen={false}
   >
@@ -86,7 +129,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
-            "name": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
         }
         onClick={[Function]}

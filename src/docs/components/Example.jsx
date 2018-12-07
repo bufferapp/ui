@@ -11,7 +11,7 @@ const Wrapper = style.div`
   border-radius: 2px;
   margin-bottom: 20px;
   min-width: 40%;
-  max-width: 40%;
+  flex: 1;
   margin-right: 20px;
   min-height: 100px;
 `;

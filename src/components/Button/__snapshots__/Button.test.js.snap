@@ -11,17 +11,18 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
 >
   <NodeFixture />
   <Select
-    Button={[Function]}
+    isSplit={true}
     items={
       Array [
         Object {
           "id": "jest-auto-snapshots String Fixture",
-          "name": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
         },
       ]
     }
     label=""
     onSelectClick={[MockFunction]}
+    type="primary"
   />
   <ForwardRef
     alt="loading"
@@ -41,10 +42,11 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
 >
   <NodeFixture />
   <Select
-    Button={[Function]}
+    isSplit={true}
     items={Array []}
     label=""
     onSelectClick={[MockFunction]}
+    type="primary"
   />
   <ForwardRef
     alt="loading"
@@ -64,17 +66,18 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
 >
   <NodeFixture />
   <Select
-    Button={[Function]}
+    isSplit={true}
     items={
       Array [
         Object {
           "id": "jest-auto-snapshots String Fixture",
-          "name": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
         },
       ]
     }
     label=""
     onSelectClick={[MockFunction]}
+    type="primary"
   />
   <ForwardRef
     alt="loading"
@@ -111,17 +114,18 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
 >
   <NodeFixture />
   <Select
-    Button={[Function]}
+    isSplit={true}
     items={
       Array [
         Object {
           "id": "jest-auto-snapshots String Fixture",
-          "name": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
         },
       ]
     }
     label=""
     onSelectClick={[MockFunction]}
+    type="primary"
   />
 </ForwardRef>
 `;
@@ -137,17 +141,18 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 >
   <NodeFixture />
   <Select
-    Button={[Function]}
+    isSplit={true}
     items={
       Array [
         Object {
           "id": "jest-auto-snapshots String Fixture",
-          "name": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
         },
       ]
     }
     label=""
     onSelectClick={[MockFunction]}
+    type="primary"
   />
   <ForwardRef
     alt="loading"

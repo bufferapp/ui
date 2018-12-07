@@ -1,15 +1,16 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
 import * as Styles from './style';
 import SelectItem from './SelectItem/SelectItem';
+import Button from '../Button/Button';
+import ButtonSplit from '../Button/ButtonSplit/ButtonSplit';
 
 const SelectStyled = style.div`  
   ${Styles.select};
 `;
 
-/** Select component */
+/** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
   constructor(props) {
     super(props);
@@ -57,12 +58,14 @@ export default class Select extends React.Component {
 
 
   render() {
-    const { label, items, Button } = this.props;
+    const {
+      label, items, isSplit, type,
+    } = this.props;
     const { isOpen } = this.state;
 
     return (
       <Styles.wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0}>
-        <Button onButtonClick={this.onButtonClick}>{label}</Button>
+        {isSplit ? <ButtonSplit type={type} onClick={this.onButtonClick} /> : <Button type={type} label={label} onClick={this.onButtonClick}>{label}</Button>}
         <SelectStyled isOpen={isOpen}>
           <Styles.SelectItems>
             {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
@@ -75,15 +78,27 @@ export default class Select extends React.Component {
 }
 
 Select.propTypes = {
+  /** Function to call on selected item click */
   onSelectClick: PropTypes.func.isRequired,
+
+  /** Label to display on the Select button */
   label: PropTypes.string,
-  Button: PropTypes.func.isRequired,
+
+  /** Items to display in the popup */
   items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
   })).isRequired,
+
+  /** Is the Select component part of the Split Button */
+  isSplit: PropTypes.bool,
+
+  /** Type of the select component  */
+  type: PropTypes.oneOf(['primary', 'secondary']),
 };
 
 Select.defaultProps = {
   label: '',
+  isSplit: false,
+  type: 'secondary',
 };

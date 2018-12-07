@@ -1,22 +1,16 @@
 import React from 'react';
-import Button from '@bufferapp/ui/Button';
+import Select from '@bufferapp/ui/Select';
 
-/** Split Button with Select */
+
+/** Basic Select */
 export default function ExampleSelect() {
   return (
-    <Button
-      onClick={() => true}
-      label="Select"
-      type="primary"
-      isSplit="true"
-      items={[{
-        id: 1, name: 'Reply and Close',
-      },
-      {
-        id: 2, name: 'Reply and Assign',
-      }]}
-    >
-      Primary
-    </Button>
+    <Select
+      onSelectClick={() => true}
+      label="Click Me"
+      items={[{ id: 1, title: 'Open' },
+        { id: 2, title: 'Pending' },
+        { id: 3, title: 'Closed' }]}
+    />
   );
 }

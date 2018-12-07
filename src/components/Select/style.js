@@ -13,7 +13,7 @@ export const wrapper = style.div`
 
 
 export const select = css`
-    margin-top: 5px;
+    margin-top: 15px;
     position: fixed;
     z-index: 1000;
     box-sizing: content-box;
@@ -48,12 +48,12 @@ export const selectArrow = style.div`
     display: ${props => (props.isOpen ? 'inline-block' : 'none')};
     height: 10px;
     left: 50%;
-    margin-left: ${props => (props.right ? '80px' : '-5px')};
+    margin-left: ${props => (props.right ? '80px' : '10px')};
     position: absolute;
     width: 10px;
     z-index: 1;
     transform: ${props => (props.bottom ? 'rotate(225deg)' : 'rotate(45deg)')};
     bottom: ${props => (props.bottom ? '-5px' : 'auto')};
-    top: ${props => (props.bottom ? 'auto' : '-5px')};
+    top: ${props => (props.bottom ? 'auto' : '3px')};
     position: relative;
 `;

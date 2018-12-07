@@ -6,13 +6,13 @@ export default function ExampleSelect() {
   return (
     <Button
       onSelectClick={() => true}
-      label="Select"
+      label="Reply + Close"
       type="primary"
       isSplit
       items={[{ id: 1, title: 'Reply + Pending' },
         { id: 2, title: 'Reply + Close + Assign To Me' }]}
     >
-      Click Me
+    Primary
     </Button>
   );
 }
