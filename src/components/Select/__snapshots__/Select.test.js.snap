@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<ForwardRef
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <mockConstructor
+    onButtonClick={[Function]}
+  >
+    jest-auto-snapshots String Fixture
+  </mockConstructor>
+  <ForwardRef
+    isOpen={false}
+  >
+    <ForwardRef>
+      <SelectItem
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "name": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+  <ForwardRef
+    isOpen={false}
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`] = `
+<ForwardRef
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <mockConstructor
+    onButtonClick={[Function]}
+  >
+    jest-auto-snapshots String Fixture
+  </mockConstructor>
+  <ForwardRef
+    isOpen={false}
+  >
+    <ForwardRef>
+      <SelectItem
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "name": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+  <ForwardRef
+    isOpen={false}
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when passed only required props 1`] = `
+<ForwardRef
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <mockConstructor
+    onButtonClick={[Function]}
+  >
+    
+  </mockConstructor>
+  <ForwardRef
+    isOpen={false}
+  >
+    <ForwardRef>
+      <SelectItem
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "name": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+  <ForwardRef
+    isOpen={false}
+  />
+</ForwardRef>
+`;

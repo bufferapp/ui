@@ -1,5 +1,58 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  <NodeFixture />
+  <Select
+    Button={[Function]}
+    items={
+      Array [
+        Object {
+          "id": "jest-auto-snapshots String Fixture",
+          "name": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    onSelectClick={[MockFunction]}
+  />
+  <ForwardRef
+    alt="loading"
+    src="../images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  <NodeFixture />
+  <Select
+    Button={[Function]}
+    items={Array []}
+    label=""
+    onSelectClick={[MockFunction]}
+  />
+  <ForwardRef
+    alt="loading"
+    src="../images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"
@@ -10,9 +63,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   type="link"
 >
   <NodeFixture />
-  <ForwardRef>
-    ▾
-  </ForwardRef>
+  <Select
+    Button={[Function]}
+    items={
+      Array [
+        Object {
+          "id": "jest-auto-snapshots String Fixture",
+          "name": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    onSelectClick={[MockFunction]}
+  />
   <ForwardRef
     alt="loading"
     src="../images/loading-gray.svg"
@@ -47,9 +110,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
   type="link"
 >
   <NodeFixture />
-  <ForwardRef>
-    ▾
-  </ForwardRef>
+  <Select
+    Button={[Function]}
+    items={
+      Array [
+        Object {
+          "id": "jest-auto-snapshots String Fixture",
+          "name": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    onSelectClick={[MockFunction]}
+  />
 </ForwardRef>
 `;
 
@@ -63,9 +136,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   type="link"
 >
   <NodeFixture />
-  <ForwardRef>
-    ▾
-  </ForwardRef>
+  <Select
+    Button={[Function]}
+    items={
+      Array [
+        Object {
+          "id": "jest-auto-snapshots String Fixture",
+          "name": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    onSelectClick={[MockFunction]}
+  />
   <ForwardRef
     alt="loading"
     src="../images/loading-gray.svg"

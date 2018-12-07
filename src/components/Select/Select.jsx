@@ -28,12 +28,6 @@ export default class Select extends React.Component {
     document.removeEventListener('click', this.closePopover);
   }
 
-  // static getDerivedStateFromProps(props, state) {
-  //   if (props.items !== state.items && props.items.length > 0) {
-  //   }
-  // }
-
-
   // Close the popover
   closePopover = () => {
     const { isOpen } = this.state;
@@ -55,7 +49,6 @@ export default class Select extends React.Component {
   };
 
   onButtonClick = () => {
-    console.info('ON CLICK');
     const { isOpen } = this.state;
     this.setState({
       isOpen: !isOpen,
@@ -72,7 +65,7 @@ export default class Select extends React.Component {
         <Button onButtonClick={this.onButtonClick}>{label}</Button>
         <SelectStyled isOpen={isOpen}>
           <Styles.SelectItems>
-            {items.map(item => <SelectItem item={item} onClick={this.handleSelectOption} />)}
+            {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
           </Styles.SelectItems>
         </SelectStyled>
         <Styles.selectArrow isOpen={isOpen} />
@@ -84,11 +77,11 @@ export default class Select extends React.Component {
 Select.propTypes = {
   onSelectClick: PropTypes.func.isRequired,
   label: PropTypes.string,
-  Button: PropTypes.node.isRequired,
-  items: PropTypes.shape({
+  Button: PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-  }).isRequired,
+  })).isRequired,
 };
 
 Select.defaultProps = {

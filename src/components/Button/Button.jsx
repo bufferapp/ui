@@ -19,10 +19,9 @@ const Loading = style.img`
   padding-left: 10px;
 `;
 
-const SplitButton = (onButtonClick) => {
-  console.info('CLICK');
-  return <ButtonArrow onClick={onButtonClick}>▾</ButtonArrow>;
-};
+const SplitButton = onButtonClick => (
+  <ButtonArrow onClick={onButtonClick}>▾</ButtonArrow>
+);
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
@@ -78,11 +77,10 @@ Button.propTypes = {
   /** Is the Button Loading  */
   loading: PropTypes.bool,
 
-  items: PropTypes.shape({
+  items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-  }),
-
+  })),
   onSelectClick: PropTypes.func,
 };
 
@@ -92,8 +90,8 @@ Button.defaultProps = {
   isSplit: false,
   loading: false,
   size: 'medium',
-  items: [],
-  onSelectClick: () => {},
+  items: undefined,
+  onSelectClick: undefined,
 };
 
 
