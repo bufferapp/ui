@@ -73,6 +73,7 @@ function getDocumentationFolders(documentationPath) {
 function getExampleData(examplesPath, componentName) {
   // Get all the folders in src/docs/examples
   const folders = getExampleFolders(examplesPath, componentName);
+  console.info(folders);
 
   // for each folder in examples, get the example files and generate the example object
   return folders.map((folder) => {
@@ -133,6 +134,7 @@ function getComponentData(componentPath, componentName) {
   const content = readFile(path.join(paths.components, componentName, `${componentName}.jsx`));
 
   const info = parse(content);
+  console.log(info);
   return {
     name: componentName,
     description: info.description,
@@ -152,21 +154,21 @@ function getComponentData(componentPath, componentName) {
 function generate(componentPaths) {
   const errors = [];
   // we need to exclude the style folder here
-  const componentData = getDirectories(componentPaths.components).filter(folder => folder !== 'style').map((componentName) => {
-    try {
-      return {
-        id: 'ui',
-        fileName: 'ui',
-        level: 0,
-        name: 'UI Components',
-        parentName: 'ui',
-        children: [getComponentData(componentPaths, componentName)],
-      };
-    } catch (error) {
-      errors.push(`An error occurred while attempting to generate metadata for ${componentName}. ${error}`);
-    }
-    return false;
-  });
+  const componentData = {
+    id: 'ui',
+    fileName: 'ui',
+    level: 0,
+    name: 'UI Components',
+    parentName: 'ui',
+    children: getDirectories(componentPaths.components).filter(folder => folder !== 'style').map((componentName) => {
+      try {
+        return getComponentData(componentPaths, componentName);
+      } catch (error) {
+        errors.push(`An error occurred while attempting to generate metadata for ${componentName}. ${error}`);
+      }
+      return false;
+    }),
+  };
   // write the array of data to our output file
   writeFile(componentPaths.output, `module.exports = ${JSON.stringify(errors.length ? errors : componentData)}`);
 }

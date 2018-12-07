@@ -78,14 +78,18 @@ export default class Docs extends React.Component {
 
     const isUIRoot = location === 'ui' && route === 'ui';
 
+    console.info(componentData);
+
     // by convention, the route in the url should match the components name
     // if there's no component specified, just show the first component in the list
-    const component = location === 'ui' ? componentData[0]
+    const component = location === 'ui' ? componentData
       .children.filter(x => x.id === route)[0] : null;
+
+    console.info(component);
 
     // concatenate the documentation data and the components data
     // to construct the links in the sidebar
-    const navigationLinks = [...documentationData, ...componentData];
+    const navigationLinks = [...documentationData, componentData];
 
     // from the documentation data, find the current page parent
     // in order to be able to identify the child we need to show on the page

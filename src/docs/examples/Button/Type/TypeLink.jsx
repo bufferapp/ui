@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@bufferapp/components-new/Button';
+import Button from '@bufferapp/ui/Button';
 
 /** Link Button */
 export default function ExampleTypeLink() {

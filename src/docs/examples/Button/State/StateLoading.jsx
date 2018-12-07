@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '@bufferapp/components-new/Button';
+import Button from '@bufferapp/ui/Button';
 
 /** Loading */
 export default function ExamplePrimaryLoading() {
