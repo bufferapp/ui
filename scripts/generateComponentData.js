@@ -73,7 +73,6 @@ function getDocumentationFolders(documentationPath) {
 function getExampleData(examplesPath, componentName) {
   // Get all the folders in src/docs/examples
   const folders = getExampleFolders(examplesPath, componentName);
-  console.info(folders);
 
   // for each folder in examples, get the example files and generate the example object
   return folders.map((folder) => {
@@ -134,7 +133,6 @@ function getComponentData(componentPath, componentName) {
   const content = readFile(path.join(paths.components, componentName, `${componentName}.jsx`));
 
   const info = parse(content);
-  console.log(info);
   return {
     name: componentName,
     description: info.description,
