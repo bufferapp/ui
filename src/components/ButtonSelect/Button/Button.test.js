@@ -1,4 +1,4 @@
 import snap from 'jest-auto-snapshots';
-import Button from './ButtonSelect';
+import Button from './Button';
 
-snap(Button, './ButtonSelect.jsx');
+snap(Button, './Button.jsx');

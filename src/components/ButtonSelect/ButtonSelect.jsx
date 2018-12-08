@@ -4,29 +4,16 @@ import Button from '../Button/Button';
 import Select from '../Select/Select';
 import { ButtonWrapper } from './style';
 
-
 /** Split Button component composed out of the Button and Select components.
  * The left side is the normal Button and the right side is the Select component that opens the menu popup on click. */
-export default class ButtonSelect extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-    };
-  }
-
-  render() {
-    const {
-      onButtonClick, label, type, onSelectClick, items,
-    } = this.props;
-
-    return (
-      <ButtonWrapper>
-        <Button isSplit onClick={onButtonClick} label={label} type={type}>{label}</Button>
-        <Select isSplit type={type} onSelectClick={onSelectClick} items={items} />
-      </ButtonWrapper>
-    );
-  }
-}
+const ButtonSelect = ({
+  onButtonClick, label, type, onSelectClick, items,
+}) => (
+  <ButtonWrapper>
+    <Button isSplit onClick={onButtonClick} label={label} type={type}>{label}</Button>
+    <Select isSplit type={type} onSelectClick={onSelectClick} items={items} />
+  </ButtonWrapper>
+);
 
 ButtonSelect.propTypes = {
   /** Function to call when the left side, the Button is clicked */
@@ -51,3 +38,5 @@ ButtonSelect.propTypes = {
 ButtonSelect.defaultProps = {
   type: 'secondary',
 };
+
+export default ButtonSelect;

@@ -142,8 +142,9 @@
   ],
   "jest": {
     "collectCoverageFrom": [
-      "src/components/**/*.{js,jsx,ts,tsx}",
-      "!src/components/**/*.d.ts"
+      "src/components/**/*.{js,jsx}",
+      "!src/components/**/style.js",
+      "!src/components/**/index.js"
     ],
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
@@ -157,15 +158,6 @@
     ],
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|ts|tsx)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|ts|tsx|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|ts|tsx)$",
-      "^.+\\.module\\.(css|sass|scss)$"
-    ],
     "moduleNameMapper": {
       "./src(.*)$": "<rootDir>/src/$1"
     }

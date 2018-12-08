@@ -44,20 +44,20 @@ const DEFAULT_PORT = parseInt(process.env.PORT, 10) || 3000;
 const HOST = process.env.HOST || '0.0.0.0';
 
 if (process.env.HOST) {
-  console.log(
+  console.info(
     chalk.cyan(
       `Attempting to bind to HOST environment variable: ${chalk.yellow(
         chalk.bold(process.env.HOST),
       )}`,
     ),
   );
-  console.log(
+  console.info(
     'If this was unintentional, check that you haven\'t mistakenly set it in your shell.',
   );
-  console.log(
+  console.info(
     `Learn more here: ${chalk.yellow('http://bit.ly/CRA-advanced-config')}`,
   );
-  console.log();
+  console.info();
 }
 
 // We require that you explictly set browsers and do not fall back to
@@ -87,12 +87,12 @@ checkBrowsers(paths.appPath, isInteractive)
     // Launch WebpackDevServer.
     devServer.listen(port, HOST, (err) => {
       if (err) {
-        return console.log(err);
+        return console.info(err);
       }
       if (isInteractive) {
         clearConsole();
       }
-      console.log(chalk.cyan('Starting the development server...\n'));
+      console.info(chalk.cyan('Starting the development server...\n'));
       openBrowser(urls.localUrlForBrowser);
     });
 
@@ -105,7 +105,7 @@ checkBrowsers(paths.appPath, isInteractive)
   })
   .catch((err) => {
     if (err && err.message) {
-      console.log(err.message);
+      console.info(err.message);
     }
     process.exit(1);
   });

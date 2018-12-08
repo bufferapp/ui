@@ -1,60 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  isSplit={true}
-  onClick={false}
-  size="small"
-  type="link"
->
-  <NodeFixture />
-  <Select
-    isSplit={true}
-    items={
-      Array [
-        Object {
-          "id": "jest-auto-snapshots String Fixture",
-          "title": "jest-auto-snapshots String Fixture",
-        },
-      ]
-    }
-    label=""
-    onSelectClick={[MockFunction]}
-    type="primary"
-  />
-  <ForwardRef
-    alt="loading"
-    src="../images/loading-gray.svg"
-  />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
-<ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
-  disabled={true}
-  isSplit={true}
-  onClick={false}
-  size="small"
-  type="link"
->
-  <NodeFixture />
-  <Select
-    isSplit={true}
-    items={Array []}
-    label=""
-    onSelectClick={[MockFunction]}
-    type="primary"
-  />
-  <ForwardRef
-    alt="loading"
-    src="../images/loading-gray.svg"
-  />
-</ForwardRef>
-`;
-
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"
@@ -64,24 +9,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   size="small"
   type="link"
 >
-  <NodeFixture />
-  <Select
-    isSplit={true}
-    items={
-      Array [
-        Object {
-          "id": "jest-auto-snapshots String Fixture",
-          "title": "jest-auto-snapshots String Fixture",
-        },
-      ]
-    }
-    label=""
-    onSelectClick={[MockFunction]}
-    type="primary"
-  />
+  jest-auto-snapshots String Fixture
   <ForwardRef
     alt="loading"
-    src="../images/loading-gray.svg"
+    src="/../images/loading-gray.svg"
   />
 </ForwardRef>
 `;
@@ -95,10 +26,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   size="small"
   type="link"
 >
-  <NodeFixture />
+  jest-auto-snapshots String Fixture
   <ForwardRef
     alt="loading"
-    src="../images/loading-gray.svg"
+    src="/../images/loading-gray.svg"
   />
 </ForwardRef>
 `;
@@ -112,21 +43,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
   size="small"
   type="link"
 >
-  <NodeFixture />
-  <Select
-    isSplit={true}
-    items={
-      Array [
-        Object {
-          "id": "jest-auto-snapshots String Fixture",
-          "title": "jest-auto-snapshots String Fixture",
-        },
-      ]
-    }
-    label=""
-    onSelectClick={[MockFunction]}
-    type="primary"
-  />
+  jest-auto-snapshots String Fixture
 </ForwardRef>
 `;
 
@@ -139,24 +56,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   size="small"
   type="link"
 >
-  <NodeFixture />
-  <Select
-    isSplit={true}
-    items={
-      Array [
-        Object {
-          "id": "jest-auto-snapshots String Fixture",
-          "title": "jest-auto-snapshots String Fixture",
-        },
-      ]
-    }
-    label=""
-    onSelectClick={[MockFunction]}
-    type="primary"
-  />
+  jest-auto-snapshots String Fixture
   <ForwardRef
     alt="loading"
-    src="../images/loading-gray.svg"
+    src="/../images/loading-gray.svg"
   />
 </ForwardRef>
 `;
@@ -168,8 +71,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
   isSplit={false}
   onClick={[MockFunction]}
   size="medium"
-  type="link"
+  type="secondary"
 >
-  <NodeFixture />
+  jest-auto-snapshots String Fixture
 </ForwardRef>
 `;
