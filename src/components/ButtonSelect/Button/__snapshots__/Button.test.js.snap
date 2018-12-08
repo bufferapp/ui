@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<ForwardRef
+  disabled={false}
+  onClick={[MockFunction]}
+  size="jest-auto-snapshots String Fixture"
+  type="primary"
+>
+  <ForwardRef
+    type="primary"
+  >
+    ▾
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
+<ForwardRef
+  disabled={true}
+  onClick={[MockFunction]}
+  size="jest-auto-snapshots String Fixture"
+  type="primary"
+>
+  <ForwardRef
+    type="primary"
+  >
+    ▾
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
+<ForwardRef
+  disabled={false}
+  onClick={[MockFunction]}
+  size="medium"
+  type="secondary"
+>
+  <ForwardRef
+    type="secondary"
+  >
+    ▾
+  </ForwardRef>
+</ForwardRef>
+`;

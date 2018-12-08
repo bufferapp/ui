@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > ButtonSelect Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<ForwardRef>
+  <Button
+    disabled={false}
+    isSplit={true}
+    label="jest-auto-snapshots String Fixture"
+    loading={false}
+    onClick={[MockFunction]}
+    size="medium"
+    type="primary"
+  >
+    jest-auto-snapshots String Fixture
+  </Button>
+  <Select
+    isSplit={true}
+    items={
+      Array [
+        Object {
+          "id": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    onSelectClick={[MockFunction]}
+    type="primary"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > ButtonSelect Matches snapshot when passed all props 1`] = `
+<ForwardRef>
+  <Button
+    disabled={false}
+    isSplit={true}
+    label="jest-auto-snapshots String Fixture"
+    loading={false}
+    onClick={[MockFunction]}
+    size="medium"
+    type="primary"
+  >
+    jest-auto-snapshots String Fixture
+  </Button>
+  <Select
+    isSplit={true}
+    items={
+      Array [
+        Object {
+          "id": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    onSelectClick={[MockFunction]}
+    type="primary"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > ButtonSelect Matches snapshot when passed only required props 1`] = `
+<ForwardRef>
+  <Button
+    disabled={false}
+    isSplit={true}
+    label="jest-auto-snapshots String Fixture"
+    loading={false}
+    onClick={[MockFunction]}
+    size="medium"
+    type="secondary"
+  >
+    jest-auto-snapshots String Fixture
+  </Button>
+  <Select
+    isSplit={true}
+    items={
+      Array [
+        Object {
+          "id": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    onSelectClick={[MockFunction]}
+    type="secondary"
+  />
+</ForwardRef>
+`;
