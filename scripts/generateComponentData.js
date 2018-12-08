@@ -6,8 +6,8 @@ const chokidar = require('chokidar'); // used to watch files and then run a func
 
 // get the paths of examples and components and output the component data to the config folder
 const paths = {
-  examples: path.join(__dirname, '../src', 'docs', 'examples'),
-  documents: path.join(__dirname, '../src', 'docs', 'components', 'pages', 'markdown'),
+  examples: path.join(__dirname, '../src', 'documentation', 'examples'),
+  documents: path.join(__dirname, '../src', 'documentation', 'markdown'),
   components: path.join(__dirname, '../src', 'components'),
   output: path.join(__dirname, '../config', 'componentData.js'),
   documentsOutput: path.join(__dirname, '../config', 'documentsData.js'),
@@ -73,9 +73,10 @@ function getDocumentationFolders(documentationPath) {
 function getExampleData(examplesPath, componentName) {
   // Get all the folders in src/docs/examples
   const folders = getExampleFolders(examplesPath, componentName);
+  const fileExamples = getDocumentFiles(examplesPath, componentName);
 
   // for each folder in examples, get the example files and generate the example object
-  return folders.map((folder) => {
+  return folders[0] ? folders.map((folder) => {
     const examples = getExampleFiles(examplesPath, componentName, folder);
     return examples.map((file) => {
       const filePath = path.join(examplesPath, componentName, folder, file);
@@ -87,10 +88,25 @@ function getExampleData(examplesPath, componentName) {
         // So remove the .jsx extension to get the component name
         name: file.slice(0, -4),
         description: info.description,
+        methods: info.methods,
         code: content,
         title: folder,
       };
     });
+  }) : fileExamples.map((file) => {
+    const filePath = path.join(examplesPath, componentName, file);
+    const content = readFile(filePath);
+    const info = parse(content);
+
+    return {
+      // By convention, component name should match the filename
+      // So remove the .jsx extension to get the component name
+      name: file.slice(0, -4),
+      description: info.description,
+      methods: info.methods,
+      code: content,
+      title: '',
+    };
   });
 }
 
@@ -132,9 +148,12 @@ function getDocumentsData(documentsPath) {
 function getComponentData(componentPath, componentName) {
   const content = readFile(path.join(paths.components, componentName, `${componentName}.jsx`));
 
+  const splitByUppercase = componentName.split(/(?=[A-Z])/);
+  const name = splitByUppercase.join(' ');
+
   const info = parse(content);
   return {
-    name: componentName,
+    name,
     description: info.description,
     props: info.props,
     code: content,

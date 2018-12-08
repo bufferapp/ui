@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
 import * as Styles from './style';
-import Select from '../Select/Select';
 
 const ButtonStyled = style.div`  
   ${Styles.buttonbase};
   ${props => Styles[props.size]};
+  ${props => Styles[props.isSplit ? 'split' : null]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
 `;
 
@@ -15,10 +15,10 @@ const Loading = style.img`
   padding-left: 10px;
 `;
 
+
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
 const Button = ({
-  children,
   disabled,
   onClick,
   type,
@@ -26,8 +26,6 @@ const Button = ({
   label,
   isSplit,
   loading,
-  items,
-  onSelectClick,
 }) => (
   <ButtonStyled
     onClick={!disabled && onClick}
@@ -37,17 +35,13 @@ const Button = ({
     isSplit={isSplit}
     aria-label={label || null}
   >
-    {children}
-    {isSplit && <Select isSplit type="primary" onSelectClick={onSelectClick} items={items} /> }
-    {loading && <Loading src="../images/loading-gray.svg" alt="loading" />}
+    {label}
+    {loading && <Loading src="/../images/loading-gray.svg" alt="loading" />}
   </ButtonStyled>
 );
 
 
 Button.propTypes = {
-  /** Children node */
-  children: PropTypes.node.isRequired,
-
   /** Is the button disabled */
   disabled: PropTypes.bool,
 
@@ -61,19 +55,13 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
 
   /** Type of button */
-  type: PropTypes.oneOf(['link', 'primarySplit', 'primary', 'secondary', 'text']).isRequired,
+  type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text']),
 
   /** Is the Button Split  */
   isSplit: PropTypes.bool,
 
   /** Is the Button Loading  */
   loading: PropTypes.bool,
-
-  items: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  })),
-  onSelectClick: PropTypes.func,
 };
 
 
@@ -82,8 +70,7 @@ Button.defaultProps = {
   isSplit: false,
   loading: false,
   size: 'medium',
-  items: undefined,
-  onSelectClick: undefined,
+  type: 'secondary',
 };
 
 

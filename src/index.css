@@ -11,8 +11,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  font-size: 14px;
 }
-
 
 img {
   max-width: 100%;

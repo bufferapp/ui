@@ -1,14 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
-import * as Styles from './style';
+import {
+  Wrapper, SelectStyled, SelectItems, Arrow,
+} from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
-import ButtonSplit from '../Button/ButtonSplit/ButtonSplit';
-
-const SelectStyled = style.div`  
-  ${Styles.select};
-`;
+import ButtonSelect from '../ButtonSelect/Button/Button';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
@@ -64,15 +61,15 @@ export default class Select extends React.Component {
     const { isOpen } = this.state;
 
     return (
-      <Styles.wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0}>
-        {isSplit ? <ButtonSplit type={type} onClick={this.onButtonClick} /> : <Button type={type} label={label} onClick={this.onButtonClick}>{label}</Button>}
+      <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0}>
+        {isSplit ? <ButtonSelect type={type} onClick={this.onButtonClick} /> : <Button type={type} label={label} onClick={this.onButtonClick}>{label}</Button>}
         <SelectStyled isOpen={isOpen}>
-          <Styles.SelectItems>
+          <SelectItems>
             {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
-          </Styles.SelectItems>
+          </SelectItems>
         </SelectStyled>
-        <Styles.selectArrow isOpen={isOpen} />
-      </Styles.wrapper>
+        <Arrow isOpen={isOpen} />
+      </Wrapper>
     );
   }
 }

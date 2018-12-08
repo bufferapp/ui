@@ -85,6 +85,10 @@ export const text = css`
     color: ${grayDarker};
   }
 `;
+export const split = css`
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+`;
 
 /* size variants */
 export const small = css`

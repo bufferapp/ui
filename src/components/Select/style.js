@@ -1,9 +1,9 @@
-import style, { css } from 'styled-components';
+import style from 'styled-components';
 import {
   grayShadow, grayLighter,
 } from '../style/colors';
 
-export const wrapper = style.div`
+export const Wrapper = style.div`
   outline: 0;
   :focus {
     outline: 0
@@ -12,9 +12,10 @@ export const wrapper = style.div`
 `;
 
 
-export const select = css`
-    margin-top: 15px;
-    position: fixed;
+export const SelectStyled = style.div`
+    margin-top: 0;
+    right: 0;
+    position: absolute;
     z-index: 1000;
     box-sizing: content-box;
     border: 1px solid ${grayLighter};
@@ -40,7 +41,7 @@ export const SelectItems = style.ul`
 `;
 
 
-export const selectArrow = style.div`
+export const Arrow = style.div`
     background-color: #fff;
     border-left: 1px solid #ced7df;
     border-radius: 2px 0 0 0;
@@ -48,12 +49,12 @@ export const selectArrow = style.div`
     display: ${props => (props.isOpen ? 'inline-block' : 'none')};
     height: 10px;
     left: 50%;
-    margin-left: ${props => (props.right ? '80px' : '10px')};
+    margin-left: ${props => (props.right ? '80px' : '-5px')};
     position: absolute;
     width: 10px;
     z-index: 1;
     transform: ${props => (props.bottom ? 'rotate(225deg)' : 'rotate(45deg)')};
     bottom: ${props => (props.bottom ? '-5px' : 'auto')};
-    top: ${props => (props.bottom ? 'auto' : '3px')};
+    top: ${props => (props.bottom ? 'auto' : '-10px')};
     position: relative;
 `;
