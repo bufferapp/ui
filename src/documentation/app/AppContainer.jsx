@@ -8,7 +8,7 @@ import Sidebar from './layout/sidebar/Sidebar';
 import Component from './layout/content/Component';
 import componentData from '../../../config/componentData';
 import documentationData from '../../../config/documentsData';
-import Header from './components/Header';
+import NavBar from './layout/navbar/NavBar';
 import UIComponent from '../markdown/UI.md';
 
 const Container = style.div`
@@ -102,7 +102,7 @@ export default class AppContainer extends React.Component {
 
     return (
       <Container>
-        <Header title="Buffer Components Documentation" />
+        <NavBar title="Buffer Components Documentation" />
         <Wrapper>
           <Sidebar navigationLinks={navigationLinks} />
           <PageLayout>
