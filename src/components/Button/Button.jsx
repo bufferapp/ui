@@ -36,7 +36,7 @@ const Button = ({
     aria-label={label || null}
   >
     {label}
-    {loading && <Loading src="/../images/loading-gray.svg" alt="loading" />}
+    {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
   </ButtonStyled>
 );
 
