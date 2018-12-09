@@ -12,7 +12,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   jest-auto-snapshots String Fixture
   <ForwardRef
     alt="loading"
-    src="/../images/loading-gray.svg"
+    src="./images/loading-gray.svg"
   />
 </ForwardRef>
 `;
@@ -29,7 +29,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   jest-auto-snapshots String Fixture
   <ForwardRef
     alt="loading"
-    src="/../images/loading-gray.svg"
+    src="./images/loading-gray.svg"
   />
 </ForwardRef>
 `;
@@ -59,7 +59,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   jest-auto-snapshots String Fixture
   <ForwardRef
     alt="loading"
-    src="/../images/loading-gray.svg"
+    src="./images/loading-gray.svg"
   />
 </ForwardRef>
 `;
