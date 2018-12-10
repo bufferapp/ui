@@ -2,20 +2,17 @@ import style, { css } from 'styled-components';
 import {
   blue, grayDark,
 } from '../../style/colors';
+import { fontWeightMedium, fontSize } from '../../style/fonts';
 
 export const selectItem = css`
     align-items: center;
     color: ${grayDark};
     cursor: pointer;
-    display: -ms-flexbox;
     display: flex;
-    font-size: 14px;
+    font-size: ${fontSize};
     overflow: hidden;
     padding: 6px 0px;
     text-overflow: ellipsis;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     white-space: nowrap;
     width: 100%;
@@ -27,8 +24,8 @@ export const selectItem = css`
 
 
 export const selectItemLabel = style.div`
-    font-size: 14px;
-    font-weight: 400;
+    font-size: ${fontSize};
+    font-weight: ${fontWeightMedium};
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;

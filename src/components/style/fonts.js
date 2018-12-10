@@ -1,11 +1,6 @@
 export const fontFamily = '"Roboto", sans-serif';
 
-export const fontSize = '1rem';
-export const fontSizeLarge = '1.25rem';
-export const fontSizeExtraLarge = '2rem';
-export const fontSizeSmall = '0.75rem';
-export const fontSizeExtraSmall = '0.5rem';
-export const fontSizeMini = '0.9rem';
+export const fontSize = '14px';
 
 export const fontWeightThin = 100;
 export const fontWeightExtraLight = 200;

@@ -57,4 +57,5 @@ export const Arrow = style.div`
     bottom: ${props => (props.bottom ? '-5px' : 'auto')};
     top: ${props => (props.bottom ? 'auto' : '-10px')};
     position: relative;
+    z-index: 9999;
 `;
