@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import style from 'styled-components';
 import * as Styles from './style';
 
-const ButtonStyled = style.div`  
+const ButtonStyled = style.button`  
   ${Styles.buttonbase};
   ${props => Styles[props.size]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
