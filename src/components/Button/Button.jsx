@@ -41,7 +41,6 @@ const Button = ({
     isSplit={isSplit}
     icon={icon}
     hasIconOnly={hasIconOnly}
-    aria-label={label || null}
   >
     {label}
     {isSelect && (type === 'primary' || type === 'secondary') && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
