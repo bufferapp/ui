@@ -49,7 +49,7 @@ const ExampleWrapper = style.div`
 
 const ComponentExample = ({ name, folder, id }) => [
   <h4>
-    {folder[0] ? `${name} ${folder[0].title}s` : name}
+    {folder[0] ? `${name} ${folder[0].title}s` : ''}
   </h4>,
   <ExampleWrapper>
     {folder[0]
