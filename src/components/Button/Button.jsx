@@ -45,7 +45,7 @@ const Button = ({
     {label}
     {isSelect && (type === 'primary' || type === 'secondary') && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
-    {isSplit && (type === 'primary' || type === 'secondary') && <Select onSelectClick={() => {}} items={items} type={type} /> }
+    {isSplit && (type === 'primary' || type === 'secondary') && <Select onSelectClick={() => {}} items={items} type={type} isSplit /> }
   </ButtonStyled>
 );
 
