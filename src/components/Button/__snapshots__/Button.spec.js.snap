@@ -1,0 +1,321 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders styles properly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  -webkit-appearance: none;
+  position: relative;
+  -webkit-transition-property: background-color,border-color,color;
+  transition-property: background-color,border-color,color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-family: "Roboto",sans-serif;
+  background-color: #FFFFFF;
+  color: #77797a;
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 40px;
+  background-color: #2c4bff;
+  color: #FFFFFF;
+}
+
+.c0:hover {
+  -webkit-transition-property: background-color,border-color,color;
+  transition-property: background-color,border-color,color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.c0:active {
+  top: 1px;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 3px #ABB7FF;
+  outline: 0;
+}
+
+.c0:hover {
+  background-color: #1F35B3;
+  color: #FFFFFF;
+}
+
+<div
+  aria-label="Primary"
+  className="c0"
+  disabled={false}
+  onClick={[Function]}
+  size="medium"
+  type="primary"
+>
+  Primary
+</div>
+`;
+
+exports[`Disabled button is disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  -webkit-appearance: none;
+  position: relative;
+  -webkit-transition-property: background-color,border-color,color;
+  transition-property: background-color,border-color,color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-family: "Roboto",sans-serif;
+  background-color: #FFFFFF;
+  color: #77797a;
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 40px;
+  background-color: #E0E0E0;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-transition-property: background-color,border-color,color;
+  transition-property: background-color,border-color,color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.c0:active {
+  top: 1px;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 3px #ABB7FF;
+  outline: 0;
+}
+
+<div
+  aria-label="Primary"
+  className="c0"
+  disabled={true}
+  onClick={false}
+  size="medium"
+  type="primary"
+>
+  Primary
+</div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={false}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  onClick={[MockFunction]}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  hasIconOnly={false}
+  icon={<NodeFixture />}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={false}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
+<ForwardRef
+  aria-label="jest-auto-snapshots String Fixture"
+  disabled={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  jest-auto-snapshots String Fixture
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
+<ForwardRef
+  aria-label={null}
+  disabled={false}
+  hasIconOnly={false}
+  onClick={[MockFunction]}
+  size="medium"
+  type="secondary"
+/>
+`;
