@@ -16,5 +16,5 @@ echo -e $BLUE"Publishing a new" $newVersion "version"$NC
 npm run build:lib &&\
   npm version $newVersion && \
   cd ./lib && \
-  npm publish $newVersion && \
+  npm publish && \
   cd ../
