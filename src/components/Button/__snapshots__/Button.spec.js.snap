@@ -71,8 +71,7 @@ exports[`Button renders styles properly 1`] = `
   color: #FFFFFF;
 }
 
-<div
-  aria-label="Primary"
+<button
   className="c0"
   disabled={false}
   onClick={[Function]}
@@ -80,7 +79,7 @@ exports[`Button renders styles properly 1`] = `
   type="primary"
 >
   Primary
-</div>
+</button>
 `;
 
 exports[`Disabled button is disabled 1`] = `
@@ -149,8 +148,7 @@ exports[`Disabled button is disabled 1`] = `
   outline: 0;
 }
 
-<div
-  aria-label="Primary"
+<button
   className="c0"
   disabled={true}
   onClick={false}
@@ -158,12 +156,11 @@ exports[`Disabled button is disabled 1`] = `
   type="primary"
 >
   Primary
-</div>
+</button>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
@@ -182,7 +179,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
@@ -201,7 +197,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={false}
   hasIconOnly={true}
   icon={<NodeFixture />}
@@ -220,7 +215,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   hasIconOnly={false}
   icon={<NodeFixture />}
@@ -239,7 +233,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
@@ -258,7 +251,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
@@ -277,7 +269,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
@@ -292,7 +283,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
   disabled={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
@@ -311,7 +301,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
 <ForwardRef
-  aria-label={null}
   disabled={false}
   hasIconOnly={false}
   onClick={[MockFunction]}
