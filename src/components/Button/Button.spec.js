@@ -12,3 +12,9 @@ test('Button renders styles properly', () => {
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#FFFFFF');
 });
+
+test('Disabled button is disabled', () => {
+  const tree = renderer.create(<Button type="primary" onClick={() => {}} label="Primary" disabled />).toJSON();
+  expect(tree).toMatchSnapshot();
+  expect(tree).toHaveStyleRule('background-color', '#E0E0E0');
+});

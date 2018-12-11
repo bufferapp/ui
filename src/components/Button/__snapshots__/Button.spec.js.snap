@@ -83,6 +83,84 @@ exports[`Button renders styles properly 1`] = `
 </div>
 `;
 
+exports[`Disabled button is disabled 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  -webkit-appearance: none;
+  position: relative;
+  -webkit-transition-property: background-color,border-color,color;
+  transition-property: background-color,border-color,color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  font-family: "Roboto",sans-serif;
+  background-color: #FFFFFF;
+  color: #77797a;
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 40px;
+  background-color: #E0E0E0;
+  cursor: not-allowed;
+}
+
+.c0:hover {
+  -webkit-transition-property: background-color,border-color,color;
+  transition-property: background-color,border-color,color;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+  -webkit-transition-timing-function: ease-in;
+  transition-timing-function: ease-in;
+}
+
+.c0:active {
+  top: 1px;
+}
+
+.c0:focus {
+  box-shadow: 0 0 0 3px #ABB7FF;
+  outline: 0;
+}
+
+<div
+  aria-label="Primary"
+  className="c0"
+  disabled={true}
+  onClick={false}
+  size="medium"
+  type="primary"
+>
+  Primary
+</div>
+`;
+
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef
   aria-label="jest-auto-snapshots String Fixture"

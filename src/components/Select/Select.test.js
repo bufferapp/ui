@@ -31,4 +31,19 @@ describe('SomeComponent component', () => {
     instance.handleSelectOption();
     expect(onSelectClickSply).toBeCalled();
   });
+
+
+  it('onClick: should call stopImmediatePropagation', () => {
+    const event = {
+      stopPropagation: jest.fn(),
+      nativeEvent: {
+        stopImmediatePropagation: jest.fn(),
+      },
+    }
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+    instance.onClick(event);
+    expect(event.stopPropagation).toBeCalled();
+    expect(event.nativeEvent.stopImmediatePropagation).toBeCalled();
+  });
 });
