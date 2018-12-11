@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only required props 1`] = `
+<ForwardRef
+  onClick={[MockFunction]}
+>
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
+</ForwardRef>
+`;

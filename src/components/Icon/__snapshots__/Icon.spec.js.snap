@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders styles properly 1`] = `
+.c0 {
+  position: absolute;
+  right: 8px;
+  top: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+.c1 {
+  fill: #636363;
+}
+
+<svg
+  className="c0"
+  size="medium"
+  type="primary"
+  version="1.1"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+  <g
+    className=""
+    type="primary"
+  >
+    <svg
+      className="c0"
+      size="medium"
+      type="secondary"
+      version="1.1"
+      viewBox="0 0 16 16"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+    >
+      <g
+        className=""
+        type="secondary"
+      >
+        <path
+          className="c1"
+          clipRule="evenodd"
+          d="M7.14645 0.853553C7.46143 0.53857 7.23835 0 6.79289 0L1.20711 0C0.761654 0 0.538571 0.538571 0.853553 0.853553L3.64645 3.64645C3.84171 3.84171 4.15829 3.84171 4.35355 3.64645L7.14645 0.853553Z"
+          fill="#0F0B0A"
+          fillRule="evenodd"
+          type="secondary"
+        />
+      </g>
+    </svg>
+  </g>
+</svg>
+`;
+
+exports[`jest-auto-snapshots > Icon Matches snapshot when passed all props 1`] = `
+<ForwardRef
+  size="small"
+  type="primary"
+  version="1.1"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+  <ForwardRef
+    type="primary"
+  >
+    <NodeFixture />
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Icon Matches snapshot when passed only required props 1`] = `
+<ForwardRef
+  size="medium"
+  type="secondary"
+  version="1.1"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+  <ForwardRef
+    type="secondary"
+  >
+    <NodeFixture />
+  </ForwardRef>
+</ForwardRef>
+`;
