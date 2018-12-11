@@ -39,7 +39,7 @@ describe('SomeComponent component', () => {
       nativeEvent: {
         stopImmediatePropagation: jest.fn(),
       },
-    }
+    };
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     instance.onClick(event);
