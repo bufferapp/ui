@@ -43,9 +43,9 @@ const Button = ({
     aria-label={label || null}
   >
     {label}
-    {isSelect && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
+    {isSelect && (type === 'primary' || type === 'secondary') && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
-    {isSplit && <Select onSelectClick={() => {}} items={items} type={type} isSplit /> }
+    {isSplit && (type === 'primary' || type === 'secondary') && <Select onSelectClick={() => {}} items={items} type={type} /> }
   </ButtonStyled>
 );
 
@@ -61,13 +61,7 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
 
   /** Button label */
-  label(props, propName) {
-    if ((props.hasIconOnly === false && (props[propName] === undefined || typeof (props[propName]) !== 'string'))) {
-      return new Error(
-        'Please provide a label.',
-      );
-    }
-  },
+  label: PropTypes.string,
 
   /** Type of button */
   type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text']),
@@ -85,31 +79,27 @@ Button.propTypes = {
   hasIconOnly: PropTypes.bool,
 
   /** Icon to show with the label */
-  icon(props, propName) {
-    if ((props.hasIconOnly === true && (props[propName] === undefined || typeof (props[propName]) !== 'string'))) {
-      return new Error(
-        'Please provide a label.',
-      );
-    }
-  },
+  icon: PropTypes.node,
 
-  items: PropTypes.shape({
+  /** Items to display in the Split Button popup */
+  items: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-  }).isRequired,
+    title: PropTypes.string.isRequired,
+  })),
 };
 
 
 Button.defaultProps = {
   disabled: false,
-  isSplit: false,
+  isSplit: undefined,
   loading: false,
   size: 'medium',
   type: 'secondary',
   label: undefined,
   hasIconOnly: false,
   icon: undefined,
-  isSelect: false,
+  isSelect: undefined,
+  items: undefined,
 };
 
 

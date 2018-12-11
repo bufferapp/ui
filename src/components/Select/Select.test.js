@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('SomeComponent component', () => {
   it('openPopup: should open the closed popup', () => {
-    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} />);
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     expect(wrapper.state().isOpen).toBe(false);
     instance.onButtonClick();
@@ -16,7 +16,7 @@ describe('SomeComponent component', () => {
   });
 
   it('closePopup: should close the open popup', () => {
-    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} />);
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     instance.onButtonClick();
     expect(wrapper.state().isOpen).toBe(true);
@@ -26,7 +26,7 @@ describe('SomeComponent component', () => {
 
   it('handleSelectOption: should call onSelectClick', () => {
     const onSelectClickSply = jest.fn();
-    const wrapper = shallow(<Select onSelectClick={onSelectClickSply} items={[]} />);
+    const wrapper = shallow(<Select onSelectClick={onSelectClickSply} items={[]} label="Select" />);
     const instance = wrapper.instance();
     instance.handleSelectOption();
     expect(onSelectClickSply).toBeCalled();

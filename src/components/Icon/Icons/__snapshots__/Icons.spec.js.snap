@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > ChevronDown Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M7.14645 0.853553C7.46143 0.53857 7.23835 0 6.79289 0L1.20711 0C0.761654 0 0.538571 0.538571 0.853553 0.853553L3.64645 3.64645C3.84171 3.84171 4.15829 3.84171 4.35355 3.64645L7.14645 0.853553Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > ChevronUp Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M7.14645 3.14645C7.46143 3.46143 7.23835 4 6.79289 4L1.20711 4C0.761654 4 0.538571 3.46143 0.853553 3.14645L3.64645 0.353553C3.84171 0.158291 4.15829 0.158291 4.35355 0.353553L7.14645 3.14645Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > RefreshIcon Matches snapshot when passed all props 1`] = `
+<Icon
+  color="primary"
+  size="small"
+  type="secondary"
+>
+  <ForwardRef
+    d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14H8C8.55228 14 9 13.5523 9 13C9 12.4477 8.55228 12 8 12H7C4.23859 12 2 9.76141 2 7C2 4.23859 4.23859 2 7 2C9.76141 2 12 4.23859 12 7H10.2071C9.76166 7 9.53857 7.53857 9.85355 7.85355L12.6465 10.6465C12.8417 10.8417 13.1583 10.8417 13.3535 10.6465L16.1465 7.85355C16.4614 7.53857 16.2383 7 15.7929 7H14C14 3.134 10.866 0 7 0Z"
+    fill="#0F0B0A"
+    type="primary"
+  />
+</Icon>
+`;

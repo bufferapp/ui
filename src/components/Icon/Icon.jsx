@@ -30,8 +30,8 @@ const Icon = ({ children, size, type }) => (
 
 Icon.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf('small', 'medium', 'large'),
-  type: PropTypes.oneOf('primary', 'secondary'),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.oneOf(['primary', 'secondary']),
 };
 
 Icon.defaultProps = {

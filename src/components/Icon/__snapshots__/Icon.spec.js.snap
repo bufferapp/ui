@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Icon Matches snapshot when passed all props 1`] = `
+<ForwardRef
+  size="small"
+  type="primary"
+  version="1.1"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+  <ForwardRef
+    type="primary"
+  >
+    <NodeFixture />
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Icon Matches snapshot when passed only required props 1`] = `
+<ForwardRef
+  size="medium"
+  type="secondary"
+  version="1.1"
+  viewBox="0 0 16 16"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlnsXlink="http://www.w3.org/1999/xlink"
+>
+  <ForwardRef
+    type="secondary"
+  >
+    <NodeFixture />
+  </ForwardRef>
+</ForwardRef>
+`;

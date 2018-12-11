@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Icon from '../Icon';
 import { StyledIcon } from './style';
 
@@ -9,7 +10,13 @@ const RefreshIcon = ({ type, size }) => (
 );
 
 RefreshIcon.propTypes = {
-  ...Icon.propTypes,
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.oneOf(['primary', 'secondary']),
+};
+
+RefreshIcon.defaultProps = {
+  size: 'medium',
+  type: 'secondary',
 };
 
 export default RefreshIcon;

@@ -10,8 +10,8 @@ const ChevronUp = ({ type, size }) => (
 );
 
 ChevronUp.propTypes = {
-  size: PropTypes.oneOf('small', 'medium', 'large'),
-  type: PropTypes.oneOf('primary', 'secondary'),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.oneOf(['primary', 'secondary']),
 };
 
 ChevronUp.defaultProps = {

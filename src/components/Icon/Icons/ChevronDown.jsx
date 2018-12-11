@@ -10,8 +10,8 @@ const ChevronDown = ({ type, size }) => (
 );
 
 ChevronDown.propTypes = {
-  size: PropTypes.oneOf('small', 'medium', 'large'),
-  type: PropTypes.oneOf('primary', 'secondary'),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  type: PropTypes.oneOf(['primary', 'secondary']),
 };
 
 ChevronDown.defaultProps = {
