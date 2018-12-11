@@ -82,7 +82,6 @@ export default class AppContainer extends React.Component {
     // if there's no component specified, just show the first component in the list
     const component = location === 'ui' ? componentData
       .children.filter(x => x.id === route)[0] : null;
-    console.info(component);
 
     // concatenate the documentation data and the components data
     // to construct the links in the sidebar

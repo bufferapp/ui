@@ -2,14 +2,59 @@
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
+  aria-label={null}
   disabled={false}
+  hasIconOnly={true}
+  icon={null}
   isSplit={true}
   onClick={[MockFunction]}
   size="small"
   type="link"
 >
-  jest-auto-snapshots String Fixture
+  <ChevronDown
+    size="small"
+    type="link"
+  />
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label={null}
+  disabled={true}
+  hasIconOnly={false}
+  icon={null}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
+  <ChevronDown
+    size="small"
+    type="link"
+  />
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
+<ForwardRef
+  aria-label={null}
+  disabled={true}
+  hasIconOnly={true}
+  icon={null}
+  isSplit={true}
+  onClick={false}
+  size="small"
+  type="link"
+>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -19,14 +64,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
+  aria-label={null}
   disabled={true}
+  hasIconOnly={true}
+  icon={null}
   isSplit={false}
   onClick={false}
   size="small"
   type="link"
 >
-  jest-auto-snapshots String Fixture
+  <ChevronDown
+    size="small"
+    type="link"
+  />
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -36,27 +86,37 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
+  aria-label={null}
   disabled={true}
+  hasIconOnly={true}
+  icon={null}
   isSplit={true}
   onClick={false}
   size="small"
   type="link"
 >
-  jest-auto-snapshots String Fixture
+  <ChevronDown
+    size="small"
+    type="link"
+  />
 </ForwardRef>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
+  aria-label={null}
   disabled={true}
+  hasIconOnly={true}
+  icon={null}
   isSplit={true}
   onClick={false}
   size="small"
   type="link"
 >
-  jest-auto-snapshots String Fixture
+  <ChevronDown
+    size="small"
+    type="link"
+  />
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -66,13 +126,12 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
 <ForwardRef
-  aria-label="jest-auto-snapshots String Fixture"
+  aria-label={null}
   disabled={false}
+  hasIconOnly={false}
   isSplit={false}
   onClick={[MockFunction]}
   size="medium"
   type="secondary"
->
-  jest-auto-snapshots String Fixture
-</ForwardRef>
+/>
 `;

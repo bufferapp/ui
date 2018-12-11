@@ -5,7 +5,8 @@ import {
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
-import ButtonSelect from '../ButtonSelect/Button/Button';
+import { SelectButton } from '../Button/style';
+import ChevronDown from '../Icon/Icons/ChevronDown';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
@@ -56,19 +57,21 @@ export default class Select extends React.Component {
 
   render() {
     const {
-      label, items, isSplit, type,
+      label, items, isSplit, type, size,
     } = this.props;
     const { isOpen } = this.state;
 
     return (
-      <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0}>
-        {isSplit ? <ButtonSelect type={type} onClick={this.onButtonClick} /> : <Button type={type} label={label} onClick={this.onButtonClick}>{label}</Button>}
+      <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
+        {isSplit ? <SelectButton type={type} onClick={this.onButtonClick}><ChevronDown type={type} /></SelectButton> : (
+          <Button size={size} items={items} type={type} label={label} onClick={this.onButtonClick} isSelect />
+        )}
         <SelectStyled isOpen={isOpen}>
           <SelectItems>
             {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
           </SelectItems>
         </SelectStyled>
-        <Arrow isOpen={isOpen} />
+        <Arrow isOpen={isOpen} isSplit={isSplit} />
       </Wrapper>
     );
   }
@@ -92,10 +95,14 @@ Select.propTypes = {
 
   /** Type of the select component  */
   type: PropTypes.oneOf(['primary', 'secondary']),
+
+  /** Size of the Button */
+  size: PropTypes.oneOf(['small', 'large', 'medium']),
 };
 
 Select.defaultProps = {
   label: '',
   isSplit: false,
   type: 'secondary',
+  size: 'medium',
 };

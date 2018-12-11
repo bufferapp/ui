@@ -8,12 +8,15 @@ export const Wrapper = style.div`
   :focus {
     outline: 0
   }
-  max-height: 40px;
+  width: ${props => (props.isSplit ? '100%' : 'auto')};
+  height: ${props => (props.isSplit ? '100%' : 'auto')};
+  max-height: ${props => (props.isSplit ? '100%' : '40px')};
+  position: ${props => (props.isSplit ? 'initial' : 'relative')};
 `;
 
 
 export const SelectStyled = style.div`
-    margin-top: 0;
+    margin-top: 0px;
     right: 0;
     position: absolute;
     z-index: 1000;
@@ -49,7 +52,7 @@ export const Arrow = style.div`
     display: ${props => (props.isOpen ? 'inline-block' : 'none')};
     height: 10px;
     left: 50%;
-    margin-left: ${props => (props.right ? '80px' : '-5px')};
+    margin-left: ${props => (props.isSplit ? '8px' : '26px')};
     position: absolute;
     width: 10px;
     z-index: 1;

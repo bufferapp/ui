@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
 import * as Styles from './style';
+import ChevronDown from '../Icon/Icons/ChevronDown';
+import Select from '../Select/Select';
 
-const ButtonStyled = style.div`  
+export const ButtonStyled = style.div`  
   ${Styles.buttonbase};
   ${props => Styles[props.size]};
-  ${props => Styles[props.isSplit ? 'split' : null]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
 `;
 
@@ -26,6 +27,10 @@ const Button = ({
   label,
   isSplit,
   loading,
+  icon,
+  hasIconOnly,
+  isSelect,
+  items,
 }) => (
   <ButtonStyled
     onClick={!disabled && onClick}
@@ -33,10 +38,14 @@ const Button = ({
     size={size}
     type={type}
     isSplit={isSplit}
+    icon={icon}
+    hasIconOnly={hasIconOnly}
     aria-label={label || null}
   >
     {label}
+    {isSelect && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
+    {isSplit && <Select onSelectClick={() => {}} items={items} type={type} isSplit /> }
   </ButtonStyled>
 );
 
@@ -51,8 +60,14 @@ Button.propTypes = {
   /** OnClick handler */
   onClick: PropTypes.func.isRequired,
 
-  /** Button label for accessibility */
-  label: PropTypes.string.isRequired,
+  /** Button label */
+  label(props, propName) {
+    if ((props.hasIconOnly === false && (props[propName] === undefined || typeof (props[propName]) !== 'string'))) {
+      return new Error(
+        'Please provide a label.',
+      );
+    }
+  },
 
   /** Type of button */
   type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text']),
@@ -60,8 +75,28 @@ Button.propTypes = {
   /** Is the Button Split  */
   isSplit: PropTypes.bool,
 
+  /** Is this the Select button with chevron */
+  isSelect: PropTypes.bool,
+
   /** Is the Button Loading  */
   loading: PropTypes.bool,
+
+  /** Does the button have only an icon and no label */
+  hasIconOnly: PropTypes.bool,
+
+  /** Icon to show with the label */
+  icon(props, propName) {
+    if ((props.hasIconOnly === true && (props[propName] === undefined || typeof (props[propName]) !== 'string'))) {
+      return new Error(
+        'Please provide a label.',
+      );
+    }
+  },
+
+  items: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 
@@ -71,6 +106,10 @@ Button.defaultProps = {
   loading: false,
   size: 'medium',
   type: 'secondary',
+  label: undefined,
+  hasIconOnly: false,
+  icon: undefined,
+  isSelect: false,
 };
 
 

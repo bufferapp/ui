@@ -1,5 +1,5 @@
 /* eslint-disable no-confusing-arrow */
-import { css } from 'styled-components';
+import style, { css } from 'styled-components';
 import {
   grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, grayLight,
 } from '../style/colors';
@@ -7,6 +7,7 @@ import {
   fontFamily, fontSize, lineHeight, fontWeightMedium,
 } from '../style/fonts';
 import { borderRadius } from '../style/borders';
+import { ButtonStyled } from './Button';
 
 
 /* styles common to all buttons */
@@ -27,7 +28,6 @@ export const buttonbase = css`
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
   min-width: 0;
   flex: 0 0 auto;
@@ -85,10 +85,6 @@ export const text = css`
     color: ${grayDarker};
   }
 `;
-export const split = css`
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-`;
 
 /* size variants */
 export const small = css`
@@ -111,4 +107,36 @@ export const large = css`
 export const disabled = css`
   background-color: ${grayLight};
   cursor: not-allowed;
+`;
+
+
+export const SelectButton = style.div`
+  :before {
+    background-color: ${props => (props.primary ? blue : white)};
+    color: ${props => (props.primary ? white : grayDark)};
+    content: "";
+    height: 24px;
+    position: absolute;
+    right: 38px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+  }
+  padding-left: 36px;
+  width: 100%;
+  height: 100%;
+  ${ButtonStyled}:hover & {
+    background-color: ${blueDarker};
+    color: ${white};
+  }
+  ${ButtonStyled}:focus & {
+    border-color: ${blue};
+      color: ${grayDarker};
+  }
+`;
+
+export const ArrowButton = style.div`
+  padding-left: 20px;
+  width: 100%;
+  height: 100%;
 `;
