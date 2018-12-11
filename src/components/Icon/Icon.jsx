@@ -6,7 +6,7 @@ import * as Styles from './style';
 const IconStyled = style.svg`  
   ${Styles.base};
   ${props => Styles[props.size]};
-  ${props => Styles[props.disabled ? 'disabled' : props.type]};
+  ${props => Styles[props.type]};
 `;
 
 const GroupStyled = style.g`  

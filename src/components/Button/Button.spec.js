@@ -7,7 +7,7 @@ import 'jest-styled-components';
 
 snap(Button, './Button.jsx');
 
-test('it works', () => {
+test('Button renders styles properly', () => {
   const tree = renderer.create(<Button type="primary" onClick={() => {}} label="Primary" />).toJSON();
   expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#FFFFFF');
