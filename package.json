@@ -134,7 +134,7 @@
     "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
     "build:copy-files": "node scripts/copyBuildFiles.js",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
-    "prepublish": "npm run build:lib"
+    "publish": "./scripts/publish.sh"
   },
   "browserslist": [
     ">0.2%",
