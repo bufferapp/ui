@@ -45,9 +45,15 @@ const Button = ({
     aria-label={label || null}
   >
     {label}
-    {isSelect && (type === 'primary' || type === 'secondary') && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
+
+    {isSelect && (type === 'primary' || type === 'secondary')
+    && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
+
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
-    {isSplit && (type === 'primary' || type === 'secondary') && <Select onSelectClick={onSelectClick} items={items} type={type} isSplit position={selectPosition} /> }
+
+    {isSplit && (type === 'primary' || type === 'secondary')
+    && <Select onSelectClick={onSelectClick} items={items} type={type} isSplit position={selectPosition} disabled={disabled} /> }
+
   </ButtonStyled>
 );
 

@@ -57,13 +57,17 @@ export default class Select extends React.Component {
 
   render() {
     const {
-      label, items, isSplit, type, size, position,
+      label, items, isSplit, type, size, position, disabled,
     } = this.props;
     const { isOpen } = this.state;
 
     return (
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
-        {isSplit ? <SelectButton type={type} onClick={this.onButtonClick}><ChevronDown type={type} /></SelectButton> : (
+        {isSplit ? (
+          <SelectButton type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
+            <ChevronDown type={disabled ? 'secondary' : 'primary'} />
+          </SelectButton>
+        ) : (
           <Button size={size} items={items} type={type} label={label} onClick={this.onButtonClick} isSelect />
         )}
         <SelectStyled isOpen={isOpen} position={position}>
@@ -78,6 +82,9 @@ export default class Select extends React.Component {
 }
 
 Select.propTypes = {
+  /** Is the button disabled */
+  disabled: PropTypes.bool,
+
   /** Function to call on selected item click */
   onSelectClick: PropTypes.func.isRequired,
 
@@ -109,4 +116,5 @@ Select.defaultProps = {
   type: 'secondary',
   size: 'medium',
   position: 'bottom',
+  disabled: undefined,
 };

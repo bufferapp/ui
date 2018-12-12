@@ -9,9 +9,9 @@ export default function ExampleSelect() {
       onSelectClick={() => true}
       label="Click Me"
       items={[
-        { id: 1, title: 'Open' },
-        { id: 2, title: 'Pending' },
-        { id: 3, title: 'Closed' },
+        { id: '1', title: 'Open' },
+        { id: '2', title: 'Pending' },
+        { id: '3', title: 'Closed' },
       ]}
     />
   );
