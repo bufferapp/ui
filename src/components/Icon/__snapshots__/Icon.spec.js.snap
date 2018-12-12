@@ -3,7 +3,7 @@
 exports[`Button renders styles properly 1`] = `
 .c0 {
   position: absolute;
-  right: 8px;
+  right: 6px;
   top: 18px;
   width: 18px;
   height: 18px;
