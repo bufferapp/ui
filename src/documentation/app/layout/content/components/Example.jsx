@@ -29,6 +29,7 @@ const ExampleWrapper = style.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 `;
 
 const Title = style.div`

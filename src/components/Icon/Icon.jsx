@@ -13,6 +13,7 @@ const GroupStyled = style.g`
   ${props => Styles[`${props.type}Group`]};
 `;
 
+
 const Icon = ({ children, size, type }) => (
   <IconStyled
     size={size}
@@ -26,6 +27,7 @@ const Icon = ({ children, size, type }) => (
       {children}
     </GroupStyled>
   </IconStyled>
+
 );
 
 Icon.propTypes = {
