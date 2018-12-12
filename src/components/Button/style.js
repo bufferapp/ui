@@ -122,7 +122,9 @@ export const SelectButton = style.div`
     transform: translateY(-50%);
     width: 1px;
   }
-  padding-left: 36px;
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
   ${ButtonStyled}:hover & {
@@ -136,7 +138,6 @@ export const SelectButton = style.div`
 `;
 
 export const ArrowButton = style.div`
-  padding-left: 20px;
-  width: 100%;
-  height: 100%;
+  padding-left: 5px;
+  display: flex;
 `;

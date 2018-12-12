@@ -1,19 +1,22 @@
 import { css } from 'styled-components';
 
 export const base = css`
-   position: absolute;
-    right: 8px;
-    top: 18px;
+  margin-right: 5px;
+`;
+
+
+export const chevron = css`
+  margin-right: -5px;
 `;
 
 export const small = css`
-  width: 14px;
-  height: 14px;
+  width: 12px;
+  height: 12px;
 `;
 
 export const medium = css`
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
 `;
 
 export const large = css`
