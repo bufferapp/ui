@@ -112,8 +112,8 @@ export const disabled = css`
 
 export const SelectButton = style.div`
   :before {
-    background-color: ${props => (props.primary ? blue : white)};
-    color: ${props => (props.primary ? white : grayDark)};
+    background-color: ${props => (props.disabled ? gray : white)};
+    color: ${props => (props.disabled ? gray : white)};
     content: "";
     height: 24px;
     position: absolute;

@@ -57,27 +57,34 @@ export default class Select extends React.Component {
 
   render() {
     const {
-      label, items, isSplit, type, size,
+      label, items, isSplit, type, size, position, disabled,
     } = this.props;
     const { isOpen } = this.state;
 
     return (
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
-        {isSplit ? <SelectButton type={type} onClick={this.onButtonClick}><ChevronDown type={type} /></SelectButton> : (
+        {isSplit ? (
+          <SelectButton type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
+            <ChevronDown type={disabled ? 'secondary' : 'primary'} />
+          </SelectButton>
+        ) : (
           <Button size={size} items={items} type={type} label={label} onClick={this.onButtonClick} isSelect />
         )}
-        <SelectStyled isOpen={isOpen}>
+        <SelectStyled isOpen={isOpen} position={position}>
           <SelectItems>
             {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
           </SelectItems>
         </SelectStyled>
-        <Arrow isOpen={isOpen} isSplit={isSplit} />
+        <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
       </Wrapper>
     );
   }
 }
 
 Select.propTypes = {
+  /** Is the button disabled */
+  disabled: PropTypes.bool,
+
   /** Function to call on selected item click */
   onSelectClick: PropTypes.func.isRequired,
 
@@ -98,6 +105,9 @@ Select.propTypes = {
 
   /** Size of the Button */
   size: PropTypes.oneOf(['small', 'large', 'medium']),
+
+  /** Position of the popup */
+  position: PropTypes.oneOf(['top', 'bottom']),
 };
 
 Select.defaultProps = {
@@ -105,4 +115,6 @@ Select.defaultProps = {
   isSplit: false,
   type: 'secondary',
   size: 'medium',
+  position: 'bottom',
+  disabled: undefined,
 };

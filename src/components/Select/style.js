@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import style from 'styled-components';
 import {
   grayShadow, grayLighter,
@@ -16,7 +17,6 @@ export const Wrapper = style.div`
 
 
 export const SelectStyled = style.div`
-    margin-top: 0px;
     right: 0;
     position: absolute;
     z-index: 1000;
@@ -27,6 +27,10 @@ export const SelectStyled = style.div`
     min-width: 150px;
     width: auto;
     background-color: #ffffff;
+    bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
+    top: ${props => (props.position === 'bottom' ? '100%' : 'initial')};
+    margin-bottom: ${props => (props.position === 'top' ? '10px' : '0')};
+    margin-top: ${props => (props.position === 'bottom' ? '10px' : '0')};
 `;
 
 export const SelectItems = style.ul`
@@ -46,19 +50,17 @@ export const SelectItems = style.ul`
 
 export const Arrow = style.div`
     background-color: #fff;
-    border-left: 1px solid #ced7df;
+    border-left: 1px solid #e6e8e9f;
     border-radius: 2px 0 0 0;
-    border-top: 1px solid #ced7df;
+    border-top: 1px solid #e6e8e9;
     display: ${props => (props.isOpen ? 'inline-block' : 'none')};
     height: 10px;
-    left: 50%;
-    margin-left: ${props => (props.isSplit ? '8px' : '26px')};
+    right: 16px;
     position: absolute;
     width: 10px;
     z-index: 1;
-    transform: ${props => (props.bottom ? 'rotate(225deg)' : 'rotate(45deg)')};
-    bottom: ${props => (props.bottom ? '-5px' : 'auto')};
-    top: ${props => (props.bottom ? 'auto' : '-10px')};
-    position: relative;
+    transform: ${props => (props.position === 'top' ? 'rotate(225deg)' : 'rotate(45deg)')};
+    bottom: ${props => (props.position === 'top' ? '100%' : '-15px')};
+    top: ${props => (props.position === 'top' ? '-15px' : 'initial')};
     z-index: 9999;
 `;
