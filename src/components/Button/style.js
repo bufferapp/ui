@@ -117,7 +117,7 @@ export const SelectButton = style.div`
     content: "";
     height: 24px;
     position: absolute;
-    right: 38px;
+    right: 36px;
     top: 50%;
     transform: translateY(-50%);
     width: 1px;

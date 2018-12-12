@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 export const base = css`
    position: absolute;
-    right: 8px;
+    right: 6px;
     top: 18px;
 `;
 
