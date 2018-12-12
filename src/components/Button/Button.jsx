@@ -33,7 +33,7 @@ const Button = ({
   items,
 }) => (
   <ButtonStyled
-    onClick={!disabled && onClick}
+    onClick={!disabled ? onClick : undefined}
     disabled={disabled}
     size={size}
     type={type}

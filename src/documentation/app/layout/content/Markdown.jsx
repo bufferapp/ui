@@ -93,7 +93,7 @@ export default class Markdown extends React.Component {
         {component}
       </MarkdownToJsx>,
       <LinkWrapper>
-        {links[0] && links.map(link => <LinkCard name={link.name} id={link.id} />)}
+        {links[0] && links.map(link => <LinkCard name={link.name} id={link.id} key={link.id} />)}
       </LinkWrapper>,
     ];
   }

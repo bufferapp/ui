@@ -47,16 +47,18 @@ const ExampleWrapper = style.div`
 `;
 
 
-const ComponentExample = ({ name, folder, id }) => [
-  <h4>
+const ComponentExample = ({
+  name, folder, id,
+}) => [
+  <h4 key="heading">
     {folder[0] ? `${name} ${folder[0].title}s` : ''}
   </h4>,
-  <ExampleWrapper>
+  <ExampleWrapper key="example">
     {folder[0]
       // if this component example contains subfolders, then get example from each subfolder
-      ? folder.map(example => <Example key={example.code} example={example} componentName={name} id={id} />)
+      ? folder.map((example, idx) => <Example key={name + idx} example={example} componentName={name} id={id} />)
       // otherwise just render the example
-      : <Example key={folder.code} example={folder} componentName={name} id={id} />
+      : <Example example={folder} componentName={name} id={id} key={name} />
     }
   </ExampleWrapper>,
 ];
@@ -76,7 +78,7 @@ const Component = ({ component }) => {
             Example
             {examples.length > 1 && 's'}
           </h3>
-          {examples.map(folder => <ComponentExample folder={folder} name={name} id={id} />)}
+          {examples.map((folder, idx) => <ComponentExample folder={folder} name={name} id={id} key={idx} />)}
           <PropTitle>Props</PropTitle>
           {
           props ? <Props props={props} />
@@ -90,7 +92,12 @@ const Component = ({ component }) => {
 
 Component.propTypes = {
   /** Component to display */
-  component: PropTypes.node.isRequired,
+  component: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    code: PropTypes.string.isRequired,
+    level: PropTypes.number.isRequired,
+  }).isRequired,
 };
 
 
