@@ -5,7 +5,8 @@ import * as Styles from './style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Select from '../Select/Select';
 
-export const ButtonStyled = style.div`  
+
+export const ButtonStyled = style.button`
   ${Styles.buttonbase};
   ${props => Styles[props.size]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
@@ -42,7 +43,6 @@ const Button = ({
     isSplit={isSplit}
     icon={icon}
     hasIconOnly={hasIconOnly}
-    aria-label={label || null}
   >
     {label}
 

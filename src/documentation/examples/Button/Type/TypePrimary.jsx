@@ -6,7 +6,6 @@ export default function ExampleTypePrimary() {
   return (
     <Button
       type="primary"
-      size="large"
       onClick={() => {}}
       label="Click Me"
     />

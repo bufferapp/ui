@@ -13,8 +13,8 @@ fi
 newVersion=$1
 echo -e $BLUE"Publishing a new" $newVersion "version"$NC
 
-npm run build:lib &&\
-  npm version $newVersion && \
+npm version $newVersion && \
+  npm run build:lib &&\
   cd ./lib && \
-  npm publish $newVersion && \
+  npm publish && \
   cd ../
