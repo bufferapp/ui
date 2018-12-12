@@ -1,8 +1,8 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
 
-/** Split Button with Select */
-export default function ExampleSplitButton() {
+/** Split Button with Select on Bottom */
+export default function ExampleSplitButtonBottom() {
   return (
     <Button
       onSelectClick={() => true}

@@ -31,6 +31,8 @@ const Button = ({
   hasIconOnly,
   isSelect,
   items,
+  selectPosition,
+  onSelectClick,
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -45,7 +47,7 @@ const Button = ({
     {label}
     {isSelect && (type === 'primary' || type === 'secondary') && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
-    {isSplit && (type === 'primary' || type === 'secondary') && <Select onSelectClick={() => {}} items={items} type={type} isSplit /> }
+    {isSplit && (type === 'primary' || type === 'secondary') && <Select onSelectClick={onSelectClick} items={items} type={type} isSplit position={selectPosition} /> }
   </ButtonStyled>
 );
 
@@ -86,6 +88,12 @@ Button.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   })),
+
+  /** Position of the Select popup */
+  selectPosition: PropTypes.oneOf(['top', 'bottom']),
+
+  /** Function to call on Split Button selected item click */
+  onSelectClick: PropTypes.func,
 };
 
 
@@ -100,6 +108,8 @@ Button.defaultProps = {
   icon: undefined,
   isSelect: undefined,
   items: undefined,
+  selectPosition: 'bottom',
+  onSelectClick: undefined,
 };
 
 

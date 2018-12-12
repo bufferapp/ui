@@ -57,7 +57,7 @@ export default class Select extends React.Component {
 
   render() {
     const {
-      label, items, isSplit, type, size,
+      label, items, isSplit, type, size, position,
     } = this.props;
     const { isOpen } = this.state;
 
@@ -66,12 +66,12 @@ export default class Select extends React.Component {
         {isSplit ? <SelectButton type={type} onClick={this.onButtonClick}><ChevronDown type={type} /></SelectButton> : (
           <Button size={size} items={items} type={type} label={label} onClick={this.onButtonClick} isSelect />
         )}
-        <SelectStyled isOpen={isOpen}>
+        <SelectStyled isOpen={isOpen} position={position}>
           <SelectItems>
             {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
           </SelectItems>
         </SelectStyled>
-        <Arrow isOpen={isOpen} isSplit={isSplit} />
+        <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
       </Wrapper>
     );
   }
@@ -98,6 +98,9 @@ Select.propTypes = {
 
   /** Size of the Button */
   size: PropTypes.oneOf(['small', 'large', 'medium']),
+
+  /** Position of the popup */
+  position: PropTypes.oneOf(['top', 'bottom']),
 };
 
 Select.defaultProps = {
@@ -105,4 +108,5 @@ Select.defaultProps = {
   isSplit: false,
   type: 'secondary',
   size: 'medium',
+  position: 'bottom',
 };
