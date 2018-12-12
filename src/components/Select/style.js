@@ -10,9 +10,10 @@ export const Wrapper = style.div`
     outline: 0
   }
   width: ${props => (props.isSplit ? '100%' : 'auto')};
-  height: ${props => (props.isSplit ? '100%' : 'auto')};
+  height: 38px;
   max-height: ${props => (props.isSplit ? '100%' : '40px')};
-  position: ${props => (props.isSplit ? 'initial' : 'relative')};
+  position: relative;
+  right: -15px;
 `;
 
 
