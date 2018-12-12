@@ -9,8 +9,10 @@ export default function ExampleSplitButton() {
       onClick={() => true}
       type="primary"
       isSplit
-      items={[{ id: '1', title: 'Reply + Pending' },
-        { id: '2', title: 'Reply + Close + Assign To Me' }]}
+      items={[
+        { id: '1', title: 'Reply + Pending' },
+        { id: '2', title: 'Reply + Close + Assign To Me' },
+      ]}
       label="Click Me"
     />
   );
