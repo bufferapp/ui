@@ -94,6 +94,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   <Button
     disabled={false}
     hasIconOnly={false}
+    icon={<NodeFixture />}
     isSelect={true}
     items={
       Array [

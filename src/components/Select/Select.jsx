@@ -57,7 +57,7 @@ export default class Select extends React.Component {
 
   render() {
     const {
-      label, items, isSplit, type, size, position, disabled,
+      label, items, isSplit, type, size, position, disabled, icon,
     } = this.props;
     const { isOpen } = this.state;
 
@@ -68,7 +68,7 @@ export default class Select extends React.Component {
             <ChevronDown type={disabled ? 'secondary' : 'primary'} />
           </SelectButton>
         ) : (
-          <Button size={size} items={items} type={type} label={label} onClick={this.onButtonClick} isSelect />
+          <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
         )}
         <SelectStyled isOpen={isOpen} position={position}>
           <SelectItems>
@@ -108,6 +108,9 @@ Select.propTypes = {
 
   /** Position of the popup */
   position: PropTypes.oneOf(['top', 'bottom']),
+
+  /** Icon to show in the Button */
+  icon: PropTypes.node,
 };
 
 Select.defaultProps = {
@@ -117,4 +120,5 @@ Select.defaultProps = {
   size: 'medium',
   position: 'bottom',
   disabled: undefined,
+  icon: undefined,
 };

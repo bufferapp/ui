@@ -44,10 +44,11 @@ const Button = ({
     icon={icon}
     hasIconOnly={hasIconOnly}
   >
-    {label}
+    {icon}
+    {!hasIconOnly && label}
 
     {isSelect && (type === 'primary' || type === 'secondary')
-    && <Styles.ArrowButton><ChevronDown type={type} size={size} /></Styles.ArrowButton>}
+    && <Styles.ArrowButton><ChevronDown type={type} size={size} isChevron /></Styles.ArrowButton>}
 
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
 

@@ -1,16 +1,132 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > ChevronDown Matches snapshot when passed all props 1`] = `
+exports[`jest-auto-snapshots > ArrowDown Matches snapshot when passed all props 1`] = `
 <Icon
   size="small"
   type="primary"
 >
   <ForwardRef
     clipRule="evenodd"
-    d="M7.14645 0.853553C7.46143 0.53857 7.23835 0 6.79289 0L1.20711 0C0.761654 0 0.538571 0.538571 0.853553 0.853553L3.64645 3.64645C3.84171 3.84171 4.15829 3.84171 4.35355 3.64645L7.14645 0.853553Z"
+    d="M7.00001 2.99998V6.99998L4.17421 7.00005C3.31987 7.00005 2.85896 8.00218 3.41496 8.65086L7.24074 13.1142C7.63985 13.5799 8.36015 13.5799 8.75926 13.1142L12.585 8.65086C13.1411 8.00218 12.6802 7.00005 11.8258 7.00005L9.00001 6.99998L9.00001 2.99998C9.00001 2.44768 8.55229 1.99998 8.00001 1.99998C7.44774 1.99998 7.00001 2.44768 7.00001 2.99998Z"
     fill="#0F0B0A"
     fillRule="evenodd"
     type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > ArrowLeft Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M8.99999 4.17423C8.99999 3.31986 7.99789 2.85893 7.34921 3.41496L2.8858 7.24076C2.42019 7.63987 2.42019 8.36021 2.8858 8.75932L7.34921 12.5851C7.99789 13.141 8.99999 12.6802 8.99999 11.8258L8.99999 8.99992H13C13.5523 8.99992 14 8.55222 14 7.99992C14 7.44761 13.5523 6.99992 13 6.99992H8.99999L8.99999 4.17423Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > ArrowRight Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M6.99996 4.19664C6.99996 3.33861 8.00951 2.87901 8.65661 3.44243L13.1403 7.3463C13.6038 7.74992 13.5969 8.47221 13.1258 8.86699L8.6422 12.6239C7.99139 13.1692 6.99996 12.7065 6.99996 11.8574L6.99993 8.99998L2.99993 8.99998C2.44766 8.99998 1.99993 8.55229 1.99993 7.99998C1.99993 7.44768 2.44766 6.99998 2.99993 6.99998H6.99993L6.99996 4.19664Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > ArrowUp Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M7.00001 2.99998V6.99998L4.17421 7.00005C3.31987 7.00005 2.85896 8.00218 3.41496 8.65086L7.24074 13.1142C7.63985 13.5799 8.36015 13.5799 8.75926 13.1142L12.585 8.65086C13.1411 8.00218 12.6802 7.00005 11.8258 7.00005L9.00001 6.99998L9.00001 2.99998C9.00001 2.44768 8.55229 1.99998 8.00001 1.99998C7.44774 1.99998 7.00001 2.44768 7.00001 2.99998Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Camera Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M0 4C0 3.44769 0.447723 3 1 3H15C15.5523 3 16 3.44769 16 4V14C16 14.5523 15.5523 15 15 15H1C0.447723 15 0 14.5523 0 14V4ZM8 12C9.65686 12 11 10.6569 11 9C11 7.34314 9.65686 6 8 6C6.34314 6 5 7.34314 5 9C5 10.6569 6.34314 12 8 12ZM4 6C4 6.55231 3.55228 7 3 7C2.44772 7 2 6.55231 2 6C2 5.44769 2.44772 5 3 5C3.55228 5 4 5.44769 4 6Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    d="M3.99997 5C3.99997 2.79086 5.79083 1 7.99997 1C10.2091 1 12 2.79086 12 5H3.99997Z"
+    fill="#0F0B0A"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > ChartLine Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    d="M1.5 10.5L5.5 6.50001L8.56155 9.56156L14.3187 3.80438"
+    stroke="black"
+    stroke-linecap="round"
+    stroke-width="3"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > ChevronDown Matches snapshot when boolean prop "isChevron" is set to: "false" 1`] = `
+<Icon
+  isChevron={false}
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M11.1464 6.85355C11.4614 6.53857 11.2383 6 10.7929 6L5.20711 6C4.76165 6 4.53857 6.53857 4.85355 6.85355L7.64645 9.64645C7.84171 9.84171 8.15829 9.84171 8.35355 9.64645L11.1464 6.85355Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    height="100%"
+    type="primary"
+    width="100%"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > ChevronDown Matches snapshot when passed all props 1`] = `
+<Icon
+  isChevron={true}
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M11.1464 6.85355C11.4614 6.53857 11.2383 6 10.7929 6L5.20711 6C4.76165 6 4.53857 6.53857 4.85355 6.85355L7.64645 9.64645C7.84171 9.84171 8.15829 9.84171 8.35355 9.64645L11.1464 6.85355Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    height="100%"
+    type="primary"
+    width="100%"
   />
 </Icon>
 `;
@@ -30,6 +146,520 @@ exports[`jest-auto-snapshots > ChevronUp Matches snapshot when passed all props 
 </Icon>
 `;
 
+exports[`jest-auto-snapshots > Clock Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M17 8C17 12.4183 13.4182 16 8.99997 16C4.5817 16 0.999969 12.4183 0.999969 8C0.999969 3.58173 4.5817 0 8.99997 0C13.4182 0 17 3.58173 17 8ZM11.7071 9.29291L9.99997 7.58582V3.5C9.99997 2.94769 9.55225 2.5 8.99997 2.5C8.44769 2.5 7.99997 2.94769 7.99997 3.5V8.41425L10.2929 10.7071C10.6834 11.0977 11.3166 11.0977 11.7071 10.7071C12.0976 10.3166 12.0976 9.68341 11.7071 9.29291Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Compare Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M6.99998 3C6.99998 2.44772 7.4477 2 7.99998 2C8.55226 2 8.99998 2.44772 8.99998 3L9.00001 5.35419V10.6458L8.99998 13C8.99998 13.5523 8.55226 14 7.99998 14C7.4477 14 6.99998 13.5523 6.99998 13V3ZM16 8C16 10.2091 14.2091 12 12 12C11.6547 12 11.3196 11.9563 11 11.874V4.12601C11.3196 4.04373 11.6547 4 12 4C14.2091 4 16 5.79086 16 8ZM5.00001 12V4L0.956248 10.47C0.539958 11.136 1.01881 12 1.80424 12H5.00001Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Emoji Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58173 12.4183 0 8 0C3.58173 0 0 3.58173 0 8C0 12.4183 3.58173 16 8 16ZM8 14C11.3137 14 14 11.3137 14 8C14 4.68629 11.3137 2 8 2C4.68629 2 2 4.68629 2 8C2 11.3137 4.68629 14 8 14Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    clipRule="evenodd"
+    d="M12 8.01505C12 8.01005 12 8.00503 12 8.00002C12 7.99501 12 7.98999 12 7.98499V8.01505ZM11.4649 10H4.53513C5.22674 11.1956 6.51943 12 8 12C9.48056 12 10.7732 11.1956 11.4649 10Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    cx="5"
+    cy="7"
+    fill="black"
+    r="1"
+    type="primary"
+  />
+  <ForwardRef
+    cx="11"
+    cy="7"
+    fill="black"
+    r="1"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Facebook Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M15.117 0H0.883047C0.395243 0 0 0.395243 0 0.883047V15.117C0 15.6046 0.395243 16 0.883047 16H8.54607V9.80398H6.46099V7.38924H8.54607V5.60846C8.54607 3.54184 9.8083 2.41654 11.6518 2.41654C12.5349 2.41654 13.2939 2.4823 13.5151 2.51168V4.6714L12.2365 4.672C11.2338 4.672 11.0397 5.14841 11.0397 5.84754V7.38924H13.4309L13.1195 9.80398H11.0397V16H15.117C15.6046 16 16 15.6046 16 15.117V0.883047C16 0.395243 15.6046 0 15.117 0Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Flag Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M4 1H2V15H4V1ZM5 10V2H14L12.2807 5.56567C12.1484 5.84012 12.1484 6.15988 12.2807 6.43433L14 10H5Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Folder Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M2.5 6L2.1405 3.12403C2.0659 2.52718 2.53128 2 3.13278 2H5.89922C6.93545 2 7.94084 2.35267 8.75 3C9.55916 3.64733 10.5645 4 11.6008 4H12.7192C13.3698 4 13.8472 4.61139 13.6894 5.24254L13.5 6H2.5ZM0 7L0.781009 13.2481C0.906116 14.2489 1.75692 15 2.76556 15H13.2344C14.2431 15 15.0939 14.2489 15.219 13.2481L16 7H0Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Gear Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M2.5676 7.4093L1.00861 5.27966C1.2883 4.56134 1.67551 3.89673 2.15048 3.30566L4.77225 3.59076C5.2056 3.63788 5.61951 3.39886 5.79538 3.00006L6.85974 0.586121C7.23157 0.529419 7.61237 0.5 8.00003 0.5C8.3877 0.5 8.76849 0.529419 9.14032 0.586121L10.2047 3.00006C10.3805 3.39886 10.7945 3.63788 11.2278 3.59076L13.8496 3.30566C14.3246 3.89673 14.7118 4.56134 14.9915 5.27966L13.4324 7.4093C13.175 7.76105 13.175 8.23895 13.4324 8.5907L14.9915 10.7203C14.7118 11.4387 14.3246 12.1033 13.8496 12.6943L11.2278 12.4092C10.7945 12.3621 10.3805 12.6011 10.2047 12.9999L9.14032 15.4139C8.76849 15.4706 8.3877 15.5 8.00003 15.5C7.61237 15.5 7.23157 15.4706 6.85974 15.4139L5.79538 12.9999C5.61951 12.6011 5.2056 12.3621 4.77228 12.4092L2.15048 12.6943C1.67551 12.1033 1.2883 11.4387 1.00861 10.7203L2.5676 8.5907C2.82507 8.23895 2.82507 7.76105 2.5676 7.4093ZM8.00003 10C6.89545 10 6.00003 9.10455 6.00003 8C6.00003 6.89545 6.89545 6 8.00003 6C9.10461 6 10 6.89545 10 8C10 9.10455 9.10461 10 8.00003 10Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > GooglePlus Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    d="M5.07824 7.08452V9.10123C5.07824 9.10123 7.0287 9.0973 7.82536 9.0973C7.39367 10.4025 6.72652 11.114 5.07824 11.114C3.41035 11.114 2.11136 9.76167 2.11136 8.09091C2.11136 6.42015 3.41428 5.06781 5.07824 5.06781C5.96125 5.06781 6.53029 5.37838 7.05224 5.81081C7.47216 5.39017 7.43684 5.3312 8.50037 4.32482C7.59774 3.50319 6.39686 3 5.08217 3C2.27618 3 0 5.2801 0 8.09091C0 10.9017 2.27618 13.1818 5.08217 13.1818C9.27741 13.1818 10.3017 9.52187 9.96027 7.08452C8.96738 7.08452 5.07824 7.08452 5.07824 7.08452ZM14.2379 7.1828V5.41769H12.9821V7.1828H11.1729V8.44079H12.9821V10.2531H14.2379V8.44079H16V7.1828H14.2379Z"
+    fill="black"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Instagram Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    height="16"
+    id="mask0"
+    mask-type="alpha"
+    maskUnits="userSpaceOnUse"
+    type="primary"
+    width="16"
+    x="0"
+    y="0"
+  >
+    <ForwardRef
+      clipRule="evenodd"
+      d="M0 16H16V0H0V16Z"
+      fill="white"
+      fillRule="evenodd"
+      type="primary"
+    />
+  </ForwardRef>
+  <g
+    mask="url(#mask0)"
+  >
+    <ForwardRef
+      clipRule="evenodd"
+      d="M8.00002 0C5.82733 0 5.5549 0.00921035 4.70161 0.0481479C3.8501 0.0869902 3.26855 0.222255 2.7597 0.420056C2.23363 0.624494 1.78748 0.898073 1.34271 1.34287C0.897966 1.7877 0.624419 2.23389 0.420006 2.76002C0.222229 3.26894 0.0869798 3.85056 0.0481422 4.70217C0.00920926 5.55556 0 5.82802 0 8.00097C0 10.1739 0.00920926 10.4463 0.0481422 11.2997C0.0869798 12.1513 0.222229 12.733 0.420006 13.2419C0.624419 13.768 0.897966 14.2142 1.34271 14.659C1.78748 15.1038 2.23363 15.3774 2.7597 15.5819C3.26855 15.7797 3.8501 15.9149 4.70161 15.9538C5.5549 15.9927 5.82733 16.0019 8.00002 16.0019C10.1727 16.0019 10.4451 15.9927 11.2984 15.9538C12.1499 15.9149 12.7314 15.7797 13.2403 15.5819C13.7664 15.3774 14.2125 15.1038 14.6573 14.659C15.102 14.2142 15.3756 13.768 15.58 13.2419C15.7778 12.733 15.913 12.1513 15.9519 11.2997C15.9908 10.4463 16 10.1739 16 8.00097C16 5.82802 15.9908 5.55556 15.9519 4.70217C15.913 3.85056 15.7778 3.26894 15.58 2.76002C15.3756 2.23389 15.102 1.7877 14.6573 1.34287C14.2125 0.898073 13.7664 0.624494 13.2403 0.420056C12.7314 0.222255 12.1499 0.0869902 11.2984 0.0481479C10.4451 0.00921035 10.1727 0 8.00002 0ZM8.00001 1.44159C10.1361 1.44159 10.3891 1.44975 11.2327 1.48824C12.0127 1.52382 12.4363 1.65416 12.7182 1.76373C13.0916 1.90887 13.3581 2.08225 13.638 2.36224C13.918 2.64221 14.0913 2.90873 14.2365 3.2822C14.346 3.56413 14.4763 3.98777 14.5119 4.76786C14.5504 5.61153 14.5586 5.86459 14.5586 8.00095C14.5586 10.1373 14.5504 10.3903 14.5119 11.234C14.4763 12.0141 14.346 12.4377 14.2365 12.7197C14.0913 13.0931 13.918 13.3597 13.638 13.6396C13.3581 13.9196 13.0916 14.093 12.7182 14.2381C12.4363 14.3477 12.0127 14.478 11.2327 14.5136C10.3892 14.5521 10.1362 14.5603 8.00001 14.5603C5.86375 14.5603 5.61078 14.5521 4.76731 14.5136C3.98732 14.478 3.56373 14.3477 3.28183 14.2381C2.90841 14.093 2.64191 13.9196 2.36198 13.6396C2.08205 13.3597 1.90866 13.0931 1.76354 12.7197C1.65398 12.4377 1.52365 12.0141 1.48809 11.234C1.4496 10.3903 1.44144 10.1373 1.44144 8.00095C1.44144 5.86459 1.4496 5.61153 1.48809 4.76786C1.52365 3.98777 1.65398 3.56413 1.76354 3.2822C1.90866 2.90873 2.08202 2.64221 2.36198 2.36224C2.64191 2.08225 2.90841 1.90887 3.28183 1.76373C3.56373 1.65416 3.98732 1.52382 4.76731 1.48824C5.61088 1.44975 5.86391 1.44159 8.00001 1.44159Z"
+      fill="#0A0B09"
+      fillRule="evenodd"
+      type="primary"
+    />
+  </g>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M8.00006 10.668C6.52727 10.668 5.33337 9.47391 5.33337 8.00098C5.33337 6.52803 6.52727 5.33398 8.00006 5.33398C9.47281 5.33398 10.6667 6.52803 10.6667 8.00098C10.6667 9.47391 9.47281 10.668 8.00006 10.668ZM8.00006 3.89233C5.73118 3.89233 3.89194 5.7318 3.89194 8.00094C3.89194 10.2701 5.73118 12.1095 8.00006 12.1095C10.2689 12.1095 12.1081 10.2701 12.1081 8.00094C12.1081 5.7318 10.2689 3.89233 8.00006 3.89233Z"
+    fill="#0A0B09"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    clipRule="evenodd"
+    d="M13.2304 3.72997C13.2304 4.26023 12.8006 4.69007 12.2704 4.69007C11.7402 4.69007 11.3104 4.26023 11.3104 3.72997C11.3104 3.19971 11.7402 2.76984 12.2704 2.76984C12.8006 2.76984 13.2304 3.19971 13.2304 3.72997Z"
+    fill="#0A0B09"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Link Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <g
+    clipPath="url(#clip0)"
+  >
+    <ForwardRef
+      clipRule="evenodd"
+      d="M7.46446 5.55023L10.364 2.65073C11.145 1.86968 12.4113 1.86968 13.1924 2.65073C13.9734 3.43178 13.9734 4.69811 13.1924 5.47915L10.2929 8.37865L11.7071 9.79287L14.6066 6.89337C16.1687 5.33127 16.1687 2.79861 14.6066 1.23651C13.0445 -0.325583 10.5118 -0.325583 8.94975 1.23651L6.05025 4.13601L7.46446 5.55023ZM6.05025 6.96444L4.63604 5.55023L1.17157 9.01469C-0.390524 10.5768 -0.390524 13.1094 1.17157 14.6715C2.73367 16.2336 5.26633 16.2336 6.82843 14.6715L10.2929 11.2071L8.87868 9.79287L5.41421 13.2573C4.63316 14.0384 3.36684 14.0384 2.58579 13.2573C1.80474 12.4763 1.80474 11.21 2.58579 10.4289L6.05025 6.96444Z"
+      fill="black"
+      fillRule="evenodd"
+      type="primary"
+    />
+    <ForwardRef
+      fill="black"
+      height="10"
+      rx="1"
+      transform="rotate(-135 5 12.4)"
+      type="primary"
+      width="2"
+      x="5"
+      y="12.4"
+    />
+  </g>
+  <defs>
+    <clipPath
+      id="clip0"
+    >
+      <rect
+        fill="white"
+        height="16"
+        transform="translate(0 0.0649414)"
+        width="16"
+      />
+    </clipPath>
+  </defs>
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > LinkedIn Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M13.6338 13.6341H11.2623V9.92089C11.2623 9.035 11.2461 7.89611 10.0292 7.89611C8.79421 7.89611 8.6051 8.86078 8.6051 9.85678V13.6341H6.23369V5.99844H8.51022V7.04167H8.54177C8.85843 6.44144 9.63253 5.80844 10.7871 5.80844C13.1902 5.80844 13.6338 7.38989 13.6338 9.44578V13.6341ZM3.55928 4.95467C2.79863 4.95467 2.18297 4.33789 2.18297 3.57833C2.18297 2.81933 2.79863 2.20278 3.55928 2.20278C4.31794 2.20278 4.93449 2.81933 4.93449 3.57833C4.93449 4.33789 4.31794 4.95467 3.55928 4.95467ZM2.37219 13.6341H4.74538V5.99844H2.37219V13.6341ZM14.8157 0H1.18098C0.529437 0 0 0.516444 0 1.15322V14.8454C0 15.4828 0.529437 16 1.18098 16H14.8157C15.4683 16 16 15.4828 16 14.8454V1.15322C16 0.516444 15.4683 0 14.8157 0Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > List Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    d="M5.99997 2H14C14.5523 2 15 2.44772 15 3C15 3.55228 14.5523 4 14 4H5.99997V2Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M0.999969 3C0.999969 2.44772 1.44768 2 1.99997 2H3.99998V4H1.99997C1.44768 4 0.999969 3.55228 0.999969 3Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M5.99997 7H14C14.5523 7 15 7.44772 15 8C15 8.55228 14.5523 9 14 9H5.99997V7Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M0.999969 8C0.999969 7.44772 1.44768 7 1.99997 7H3.99998V9H1.99997C1.44768 9 0.999969 8.55228 0.999969 8Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M5.99997 12H14C14.5523 12 15 12.4477 15 13C15 13.5523 14.5523 14 14 14H5.99997V12Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M0.999969 13C0.999969 12.4477 1.44768 12 1.99997 12H3.99998V14H1.99997C1.44768 14 0.999969 13.5523 0.999969 13Z"
+    fill="black"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Location Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    d="M14 6C14 9.31371 11 12 8 16C5 12 2 9.31371 2 6C2 2.68629 4.68629 0 8 0C11.3137 0 14 2.68629 14 6Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    cx="8"
+    cy="6"
+    fill="white"
+    r="3"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Locked Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M3 7C2.44772 7 2 7.44772 2 8V15C2 15.5523 2.44772 16 3 16H13C13.5523 16 14 15.5523 14 15V8C14 7.44772 13.5523 7 13 7H3ZM8 13C8.55229 13 9 12.5523 9 12C9 11.4477 8.55229 11 8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    d="M4 7V6C4 3.79086 5.79086 2 8 2V2C10.2091 2 12 3.79086 12 6V7"
+    strokeWidth="2"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Message Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    d="M1 3C1 2.44772 1.44772 2 2 2H14C14.5523 2 15 2.44772 15 3V10C15 10.5523 14.5524 11 14.0001 11C10.64 11 6.90857 11 6 11C5.25351 11 3.11393 12.6717 1.86908 13.5193C1.41258 13.8302 1 13.5523 1 13V3Z"
+    fill="black"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Messenger Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M8 0C3.58171 0 0 3.31639 0 7.40741C0 9.73852 1.16333 11.8178 2.98137 13.1757V16L5.70529 14.505C6.43225 14.7062 7.20238 14.8148 8 14.8148C12.4183 14.8148 16 11.4984 16 7.40741C16 3.31639 12.4183 0 8 0ZM8.79504 9.97535L6.75778 7.80251L2.78262 9.97535L7.15529 5.33337L9.24225 7.50621L13.1677 5.33337L8.79504 9.97535Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > More Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M10.0001 2C10.0001 3.10455 9.10461 4 8.00006 4C6.89548 4 6.00006 3.10455 6.00006 2C6.00006 0.895447 6.89548 0 8.00006 0C9.10461 0 10.0001 0.895447 10.0001 2ZM8.00006 10C9.10461 10 10.0001 9.10455 10.0001 8C10.0001 6.89545 9.10461 6 8.00006 6C6.89548 6 6.00006 6.89545 6.00006 8C6.00006 9.10455 6.89548 10 8.00006 10ZM8.00006 16C9.10461 16 10.0001 15.1046 10.0001 14C10.0001 12.8954 9.10461 12 8.00006 12C6.89548 12 6.00006 12.8954 6.00006 14C6.00006 15.1046 6.89548 16 8.00006 16Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Pause Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <g
+    clipPath="url(#clip0)"
+  >
+    <ForwardRef
+      clipRule="evenodd"
+      d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM5 5.5C5 4.94772 5.44772 4.5 6 4.5C6.55228 4.5 7 4.94772 7 5.5V10.5C7 11.0523 6.55228 11.5 6 11.5C5.44772 11.5 5 11.0523 5 10.5V5.5ZM10 4.5C9.44771 4.5 9 4.94772 9 5.5V10.5C9 11.0523 9.44771 11.5 10 11.5C10.5523 11.5 11 11.0523 11 10.5V5.5C11 4.94772 10.5523 4.5 10 4.5Z"
+      fill="#0F0B0A"
+      fillRule="evenodd"
+      type="primary"
+    />
+  </g>
+  <defs>
+    <clipPath
+      id="clip0"
+    >
+      <ForwardRef
+        fill="white"
+        height="16"
+        type="primary"
+        width="16"
+      />
+    </clipPath>
+  </defs>
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Pencil Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    d="M14.1423 0.837097C13.7518 0.446594 13.1186 0.446594 12.7281 0.837097L12.021 1.54422L14.1423 3.66553L14.8494 2.95844C15.2399 2.5679 15.2399 1.93475 14.8494 1.54422L14.1423 0.837097Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M11.3139 2.25128L13.4352 4.37259L4.94997 12.8579L2.56874 14.0485C2.30165 14.182 1.97911 14.1297 1.76796 13.9185C1.55684 13.7074 1.50447 13.3849 1.63801 13.1178L2.82863 10.7366L11.3139 2.25128Z"
+    fill="black"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > People Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M11.4805 9C12.8426 9 13.9468 7.88071 13.9468 6.5C13.9468 5.11929 12.8426 4 11.4805 4C10.1184 4 9.01425 5.11929 9.01425 6.5C9.01425 7.88071 10.1184 9 11.4805 9Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    clipRule="evenodd"
+    d="M4.57494 8C6.20944 8 7.53447 6.65685 7.53447 5C7.53447 3.34315 6.20944 2 4.57494 2C2.94043 2 1.6154 3.34315 1.6154 5C1.6154 6.65685 2.94043 8 4.57494 8Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    d="M6.54797 14C6.56063 11.8377 8.31708 10.0915 10.4794 10.0915L11 10.0915L11.0591 10.0915C13.3886 10.0915 15.4192 11.6769 15.9842 13.9369C15.9922 13.969 15.968 14 15.935 14H6.54797Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M0.161219 13.1939C0.648934 10.7553 2.79009 9 5.27696 9H5.49401C8.25543 9 10.494 11.2386 10.494 14H0.0747563C0.0360819 14 0.0070764 13.9646 0.0146611 13.9267L0.161219 13.1939Z"
+    fill="black"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Person Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M7.95954 8C9.59404 8 10.9191 6.65685 10.9191 5C10.9191 3.34315 9.59404 2 7.95954 2C6.32503 2 5 3.34315 5 5C5 6.65685 6.32503 8 7.95954 8Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    d="M2.06924 13.6538C2.61044 10.9478 4.98638 9 7.74594 9H8.25406C11.0136 9 13.3896 10.9478 13.9308 13.6538C13.9666 13.8329 13.8296 14 13.6469 14H2.35308C2.17042 14 2.03342 13.8329 2.06924 13.6538Z"
+    fill="black"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Pinterest Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M7.99997 0C3.58173 0 0 3.58173 0 7.99997C0 11.3891 2.10865 14.2865 5.08457 15.4521C5.01467 14.8191 4.95152 13.8457 5.11238 13.1547C5.2577 12.5304 6.05041 9.1782 6.05041 9.1782C6.05041 9.1782 5.81111 8.69896 5.81111 7.99046C5.81111 6.87806 6.45587 6.04759 7.25868 6.04759C7.94121 6.04759 8.27087 6.56008 8.27087 7.17454C8.27087 7.86088 7.83386 8.8871 7.60834 9.83811C7.41987 10.6344 8.00764 11.2838 8.793 11.2838C10.2149 11.2838 11.3078 9.78454 11.3078 7.62034C11.3078 5.70494 9.9315 4.36565 7.96619 4.36565C5.68999 4.36565 4.35384 6.07296 4.35384 7.83747C4.35384 8.52498 4.61871 9.26234 4.94922 9.66309C5.0146 9.7423 5.02418 9.81175 5.00477 9.89254C4.94398 10.1453 4.80902 10.6887 4.78252 10.7998C4.74764 10.9462 4.66658 10.9773 4.51497 10.9068C3.51582 10.4417 2.89113 8.98095 2.89113 7.80756C2.89113 5.284 4.72468 2.96648 8.17703 2.96648C10.9522 2.96648 13.1089 4.94398 13.1089 7.58683C13.1089 10.344 11.3705 12.5629 8.9576 12.5629C8.14699 12.5629 7.38485 12.1417 7.12398 11.6443C7.12398 11.6443 6.72284 13.1717 6.62559 13.5459C6.44499 14.2409 5.95742 15.1119 5.6313 15.6432C6.3798 15.8749 7.17526 16 7.99997 16C12.4183 16 16 12.4183 16 7.99997C16 3.58173 12.4183 0 7.99997 0Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Plus Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M7.99999 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 7.99999 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 7.99999 16Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <rect
+    fill="white"
+    height="10"
+    rx="0.999999"
+    width="2"
+    x="7"
+    y="3"
+  />
+  <path
+    d="M6 7V9H4C3.44772 9 3 8.55228 3 8C3 7.44772 3.44772 7 4 7H6Z"
+    fill="white"
+  />
+  <path
+    d="M12 7C12.5523 7 13 7.44772 13 8C13 8.55228 12.5523 9 12 9H8V7L12 7Z"
+    fill="white"
+  />
+</Icon>
+`;
+
 exports[`jest-auto-snapshots > RefreshIcon Matches snapshot when passed all props 1`] = `
 <Icon
   color="primary"
@@ -39,6 +669,111 @@ exports[`jest-auto-snapshots > RefreshIcon Matches snapshot when passed all prop
   <ForwardRef
     d="M7 0C3.134 0 0 3.134 0 7C0 10.866 3.134 14 7 14H8C8.55228 14 9 13.5523 9 13C9 12.4477 8.55228 12 8 12H7C4.23859 12 2 9.76141 2 7C2 4.23859 4.23859 2 7 2C9.76141 2 12 4.23859 12 7H10.2071C9.76166 7 9.53857 7.53857 9.85355 7.85355L12.6465 10.6465C12.8417 10.8417 13.1583 10.8417 13.3535 10.6465L16.1465 7.85355C16.4614 7.53857 16.2383 7 15.7929 7H14C14 3.134 10.866 0 7 0Z"
     fill="#0F0B0A"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Return Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    d="M8.00183 4.00282C8.00113 3.14479 9.01028 2.68434 9.65787 3.2472L14.1448 7.14729C14.6087 7.55049 14.6024 8.27284 14.1317 8.66798L9.65125 12.4287C9.00089 12.9746 8.00906 12.5127 8.00833 11.6636L8.00183 4.00282Z"
+    fill="black"
+    type="primary"
+  />
+  <ForwardRef
+    d="M4 4.80024C4 4.24794 3.55228 3.80024 3 3.80024C2.44772 3.80024 2 4.24794 2 4.80024V5.1822C2 6.55262 2.77426 7.80543 4 8.41828C4.50238 8.66944 5.05637 8.80024 5.61804 8.80024H8V6.80024H5.61804C5.36685 6.80024 5.11911 6.74177 4.89444 6.62941C4.34625 6.35536 4 5.79505 4 5.1822V4.80024Z"
+    fill="black"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Sidebar Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M2 2C1.44772 2 1 2.44769 1 3V13C1 13.5523 1.44772 14 2 14H4C4.55228 14 5 13.5523 5 13V3C5 2.44769 4.55228 2 4 2H2ZM8 2C7.44772 2 7 2.44769 7 3V13C7 13.5523 7.44772 14 8 14H14C14.5523 14 15 13.5523 15 13V3C15 2.44769 14.5523 2 14 2H8Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Tag Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M14 1H8.41421C8.14899 1 7.89465 1.10535 7.70709 1.29291L0.707092 8.29291C0.316589 8.68341 0.316589 9.31659 0.707092 9.70709L6.29291 15.2929C6.68341 15.6834 7.31659 15.6834 7.70709 15.2929L14.7071 8.29291C14.8947 8.10535 15 7.85101 15 7.58578V2C15 1.44772 14.5523 1 14 1ZM11.5 6C12.3284 6 13 5.32843 13 4.5C13 3.67157 12.3284 3 11.5 3C10.6716 3 10 3.67157 10 4.5C10 5.32843 10.6716 6 11.5 6Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Twitter Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M16 2.65729C15.4113 2.93839 14.7787 3.12837 14.1146 3.21382C14.7924 2.77639 15.3129 2.08375 15.558 1.25848C14.9237 1.66346 14.2212 1.9576 13.4735 2.11614C12.8747 1.42924 12.0216 1 11.0774 1C9.26454 1 7.79475 2.58243 7.79475 4.53425C7.79475 4.81125 7.82384 5.08101 7.87979 5.33967C5.15161 5.19229 2.73286 3.78522 1.11384 1.64695C0.831281 2.16895 0.669403 2.77607 0.669403 3.42378C0.669403 4.64994 1.24897 5.73174 2.12976 6.36552C1.59163 6.34718 1.08551 6.1882 0.642891 5.92348C0.642657 5.93823 0.642657 5.95304 0.642657 5.96791C0.642657 7.68034 1.77417 9.10883 3.27585 9.43347C3.00037 9.51425 2.71038 9.55742 2.41097 9.55742C2.19947 9.55742 1.99381 9.5353 1.79342 9.49403C2.21111 10.8982 3.42339 11.92 4.85981 11.9486C3.73638 12.8965 2.32096 13.4615 0.783057 13.4615C0.518117 13.4615 0.256805 13.4448 0 13.4121C1.45269 14.4149 3.17817 15 5.03193 15C11.0698 15 14.3715 9.61451 14.3715 4.94408C14.3715 4.79083 14.3683 4.63841 14.362 4.48686C15.0033 3.98856 15.5599 3.36606 16 2.65729Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Unlocked Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M3 7C2.44772 7 2 7.44772 2 8V15C2 15.5523 2.44772 16 3 16H13C13.5523 16 14 15.5523 14 15V8C14 7.44772 13.5523 7 13 7H3ZM8 13C8.55228 13 9 12.5523 9 12C9 11.4477 8.55228 11 8 11C7.44772 11 7 11.4477 7 12C7 12.5523 7.44772 13 8 13Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    clipRule="evenodd"
+    d="M5 6C5 4.34315 6.34315 3 8 3C8.94149 3 9.78168 3.43369 10.3317 4.1122L12 3H12.0004C11.0882 1.78555 9.63582 1 8 1C5.23858 1 3 3.23858 3 6V7H5V6Z"
+    fill="black"
+    fillRule="evenodd"
+    type="primary"
+  />
+</Icon>
+`;
+
+exports[`jest-auto-snapshots > Warning Matches snapshot when passed all props 1`] = `
+<Icon
+  size="small"
+  type="primary"
+>
+  <ForwardRef
+    clipRule="evenodd"
+    d="M16 8C16 12.4183 12.4183 16 8 16C3.58173 16 0 12.4183 0 8C0 3.58173 3.58173 0 8 0C12.4183 0 16 3.58173 16 8ZM8 3C7.44771 3 7 3.44769 7 4V9C7 9.55231 7.44771 10 8 10C8.55229 10 9 9.55231 9 9V4C9 3.44769 8.55229 3 8 3Z"
+    fill="#0F0B0A"
+    fillRule="evenodd"
+    type="primary"
+  />
+  <ForwardRef
+    d="M7 12C7 11.4477 7.44772 11 8 11C8.55228 11 9 11.4477 9 12C9 12.5523 8.55228 13 8 13C7.44772 13 7 12.5523 7 12Z"
+    fill="white"
     type="primary"
   />
 </Icon>

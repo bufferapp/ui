@@ -11,5 +11,5 @@ snap(Icon, './Icon.jsx');
 test('Button renders styles properly', () => {
   const tree = renderer.create(<Icon type="primary" size="medium"><ChevronDown /></Icon>).toJSON();
   expect(tree).toMatchSnapshot();
-  expect(tree).toHaveStyleRule('width', '18px');
+  expect(tree).toHaveStyleRule('width', '16px');
 });
