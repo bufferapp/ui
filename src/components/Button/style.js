@@ -125,8 +125,9 @@ export const SelectButton = style.div`
   padding-left: 15px;
   display: flex;
   justify-content: center;
+  align-items: center
   width: 100%;
-  height: 100%;
+  height: 38px;
   ${ButtonStyled}:hover & {
     background-color: ${blueDarker};
     color: ${white};
