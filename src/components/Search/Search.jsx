@@ -51,7 +51,7 @@ export default class Search extends React.Component {
     if (this.inputRef.current) setTimeout(() => this.inputRef.current.focus(), 10);
 
     return (
-      <SearchWrapper keyMap={map} handlers={shortcutsEnabled ? this.getHotkeyHandlers() : undefined}>
+      <SearchWrapper keyMap={map} handlers={shortcutsEnabled ? this.getHotkeyHandlers() : undefined} hasSearch={hasSearch}>
         <SearchInput
           placeholder={placeholder}
           type="text"

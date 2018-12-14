@@ -110,7 +110,7 @@ export default class Select extends React.Component {
         <SelectStyled isOpen={isOpen} position={position}>
           <Search onChange={onSearchChange} hasSearch={hasSearch} onMoveDown={this.onMoveDown} onMoveUp={this.onMoveUp} />
           <SelectItems id="select-items">
-            {items.map((item, idx) => <SelectItem selected={selectedItem === idx} key={item.id} item={item} onClick={this.handleSelectOption} />)}
+            {items.map((item, idx) => <SelectItem selected={selectedItem === idx} key={item.id} item={item} onClick={event => this.handleSelectOption(item, event)} />)}
           </SelectItems>
         </SelectStyled>
         <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />

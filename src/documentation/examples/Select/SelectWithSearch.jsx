@@ -1,16 +1,16 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
-import { Person } from '@bufferapp/ui/Icon';
+import { Flag } from '@bufferapp/ui/Icon';
 
 
-/** Basic Select */
-export default function ExampleSelect() {
+/** Select with Search */
+export default function ExampleSelectWithSearch() {
   return (
     <Select
       onSelectClick={() => true}
       hasSearch
       label="Click Me"
-      icon={<Person type="primary" />}
+      icon={<Flag type="primary" />}
       onSearchChange={() => true}
       type="primary"
       items={[
