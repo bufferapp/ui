@@ -7,6 +7,7 @@ import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
 import { SelectButton } from '../Button/style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
+import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
@@ -54,12 +55,48 @@ export default class Select extends React.Component {
     });
   };
 
+  onMoveUp = () => {
+    const { items } = this.props;
+    const { selectedItem } = this.state;
+    const itemsLength = items.length;
+
+    for (let i = selectedItem - 1; i < itemsLength && itemsLength > 0 && i >= 0; i -= 1) {
+      if (items[i]) {
+        this.setState({ selectedItem: i % itemsLength });
+        break;
+      }
+    }
+  };
+
+  onMoveDown = () => {
+    const { items } = this.props;
+    const { selectedItem } = this.state;
+    const itemsLength = items.length;
+
+    if (!selectedItem) {
+      this.setState({
+        selectedItem: 0,
+      }, () => this.updateSelectedItemPosition(selectedItem, itemsLength, items));
+    } else {
+      this.updateSelectedItemPosition(selectedItem, itemsLength, items);
+    }
+  };
+
+  updateSelectedItemPosition = (selectedItem, itemsLength, items) => {
+    for (let i = selectedItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
+      if (items[i]) {
+        this.setState({ selectedItem: i % itemsLength });
+        break;
+      }
+    }
+  }
+
 
   render() {
     const {
-      label, items, isSplit, type, size, position, disabled, icon,
+      label, isSplit, items, type, size, position, disabled, icon, hasSearch, onSearchChange,
     } = this.props;
-    const { isOpen } = this.state;
+    const { isOpen, selectedItem } = this.state;
 
     return (
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
@@ -71,8 +108,9 @@ export default class Select extends React.Component {
           <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
         )}
         <SelectStyled isOpen={isOpen} position={position}>
-          <SelectItems>
-            {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
+          <Search onChange={onSearchChange} hasSearch={hasSearch} onMoveDown={this.onMoveDown} onMoveUp={this.onMoveUp} />
+          <SelectItems id="select-items">
+            {items.map((item, idx) => <SelectItem selected={selectedItem === idx} key={item.id} item={item} onClick={this.handleSelectOption} />)}
           </SelectItems>
         </SelectStyled>
         <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
@@ -111,6 +149,12 @@ Select.propTypes = {
 
   /** Icon to show in the Button */
   icon: PropTypes.node,
+
+  /** Does the Select have a search bar */
+  hasSearch: PropTypes.bool,
+
+  /** Function to call on search value change */
+  onSearchChange: PropTypes.func,
 };
 
 Select.defaultProps = {
@@ -121,4 +165,6 @@ Select.defaultProps = {
   position: 'bottom',
   disabled: undefined,
   icon: undefined,
+  hasSearch: false,
+  onSearchChange: undefined,
 };

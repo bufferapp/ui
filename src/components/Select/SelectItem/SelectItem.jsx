@@ -8,8 +8,8 @@ const SelectItemStyled = style.li`
 `;
 
 
-const SelectItem = ({ item, onClick }) => (
-  <SelectItemStyled onClick={onClick}>
+const SelectItem = ({ item, onClick, selected }) => (
+  <SelectItemStyled onClick={onClick} selected={selected}>
     <Styles.selectItemLabel>
       {item.title}
     </Styles.selectItemLabel>
@@ -22,6 +22,11 @@ SelectItem.propTypes = {
     title: PropTypes.string.isRequired,
   }).isRequired,
   onClick: PropTypes.func.isRequired,
+  selected: PropTypes.bool,
+};
+
+SelectItem.defaultProps = {
+  selected: undefined,
 };
 
 export default SelectItem;

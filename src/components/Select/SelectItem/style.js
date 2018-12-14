@@ -1,12 +1,12 @@
 import style, { css } from 'styled-components';
 import {
-  blue, grayDark,
+  blue, grayDark, white,
 } from '../../style/colors';
 import { fontWeightMedium, fontSize } from '../../style/fonts';
 
 export const selectItem = css`
     align-items: center;
-    color: ${grayDark};
+    color: ${props => (props.selected ? white : grayDark)};
     cursor: pointer;
     display: flex;
     font-size: ${fontSize};
@@ -16,6 +16,7 @@ export const selectItem = css`
     user-select: none;
     white-space: nowrap;
     width: 100%;
+    background-color:${props => (props.selected ? blue : 'transparent')};
     &:hover {
       background-color:${blue};
       color: #fff;

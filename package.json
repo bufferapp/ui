@@ -84,6 +84,7 @@
     "highlight.js": "9.10.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
+    "immutability-helper": "^2.9.0",
     "jest": "23.6.0",
     "jest-auto-snapshots": "^3.0.1",
     "jest-pnp-resolver": "1.0.1",
