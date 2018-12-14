@@ -1,5 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
+<ForwardRef
+  onClick={[MockFunction]}
+  selected={false}
+>
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props 1`] = `
+<ForwardRef
+  onClick={[MockFunction]}
+  selected={true}
+>
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
+</ForwardRef>
+`;
+
 exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only required props 1`] = `
 <ForwardRef
   onClick={[MockFunction]}
