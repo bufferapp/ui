@@ -23,7 +23,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   >
     <Search
       hasSearch={true}
-      onChange={[MockFunction]}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
       onMoveDown={[Function]}
       onMoveUp={[Function]}
       placeholder="Search"
@@ -76,7 +78,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   >
     <Search
       hasSearch={true}
-      onChange={[MockFunction]}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
       onMoveDown={[Function]}
       onMoveUp={[Function]}
       placeholder="Search"
@@ -128,7 +132,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
   >
     <Search
       hasSearch={false}
-      onChange={[MockFunction]}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
       onMoveDown={[Function]}
       onMoveUp={[Function]}
       placeholder="Search"
@@ -191,7 +197,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   >
     <Search
       hasSearch={true}
-      onChange={[MockFunction]}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
       onMoveDown={[Function]}
       onMoveUp={[Function]}
       placeholder="Search"
@@ -243,7 +251,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   >
     <Search
       hasSearch={true}
-      onChange={[MockFunction]}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
       onMoveDown={[Function]}
       onMoveUp={[Function]}
       placeholder="Search"
@@ -305,6 +315,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
   >
     <Search
       hasSearch={false}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
       onMoveDown={[Function]}
       onMoveUp={[Function]}
       placeholder="Search"
