@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import style from 'styled-components';
 import {
-  grayShadow, grayLighter,
+  grayShadow, grayLighter, white,
 } from '../style/colors';
 
 export const Wrapper = style.div`
@@ -41,9 +41,10 @@ export const SelectItems = style.ul`
     position: relative;
     z-index: 2;
     display: flex;
+    background: ${white};
     flex-direction: column;
-    margin-block-start: 5px;
-    margin-block-end: 5px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
     padding-inline-start: 0px;
 `;
 
