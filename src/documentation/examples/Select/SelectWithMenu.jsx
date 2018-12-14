@@ -5,8 +5,8 @@ import {
 } from '@bufferapp/ui/Icon';
 
 
-/** Basic Select */
-export default function ExampleSelect() {
+/** Menu Select */
+export default function ExampleSelectMenu() {
   return (
     <Select
       onSelectClick={() => true}

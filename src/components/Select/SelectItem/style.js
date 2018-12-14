@@ -33,11 +33,15 @@ export const SelectItemLabel = style.div`
     text-transform: capitalize;
     padding: 0px 15px;
     display: flex;
-    align-items: center;
+    align-items: end;
 `;
 
 export const SelectItemIcon = style.div`
   ${SelectItemStyled}:hover & * {
     color: ${white};
   }
+`;
+
+export const SelectItemTitle = style.div`
+  margin-left: 5px;
 `;

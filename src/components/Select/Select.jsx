@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { includes } from 'lodash';
 import {
-  Wrapper, SelectStyled, SelectItems, Arrow,
+  Wrapper, SelectStyled, SelectItems, Arrow, SelectItemDivider,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
@@ -137,8 +137,14 @@ export default class Select extends React.Component {
             onAddItem={this.onAddItem}
             onClose={this.onClose}
           />
-          <SelectItems id="select-items">
-            {items.map((item, idx) => <SelectItem selected={selectedItem === idx} key={item.id} item={item} onClick={event => this.handleSelectOption(item, event)} />)}
+          <SelectItems>
+            {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
+              <SelectItem
+                selected={selectedItem === idx}
+                key={item.id}
+                item={item}
+                onClick={event => this.handleSelectOption(item, event)}
+              />])}
           </SelectItems>
         </SelectStyled>
         <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />

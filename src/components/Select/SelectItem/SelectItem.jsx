@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { SelectItemStyled, SelectItemLabel, SelectItemIcon } from './style';
+import {
+  SelectItemStyled, SelectItemLabel, SelectItemIcon, SelectItemTitle,
+} from './style';
 
 const SelectItem = ({
   item, onClick, selected, ...props
@@ -10,7 +12,9 @@ const SelectItem = ({
       <SelectItemIcon>
         {item.component}
       </SelectItemIcon>
-      {item.title}
+      <SelectItemTitle>
+        {item.title}
+      </SelectItemTitle>
     </SelectItemLabel>
   </SelectItemStyled>
 );
