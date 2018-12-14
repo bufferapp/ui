@@ -7,9 +7,9 @@ import { Flag } from '@bufferapp/ui/Icon';
 export default function ExampleSelectWithSearch() {
   return (
     <Select
-      onSelectClick={() => true}
+      onSelectClick={item => console.info(item)}
       hasSearch
-      label="Click Me"
+      label="Search Me"
       icon={<Flag type="primary" />}
       onSearchChange={() => true}
       type="primary"

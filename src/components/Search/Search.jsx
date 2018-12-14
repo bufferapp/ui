@@ -29,13 +29,21 @@ export default class Search extends React.Component {
   }
 
   getHotkeyHandlers = () => {
-    const { onMoveDown, onMoveUp } = this.props;
+    const {
+      onMoveDown, onMoveUp, onAddItem, onClose,
+    } = this.props;
     return {
       moveUp: () => {
         onMoveUp();
       },
       moveDown: () => {
         onMoveDown();
+      },
+      addItem: () => {
+        onAddItem();
+      },
+      close: () => {
+        onClose();
       },
     };
   };
@@ -72,6 +80,8 @@ Search.propTypes = {
   hasSearch: PropTypes.bool,
   onMoveUp: PropTypes.func.isRequired,
   onMoveDown: PropTypes.func.isRequired,
+  onAddItem: PropTypes.func.isRequired,
+  onClose: PropTypes.func.isRequired,
 };
 
 Search.defaultProps = {

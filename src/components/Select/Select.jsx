@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { includes } from 'lodash';
 import {
   Wrapper, SelectStyled, SelectItems, Arrow,
 } from './style';
@@ -15,6 +16,7 @@ export default class Select extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
+      items: props.items,
     };
   }
 
@@ -82,6 +84,12 @@ export default class Select extends React.Component {
     }
   };
 
+  onAddItem = () => {
+    const { onSelectClick } = this.props;
+    const { items, selectedItem } = this.state;
+    onSelectClick(items[selectedItem]);
+  };
+
   updateSelectedItemPosition = (selectedItem, itemsLength, items) => {
     for (let i = selectedItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
       if (items[i]) {
@@ -89,14 +97,27 @@ export default class Select extends React.Component {
         break;
       }
     }
-  }
+  };
+
+  onSearchChange = (searchValue) => {
+    const { items } = this.props;
+
+    const filteredItems = items.filter(item => includes(item.title.toLowerCase(), searchValue.toLowerCase()));
+    this.setState({
+      items: filteredItems,
+    });
+  };
+
+  onClose = () => {
+    this.setState({ isOpen: false });
+  };
 
 
   render() {
     const {
-      label, isSplit, items, type, size, position, disabled, icon, hasSearch, onSearchChange,
+      label, isSplit, type, size, position, disabled, icon, hasSearch,
     } = this.props;
-    const { isOpen, selectedItem } = this.state;
+    const { isOpen, selectedItem, items } = this.state;
 
     return (
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
@@ -108,7 +129,14 @@ export default class Select extends React.Component {
           <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
         )}
         <SelectStyled isOpen={isOpen} position={position}>
-          <Search onChange={onSearchChange} hasSearch={hasSearch} onMoveDown={this.onMoveDown} onMoveUp={this.onMoveUp} />
+          <Search
+            onChange={this.onSearchChange}
+            hasSearch={hasSearch}
+            onMoveDown={this.onMoveDown}
+            onMoveUp={this.onMoveUp}
+            onAddItem={this.onAddItem}
+            onClose={this.onClose}
+          />
           <SelectItems id="select-items">
             {items.map((item, idx) => <SelectItem selected={selectedItem === idx} key={item.id} item={item} onClick={event => this.handleSelectOption(item, event)} />)}
           </SelectItems>
@@ -152,9 +180,6 @@ Select.propTypes = {
 
   /** Does the Select have a search bar */
   hasSearch: PropTypes.bool,
-
-  /** Function to call on search value change */
-  onSearchChange: PropTypes.func,
 };
 
 Select.defaultProps = {
@@ -166,5 +191,4 @@ Select.defaultProps = {
   disabled: undefined,
   icon: undefined,
   hasSearch: false,
-  onSearchChange: undefined,
 };
