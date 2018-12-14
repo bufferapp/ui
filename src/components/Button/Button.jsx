@@ -48,7 +48,7 @@ const Button = ({
     {!hasIconOnly && label}
 
     {isSelect && (type === 'primary' || type === 'secondary')
-    && <Styles.ArrowButton><ChevronDown type={type} size={size} isChevron /></Styles.ArrowButton>}
+    && <Styles.ArrowButton><ChevronDown color={type === 'primary' ? 'white' : 'grayDark'} size={size} isChevron /></Styles.ArrowButton>}
 
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
 

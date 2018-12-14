@@ -1,27 +1,31 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
-import * as Styles from './style';
+import { SelectItemStyled, SelectItemLabel, SelectItemIcon } from './style';
 
-const SelectItemStyled = style.li`  
-  ${Styles.selectItem};
-`;
-
-
-const SelectItem = ({ item, onClick, selected }) => (
-  <SelectItemStyled onClick={onClick} selected={selected}>
-    <Styles.selectItemLabel>
+const SelectItem = ({
+  item, onClick, selected, ...props
+}) => (
+  <SelectItemStyled onClick={onClick} selected={selected} {...props}>
+    <SelectItemLabel>
+      <SelectItemIcon>
+        {item.component}
+      </SelectItemIcon>
       {item.title}
-    </Styles.selectItemLabel>
+    </SelectItemLabel>
   </SelectItemStyled>
 );
 
 SelectItem.propTypes = {
+  /** Item to render */
   item: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
   }).isRequired,
+
+  /** On click function */
   onClick: PropTypes.func.isRequired,
+
+  /** Is the item selected */
   selected: PropTypes.bool,
 };
 

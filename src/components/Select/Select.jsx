@@ -123,7 +123,7 @@ export default class Select extends React.Component {
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
         {isSplit ? (
           <SelectButton type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
-            <ChevronDown type={disabled ? 'secondary' : 'primary'} />
+            <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
           </SelectButton>
         ) : (
           <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />

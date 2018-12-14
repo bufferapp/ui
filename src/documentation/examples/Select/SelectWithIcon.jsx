@@ -9,7 +9,7 @@ export default function ExampleSelect() {
     <Select
       onSelectClick={() => true}
       label="Click Me"
-      icon={<Person type="primary" />}
+      icon={<Person color="white" />}
       type="primary"
       items={[
         { id: '1', title: 'Open' },

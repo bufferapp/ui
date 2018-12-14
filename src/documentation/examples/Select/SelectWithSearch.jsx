@@ -10,7 +10,7 @@ export default function ExampleSelectWithSearch() {
       onSelectClick={item => console.info(item)}
       hasSearch
       label="Search Me"
-      icon={<Flag type="primary" />}
+      icon={<Flag color="white" />}
       onSearchChange={() => true}
       type="primary"
       items={[

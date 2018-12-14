@@ -6,28 +6,25 @@ import * as Styles from './style';
 const IconStyled = style.svg`  
   ${Styles.base};
   ${props => Styles[props.size]};
-  ${props => Styles[props.type]};
   ${props => Styles[props.isChevron ? 'chevron' : null]};
 `;
 
 const GroupStyled = style.g`  
-  ${props => Styles[`${props.type}Group`]};
+  ${props => Styles[`${props.color}Group`]};
 `;
 
 
 const Icon = ({
-  children, size, type, isChevron,
+  children, ...props
 }) => (
   <IconStyled
-    size={size}
-    type={type}
-    isChevron={isChevron}
+    {...props}
     viewBox="0 0 16 16"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
-    <GroupStyled type={type}>
+    <GroupStyled {...props}>
       {children}
     </GroupStyled>
   </IconStyled>
@@ -37,13 +34,13 @@ const Icon = ({
 Icon.propTypes = {
   children: PropTypes.node.isRequired,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  type: PropTypes.oneOf(['primary', 'secondary']),
+  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
   isChevron: PropTypes.bool,
 };
 
 Icon.defaultProps = {
   size: 'medium',
-  type: 'secondary',
+  color: 'dark',
   isChevron: undefined,
 };
 

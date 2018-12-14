@@ -2,6 +2,7 @@ import { css } from 'styled-components';
 
 export const base = css`
   margin-right: 5px;
+  fill: currentColor;
 `;
 
 
