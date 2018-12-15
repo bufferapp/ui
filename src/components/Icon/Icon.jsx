@@ -33,15 +33,6 @@ const Icon = ({
 
 Icon.propTypes = {
   children: PropTypes.node.isRequired,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
-  isChevron: PropTypes.bool,
-};
-
-Icon.defaultProps = {
-  size: 'medium',
-  color: 'dark',
-  isChevron: undefined,
 };
 
 export default Icon;

@@ -5,9 +5,9 @@ import {
 } from './style';
 
 const SelectItem = ({
-  item, onClick, selected, ...props
+  item, onClick, selected,
 }) => (
-  <SelectItemStyled onClick={onClick} selected={selected} {...props}>
+  <SelectItemStyled onClick={item.onItemClick || onClick} selected={selected}>
     <SelectItemLabel>
       <SelectItemIcon>
         {item.component}
@@ -24,6 +24,7 @@ SelectItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
+    onItemClick: PropTypes.func,
   }).isRequired,
 
   /** On click function */

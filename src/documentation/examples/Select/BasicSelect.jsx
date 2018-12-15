@@ -6,7 +6,7 @@ import Select from '@bufferapp/ui/Select';
 export default function ExampleSelect() {
   return (
     <Select
-      onSelectClick={() => true}
+      onSelectClick={() => console.info('Main select clicked')}
       label="Click Me"
       items={[
         { id: '1', title: 'Open' },
