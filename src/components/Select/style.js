@@ -1,7 +1,7 @@
 /* eslint-disable no-nested-ternary */
 import style from 'styled-components';
 import {
-  grayShadow, grayLighter,
+  grayShadow, grayLighter, white, gray,
 } from '../style/colors';
 
 export const Wrapper = style.div`
@@ -20,11 +20,12 @@ export const SelectStyled = style.div`
     right: 0;
     position: absolute;
     z-index: 1000;
-    box-sizing: content-box;
-    border: 1px solid ${grayLighter};
-    box-shadow: 0 4px 30px 0 ${grayShadow};
+    border: 1px solid ${gray};
+    box-sizing: border-box;
+    box-shadow: ${grayShadow};
+    border-radius: 4px;
     display: ${props => (props.isOpen ? 'initial' : 'none')};
-    min-width: 150px;
+    min-width: 200px;
     width: auto;
     background-color: #ffffff;
     bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
@@ -41,18 +42,20 @@ export const SelectItems = style.ul`
     position: relative;
     z-index: 2;
     display: flex;
+    background: ${white};
     flex-direction: column;
-    margin-block-start: 5px;
-    margin-block-end: 5px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
     padding-inline-start: 0px;
+    border-radius: 4px;
 `;
 
 
 export const Arrow = style.div`
     background-color: #fff;
-    border-left: 1px solid #e6e8e9f;
+    border-left: 1px solid ${gray};
     border-radius: 2px 0 0 0;
-    border-top: 1px solid #e6e8e9;
+    border-top: 1px solid ${gray};
     display: ${props => (props.isOpen ? 'inline-block' : 'none')};
     height: 10px;
     right: 16px;
@@ -63,4 +66,14 @@ export const Arrow = style.div`
     bottom: ${props => (props.position === 'top' ? '100%' : '-15px')};
     top: ${props => (props.position === 'top' ? '-15px' : 'initial')};
     z-index: 9999;
+`;
+
+export const SelectItemDivider = style.li`
+    background-color: ${grayLighter};
+    height: 1px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+    padding: 0;
+    pointer-events: none;
+    width: 100%;
 `;

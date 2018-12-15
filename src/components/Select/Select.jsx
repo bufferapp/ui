@@ -1,12 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { includes } from 'lodash';
 import {
-  Wrapper, SelectStyled, SelectItems, Arrow,
+  Wrapper, SelectStyled, SelectItems, Arrow, SelectItemDivider,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
 import { SelectButton } from '../Button/style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
+import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
@@ -14,6 +16,7 @@ export default class Select extends React.Component {
     super(props);
     this.state = {
       isOpen: false,
+      items: props.items,
     };
   }
 
@@ -54,25 +57,97 @@ export default class Select extends React.Component {
     });
   };
 
+  onMoveUp = () => {
+    const { items } = this.state;
+    const { selectedItem } = this.state;
+    const itemsLength = items.length;
+
+    for (let i = selectedItem - 1; i < itemsLength && itemsLength > 0 && i >= 0; i -= 1) {
+      if (items[i]) {
+        this.setState({ selectedItem: i % itemsLength });
+        break;
+      }
+    }
+  };
+
+  onMoveDown = () => {
+    const { items } = this.state;
+    const { selectedItem } = this.state;
+    const itemsLength = items.length;
+
+    if (!selectedItem) {
+      this.setState({
+        selectedItem: 0,
+      }, () => this.updateSelectedItemPosition(selectedItem, itemsLength, items));
+    } else {
+      this.updateSelectedItemPosition(selectedItem, itemsLength, items);
+    }
+  };
+
+  onAddItem = () => {
+    const { onSelectClick } = this.props;
+    const { items, selectedItem } = this.state;
+    onSelectClick(items[selectedItem]);
+  };
+
+  updateSelectedItemPosition = (selectedItem, itemsLength, items) => {
+    for (let i = selectedItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
+      if (items[i]) {
+        this.setState({ selectedItem: i % itemsLength });
+        break;
+      }
+    }
+  };
+
+  onSearchChange = (searchValue) => {
+    const { items } = this.props;
+
+    const filteredItems = items.filter(item => includes(item.title.toLowerCase(), searchValue.toLowerCase()));
+    this.setState({
+      items: filteredItems,
+    });
+  };
+
+  onClose = () => {
+    this.setState({ isOpen: false });
+  };
+
 
   render() {
     const {
-      label, items, isSplit, type, size, position, disabled, icon,
+      label, isSplit, type, size, position, disabled, icon, hasSearch, customButton,
     } = this.props;
-    const { isOpen } = this.state;
+    const { isOpen, selectedItem, items } = this.state;
 
     return (
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
+        {/* Render the Select Button that opens the popup */}
         {isSplit ? (
           <SelectButton type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
-            <ChevronDown type={disabled ? 'secondary' : 'primary'} />
+            <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
           </SelectButton>
-        ) : (
+        ) : customButton || (
           <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
         )}
+
+        {/* Render the Select popup when Button is clicked */}
         <SelectStyled isOpen={isOpen} position={position}>
+          <Search
+            onChange={this.onSearchChange}
+            hasSearch={hasSearch}
+            onMoveDown={this.onMoveDown}
+            onMoveUp={this.onMoveUp}
+            onAddItem={this.onAddItem}
+            onClose={this.onClose}
+          />
           <SelectItems>
-            {items.map(item => <SelectItem key={item.id} item={item} onClick={this.handleSelectOption} />)}
+            {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
+              <SelectItem
+                selected={selectedItem === idx}
+                key={item.id}
+                item={item}
+                onClick={event => this.handleSelectOption(item, event)}
+              />])}
           </SelectItems>
         </SelectStyled>
         <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
@@ -111,6 +186,12 @@ Select.propTypes = {
 
   /** Icon to show in the Button */
   icon: PropTypes.node,
+
+  /** Does the Select have a search bar */
+  hasSearch: PropTypes.bool,
+
+  /** Custom Button component */
+  customButton: PropTypes.node,
 };
 
 Select.defaultProps = {
@@ -121,4 +202,6 @@ Select.defaultProps = {
   position: 'bottom',
   disabled: undefined,
   icon: undefined,
+  hasSearch: false,
+  customButton: undefined,
 };

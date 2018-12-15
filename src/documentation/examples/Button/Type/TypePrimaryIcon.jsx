@@ -7,7 +7,7 @@ export default function ExampleButton() {
   return (
     <Button
       type="primary"
-      icon={<Message type="primary" />}
+      icon={<Message color="white" />}
       onClick={() => {}}
       label="Click Me"
     />

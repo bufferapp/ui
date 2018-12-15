@@ -1,12 +1,12 @@
-import style, { css } from 'styled-components';
+import style from 'styled-components';
 import {
-  blue, grayDark,
+  blue, grayDark, white,
 } from '../../style/colors';
 import { fontWeightMedium, fontSize } from '../../style/fonts';
 
-export const selectItem = css`
+export const SelectItemStyled = style.li`
     align-items: center;
-    color: ${grayDark};
+    color: ${props => (props.selected ? white : grayDark)};
     cursor: pointer;
     display: flex;
     font-size: ${fontSize};
@@ -16,6 +16,7 @@ export const selectItem = css`
     user-select: none;
     white-space: nowrap;
     width: 100%;
+    background-color:${props => (props.selected ? blue : 'transparent')};
     &:hover {
       background-color:${blue};
       color: #fff;
@@ -23,7 +24,7 @@ export const selectItem = css`
 `;
 
 
-export const selectItemLabel = style.div`
+export const SelectItemLabel = style.div`
     font-size: ${fontSize};
     font-weight: ${fontWeightMedium};
     min-width: 0;
@@ -31,4 +32,16 @@ export const selectItemLabel = style.div`
     text-overflow: ellipsis;
     text-transform: capitalize;
     padding: 0px 15px;
+    display: flex;
+    align-items: end;
+`;
+
+export const SelectItemIcon = style.div`
+  ${SelectItemStyled}:hover & * {
+    color: ${white};
+  }
+`;
+
+export const SelectItemTitle = style.div`
+  margin-left: 5px;
 `;

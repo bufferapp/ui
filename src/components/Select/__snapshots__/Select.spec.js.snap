@@ -13,14 +13,24 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     type="primary"
   >
     <ChevronDown
+      color="grayDark"
       size="medium"
-      type="secondary"
     />
   </ForwardRef>
   <ForwardRef
     isOpen={false}
     position="top"
   >
+    <Search
+      hasSearch={true}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+      placeholder="Search"
+      shortcutsEnabled={true}
+    />
     <ForwardRef>
       <SelectItem
         item={
@@ -30,6 +40,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
           }
         }
         onClick={[Function]}
+        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
@@ -55,14 +66,24 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     type="primary"
   >
     <ChevronDown
+      color="white"
       size="medium"
-      type="primary"
     />
   </ForwardRef>
   <ForwardRef
     isOpen={false}
     position="top"
   >
+    <Search
+      hasSearch={true}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+      placeholder="Search"
+      shortcutsEnabled={true}
+    />
     <ForwardRef>
       <SelectItem
         item={
@@ -72,6 +93,59 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
           }
         }
         onClick={[Function]}
+        selected={false}
+      />
+    </ForwardRef>
+  </ForwardRef>
+  <ForwardRef
+    isOpen={false}
+    isSplit={true}
+    position="top"
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSearch" is set to: "false" 1`] = `
+<ForwardRef
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <ForwardRef
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDown
+      color="grayDark"
+      size="medium"
+    />
+  </ForwardRef>
+  <ForwardRef
+    isOpen={false}
+    position="top"
+  >
+    <Search
+      hasSearch={false}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+      placeholder="Search"
+      shortcutsEnabled={true}
+    />
+    <ForwardRef>
+      <SelectItem
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
@@ -91,30 +165,21 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   role="button"
   tabIndex={0}
 >
-  <Button
-    disabled={false}
-    hasIconOnly={false}
-    icon={<NodeFixture />}
-    isSelect={true}
-    items={
-      Array [
-        Object {
-          "id": "jest-auto-snapshots String Fixture",
-          "title": "jest-auto-snapshots String Fixture",
-        },
-      ]
-    }
-    label="jest-auto-snapshots String Fixture"
-    loading={false}
-    onClick={[Function]}
-    selectPosition="bottom"
-    size="small"
-    type="primary"
-  />
+  <NodeFixture />
   <ForwardRef
     isOpen={false}
     position="top"
   >
+    <Search
+      hasSearch={true}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+      placeholder="Search"
+      shortcutsEnabled={true}
+    />
     <ForwardRef>
       <SelectItem
         item={
@@ -124,6 +189,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
           }
         }
         onClick={[Function]}
+        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
@@ -148,14 +214,24 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     type="primary"
   >
     <ChevronDown
+      color="grayDark"
       size="medium"
-      type="secondary"
     />
   </ForwardRef>
   <ForwardRef
     isOpen={false}
     position="top"
   >
+    <Search
+      hasSearch={true}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+      placeholder="Search"
+      shortcutsEnabled={true}
+    />
     <ForwardRef>
       <SelectItem
         item={
@@ -165,6 +241,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
           }
         }
         onClick={[Function]}
+        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
@@ -207,6 +284,16 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     isOpen={false}
     position="bottom"
   >
+    <Search
+      hasSearch={false}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+      placeholder="Search"
+      shortcutsEnabled={true}
+    />
     <ForwardRef>
       <SelectItem
         item={
@@ -216,6 +303,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
           }
         }
         onClick={[Function]}
+        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
