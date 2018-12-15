@@ -103,7 +103,9 @@ export default class Select extends React.Component {
   onSearchChange = (searchValue) => {
     const { items } = this.props;
 
-    const filteredItems = items.filter(item => includes(item.title.toLowerCase(), searchValue.toLowerCase()));
+    const filteredItems = items.filter(
+      item => includes(item.title.toLowerCase(), searchValue.toLowerCase()),
+    );
     this.setState({
       items: filteredItems,
     });
@@ -113,44 +115,86 @@ export default class Select extends React.Component {
     this.setState({ isOpen: false });
   };
 
-
-  render() {
+  renderSelectButton = () => {
     const {
-      label, isSplit, type, size, position, disabled, icon, hasSearch, customButton,
+      isSplit, customButton, type, size, disabled, icon, label,
+    } = this.props;
+    const { items } = this.state;
+
+    if (isSplit) {
+      return (
+        <ButtonSelect
+          type={type}
+          disabled={disabled}
+          onClick={!disabled ? this.onButtonClick : undefined}
+        >
+          <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
+        </ButtonSelect>
+      );
+    }
+    if (customButton) {
+      return customButton(this.onButtonClick);
+    }
+
+    return (
+      <Button
+        size={size}
+        items={items}
+        type={type}
+        label={label}
+        icon={icon}
+        onClick={this.onButtonClick}
+        isSelect
+      />
+    );
+  };
+
+  renderSelectPopup= () => {
+    const {
+      position, hasSearch, customButton,
     } = this.props;
     const { isOpen, selectedItem, items } = this.state;
 
     return (
-      <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
-        {/* Render the Select Button that opens the popup */}
-        {isSplit ? (
-          <ButtonSelect type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
-            <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
-          </ButtonSelect>
-        ) : customButton ? customButton(this.onButtonClick) : (
-          <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
-        )}
+      <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
+        <Search
+          onChange={this.onSearchChange}
+          hasSearch={hasSearch}
+          onMoveDown={this.onMoveDown}
+          onMoveUp={this.onMoveUp}
+          onAddItem={this.onAddItem}
+          onClose={this.onClose}
+        />
+        <SelectItems>
+          {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
+            <SelectItem
+              selected={selectedItem === idx}
+              key={item.id}
+              item={item}
+              onClick={event => this.handleSelectOption(item, event)}
+            />])}
+        </SelectItems>
+      </SelectStyled>
+    );
+  }
 
-        {/* Render the Select popup when Button is clicked */}
-        <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
-          <Search
-            onChange={this.onSearchChange}
-            hasSearch={hasSearch}
-            onMoveDown={this.onMoveDown}
-            onMoveUp={this.onMoveUp}
-            onAddItem={this.onAddItem}
-            onClose={this.onClose}
-          />
-          <SelectItems>
-            {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
-              <SelectItem
-                selected={selectedItem === idx}
-                key={item.id}
-                item={item}
-                onClick={event => this.handleSelectOption(item, event)}
-              />])}
-          </SelectItems>
-        </SelectStyled>
+
+  render() {
+    const {
+      isSplit, position, customButton,
+    } = this.props;
+    const { isOpen } = this.state;
+
+    return (
+      <Wrapper
+        role="button"
+        onClick={this.onClick}
+        onKeyUp={this.onClick}
+        tabIndex={0}
+        isSplit={isSplit}
+      >
+        {this.renderSelectButton()}
+        {this.renderSelectPopup()}
         {!customButton && <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />}
       </Wrapper>
     );

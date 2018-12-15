@@ -5,6 +5,8 @@ import {
 } from './style';
 import ChevronDown from '../../Icon/Icons/ChevronDown';
 
+/** NavBar Menu component used by the Select component to show a custom User name and avatar
+ *  button */
 const NavBarMenu = ({ user, onClick }) => (
   <NavBarStyled>
     <NavBarUser>
@@ -19,10 +21,13 @@ const NavBarMenu = ({ user, onClick }) => (
 );
 
 NavBarMenu.propTypes = {
+  /** User Name and Email to be shown in the NavBar */
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
   }).isRequired,
+
+  /** OnClick function to be called on Avatar click, passed by the Select component */
   onClick: PropTypes.func.isRequired,
 };
 
