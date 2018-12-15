@@ -13,8 +13,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     type="primary"
   >
     <ChevronDown
+      color="grayDark"
       size="medium"
-      type="secondary"
     />
   </ForwardRef>
   <ForwardRef
@@ -31,9 +31,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
       placeholder="Search"
       shortcutsEnabled={true}
     />
-    <ForwardRef
-      id="select-items"
-    >
+    <ForwardRef>
       <SelectItem
         item={
           Object {
@@ -68,8 +66,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     type="primary"
   >
     <ChevronDown
+      color="white"
       size="medium"
-      type="primary"
     />
   </ForwardRef>
   <ForwardRef
@@ -86,9 +84,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
       placeholder="Search"
       shortcutsEnabled={true}
     />
-    <ForwardRef
-      id="select-items"
-    >
+    <ForwardRef>
       <SelectItem
         item={
           Object {
@@ -122,8 +118,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     type="primary"
   >
     <ChevronDown
+      color="grayDark"
       size="medium"
-      type="secondary"
     />
   </ForwardRef>
   <ForwardRef
@@ -140,9 +136,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
       placeholder="Search"
       shortcutsEnabled={true}
     />
-    <ForwardRef
-      id="select-items"
-    >
+    <ForwardRef>
       <SelectItem
         item={
           Object {
@@ -171,26 +165,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   role="button"
   tabIndex={0}
 >
-  <Button
-    disabled={false}
-    hasIconOnly={false}
-    icon={<NodeFixture />}
-    isSelect={true}
-    items={
-      Array [
-        Object {
-          "id": "jest-auto-snapshots String Fixture",
-          "title": "jest-auto-snapshots String Fixture",
-        },
-      ]
-    }
-    label="jest-auto-snapshots String Fixture"
-    loading={false}
-    onClick={[Function]}
-    selectPosition="bottom"
-    size="small"
-    type="primary"
-  />
+  <NodeFixture />
   <ForwardRef
     isOpen={false}
     position="top"
@@ -205,9 +180,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
       placeholder="Search"
       shortcutsEnabled={true}
     />
-    <ForwardRef
-      id="select-items"
-    >
+    <ForwardRef>
       <SelectItem
         item={
           Object {
@@ -241,8 +214,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     type="primary"
   >
     <ChevronDown
+      color="grayDark"
       size="medium"
-      type="secondary"
     />
   </ForwardRef>
   <ForwardRef
@@ -259,9 +232,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
       placeholder="Search"
       shortcutsEnabled={true}
     />
-    <ForwardRef
-      id="select-items"
-    >
+    <ForwardRef>
       <SelectItem
         item={
           Object {
@@ -323,9 +294,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
       placeholder="Search"
       shortcutsEnabled={true}
     />
-    <ForwardRef
-      id="select-items"
-    >
+    <ForwardRef>
       <SelectItem
         item={
           Object {

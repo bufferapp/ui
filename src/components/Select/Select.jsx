@@ -115,19 +115,22 @@ export default class Select extends React.Component {
 
   render() {
     const {
-      label, isSplit, type, size, position, disabled, icon, hasSearch,
+      label, isSplit, type, size, position, disabled, icon, hasSearch, customButton,
     } = this.props;
     const { isOpen, selectedItem, items } = this.state;
 
     return (
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
+        {/* Render the Select Button that opens the popup */}
         {isSplit ? (
           <SelectButton type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
             <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
           </SelectButton>
-        ) : (
+        ) : customButton || (
           <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
         )}
+
+        {/* Render the Select popup when Button is clicked */}
         <SelectStyled isOpen={isOpen} position={position}>
           <Search
             onChange={this.onSearchChange}
@@ -186,6 +189,9 @@ Select.propTypes = {
 
   /** Does the Select have a search bar */
   hasSearch: PropTypes.bool,
+
+  /** Custom Button component */
+  customButton: PropTypes.node,
 };
 
 Select.defaultProps = {
@@ -197,4 +203,5 @@ Select.defaultProps = {
   disabled: undefined,
   icon: undefined,
   hasSearch: false,
+  customButton: undefined,
 };

@@ -6,7 +6,10 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "se
   selected={false}
 >
   <ForwardRef>
-    jest-auto-snapshots String Fixture
+    <ForwardRef />
+    <ForwardRef>
+      jest-auto-snapshots String Fixture
+    </ForwardRef>
   </ForwardRef>
 </ForwardRef>
 `;
@@ -17,7 +20,10 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
   selected={true}
 >
   <ForwardRef>
-    jest-auto-snapshots String Fixture
+    <ForwardRef />
+    <ForwardRef>
+      jest-auto-snapshots String Fixture
+    </ForwardRef>
   </ForwardRef>
 </ForwardRef>
 `;
@@ -27,7 +33,10 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only requ
   onClick={[MockFunction]}
 >
   <ForwardRef>
-    jest-auto-snapshots String Fixture
+    <ForwardRef />
+    <ForwardRef>
+      jest-auto-snapshots String Fixture
+    </ForwardRef>
   </ForwardRef>
 </ForwardRef>
 `;
