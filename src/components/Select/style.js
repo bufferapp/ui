@@ -31,7 +31,7 @@ export const SelectStyled = style.div`
     bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
     top: ${props => (props.position === 'bottom' ? '100%' : 'initial')};
     margin-bottom: ${props => (props.position === 'top' ? '10px' : '0')};
-    margin-top: ${props => (props.position === 'bottom' ? '10px' : '0')};
+    margin-top: ${props => (props.isMenu ? '35px' : props.position === 'bottom' ? '10px' : '0')};
 `;
 
 export const SelectItems = style.ul`
@@ -58,7 +58,7 @@ export const Arrow = style.div`
     border-top: 1px solid ${gray};
     display: ${props => (props.isOpen ? 'inline-block' : 'none')};
     height: 10px;
-    right: 16px;
+    right: 13px;
     position: absolute;
     width: 10px;
     z-index: 1;

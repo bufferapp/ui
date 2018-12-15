@@ -18,6 +18,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -44,11 +45,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -71,6 +67,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -97,11 +94,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -123,6 +115,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -149,11 +142,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -165,8 +153,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   role="button"
   tabIndex={0}
 >
-  <NodeFixture />
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -193,11 +181,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={false}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -219,6 +202,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -245,11 +229,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -281,6 +260,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     type="secondary"
   />
   <ForwardRef
+    isMenu={false}
     isOpen={false}
     position="bottom"
   >

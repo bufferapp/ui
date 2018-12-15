@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { includes } from 'lodash';
@@ -6,7 +7,7 @@ import {
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
-import { SelectButton } from '../Button/style';
+import { ButtonSelect } from '../Button/style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Search from '../Search/Search';
 
@@ -123,15 +124,15 @@ export default class Select extends React.Component {
       <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
         {/* Render the Select Button that opens the popup */}
         {isSplit ? (
-          <SelectButton type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
+          <ButtonSelect type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
             <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
-          </SelectButton>
-        ) : customButton || (
+          </ButtonSelect>
+        ) : customButton ? customButton(this.onButtonClick) : (
           <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
         )}
 
         {/* Render the Select popup when Button is clicked */}
-        <SelectStyled isOpen={isOpen} position={position}>
+        <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
           <Search
             onChange={this.onSearchChange}
             hasSearch={hasSearch}
@@ -150,7 +151,7 @@ export default class Select extends React.Component {
               />])}
           </SelectItems>
         </SelectStyled>
-        <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
+        {!customButton && <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />}
       </Wrapper>
     );
   }
@@ -161,7 +162,7 @@ Select.propTypes = {
   disabled: PropTypes.bool,
 
   /** Function to call on selected item click */
-  onSelectClick: PropTypes.func.isRequired,
+  onSelectClick: PropTypes.func,
 
   /** Label to display on the Select button */
   label: PropTypes.string,
@@ -191,7 +192,7 @@ Select.propTypes = {
   hasSearch: PropTypes.bool,
 
   /** Custom Button component */
-  customButton: PropTypes.node,
+  customButton: PropTypes.func,
 };
 
 Select.defaultProps = {
@@ -204,4 +205,5 @@ Select.defaultProps = {
   icon: undefined,
   hasSearch: false,
   customButton: undefined,
+  onSelectClick: undefined,
 };

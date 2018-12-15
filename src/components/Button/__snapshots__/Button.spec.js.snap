@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders styles properly 1`] = `
+.c1 {
+  margin-left: 0px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -78,11 +82,19 @@ exports[`Button renders styles properly 1`] = `
   size="medium"
   type="primary"
 >
-  Primary
+  <div
+    className="c1"
+  >
+    Primary
+  </div>
 </button>
 `;
 
 exports[`Disabled button is disabled 1`] = `
+.c1 {
+  margin-left: 0px;
+}
+
 .c0 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -154,7 +166,11 @@ exports[`Disabled button is disabled 1`] = `
   size="medium"
   type="primary"
 >
-  Primary
+  <div
+    className="c1"
+  >
+    Primary
+  </div>
 </button>
 `;
 
@@ -220,7 +236,11 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
   type="link"
 >
   <NodeFixture />
-  jest-auto-snapshots String Fixture
+  <ForwardRef
+    hasIcon={true}
+  >
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -299,5 +319,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
   onClick={[MockFunction]}
   size="medium"
   type="secondary"
-/>
+>
+  <ForwardRef
+    hasIcon={false}
+  />
+</ForwardRef>
 `;

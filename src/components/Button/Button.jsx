@@ -7,7 +7,7 @@ import Select from '../Select/Select';
 
 
 export const ButtonStyled = style.button`
-  ${Styles.buttonbase};
+  ${Styles.ButtonBase};
   ${props => Styles[props.size]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
 `;
@@ -45,10 +45,10 @@ const Button = ({
     hasIconOnly={hasIconOnly}
   >
     {icon}
-    {!hasIconOnly && label}
+    {!hasIconOnly && <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>}
 
     {isSelect && (type === 'primary' || type === 'secondary')
-    && <Styles.ArrowButton><ChevronDown color={type === 'primary' ? 'white' : 'grayDark'} size={size} isChevron /></Styles.ArrowButton>}
+    && <Styles.ButtonArrow><ChevronDown color={type === 'primary' ? 'white' : 'grayDark'} size={size} isChevron /></Styles.ButtonArrow>}
 
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
 
