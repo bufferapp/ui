@@ -58,7 +58,7 @@ export default class Select extends React.Component {
   };
 
   onMoveUp = () => {
-    const { items } = this.props;
+    const { items } = this.state;
     const { selectedItem } = this.state;
     const itemsLength = items.length;
 
@@ -71,7 +71,7 @@ export default class Select extends React.Component {
   };
 
   onMoveDown = () => {
-    const { items } = this.props;
+    const { items } = this.state;
     const { selectedItem } = this.state;
     const itemsLength = items.length;
 

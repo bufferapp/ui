@@ -24,6 +24,15 @@ describe('SomeComponent component', () => {
     expect(wrapper.state().isOpen).toBe(false);
   });
 
+  it('onClose: should close the open popup', () => {
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+    instance.onButtonClick();
+    expect(wrapper.state().isOpen).toBe(true);
+    instance.onClose();
+    expect(wrapper.state().isOpen).toBe(false);
+  });
+
   it('handleSelectOption: should call onSelectClick', () => {
     const onSelectClickSply = jest.fn();
     const wrapper = shallow(<Select onSelectClick={onSelectClickSply} items={[]} label="Select" />);
@@ -45,5 +54,106 @@ describe('SomeComponent component', () => {
     instance.onClick(event);
     expect(event.stopPropagation).toBeCalled();
     expect(event.nativeEvent.stopImmediatePropagation).toBeCalled();
+  });
+
+  it('onSearchChange: should update search in state', () => {
+    const wrapper = shallow(<Select
+      onSelectClick={() => true}
+      items={[
+        {
+          id: '1', title: 'Testing',
+        },
+        {
+          id: '2', title: '123',
+        },
+      ]}
+      label="Select"
+    />);
+    const instance = wrapper.instance();
+    instance.onSearchChange('Test');
+    expect(wrapper.state().items).toEqual([{
+      id: '1', title: 'Testing',
+    }]);
+  });
+
+
+  it('updateSelectedItemPosition: should update selectedItem in state', () => {
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+    const items = [
+      {
+        id: '1', title: 'Testing',
+      },
+      {
+        id: '2', title: '123',
+      },
+    ];
+    const selectedItem = 0;
+    const itemsLength = 2;
+    instance.updateSelectedItemPosition(selectedItem, itemsLength, items);
+    expect(wrapper.state().selectedItem).toBe(1);
+  });
+
+  it('onAddItem: should call onSelectClick', () => {
+    const onSelectClick = jest.fn();
+    const wrapper = shallow(<Select onSelectClick={onSelectClick} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+    instance.onAddItem();
+    expect(onSelectClick).toBeCalled();
+  });
+
+  it('onMoveDown: should set the selectedItem in state if there is none', () => {
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+    const spyFunc = jest.spyOn(instance, 'updateSelectedItemPosition');
+    instance.onMoveDown();
+    expect(spyFunc).toHaveBeenCalled();
+    expect(wrapper.state().selectedItem).toBe(0);
+  });
+
+  it('onMoveDown: should increase selectedItem in state by +1', () => {
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+    wrapper.setState({
+      selectedItem: 0,
+      items: [
+        {
+          id: '1', title: 'Testing',
+        },
+        {
+          id: '2', title: '123',
+        },
+      ],
+    });
+    instance.onMoveDown();
+    expect(wrapper.state().selectedItem).toBe(1);
+  });
+
+  it('onMoveUp: should decrease selectedItem in state by -1', () => {
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+    wrapper.setState({
+      selectedItem: 1,
+      items: [
+        {
+          id: '1', title: 'Testing',
+        },
+        {
+          id: '2', title: '123',
+        },
+      ],
+    });
+    instance.onMoveUp();
+    expect(wrapper.state().selectedItem).toBe(0);
+  });
+
+  it('Should remove listener on unmount', () => {
+    document.removeEventListener = jest.fn();
+
+    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+
+    wrapper.unmount();
+
+    expect(document.removeEventListener).toHaveBeenCalled();
   });
 });
