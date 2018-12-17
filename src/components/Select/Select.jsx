@@ -151,7 +151,7 @@ export default class Select extends React.Component {
 
   renderSelectPopup= () => {
     const {
-      position, hasSearch, customButton,
+      position, hasSearch, customButton, keyMap,
     } = this.props;
     const { isOpen, selectedItem, items } = this.state;
 
@@ -169,8 +169,9 @@ export default class Select extends React.Component {
           {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
             <SelectItem
               selected={selectedItem === idx}
-              key={item.id}
+              key={item[keyMap ? keyMap.id : 'id']}
               item={item}
+              keyMap={keyMap}
               onClick={event => this.handleSelectOption(item, event)}
             />])}
         </SelectItems>
@@ -237,6 +238,12 @@ Select.propTypes = {
 
   /** Custom Button component */
   customButton: PropTypes.func,
+
+  /** Custom keys to used in the Items array */
+  keyMap: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  }),
 };
 
 Select.defaultProps = {
@@ -250,4 +257,5 @@ Select.defaultProps = {
   hasSearch: false,
   customButton: undefined,
   onSelectClick: undefined,
+  keyMap: undefined,
 };

@@ -5,7 +5,7 @@ import {
 } from './style';
 
 const SelectItem = ({
-  item, onClick, selected,
+  item, onClick, selected, keyMap,
 }) => (
   <SelectItemStyled onClick={item.onItemClick || onClick} selected={selected}>
     <SelectItemLabel>
@@ -13,7 +13,7 @@ const SelectItem = ({
         {item.component}
       </SelectItemIcon>
       <SelectItemTitle>
-        {item.title}
+        {item[keyMap ? keyMap.title : 'title']}
       </SelectItemTitle>
     </SelectItemLabel>
   </SelectItemStyled>
@@ -32,10 +32,17 @@ SelectItem.propTypes = {
 
   /** Is the item selected */
   selected: PropTypes.bool,
+
+  /** Custom keys to used in the Items array */
+  keyMap: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  }),
 };
 
 SelectItem.defaultProps = {
   selected: undefined,
+  keyMap: undefined,
 };
 
 export default SelectItem;
