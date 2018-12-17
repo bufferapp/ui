@@ -16,12 +16,13 @@ const Wrapper = style.div`
 `;
 
 const CodeButton = style.a`
-  color: #828485;
+  color: #2c4bff;
   padding-top: 10px;
   font-size: 12px;
   display: flex;
   justify-content: end;
   cursor: pointer;
+  font-weight 500;
 `;
 
 /** Wrap the buttons for display in a flex div */

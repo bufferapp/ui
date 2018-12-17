@@ -10,6 +10,7 @@ const Label = style.th`
     text-align: left;
     padding: 10px 0px;
     padding-right: 25px;
+    font-size: 14px;
 `;
 
 const Row = style.tr`
@@ -22,27 +23,49 @@ const Item = style.td`
     font-size: 14px;
 `;
 
+const NameItem = style.td`
+    font-family: Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13px;
+    color: #2c4bff;
+`;
+
+const TyleItem = style.td`
+    font-family: Consolas, "Liberation Mono", Menlo, monospace;
+    font-size: 13px;
+    color: #b77daa;
+`;
+
+const DefaultItem = style.td`
+  font-family: Consolas, "Liberation Mono", Menlo, monospace;
+  font-size: 13px;
+`;
+
+const RequiredItem = style.td`
+  text-align: center;
+`;
+
+
 /** Component props table */
 const Props = ({ props }) => (
   <Table>
     <tbody>
       <tr>
         <Label>Name</Label>
-        <Label>Description</Label>
         <Label>Type</Label>
         <Label>Default</Label>
         <Label>Required</Label>
+        <Label>Description</Label>
       </tr>
     </tbody>
     <tbody>
       {
         Object.keys(props).map(key => (
           <Row key={key}>
-            <Item>{key}</Item>
+            <NameItem>{key}</NameItem>
+            <TyleItem>{props[key].type.name}</TyleItem>
+            <DefaultItem>{props[key].defaultValue && props[key].defaultValue.value}</DefaultItem>
+            <RequiredItem>{props[key].required && '✅'}</RequiredItem>
             <Item>{props[key].description}</Item>
-            <Item>{props[key].type.name}</Item>
-            <Item>{props[key].defaultValue && props[key].defaultValue.value}</Item>
-            <Item>{props[key].required && 'X'}</Item>
           </Row>
         ))
       }

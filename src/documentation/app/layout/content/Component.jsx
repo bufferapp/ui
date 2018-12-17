@@ -34,10 +34,12 @@ const Body = style.div`
 const Description = style.p`
     font-size: 14px;
     line-height: 24px;
+    margin-bottom: 40px;
 `;
 
 const PropTitle = style.h3`
     margin-top: 50px;
+    font-size: 24px;
 `;
 
 const ExampleWrapper = style.div`
@@ -45,7 +47,6 @@ const ExampleWrapper = style.div`
     flex-wrap: wrap;
     align-items: end;
 `;
-
 
 const ComponentExample = ({
   name, folder, id,
@@ -74,10 +75,10 @@ const Component = ({ component }) => {
         <Body>
           <Heading text={name} />
           <Description>{description}</Description>
-          <h3>
+          <PropTitle>
             Example
             {examples.length > 1 && 's'}
-          </h3>
+          </PropTitle>
           {examples.map((folder, idx) => <ComponentExample folder={folder} name={name} id={id} key={idx} />)}
           <PropTitle>Props</PropTitle>
           {

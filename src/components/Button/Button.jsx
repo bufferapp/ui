@@ -14,7 +14,7 @@ export const ButtonStyled = style.button`
 
 const Loading = style.img`
   width: 24px;
-  padding-left: 10px;
+  margin-left: 10px;
 `;
 
 
