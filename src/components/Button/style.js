@@ -34,6 +34,7 @@ export const ButtonBase = css`
   font-family: ${fontFamily};
   background-color: ${white};
   color:${grayDefault};
+  box-sizing: unset;
     :hover {
       transition-property: background-color, border-color, color;
       transition-duration: 0.1s;
