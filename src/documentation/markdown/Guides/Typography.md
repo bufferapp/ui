@@ -12,7 +12,7 @@ Roboto provides:
 - Includes additional sister fonts, like Roboto Mono. which can be paired nicely for the display of numbers, charts, code, etc. 
 
 ## Google Fonts Usage
-You can include the Roboto font, and the needed font weights, directly from the Google Fonts CDN by including the code snippet below between the <head> tags  your app / website:
+You can include the Roboto font, and the needed font weights, directly from the Google Fonts CDN by including the code snippet below between the &lt;head&gt; tags  your app / website:
 
 ```
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
