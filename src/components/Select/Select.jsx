@@ -1,7 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { includes } from 'lodash';
+import { includes, some } from 'lodash';
+import helper from 'immutability-helper';
 import {
   Wrapper, SelectStyled, SelectItems, Arrow, SelectItemDivider,
 } from './style';
@@ -42,8 +43,28 @@ export default class Select extends React.Component {
   };
 
   handleSelectOption = (option, event) => {
-    const { onSelectClick } = this.props;
+    const { onSelectClick, multiSelect } = this.props;
+    const { items } = this.state;
     onSelectClick(option, event);
+
+    const selectedIndex = items.findIndex(x => x.selected === true);
+
+    const deselectItems = !multiSelect && selectedIndex > -1 ? helper(items, {
+      [selectedIndex]: {
+        selected: { $set: false },
+      },
+    }) : items;
+
+    const optionIndex = deselectItems.findIndex(x => x.id === option.id);
+
+    this.setState({
+      isOpen: false,
+      items: optionIndex > -1 ? helper(deselectItems, {
+        [optionIndex]: {
+          selected: { $set: !option.selected },
+        },
+      }) : items,
+    });
   };
 
   onClick = (e) => {
@@ -60,12 +81,12 @@ export default class Select extends React.Component {
 
   onMoveUp = () => {
     const { items } = this.state;
-    const { selectedItem } = this.state;
+    const { hoveredItem } = this.state;
     const itemsLength = items.length;
 
-    for (let i = selectedItem - 1; i < itemsLength && itemsLength > 0 && i >= 0; i -= 1) {
+    for (let i = hoveredItem - 1; i < itemsLength && itemsLength > 0 && i >= 0; i -= 1) {
       if (items[i]) {
-        this.setState({ selectedItem: i % itemsLength });
+        this.setState({ hoveredItem: i % itemsLength });
         break;
       }
     }
@@ -73,28 +94,28 @@ export default class Select extends React.Component {
 
   onMoveDown = () => {
     const { items } = this.state;
-    const { selectedItem } = this.state;
+    const { hoveredItem } = this.state;
     const itemsLength = items.length;
 
-    if (!selectedItem) {
+    if (!hoveredItem) {
       this.setState({
-        selectedItem: 0,
-      }, () => this.updateSelectedItemPosition(selectedItem, itemsLength, items));
+        hoveredItem: 0,
+      }, () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items));
     } else {
-      this.updateSelectedItemPosition(selectedItem, itemsLength, items);
+      this.updateHoveredItemPosition(hoveredItem, itemsLength, items);
     }
   };
 
   onAddItem = () => {
     const { onSelectClick } = this.props;
-    const { items, selectedItem } = this.state;
-    onSelectClick(items[selectedItem]);
+    const { items, hoveredItem } = this.state;
+    onSelectClick(items[hoveredItem]);
   };
 
-  updateSelectedItemPosition = (selectedItem, itemsLength, items) => {
-    for (let i = selectedItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
+  updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
+    for (let i = hoveredItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
       if (items[i]) {
-        this.setState({ selectedItem: i % itemsLength });
+        this.setState({ hoveredItem: i % itemsLength });
         break;
       }
     }
@@ -153,7 +174,7 @@ export default class Select extends React.Component {
     const {
       position, hasSearch, customButton, keyMap,
     } = this.props;
-    const { isOpen, selectedItem, items } = this.state;
+    const { isOpen, hoveredItem, items } = this.state;
 
     return (
       <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
@@ -168,10 +189,11 @@ export default class Select extends React.Component {
         <SelectItems>
           {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
             <SelectItem
-              selected={selectedItem === idx}
+              hovered={hoveredItem === idx}
               key={item[keyMap ? keyMap.id : 'id']}
               item={item}
               keyMap={keyMap}
+              hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
             />])}
         </SelectItems>
@@ -244,6 +266,9 @@ Select.propTypes = {
     id: PropTypes.string,
     title: PropTypes.string,
   }),
+
+  /** Can the select have multiple items selected */
+  multiSelect: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -258,4 +283,5 @@ Select.defaultProps = {
   customButton: undefined,
   onSelectClick: undefined,
   keyMap: undefined,
+  multiSelect: undefined,
 };

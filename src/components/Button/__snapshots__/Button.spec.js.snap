@@ -45,6 +45,7 @@ exports[`Button renders styles properly 1`] = `
   font-family: "Roboto",sans-serif;
   background-color: #FFFFFF;
   color: #77797a;
+  box-sizing: unset;
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;
@@ -135,6 +136,7 @@ exports[`Disabled button is disabled 1`] = `
   font-family: "Roboto",sans-serif;
   background-color: #FFFFFF;
   color: #77797a;
+  box-sizing: unset;
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;

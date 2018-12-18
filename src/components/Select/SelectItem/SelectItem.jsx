@@ -3,16 +3,18 @@ import PropTypes from 'prop-types';
 import {
   SelectItemStyled, SelectItemLabel, SelectItemIcon, SelectItemTitle,
 } from './style';
+import Flag from '../../Icon/Icons/Flag';
 
 const SelectItem = ({
-  item, onClick, selected, keyMap,
+  item, onClick, hovered, keyMap, hasSelectedItems,
 }) => (
-  <SelectItemStyled onClick={item.onItemClick || onClick} selected={selected}>
+  <SelectItemStyled onClick={item.onItemClick || onClick} hovered={hovered}>
     <SelectItemLabel>
+      {item.selected && <Flag color="gray" />}
       <SelectItemIcon>
         {item.component}
       </SelectItemIcon>
-      <SelectItemTitle>
+      <SelectItemTitle moveRight={hasSelectedItems && !item.selected}>
         {item[keyMap ? keyMap.title : 'title']}
       </SelectItemTitle>
     </SelectItemLabel>
@@ -31,18 +33,22 @@ SelectItem.propTypes = {
   onClick: PropTypes.func.isRequired,
 
   /** Is the item selected */
-  selected: PropTypes.bool,
+  hovered: PropTypes.bool,
 
   /** Custom keys to used in the Items array */
   keyMap: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
   }),
+
+  /** Does the Select have selected items to adjust the margin */
+  hasSelectedItems: PropTypes.bool,
 };
 
 SelectItem.defaultProps = {
-  selected: undefined,
+  hovered: undefined,
   keyMap: undefined,
+  hasSelectedItems: undefined,
 };
 
 export default SelectItem;
