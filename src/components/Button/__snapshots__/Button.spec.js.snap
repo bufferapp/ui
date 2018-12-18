@@ -186,6 +186,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -203,6 +206,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -221,6 +227,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -260,6 +269,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -277,6 +289,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -294,6 +309,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
 </ForwardRef>
 `;
 
@@ -307,6 +325,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"

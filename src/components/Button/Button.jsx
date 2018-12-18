@@ -17,6 +17,13 @@ const Loading = style.img`
   margin-left: 10px;
 `;
 
+const VisuallyHiddenLabel = style.span`
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; nom 
+`;
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
@@ -45,6 +52,7 @@ const Button = ({
     hasIconOnly={hasIconOnly}
   >
     {icon}
+    {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
     {!hasIconOnly && <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>}
 
     {isSelect && (type === 'primary' || type === 'secondary')
