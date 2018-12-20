@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import Clipboard from 'react-clipboard.js';
 
-const ColorWrapper = style(Clipboard)`
+const ColorWrapper = styled(Clipboard)`
   background: ${props => props.color};
   width: ${props => props.width};
   height: ${props => props.height};
@@ -11,16 +11,22 @@ const ColorWrapper = style(Clipboard)`
   flex-direction: ${props => (props.width === '33%' ? 'column' : 'row')};
   justify-content: space-between;
   cursor: pointer;
+  border: 0;
+  transition: 0.05s ease-out all;
+  outline: none;
+  &:focus {
+    transform: scale(1.2);
+  }
 `;
 
-const ColorName = style.div`
+const ColorName = styled.div`
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
   padding:  ${props => (props.width === '100%' ? '50px 0px 0px 20px' : '0px 0px 0px 20px')};
 `;
 
-const ColorValue = style.span`
+const ColorValue = styled.span`
   color: #ffffff;
   font-size: 14px;
   font-weight: 500;
