@@ -32,8 +32,11 @@ const Item = styled.td`
   border-top: 2px solid #e6ecf1;
   padding: 10px 0 10px 10px;
   padding-right: 25px;
-  font-size: 12px;
-  font-family: "Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-size: 14px;
+  font-family: ${props => (props.paragraph
+    ? 'inherit'
+    : '"Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace'
+  )};
   ${props => (props.bold ? 'font-weight: 500;' : '')}
 `;
 
@@ -57,7 +60,7 @@ const Props = ({ props }) => (
             <Item bold>{props[key].type.name}</Item>
             <Item>{props[key].required ? '✓' : ''}</Item>
             <Item>{props[key].defaultValue && props[key].defaultValue.value !== 'undefined' && props[key].defaultValue.value}</Item>
-            <Item>{props[key].description}</Item>
+            <Item paragraph>{props[key].description}</Item>
           </Row>
         ))
       }
