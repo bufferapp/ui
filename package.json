@@ -85,6 +85,7 @@
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "immutability-helper": "^2.9.0",
+    "inquirer": "^6.2.1",
     "jest": "23.6.0",
     "jest-auto-snapshots": "^3.0.1",
     "jest-pnp-resolver": "1.0.1",
@@ -135,7 +136,8 @@
     "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
     "build:copy-files": "node scripts/copyBuildFiles.js",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
-    "publish": "./scripts/publish.sh"
+    "publish": "./scripts/publish.sh",
+    "component:new": "node ./scripts/newComponent.js"
   },
   "browserslist": [
     ">0.2%",

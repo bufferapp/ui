@@ -3,7 +3,7 @@ const fse = require('fs-extra');
 
 const files = [
   'README.md',
-  'LICENCE',
+  'LICENSE',
 ];
 
 
@@ -46,7 +46,7 @@ function createPackageFile() {
         description,
         keywords,
         repository,
-        licence,
+        license,
         bugs,
         homepage,
         peerDependencies,
@@ -63,7 +63,7 @@ function createPackageFile() {
         main: './index.js',
         keywords,
         repository,
-        licence,
+        license,
         bugs,
         homepage,
         peerDependencies,
