@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import MarkdownToJsx from 'markdown-to-jsx';
 
 const Table = styled.table`
   width: 100%;
@@ -22,10 +23,12 @@ const Label = styled.th`
   font-weight: 500;
   font-size: 12px;
   opacity: 0.8;
+  ${props => props.right && 'text-align: right;'}
 `;
 
 const Row = styled.tr`
   padding: 5px 0px;
+  vertical-align: top;
 `;
 
 const Item = styled.td`
@@ -37,7 +40,23 @@ const Item = styled.td`
     ? 'inherit'
     : '"Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace'
   )};
+  line-height: ${props => (props.paragraph
+    ? '1.5'
+    : 'inherit'
+  )};
   ${props => (props.bold ? 'font-weight: 500;' : '')}
+  code {
+    background: #f3f3f3;
+    border-radius: 4px;
+    font-size: 12px;
+  }
+`;
+
+const PropNameItem = styled(Item)`
+  background: linear-gradient(to right, #fff, #f9fafb);
+  color: #000;
+  text-align: right;
+  padding-left: 16px;
 `;
 
 /** Component props table */
@@ -45,7 +64,7 @@ const Props = ({ props }) => (
   <Table cellPadding="0" cellSpacing="0">
     <TableHeader>
       <tr>
-        <Label>Property</Label>
+        <Label right>Property</Label>
         <Label>Type</Label>
         <Label>Required</Label>
         <Label>Default</Label>
@@ -56,11 +75,15 @@ const Props = ({ props }) => (
       {
         Object.keys(props).map(key => (
           <Row key={key}>
-            <Item bold>{key}</Item>
+            <PropNameItem bold prop>{key}</PropNameItem>
             <Item bold>{props[key].type.name}</Item>
             <Item>{props[key].required ? '✓' : ''}</Item>
             <Item>{props[key].defaultValue && props[key].defaultValue.value !== 'undefined' && props[key].defaultValue.value}</Item>
-            <Item paragraph>{props[key].description}</Item>
+            <Item paragraph>
+              <MarkdownToJsx>
+                {props[key].description}
+              </MarkdownToJsx>
+            </Item>
           </Row>
         ))
       }
