@@ -29,6 +29,7 @@ const ColorName = styled.div`
 const ColorValue = styled.span`
   color: #ffffff;
   font-size: 14px;
+  margin-right: 16px;
   font-weight: 500;
   padding-left: ${props => (props.width === '100%' ? '20px' : '0px')};
 `;
@@ -39,7 +40,7 @@ const ColorCopy = ({
 }) => (
   <ColorWrapper color={color} width={width} height={height} data-clipboard-text={color}>
     <ColorName>{name}</ColorName>
-    <ColorValue>{color}</ColorValue>
+    <ColorValue>{color.toUpperCase()}</ColorValue>
   </ColorWrapper>
 );
 
