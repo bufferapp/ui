@@ -2,9 +2,6 @@
 
 exports[`Button renders styles properly 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -39,13 +36,11 @@ exports[`Button renders styles properly 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   font-family: "Roboto",sans-serif;
-  background-color: #FFFFFF;
-  color: #77797a;
+  background-color: #2c4bff;
+  color: #FFFFFF;
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;
-  background-color: #2c4bff;
-  color: #FFFFFF;
 }
 
 .c0:hover {
@@ -84,9 +79,6 @@ exports[`Button renders styles properly 1`] = `
 
 exports[`Disabled button is disabled 1`] = `
 .c0 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
   -webkit-box-align: center;
@@ -100,7 +92,7 @@ exports[`Disabled button is disabled 1`] = `
   line-height: 1.5;
   font-weight: 500;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: not-allowed;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -121,13 +113,11 @@ exports[`Disabled button is disabled 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   font-family: "Roboto",sans-serif;
-  background-color: #FFFFFF;
+  background-color: #E0E0E0;
   color: #77797a;
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;
-  background-color: #E0E0E0;
-  cursor: not-allowed;
 }
 
 .c0:hover {
@@ -161,6 +151,7 @@ exports[`Disabled button is disabled 1`] = `
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef
   disabled={true}
+  fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
   isSplit={true}
@@ -178,6 +169,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
 <ForwardRef
   disabled={true}
+  fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
   isSplit={true}
@@ -195,6 +187,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef
   disabled={false}
+  fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
   isSplit={true}
@@ -210,9 +203,28 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
 </ForwardRef>
 `;
 
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
+<ForwardRef
+  disabled={true}
+  fullWidth={false}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  size="small"
+  type="link"
+>
+  <NodeFixture />
+  <ForwardRef
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef>
+`;
+
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
 <ForwardRef
   disabled={true}
+  fullWidth={true}
   hasIconOnly={false}
   icon={<NodeFixture />}
   isSplit={true}
@@ -231,6 +243,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
 <ForwardRef
   disabled={true}
+  fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
   isSplit={true}
@@ -248,6 +261,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <ForwardRef
   disabled={true}
+  fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
   isSplit={false}
@@ -265,6 +279,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
 <ForwardRef
   disabled={true}
+  fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
   isSplit={true}
@@ -278,6 +293,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
 exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
 <ForwardRef
   disabled={true}
+  fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
   isSplit={true}
@@ -295,6 +311,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
 <ForwardRef
   disabled={false}
+  fullWidth={false}
   hasIconOnly={false}
   onClick={[MockFunction]}
   size="medium"
