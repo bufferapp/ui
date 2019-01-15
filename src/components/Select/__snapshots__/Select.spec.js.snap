@@ -263,6 +263,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
 >
   <Button
     disabled={false}
+    fullWidth={false}
     hasIconOnly={false}
     isSelect={true}
     items={
