@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
 
-/** Link Button */
+/** Link */
 export default function ExampleTypeLink() {
   return (
     <Button

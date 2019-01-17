@@ -9,9 +9,8 @@ import {
 import { borderRadius } from '../style/borders';
 import { ButtonStyled } from './Button';
 
-
 /* styles common to all buttons */
-export const buttonbase = css`
+export const ButtonBase = css`
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -33,19 +32,19 @@ export const buttonbase = css`
   flex: 0 0 auto;
   font-family: ${fontFamily};
   background-color: ${white};
-  color:${grayDefault};
-    :hover {
-      transition-property: background-color, border-color, color;
-      transition-duration: 0.1s;
-      transition-timing-function: ease-in;
+  color: ${grayDefault};
+  :hover {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
   }
   :active {
     top: 1px;
   }
   :focus {
-      box-shadow: 0 0 0 3px ${boxShadow};
-      outline: 0;
-  }  
+    box-shadow: 0 0 0 3px ${boxShadow};
+    outline: 0;
+  }
 `;
 
 /* theme variants */
@@ -61,20 +60,20 @@ export const secondary = css`
   background-color: ${white};
   color: ${grayDark};
   border: 1px solid ${gray};
- 
+
   :hover {
     color: ${grayDarker};
     border-color: ${grayDark};
   }
-  
+
   :focus {
-      border-color: ${blue};
-      color: ${grayDarker};
-    }
+    border-color: ${blue};
+    color: ${grayDarker};
+  }
 `;
 export const link = css`
   background-color: transparent;
-  color:${blue};
+  color: ${blue};
   :hover {
     color: ${blueDarker};
   }
@@ -109,20 +108,24 @@ export const disabled = css`
   cursor: not-allowed;
 `;
 
+export const fullWidth = css`
+  width: 100%;
+  justify-content: center;
+`;
 
-export const SelectButton = style.div`
+export const ButtonSelect = style.div`
   :before {
     background-color: ${props => (props.disabled ? gray : white)};
     color: ${props => (props.disabled ? gray : white)};
     content: "";
     height: 24px;
     position: absolute;
-    right: 38px;
+    right: 34px;
     top: 50%;
     transform: translateY(-50%);
     width: 1px;
   }
-  padding-left: 15px;
+  padding-left: 13px;
   display: flex;
   justify-content: center;
   align-items: center
@@ -138,7 +141,11 @@ export const SelectButton = style.div`
   }
 `;
 
-export const ArrowButton = style.div`
+export const ButtonArrow = style.div`
   padding-left: 5px;
   display: flex;
+`;
+
+export const ButtonLabel = style.div`
+  margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
 `;
