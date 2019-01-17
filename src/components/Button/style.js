@@ -32,12 +32,11 @@ export const ButtonBase = css`
   flex: 0 0 auto;
   font-family: ${fontFamily};
   background-color: ${white};
-  color:${grayDefault};
-  box-sizing: unset;
-    :hover {
-      transition-property: background-color, border-color, color;
-      transition-duration: 0.1s;
-      transition-timing-function: ease-in;
+  color: ${grayDefault};
+  :hover {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
   }
   :active {
     top: 1px;
@@ -147,7 +146,6 @@ export const ButtonArrow = style.div`
   display: flex;
 `;
 
-
 export const ButtonLabel = style.div`
-  margin-left: ${props => props.hasIcon ? '5px' : '0px'};
+  margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
 `;
