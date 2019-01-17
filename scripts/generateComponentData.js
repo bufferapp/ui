@@ -177,6 +177,7 @@ function generate(componentPaths) {
     level: 0,
     name: 'UI Components',
     parentName: 'ui',
+    isExpanded: true,
     children: getDirectories(componentPaths.components).filter(folder => folder !== 'style').map((componentName) => {
       try {
         return getComponentData(componentPaths, componentName);

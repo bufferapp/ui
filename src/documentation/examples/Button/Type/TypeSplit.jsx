@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
 
-/** Split Button with Select */
+/** Split Button */
 export default function ExampleSplitButton() {
   return (
     <Button

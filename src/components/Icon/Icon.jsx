@@ -13,7 +13,7 @@ const GroupStyled = style.g`
   ${props => Styles[`${props.color}Group`]};
 `;
 
-
+/** Main Icon component that renders the passed svg */
 const Icon = ({
   children, ...props
 }) => (
@@ -32,6 +32,7 @@ const Icon = ({
 );
 
 Icon.propTypes = {
+  /** svg to render in the Icon */
   children: PropTypes.node.isRequired,
 };
 

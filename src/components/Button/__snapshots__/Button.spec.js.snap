@@ -1,6 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Button renders styles properly 1`] = `
+.c1 {
+  margin-left: 0px;
+}
+
 .c0 {
   display: flex;
   -webkit-align-items: center;
@@ -36,8 +40,9 @@ exports[`Button renders styles properly 1`] = `
   -ms-flex: 0 0 auto;
   flex: 0 0 auto;
   font-family: "Roboto",sans-serif;
-  background-color: #2c4bff;
-  color: #FFFFFF;
+  background-color: #FFFFFF;
+  color: #77797a;
+  box-sizing: unset;
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;
@@ -73,11 +78,19 @@ exports[`Button renders styles properly 1`] = `
   size="medium"
   type="primary"
 >
-  Primary
+  <div
+    className="c1"
+  >
+    Primary
+  </div>
 </button>
 `;
 
 exports[`Disabled button is disabled 1`] = `
+.c1 {
+  margin-left: 0px;
+}
+
 .c0 {
   display: flex;
   -webkit-align-items: center;
@@ -115,6 +128,7 @@ exports[`Disabled button is disabled 1`] = `
   font-family: "Roboto",sans-serif;
   background-color: #E0E0E0;
   color: #77797a;
+  box-sizing: unset;
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;
@@ -144,7 +158,11 @@ exports[`Disabled button is disabled 1`] = `
   size="medium"
   type="primary"
 >
-  Primary
+  <div
+    className="c1"
+  >
+    Primary
+  </div>
 </button>
 `;
 
@@ -159,6 +177,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -177,6 +198,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -196,6 +220,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -232,7 +259,11 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
   type="link"
 >
   <NodeFixture />
-  jest-auto-snapshots String Fixture
+  <ForwardRef
+    hasIcon={true}
+  >
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -251,6 +282,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -269,6 +303,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -287,6 +324,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
 </ForwardRef>
 `;
 
@@ -301,6 +341,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   type="link"
 >
   <NodeFixture />
+  <ForwardRef>
+    jest-auto-snapshots String Fixture
+  </ForwardRef>
   <ForwardRef
     alt="loading"
     src="./images/loading-gray.svg"
@@ -316,5 +359,9 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
   onClick={[MockFunction]}
   size="medium"
   type="secondary"
-/>
+>
+  <ForwardRef
+    hasIcon={false}
+  />
+</ForwardRef>
 `;

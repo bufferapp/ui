@@ -6,7 +6,7 @@ import ChevronDown from '../Icon/Icons/ChevronDown';
 import Select from '../Select/Select';
 
 export const ButtonStyled = style.button`
-  ${Styles.buttonbase};
+  ${Styles.ButtonBase};
   ${props => Styles[props.size]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
   ${props => Styles[props.fullWidth ? 'fullWidth' : '']}
@@ -14,7 +14,15 @@ export const ButtonStyled = style.button`
 
 const Loading = style.img`
   width: 24px;
-  padding-left: 10px;
+  margin-left: 10px;
+`;
+
+const VisuallyHiddenLabel = style.span`
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; nom 
 `;
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
@@ -46,12 +54,13 @@ const Button = ({
     fullWidth={fullWidth}
   >
     {icon}
-    {!hasIconOnly && label}
+    {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
+    {!hasIconOnly && <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>}
 
     {isSelect && (type === 'primary' || type === 'secondary') && (
-      <Styles.ArrowButton>
+      <Styles.ButtonArrow>
         <ChevronDown color={type === 'primary' ? 'white' : 'grayDark'} size={size} isChevron />
-      </Styles.ArrowButton>
+      </Styles.ButtonArrow>
     )}
 
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}

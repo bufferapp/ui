@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only required props 1`] = `
+<ForwardRef>
+  <ForwardRef>
+    <ForwardRef>
+      jest-auto-snapshots String Fixture
+    </ForwardRef>
+    <ForwardRef>
+      jest-auto-snapshots String Fixture
+    </ForwardRef>
+  </ForwardRef>
+  <ForwardRef
+    onClick={[MockFunction]}
+  />
+  <ForwardRef
+    onClick={[MockFunction]}
+  >
+    <ChevronDown
+      color="grayLight"
+      size="large"
+    />
+  </ForwardRef>
+</ForwardRef>
+`;

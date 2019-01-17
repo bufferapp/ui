@@ -2,20 +2,17 @@ import React from 'react';
 import Select from '@bufferapp/ui/Select';
 
 
-/** Basic Select */
+/** Multi-Select */
 export default function ExampleSelect() {
   return (
     <Select
       onSelectClick={() => console.info('Main select clicked')}
       label="Click Me"
-      keyMap={{
-        id: '_id',
-        title: 'name',
-      }}
+      multiSelect
       items={[
-        { _id: '1', name: 'Open' },
-        { _id: '2', name: 'Pending' },
-        { _id: '3', name: 'Closed' },
+        { id: '1', title: 'Open', selected: true },
+        { id: '2', title: 'Pending' },
+        { id: '3', title: 'Closed' },
       ]}
     />
   );

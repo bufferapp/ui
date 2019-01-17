@@ -18,6 +18,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -33,22 +34,24 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     />
     <ForwardRef>
       <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
         onClick={[Function]}
-        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -71,6 +74,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -86,22 +90,24 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     />
     <ForwardRef>
       <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
         onClick={[Function]}
-        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -123,6 +129,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -138,22 +145,24 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     />
     <ForwardRef>
       <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
         onClick={[Function]}
-        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -165,8 +174,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   role="button"
   tabIndex={0}
 >
-  <NodeFixture />
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -182,22 +191,79 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     />
     <ForwardRef>
       <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
         onClick={[Function]}
-        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiSelect" is set to: "false" 1`] = `
+<ForwardRef
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
   <ForwardRef
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDown
+      color="grayDark"
+      size="medium"
+    />
+  </ForwardRef>
+  <ForwardRef
+    isMenu={true}
     isOpen={false}
-    isSplit={false}
     position="top"
-  />
+  >
+    <Search
+      hasSearch={true}
+      onAddItem={[Function]}
+      onChange={[Function]}
+      onClose={[Function]}
+      onMoveDown={[Function]}
+      onMoveUp={[Function]}
+      placeholder="Search"
+      shortcutsEnabled={true}
+    />
+    <ForwardRef>
+      <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
 </ForwardRef>
 `;
 
@@ -219,6 +285,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     />
   </ForwardRef>
   <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
@@ -234,22 +301,24 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     />
     <ForwardRef>
       <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
         onClick={[Function]}
-        selected={false}
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    isOpen={false}
-    isSplit={true}
-    position="top"
-  />
 </ForwardRef>
 `;
 
@@ -282,6 +351,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     type="secondary"
   />
   <ForwardRef
+    isMenu={false}
     isOpen={false}
     position="bottom"
   >
@@ -297,6 +367,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     />
     <ForwardRef>
       <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -304,7 +376,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
           }
         }
         onClick={[Function]}
-        selected={false}
       />
     </ForwardRef>
   </ForwardRef>

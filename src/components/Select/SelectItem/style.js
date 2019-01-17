@@ -6,7 +6,7 @@ import { fontWeightMedium, fontSize } from '../../style/fonts';
 
 export const SelectItemStyled = style.li`
     align-items: center;
-    color: ${props => (props.selected ? white : grayDark)};
+    color: ${props => (props.hovered ? white : grayDark)};
     cursor: pointer;
     display: flex;
     font-size: ${fontSize};
@@ -16,7 +16,7 @@ export const SelectItemStyled = style.li`
     user-select: none;
     white-space: nowrap;
     width: 100%;
-    background-color:${props => (props.selected ? blue : 'transparent')};
+    background-color:${props => (props.hovered ? blue : 'transparent')};
     &:hover {
       background-color:${blue};
       color: #fff;
@@ -43,5 +43,5 @@ export const SelectItemIcon = style.div`
 `;
 
 export const SelectItemTitle = style.div`
-  margin-left: 5px;
+  margin-left: ${props => (props.moveRight ? '22px' : '5px')};
 `;
