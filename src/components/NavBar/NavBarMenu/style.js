@@ -37,7 +37,6 @@ export const NavBarEmail = style.div`
   color: ${grayLighter};
 `;
 
-
 export const NavBarChavron = style.div`
   background: #3D3D3D;
   border: 1px solid #3D3D3D;
@@ -48,7 +47,7 @@ export const NavBarChavron = style.div`
   width: 16px;
   display: flex;
   align-items: center;
-  position: absolute;
-  right: 14px;
+  position: relative;
+  left: 10px;
   cursor: pointer;
 `;
