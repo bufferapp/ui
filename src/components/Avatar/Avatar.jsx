@@ -4,9 +4,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import * as Styles from './style';
-import { socialNetworks } from '../constants';
+// import { socialNetworks } from '../constants';
 import { facebook, googleplus, instagram, linkedin, pinterest, twitter } from '../style/colors';
-import { Instagram, Facebook, Twitter, LinkedIn, Pinterest, GooglePlus } from '@bufferapp/ui/Icon';
+import { Instagram, Facebook, Twitter, LinkedIn, Pinterest, GooglePlus } from '../Icon';
 
 const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}
@@ -78,7 +78,7 @@ Avatar.propTypes = {
   /** Makes the status indictor green when `true`. Only applicable when `{ type: 'status' }` */
   isOnline: PropTypes.bool,
   /** Name of social network icon to overlay. (E.g., `'instagram'`). Only applicable when `{ type: 'social' }` */
-  network: PropTypes.oneOf(socialNetworks),
+  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google']),
 };
 
 Avatar.defaultProps = {
