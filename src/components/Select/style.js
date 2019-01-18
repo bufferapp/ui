@@ -12,7 +12,8 @@ export const Wrapper = style.div`
   width: ${props => (props.isSplit ? '100%' : 'auto')};
   height: ${props => (props.isSplit ? '100%' : 'auto')};
   max-height: ${props => (props.isSplit ? '100%' : '40px')};
-  position: ${props => (props.isSplit ? 'initial' : 'absolute')};
+  position: ${props => (props.isSplit ? 'initial' : 'relative')};
+  display: inline-block;
 `;
 
 export const SelectStyled = style.div`
