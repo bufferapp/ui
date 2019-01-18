@@ -9,6 +9,7 @@ const map = {
   moveDown: 'down',
 };
 
+/** Search input that filters the Select items and adds keyboard navigation */
 export default class Search extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -75,13 +76,28 @@ export default class Search extends React.Component {
 }
 
 Search.propTypes = {
+  /** If false don't enable keyboard navigation */
   shortcutsEnabled: PropTypes.bool,
+
+  /** Search placeholder */
   placeholder: PropTypes.string,
+
+  /** Function to call on search input change */
   onChange: PropTypes.func.isRequired,
+
+  /** Should the search input be hidden from the DOM */
   hasSearch: PropTypes.bool,
+
+  /** Function to call on ArrowUp key event */
   onMoveUp: PropTypes.func.isRequired,
+
+  /** Function to call on ArrowDown key event */
   onMoveDown: PropTypes.func.isRequired,
+
+  /** Function to call on Enter click */
   onAddItem: PropTypes.func.isRequired,
+
+  /** Function to call on Esc click */
   onClose: PropTypes.func.isRequired,
 };
 

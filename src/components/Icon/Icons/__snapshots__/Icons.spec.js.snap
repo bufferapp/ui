@@ -97,8 +97,10 @@ exports[`jest-auto-snapshots > ChartLine Matches snapshot when passed all props 
 
 exports[`jest-auto-snapshots > ChevronDown Matches snapshot when boolean prop "isChevron" is set to: "false" 1`] = `
 <Icon
+  className="jest-auto-snapshots String Fixture"
   color="white"
   isChevron={false}
+  onClick={[MockFunction]}
   size="small"
 >
   <ForwardRef
@@ -115,8 +117,10 @@ exports[`jest-auto-snapshots > ChevronDown Matches snapshot when boolean prop "i
 
 exports[`jest-auto-snapshots > ChevronDown Matches snapshot when passed all props 1`] = `
 <Icon
+  className="jest-auto-snapshots String Fixture"
   color="white"
   isChevron={true}
+  onClick={[MockFunction]}
   size="small"
 >
   <ForwardRef
@@ -133,7 +137,9 @@ exports[`jest-auto-snapshots > ChevronDown Matches snapshot when passed all prop
 
 exports[`jest-auto-snapshots > ChevronUp Matches snapshot when passed all props 1`] = `
 <Icon
+  className="jest-auto-snapshots String Fixture"
   color="white"
+  onClick={[MockFunction]}
   size="small"
 >
   <ForwardRef

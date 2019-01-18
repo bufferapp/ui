@@ -77,7 +77,7 @@ describe('SomeComponent component', () => {
   });
 
 
-  it('updateSelectedItemPosition: should update selectedItem in state', () => {
+  it('updateHoveredItemPosition: should update hoveredItem in state', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     const items = [
@@ -88,10 +88,10 @@ describe('SomeComponent component', () => {
         id: '2', title: '123',
       },
     ];
-    const selectedItem = 0;
+    const hoveredItem = 0;
     const itemsLength = 2;
-    instance.updateSelectedItemPosition(selectedItem, itemsLength, items);
-    expect(wrapper.state().selectedItem).toBe(1);
+    instance.updateHoveredItemPosition(hoveredItem, itemsLength, items);
+    expect(wrapper.state().hoveredItem).toBe(1);
   });
 
   it('onAddItem: should call onSelectClick', () => {
@@ -102,20 +102,20 @@ describe('SomeComponent component', () => {
     expect(onSelectClick).toBeCalled();
   });
 
-  it('onMoveDown: should set the selectedItem in state if there is none', () => {
+  it('onMoveDown: should set the hoveredItem in state if there is none', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
-    const spyFunc = jest.spyOn(instance, 'updateSelectedItemPosition');
+    const spyFunc = jest.spyOn(instance, 'updateHoveredItemPosition');
     instance.onMoveDown();
     expect(spyFunc).toHaveBeenCalled();
-    expect(wrapper.state().selectedItem).toBe(0);
+    expect(wrapper.state().hoveredItem).toBe(0);
   });
 
-  it('onMoveDown: should increase selectedItem in state by +1', () => {
+  it('onMoveDown: should increase hoveredItem in state by +1', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     wrapper.setState({
-      selectedItem: 0,
+      hoveredItem: 0,
       items: [
         {
           id: '1', title: 'Testing',
@@ -126,14 +126,14 @@ describe('SomeComponent component', () => {
       ],
     });
     instance.onMoveDown();
-    expect(wrapper.state().selectedItem).toBe(1);
+    expect(wrapper.state().hoveredItem).toBe(1);
   });
 
-  it('onMoveUp: should decrease selectedItem in state by -1', () => {
+  it('onMoveUp: should decrease hoveredItem in state by -1', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     wrapper.setState({
-      selectedItem: 1,
+      hoveredItem: 1,
       items: [
         {
           id: '1', title: 'Testing',
@@ -144,7 +144,7 @@ describe('SomeComponent component', () => {
       ],
     });
     instance.onMoveUp();
-    expect(wrapper.state().selectedItem).toBe(0);
+    expect(wrapper.state().hoveredItem).toBe(0);
   });
 
   it('Should remove listener on unmount', () => {

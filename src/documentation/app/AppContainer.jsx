@@ -33,6 +33,7 @@ const PageLayout = style.div`
   min-height: calc(100vh - 201px);
   max-width: 850px;
   overflow: auto;
+  border-right: 1px solid #E6ECF1;
 `;
 
 /** The main Documentation app container that renders other components */
@@ -103,7 +104,7 @@ export default class AppContainer extends React.Component {
       <Container>
         <NavBar title="Buffer Components Documentation" />
         <Wrapper>
-          <Sidebar navigationLinks={navigationLinks} />
+          <Sidebar navigationLinks={navigationLinks} route={route} />
           <PageLayout>
             {isUIRoot ? this.renderMarkdownComponent() : component ? <Component component={component} /> : (
               <Markdown component={PageComponent} page={page} links={() => this.getFooterLinks(pageParents, route)} />

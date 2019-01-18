@@ -1,12 +1,14 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { includes } from 'lodash';
+import { includes, some } from 'lodash';
+import helper from 'immutability-helper';
 import {
   Wrapper, SelectStyled, SelectItems, Arrow, SelectItemDivider,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
-import { SelectButton } from '../Button/style';
+import { ButtonSelect } from '../Button/style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Search from '../Search/Search';
 
@@ -41,8 +43,28 @@ export default class Select extends React.Component {
   };
 
   handleSelectOption = (option, event) => {
-    const { onSelectClick } = this.props;
+    const { onSelectClick, multiSelect } = this.props;
+    const { items } = this.state;
     onSelectClick(option, event);
+
+    const selectedIndex = items.findIndex(x => x.selected === true);
+
+    const deselectItems = !multiSelect && selectedIndex > -1 ? helper(items, {
+      [selectedIndex]: {
+        selected: { $set: false },
+      },
+    }) : items;
+
+    const optionIndex = deselectItems.findIndex(x => x.id === option.id);
+
+    this.setState({
+      isOpen: false,
+      items: optionIndex > -1 ? helper(deselectItems, {
+        [optionIndex]: {
+          selected: { $set: !option.selected },
+        },
+      }) : items,
+    });
   };
 
   onClick = (e) => {
@@ -59,12 +81,12 @@ export default class Select extends React.Component {
 
   onMoveUp = () => {
     const { items } = this.state;
-    const { selectedItem } = this.state;
+    const { hoveredItem } = this.state;
     const itemsLength = items.length;
 
-    for (let i = selectedItem - 1; i < itemsLength && itemsLength > 0 && i >= 0; i -= 1) {
+    for (let i = hoveredItem - 1; i < itemsLength && itemsLength > 0 && i >= 0; i -= 1) {
       if (items[i]) {
-        this.setState({ selectedItem: i % itemsLength });
+        this.setState({ hoveredItem: i % itemsLength });
         break;
       }
     }
@@ -72,28 +94,28 @@ export default class Select extends React.Component {
 
   onMoveDown = () => {
     const { items } = this.state;
-    const { selectedItem } = this.state;
+    const { hoveredItem } = this.state;
     const itemsLength = items.length;
 
-    if (!selectedItem) {
+    if (!hoveredItem) {
       this.setState({
-        selectedItem: 0,
-      }, () => this.updateSelectedItemPosition(selectedItem, itemsLength, items));
+        hoveredItem: 0,
+      }, () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items));
     } else {
-      this.updateSelectedItemPosition(selectedItem, itemsLength, items);
+      this.updateHoveredItemPosition(hoveredItem, itemsLength, items);
     }
   };
 
   onAddItem = () => {
     const { onSelectClick } = this.props;
-    const { items, selectedItem } = this.state;
-    onSelectClick(items[selectedItem]);
+    const { items, hoveredItem } = this.state;
+    onSelectClick(items[hoveredItem]);
   };
 
-  updateSelectedItemPosition = (selectedItem, itemsLength, items) => {
-    for (let i = selectedItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
+  updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
+    for (let i = hoveredItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
       if (items[i]) {
-        this.setState({ selectedItem: i % itemsLength });
+        this.setState({ hoveredItem: i % itemsLength });
         break;
       }
     }
@@ -102,7 +124,9 @@ export default class Select extends React.Component {
   onSearchChange = (searchValue) => {
     const { items } = this.props;
 
-    const filteredItems = items.filter(item => includes(item.title.toLowerCase(), searchValue.toLowerCase()));
+    const filteredItems = items.filter(
+      item => includes(item.title.toLowerCase(), searchValue.toLowerCase()),
+    );
     this.setState({
       items: filteredItems,
     });
@@ -112,45 +136,89 @@ export default class Select extends React.Component {
     this.setState({ isOpen: false });
   };
 
+  renderSelectButton = () => {
+    const {
+      isSplit, customButton, type, size, disabled, icon, label,
+    } = this.props;
+    const { items } = this.state;
+
+    if (isSplit) {
+      return (
+        <ButtonSelect
+          type={type}
+          disabled={disabled}
+          onClick={!disabled ? this.onButtonClick : undefined}
+        >
+          <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
+        </ButtonSelect>
+      );
+    }
+    if (customButton) {
+      return customButton(this.onButtonClick);
+    }
+
+    return (
+      <Button
+        size={size}
+        items={items}
+        type={type}
+        label={label}
+        icon={icon}
+        onClick={this.onButtonClick}
+        isSelect
+      />
+    );
+  };
+
+  renderSelectPopup= () => {
+    const {
+      position, hasSearch, customButton, keyMap,
+    } = this.props;
+    const { isOpen, hoveredItem, items } = this.state;
+
+    return (
+      <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
+        <Search
+          onChange={this.onSearchChange}
+          hasSearch={hasSearch}
+          onMoveDown={this.onMoveDown}
+          onMoveUp={this.onMoveUp}
+          onAddItem={this.onAddItem}
+          onClose={this.onClose}
+        />
+        <SelectItems>
+          {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
+            <SelectItem
+              hovered={hoveredItem === idx}
+              key={item[keyMap ? keyMap.id : 'id']}
+              item={item}
+              keyMap={keyMap}
+              hasSelectedItems={some(items, { selected: true })}
+              onClick={event => this.handleSelectOption(item, event)}
+            />])}
+        </SelectItems>
+      </SelectStyled>
+    );
+  }
+
 
   render() {
     const {
-      label, isSplit, type, size, position, disabled, icon, hasSearch, customButton,
+      isSplit, position, customButton,
     } = this.props;
-    const { isOpen, selectedItem, items } = this.state;
+    const { isOpen } = this.state;
 
     return (
-      <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
-        {/* Render the Select Button that opens the popup */}
-        {isSplit ? (
-          <SelectButton type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
-            <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
-          </SelectButton>
-        ) : customButton || (
-          <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />
-        )}
-
-        {/* Render the Select popup when Button is clicked */}
-        <SelectStyled isOpen={isOpen} position={position}>
-          <Search
-            onChange={this.onSearchChange}
-            hasSearch={hasSearch}
-            onMoveDown={this.onMoveDown}
-            onMoveUp={this.onMoveUp}
-            onAddItem={this.onAddItem}
-            onClose={this.onClose}
-          />
-          <SelectItems>
-            {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
-              <SelectItem
-                selected={selectedItem === idx}
-                key={item.id}
-                item={item}
-                onClick={event => this.handleSelectOption(item, event)}
-              />])}
-          </SelectItems>
-        </SelectStyled>
-        <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
+      <Wrapper
+        role="button"
+        onClick={this.onClick}
+        onKeyUp={this.onClick}
+        tabIndex={0}
+        isSplit={isSplit}
+      >
+        {this.renderSelectButton()}
+        {this.renderSelectPopup()}
+        {!customButton && <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />}
       </Wrapper>
     );
   }
@@ -161,7 +229,7 @@ Select.propTypes = {
   disabled: PropTypes.bool,
 
   /** Function to call on selected item click */
-  onSelectClick: PropTypes.func.isRequired,
+  onSelectClick: PropTypes.func,
 
   /** Label to display on the Select button */
   label: PropTypes.string,
@@ -191,7 +259,16 @@ Select.propTypes = {
   hasSearch: PropTypes.bool,
 
   /** Custom Button component */
-  customButton: PropTypes.node,
+  customButton: PropTypes.func,
+
+  /** Custom keys to used in the Items array */
+  keyMap: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+  }),
+
+  /** Can the select have multiple items selected */
+  multiSelect: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -204,4 +281,7 @@ Select.defaultProps = {
   icon: undefined,
   hasSearch: false,
   customButton: undefined,
+  onSelectClick: undefined,
+  keyMap: undefined,
+  multiSelect: undefined,
 };

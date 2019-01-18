@@ -12,30 +12,22 @@ const Wrapper = style.div`
   min-width: 40%;
   flex: 1;
   margin-right: 20px;
-  min-height: 100px;
+  min-height: 135px;
 `;
 
 const CodeButton = style.a`
-  color: #828485;
+  color: #2c4bff;
   padding-top: 10px;
   font-size: 12px;
   display: flex;
   justify-content: end;
   cursor: pointer;
-`;
-
-/** Wrap the buttons for display in a flex div */
-const ExampleWrapper = style.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
+  font-weight 500;
 `;
 
 const Title = style.div`
     font-size: 16px;
     font-weight: 600;
-    text-align: center;
     margin-block-start: 1.33em;
     margin-block-end: 1.33em;
     margin-inline-start: 0px;
@@ -57,7 +49,6 @@ export default class Example extends React.Component {
     this.setState({ showCode: !showCode });
   };
 
-
   render() {
     const { showCode } = this.state;
     const { example, componentName } = this.props;
@@ -67,18 +58,18 @@ export default class Example extends React.Component {
     const fileName = componentName.replace(' ', '');
 
     // Must use CommonJS require here to dynamically require components
+    // if we have the example title, that means that the example is located in a subfolder
+    // so we need to include that title/folder in our path
     const ExampleComponent = title
-      // if we have the example title, that means that the example is located in a subfolder
-      // so we need to include that title/folder in our path
       ? require(`../../../../examples/${fileName}/${title}/${name}`).default
       : require(`../../../../examples/${fileName}/${name}`).default;
 
     return (
       <Wrapper>
-        <ExampleWrapper>
+        <div>
           {description && <Title>{description}</Title>}
           <ExampleComponent />
-        </ExampleWrapper>
+        </div>
         <CodeButton onClick={this.toggleCode}>
           {showCode ? 'Hide ' : 'Show '}
           Code
