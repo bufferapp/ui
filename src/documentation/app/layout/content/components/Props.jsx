@@ -59,28 +59,6 @@ const PropNameItem = styled(Item)`
   padding-left: 16px;
 `;
 
-const NameItem = style.td`
-    font-family: Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 13px;
-    color: #2c4bff;
-`;
-
-const TyleItem = style.td`
-    font-family: Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 13px;
-    color: #b77daa;
-`;
-
-const DefaultItem = style.td`
-  font-family: Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 13px;
-`;
-
-const RequiredItem = style.td`
-  text-align: center;
-`;
-
-
 /** Component props table */
 const Props = ({ props }) => (
   <Table cellPadding="0" cellSpacing="0">
