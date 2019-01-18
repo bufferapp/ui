@@ -24,8 +24,9 @@ export default class Select extends React.Component {
 
   // When the selector is open and users click anywhere on the page,
   // the selector should close
+  // Set capture to true so an open select will close when another select gets opened
   componentDidMount() {
-    document.addEventListener('click', this.closePopover);
+    document.addEventListener('click', this.closePopover, true);
   }
 
   componentWillUnmount() {
@@ -35,6 +36,7 @@ export default class Select extends React.Component {
   // Close the popover
   closePopover = () => {
     const { isOpen } = this.state;
+
     if (isOpen) {
       this.setState({
         isOpen: false,
@@ -49,21 +51,26 @@ export default class Select extends React.Component {
 
     const selectedIndex = items.findIndex(x => x.selected === true);
 
-    const deselectItems = !multiSelect && selectedIndex > -1 ? helper(items, {
-      [selectedIndex]: {
-        selected: { $set: false },
-      },
-    }) : items;
+    const deselectItems = !multiSelect && selectedIndex > -1
+      ? helper(items, {
+        [selectedIndex]: {
+          selected: { $set: false },
+        },
+      })
+      : items;
 
     const optionIndex = deselectItems.findIndex(x => x.id === option.id);
 
     this.setState({
       isOpen: false,
-      items: optionIndex > -1 ? helper(deselectItems, {
-        [optionIndex]: {
-          selected: { $set: !option.selected },
-        },
-      }) : items,
+      items:
+        optionIndex > -1
+          ? helper(deselectItems, {
+            [optionIndex]: {
+              selected: { $set: !option.selected },
+            },
+          })
+          : items,
     });
   };
 
@@ -98,9 +105,12 @@ export default class Select extends React.Component {
     const itemsLength = items.length;
 
     if (!hoveredItem) {
-      this.setState({
-        hoveredItem: 0,
-      }, () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items));
+      this.setState(
+        {
+          hoveredItem: 0,
+        },
+        () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items),
+      );
     } else {
       this.updateHoveredItemPosition(hoveredItem, itemsLength, items);
     }
@@ -124,9 +134,7 @@ export default class Select extends React.Component {
   onSearchChange = (searchValue) => {
     const { items } = this.props;
 
-    const filteredItems = items.filter(
-      item => includes(item.title.toLowerCase(), searchValue.toLowerCase()),
-    );
+    const filteredItems = items.filter(item => includes(item.title.toLowerCase(), searchValue.toLowerCase()));
     this.setState({
       items: filteredItems,
     });
@@ -144,11 +152,7 @@ export default class Select extends React.Component {
 
     if (isSplit) {
       return (
-        <ButtonSelect
-          type={type}
-          disabled={disabled}
-          onClick={!disabled ? this.onButtonClick : undefined}
-        >
+        <ButtonSelect type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
           <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
         </ButtonSelect>
       );
@@ -170,7 +174,7 @@ export default class Select extends React.Component {
     );
   };
 
-  renderSelectPopup= () => {
+  renderSelectPopup = () => {
     const {
       position, hasSearch, customButton, keyMap,
     } = this.props;
@@ -187,7 +191,8 @@ export default class Select extends React.Component {
           onClose={this.onClose}
         />
         <SelectItems>
-          {items.map((item, idx) => [item.hasDivider && <SelectItemDivider />,
+          {items.map((item, idx) => [
+            item.hasDivider && <SelectItemDivider />,
             <SelectItem
               hovered={hoveredItem === idx}
               key={item[keyMap ? keyMap.id : 'id']}
@@ -195,27 +200,19 @@ export default class Select extends React.Component {
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
-            />])}
+            />,
+          ])}
         </SelectItems>
       </SelectStyled>
     );
-  }
-
+  };
 
   render() {
-    const {
-      isSplit, position, customButton,
-    } = this.props;
+    const { isSplit, position, customButton } = this.props;
     const { isOpen } = this.state;
 
     return (
-      <Wrapper
-        role="button"
-        onClick={this.onClick}
-        onKeyUp={this.onClick}
-        tabIndex={0}
-        isSplit={isSplit}
-      >
+      <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
         {!customButton && <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />}
@@ -235,10 +232,12 @@ Select.propTypes = {
   label: PropTypes.string,
 
   /** Items to display in the popup */
-  items: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-  })).isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 
   /** Is the Select component part of the Split Button */
   isSplit: PropTypes.bool,
