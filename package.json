@@ -42,7 +42,8 @@
     "react-hotkeys": "^1.1.4",
     "react-tether": "^1.0.4",
     "react-transition-group": "^2.5.0",
-    "styled-components": "4.1.1"
+    "styled-components": "4.1.1",
+    "immutability-helper": "^2.9.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -84,7 +85,6 @@
     "highlight.js": "9.10.0",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
-    "immutability-helper": "^2.9.0",
     "inquirer": "^6.2.1",
     "jest": "23.6.0",
     "jest-auto-snapshots": "^3.0.1",
