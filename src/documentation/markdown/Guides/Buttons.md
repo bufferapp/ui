@@ -1,7 +1,7 @@
 # Buttons
 
 ## Overview
-All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes. Combined with simple modifiers, they can be changed in size and appearance. 
+All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes. Combined with simple modifiers, they can be changed in size and appearance.
 
 ![Buttons](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFNym8ScnaWKWBQFWTw%2F-LG1azvO7JIiKQ1f0uKw%2F-LG1b2FYuWGP23onJBFW%2Fbutton-dimensions%402x.png?alt=media&token=fa07197f-730e-43f6-8a19-ad8214226bb1)
 
@@ -11,12 +11,12 @@ Primary buttons are a clear call to action. When a single action can be prioriti
 ![Primary Button](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFNym8ScnaWKWBQFWTw%2F-LG2YWwFrp2F0ixlx1H6%2F-LG2YeFCQABTYMm_VwQP%2Fprimary-buttons%402x.png?alt=media&token=364a10d8-939a-4447-ba02-24b7e9afde4a)
 
 <InfoCard title='Do:' color='green'>
-- Use only one primary button in a given card or section. 
+- Use only one primary button in a given card or section.
 </InfoCard>
 
 
-<InfoCard title='Don't:' color='red'>
-- Don't use a primary button unless there's a clear default action to take. Instead, use multiple secondary buttons. 
+<InfoCard title='Do not:' color='red'>
+- Don't use a primary button unless there's a clear default action to take. Instead, use multiple secondary buttons.
 </InfoCard>
 
 
@@ -42,10 +42,10 @@ Link buttons follow the same core principles as other buttons including height a
 ![Link Button](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFNym8ScnaWKWBQFWTw%2F-LG2YWwFrp2F0ixlx1H6%2F-LG2Zirt51PI-JCxelQC%2Flink-buttons%402x.png?alt=media&token=ff5e1132-800a-4b40-932a-1890a69beed3)
 
 
-<InfoCard title='Don't:' color='red'>
+<InfoCard title='Do not:' color='red'>
 - Use link buttons for navigation within the app.
 
-- Use link buttons for primary or secondary actions. 
+- Use link buttons for primary or secondary actions.
 </InfoCard>
 
 
@@ -61,14 +61,14 @@ Split buttons provide a default primary action with additional options if needed
 <InfoCard title='Do:' color='green'>
 
 - Use split buttons to simplify 3 or more actions, including one primary action and multiple secondary actions.
- 
+
 </InfoCard>
 
 
-<InfoCard title='Don't:' color='red'>
+<InfoCard title='Do not:' color='red'>
 
 - Use a split button when only one secondary action is available. Consider using a secondary button adjacent to a primary button instead.
-  
+
 </InfoCard>
 
 
@@ -94,13 +94,13 @@ Button dimensions follow a consistent 8px divisible grid for outer height and ho
 
 
 <InfoCard title='Do:' color='green'>
-- Use the larger button size for secondary app experiences like sign in or sign up forms, onboarding flows, etc. 
+- Use the larger button size for secondary app experiences like sign in or sign up forms, onboarding flows, etc.
 
-- Use the default button size for primary and secondary actions. 
+- Use the default button size for primary and secondary actions.
 
-- Use the small button size for less frequently used preferences or configuration. 
+- Use the small button size for less frequently used preferences or configuration.
 
-- When in doubt, use the normal (default) button size.  
+- When in doubt, use the normal (default) button size.
 </InfoCard>
 
 
@@ -125,23 +125,23 @@ A loading state should be used anytime a user action may cause a perceived (> 10
 
 ![Loading Button](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFNym8ScnaWKWBQFWTw%2F-LG1ZpIPkZJGPdAGaomm%2F-LG1af2IfPb_EbLEY_0p%2Fbutton-loading%402x.png?alt=media&token=d8221890-96f0-49f1-b655-05d0174ea5db)
 
-## Button Copy 
+## Button Copy
 
 <InfoCard title='Do:' color='green'>
 - Use title case for button labels, e.g. "Add to Queue"
 
-- Keep button labels short, clear and action focused.  
+- Keep button labels short, clear and action focused.
 </InfoCard>
 
 
-<InfoCard title='Don't:' color='red'>
+<InfoCard title='Do not:' color='red'>
 - Don't use all caps for button labels, e.g. "SAVE CHANGES"
 
 - Don't use all lowercase text for button labels, e.g. "save changes"
 
 - Don't use ambiguous or generic text for button labels, e.g. "Submit"
 
-- Use jargon or terse language, e.g. ""Re-authorize connection"  
+- Use jargon or terse language, e.g. ""Re-authorize connection"
 </InfoCard>
 
 ## Resources

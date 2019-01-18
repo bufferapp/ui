@@ -1,7 +1,7 @@
 #Typography
 
 ## Font Family
-Our design system uses the Roboto font family from Google. 
+Our design system uses the Roboto font family from Google.
 
 Roboto provides:
 
@@ -9,7 +9,7 @@ Roboto provides:
 
 - Broad character support for latin and non-latin languages and encodings
 
-- Includes additional sister fonts, like Roboto Mono. which can be paired nicely for the display of numbers, charts, code, etc. 
+- Includes additional sister fonts, like Roboto Mono. which can be paired nicely for the display of numbers, charts, code, etc.
 
 ## Google Fonts Usage
 You can include the Roboto font, and the needed font weights, directly from the Google Fonts CDN by including the code snippet below between the &lt;head&gt; tags  your app / website:
@@ -39,19 +39,19 @@ Font weights should be used intentionally to convey importance and context with 
 
 
 <InfoCard title='Do:' color='green'>
-- Use a medium font weight to put emphasis on buttons, form inputs and labels. 
+- Use a medium font weight to put emphasis on buttons, form inputs and labels.
 
-- Use a medium font weight for help text and other text at 12px in size to improve legibility. 
+- Use a medium font weight for help text and other text at 12px in size to improve legibility.
 
 - Use a bold font weight for headings.
 
 - Use a bold font weight to highlight important or critical information: "Are you sure you want to permanently delete your account?".
 
-- When in doubt, avoid using a bold font weight. 
+- When in doubt, avoid using a bold font weight.
 </InfoCard>
 
 
-<InfoCard title='Don't:' color='red'>
+<InfoCard title='Do not:' color='red'>
 - Mix font weights in headings, buttons, form inputs and labels.
 
 - Mix more than two font weights in any given body of paragraph text.
@@ -87,7 +87,7 @@ font-weight: 700;
 line-height: 34px;
 font-size: 24px;
 font-weight: 700;
-``` 
+```
 
 
 ### Normal Heading
@@ -98,7 +98,7 @@ font-weight: 700;
 line-height: 28px;
 font-size: 24px;
 font-weight: 500;
-``` 
+```
 
 ### Paragraph Text
 
@@ -108,11 +108,11 @@ font-weight: 500;
 line-height: 20px;
 font-size: 14px;
 font-weight: 400;
-``` 
+```
 
 
 <InfoCard title='Do:' color='green'>
-- Limit bodies of paragraph text to 50 to 75 characters per line. This is the optimal line length for readability. 
+- Limit bodies of paragraph text to 50 to 75 characters per line. This is the optimal line length for readability.
 </InfoCard>
 
 

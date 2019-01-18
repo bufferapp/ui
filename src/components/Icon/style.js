@@ -10,8 +10,8 @@ export const chevron = css`
 `;
 
 export const small = css`
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
 `;
 
 export const medium = css`

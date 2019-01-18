@@ -1,71 +1,89 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
+import MarkdownToJsx from 'markdown-to-jsx';
 
-const Table = style.table`
-    width: 100%;
+const Table = styled.table`
+  width: 100%;
+  border-radius: 7px;
+  border: 1px solid #e6ecf1;
+  overflow: hidden;
 `;
 
-const Label = style.th`
-    text-align: left;
-    padding: 10px 0px;
-    padding-right: 25px;
-    font-size: 14px;
+const TableHeader = styled.thead`
+  background: #f6f7f9;
+  padding: 0 10px;
 `;
 
-const Row = style.tr`
-    padding: 10px 0px;
+const Label = styled.th`
+  text-align: left;
+  padding: 10px 0 10px 10px;
+  padding-right: 25px;
+  font-family: "Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 500;
+  font-size: 12px;
+  opacity: 0.8;
+  ${props => props.right && 'text-align: right;'}
 `;
 
-const Item = style.td`
-    padding: 10px 0px;
-    padding-right: 25px;
-    font-size: 14px;
+const Row = styled.tr`
+  padding: 5px 0px;
+  vertical-align: top;
 `;
 
-const NameItem = style.td`
-    font-family: Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 13px;
-    color: #2c4bff;
+const Item = styled.td`
+  border-top: 2px solid #e6ecf1;
+  padding: 10px 0 10px 10px;
+  padding-right: 25px;
+  font-size: 14px;
+  font-family: ${props => (props.paragraph
+    ? 'inherit'
+    : '"Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace'
+  )};
+  line-height: ${props => (props.paragraph
+    ? '1.5'
+    : 'inherit'
+  )};
+  ${props => (props.bold ? 'font-weight: 500;' : '')}
+  code {
+    background: #f3f3f3;
+    border-radius: 4px;
+    font-size: 12px;
+  }
 `;
 
-const TyleItem = style.td`
-    font-family: Consolas, "Liberation Mono", Menlo, monospace;
-    font-size: 13px;
-    color: #b77daa;
+const PropNameItem = styled(Item)`
+  background: linear-gradient(to right, #fff, #f9fafb);
+  color: #000;
+  text-align: right;
+  padding-left: 16px;
 `;
-
-const DefaultItem = style.td`
-  font-family: Consolas, "Liberation Mono", Menlo, monospace;
-  font-size: 13px;
-`;
-
-const RequiredItem = style.td`
-  text-align: center;
-`;
-
 
 /** Component props table */
 const Props = ({ props }) => (
-  <Table>
-    <tbody>
+  <Table cellPadding="0" cellSpacing="0">
+    <TableHeader>
       <tr>
-        <Label>Name</Label>
+        <Label right>Property</Label>
         <Label>Type</Label>
-        <Label>Default</Label>
         <Label>Required</Label>
+        <Label>Default</Label>
         <Label>Description</Label>
       </tr>
-    </tbody>
+    </TableHeader>
     <tbody>
       {
         Object.keys(props).map(key => (
           <Row key={key}>
-            <NameItem>{key}</NameItem>
-            <TyleItem>{props[key].type.name}</TyleItem>
-            <DefaultItem>{props[key].defaultValue && props[key].defaultValue.value}</DefaultItem>
-            <RequiredItem>{props[key].required && '✅'}</RequiredItem>
-            <Item>{props[key].description}</Item>
+            <PropNameItem bold prop>{key}</PropNameItem>
+            <Item bold>{props[key].type.name}</Item>
+            <Item>{props[key].required ? '✓' : ''}</Item>
+            <Item>{props[key].defaultValue && props[key].defaultValue.value !== 'undefined' && props[key].defaultValue.value}</Item>
+            <Item paragraph>
+              <MarkdownToJsx>
+                {props[key].description}
+              </MarkdownToJsx>
+            </Item>
           </Row>
         ))
       }

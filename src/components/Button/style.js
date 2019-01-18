@@ -128,7 +128,7 @@ export const ButtonSelect = style.div`
   padding-left: 13px;
   display: flex;
   justify-content: center;
-  align-items: center
+  align-items: center;
   width: 100%;
   height: 38px;
   ${ButtonStyled}:hover & {

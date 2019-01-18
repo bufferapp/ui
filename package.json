@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "1.6.2",
+  "version": "1.6.3",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -58,6 +58,7 @@
     "babel-loader": "8.0.4",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-named-asset-import": "0.2.3",
+    "babel-plugin-styled-components": "^1.10.0",
     "babel-preset-react-app": "6.1.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
@@ -106,6 +107,7 @@
     "react-clipboard.js": "^2.0.2",
     "react-dev-utils": "^6.1.1",
     "react-docgen": "2.14.0",
+    "react-hot-loader": "^4.6.3",
     "react-router-dom": "^4.3.1",
     "react-test-renderer": "16.6.3",
     "resolve": "1.8.1",
