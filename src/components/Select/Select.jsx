@@ -34,8 +34,10 @@ export default class Select extends React.Component {
   }
 
   // Close the popover
-  closePopover = () => {
+  closePopover = (e) => {
     const { isOpen } = this.state;
+
+    if (this.searchInputNode.contains(e.target)) return;
 
     if (isOpen) {
       this.setState({
@@ -62,7 +64,7 @@ export default class Select extends React.Component {
     const optionIndex = deselectItems.findIndex(x => x.id === option.id);
 
     this.setState({
-      isOpen: false,
+      isOpen: multiSelect,
       items:
         optionIndex > -1
           ? helper(deselectItems, {
@@ -161,17 +163,7 @@ export default class Select extends React.Component {
       return customButton(this.onButtonClick);
     }
 
-    return (
-      <Button
-        size={size}
-        items={items}
-        type={type}
-        label={label}
-        icon={icon}
-        onClick={this.onButtonClick}
-        isSelect
-      />
-    );
+    return <Button size={size} items={items} type={type} label={label} icon={icon} onClick={this.onButtonClick} isSelect />;
   };
 
   renderSelectPopup = () => {
@@ -182,14 +174,16 @@ export default class Select extends React.Component {
 
     return (
       <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
-        <Search
-          onChange={this.onSearchChange}
-          hasSearch={hasSearch}
-          onMoveDown={this.onMoveDown}
-          onMoveUp={this.onMoveUp}
-          onAddItem={this.onAddItem}
-          onClose={this.onClose}
-        />
+        <div ref={node => (this.searchInputNode = node)}>
+          <Search
+            onChange={this.onSearchChange}
+            hasSearch={hasSearch}
+            onMoveDown={this.onMoveDown}
+            onMoveUp={this.onMoveUp}
+            onAddItem={this.onAddItem}
+            onClose={this.onClose}
+          />
+        </div>
         <SelectItems>
           {items.map((item, idx) => [
             item.hasDivider && <SelectItemDivider />,
