@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 
-const Title = style.div`
+const Title = styled.div`
     margin: 0px;
     padding: 0px 0px 40px 0px;
     flex: auto;
     display: flex;
 `;
 
-const Text = style.h2`
+const Text = styled.h2`
     display: block;
     margin: 0px;
     flex: 1 1 auto;
@@ -21,7 +21,7 @@ const Text = style.h2`
     font-weight: 500;
 `;
 
-const Header = style.div`
+const Header = styled.div`
     display: block;
     margin: 0px;
     padding: 0px;

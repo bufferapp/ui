@@ -1,10 +1,10 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 import {
   blue, grayDark, white,
 } from '../../style/colors';
 import { fontWeightMedium, fontSize } from '../../style/fonts';
 
-export const SelectItemStyled = style.li`
+export const SelectItemStyled = styled.li`
     align-items: center;
     color: ${props => (props.hovered ? white : grayDark)};
     cursor: pointer;
@@ -24,7 +24,7 @@ export const SelectItemStyled = style.li`
 `;
 
 
-export const SelectItemLabel = style.div`
+export const SelectItemLabel = styled.div`
     font-size: ${fontSize};
     font-weight: ${fontWeightMedium};
     min-width: 0;
@@ -36,12 +36,12 @@ export const SelectItemLabel = style.div`
     align-items: end;
 `;
 
-export const SelectItemIcon = style.div`
+export const SelectItemIcon = styled.div`
   ${SelectItemStyled}:hover & * {
     color: ${white};
   }
 `;
 
-export const SelectItemTitle = style.div`
+export const SelectItemTitle = styled.div`
   margin-left: ${props => (props.moveRight ? '22px' : '5px')};
 `;

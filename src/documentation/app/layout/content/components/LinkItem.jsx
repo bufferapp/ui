@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const LinkWrapper = style(Link)`
+const LinkWrapper = styled(Link)`
     position: relative;
     display: flex;
     flex-direction: row;
@@ -28,13 +28,13 @@ const LinkWrapper = style(Link)`
     }
 `;
 
-const LinkBody = style.div`
+const LinkBody = styled.div`
   background: #ffffff;
   flex: 1;
   padding: 0px 16px;
 `;
 
-const LinkTitle = style.h3`
+const LinkTitle = styled.h3`
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;

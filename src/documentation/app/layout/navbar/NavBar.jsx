@@ -1,14 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 
-const Wrapper = style.div`
+const Wrapper = styled.div`
     display: block;
     margin: 0px;
     padding: 0px;
 `;
 
-const Top = style.div`
+const Top = styled.div`
     background: #fff;
     border-bottom: 1px solid #d4dadf;
     box-shadow: 0 1px 1px 0 rgba(116, 129, 141, 0.1);
@@ -22,7 +22,7 @@ const Top = style.div`
     padding-right: 24px;
 `;
 
-const Middle = style.div`
+const Middle = styled.div`
     max-width: 1400px;
     width: 100%;
     margin: 0px auto;
@@ -33,20 +33,20 @@ const Middle = style.div`
 `;
 
 
-const Title = style.a`
+const Title = styled.a`
     cursor: pointer;
     display: flex;
     text-decoration: none;
     align-items: center;
 `;
 
-const Logo = style.div`
+const Logo = styled.div`
     display: block;
     margin: 0px;
     padding: 0px;
 `;
 
-const Image = style.img`
+const Image = styled.img`
     max-width: 100%;
     border-radius: 3px;
     overflow: hidden;
@@ -58,7 +58,7 @@ const Image = style.img`
 `;
 
 
-const TextWrapper = style.div`
+const TextWrapper = styled.div`
     display: block;
     margin: 0px;
     padding: 0px;
@@ -67,7 +67,7 @@ const TextWrapper = style.div`
 `;
 
 
-const Text = style.h1`
+const Text = styled.h1`
      font-size: 28px;
     line-height: 1.5;
     font-weight: 500;

@@ -1,10 +1,10 @@
 /* eslint-disable no-nested-ternary */
-import style from 'styled-components';
+import styled from 'styled-components';
 import {
   grayShadow, grayLighter, white, gray,
 } from '../style/colors';
 
-export const Wrapper = style.div`
+export const Wrapper = styled.div`
   outline: 0;
   :focus {
     outline: 0
@@ -16,7 +16,7 @@ export const Wrapper = style.div`
   display: inline-block;
 `;
 
-export const SelectStyled = style.div`
+export const SelectStyled = styled.div`
     right: 0;
     position: absolute;
     z-index: 1000;
@@ -34,23 +34,21 @@ export const SelectStyled = style.div`
     margin-top: ${props => (props.isMenu ? '35px' : props.position === 'bottom' ? '10px' : '0')};
 `;
 
-export const SelectItems = style.ul`
+export const SelectItems = styled.ul`
     max-height: 235px;
     overflow-y: auto;
     padding-bottom: 10px;
     padding-top: 10px;
     position: relative;
     z-index: 2;
-    display: flex;
     background: ${white};
-    flex-direction: column;
     margin-block-start: 0px;
     margin-block-end: 0px;
     padding-inline-start: 0px;
     border-radius: 4px;
 `;
 
-export const Arrow = style.div`
+export const Arrow = styled.div`
     background-color: #fff;
     border-left: 1px solid ${gray};
     border-radius: 2px 0 0 0;
@@ -67,7 +65,7 @@ export const Arrow = style.div`
     z-index: 9999;
 `;
 
-export const SelectItemDivider = style.li`
+export const SelectItemDivider = styled.li`
     background-color: ${grayLighter};
     height: 1px;
     margin-bottom: 4px;
