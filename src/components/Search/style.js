@@ -18,6 +18,11 @@ export const SearchInput = styled.input`
       height: 35px;
       &:focus {
         outline: none;
+        border-color: transparent;
+        box-shadow: none;
+        border-bottom: 1px solid #b8b8b8;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
       }
     }
 `;
