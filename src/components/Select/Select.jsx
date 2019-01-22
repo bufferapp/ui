@@ -1,4 +1,4 @@
-/* eslint-disable no-nested-ternary */
+/* eslint-disable no-unused-expressions */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { includes, some } from 'lodash';
@@ -29,12 +29,12 @@ export default class Select extends React.Component {
     document.addEventListener('click', this.closePopover, true);
 
     // catch the keypress to move the selected items up or down
-    this.selectNode.addEventListener('keydown', this.keyDownPressed);
+    this.selectNode && this.selectNode.addEventListener('keydown', this.keyDownPressed);
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true);
-    this.selectNode.removeEventListener('keydown', this.keyDownPressed);
+    this.selectNode && this.selectNode.removeEventListener('keydown', this.keyDownPressed);
   }
 
   keyDownPressed = (e) => {

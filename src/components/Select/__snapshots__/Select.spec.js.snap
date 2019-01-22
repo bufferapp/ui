@@ -24,11 +24,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   >
     <div>
       <Search
-        onAddItem={[Function]}
         onChange={[Function]}
-        onClose={[Function]}
-        placeholder="Search"
-        shortcutsEnabled={true}
+        placeholder="jest-auto-snapshots String Fixture"
       />
     </div>
     <ForwardRef>
@@ -79,11 +76,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   >
     <div>
       <Search
-        onAddItem={[Function]}
         onChange={[Function]}
-        onClose={[Function]}
-        placeholder="Search"
-        shortcutsEnabled={true}
+        placeholder="jest-auto-snapshots String Fixture"
       />
     </div>
     <ForwardRef>
@@ -169,11 +163,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   >
     <div>
       <Search
-        onAddItem={[Function]}
         onChange={[Function]}
-        onClose={[Function]}
-        placeholder="Search"
-        shortcutsEnabled={true}
+        placeholder="jest-auto-snapshots String Fixture"
       />
     </div>
     <ForwardRef>
@@ -223,11 +214,59 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
   >
     <div>
       <Search
-        onAddItem={[Function]}
         onChange={[Function]}
-        onClose={[Function]}
-        placeholder="Search"
-        shortcutsEnabled={true}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
+    <ForwardRef>
+      <SelectItem
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
+<ForwardRef
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <ForwardRef
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDown
+      color="grayDark"
+      size="medium"
+    />
+  </ForwardRef>
+  <ForwardRef
+    isMenu={true}
+    isOpen={false}
+    position="top"
+  >
+    <div>
+      <Search
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
       />
     </div>
     <ForwardRef>
@@ -277,11 +316,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   >
     <div>
       <Search
-        onAddItem={[Function]}
         onChange={[Function]}
-        onClose={[Function]}
-        placeholder="Search"
-        shortcutsEnabled={true}
+        placeholder="jest-auto-snapshots String Fixture"
       />
     </div>
     <ForwardRef>
