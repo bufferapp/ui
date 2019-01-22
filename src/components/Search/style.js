@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { HotKeys } from 'react-hotkeys';
 
-export const SearchWrapper = styled(HotKeys)`
+export const SearchWrapper = styled.div`
   height:  auto;
 `;
 

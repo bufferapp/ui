@@ -13,7 +13,23 @@ export default function ExampleSelectWithSearch() {
       icon={<Flag color="white" />}
       onSearchChange={() => true}
       type="primary"
+      searchPlaceholder="Search items..."
       items={[
+        { id: '1', title: 'Open' },
+        { id: '2', title: 'Pending' },
+        { id: '3', title: 'Closed' },
+        { id: '1', title: 'Open' },
+        { id: '2', title: 'Pending' },
+        { id: '3', title: 'Closed' },
+        { id: '1', title: 'Open' },
+        { id: '2', title: 'Pending' },
+        { id: '3', title: 'Closed' },
+        { id: '1', title: 'Open' },
+        { id: '2', title: 'Pending' },
+        { id: '3', title: 'Closed' },
+        { id: '1', title: 'Open' },
+        { id: '2', title: 'Pending' },
+        { id: '3', title: 'Closed' },
         { id: '1', title: 'Open' },
         { id: '2', title: 'Pending' },
         { id: '3', title: 'Closed' },

@@ -2,13 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { SearchInput, SearchWrapper } from './style';
 
-const map = {
-  close: 'esc',
-  addItem: 'enter',
-  moveUp: 'up',
-  moveDown: 'down',
-};
-
 /** Search input that filters the Select items and adds keyboard navigation */
 export default class Search extends React.Component {
   state = {
@@ -25,23 +18,9 @@ export default class Search extends React.Component {
     });
   }
 
-  getHotkeyHandlers = () => {
-    const {
-      onAddItem, onClose,
-    } = this.props;
-    return {
-      addItem: () => {
-        onAddItem();
-      },
-      close: () => {
-        onClose();
-      },
-    };
-  };
-
   render() {
     const {
-      shortcutsEnabled, placeholder,
+      placeholder,
     } = this.props;
 
     const { search } = this.state;
@@ -50,7 +29,7 @@ export default class Search extends React.Component {
     if (this.inputRef) setTimeout(() => this.inputRef.focus(), 10);
 
     return (
-      <SearchWrapper keyMap={map} handlers={shortcutsEnabled ? this.getHotkeyHandlers() : undefined}>
+      <SearchWrapper>
         <SearchInput
           placeholder={placeholder}
           type="text"
@@ -64,23 +43,9 @@ export default class Search extends React.Component {
 }
 
 Search.propTypes = {
-  /** If false don't enable keyboard navigation */
-  shortcutsEnabled: PropTypes.bool,
-
   /** Search placeholder */
-  placeholder: PropTypes.string,
+  placeholder: PropTypes.string.isRequired,
 
   /** Function to call on search input change */
   onChange: PropTypes.func.isRequired,
-
-  /** Function to call on Enter click */
-  onAddItem: PropTypes.func.isRequired,
-
-  /** Function to call on Esc click */
-  onClose: PropTypes.func.isRequired,
-};
-
-Search.defaultProps = {
-  shortcutsEnabled: true,
-  placeholder: 'Search',
 };

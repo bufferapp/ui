@@ -29,22 +29,36 @@ export default class Select extends React.Component {
     document.addEventListener('click', this.closePopover, true);
 
     // catch the keypress to move the selected items up or down
-    document.addEventListener('keydown', this.keyDownPressed, true);
+    this.selectNode.addEventListener('keydown', this.keyDownPressed);
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true);
-    document.removeEventListener('keydown', this.keyDownPressed, true);
+    this.selectNode.removeEventListener('keydown', this.keyDownPressed);
   }
 
   keyDownPressed = (e) => {
-    if (e.which === 40) {
-      e.preventDefault();
-      this.onMoveDown();
-    } else if (e.which === 38) {
-      e.preventDefault();
-      this.onMoveUp();
+    const { shortcutsEnabled } = this.props;
+    if (!shortcutsEnabled) return;
+
+    switch (e.which) {
+      case 40:
+        return this.handleKeyPress(e, this.onMoveDown);
+      case 38:
+        return this.handleKeyPress(e, this.onMoveUp);
+      case 13:
+        return this.handleKeyPress(e, this.onAddItem);
+      case 27:
+        return this.handleKeyPress(e, this.onClose);
+      default:
+        return null;
     }
+  };
+
+  handleKeyPress = (event, keyHandler) => {
+    event.preventDefault();
+    event.stopPropagation();
+    keyHandler();
   };
 
   // Close the popover
@@ -197,7 +211,7 @@ export default class Select extends React.Component {
 
   renderSelectPopup = () => {
     const {
-      position, hasSearch, customButton, keyMap,
+      position, hasSearch, customButton, keyMap, searchPlaceholder,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
@@ -207,8 +221,7 @@ export default class Select extends React.Component {
         <div ref={node => this.searchInputNode = node}>
           <Search
             onChange={this.onSearchChange}
-            onAddItem={this.onAddItem}
-            onClose={this.onClose}
+            placeholder={searchPlaceholder}
           />
         </div>
         )}
@@ -240,6 +253,7 @@ export default class Select extends React.Component {
         onKeyUp={this.onClick}
         tabIndex={0}
         isSplit={isSplit}
+        ref={selectNode => this.selectNode = selectNode}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
@@ -296,6 +310,12 @@ Select.propTypes = {
 
   /** Can the select have multiple items selected */
   multiSelect: PropTypes.bool,
+
+  /** If false don't enable keyboard navigation */
+  shortcutsEnabled: PropTypes.bool,
+
+  /** Search placeholder */
+  searchPlaceholder: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -311,4 +331,6 @@ Select.defaultProps = {
   onSelectClick: undefined,
   keyMap: undefined,
   multiSelect: undefined,
+  shortcutsEnabled: true,
+  searchPlaceholder: 'Search',
 };
