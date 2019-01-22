@@ -11,17 +11,9 @@ const map = {
 
 /** Search input that filters the Select items and adds keyboard navigation */
 export default class Search extends React.Component {
-  constructor(props, context) {
-    super(props, context);
-    this.inputRef = React.createRef();
-    this.state = {
-      search: '',
-    };
-  }
-
-  componentDidMount() {
-    if (this.inputRef.current) setTimeout(() => this.inputRef.current.focus(), 10);
-  }
+  state = {
+    search: '',
+  };
 
   onChange = (event) => {
     const { onChange } = this.props;
@@ -35,15 +27,9 @@ export default class Search extends React.Component {
 
   getHotkeyHandlers = () => {
     const {
-      onMoveDown, onMoveUp, onAddItem, onClose,
+      onAddItem, onClose,
     } = this.props;
     return {
-      moveUp: () => {
-        onMoveUp();
-      },
-      moveDown: () => {
-        onMoveDown();
-      },
       addItem: () => {
         onAddItem();
       },
@@ -55,19 +41,21 @@ export default class Search extends React.Component {
 
   render() {
     const {
-      shortcutsEnabled, placeholder, hasSearch,
+      shortcutsEnabled, placeholder,
     } = this.props;
 
     const { search } = this.state;
 
+    // adding a small delay to make sure the rendering is complete
+    if (this.inputRef) setTimeout(() => this.inputRef.focus(), 10);
+
     return (
-      <SearchWrapper keyMap={map} handlers={shortcutsEnabled ? this.getHotkeyHandlers() : undefined} hasSearch={hasSearch}>
+      <SearchWrapper keyMap={map} handlers={shortcutsEnabled ? this.getHotkeyHandlers() : undefined}>
         <SearchInput
           placeholder={placeholder}
           type="text"
           value={search}
-          hasSearch={hasSearch}
-          ref={ref => this.inputRef = ref}
+          ref={inputRef => this.inputRef = inputRef}
           onChange={event => this.onChange(event)}
         />
       </SearchWrapper>
@@ -85,15 +73,6 @@ Search.propTypes = {
   /** Function to call on search input change */
   onChange: PropTypes.func.isRequired,
 
-  /** Should the search input be hidden from the DOM */
-  hasSearch: PropTypes.bool,
-
-  /** Function to call on ArrowUp key event */
-  onMoveUp: PropTypes.func.isRequired,
-
-  /** Function to call on ArrowDown key event */
-  onMoveDown: PropTypes.func.isRequired,
-
   /** Function to call on Enter click */
   onAddItem: PropTypes.func.isRequired,
 
@@ -104,5 +83,4 @@ Search.propTypes = {
 Search.defaultProps = {
   shortcutsEnabled: true,
   placeholder: 'Search',
-  hasSearch: false,
 };

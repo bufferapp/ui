@@ -1,38 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "hasSearch" is set to: "false" 1`] = `
-<ForwardRef
-  handlers={
-    Object {
-      "addItem": [Function],
-      "close": [Function],
-      "moveDown": [Function],
-      "moveUp": [Function],
-    }
-  }
-  hasSearch={false}
-  keyMap={
-    Object {
-      "addItem": "enter",
-      "close": "esc",
-      "moveDown": "down",
-      "moveUp": "up",
-    }
-  }
->
-  <ForwardRef
-    hasSearch={false}
-    onChange={[Function]}
-    placeholder="jest-auto-snapshots String Fixture"
-    type="text"
-    value=""
-  />
-</ForwardRef>
-`;
-
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
 <ForwardRef
-  hasSearch={true}
   keyMap={
     Object {
       "addItem": "enter",
@@ -43,7 +12,6 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "shortc
   }
 >
   <ForwardRef
-    hasSearch={true}
     onChange={[Function]}
     placeholder="jest-auto-snapshots String Fixture"
     type="text"
@@ -58,11 +26,8 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`]
     Object {
       "addItem": [Function],
       "close": [Function],
-      "moveDown": [Function],
-      "moveUp": [Function],
     }
   }
-  hasSearch={true}
   keyMap={
     Object {
       "addItem": "enter",
@@ -73,7 +38,6 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`]
   }
 >
   <ForwardRef
-    hasSearch={true}
     onChange={[Function]}
     placeholder="jest-auto-snapshots String Fixture"
     type="text"
@@ -88,11 +52,8 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed only required
     Object {
       "addItem": [Function],
       "close": [Function],
-      "moveDown": [Function],
-      "moveUp": [Function],
     }
   }
-  hasSearch={false}
   keyMap={
     Object {
       "addItem": "enter",
@@ -103,7 +64,6 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed only required
   }
 >
   <ForwardRef
-    hasSearch={false}
     onChange={[Function]}
     placeholder="Search"
     type="text"
