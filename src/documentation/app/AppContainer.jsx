@@ -38,27 +38,6 @@ const PageLayout = style.div`
 
 /** The main Documentation app container that renders other components */
 export default class AppContainer extends React.Component {
-  constructor(props) {
-    super(props);
-    const { params } = props.match;
-    this.state = {
-      route: params.route,
-      location: params.location,
-    };
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const { match } = this.props;
-    const { params } = nextProps.match;
-    if (params !== match.params) {
-      const { route, location } = params;
-      this.setState({
-        route,
-        location,
-      });
-    }
-  }
-
   getFooterLinks = (pageParents, route) => {
     if (!pageParents) return;
     // get the index of the navigation link of the current page
@@ -75,7 +54,7 @@ export default class AppContainer extends React.Component {
   renderMarkdownComponent = () => <markdownToJsx>{UIComponent}</markdownToJsx>
 
   render() {
-    const { route, location } = this.state;
+    const { match: { params: { route, location, view } } } = this.props;
 
     const isUIRoot = location === 'ui' && route === 'ui';
 
@@ -99,6 +78,9 @@ export default class AppContainer extends React.Component {
     // based on the location and fileName we are currently requesting
     const PageComponent = page && require(`../markdown/${location}/${page.fileName}.md`);
 
+    if (view === 'fullscreen') {
+      return <Component component={component} fullscreen />;
+    }
 
     return (
       <Container>

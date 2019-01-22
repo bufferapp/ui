@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
 import Example from './components/Example';
@@ -49,26 +49,39 @@ const ExampleWrapper = style.div`
 `;
 
 const ComponentExample = ({
-  name, folder, id,
-}) => [
-  <h4 key="heading">
-    {folder[0] ? `${name} ${folder[0].title}s` : ''}
-  </h4>,
-  <ExampleWrapper key="example">
-    {folder[0]
-      // if this component example contains subfolders, then get example from each subfolder
-      ? folder.map((example, idx) => <Example key={name + idx} example={example} componentName={name} id={id} />)
-      // otherwise just render the example
-      : <Example example={folder} componentName={name} id={id} key={name} />
-    }
-  </ExampleWrapper>,
-];
+  fullscreen, name, folder, id,
+}) => (
+  <Fragment>
+    {!fullscreen && (
+      <h4 key="heading">
+        {folder[0] ? `${name} ${folder[0].title}s` : ''}
+      </h4>)}
+    <ExampleWrapper key="example">
+      {folder[0]
+        // if this component example contains subfolders, then get example from each subfolder
+        ? folder.map((example, idx) => <Example key={name + idx} example={example} componentName={name} id={id} />)
+        // otherwise just render the example
+        : <Example example={folder} componentName={name} id={id} key={name} fullscreen={fullscreen} />
+      }
+    </ExampleWrapper>
+  </Fragment>
+);
 
 /** Page to display the shared component info taken from .jsx components */
-const Component = ({ component }) => {
+const Component = ({ component, fullscreen }) => {
   const {
     name, description, props, examples, id,
   } = component;
+  if (fullscreen) {
+    return examples.map((folder, idx) => (
+      <ComponentExample
+        fullscreen
+        folder={folder}
+        name={name}
+        id={id}
+        key={idx}
+      />));
+  }
   return (
     <Wrapper>
       <Container>
@@ -91,7 +104,26 @@ const Component = ({ component }) => {
   );
 };
 
+ComponentExample.propTypes = {
+  fullscreen: PropTypes.bool,
+  name: PropTypes.string.isRequired,
+  folder: PropTypes.shape({
+    code: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  id: PropTypes.string.isRequired,
+};
+
+ComponentExample.defaultProps = {
+  fullscreen: false,
+};
+
 Component.propTypes = {
+  /** Whether to show only the component (view: fullscreen) */
+  fullscreen: PropTypes.bool,
+
   /** Component to display */
   component: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -101,5 +133,8 @@ Component.propTypes = {
   }).isRequired,
 };
 
+Component.defaultProps = {
+  fullscreen: false,
+};
 
 export default Component;
