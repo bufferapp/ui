@@ -212,7 +212,7 @@ export default class Select extends React.Component {
           />
         </div>
         )}
-        <SelectItems ref={itemsNode => this.itemsNode = itemsNode}>
+        <SelectItems>
           {items.map((item, idx) => [
             item.hasDivider && <SelectItemDivider />,
             <SelectItem
