@@ -13,7 +13,7 @@ const NavBarMenu = ({ user, onClick }) => (
       <NavBarName>{user.name}</NavBarName>
       <NavBarEmail>{user.email}</NavBarEmail>
     </NavBarUser>
-    <NavBarAvatar onClick={onClick} />
+    <NavBarAvatar avatar={user.avatar} onClick={onClick} />
     <NavBarChavron onClick={onClick}>
       <ChevronDown color="grayLight" size="large" />
     </NavBarChavron>

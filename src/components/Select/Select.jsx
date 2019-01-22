@@ -1,5 +1,5 @@
 /* eslint-disable no-nested-ternary */
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { includes, some } from 'lodash';
 import helper from 'immutability-helper';
@@ -197,12 +197,12 @@ export default class Select extends React.Component {
 
   renderSelectPopup = () => {
     const {
-      position, hasSearch, customButton, keyMap,
+      position, hasSearch, customButton, keyMap, horizontalOffset,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
     return (
-      <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
+      <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton} horizontalOffset={horizontalOffset}>
         {hasSearch && (
         <div ref={node => this.searchInputNode = node}>
           <Search
@@ -213,17 +213,18 @@ export default class Select extends React.Component {
         </div>
         )}
         <SelectItems>
-          {items.map((item, idx) => [
-            item.hasDivider && <SelectItemDivider />,
-            <SelectItem
-              hovered={hoveredItem === idx}
-              key={item[keyMap ? keyMap.id : 'id']}
-              item={item}
-              keyMap={keyMap}
-              hasSelectedItems={some(items, { selected: true })}
-              onClick={event => this.handleSelectOption(item, event)}
-            />,
-          ])}
+          {items.map((item, idx) => (
+            <Fragment>
+              {item.hasDivider && <SelectItemDivider />}
+              <SelectItem
+                hovered={hoveredItem === idx}
+                key={item[keyMap ? keyMap.id : 'id']}
+                item={item}
+                keyMap={keyMap}
+                hasSelectedItems={some(items, { selected: true })}
+                onClick={event => this.handleSelectOption(item, event)}
+              />
+            </Fragment>))}
         </SelectItems>
       </SelectStyled>
     );
@@ -279,6 +280,9 @@ Select.propTypes = {
   /** Position of the popup */
   position: PropTypes.oneOf(['top', 'bottom']),
 
+  /** Amount to offset the popup horizontally, can be any valid CSS value (e.g., `10px`, `-5px`) */
+  horizontalOffset: PropTypes.string,
+
   /** Icon to show in the Button */
   icon: PropTypes.node,
 
@@ -304,6 +308,7 @@ Select.defaultProps = {
   type: 'secondary',
   size: 'medium',
   position: 'bottom',
+  horizontalOffset: '0',
   disabled: undefined,
   icon: undefined,
   hasSearch: false,

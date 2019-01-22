@@ -1,14 +1,14 @@
 import style from 'styled-components';
 import {
-  gray, grayDefault, grayLighter, white,
+  gray, grayDark, grayLight, white,
 } from '../../style/colors';
 import { fontSize, fontWeightMedium } from '../../style/fonts';
 
 export const NavBarStyled = style.div`
   display: flex;
   align-items: center;
-  background: ${grayDefault}
-  padding: 12px 21px 12px 16px;
+  background: ${grayDark};
+  padding: 12px 8px 12px 16px;
 `;
 
 export const NavBarUser = style.div`
@@ -22,8 +22,10 @@ export const NavBarAvatar = style.div`
   border-radius: 100px;
   width: 40px;
   height: 40px;
-  background: ${gray}
+  background: ${gray};
   cursor: pointer;
+  background-size: cover;
+  background-image: url(${props => (props.avatar)});
 `;
 
 export const NavBarName = style.div`
@@ -34,7 +36,7 @@ export const NavBarName = style.div`
 
 export const NavBarEmail = style.div`
   font-size: ${fontSize};
-  color: ${grayLighter};
+  color: ${grayLight};
 `;
 
 export const NavBarChavron = style.div`
@@ -48,6 +50,6 @@ export const NavBarChavron = style.div`
   display: flex;
   align-items: center;
   position: relative;
-  left: 10px;
+  left: -8px;
   cursor: pointer;
 `;

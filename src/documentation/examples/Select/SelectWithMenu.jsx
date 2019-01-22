@@ -3,7 +3,7 @@ import Select from '@bufferapp/ui/Select';
 import {
   Person, People, Gear, ArrowLeft,
 } from '@bufferapp/ui/Icon';
-import NavBarMenu from '@bufferapp/ui/NavBar';
+import NavBarMenu from '@bufferapp/ui/NavBar/NavBarMenu/NavBarMenu';
 
 
 /** Menu Select */
