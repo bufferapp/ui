@@ -38,9 +38,7 @@ import Button from '@bufferapp/ui/Button';
 
 function App() {
   return (
-    <Button type="primary">
-      Hello World
-    </Button>
+    <Button type="primary" label="Hello, world!" />
   );
 }
 

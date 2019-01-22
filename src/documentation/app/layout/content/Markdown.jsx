@@ -57,6 +57,14 @@ const CodeBlock = style.pre`
     margin: 15px 0;
 `;
 
+/**
+ * The images in the Markdown docs are retina (@2x) size
+ * so we scale them to half so they appear correctly.
+ */
+const Img = style.img`
+  zoom: 0.5;
+`;
+
 /** Component Used to show the Markdown file content and replace elements with our own custom shared component */
 export default class Markdown extends React.Component {
   render() {
@@ -79,6 +87,9 @@ export default class Markdown extends React.Component {
           },
           p: {
             component: Paragraph,
+          },
+          img: {
+            component: Img,
           },
           ColorRow,
           ColorColumn,

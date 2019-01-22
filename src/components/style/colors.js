@@ -19,3 +19,10 @@ export const grayDefault = '#77797a';
 
 export const boxShadow = '#ABB7FF';
 export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16))';
+
+export const facebook = '#3b5998';
+export const googleplus = '#dd4b39';
+export const instagram = '#e53c5f';
+export const linkedin = '#007bb6';
+export const pinterest = '#bd081c';
+export const twitter = '#55acee';

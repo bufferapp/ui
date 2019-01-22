@@ -13,6 +13,12 @@ const paths = {
   documentsOutput: path.join(__dirname, '../config', 'documentsData.js'),
 };
 
+// some of the folders in components are not actual components, so ignore them
+const componentFoldersToIgnore = [
+  'style',
+  'constants',
+];
+
 
 function getDirectories(filePath) {
   return fs.readdirSync(filePath).filter(file => fs.statSync(path.join(filePath, file)).isDirectory());
@@ -177,8 +183,7 @@ function generate(componentPaths) {
     level: 0,
     name: 'UI Components',
     parentName: 'ui',
-    isExpanded: true,
-    children: getDirectories(componentPaths.components).filter(folder => folder !== 'style').map((componentName) => {
+    children: getDirectories(componentPaths.components).filter(folder => !componentFoldersToIgnore.includes(folder)).map((componentName) => {
       try {
         return getComponentData(componentPaths, componentName);
       } catch (error) {
@@ -202,15 +207,17 @@ function generateDocumentation(documentPaths) {
   writeFile(documentPaths.documentsOutput, `module.exports = ${JSON.stringify(errors.length ? errors : documentsData)}`);
 }
 
+function run() {
+  generate(paths);
+  generateDocumentation(paths);
+}
 
-const enableWatchMode = process.argv.slice(2) === '--watch'; // check for a watch flag
+const enableWatchMode = process.argv.slice(2).includes('--watch'); // check for a watch flag
 if (enableWatchMode) {
   // Regenerate component metadata when components or examples change.
   chokidar.watch([paths.examples, paths.components, paths.documents]).on('change', () => {
-    generate(paths);
-    generateDocumentation(paths);
+    run();
   });
 } else {
-  generate(paths);
-  generateDocumentation(paths);
+  run();
 }
