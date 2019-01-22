@@ -16,7 +16,6 @@ export default class Search extends React.Component {
   };
 
   onChange = (event) => {
-    console.info(event);
     const { onChange } = this.props;
     const search = event.target.value;
 
