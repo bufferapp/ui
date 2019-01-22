@@ -22,19 +22,34 @@ export default class Select extends React.Component {
     };
   }
 
-  // When the selector is open and users click anywhere on the page,
-  // the selector should close
-  // Set capture to true so an open select will close when another select gets opened
   componentDidMount() {
+    // When the selector is open and users click anywhere on the page,
+    // the selector should close
+    // Set capture to true so an open select will close when another select gets opened
     document.addEventListener('click', this.closePopover, true);
+
+    // catch the keypress to move the selected items up or down
+    document.addEventListener('keydown', this.keyDownPressed, true);
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.closePopover);
+    document.removeEventListener('click', this.closePopover, true);
+    document.removeEventListener('keydown', this.keyDownPressed, true);
   }
 
+  keyDownPressed = (e) => {
+    if (e.which === 40) {
+      e.preventDefault();
+      this.onMoveDown();
+    } else if (e.which === 38) {
+      e.preventDefault();
+      this.onMoveUp();
+    }
+  };
+
   // Close the popover
-  closePopover = () => {
+  closePopover = (e) => {
+    if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
     const { isOpen } = this.state;
 
     if (isOpen) {
@@ -62,7 +77,7 @@ export default class Select extends React.Component {
     const optionIndex = deselectItems.findIndex(x => x.id === option.id);
 
     this.setState({
-      isOpen: false,
+      isOpen: multiSelect,
       items:
         optionIndex > -1
           ? helper(deselectItems, {
@@ -134,7 +149,9 @@ export default class Select extends React.Component {
   onSearchChange = (searchValue) => {
     const { items } = this.props;
 
-    const filteredItems = items.filter(item => includes(item.title.toLowerCase(), searchValue.toLowerCase()));
+    const filteredItems = items.filter(
+      item => includes(item.title.toLowerCase(), searchValue.toLowerCase()),
+    );
     this.setState({
       items: filteredItems,
     });
@@ -152,7 +169,11 @@ export default class Select extends React.Component {
 
     if (isSplit) {
       return (
-        <ButtonSelect type={type} disabled={disabled} onClick={!disabled ? this.onButtonClick : undefined}>
+        <ButtonSelect
+          type={type}
+          disabled={disabled}
+          onClick={!disabled ? this.onButtonClick : undefined}
+        >
           <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
         </ButtonSelect>
       );
@@ -182,15 +203,16 @@ export default class Select extends React.Component {
 
     return (
       <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
-        <Search
-          onChange={this.onSearchChange}
-          hasSearch={hasSearch}
-          onMoveDown={this.onMoveDown}
-          onMoveUp={this.onMoveUp}
-          onAddItem={this.onAddItem}
-          onClose={this.onClose}
-        />
-        <SelectItems>
+        {hasSearch && (
+        <div ref={node => this.searchInputNode = node}>
+          <Search
+            onChange={this.onSearchChange}
+            onAddItem={this.onAddItem}
+            onClose={this.onClose}
+          />
+        </div>
+        )}
+        <SelectItems ref={itemsNode => this.itemsNode = itemsNode}>
           {items.map((item, idx) => [
             item.hasDivider && <SelectItemDivider />,
             <SelectItem
@@ -212,7 +234,13 @@ export default class Select extends React.Component {
     const { isOpen } = this.state;
 
     return (
-      <Wrapper role="button" onClick={this.onClick} onKeyUp={this.onClick} tabIndex={0} isSplit={isSplit}>
+      <Wrapper
+        role="button"
+        onClick={this.onClick}
+        onKeyUp={this.onClick}
+        tabIndex={0}
+        isSplit={isSplit}
+      >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
         {!customButton && <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />}
@@ -234,8 +262,8 @@ Select.propTypes = {
   /** Items to display in the popup */
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
+      id: PropTypes.string,
+      title: PropTypes.string,
     }),
   ).isRequired,
 
