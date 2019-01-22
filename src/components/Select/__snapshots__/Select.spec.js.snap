@@ -22,16 +22,15 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     isOpen={false}
     position="top"
   >
-    <Search
-      hasSearch={true}
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      placeholder="Search"
-      shortcutsEnabled={true}
-    />
+    <div>
+      <Search
+        onAddItem={[Function]}
+        onChange={[Function]}
+        onClose={[Function]}
+        placeholder="Search"
+        shortcutsEnabled={true}
+      />
+    </div>
     <ForwardRef>
       <SelectItem
         hasSelectedItems={false}
@@ -78,16 +77,15 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     isOpen={false}
     position="top"
   >
-    <Search
-      hasSearch={true}
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      placeholder="Search"
-      shortcutsEnabled={true}
-    />
+    <div>
+      <Search
+        onAddItem={[Function]}
+        onChange={[Function]}
+        onClose={[Function]}
+        placeholder="Search"
+        shortcutsEnabled={true}
+      />
+    </div>
     <ForwardRef>
       <SelectItem
         hasSelectedItems={false}
@@ -133,16 +131,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     isOpen={false}
     position="top"
   >
-    <Search
-      hasSearch={false}
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      placeholder="Search"
-      shortcutsEnabled={true}
-    />
     <ForwardRef>
       <SelectItem
         hasSelectedItems={false}
@@ -179,16 +167,15 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     isOpen={false}
     position="top"
   >
-    <Search
-      hasSearch={true}
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      placeholder="Search"
-      shortcutsEnabled={true}
-    />
+    <div>
+      <Search
+        onAddItem={[Function]}
+        onChange={[Function]}
+        onClose={[Function]}
+        placeholder="Search"
+        shortcutsEnabled={true}
+      />
+    </div>
     <ForwardRef>
       <SelectItem
         hasSelectedItems={false}
@@ -234,16 +221,15 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     isOpen={false}
     position="top"
   >
-    <Search
-      hasSearch={true}
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      placeholder="Search"
-      shortcutsEnabled={true}
-    />
+    <div>
+      <Search
+        onAddItem={[Function]}
+        onChange={[Function]}
+        onClose={[Function]}
+        placeholder="Search"
+        shortcutsEnabled={true}
+      />
+    </div>
     <ForwardRef>
       <SelectItem
         hasSelectedItems={false}
@@ -289,16 +275,15 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     isOpen={false}
     position="top"
   >
-    <Search
-      hasSearch={true}
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      placeholder="Search"
-      shortcutsEnabled={true}
-    />
+    <div>
+      <Search
+        onAddItem={[Function]}
+        onChange={[Function]}
+        onClose={[Function]}
+        placeholder="Search"
+        shortcutsEnabled={true}
+      />
+    </div>
     <ForwardRef>
       <SelectItem
         hasSelectedItems={false}
@@ -355,16 +340,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     isOpen={false}
     position="bottom"
   >
-    <Search
-      hasSearch={false}
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      onMoveDown={[Function]}
-      onMoveUp={[Function]}
-      placeholder="Search"
-      shortcutsEnabled={true}
-    />
     <ForwardRef>
       <SelectItem
         hasSelectedItems={false}

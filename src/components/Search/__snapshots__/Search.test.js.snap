@@ -4,7 +4,5 @@ exports[`SomeComponent component getHotkeyHandlers should return the handler 1`]
 Object {
   "addItem": [Function],
   "close": [Function],
-  "moveDown": [Function],
-  "moveUp": [Function],
 }
 `;
