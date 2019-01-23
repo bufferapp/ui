@@ -3,7 +3,7 @@ import Select from '@bufferapp/ui/Select';
 import { Flag } from '@bufferapp/ui/Icon';
 
 
-/** Select with Search */
+/** With Search */
 export default function ExampleSelectWithSearch() {
   return (
     <Select
@@ -13,6 +13,7 @@ export default function ExampleSelectWithSearch() {
       icon={<Flag color="white" />}
       onSearchChange={() => true}
       type="primary"
+      disabled
       searchPlaceholder="Search items..."
       keyMap={{
         id: '_id',

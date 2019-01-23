@@ -2,13 +2,12 @@ import React from 'react';
 import Select from '@bufferapp/ui/Select';
 
 
-/** Disabled */
-export default function ExampleSelectDisabled() {
+/** Basic */
+export default function ExampleSelect() {
   return (
     <Select
       onSelectClick={() => console.info('Main select clicked')}
       label="Click Me"
-      disabled
       keyMap={{
         id: '_id',
         title: 'name',

@@ -26,7 +26,7 @@ export default class Search extends React.Component {
     const { search } = this.state;
 
     // adding a small delay to make sure the rendering is complete
-    if (this.inputRef) setTimeout(() => this.inputRef.focus(), 10);
+    setTimeout(() => this.inputRef && this.inputRef.focus(), 10);
 
     return (
       <SearchWrapper>

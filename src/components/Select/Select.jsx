@@ -201,6 +201,7 @@ export default class Select extends React.Component {
       <Button
         size={size}
         items={items}
+        disabled={disabled}
         type={type}
         label={label}
         icon={icon}
