@@ -16,6 +16,10 @@ import Search from '../Search/Search';
 export default class Select extends React.Component {
   constructor(props) {
     super(props);
+
+    this.onButtonClick = this.onButtonClick.bind(this);
+    this.closePopover = this.closePopover.bind(this);
+
     this.state = {
       isOpen: false,
       items: props.items,
@@ -50,6 +54,7 @@ export default class Select extends React.Component {
   // Close the popover
   closePopover = (e) => {
     if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
+    if (this.customButtonNode && this.customButtonNode.contains(e.target)) return;
     const { isOpen } = this.state;
 
     if (isOpen) {
@@ -96,8 +101,6 @@ export default class Select extends React.Component {
 
   onButtonClick = () => {
     const { isOpen } = this.state;
-    // eslint-disable-next-line
-    debugger;
     this.setState({
       isOpen: !isOpen,
     });
@@ -181,7 +184,11 @@ export default class Select extends React.Component {
       );
     }
     if (customButton) {
-      return customButton(this.onButtonClick);
+      return (
+        <div ref={node => this.customButtonNode = node}>
+          {customButton(this.onButtonClick)}
+        </div>
+      );
     }
 
     return (
