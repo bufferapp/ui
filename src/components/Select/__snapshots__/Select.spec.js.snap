@@ -30,6 +30,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     </div>
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -82,6 +83,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     </div>
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -127,6 +129,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
   >
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -169,6 +172,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     </div>
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -220,6 +224,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     </div>
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -271,6 +276,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     </div>
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -322,6 +328,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     </div>
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -378,6 +385,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
   >
     <ForwardRef>
       <SelectItem
+        getItemId={[Function]}
         hasSelectedItems={false}
         hovered={false}
         item={
