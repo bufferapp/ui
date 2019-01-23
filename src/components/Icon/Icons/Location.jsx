@@ -12,7 +12,7 @@ const Location = ({ color, size }) => (
 
 Location.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.string,
 };
 
 Location.defaultProps = {

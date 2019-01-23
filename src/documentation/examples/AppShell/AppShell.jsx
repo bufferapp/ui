@@ -26,7 +26,7 @@ const userMenuItems = [
     onItemClick: () => console.info('Settings Clicked'),
   },
   {
-    id: '3',
+    id: '4',
     title: 'Logout',
     component: <ArrowLeft color={gray} />,
     hasDivider: true,

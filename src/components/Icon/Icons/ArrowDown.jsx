@@ -11,7 +11,7 @@ const ArrowDown = ({ color, size }) => (
 
 ArrowDown.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.string,
 };
 
 ArrowDown.defaultProps = {

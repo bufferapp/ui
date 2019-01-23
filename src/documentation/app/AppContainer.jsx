@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import style from 'styled-components';
-import markdownToJsx from 'markdown-to-jsx';
+import MarkdownToJsx from 'markdown-to-jsx';
 import Markdown from './layout/content/Markdown';
 import Sidebar from './layout/sidebar/Sidebar';
 import Component from './layout/content/Component';
@@ -51,7 +51,7 @@ export default class AppContainer extends React.Component {
     return links;
   };
 
-  renderMarkdownComponent = () => <markdownToJsx>{UIComponent}</markdownToJsx>
+  renderMarkdownComponent = () => <MarkdownToJsx>{UIComponent}</MarkdownToJsx>
 
   render() {
     const { match: { params: { route, location, view } } } = this.props;

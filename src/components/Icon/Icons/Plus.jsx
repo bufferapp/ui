@@ -14,7 +14,7 @@ const Plus = ({ color, size }) => (
 
 Plus.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.string,
 };
 
 Plus.defaultProps = {

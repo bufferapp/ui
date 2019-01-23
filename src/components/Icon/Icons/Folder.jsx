@@ -11,7 +11,7 @@ const Folder = ({ color, size }) => (
 
 Folder.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.string,
 };
 
 Folder.defaultProps = {

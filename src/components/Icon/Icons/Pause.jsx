@@ -18,7 +18,7 @@ const Pause = ({ color, size }) => (
 
 Pause.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.string,
 };
 
 Pause.defaultProps = {

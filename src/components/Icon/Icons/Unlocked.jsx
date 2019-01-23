@@ -12,7 +12,7 @@ const Unlocked = ({ color, size }) => (
 
 Unlocked.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.string,
 };
 
 Unlocked.defaultProps = {

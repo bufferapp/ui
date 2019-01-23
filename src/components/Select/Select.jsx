@@ -96,6 +96,8 @@ export default class Select extends React.Component {
 
   onButtonClick = () => {
     const { isOpen } = this.state;
+    // eslint-disable-next-line
+    debugger;
     this.setState({
       isOpen: !isOpen,
     });
@@ -214,11 +216,10 @@ export default class Select extends React.Component {
         )}
         <SelectItems>
           {items.map((item, idx) => (
-            <Fragment>
+            <Fragment key={item[keyMap ? keyMap.id : 'id']}>
               {item.hasDivider && <SelectItemDivider />}
               <SelectItem
                 hovered={hoveredItem === idx}
-                key={item[keyMap ? keyMap.id : 'id']}
                 item={item}
                 keyMap={keyMap}
                 hasSelectedItems={some(items, { selected: true })}

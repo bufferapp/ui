@@ -12,7 +12,7 @@ const Pencil = ({ color, size }) => (
 
 Pencil.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.string,
 };
 
 Pencil.defaultProps = {
