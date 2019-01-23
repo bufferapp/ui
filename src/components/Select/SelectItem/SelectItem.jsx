@@ -6,9 +6,9 @@ import {
 import Flag from '../../Icon/Icons/Flag';
 
 const SelectItem = ({
-  item, onClick, hovered, keyMap, hasSelectedItems,
+  item, onClick, hovered, keyMap, hasSelectedItems, getItemId,
 }) => (
-  <SelectItemStyled onClick={item.onItemClick || onClick} hovered={hovered}>
+  <SelectItemStyled onClick={item.onItemClick || onClick} hovered={hovered} id={getItemId(item)}>
     <SelectItemLabel>
       {item.selected && <Flag color="gray" />}
       <SelectItemIcon>
@@ -31,6 +31,9 @@ SelectItem.propTypes = {
 
   /** On click function */
   onClick: PropTypes.func.isRequired,
+
+  /** Get the id of the item */
+  getItemId: PropTypes.func.isRequired,
 
   /** Is the item selected */
   hovered: PropTypes.bool,

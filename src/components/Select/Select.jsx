@@ -134,6 +134,7 @@ export default class Select extends React.Component {
     ) {
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength });
+        this.scrollToItem(this.itemsNode, document.getElementById(this.getItemId(items[i])))
         break;
       }
     }
@@ -165,19 +166,48 @@ export default class Select extends React.Component {
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
     for (
       let i = hoveredItem + 1;
-      i < itemsLength && itemsLength > 0 && i > 0;
+      i <= itemsLength && itemsLength > 0 && i > 0;
       i += 1
     ) {
-      if (items[i] === itemsLength) {
+      if (i  === itemsLength) {
         this.setState({ hoveredItem: 0 });
+        this.scrollToItem(this.itemsNode, document.getElementById(this.getItemId(items[i])))
         break;
       }
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength });
+        this.scrollToItem(this.itemsNode, document.getElementById(this.getItemId(items[i])))
         break;
       }
+
+
     }
   };
+
+  scrollToItem = (parent, child) => {
+    if(!parent || !child) return;
+
+    // Where is the parent on page
+    const parentRect = parent.getBoundingClientRect();
+    // What can you see?
+    const parentViewableArea = {
+      height: parent.clientHeight,
+      width: parent.clientWidth
+    };
+
+    // Where is the child
+    const childRect = child.getBoundingClientRect();
+    // Is the child viewable?
+    const isViewable = (childRect.top >= parentRect.top) && (childRect.top <= parentRect.top + parentViewableArea.height);
+
+    // if you can't see the child try to scroll parent
+    if (!isViewable) {
+      // scroll by offset relative to parent
+      parent.scrollTop = (childRect.top + parent.scrollTop) - parentRect.top
+    }
+
+
+  }
 
   onSearchChange = searchValue => {
     const { items, keyMap } = this.props;
@@ -193,6 +223,12 @@ export default class Select extends React.Component {
 
   onClose = () => {
     this.setState({ isOpen: false });
+  };
+
+  getItemId = (item) => {
+    if(!item) return;
+    const { keyMap } = this.props;
+    return item[keyMap ? keyMap.id : 'id']
   };
 
   renderSelectButton = () => {
@@ -258,12 +294,13 @@ export default class Select extends React.Component {
             />
           </div>
         )}
-        <SelectItems>
+        <SelectItems ref={itemsNode => this.itemsNode = itemsNode}>
           {items.map((item, idx) => [
             item.hasDivider && <SelectItemDivider />,
             <SelectItem
               hovered={hoveredItem === idx}
-              key={item[keyMap ? keyMap.id : 'id']}
+              key={this.getItemId(item)}
+              getItemId={this.getItemId}
               item={item}
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}

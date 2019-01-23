@@ -18,7 +18,6 @@
         ]
       }
     ],
-    "prettier/prettier": ["error"],
     "consistent-return": 0,
     "func-names": 0,
     "max-len": 0,
