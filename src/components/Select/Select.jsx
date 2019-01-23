@@ -42,13 +42,13 @@ export default class Select extends React.Component {
     if (!shortcutsEnabled) return;
 
     switch (e.which) {
-      case 40:
+      case 40: // Arrow down
         return this.handleKeyPress(e, this.onMoveDown);
-      case 38:
+      case 38: // Arrow up
         return this.handleKeyPress(e, this.onMoveUp);
-      case 13:
+      case 13: // Enter
         return this.handleKeyPress(e, this.onAddItem);
-      case 27:
+      case 27: // Esc
         return this.handleKeyPress(e, this.onClose);
       default:
         return null;
@@ -161,10 +161,11 @@ export default class Select extends React.Component {
   };
 
   onSearchChange = (searchValue) => {
-    const { items } = this.props;
+    const { items, keyMap } = this.props;
+    const searchFiled = keyMap ? keyMap.title : 'title';
 
     const filteredItems = items.filter(
-      item => includes(item.title.toLowerCase(), searchValue.toLowerCase()),
+      item => includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase()),
     );
     this.setState({
       items: filteredItems,
