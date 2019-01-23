@@ -2,7 +2,6 @@ import React from 'react';
 import Select from '@bufferapp/ui/Select';
 import { Flag } from '@bufferapp/ui/Icon';
 
-
 /** With Search */
 export default function ExampleSelectWithSearch() {
   return (

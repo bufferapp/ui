@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 import { includes, some } from 'lodash';
 import helper from 'immutability-helper';
 import {
-  Wrapper, SelectStyled, SelectItems, Arrow, SelectItemDivider,
+  Wrapper,
+  SelectStyled,
+  SelectItems,
+  Arrow,
+  SelectItemDivider,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
@@ -29,15 +33,17 @@ export default class Select extends React.Component {
     document.addEventListener('click', this.closePopover, true);
 
     // catch the keypress to move the selected items up or down
-    this.selectNode && this.selectNode.addEventListener('keydown', this.keyDownPressed);
+    this.selectNode &&
+      this.selectNode.addEventListener('keydown', this.keyDownPressed);
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true);
-    this.selectNode && this.selectNode.removeEventListener('keydown', this.keyDownPressed);
+    this.selectNode &&
+      this.selectNode.removeEventListener('keydown', this.keyDownPressed);
   }
 
-  keyDownPressed = (e) => {
+  keyDownPressed = e => {
     const { shortcutsEnabled } = this.props;
     if (!shortcutsEnabled) return;
 
@@ -62,7 +68,7 @@ export default class Select extends React.Component {
   };
 
   // Close the popover
-  closePopover = (e) => {
+  closePopover = e => {
     if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
     const { isOpen } = this.state;
 
@@ -80,13 +86,14 @@ export default class Select extends React.Component {
 
     const selectedIndex = items.findIndex(x => x.selected === true);
 
-    const deselectItems = !multiSelect && selectedIndex > -1
-      ? helper(items, {
-        [selectedIndex]: {
-          selected: { $set: false },
-        },
-      })
-      : items;
+    const deselectItems =
+      !multiSelect && selectedIndex > -1
+        ? helper(items, {
+            [selectedIndex]: {
+              selected: { $set: false },
+            },
+          })
+        : items;
 
     const optionIndex = deselectItems.findIndex(x => x.id === option.id);
 
@@ -95,15 +102,15 @@ export default class Select extends React.Component {
       items:
         optionIndex > -1
           ? helper(deselectItems, {
-            [optionIndex]: {
-              selected: { $set: !option.selected },
-            },
-          })
+              [optionIndex]: {
+                selected: { $set: !option.selected },
+              },
+            })
           : items,
     });
   };
 
-  onClick = (e) => {
+  onClick = e => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
   };
@@ -120,7 +127,11 @@ export default class Select extends React.Component {
     const { hoveredItem } = this.state;
     const itemsLength = items.length;
 
-    for (let i = hoveredItem - 1; i < itemsLength && itemsLength > 0 && i >= 0; i -= 1) {
+    for (
+      let i = hoveredItem - 1;
+      i < itemsLength && itemsLength > 0 && i >= 0;
+      i -= 1
+    ) {
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength });
         break;
@@ -138,7 +149,7 @@ export default class Select extends React.Component {
         {
           hoveredItem: 0,
         },
-        () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items),
+        () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items)
       );
     } else {
       this.updateHoveredItemPosition(hoveredItem, itemsLength, items);
@@ -152,7 +163,15 @@ export default class Select extends React.Component {
   };
 
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
-    for (let i = hoveredItem + 1; i < itemsLength && itemsLength > 0 && i > 0; i += 1) {
+    for (
+      let i = hoveredItem + 1;
+      i < itemsLength && itemsLength > 0 && i > 0;
+      i += 1
+    ) {
+      if (items[i] === itemsLength) {
+        this.setState({ hoveredItem: 0 });
+        break;
+      }
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength });
         break;
@@ -160,12 +179,12 @@ export default class Select extends React.Component {
     }
   };
 
-  onSearchChange = (searchValue) => {
+  onSearchChange = searchValue => {
     const { items, keyMap } = this.props;
     const searchFiled = keyMap ? keyMap.title : 'title';
 
-    const filteredItems = items.filter(
-      item => includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase()),
+    const filteredItems = items.filter(item =>
+      includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase())
     );
     this.setState({
       items: filteredItems,
@@ -178,7 +197,13 @@ export default class Select extends React.Component {
 
   renderSelectButton = () => {
     const {
-      isSplit, customButton, type, size, disabled, icon, label,
+      isSplit,
+      customButton,
+      type,
+      size,
+      disabled,
+      icon,
+      label,
     } = this.props;
     const { items } = this.state;
 
@@ -189,7 +214,9 @@ export default class Select extends React.Component {
           disabled={disabled}
           onClick={!disabled ? this.onButtonClick : undefined}
         >
-          <ChevronDown color={type === 'primary' && !disabled ? 'white' : 'grayDark'} />
+          <ChevronDown
+            color={type === 'primary' && !disabled ? 'white' : 'grayDark'}
+          />
         </ButtonSelect>
       );
     }
@@ -213,19 +240,23 @@ export default class Select extends React.Component {
 
   renderSelectPopup = () => {
     const {
-      position, hasSearch, customButton, keyMap, searchPlaceholder,
+      position,
+      hasSearch,
+      customButton,
+      keyMap,
+      searchPlaceholder,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
     return (
       <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
         {hasSearch && (
-        <div ref={node => this.searchInputNode = node}>
-          <Search
-            onChange={this.onSearchChange}
-            placeholder={searchPlaceholder}
-          />
-        </div>
+          <div ref={node => (this.searchInputNode = node)}>
+            <Search
+              onChange={this.onSearchChange}
+              placeholder={searchPlaceholder}
+            />
+          </div>
         )}
         <SelectItems>
           {items.map((item, idx) => [
@@ -255,11 +286,13 @@ export default class Select extends React.Component {
         onKeyUp={this.onClick}
         tabIndex={0}
         isSplit={isSplit}
-        ref={selectNode => this.selectNode = selectNode}
+        ref={selectNode => (this.selectNode = selectNode)}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
-        {!customButton && <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />}
+        {!customButton && (
+          <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
+        )}
       </Wrapper>
     );
   }
@@ -280,7 +313,7 @@ Select.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
-    }),
+    })
   ).isRequired,
 
   /** Is the Select component part of the Split Button */

@@ -1,8 +1,8 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react", "prettier"
   ],
   "env": {
     "browser": true,
@@ -18,6 +18,7 @@
         ]
       }
     ],
+    "prettier/prettier": ["error"],
     "consistent-return": 0,
     "func-names": 0,
     "max-len": 0,
