@@ -1,12 +1,12 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp } from '@bufferapp/ui/Icon';
 import helper from 'immutability-helper';
 
-const SidebarWrapper = style.div`
+const SidebarWrapper = styled.div`
     z-index: 15;
     flex: 0 0 auto;
     background: #F5F7F9;
@@ -18,7 +18,7 @@ const SidebarWrapper = style.div`
     border-right: 1px solid #E6ECF1;
 `;
 
-const SidebarList = style.ul`
+const SidebarList = styled.ul`
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ const SidebarList = style.ul`
     margin-top: 32px;
 `;
 
-const SidebarListItem = style.li`
+const SidebarListItem = styled.li`
     text-decoration: none;
     color: #5C6975;
     margin-left: 0px;
@@ -54,7 +54,7 @@ const SidebarListItem = style.li`
     }
 `;
 
-const SidebarListItemLink = style(Link)`
+const SidebarListItemLink = styled(Link)`
     text-decoration: none;
     position: relative;
     display: flex;
@@ -69,13 +69,13 @@ const SidebarListItemLink = style(Link)`
   
 `;
 
-const IconDown = style(ChevronDown)`
+const IconDown = styled(ChevronDown)`
   margin-left: auto;
   padding: 7px 14px 0px 10px;
   cursor: pointer;
 `;
 
-const IconUp = style(ChevronUp)`
+const IconUp = styled(ChevronUp)`
   margin-left: auto;
   padding: 13px 10px 0px 10px;
   cursor: pointer;

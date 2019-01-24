@@ -6,7 +6,7 @@ import {
 import NavBarMenu from '@bufferapp/ui/NavBar';
 
 
-/** Menu Select */
+/** With Custom Component */
 export default function ExampleSelectMenu() {
   return (
     <Select

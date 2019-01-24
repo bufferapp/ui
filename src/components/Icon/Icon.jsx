@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import * as Styles from './style';
 
-const IconStyled = style.svg`  
+const IconStyled = styled.svg`  
   ${Styles.base};
   ${props => Styles[props.size]};
   ${props => Styles[props.isChevron ? 'chevron' : null]};
 `;
 
-const GroupStyled = style.g`  
+const GroupStyled = styled.g`  
   ${props => Styles[`${props.color}Group`]};
 `;
 

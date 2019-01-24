@@ -3,10 +3,143 @@
 exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "hasSelectedItems" is set to: "false" 1`] = `
 <ForwardRef
   hovered={true}
-  onClick={[MockFunction]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <ForwardRef>
-    <ForwardRef />
+    <ForwardRef
+      hovered={true}
+    />
     <ForwardRef
       moveRight={false}
     />
@@ -17,10 +150,100 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
 exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "hovered" is set to: "false" 1`] = `
 <ForwardRef
   hovered={false}
-  onClick={[MockFunction]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <ForwardRef>
-    <ForwardRef />
+    <ForwardRef
+      hovered={false}
+    />
     <ForwardRef
       moveRight={true}
     />
@@ -31,10 +254,65 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
 exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props 1`] = `
 <ForwardRef
   hovered={true}
-  onClick={[MockFunction]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <ForwardRef>
-    <ForwardRef />
+    <ForwardRef
+      hovered={true}
+    />
     <ForwardRef
       moveRight={true}
     />
@@ -44,7 +322,33 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
 
 exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only required props 1`] = `
 <ForwardRef
-  onClick={[MockFunction]}
+  onClick={
+    [MockFunction] {
+      "calls": Array [
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+      ],
+      "results": Array [
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+      ],
+    }
+  }
 >
   <ForwardRef>
     <ForwardRef />

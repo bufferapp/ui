@@ -1,5 +1,5 @@
 import React from 'react';
-import style from 'styled-components';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import MarkdownToJsx from 'markdown-to-jsx';
 import LinkCard from './components/LinkCard';
@@ -8,7 +8,7 @@ import InfoCard from './components/InfoCard';
 import LinkItem from './components/LinkItem';
 import ColorCopy from './components/ColorCopy';
 
-const LinkWrapper = style.div`
+const LinkWrapper = styled.div`
     width: 100%;
     display: grid;
     grid-template-columns: calc(50% - 8px) calc(50% - 8px);
@@ -21,13 +21,13 @@ const LinkWrapper = style.div`
     background: #ffffff;
 `;
 
-const Paragraph = style.p`
+const Paragraph = styled.p`
     font-size: 16px;
     line-height: 1.625;
     font-weight: 400;
     `;
 
-const ColorRow = style.div`
+const ColorRow = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -35,7 +35,7 @@ const ColorRow = style.div`
     margin-bottom: 20px;
 `;
 
-const ColorColumn = style.div`
+const ColorColumn = styled.div`
     display: flex;
     align-items: center;
     flex-wrap: wrap;
@@ -44,7 +44,7 @@ const ColorColumn = style.div`
     flex-grow: 1;
 `;
 
-const CodeBlock = style.pre`
+const CodeBlock = styled.pre`
     counter-reset: line 0;
     font-family: "Source Code Pro", Menlo, monospace;
     font-size: 85%;
@@ -61,7 +61,7 @@ const CodeBlock = style.pre`
  * The images in the Markdown docs are retina (@2x) size
  * so we scale them to half so they appear correctly.
  */
-const Img = style.img`
+const Img = styled.img`
   zoom: 0.5;
 `;
 

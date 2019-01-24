@@ -1,28 +1,28 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import * as Styles from './style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Select from '../Select/Select';
 
-export const ButtonStyled = style.button`
+export const ButtonStyled = styled.button`
   ${Styles.ButtonBase};
   ${props => Styles[props.size]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
   ${props => Styles[props.fullWidth ? 'fullWidth' : '']}
 `;
 
-const Loading = style.img`
+const Loading = styled.img`
   width: 24px;
   margin-left: 10px;
 `;
 
-const VisuallyHiddenLabel = style.span`
+const VisuallyHiddenLabel = styled.span`
   position: absolute; 
   overflow: hidden; 
   clip: rect(0 0 0 0); 
   height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0; nom 
+  margin: -1px; padding: 0; border: 0;  
 `;
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
