@@ -15,7 +15,7 @@ describe('SearchComponent component', () => {
         onMoveDown={() => true}
         onAddItem={() => true}
         onClose={() => true}
-        placeholder={'Search'}
+        placeholder="Search"
       />
     );
     const instance = wrapper.instance();
