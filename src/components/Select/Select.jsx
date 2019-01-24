@@ -70,12 +70,12 @@ export default class Select extends React.Component {
   // Close the popover
   closePopover = e => {
     if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
-    const { isOpen} = this.state;
+    const { isOpen } = this.state;
 
     if (isOpen) {
       this.setState({
         isOpen: false,
-        hoveredItem: undefined
+        hoveredItem: undefined,
       });
     }
   };
@@ -135,7 +135,10 @@ export default class Select extends React.Component {
     ) {
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength });
-        this.scrollToItem(this.itemsNode, document.getElementById(this.getItemId(items[i])))
+        this.scrollToItem(
+          this.itemsNode,
+          document.getElementById(this.getItemId(items[i]))
+        );
         break;
       }
     }
@@ -161,7 +164,10 @@ export default class Select extends React.Component {
   onAddItem = () => {
     const { onSelectClick } = this.props;
     const { items, hoveredItem } = this.state;
-    onSelectClick(items[hoveredItem]);
+    const selectedItem = items[hoveredItem];
+    selectedItem.onItemClick
+      ? selectedItem.onItemClick(selectedItem)
+      : onSelectClick(items[hoveredItem]);
   };
 
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
@@ -170,45 +176,49 @@ export default class Select extends React.Component {
       i <= itemsLength && itemsLength > 0 && i > 0;
       i += 1
     ) {
-      if (i  === itemsLength) {
+      if (i === itemsLength) {
         this.setState({ hoveredItem: 0 });
-        this.scrollToItem(this.itemsNode, document.getElementById(this.getItemId(items[i])))
+        this.scrollToItem(
+          this.itemsNode,
+          document.getElementById(this.getItemId(items[i]))
+        );
         break;
       }
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength });
-        this.scrollToItem(this.itemsNode, document.getElementById(this.getItemId(items[i])))
+        this.scrollToItem(
+          this.itemsNode,
+          document.getElementById(this.getItemId(items[i]))
+        );
         break;
       }
-
-
     }
   };
 
   scrollToItem = (parent, child) => {
-    if(!parent || !child) return;
+    if (!parent || !child) return;
 
     // Where is the parent on page
     const parentRect = parent.getBoundingClientRect();
     // What can you see?
     const parentViewableArea = {
       height: parent.clientHeight,
-      width: parent.clientWidth
+      width: parent.clientWidth,
     };
 
     // Where is the child
     const childRect = child.getBoundingClientRect();
     // Is the child viewable?
-    const isViewable = (childRect.top >= parentRect.top) && (childRect.top <= parentRect.top + parentViewableArea.height);
+    const isViewable =
+      childRect.top >= parentRect.top &&
+      childRect.top <= parentRect.top + parentViewableArea.height;
 
     // if you can't see the child try to scroll parent
     if (!isViewable) {
       // scroll by offset relative to parent
-      parent.scrollTop = (childRect.top + parent.scrollTop) - parentRect.top
+      parent.scrollTop = childRect.top + parent.scrollTop - parentRect.top;
     }
-
-
-  }
+  };
 
   onSearchChange = searchValue => {
     const { items, keyMap } = this.props;
@@ -226,10 +236,10 @@ export default class Select extends React.Component {
     this.setState({ isOpen: false });
   };
 
-  getItemId = (item) => {
-    if(!item) return;
+  getItemId = item => {
+    if (!item) return;
     const { keyMap } = this.props;
-    return item[keyMap ? keyMap.id : 'id']
+    return item[keyMap ? keyMap.id : 'id'];
   };
 
   renderSelectButton = () => {
@@ -295,7 +305,7 @@ export default class Select extends React.Component {
             />
           </div>
         )}
-        <SelectItems ref={itemsNode => this.itemsNode = itemsNode}>
+        <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
           {items.map((item, idx) => [
             item.hasDivider && <SelectItemDivider />,
             <SelectItem
