@@ -13,7 +13,7 @@ const ChevronDown = ({
 
 ChevronDown.propTypes = {
   size: PropTypes.oneOf(['small', 'medium', 'large']),
-  color: PropTypes.oneOf(['white', 'grayDark', 'gray']),
+  color: PropTypes.oneOf(['white', 'grayDark', 'gray', 'grayLight']),
   isChevron: PropTypes.bool,
   className: PropTypes.string,
   onClick: PropTypes.func,

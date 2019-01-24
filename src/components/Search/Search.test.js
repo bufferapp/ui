@@ -8,7 +8,16 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('SearchComponent component', () => {
   it('onChange: should update state', () => {
-    const wrapper = shallow(<Search onChange={() => true} onMoveUp={() => true} onMoveDown={() => true} onAddItem={() => true} onClose={() => true} />);
+    const wrapper = shallow(
+      <Search
+        onChange={() => true}
+        onMoveUp={() => true}
+        onMoveDown={() => true}
+        onAddItem={() => true}
+        onClose={() => true}
+        placeholder={'Search'}
+      />
+    );
     const instance = wrapper.instance();
     const event = {
       target: {

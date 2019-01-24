@@ -137,7 +137,9 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
   }
 >
   <ForwardRef>
-    <ForwardRef />
+    <ForwardRef
+      hovered={true}
+    />
     <ForwardRef
       moveRight={false}
     />
@@ -239,7 +241,9 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
   }
 >
   <ForwardRef>
-    <ForwardRef />
+    <ForwardRef
+      hovered={false}
+    />
     <ForwardRef
       moveRight={true}
     />
@@ -306,7 +310,9 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
   }
 >
   <ForwardRef>
-    <ForwardRef />
+    <ForwardRef
+      hovered={true}
+    />
     <ForwardRef
       moveRight={true}
     />

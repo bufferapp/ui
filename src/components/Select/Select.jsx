@@ -288,7 +288,7 @@ export default class Select extends React.Component {
     return (
       <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
         {hasSearch && (
-          <div ref={node => (this.searchInputNode = node)}>
+          <div id="searchInput" ref={node => (this.searchInputNode = node)}>
             <Search
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}

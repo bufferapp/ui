@@ -22,7 +22,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     isOpen={false}
     position="top"
   >
-    <div>
+    <div
+      id="searchInput"
+    >
       <Search
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
@@ -75,7 +77,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     isOpen={false}
     position="top"
   >
-    <div>
+    <div
+      id="searchInput"
+    >
       <Search
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
@@ -164,7 +168,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     isOpen={false}
     position="top"
   >
-    <div>
+    <div
+      id="searchInput"
+    >
       <Search
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
@@ -216,7 +222,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     isOpen={false}
     position="top"
   >
-    <div>
+    <div
+      id="searchInput"
+    >
       <Search
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
@@ -268,7 +276,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     isOpen={false}
     position="top"
   >
-    <div>
+    <div
+      id="searchInput"
+    >
       <Search
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
@@ -320,7 +330,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     isOpen={false}
     position="top"
   >
-    <div>
+    <div
+      id="searchInput"
+    >
       <Search
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
