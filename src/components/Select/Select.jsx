@@ -165,7 +165,7 @@ export default class Select extends React.Component {
     const { onSelectClick } = this.props;
     const { items, hoveredItem } = this.state;
     const selectedItem = items[hoveredItem];
-    selectedItem.onItemClick
+    selectedItem && selectedItem.onItemClick
       ? selectedItem.onItemClick(selectedItem)
       : onSelectClick(items[hoveredItem]);
   };
