@@ -35,7 +35,7 @@ export const SelectStyled = styled.div`
 `;
 
 export const SelectItems = styled.ul`
-    max-height: 130px;
+    max-height: 135px;
     overflow-y: auto;
     padding-bottom: 10px;
     padding-top: 10px;

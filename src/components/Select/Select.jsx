@@ -70,11 +70,12 @@ export default class Select extends React.Component {
   // Close the popover
   closePopover = e => {
     if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
-    const { isOpen } = this.state;
+    const { isOpen} = this.state;
 
     if (isOpen) {
       this.setState({
         isOpen: false,
+        hoveredItem: undefined
       });
     }
   };

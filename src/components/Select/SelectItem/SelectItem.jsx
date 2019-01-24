@@ -11,7 +11,7 @@ const SelectItem = ({
   <SelectItemStyled onClick={item.onItemClick || onClick} hovered={hovered} id={getItemId(item)}>
     <SelectItemLabel>
       {item.selected && <Flag color="gray" />}
-      <SelectItemIcon>
+      <SelectItemIcon hovered={hovered}>
         {item.component}
       </SelectItemIcon>
       <SelectItemTitle moveRight={hasSelectedItems && !item.selected}>

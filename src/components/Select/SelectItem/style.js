@@ -37,11 +37,15 @@ export const SelectItemLabel = styled.div`
 `;
 
 export const SelectItemIcon = styled.div`
+  svg {
+     fill: ${props => (props.hovered ? white : grayDark)};
+  }
   ${SelectItemStyled}:hover & * {
     color: ${white};
+    fill: ${white}
   }
 `;
 
 export const SelectItemTitle = styled.div`
-  margin-left: ${props => (props.moveRight ? '22px' : '5px')};
+  margin-left: ${props => (props.moveRight ? '22px' : '10px')};
 `;
