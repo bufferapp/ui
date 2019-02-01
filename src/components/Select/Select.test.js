@@ -125,6 +125,17 @@ describe('SomeComponent component', () => {
         },
       ],
     });
+    wrapper.setProps({
+      hoveredItem: 0,
+      items: [
+        {
+          id: '1', title: 'Testing',
+        },
+        {
+          id: '2', title: '123',
+        },
+      ],
+    });
     instance.onMoveDown();
     expect(wrapper.state().hoveredItem).toBe(1);
   });
@@ -133,6 +144,17 @@ describe('SomeComponent component', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     wrapper.setState({
+      hoveredItem: 1,
+      items: [
+        {
+          id: '1', title: 'Testing',
+        },
+        {
+          id: '2', title: '123',
+        },
+      ],
+    });
+    wrapper.setProps({
       hoveredItem: 1,
       items: [
         {
