@@ -1,10 +1,7 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
-import {
-  Person, People, Gear, ArrowLeft,
-} from '@bufferapp/ui/Icon';
+import { Person, People, Gear, ArrowLeft } from '@bufferapp/ui/Icon';
 import NavBarMenu from '@bufferapp/ui/NavBar';
-
 
 /** With Custom Component */
 export default function ExampleSelectMenu() {
@@ -18,31 +15,30 @@ export default function ExampleSelectMenu() {
           }}
           onClick={onButtonClick}
         />
-      )
-      }
+      )}
       items={[
         {
           id: '1',
           title: 'Account',
-          component: <Person color="gray" />,
+          icon: <Person color="gray" />,
           onItemClick: () => console.info('Account Clicked'),
         },
         {
           id: '2',
           title: 'Organization',
-          component: <People color="gray" />,
+          icon: <People color="gray" />,
           onItemClick: () => console.info('Organization Clicked'),
         },
         {
           id: '3',
           title: 'Settings',
-          component: <Gear color="gray" />,
+          icon: <Gear color="gray" />,
           onItemClick: () => console.info('Settings Clicked'),
         },
         {
           id: '3',
           title: 'Logout',
-          component: <ArrowLeft color="gray" />,
+          icon: <ArrowLeft color="gray" />,
           hasDivider: true,
           onItemClick: () => console.info('Logout Clicked'),
         },
