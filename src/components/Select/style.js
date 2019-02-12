@@ -47,6 +47,7 @@ export const SelectItems = styled.ul`
     margin-block-end: 0px;
     padding-inline-start: 0px;
     border-radius: 4px;
+    list-style: none;
 `;
 
 export const Arrow = styled.div`

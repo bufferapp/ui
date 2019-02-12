@@ -9,7 +9,9 @@ export default class Search extends React.Component {
   };
 
   componentDidMount() {
-    this.inputRef.focus();
+    if (this.inputRef) {
+      this.inputRef.focus();
+    }
   }
 
   onChange = (event) => {
@@ -45,8 +47,12 @@ export default class Search extends React.Component {
 
 Search.propTypes = {
   /** Search placeholder */
-  placeholder: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
 
   /** Function to call on search input change */
   onChange: PropTypes.func.isRequired,
 };
+
+Search.defaultProps = {
+  placeholder: '',
+}

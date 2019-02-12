@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only required props 1`] = `
+<ForwardRef>
+  <NavBar
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "menuItems": Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <ForwardRef>
+    <ForwardRef>
+      <mockConstructor />
+    </ForwardRef>
+    <ForwardRef>
+      <mockConstructor />
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
+`;

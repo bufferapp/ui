@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Flag from '@bufferapp/ui/Icon/Icons/Flag';
+import { Flag } from '../../Icon';
 import {
   SelectItemStyled, SelectItemLabel, SelectItemIcon, SelectItemTitle,
 } from './style';

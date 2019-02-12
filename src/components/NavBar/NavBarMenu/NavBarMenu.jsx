@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ChevronDown from '@bufferapp/ui/Icon/Icons/ChevronDown';
+import { ChevronDown } from '../../Icon';
 import {
   NavBarStyled, NavBarEmail, NavBarName, NavBarUser, NavBarAvatar, NavBarChavron,
 } from './style';

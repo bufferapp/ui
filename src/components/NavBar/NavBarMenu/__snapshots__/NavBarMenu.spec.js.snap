@@ -16,7 +16,7 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only requ
   <ForwardRef
     onClick={[MockFunction]}
   >
-    <ChevronDown
+    <ChevronDownIcon
       color="grayLight"
       size="large"
     />

@@ -316,7 +316,7 @@ export default class Select extends React.Component {
         )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
           {items.map((item, idx) => (
-            <Fragment key={item[keyMap ? keyMap.id : 'id']}>
+            <Fragment key={(item[keyMap ? keyMap.id : 'id']) || `id-${idx}`}>
               {item.hasDivider && <SelectItemDivider />}
               <SelectItem
                 hovered={hoveredItem === idx}

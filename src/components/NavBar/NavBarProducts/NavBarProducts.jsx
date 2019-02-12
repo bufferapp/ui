@@ -2,15 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import IconPublish from '@bufferapp/ui/Icon/Icons/Plus';
-import IconAnalyze from '@bufferapp/ui/Icon/Icons/Compare';
-import IconReply from '@bufferapp/ui/Icon/Icons/Message';
+import IconPublish from '../../Icon/Icons/Plus';
+import IconAnalyze from '../../Icon/Icons/Compare';
+import IconReply from '../../Icon/Icons/Message';
 
 import { gray } from '../../style/colors';
-// import BufferLogo from './BufferLogo';
-// import Select from '../Select';
-// import NavBarMenu from './NavBarMenu/NavBarMenu';
-import { /* fontSize, */ fontWeightMedium } from '../../style/fonts';
+import { fontWeightMedium } from '../../style/fonts';
 
 const StlyedNavBarProduct = styled.nav`
   display: flex;
