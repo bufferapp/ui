@@ -1,71 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
-<ForwardRef
-  keyMap={
-    Object {
-      "addItem": "enter",
-      "close": "esc",
-      "moveDown": "down",
-      "moveUp": "up",
-    }
-  }
->
-  <ForwardRef
-    onChange={[Function]}
-    placeholder="jest-auto-snapshots String Fixture"
-    type="text"
-    value=""
-  />
-</ForwardRef>
-`;
-
-exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`] = `
-<ForwardRef
-  handlers={
-    Object {
-      "addItem": [Function],
-      "close": [Function],
-    }
-  }
-  keyMap={
-    Object {
-      "addItem": "enter",
-      "close": "esc",
-      "moveDown": "down",
-      "moveUp": "up",
-    }
-  }
->
-  <ForwardRef
-    onChange={[Function]}
-    placeholder="jest-auto-snapshots String Fixture"
-    type="text"
-    value=""
-  />
-</ForwardRef>
-`;
-
 exports[`jest-auto-snapshots > Search Matches snapshot when passed only required props 1`] = `
-<ForwardRef
-  handlers={
-    Object {
-      "addItem": [Function],
-      "close": [Function],
-    }
-  }
-  keyMap={
-    Object {
-      "addItem": "enter",
-      "close": "esc",
-      "moveDown": "down",
-      "moveUp": "up",
-    }
-  }
->
+<ForwardRef>
   <ForwardRef
     onChange={[Function]}
-    placeholder="Search"
+    placeholder="jest-auto-snapshots String Fixture"
     type="text"
     value=""
   />

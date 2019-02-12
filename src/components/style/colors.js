@@ -5,6 +5,7 @@ export const purple = '#9C2BFF';
 export const pink = '#D925AC';
 export const teal = '#00C8CF';
 export const red = '#E0364F';
+export const redLight = '#FDF2F4';
 export const orange = '#FF702C';
 export const yellow = '#FADE2A';
 export const green = '#87C211';

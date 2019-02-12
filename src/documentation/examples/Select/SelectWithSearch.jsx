@@ -2,8 +2,7 @@ import React from 'react';
 import Select from '@bufferapp/ui/Select';
 import { Flag } from '@bufferapp/ui/Icon';
 
-
-/** Select with Search */
+/** With Search */
 export default function ExampleSelectWithSearch() {
   return (
     <Select
@@ -13,10 +12,16 @@ export default function ExampleSelectWithSearch() {
       icon={<Flag color="white" />}
       onSearchChange={() => true}
       type="primary"
+      disabled
+      searchPlaceholder="Search items..."
+      keyMap={{
+        id: '_id',
+        title: 'name',
+      }}
       items={[
-        { id: '1', title: 'Open' },
-        { id: '2', title: 'Pending' },
-        { id: '3', title: 'Closed' },
+        { _id: '1', name: 'Open' },
+        { _id: '2', name: 'Pending' },
+        { _id: '3', name: 'Closed' },
       ]}
     />
   );

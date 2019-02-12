@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
 import MarkdownToJsx from 'markdown-to-jsx';
+import styled from 'styled-components';
 import Markdown from './layout/content/Markdown';
 import Sidebar from './layout/sidebar/Sidebar';
 import Component from './layout/content/Component';
@@ -11,7 +11,7 @@ import documentationData from '../../../config/documentsData';
 import NavBar from './layout/navbar/NavBar';
 import UIComponent from '../markdown/UI.md';
 
-const Container = style.div`
+const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   color: #242A31;
@@ -20,12 +20,12 @@ const Container = style.div`
   flex-direction: column;
 `;
 
-const Wrapper = style.div`
+const Wrapper = styled.div`
   display: flex;
   max-height: calc(100vh - 100px);
 `;
 
-const PageLayout = style.div`
+const PageLayout = styled.div`
   padding: 60px 88px;
   display: block;
   width: 100%;

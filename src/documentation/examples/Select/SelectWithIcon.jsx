@@ -3,7 +3,7 @@ import Select from '@bufferapp/ui/Select';
 import { Person } from '@bufferapp/ui/Icon';
 
 
-/** Basic Select */
+/** With Icon */
 export default function ExampleSelect() {
   return (
     <Select

@@ -1,4 +1,4 @@
-import style from 'styled-components';
+import styled from 'styled-components';
 import {
   blue, grayDarker, white,
 } from '../../style/colors';
@@ -24,7 +24,7 @@ export const SelectItemStyled = style.li`
 `;
 
 
-export const SelectItemLabel = style.div`
+export const SelectItemLabel = styled.div`
     font-size: ${fontSize};
     font-weight: ${fontWeightMedium};
     min-width: 0;
@@ -38,11 +38,15 @@ export const SelectItemLabel = style.div`
 
 export const SelectItemIcon = style.div`
   padding-right: 4px;
+  svg {
+     fill: ${props => (props.hovered ? white : grayDark)};
+  }
   ${SelectItemStyled}:hover & * {
     color: ${white};
+    fill: ${white}
   }
 `;
 
-export const SelectItemTitle = style.div`
-  margin-left: ${props => (props.moveRight ? '22px' : '5px')};
+export const SelectItemTitle = styled.div`
+  margin-left: ${props => (props.moveRight ? '22px' : '10px')};
 `;

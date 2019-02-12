@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
-const CardWrapper = style(Link)`
+const CardWrapper = styled(Link)`
     position: relative;
     display: flex;
     flex-direction: row;
@@ -29,13 +29,13 @@ const CardWrapper = style(Link)`
     }
 `;
 
-const CardBody = style.div`
+const CardBody = styled.div`
   background: #ffffff;
   flex: 1;
   padding: 16px;
 `;
 
-const CardTitle = style.h3`
+const CardTitle = styled.h3`
   font-size: 16px;
   line-height: 1.5;
   font-weight: 500;

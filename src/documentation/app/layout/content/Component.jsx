@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import Example from './components/Example';
 import Props from './components/Props';
 import Heading from './components/Heading';
 
-const Wrapper = style.div`
+const Wrapper = styled.div`
     margin: 0px;
     padding: 0px;
     flex: 1 1 auto;
@@ -17,32 +17,32 @@ const Wrapper = style.div`
     padding-bottom: 64px;
 `;
 
-const Container = style.div`
+const Container = styled.div`
     flex: 1 1 auto;
     min-width: 0px;
     display: flex;
     position: relative;
 `;
 
-const Body = style.div`
+const Body = styled.div`
     display: block;
     padding: 0px;
     flex: 1 1 auto;
 `;
 
 
-const Description = style.p`
+const Description = styled.p`
     font-size: 14px;
     line-height: 24px;
     margin-bottom: 40px;
 `;
 
-const PropTitle = style.h3`
+const PropTitle = styled.h3`
     margin-top: 50px;
     font-size: 24px;
 `;
 
-const ExampleWrapper = style.div`
+const ExampleWrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     align-items: end;

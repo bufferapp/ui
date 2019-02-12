@@ -8,5 +8,6 @@ export const fontWeightLight = 300;
 export const fontWeight = 400; // Normal
 export const fontWeightMedium = 500;
 export const fontWeightSemiBold = 600;
+export const fontWeightBold = 700;
 
 export const lineHeight = 1.5;

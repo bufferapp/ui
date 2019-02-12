@@ -1,9 +1,9 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 
-const CardWrapper = style.div`
+const CardWrapper = styled.div`
     display: block;
     position: relative;
     background-color: rgb(245, 247, 249);
@@ -14,11 +14,11 @@ const CardWrapper = style.div`
     border-color: ${props => (props.color === 'green' ? '#26cb7c' : props.color === 'red' ? '#ff504b' : '#f77d05')}
 `;
 
-const CardIcon = style.div`
+const CardIcon = styled.div`
   color: ${props => (props.color === 'green' ? '#26cb7c' : props.color === 'red' ? '#ff504b' : '#f77d05')}
 `;
 
-const CardTitle = style.div`
+const CardTitle = styled.div`
   font-size: 16px;  
   position: relative;
   margin: 0px;
@@ -27,7 +27,7 @@ const CardTitle = style.div`
   font-weight 700;
 `;
 
-const CardDescription = style.p`
+const CardDescription = styled.p`
   font-size: 14px;
 `;
 

@@ -19,7 +19,7 @@ const SidebarWrapper = styled.div`
 `;
 
 const SidebarList = styled.ul`
-    list-styled: none;
+    list-style: none;
     display: flex;
     flex-direction: column;
     display: block;

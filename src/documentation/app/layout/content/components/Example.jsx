@@ -1,9 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import CodeExample from './CodeExample';
 
-const Wrapper = style.div`
+const Wrapper = styled.div`
+  padding: 5px 25px;
+  background: #f6f7f9;
+  border: 1px solid #e6ecf1;
+  border-radius: 2px;
   margin-bottom: 20px;
   min-width: 40%;
   flex: 1;
@@ -13,17 +17,17 @@ const Wrapper = style.div`
   border-top: 1px solid #f3f3f3;
 `;
 
-const CodeButton = style.a`
-  color: #4c5682a6;
+const CodeButton = styled.a`
+  color: #2c4bff;
   padding-top: 10px;
   font-size: 12px;
   display: flex;
   justify-content: end;
   cursor: pointer;
-  font-weight 500;
+  font-weight: 500;
 `;
 
-const Title = style.div`
+const Title = styled.div`
     font-size: 16px;
     font-weight: 600;
     margin-block-start: 1.33em;
