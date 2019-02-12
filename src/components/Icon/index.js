@@ -5,6 +5,7 @@ export ArrowUp from './Icons/ArrowUp';
 export Attach from './Icons/Attach';
 export Camera from './Icons/Camera';
 export ChartLine from './Icons/ChartLine';
+export Checkmark from './Icons/Checkmark';
 export ChevronDown from './Icons/ChevronDown';
 export ChevronUp from './Icons/ChevronUp';
 export Clock from './Icons/Clock';
