@@ -257,7 +257,8 @@ function optimizeSvgs(icons) {
 }
 
 function generateReactIconIndex(icons) {
-  const indexContent = icons.map(name => `export ${name} from './Icons/${name}';`).join('\n');
+  const sortedIcons = [...icons].sort();
+  const indexContent = sortedIcons.map(name => `export ${name} from './Icons/${name}';`).join('\n');
   const pathToIndex = path.join(pathToIconComponents, 'index.js');
   fs.writeFileSync(pathToIndex, `${indexContent}\n`);
 }
