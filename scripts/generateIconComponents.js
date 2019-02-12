@@ -20,7 +20,7 @@ const iconCachePath = path.join(__dirname, '../config/cachedIconData.json');
 const pathToIconComponents = path.join(__dirname, '../src/components/Icon');
 const pathToIconExamples = path.join(__dirname, '../src/documentation/examples/Icon');
 
-const figmaIconFileId = 'k8P3i3QzJHtcBIlpJcQ0Cl';
+const figmaIconFileId = 'D9T6BuWxbTVKhlDU8faZSQ9G';
 const figmaIconFileUrl = `https://www.figma.com/file/${figmaIconFileId}/`;
 
 const iconsToIgnore = [
