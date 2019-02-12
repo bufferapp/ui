@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Clock } from '@bufferapp/ui/Icon';
+import ClockIcon from '@bufferapp/ui/Icon/Icons/Clock';
 
 /** Clock */
-export default function IconExample() {
+export default function ClockIconExample() {
   return (
-    <Clock size="large" />
+    <ClockIcon size="large" />
   );
 }

@@ -13,6 +13,8 @@ const Wrapper = styled.div`
   flex: 1;
   margin-right: 20px;
   min-height: 135px;
+  max-width: 800px;
+  border-top: 1px solid #f3f3f3;
 `;
 
 const CodeButton = styled.a`
@@ -51,7 +53,7 @@ export default class Example extends React.Component {
 
   render() {
     const { showCode } = this.state;
-    const { example, componentName } = this.props;
+    const { example, componentName, fullscreen } = this.props;
     const {
       code, description, title, name,
     } = example;
@@ -63,6 +65,10 @@ export default class Example extends React.Component {
     const ExampleComponent = title
       ? require(`../../../../examples/${fileName}/${title}/${name}`).default
       : require(`../../../../examples/${fileName}/${name}`).default;
+
+    if (fullscreen) {
+      return <ExampleComponent />;
+    }
 
     return (
       <Wrapper>
@@ -81,10 +87,15 @@ export default class Example extends React.Component {
 }
 
 Example.propTypes = {
+  fullscreen: PropTypes.bool,
   example: PropTypes.shape({
     code: PropTypes.string,
     description: PropTypes.string,
     name: PropTypes.string,
   }).isRequired,
   componentName: PropTypes.string.isRequired,
+};
+
+Example.defaultProps = {
+  fullscreen: false,
 };

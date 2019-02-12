@@ -45,8 +45,10 @@ function App() {
 ReactDOM.render(<App />, document.querySelector('#app'));
 ```
 
+For usage instructions and how to add, update, and work with the components, see our [CONTRIBUTING.md](/CONTRIBUTING.md) doc!
 
-## Documentation
+
+## Component Documentation / Reference
 
 Check out our ➡️ [documentation website](https://bufferapp.github.io/ui/#Button).
 

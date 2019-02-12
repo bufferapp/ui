@@ -26,8 +26,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
     light={false}
     type="help"
   >
-    <Warning
-      color="grayDark"
+    <WarningIcon
       size="small"
     />
      jest-auto-snapshots String Fixture
@@ -92,8 +91,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
     light={false}
     type="help"
   >
-    <Warning
-      color="grayDark"
+    <WarningIcon
       size="small"
     />
      jest-auto-snapshots String Fixture

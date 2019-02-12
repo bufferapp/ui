@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Location } from '@bufferapp/ui/Icon';
+import LocationIcon from '@bufferapp/ui/Icon/Icons/Location';
 
 /** Location */
-export default function IconExample() {
+export default function LocationIconExample() {
   return (
-    <Location size="large" />
+    <LocationIcon size="large" />
   );
 }

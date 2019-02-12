@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Flag } from '@bufferapp/ui/Icon';
+import FlagIcon from '@bufferapp/ui/Icon/Icons/Flag';
 
 /** Flag */
-export default function IconExample() {
+export default function FlagIconExample() {
   return (
-    <Flag size="large" />
+    <FlagIcon size="large" />
   );
 }

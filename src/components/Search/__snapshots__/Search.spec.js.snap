@@ -1,10 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > Search Matches snapshot when passed only required props 1`] = `
+exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`] = `
 <ForwardRef>
   <ForwardRef
     onChange={[Function]}
     placeholder="jest-auto-snapshots String Fixture"
+    type="text"
+    value=""
+  />
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Search Matches snapshot when passed only required props 1`] = `
+<ForwardRef>
+  <ForwardRef
+    onChange={[Function]}
+    placeholder=""
     type="text"
     value=""
   />

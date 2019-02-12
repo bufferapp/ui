@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { More } from '@bufferapp/ui/Icon';
+import MoreIcon from '@bufferapp/ui/Icon/Icons/More';
 
 /** More */
-export default function IconExample() {
+export default function MoreIconExample() {
   return (
-    <More size="large" />
+    <MoreIcon size="large" />
   );
 }

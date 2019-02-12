@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Compare } from '@bufferapp/ui/Icon';
+import CompareIcon from '@bufferapp/ui/Icon/Icons/Compare';
 
 /** Compare */
-export default function IconExample() {
+export default function CompareIconExample() {
   return (
-    <Compare size="large" />
+    <CompareIcon size="large" />
   );
 }

@@ -1,8 +1,8 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
+import MarkdownToJsx from 'markdown-to-jsx';
 import styled from 'styled-components';
-import markdownToJsx from 'markdown-to-jsx';
 import Markdown from './layout/content/Markdown';
 import Sidebar from './layout/sidebar/Sidebar';
 import Component from './layout/content/Component';
@@ -40,22 +40,43 @@ const PageLayout = styled.div`
 export default class AppContainer extends React.Component {
   constructor(props) {
     super(props);
-    const { params } = props.match;
-    this.state = {
-      route: params.route,
-      location: params.location,
-    };
+
+    this.onKeyDown = this.onKeyDown.bind(this);
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { match } = this.props;
-    const { params } = nextProps.match;
-    if (params !== match.params) {
-      const { route, location } = params;
-      this.setState({
-        route,
-        location,
-      });
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDown);
+  }
+
+  /**
+   * Handle toggling /fullscreen mode
+   *
+   * @param {Event} event
+   */
+  onKeyDown(event) { // eslint-disable-line
+    const { history, location: { pathname } } = this.props;
+    // Ignore non-component paths (i.e., markdown docs)
+    if (pathname.indexOf('/ui/') < 0) {
+      return;
+    }
+    if (event.keyCode === 27) { // escape
+      if (pathname.endsWith('/fullscreen')) {
+        const newPath = `${pathname.replace('/fullscreen', '')}`;
+        history.push(newPath);
+      }
+    }
+    if (event.keyCode === 220 && !!event.shiftKey) { // Shift + \ (backslash)
+      let newPath = '/';
+      if (pathname.endsWith('/fullscreen')) {
+        newPath = `${pathname.replace('/fullscreen', '')}`;
+      } else {
+        newPath = `${pathname}/fullscreen`;
+      }
+      history.push(newPath);
     }
   }
 
@@ -72,10 +93,11 @@ export default class AppContainer extends React.Component {
     return links;
   };
 
-  renderMarkdownComponent = () => <markdownToJsx>{UIComponent}</markdownToJsx>
+  renderMarkdownComponent = () => <MarkdownToJsx>{UIComponent}</MarkdownToJsx>
+
 
   render() {
-    const { route, location } = this.state;
+    const { match: { params: { route, location, view } } } = this.props;
 
     const isUIRoot = location === 'ui' && route === 'ui';
 
@@ -99,6 +121,9 @@ export default class AppContainer extends React.Component {
     // based on the location and fileName we are currently requesting
     const PageComponent = page && require(`../markdown/${location}/${page.fileName}.md`);
 
+    if (view === 'fullscreen') {
+      return <Component component={component} fullscreen />;
+    }
 
     return (
       <Container>
@@ -117,6 +142,12 @@ export default class AppContainer extends React.Component {
 }
 
 AppContainer.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
       route: PropTypes.string.isRequired,

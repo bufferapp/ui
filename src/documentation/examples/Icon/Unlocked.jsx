@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Unlocked } from '@bufferapp/ui/Icon';
+import UnlockedIcon from '@bufferapp/ui/Icon/Icons/Unlocked';
 
 /** Unlocked */
-export default function IconExample() {
+export default function UnlockedIconExample() {
   return (
-    <Unlocked size="large" />
+    <UnlockedIcon size="large" />
   );
 }

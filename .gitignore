@@ -34,3 +34,6 @@ yarn-error.log*
 # Webstorm
 .idea
 
+# secrets (figma access token, etc.)
+.env
+

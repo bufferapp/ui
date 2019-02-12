@@ -7,7 +7,7 @@ import DocumentationPages from './app/AppContainer';
 const App = () => (
   <Switch>
     <Route exact path="/" render={() => <Redirect to="/GettingStarted/getting-started" />} />
-    <Route exact path="/:location/:route" component={DocumentationPages} />
+    <Route exact path="/:location/:route/:view?" component={DocumentationPages} />
   </Switch>
 );
 

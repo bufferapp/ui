@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Twitter } from '@bufferapp/ui/Icon';
+import TwitterIcon from '@bufferapp/ui/Icon/Icons/Twitter';
 
 /** Twitter */
-export default function IconExample() {
+export default function TwitterIconExample() {
   return (
-    <Twitter size="large" />
+    <TwitterIcon size="large" />
   );
 }

@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Tag } from '@bufferapp/ui/Icon';
+import TagIcon from '@bufferapp/ui/Icon/Icons/Tag';
 
 /** Tag */
-export default function IconExample() {
+export default function TagIconExample() {
   return (
-    <Tag size="large" />
+    <TagIcon size="large" />
   );
 }

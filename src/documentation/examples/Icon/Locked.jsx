@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Locked } from '@bufferapp/ui/Icon';
+import LockedIcon from '@bufferapp/ui/Icon/Icons/Locked';
 
 /** Locked */
-export default function IconExample() {
+export default function LockedIconExample() {
   return (
-    <Locked size="large" />
+    <LockedIcon size="large" />
   );
 }

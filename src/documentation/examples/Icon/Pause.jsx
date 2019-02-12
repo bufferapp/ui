@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Pause } from '@bufferapp/ui/Icon';
+import PauseIcon from '@bufferapp/ui/Icon/Icons/Pause';
 
 /** Pause */
-export default function IconExample() {
+export default function PauseIconExample() {
   return (
-    <Pause size="large" />
+    <PauseIcon size="large" />
   );
 }

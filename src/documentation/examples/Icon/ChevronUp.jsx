@@ -1,9 +1,10 @@
-import React from 'react';
-import { ChevronUp } from '@bufferapp/ui/Icon';
 
-/** Chevron Up */
-export default function ChevronUpExample() {
+import React from 'react';
+import ChevronUpIcon from '@bufferapp/ui/Icon/Icons/ChevronUp';
+
+/** ChevronUp */
+export default function ChevronUpIconExample() {
   return (
-    <ChevronUp size="large" />
+    <ChevronUpIcon size="large" />
   );
 }

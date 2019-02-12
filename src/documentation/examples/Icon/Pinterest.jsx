@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Pinterest } from '@bufferapp/ui/Icon';
+import PinterestIcon from '@bufferapp/ui/Icon/Icons/Pinterest';
 
 /** Pinterest */
-export default function IconExample() {
+export default function PinterestIconExample() {
   return (
-    <Pinterest size="large" />
+    <PinterestIcon size="large" />
   );
 }

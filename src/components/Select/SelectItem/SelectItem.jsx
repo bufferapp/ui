@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Flag } from '../../Icon';
 import {
   SelectItemStyled, SelectItemLabel, SelectItemIcon, SelectItemTitle,
 } from './style';
-import Flag from '../../Icon/Icons/Flag';
 
 const SelectItem = ({
   item, onClick, hovered, keyMap, hasSelectedItems, getItemId,
