@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Emoji } from '@bufferapp/ui/Icon';
+import EmojiIcon from '@bufferapp/ui/Icon/Icons/Emoji';
 
 /** Emoji */
-export default function IconExample() {
+export default function EmojiIconExample() {
   return (
-    <Emoji size="large" />
+    <EmojiIcon size="large" />
   );
 }

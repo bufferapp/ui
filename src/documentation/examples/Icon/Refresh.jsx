@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Refresh } from '@bufferapp/ui/Icon';
+import RefreshIcon from '@bufferapp/ui/Icon/Icons/Refresh';
 
 /** Refresh */
-export default function IconExample() {
+export default function RefreshIconExample() {
   return (
-    <Refresh size="large" />
+    <RefreshIcon size="large" />
   );
 }

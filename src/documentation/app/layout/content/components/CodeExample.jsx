@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import hljs from 'highlight.js/lib/highlight';
 import javascript from 'highlight.js/lib/languages/javascript';
+// import 'highlight.js/styles/github.css';
 
 /** Component that shows the highlighted example code */
 export default class CodeExample extends React.Component {

@@ -4,19 +4,17 @@ import style from 'styled-components';
 import CodeExample from './CodeExample';
 
 const Wrapper = style.div`
-  padding: 5px 25px;
-  background: #f6f7f9;
-  border: 1px solid #e6ecf1;
-  border-radius: 2px;
   margin-bottom: 20px;
   min-width: 40%;
   flex: 1;
   margin-right: 20px;
   min-height: 135px;
+  max-width: 800px;
+  border-top: 1px solid #f3f3f3;
 `;
 
 const CodeButton = style.a`
-  color: #2c4bff;
+  color: #4c5682a6;
   padding-top: 10px;
   font-size: 12px;
   display: flex;

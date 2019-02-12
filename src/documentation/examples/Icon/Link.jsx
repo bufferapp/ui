@@ -1,10 +1,10 @@
-/* eslint-disable jsx-a11y/anchor-is-valid */
+
 import React from 'react';
-import { Link } from '@bufferapp/ui/Icon';
+import LinkIcon from '@bufferapp/ui/Icon/Icons/Link';
 
 /** Link */
-export default function IconExample() {
+export default function LinkIconExample() {
   return (
-    <Link size="large" />
+    <LinkIcon size="large" />
   );
 }

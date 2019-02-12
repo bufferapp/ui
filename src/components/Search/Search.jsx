@@ -15,6 +15,10 @@ export default class Search extends React.Component {
     search: '',
   };
 
+  componentDidMount() {
+    this.inputRef.focus();
+  }
+
   onChange = (event) => {
     const { onChange } = this.props;
     const search = event.target.value;
@@ -45,9 +49,6 @@ export default class Search extends React.Component {
     } = this.props;
 
     const { search } = this.state;
-
-    // adding a small delay to make sure the rendering is complete
-    if (this.inputRef) setTimeout(() => this.inputRef.focus(), 10);
 
     return (
       <SearchWrapper keyMap={map} handlers={shortcutsEnabled ? this.getHotkeyHandlers() : undefined}>

@@ -38,6 +38,48 @@ const PageLayout = style.div`
 
 /** The main Documentation app container that renders other components */
 export default class AppContainer extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.onKeyDown = this.onKeyDown.bind(this);
+  }
+
+  componentDidMount() {
+    document.addEventListener('keydown', this.onKeyDown);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('keydown', this.onKeyDown);
+  }
+
+  /**
+   * Handle toggling /fullscreen mode
+   *
+   * @param {Event} event
+   */
+  onKeyDown(event) { // eslint-disable-line
+    const { history, location: { pathname } } = this.props;
+    // Ignore non-component paths (i.e., markdown docs)
+    if (pathname.indexOf('/ui/') < 0) {
+      return;
+    }
+    if (event.keyCode === 27) { // escape
+      if (pathname.endsWith('/fullscreen')) {
+        const newPath = `${pathname.replace('/fullscreen', '')}`;
+        history.push(newPath);
+      }
+    }
+    if (event.keyCode === 220 && !!event.shiftKey) { // Shift + \ (backslash)
+      let newPath = '/';
+      if (pathname.endsWith('/fullscreen')) {
+        newPath = `${pathname.replace('/fullscreen', '')}`;
+      } else {
+        newPath = `${pathname}/fullscreen`;
+      }
+      history.push(newPath);
+    }
+  }
+
   getFooterLinks = (pageParents, route) => {
     if (!pageParents) return;
     // get the index of the navigation link of the current page
@@ -52,6 +94,7 @@ export default class AppContainer extends React.Component {
   };
 
   renderMarkdownComponent = () => <MarkdownToJsx>{UIComponent}</MarkdownToJsx>
+
 
   render() {
     const { match: { params: { route, location, view } } } = this.props;
@@ -99,6 +142,12 @@ export default class AppContainer extends React.Component {
 }
 
 AppContainer.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string,
+  }).isRequired,
   match: PropTypes.shape({
     params: PropTypes.shape({
       route: PropTypes.string.isRequired,

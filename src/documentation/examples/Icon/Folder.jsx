@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Folder } from '@bufferapp/ui/Icon';
+import FolderIcon from '@bufferapp/ui/Icon/Icons/Folder';
 
 /** Folder */
-export default function IconExample() {
+export default function FolderIconExample() {
   return (
-    <Folder size="large" />
+    <FolderIcon size="large" />
   );
 }

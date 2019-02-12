@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Facebook } from '@bufferapp/ui/Icon';
+import FacebookIcon from '@bufferapp/ui/Icon/Icons/Facebook';
 
 /** Facebook */
-export default function IconExample() {
+export default function FacebookIconExample() {
   return (
-    <Facebook size="large" />
+    <FacebookIcon size="large" />
   );
 }

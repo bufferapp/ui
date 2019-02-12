@@ -1,9 +1,10 @@
-import React from 'react';
-import { LinkedIn } from '@bufferapp/ui/Icon';
 
-/** LinkedIn */
-export default function IconExample() {
+import React from 'react';
+import LinkedinIcon from '@bufferapp/ui/Icon/Icons/Linkedin';
+
+/** Linkedin */
+export default function LinkedinIconExample() {
   return (
-    <LinkedIn size="large" />
+    <LinkedinIcon size="large" />
   );
 }

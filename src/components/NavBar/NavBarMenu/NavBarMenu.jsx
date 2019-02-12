@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ChevronDown from '@bufferapp/ui/Icon/Icons/ChevronDown';
 import {
   NavBarStyled, NavBarEmail, NavBarName, NavBarUser, NavBarAvatar, NavBarChavron,
 } from './style';
-import ChevronDown from '../../Icon/Icons/ChevronDown';
 
 /** NavBar Menu component used by the Select component to show a custom User name and avatar
  *  button */

@@ -31,27 +31,25 @@ const SidebarList = styled.ul`
     padding-bottom: 24px;
     font-size: 15px;
     margin-top: 32px;
+    transform: translateX(1px);
 `;
 
 const SidebarListItem = styled.li`
     text-decoration: none;
-    color: #5C6975;
+    color: #636363;
     margin-left: 0px;
-    border-left-color: transparent;
     display: flex;
     align-items: center;
     margin: 0px;
     padding: 0px;
     position: relative;
-    border-left: 1px solid transparent;
-    background: ${props => (props.isSelected ? '#fff' : 'inherit')};
-    padding: ${props => (props.isChild ? '10px 24px 10px 15px' : '5px 24px 5px 15px')};
-    border: ${props => (props.isSelected ? '1px solid #E6ECF1' : 'none')};
     cursor: pointer;
-    padding-left: ${props => (props.level === 1 ? '30px' : '15px')};
+    padding-left: ${props => (props.level === 1 ? '20px' : '12px')};
     &:hover {
-      background: #e8eff7;
+      background: #ffffff77;
+      border-radius: 4px 0 0 4px;
     }
+    background: ${props => (props.isSelected ? '#fff' : 'none')};
 `;
 
 const SidebarListItemLink = styled(Link)`
@@ -60,25 +58,28 @@ const SidebarListItemLink = styled(Link)`
     display: flex;
     align-items: center;
     text-decoration: none;
-    font-weight: 600;
-    border-right: 0px;
+    font-weight: ${props => (props['data-is-child'] && !props['data-is-selected'] ? '500' : '600')};
     cursor: pointer;
-    font-size: 14px;
+    font-size: 16px;
     color: ${props => (props['data-is-selected'] ? '#2c4bff' : props['data-is-child'] ? '#9daab6' : 'inherit')};
-    width: 100%
-
+    padding: ${props => (props['data-is-child'] ? '10px 24px 10px 15px' : '5px 24px 5px 15px')};
+    width: 100%;
+    padding: 8px 0;
+    transition: all 0.1s ease-out;
 `;
 
 const IconDown = styled(ChevronDown)`
   margin-left: auto;
-  padding: 7px 14px 0px 10px;
   cursor: pointer;
+  padding-right: 16px;
+  opacity: 0.35;
 `;
 
 const IconUp = styled(ChevronUp)`
   margin-left: auto;
-  padding: 13px 10px 0px 10px;
   cursor: pointer;
+  padding-right: 16px;
+  opacity: 0.35;
 `;
 
 /** The left sidebar that displays the navigation links */

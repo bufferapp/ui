@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { List } from '@bufferapp/ui/Icon';
+import ListIcon from '@bufferapp/ui/Icon/Icons/List';
 
 /** List */
-export default function IconExample() {
+export default function ListIconExample() {
   return (
-    <List size="large" />
+    <ListIcon size="large" />
   );
 }

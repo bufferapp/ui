@@ -1,9 +1,10 @@
-import React from 'react';
-import { GooglePlus } from '@bufferapp/ui/Icon';
 
-/** Google Plus */
-export default function IconExample() {
+import React from 'react';
+import GooglePlusIcon from '@bufferapp/ui/Icon/Icons/GooglePlus';
+
+/** GooglePlus */
+export default function GooglePlusIconExample() {
   return (
-    <GooglePlus size="large" />
+    <GooglePlusIcon size="large" />
   );
 }

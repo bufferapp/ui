@@ -53,8 +53,7 @@ export default class Select extends React.Component {
 
   // Close the popover
   closePopover = (e) => {
-    if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
-    if (this.customButtonNode && this.customButtonNode.contains(e.target)) return;
+    if (this.wrapperNode && this.wrapperNode.contains(e.target)) return;
     const { isOpen } = this.state;
 
     if (isOpen) {
@@ -184,11 +183,7 @@ export default class Select extends React.Component {
       );
     }
     if (customButton) {
-      return (
-        <div ref={node => this.customButtonNode = node}>
-          {customButton(this.onButtonClick)}
-        </div>
-      );
+      return customButton(this.onButtonClick);
     }
 
     return (
@@ -213,13 +208,11 @@ export default class Select extends React.Component {
     return (
       <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton} horizontalOffset={horizontalOffset}>
         {hasSearch && (
-        <div ref={node => this.searchInputNode = node}>
           <Search
             onChange={this.onSearchChange}
             onAddItem={this.onAddItem}
             onClose={this.onClose}
           />
-        </div>
         )}
         <SelectItems>
           {items.map((item, idx) => (
@@ -245,6 +238,7 @@ export default class Select extends React.Component {
     return (
       <Wrapper
         role="button"
+        ref={node => this.wrapperNode = node}
         onClick={this.onClick}
         onKeyUp={this.onClick}
         tabIndex={0}

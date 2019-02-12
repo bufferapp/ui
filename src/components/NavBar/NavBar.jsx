@@ -3,9 +3,12 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import { grayDarker } from '../style/colors';
-import BufferLogo from './BufferLogo';
 import Select from '../Select';
+
+import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
+import NavBarProducts from './NavBarProducts/NavBarProducts';
+
 
 const NavBarStyled = styled.nav`
   height: 64px;
@@ -15,14 +18,26 @@ const NavBarStyled = styled.nav`
   justify-content: space-between;
 `;
 
-const NavBar = ({ user, userMenuItems }) => (
+const NavBarLeft = styled.div`
+  display: flex;
+`;
+const NavBarRight = styled.div`
+  display: flex;
+`;
+
+const NavBar = ({ user }) => (
   <NavBarStyled>
-    <BufferLogo />
-    <Select
-      horizontalOffset="-16px"
-      customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
-      items={userMenuItems}
-    />
+    <NavBarLeft>
+      <BufferLogo />
+      <NavBarProducts />
+    </NavBarLeft>
+    <NavBarRight>
+      <Select
+        horizontalOffset="-16px"
+        customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
+        items={user.menuItems}
+      />
+    </NavBarRight>
   </NavBarStyled>
 );
 
@@ -31,14 +46,14 @@ NavBar.propTypes = {
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
     avatar: PropTypes.string,
+    menuItems: PropTypes.arrayOf(PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      component: PropTypes.node,
+      hasDivider: PropTypes.bool,
+      onItemClick: PropTypes.func,
+    })).isRequired,
   }).isRequired,
-  userMenuItems: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    component: PropTypes.node,
-    hasDivider: PropTypes.bool,
-    onItemClick: PropTypes.func,
-  })).isRequired,
 };
 
 export default NavBar;
