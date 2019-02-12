@@ -145,6 +145,56 @@ To make the documentation complete, there are a few steps needed for every new c
     ```
     - this will be shown as three different primary buttons in the documentation together with the code examples
 
+## Working with Icons
+
+All of our Icon components (in `components/Icon/Icons/**`) are pulled, processed, and automagically ✨ generated from a **Figma file**. This is done with the `gen:icons` command.
+
+### Figma API Access
+
+Before you can run this script you need to get a **Figma personal access token** and place it in an `.env` file in the `ui` directory. This file and token is unuique to you **and should never be commited.**
+
+To get your access token, go to [Figma.com](https://figma.com) and click your name in the top-left to open 'Account Settings' ([See screenshot](http://hi.buffer.com/eb0077a51d19)). Once there click the button to 'Create a new personal access token' ([Screenshot](http://hi.buffer.com/5e9ae694c27d)). Copy the new token and paste it into a file called `.env` inside the `ui` folder, like so:
+
+```bash
+FIGMA_ACCESS_TOKEN==<your-token>
+```
+
+|⚠️  &nbsp;**Important**|
+|--|
+|You'll also need to make sure you have access to the file containing our icons. The link to this file will be printed in the console when you run the `npm run gen:icons` command below. If you don't have access talk to someone on the **#prod-design** channel in Slack.|
+
+### Updating Icons
+
+Now that you have your token, you can run the script to create / update the Icon components!  **You only need to do this if icons have been added or changed in the Figma file.**
+
+```bash
+$ npm run gen:icons
+```
+
+To help you out the script will automatically check the `lastModified` time on the Figma file and compare it what's in the [local icon cache](/config/cachedIconData.json). If the Figma file is newer, it'll pull down the new data, otherwise it'll build the icons based on the cache.
+
+Once the icons are generated you can commit and push them as you would any other code changes.
+
+### How it works
+
+1. We fetch the Icon data from the Figma API as SVG (if cached data is out-of-date.)
+2. We prompt the user to choose the frame that contains the icons.
+2. We process the SVGs with [`svgo`](https://github.com/svg/svgo/) and also convert them to a React-compatible JSX syntax.
+3. As part of the processing we remove all `stroke` and `fill` colors. This ensures we can redefine the icon colors when they're used in React.
+2. We generate the component name for each icon absed on the name of the layer in Figma. We convert to `CamelCase` and remove any `ico-` or `icon-` prefixs. Ex. `ico-arrow-down` becomes `ArrowDown`.
+
+
+### 🎨 Guidelines for icon designers
+
+There are a few important things to keep in mind when adding or changing new Icons in Figma.
+
+1. As long as you add your new icon as layer next to all the other icons, it will be visible to our automatic script. Feel free to create other artboards for WIP / non-flattened icons if needed, since the script lets the user pick the artboard to generate from.
+1. **Make sure you flatten all your shapes.** So instead of compound shapes or masks just use the path tools to subtract as needed and create a flattened shape.
+2. **Flatten strokes**. Right click and click "Outline stroke" in Figma so that these export correctly.
+3. Ensure the icon layer is `16x16` in size.
+4. **tl:dr;** Honestly, most of the issues we see are fixed if you outline strokes. :wink:
+
+When you're done adding or changing icons be sure to let an engineer in the **#prod-design-system** channel know, so we can run the command to regenerate them next chance we get.
 
 ## License
 

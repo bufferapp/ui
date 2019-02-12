@@ -264,9 +264,10 @@ function generateReactIconIndex(icons) {
 }
 
 async function main() {
+  let spinner;
   try {
-    const spinner = ora(
-      'Loading BDS Icons Figma file: ' + figmaIconFileUrl,
+    spinner = ora(
+      `Loading BDS Icons Figma file: ${figmaIconFileUrl}`,
     ).start();
     const figmaFile = await getFigmaFile(figmaIconFileId);
     spinner.succeed();
@@ -352,7 +353,10 @@ async function main() {
 
     console.log(chalk.bold.green('✔ Done!'));
   } catch (error) {
-    console.error(chalk.red('ERROR:'), error);
+    if (spinner) {
+      spinner.fail();
+    }
+    console.error(chalk.red('Uh oh! Something went wrong.\n\n'), error);
   }
 }
 
