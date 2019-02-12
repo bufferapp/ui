@@ -25,6 +25,9 @@ const NavBarRight = styled.div`
   display: flex;
 `;
 
+/**
+ * The NavBar is not generally consumed alone, but instead used by the AppShell component. (This page is WIP. Examples coming soon.)
+ */
 const NavBar = ({ user }) => (
   <NavBarStyled>
     <NavBarLeft>

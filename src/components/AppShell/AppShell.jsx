@@ -1,30 +1,12 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
 import NavBar from '../NavBar';
 
-const AppShellStyled = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
+import { AppShellStyled, Wrapper, SidebarWrapper, ContentWrapper } from './style';
 
-const Wrapper = styled.div`
-  display: flex;
-  margin-top: 16px;
-  flex: 1;
-`;
-
-const SidebarWrapper = styled.div`
-  width: 224px;
-  margin: 0 8px 16px 16px;
-`;
-
-const ContentWrapper = styled.div`
-  flex: 1;
-  margin: 0 16px 16px 8px;
-`;
-
+/**
+ * The AppShell component is a general purpose wrapper for all of our applications.
+ */
 const AppShell = ({ user, sidebar: SidebarComponent, content: ContentComponent }) => (
   <AppShellStyled>
     <NavBar user={user} />
