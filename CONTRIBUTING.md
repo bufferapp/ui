@@ -160,7 +160,7 @@ Before you can run this script you need to get a **Figma personal access token**
 To get your access token, go to [Figma.com](https://figma.com) and click your name in the top-left to open 'Account Settings' ([See screenshot](http://hi.buffer.com/eb0077a51d19)). Once there click the button to 'Create a new personal access token' ([Screenshot](http://hi.buffer.com/5e9ae694c27d)). Copy the new token and paste it into a file called `.env` inside the `ui` folder, like so:
 
 ```bash
-FIGMA_ACCESS_TOKEN==<your-token>
+FIGMA_ACCESS_TOKEN=<your-token>
 ```
 
 |⚠️  &nbsp;**Important**|
