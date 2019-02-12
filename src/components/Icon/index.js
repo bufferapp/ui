@@ -18,7 +18,7 @@ export Gear from './Icons/Gear';
 export GooglePlus from './Icons/GooglePlus';
 export Instagram from './Icons/Instagram';
 export Link from './Icons/Link';
-export Linkedin from './Icons/Linkedin';
+export LinkedIn from './Icons/LinkedIn';
 export List from './Icons/List';
 export Load from './Icons/Load';
 export Location from './Icons/Location';

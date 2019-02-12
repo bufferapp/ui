@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import {
-  blue, grayDarker, white,
+  blue, grayDarker, grayDark, white,
 } from '../../style/colors';
 import { fontWeightMedium, fontSize } from '../../style/fonts';
 
-export const SelectItemStyled = style.li`
+export const SelectItemStyled = styled.li`
     min-height: 32px;
     align-items: center;
     color: ${props => (props.hovered ? white : grayDarker)};
@@ -36,7 +36,7 @@ export const SelectItemLabel = styled.div`
     align-items: end;
 `;
 
-export const SelectItemIcon = style.div`
+export const SelectItemIcon = styled.div`
   padding-right: 4px;
   svg {
      fill: ${props => (props.hovered ? white : grayDark)};

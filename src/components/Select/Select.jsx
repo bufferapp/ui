@@ -37,14 +37,16 @@ export default class Select extends React.Component {
     document.addEventListener('click', this.closePopover, true);
 
     // catch the keypress to move the selected items up or down
-    this.selectNode &&
+    if (this.selectNode) {
       this.selectNode.addEventListener('keydown', this.keyDownPressed);
+    }
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true);
-    this.selectNode &&
+    if (this.selectNode) {
       this.selectNode.removeEventListener('keydown', this.keyDownPressed);
+    }
   }
 
   keyDownPressed = e => {
@@ -169,9 +171,11 @@ export default class Select extends React.Component {
     const { onSelectClick } = this.props;
     const { items, hoveredItem } = this.state;
     const selectedItem = items[hoveredItem];
-    selectedItem && selectedItem.onItemClick
-      ? selectedItem.onItemClick(selectedItem)
-      : onSelectClick(items[hoveredItem]);
+    if (selectedItem && selectedItem.onItemClick) {
+      selectedItem.onItemClick(selectedItem);
+    } else {
+      onSelectClick(items[hoveredItem]);
+    }
   };
 
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
@@ -296,7 +300,7 @@ export default class Select extends React.Component {
       customButton,
       keyMap,
       horizontalOffset,
-      searchPlaceholder,
+      // searchPlaceholder,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
@@ -407,7 +411,7 @@ Select.propTypes = {
   shortcutsEnabled: PropTypes.bool,
 
   /** Search placeholder */
-  searchPlaceholder: PropTypes.string,
+  // searchPlaceholder: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -425,5 +429,5 @@ Select.defaultProps = {
   keyMap: undefined,
   multiSelect: undefined,
   shortcutsEnabled: true,
-  searchPlaceholder: 'Search',
+  // searchPlaceholder: 'Search',
 };
