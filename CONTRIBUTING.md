@@ -149,6 +149,10 @@ To make the documentation complete, there are a few steps needed for every new c
 
 All of our Icon components (in `components/Icon/Icons/**`) are pulled, processed, and automagically ✨ generated from a **Figma file**. This is done with the `gen:icons` command.
 
+### The Figma File
+
+👉 [https://www.figma.com/file/D9T6BuWxbTVKhlDU8faZSQ9G/](https://www.figma.com/file/D9T6BuWxbTVKhlDU8faZSQ9G/BDS-Icons?node-id=0%3A1)
+
 ### Figma API Access
 
 Before you can run this script you need to get a **Figma personal access token** and place it in an `.env` file in the `ui` directory. This file and token is unuique to you **and should never be commited.**
@@ -161,7 +165,7 @@ FIGMA_ACCESS_TOKEN==<your-token>
 
 |⚠️  &nbsp;**Important**|
 |--|
-|You'll also need to make sure you have access to the file containing our icons. The link to this file will be printed in the console when you run the `npm run gen:icons` command below. If you don't have access talk to someone on the **#prod-design** channel in Slack.|
+|You'll also need to make sure you have access to the file containing our icons (see link above). If you don't have access talk to someone on the **#prod-design** channel in Slack.|
 
 ### Updating Icons
 
