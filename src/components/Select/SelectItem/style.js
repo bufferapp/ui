@@ -33,7 +33,7 @@ export const SelectItemLabel = styled.div`
     text-transform: capitalize;
     padding: 0px 15px;
     display: flex;
-    align-items: end;
+    align-items: center;
 `;
 
 export const SelectItemIcon = styled.div`

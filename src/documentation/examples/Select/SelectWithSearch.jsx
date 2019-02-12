@@ -12,7 +12,6 @@ export default function ExampleSelectWithSearch() {
       icon={<Flag color="white" />}
       onSearchChange={() => true}
       type="primary"
-      disabled
       searchPlaceholder="Search items..."
       keyMap={{
         id: '_id',

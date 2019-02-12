@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-expressions */
+/* eslint-disable no-unused-expressions, react/no-unused-state */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { includes, some } from 'lodash';
@@ -18,12 +18,23 @@ import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      isOpen: false,
-      items: props.items,
-    };
+  state = {
+    isOpen: false,
+    items: [],
+    isFiltering: false,
+  };
+
+  static getDerivedStateFromProps(props, state) {
+    if (props.items.length !== state.items.length && !state.isFiltering) {
+      return { items: props.items };
+    }
+  }
+
+  componentWillMount() {
+    const { items } = this.props;
+    this.setState({
+      items,
+    });
   }
 
   componentDidMount() {
@@ -229,11 +240,12 @@ export default class Select extends React.Component {
     );
     this.setState({
       items: filteredItems,
+      isFiltering: true,
     });
   };
 
   onClose = () => {
-    this.setState({ isOpen: false });
+    this.setState({ isOpen: false, isFiltering: false });
   };
 
   getItemId = item => {

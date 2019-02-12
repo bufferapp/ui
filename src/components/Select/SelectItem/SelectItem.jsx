@@ -43,6 +43,9 @@ SelectItem.propTypes = {
     id: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     onItemClick: PropTypes.func,
+    selected: PropTypes.bool,
+    icon: PropTypes.node,
+    component: PropTypes.func
   }).isRequired,
 
   /** On click function */
