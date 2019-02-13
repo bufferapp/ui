@@ -1,9 +1,10 @@
-import React from 'react';
-import { ChartLine } from '@bufferapp/ui/Icon';
 
-/** Chart Line */
-export default function IconExample() {
+import React from 'react';
+import ChartLineIcon from '@bufferapp/ui/Icon/Icons/ChartLine';
+
+/** ChartLine */
+export default function ChartLineIconExample() {
   return (
-    <ChartLine size="large" />
+    <ChartLineIcon size="large" />
   );
 }

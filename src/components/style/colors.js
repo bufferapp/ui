@@ -19,7 +19,7 @@ export const grayDarker = '#3D3D3D';
 export const grayDefault = '#77797a';
 
 export const boxShadow = '#ABB7FF';
-export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16))';
+export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16)';
 
 export const facebook = '#3b5998';
 export const googleplus = '#dd4b39';

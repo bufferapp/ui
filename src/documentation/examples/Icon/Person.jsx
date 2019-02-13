@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Person } from '@bufferapp/ui/Icon';
+import PersonIcon from '@bufferapp/ui/Icon/Icons/Person';
 
 /** Person */
-export default function IconExample() {
+export default function PersonIconExample() {
   return (
-    <Person size="large" />
+    <PersonIcon size="large" />
   );
 }

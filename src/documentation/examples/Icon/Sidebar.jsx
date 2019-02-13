@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Sidebar } from '@bufferapp/ui/Icon';
+import SidebarIcon from '@bufferapp/ui/Icon/Icons/Sidebar';
 
 /** Sidebar */
-export default function IconExample() {
+export default function SidebarIconExample() {
   return (
-    <Sidebar size="large" />
+    <SidebarIcon size="large" />
   );
 }

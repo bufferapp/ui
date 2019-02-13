@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Camera } from '@bufferapp/ui/Icon';
+import CameraIcon from '@bufferapp/ui/Icon/Icons/Camera';
 
 /** Camera */
-export default function IconExample() {
+export default function CameraIconExample() {
   return (
-    <Camera size="large" />
+    <CameraIcon size="large" />
   );
 }

@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Pencil } from '@bufferapp/ui/Icon';
+import PencilIcon from '@bufferapp/ui/Icon/Icons/Pencil';
 
 /** Pencil */
-export default function IconExample() {
+export default function PencilIconExample() {
   return (
-    <Pencil size="large" />
+    <PencilIcon size="large" />
   );
 }

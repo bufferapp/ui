@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Plus } from '@bufferapp/ui/Icon';
+import PlusIcon from '@bufferapp/ui/Icon/Icons/Plus';
 
 /** Plus */
-export default function IconExample() {
+export default function PlusIconExample() {
   return (
-    <Plus size="large" />
+    <PlusIcon size="large" />
   );
 }

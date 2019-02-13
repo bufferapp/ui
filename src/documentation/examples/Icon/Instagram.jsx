@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Instagram } from '@bufferapp/ui/Icon';
+import InstagramIcon from '@bufferapp/ui/Icon/Icons/Instagram';
 
 /** Instagram */
-export default function IconExample() {
+export default function InstagramIconExample() {
   return (
-    <Instagram size="large" />
+    <InstagramIcon size="large" />
   );
 }

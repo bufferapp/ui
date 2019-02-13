@@ -207,16 +207,30 @@ function generateDocumentation(documentPaths) {
   writeFile(documentPaths.documentsOutput, `module.exports = ${JSON.stringify(errors.length ? errors : documentsData)}`);
 }
 
+function debounce(func, wait, immediate) {
+  let timeout;
+  return function () {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      timeout = null;
+      if (!immediate) func();
+    }, wait);
+    if (immediate && !timeout) func();
+  };
+}
+
 function run() {
   generate(paths);
   generateDocumentation(paths);
 }
 
+const debouncedRun = debounce(run, 500);
+
 const enableWatchMode = process.argv.slice(2).includes('--watch'); // check for a watch flag
 if (enableWatchMode) {
   // Regenerate component metadata when components or examples change.
   chokidar.watch([paths.examples, paths.components, paths.documents]).on('change', () => {
-    run();
+    debouncedRun();
   });
 } else {
   run();

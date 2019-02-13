@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Return } from '@bufferapp/ui/Icon';
+import ReturnIcon from '@bufferapp/ui/Icon/Icons/Return';
 
 /** Return */
-export default function IconExample() {
+export default function ReturnIconExample() {
   return (
-    <Return size="large" />
+    <ReturnIcon size="large" />
   );
 }

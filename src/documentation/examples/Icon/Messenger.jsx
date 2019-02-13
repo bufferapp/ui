@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Messenger } from '@bufferapp/ui/Icon';
+import MessengerIcon from '@bufferapp/ui/Icon/Icons/Messenger';
 
 /** Messenger */
-export default function IconExample() {
+export default function MessengerIconExample() {
   return (
-    <Messenger size="large" />
+    <MessengerIcon size="large" />
   );
 }

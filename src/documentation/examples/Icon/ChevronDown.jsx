@@ -1,9 +1,10 @@
-import React from 'react';
-import { ChevronDown } from '@bufferapp/ui/Icon';
 
-/** Chevron Down */
-export default function ChevronDownExample() {
+import React from 'react';
+import ChevronDownIcon from '@bufferapp/ui/Icon/Icons/ChevronDown';
+
+/** ChevronDown */
+export default function ChevronDownIconExample() {
   return (
-    <ChevronDown size="large" />
+    <ChevronDownIcon size="large" />
   );
 }

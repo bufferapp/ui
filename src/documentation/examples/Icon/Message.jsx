@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Message } from '@bufferapp/ui/Icon';
+import MessageIcon from '@bufferapp/ui/Icon/Icons/Message';
 
 /** Message */
-export default function IconExample() {
+export default function MessageIconExample() {
   return (
-    <Message size="large" />
+    <MessageIcon size="large" />
   );
 }

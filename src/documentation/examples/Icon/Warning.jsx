@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Warning } from '@bufferapp/ui/Icon';
+import WarningIcon from '@bufferapp/ui/Icon/Icons/Warning';
 
 /** Warning */
-export default function IconExample() {
+export default function WarningIconExample() {
   return (
-    <Warning size="large" />
+    <WarningIcon size="large" />
   );
 }

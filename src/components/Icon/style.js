@@ -1,12 +1,8 @@
 import { css } from 'styled-components';
 
 export const base = css`
-  fill: currentColor;
-`;
-
-
-export const chevron = css`
-  margin-right: -5px;
+  display: inline-block;
+  fill: currentcolor;
 `;
 
 export const small = css`

@@ -1,9 +1,10 @@
-import React from 'react';
-import { ArrowUp } from '@bufferapp/ui/Icon';
 
-/** Arrow Up */
-export default function IconExample() {
+import React from 'react';
+import ArrowUpIcon from '@bufferapp/ui/Icon/Icons/ArrowUp';
+
+/** ArrowUp */
+export default function ArrowUpIconExample() {
   return (
-    <ArrowUp size="large" />
+    <ArrowUpIcon size="large" />
   );
 }

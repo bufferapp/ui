@@ -1,9 +1,10 @@
+
 import React from 'react';
-import { Gear } from '@bufferapp/ui/Icon';
+import GearIcon from '@bufferapp/ui/Icon/Icons/Gear';
 
 /** Gear */
-export default function IconExample() {
+export default function GearIconExample() {
   return (
-    <Gear size="large" />
+    <GearIcon size="large" />
   );
 }

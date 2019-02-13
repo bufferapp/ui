@@ -30,8 +30,9 @@ export const SelectStyled = styled.div`
     background-color: #ffffff;
     bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
     top: ${props => (props.position === 'bottom' ? '100%' : 'initial')};
-    margin-bottom: ${props => (props.position === 'top' ? '10px' : '0')};
-    margin-top: ${props => (props.isMenu ? '35px' : props.position === 'bottom' ? '10px' : '0')};
+    margin-bottom: ${props => (props.position === 'top' ? '8px' : '0')};
+    margin-top: ${props => (props.isMenu ? '32px' : props.position === 'bottom' ? '8px' : '0')};
+    transform: translateX(${props => (props.horizontalOffset ? props.horizontalOffset : '0')});
 `;
 
 export const SelectItems = styled.ul`
@@ -46,6 +47,7 @@ export const SelectItems = styled.ul`
     margin-block-end: 0px;
     padding-inline-start: 0px;
     border-radius: 4px;
+    list-style: none;
 `;
 
 export const Arrow = styled.div`
