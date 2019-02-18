@@ -1,10 +1,22 @@
 /* eslint-disable no-confusing-arrow */
 import style, { css } from 'styled-components';
 import {
-  grayDarker, blue, blueDarker, white, grayDark, gray, grayDefault, boxShadow, grayLight,
+  grayDarker,
+  blue,
+  blueDarker,
+  blueLighter,
+  white,
+  grayDark,
+  gray,
+  grayDefault,
+  boxShadow,
+  grayLight,
 } from '../style/colors';
 import {
-  fontFamily, fontSize, lineHeight, fontWeightMedium,
+  fontFamily,
+  fontSize,
+  lineHeight,
+  fontWeightMedium,
 } from '../style/fonts';
 import { borderRadius } from '../style/borders';
 import { ButtonStyled } from './Button';
@@ -108,6 +120,7 @@ export const large = css`
 export const disabled = css`
   background-color: ${grayLight};
   cursor: not-allowed;
+  border: 1px solid ${grayLight};
 `;
 
 export const fullWidth = css`
@@ -117,8 +130,8 @@ export const fullWidth = css`
 
 export const ButtonSelect = style.div`
   :before {
-    background-color: ${props => (props.disabled ? gray : white)};
-    color: ${props => (props.disabled ? gray : white)};
+    background-color: ${props => (props.disabled ? gray : blueLighter)};
+    color: ${props => (props.disabled ? gray : blueLighter)};
     content: "";
     height: 24px;
     position: absolute;
