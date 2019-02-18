@@ -65,6 +65,7 @@ export const ButtonBase = css`
 export const primary = css`
   background-color: ${blue};
   color: ${white};
+  border: 1px solid ${blue};
   :hover {
     background-color: ${blueDarker};
     color: ${white};
