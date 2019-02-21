@@ -330,7 +330,7 @@ export default class Select extends React.Component {
   };
 
   render() {
-    const { isSplit, position, customButton } = this.props;
+    const { isSplit, position, customButton, tooltip } = this.props;
     const { isOpen } = this.state;
 
     return (
@@ -341,6 +341,7 @@ export default class Select extends React.Component {
         tabIndex={0}
         isSplit={isSplit}
         ref={selectNode => (this.selectNode = selectNode)}
+        data-tip={tooltip}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
@@ -405,6 +406,9 @@ Select.propTypes = {
 
   /** Search placeholder */
   searchPlaceholder: PropTypes.string,
+
+  /** Tooltip to show on the component */
+  tooltip: PropTypes.string
 };
 
 Select.defaultProps = {
@@ -422,4 +426,5 @@ Select.defaultProps = {
   multiSelect: undefined,
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
+  tooltip: undefined
 };
