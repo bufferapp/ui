@@ -52,6 +52,7 @@ exports[`Button renders styles properly 1`] = `
   height: 40px;
   background-color: #2c4bff;
   color: #FFFFFF;
+  border: 1px solid #2c4bff;
 }
 
 .c0:hover {
@@ -144,6 +145,7 @@ exports[`Disabled button is disabled 1`] = `
   height: 40px;
   background-color: #E0E0E0;
   cursor: not-allowed;
+  border: 1px solid #E0E0E0;
 }
 
 .c0:hover {

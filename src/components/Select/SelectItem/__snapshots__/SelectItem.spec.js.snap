@@ -701,7 +701,7 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
   }
 >
   <ForwardRef>
-    <FlagIcon
+    <CheckmarkIcon
       color="gray"
     />
     <ForwardRef
@@ -1156,7 +1156,7 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
   }
 >
   <ForwardRef>
-    <FlagIcon
+    <CheckmarkIcon
       color="gray"
     />
     <ForwardRef
@@ -1407,7 +1407,7 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
   }
 >
   <ForwardRef>
-    <FlagIcon
+    <CheckmarkIcon
       color="gray"
     />
     <ForwardRef
@@ -1517,7 +1517,7 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only requ
   }
 >
   <ForwardRef>
-    <FlagIcon
+    <CheckmarkIcon
       color="gray"
     />
     <ForwardRef>
