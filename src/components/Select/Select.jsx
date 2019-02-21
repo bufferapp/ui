@@ -20,21 +20,15 @@ import Search from '../Search/Search';
 export default class Select extends React.Component {
   state = {
     isOpen: false,
-    items: [],
+    items: this.props.items || [],
     isFiltering: false,
   };
 
   static getDerivedStateFromProps(props, state) {
-    if (props.items.length !== state.items.length && !state.isFiltering) {
+    if (props.items && props.items.length !== state.items.length && !state.isFiltering) {
       return { items: props.items };
     }
-  }
-
-  componentWillMount() {
-    const { items } = this.props;
-    this.setState({
-      items,
-    });
+    return null;
   }
 
   componentDidMount() {
@@ -319,7 +313,7 @@ export default class Select extends React.Component {
         )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
           {items.map((item, idx) => [
-            item.hasDivider && <SelectItemDivider />,
+            item.hasDivider && <SelectItemDivider key={this.getItemId(item) + '--divider'} />,
             <SelectItem
               hovered={hoveredItem === idx}
               key={this.getItemId(item)}

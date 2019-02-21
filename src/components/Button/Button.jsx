@@ -105,8 +105,8 @@ Button.propTypes = {
   /** Items to display in the Split Button popup */
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
+      id: PropTypes.string,
+      title: PropTypes.string,
     }),
   ),
 
