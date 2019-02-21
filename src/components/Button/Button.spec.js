@@ -9,12 +9,12 @@ snap(Button, './Button.jsx');
 
 test('Button renders styles properly', () => {
   const tree = renderer.create(<Button type="primary" onClick={() => {}} label="Primary" />).toJSON();
-  expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('color', '#FFFFFF');
+  expect(tree).toHaveStyleRule('cursor', 'pointer');
 });
 
 test('Disabled button is disabled', () => {
   const tree = renderer.create(<Button type="primary" onClick={() => {}} label="Primary" disabled />).toJSON();
-  expect(tree).toMatchSnapshot();
   expect(tree).toHaveStyleRule('background-color', '#E0E0E0');
+  expect(tree).toHaveStyleRule('cursor', 'not-allowed');
 });
