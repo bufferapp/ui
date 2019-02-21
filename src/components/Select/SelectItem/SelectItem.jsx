@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Flag } from '../../Icon';
+import { Checkmark } from '../../Icon';
 import {
   SelectItemStyled,
   SelectItemLabel,
@@ -23,7 +23,7 @@ const SelectItem = ({
     id={getItemId(item)}
   >
     <SelectItemLabel>
-      {item.selected && <Flag color="gray" />}
+      {item.selected && <Checkmark color="gray" />}
       {item.icon && (
         <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
       )}

@@ -48,7 +48,7 @@ export const SelectItemIcon = styled.div`
 `;
 
 export const SelectItemTitle = styled.div`
-  margin-left: ${props => (props.moveRight ? '22px' : '10px')};
+  margin-left: ${props => (props.moveRight ? '26px' : '10px')};
 `;
 
 
