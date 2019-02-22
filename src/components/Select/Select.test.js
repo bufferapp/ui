@@ -124,6 +124,7 @@ describe('SomeComponent component', () => {
           id: '2', title: '123',
         },
       ],
+      isFiltering: true
     });
     instance.onMoveDown();
     expect(wrapper.state().hoveredItem).toBe(1);
@@ -142,6 +143,7 @@ describe('SomeComponent component', () => {
           id: '2', title: '123',
         },
       ],
+      isFiltering: true
     });
     instance.onMoveUp();
     expect(wrapper.state().hoveredItem).toBe(0);

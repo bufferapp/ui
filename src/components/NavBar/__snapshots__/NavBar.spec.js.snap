@@ -27,6 +27,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       }
       label=""
       position="bottom"
+      searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
       type="secondary"

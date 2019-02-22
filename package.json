@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "1.8.4",
+  "version": "1.10.0",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -37,13 +37,10 @@
     "react": ">= 0.14.0"
   },
   "dependencies": {
+    "immutability-helper": "^2.9.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-hotkeys": "^1.1.4",
-    "react-tether": "^1.0.4",
-    "react-transition-group": "^2.5.0",
-    "styled-components": "4.1.1",
-    "immutability-helper": "^2.9.0"
+    "styled-components": "4.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",

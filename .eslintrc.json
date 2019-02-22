@@ -32,6 +32,7 @@
     "import/prefer-default-export": 0,
     "react/no-array-index-key": 0,
     "no-return-assign": 0,
-    "prefer-template": "warn"
+    "prefer-template": "warn",
+    "react/destructuring-assignment": 0
   }
 }
