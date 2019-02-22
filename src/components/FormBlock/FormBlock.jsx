@@ -33,7 +33,7 @@ FormBlock.propTypes = {
   inline: PropTypes.bool,
   withBorder: PropTypes.bool,
   withBackground: PropTypes.bool,
-  children: PropTypes.func
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node])
 };
 
 FormBlock.defaultProps = {

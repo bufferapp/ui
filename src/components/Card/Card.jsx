@@ -14,7 +14,7 @@ const Card = ({ children }) => (
 );
 
 Card.propTypes = {
-  children: PropTypes.func
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node])
 }
 
 Card.defaultProps = {

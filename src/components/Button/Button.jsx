@@ -18,11 +18,11 @@ const Loading = styled.img`
 `;
 
 const VisuallyHiddenLabel = styled.span`
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0;  
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
 `;
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
@@ -79,7 +79,7 @@ Button.propTypes = {
   size: PropTypes.oneOf(['small', 'large', 'medium']),
 
   /** OnClick handler */
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
 
   /** Button label */
   label: PropTypes.string,

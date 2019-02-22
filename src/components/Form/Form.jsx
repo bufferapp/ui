@@ -34,7 +34,7 @@ Form.propTypes = {
     subTitle: PropTypes.string,
   }),
   onSubmit: PropTypes.func.isRequired,
-  children: PropTypes.func
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node])
 };
 
 Form.defaultProps = {
