@@ -5,9 +5,14 @@ export const base = css`
   fill: currentcolor;
 `;
 
-export const small = css`
+export const smallest = css`
   width: 8px;
   height: 8px;
+`;
+
+export const small = css`
+  width: 12px;
+  height: 12px;
 `;
 
 export const medium = css`
