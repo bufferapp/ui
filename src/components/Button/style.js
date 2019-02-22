@@ -85,6 +85,12 @@ export const text = css`
   :hover {
     color: ${grayDarker};
   }
+
+  :focus,
+  :active {
+    box-shadow: none;
+    outline: 0;
+  }
 `;
 
 /* size variants */
