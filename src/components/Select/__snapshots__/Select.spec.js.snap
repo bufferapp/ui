@@ -19,7 +19,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   </ForwardRef>
   <ForwardRef
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
     <div
@@ -74,7 +74,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   </ForwardRef>
   <ForwardRef
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
     <div
@@ -128,9 +128,63 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
   </ForwardRef>
   <ForwardRef
     isMenu={true}
+    isOpen={true}
+    position="top"
+  >
+    <ForwardRef>
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
+<ForwardRef
+  data-tip="jest-auto-snapshots String Fixture"
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <ForwardRef
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </ForwardRef>
+  <ForwardRef
+    isMenu={true}
     isOpen={false}
     position="top"
   >
+    <div
+      id="searchInput"
+    >
+      <Search
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
@@ -166,7 +220,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
 >
   <ForwardRef
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
     <div
@@ -220,7 +274,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
   </ForwardRef>
   <ForwardRef
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
     <div
@@ -274,7 +328,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
   </ForwardRef>
   <ForwardRef
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
     <div
@@ -328,7 +382,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   </ForwardRef>
   <ForwardRef
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
     <div

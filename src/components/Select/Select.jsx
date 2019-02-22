@@ -28,6 +28,9 @@ export default class Select extends React.Component {
     if (props.items && props.items.length !== state.items.length && !state.isFiltering) {
       return { items: props.items };
     }
+    if(props.isOpen && props.isOpen !== state.isOpen){
+      return {isOpen: props.isOpen}
+    }
     return null;
   }
 
@@ -313,7 +316,7 @@ export default class Select extends React.Component {
         )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
           {items.map((item, idx) => [
-            item.hasDivider && <SelectItemDivider key={this.getItemId(item) + '--divider'} />,
+            item.hasDivider && <SelectItemDivider key={`${this.getItemId(item)  }--divider`} />,
             <SelectItem
               hovered={hoveredItem === idx}
               key={this.getItemId(item)}
@@ -408,7 +411,10 @@ Select.propTypes = {
   searchPlaceholder: PropTypes.string,
 
   /** Tooltip to show on the component */
-  tooltip: PropTypes.string
+  tooltip: PropTypes.string,
+
+  /** Should the component be opened */
+  isOpen: PropTypes.bool
 };
 
 Select.defaultProps = {
@@ -426,5 +432,6 @@ Select.defaultProps = {
   multiSelect: undefined,
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
-  tooltip: undefined
+  tooltip: undefined,
+  isOpen: false
 };
