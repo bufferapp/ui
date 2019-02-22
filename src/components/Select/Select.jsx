@@ -19,17 +19,18 @@ import Search from '../Search/Search';
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
   state = {
-    isOpen: false,
+    isOpen: this.props.isOpen,
     items: this.props.items || [],
     isFiltering: false,
+    closeMenu: false
   };
 
   static getDerivedStateFromProps(props, state) {
     if (props.items && props.items.length !== state.items.length && !state.isFiltering) {
       return { items: props.items };
     }
-    if(props.isOpen && props.isOpen !== state.isOpen){
-      return {isOpen: props.isOpen}
+    if(props.isOpen !== state.isOpen && !state.closeMenu){
+      return {isOpen: props.isOpen, closeMenu: false}
     }
     return null;
   }
@@ -84,6 +85,7 @@ export default class Select extends React.Component {
       this.setState({
         isOpen: false,
         hoveredItem: undefined,
+        closeMenu: true
       });
     }
   };
@@ -128,6 +130,7 @@ export default class Select extends React.Component {
     const { isOpen } = this.state;
     this.setState({
       isOpen: !isOpen,
+      closeMenu: true
     });
   };
 
