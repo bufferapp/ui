@@ -8,6 +8,44 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
       "calls": Array [
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -28,13 +66,68 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -55,13 +148,68 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -82,13 +230,68 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -109,8 +312,353 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
@@ -132,13 +680,41 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ha
           "isThrow": false,
           "value": undefined,
         },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
       ],
     }
   }
 >
   <ForwardRef>
+    <CheckmarkIcon
+      color="gray"
+    />
     <ForwardRef
       hovered={true}
+    >
+      <NodeFixture />
+    </ForwardRef>
+    <ForwardRef
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
     />
     <ForwardRef
       moveRight={false}
@@ -155,6 +731,36 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
       "calls": Array [
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -171,13 +777,56 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -194,13 +843,56 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -217,8 +909,219 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
@@ -236,16 +1139,40 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when boolean prop "ho
           "isThrow": false,
           "value": undefined,
         },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
       ],
     }
   }
 >
   <ForwardRef>
-    <ForwardRef
-      hovered={false}
+    <CheckmarkIcon
+      color="gray"
     />
     <ForwardRef
-      moveRight={true}
+      hovered={false}
+    >
+      <NodeFixture />
+    </ForwardRef>
+    <ForwardRef
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+    />
+    <ForwardRef
+      moveRight={false}
     />
   </ForwardRef>
 </ForwardRef>
@@ -259,6 +1186,28 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
       "calls": Array [
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -271,13 +1220,44 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -290,8 +1270,117 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
@@ -305,16 +1394,36 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed all props
           "isThrow": false,
           "value": undefined,
         },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
       ],
     }
   }
 >
   <ForwardRef>
-    <ForwardRef
-      hovered={true}
+    <CheckmarkIcon
+      color="gray"
     />
     <ForwardRef
-      moveRight={true}
+      hovered={true}
+    >
+      <NodeFixture />
+    </ForwardRef>
+    <ForwardRef
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+    />
+    <ForwardRef
+      moveRight={false}
     />
   </ForwardRef>
 </ForwardRef>
@@ -327,6 +1436,20 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only requ
       "calls": Array [
         Array [
           Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction] {
               "calls": [Circular],
@@ -335,8 +1458,47 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only requ
                   "isThrow": false,
                   "value": undefined,
                 },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
               ],
             },
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        Array [
+          Object {
+            "component": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "icon": <NodeFixture />,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction] {
+              "calls": [Circular],
+              "results": Array [
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+                Object {
+                  "isThrow": false,
+                  "value": undefined,
+                },
+              ],
+            },
+            "selected": true,
             "title": "jest-auto-snapshots String Fixture",
           },
         ],
@@ -346,12 +1508,28 @@ exports[`jest-auto-snapshots > SelectItem Matches snapshot when passed only requ
           "isThrow": false,
           "value": undefined,
         },
+        Object {
+          "isThrow": false,
+          "value": undefined,
+        },
       ],
     }
   }
 >
   <ForwardRef>
-    <ForwardRef />
+    <CheckmarkIcon
+      color="gray"
+    />
+    <ForwardRef>
+      <NodeFixture />
+    </ForwardRef>
+    <ForwardRef
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": undefined,
+        }
+      }
+    />
     <ForwardRef>
       jest-auto-snapshots String Fixture
     </ForwardRef>

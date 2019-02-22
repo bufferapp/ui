@@ -17,4 +17,5 @@ npm version $newVersion && \
   npm run build:lib && \
   cd ./lib && \
   npm publish && \
-  cd ../
+  cd ../ &&\
+  npm run deploy:docs

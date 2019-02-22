@@ -1,6 +1,10 @@
 {
   "name": "@bufferapp/ui-template",
+<<<<<<< HEAD
   "version": "1.8.8",
+=======
+  "version": "1.10.0",
+>>>>>>> master
   "engines": {
     "node": ">=4.0.0"
   },
@@ -37,13 +41,10 @@
     "react": ">= 0.14.0"
   },
   "dependencies": {
+    "immutability-helper": "^2.9.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
-    "react-hotkeys": "^1.1.4",
-    "react-tether": "^1.0.4",
-    "react-transition-group": "^2.5.0",
-    "styled-components": "4.1.1",
-    "immutability-helper": "^2.9.0"
+    "styled-components": "4.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.1.5",
@@ -56,7 +57,7 @@
     "async": "^2.6.1",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "9.0.0",
-    "babel-jest": "^23.6.0",
+    "babel-jest": "=23.6.0",
     "babel-loader": "8.0.4",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-named-asset-import": "0.2.3",
@@ -93,11 +94,11 @@
     "identity-obj-proxy": "3.0.0",
     "indent-string": "^3.2.0",
     "inquirer": "^6.2.1",
-    "jest": "23.6.0",
-    "jest-auto-snapshots": "^3.0.1",
-    "jest-pnp-resolver": "1.0.1",
-    "jest-resolve": "23.6.0",
-    "jest-styled-components": "^6.3.1",
+    "jest": "=23.6.0",
+    "jest-auto-snapshots": "=3.0.1",
+    "jest-pnp-resolver": "=1.0.1",
+    "jest-resolve": "=23.6.0",
+    "jest-styled-components": "=6.3.1",
     "markdown-to-jsx": "^6.9.0",
     "mini-css-extract-plugin": "0.4.3",
     "node-fetch": "^2.3.0",
@@ -141,8 +142,8 @@
     "build:docs": "node scripts/build.js",
     "lint": "./node_modules/eslint/bin/eslint.js .",
     "test": "jest && npm run lint",
-    "test-update": "jest --no-coverage -u",
-    "test-watch": "jest --no-coverage --watch",
+    "test-update": "NODE_ENV=production jest --no-coverage -u",
+    "test-watch": "NODE_ENV=production jest --no-coverage --watch",
     "predeploy:docs": "npm run build:docs",
     "deploy:docs": "gh-pages -d build",
     "prebuild:lib": "rimraf lib",
