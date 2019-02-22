@@ -91,7 +91,7 @@ const NavBar = ({ title, version }) => (
             <Text>{title}</Text>
             <VersionText>
               {' '}
-v.
+              v.
               {version}
             </VersionText>
           </TextWrapper>
@@ -103,7 +103,7 @@ v.
 
 NavBar.propTypes = {
   title: PropTypes.string.isRequired,
-  version: PropTypes.number.isRequired,
+  version: PropTypes.string.isRequired,
 };
 
 export default NavBar;
