@@ -42,6 +42,7 @@ const Button = ({
   selectPosition,
   onSelectClick,
   fullWidth,
+  tooltip
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -52,6 +53,7 @@ const Button = ({
     icon={icon}
     hasIconOnly={hasIconOnly}
     fullWidth={fullWidth}
+    data-tip={tooltip}
   >
     {icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
@@ -118,6 +120,9 @@ Button.propTypes = {
 
   /** Is the button the full width of the parent container */
   fullWidth: PropTypes.bool,
+
+  /** Tooltip to show on the component */
+  tooltip: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -134,6 +139,7 @@ Button.defaultProps = {
   selectPosition: 'bottom',
   onSelectClick: undefined,
   fullWidth: false,
+  tooltip: undefined
 };
 
 export default Button;
