@@ -13,6 +13,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       customButton={[Function]}
       hasSearch={false}
       horizontalOffset="-16px"
+      isOpen={false}
       isSplit={false}
       items={
         Array [
