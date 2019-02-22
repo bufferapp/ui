@@ -15,9 +15,9 @@ const Input = ({
   placeholder,
   size,
   type,
-  value,
+  value
 }) => (
-  <div>
+  <Styles.InputWrapper>
     {label.length > 0 && <Text htmlFor={name} type='label'>{label}</Text>}
     <Styles.InputStyled
       disabled={disabled}
@@ -35,7 +35,7 @@ const Input = ({
         {`${hasError ? ' ' : ''}${help}`}
       </Text>
     )}
-  </div>
+  </Styles.InputWrapper>
 );
 
 Input.propTypes = {
@@ -58,7 +58,7 @@ Input.propTypes = {
   /** The type of the input */
   type: PropTypes.string,
   /** The value of the input */
-  value: PropTypes.string,
+  value: PropTypes.string
 };
 
 Input.defaultProps = {
@@ -69,7 +69,7 @@ Input.defaultProps = {
   placeholder: '',
   size: 'regular',
   type: 'text',
-  value: undefined,
+  value: undefined
 }
 
 export default Input;

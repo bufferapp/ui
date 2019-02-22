@@ -16,6 +16,10 @@ import {
   lineHeight,
 } from '../style/fonts';
 
+export const InputWrapper = styled.div`
+  width: 100%;
+`;
+
 export const InputStyled = styled.input`
   background: ${ ({ hasError }) => hasError ? redLight : white };
   border-radius: 4px;
@@ -36,6 +40,7 @@ export const InputStyled = styled.input`
         return '9px 8px 8px 8px';
     }
   }};
+  margin: 8px 0px;
   width: 100%;
   cursor: pointer;
 
