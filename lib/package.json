@@ -1,0 +1,41 @@
+{
+  "name": "@bufferapp/ui",
+  "author": {
+    "name": "Ivana Zuber",
+    "email": "ivanas.zuber@gmail.com",
+    "url": "https://github.com/ivanaszuber"
+  },
+  "version": "1.8.1",
+  "description": "Shared UI components for buffer apps",
+  "main": "./index.js",
+  "keywords": [
+    "components",
+    "react",
+    "react-component",
+    "UI"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bufferapp/ui.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bufferapp/ui/issues"
+  },
+  "homepage": "https://bufferapp.github.io/ui",
+  "peerDependencies": {
+    "react": ">= 0.14.0"
+  },
+  "dependencies": {
+    "immutability-helper": "^2.9.0",
+    "react": "16.6.3",
+    "react-dom": "16.6.3",
+    "react-hotkeys": "^1.1.4",
+    "react-tether": "^1.0.4",
+    "react-transition-group": "^2.5.0",
+    "styled-components": "4.1.1"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
