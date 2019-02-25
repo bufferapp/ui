@@ -10,7 +10,7 @@ describe('SomeComponent component', () => {
   it('openPopup: should open the closed popup', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
-    expect(wrapper.state().isOpen).toBe(false);
+    expect(wrapper.state().isOpen).toBe(null);
     instance.onButtonClick();
     expect(wrapper.state().isOpen).toBe(true);
   });

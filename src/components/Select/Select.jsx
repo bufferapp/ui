@@ -19,16 +19,16 @@ import Search from '../Search/Search';
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
   state = {
-    isOpen: false,
+    isOpen: this.props.isOpen,
     items: this.props.items || [],
-    isFiltering: false,
+    isFiltering: false
   };
 
   static getDerivedStateFromProps(props, state) {
     if (props.items && props.items.length !== state.items.length && !state.isFiltering) {
       return { items: props.items };
     }
-    if(props.isOpen && props.isOpen !== state.isOpen){
+    if(props.isOpen !== null && props.isOpen !== state.isOpen){
       return {isOpen: props.isOpen}
     }
     return null;
@@ -83,7 +83,7 @@ export default class Select extends React.Component {
     if (isOpen) {
       this.setState({
         isOpen: false,
-        hoveredItem: undefined,
+        hoveredItem: undefined
       });
     }
   };
@@ -129,6 +129,7 @@ export default class Select extends React.Component {
     this.setState({
       isOpen: !isOpen,
     });
+
   };
 
   onMoveUp = () => {
@@ -311,6 +312,7 @@ export default class Select extends React.Component {
             <Search
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
+              isOpen={isOpen}
             />
           </div>
         )}
@@ -433,5 +435,5 @@ Select.defaultProps = {
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
   tooltip: undefined,
-  isOpen: false
+  isOpen: null
 };
