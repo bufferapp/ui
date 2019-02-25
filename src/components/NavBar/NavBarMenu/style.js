@@ -7,8 +7,11 @@ import { fontSize, fontWeightMedium } from '../../style/fonts';
 export const NavBarStyled = styled.div`
   display: flex;
   align-items: center;
+  justify-content: center;
   background: ${grayDark};
-  padding: 12px 8px 12px 16px;
+  padding: 0px 8px 0px 16px;
+  height: 64px;
+  width: 230px;
 `;
 
 export const NavBarUser = styled.div`

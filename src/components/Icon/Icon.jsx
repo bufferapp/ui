@@ -19,6 +19,9 @@ Icon.propTypes = {
 
   /** The `vertical-align` CSS value */
   verticalAlign: PropTypes.string,
+
+  /** */
+  children: PropTypes.oneOfType([PropTypes.func, PropTypes.node]).isRequired
 };
 
 Icon.defaultProps = {

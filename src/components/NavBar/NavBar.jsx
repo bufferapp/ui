@@ -35,18 +35,20 @@ const NavBar = ({ user }) => (
       <NavBarProducts />
     </NavBarLeft>
     <NavBarRight>
-      <Select
-        horizontalOffset="-16px"
-        customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
-        items={user.menuItems}
-      />
+      {user.menuItems && (
+        <Select
+          horizontalOffset="-16px"
+          customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
+          items={user.menuItems}
+        />
+      )}
     </NavBarRight>
   </NavBarStyled>
 );
 
 NavBar.propTypes = {
   user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     email: PropTypes.string.isRequired,
     avatar: PropTypes.string,
     menuItems: PropTypes.arrayOf(PropTypes.shape({
@@ -55,7 +57,7 @@ NavBar.propTypes = {
       component: PropTypes.node,
       hasDivider: PropTypes.bool,
       onItemClick: PropTypes.func,
-    })).isRequired,
+    })),
   }).isRequired,
 };
 

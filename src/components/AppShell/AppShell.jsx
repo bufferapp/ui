@@ -23,7 +23,7 @@ const AppShell = ({ user, sidebar: SidebarComponent, content: ContentComponent }
 
 AppShell.propTypes = {
   user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     email: PropTypes.string.isRequired,
     avatar: PropTypes.string,
     menuItems: PropTypes.arrayOf(PropTypes.shape({
@@ -32,7 +32,7 @@ AppShell.propTypes = {
       component: PropTypes.node,
       hasDivider: PropTypes.bool,
       onItemClick: PropTypes.func,
-    })).isRequired,
+    })),
   }).isRequired,
   sidebar: PropTypes.func.isRequired,
   content: PropTypes.func.isRequired,

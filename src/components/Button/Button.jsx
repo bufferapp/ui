@@ -134,6 +134,7 @@ Button.defaultProps = {
   selectPosition: 'bottom',
   onSelectClick: undefined,
   fullWidth: false,
+  onClick: null
 };
 
 export default Button;
