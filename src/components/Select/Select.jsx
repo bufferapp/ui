@@ -21,16 +21,15 @@ export default class Select extends React.Component {
   state = {
     isOpen: this.props.isOpen,
     items: this.props.items || [],
-    isFiltering: false,
-    closeMenu: false
+    isFiltering: false
   };
 
   static getDerivedStateFromProps(props, state) {
     if (props.items && props.items.length !== state.items.length && !state.isFiltering) {
       return { items: props.items };
     }
-    if(props.isOpen !== state.isOpen && !state.closeMenu){
-      return {isOpen: props.isOpen, closeMenu: false}
+    if(props.isOpen !== null && props.isOpen !== state.isOpen){
+      return {isOpen: props.isOpen}
     }
     return null;
   }
@@ -84,8 +83,7 @@ export default class Select extends React.Component {
     if (isOpen) {
       this.setState({
         isOpen: false,
-        hoveredItem: undefined,
-        closeMenu: true
+        hoveredItem: undefined
       });
     }
   };
@@ -130,8 +128,8 @@ export default class Select extends React.Component {
     const { isOpen } = this.state;
     this.setState({
       isOpen: !isOpen,
-      closeMenu: true
     });
+
   };
 
   onMoveUp = () => {
@@ -314,6 +312,7 @@ export default class Select extends React.Component {
             <Search
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
+              isOpen={isOpen}
             />
           </div>
         )}
@@ -436,5 +435,5 @@ Select.defaultProps = {
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
   tooltip: undefined,
-  isOpen: false
+  isOpen: null
 };

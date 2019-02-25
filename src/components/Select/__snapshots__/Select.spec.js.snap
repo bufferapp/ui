@@ -26,6 +26,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
       id="searchInput"
     >
       <Search
+        isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
@@ -81,6 +82,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
       id="searchInput"
     >
       <Search
+        isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
@@ -181,6 +183,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
       id="searchInput"
     >
       <Search
+        isOpen={false}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
@@ -227,6 +230,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
       id="searchInput"
     >
       <Search
+        isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
@@ -281,6 +285,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
       id="searchInput"
     >
       <Search
+        isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
@@ -335,6 +340,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
       id="searchInput"
     >
       <Search
+        isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
@@ -389,6 +395,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
       id="searchInput"
     >
       <Search
+        isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
@@ -447,7 +454,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
   />
   <ForwardRef
     isMenu={false}
-    isOpen={false}
+    isOpen={null}
     position="bottom"
   >
     <ForwardRef>
@@ -466,7 +473,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     </ForwardRef>
   </ForwardRef>
   <ForwardRef
-    isOpen={false}
+    isOpen={null}
     isSplit={false}
     position="bottom"
   />
