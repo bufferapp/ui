@@ -54,7 +54,6 @@ const Avatar = ({
   alt,
   type,
   size,
-  isOnline,
   network,
 }) => {
   const SocialIcon = network && socialIconMap.get(network);
