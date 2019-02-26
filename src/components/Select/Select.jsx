@@ -137,7 +137,9 @@ export default class Select extends React.Component {
     this.setState(
       {
         isOpen: !isOpen,
-      }, () => !isOpen && this.selectNode.focus());
+      },
+      () => !isOpen && this.selectNode.focus()
+    );
   };
 
   onMoveUp = () => {
@@ -270,6 +272,7 @@ export default class Select extends React.Component {
       disabled,
       icon,
       label,
+      hasIconOnly,
     } = this.props;
     const { items } = this.state;
 
@@ -288,6 +291,17 @@ export default class Select extends React.Component {
     }
     if (customButton) {
       return customButton(this.onButtonClick);
+    }
+    if (hasIconOnly) {
+      return (
+        <Button
+          type="text"
+          icon={icon}
+          hasIconOnly
+          onClick={() => this.onButtonClick()}
+          label="Click Me"
+        />
+      );
     }
 
     return (
@@ -431,6 +445,9 @@ Select.propTypes = {
 
   /** Callback to be called when the Select menu gets closed */
   onClose: PropTypes.func,
+
+  /** Does the button have only an icon and no label */
+  hasIconOnly: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -451,4 +468,5 @@ Select.defaultProps = {
   tooltip: undefined,
   isOpen: null,
   onClose: undefined,
+  hasIconOnly: false,
 };
