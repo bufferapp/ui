@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Select from './Select';
 
@@ -8,7 +8,7 @@ Enzyme.configure({ adapter: new Adapter() });
 
 describe('SomeComponent component', () => {
   it('openPopup: should open the closed popup', () => {
-    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const wrapper = mount(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     expect(wrapper.state().isOpen).toBe(null);
     instance.onButtonClick();
@@ -16,7 +16,7 @@ describe('SomeComponent component', () => {
   });
 
   it('closePopup: should close the open popup', () => {
-    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const wrapper = mount(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     instance.onButtonClick();
     expect(wrapper.state().isOpen).toBe(true);
@@ -25,7 +25,7 @@ describe('SomeComponent component', () => {
   });
 
   it('onClose: should close the open popup', () => {
-    const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
+    const wrapper = mount(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
     instance.onButtonClick();
     expect(wrapper.state().isOpen).toBe(true);
