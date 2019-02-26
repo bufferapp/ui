@@ -243,7 +243,8 @@ export default class Select extends React.Component {
   };
 
   onClose = () => {
-    this.setState({ isOpen: false, isFiltering: false });
+    const { onClose } = this.props;
+    this.setState({ isOpen: false, isFiltering: false }, onClose());
   };
 
   getItemId = item => {
@@ -416,7 +417,10 @@ Select.propTypes = {
   tooltip: PropTypes.string,
 
   /** Should the component be opened */
-  isOpen: PropTypes.bool
+  isOpen: PropTypes.bool,
+
+  /** Callback to be called when the Select menu gets closed */
+  onClose: PropTypes.func
 };
 
 Select.defaultProps = {
@@ -435,5 +439,6 @@ Select.defaultProps = {
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
   tooltip: undefined,
-  isOpen: null
+  isOpen: null,
+  onClose: undefined
 };
