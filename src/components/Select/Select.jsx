@@ -21,15 +21,16 @@ export default class Select extends React.Component {
   state = {
     isOpen: this.props.isOpen,
     items: this.props.items || [],
-    isFiltering: false
+    isFiltering: false,
   };
 
   static getDerivedStateFromProps(props, state) {
-    if (props.items && props.items.length !== state.items.length && !state.isFiltering) {
+    if (
+      props.items &&
+      props.items.length !== state.items.length &&
+      !state.isFiltering
+    ) {
       return { items: props.items };
-    }
-    if(props.isOpen !== null && props.isOpen !== state.isOpen){
-      return {isOpen: props.isOpen}
     }
     return null;
   }
@@ -43,6 +44,13 @@ export default class Select extends React.Component {
     // catch the keypress to move the selected items up or down
     this.selectNode &&
       this.selectNode.addEventListener('keydown', this.keyDownPressed);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isOpen !== this.props.isOpen) {
+      // focus the Select component in order to be able to catch the keyboard events
+      this.props.isOpen && this.onButtonClick();
+    }
   }
 
   componentWillUnmount() {
@@ -83,7 +91,7 @@ export default class Select extends React.Component {
     if (isOpen) {
       this.setState({
         isOpen: false,
-        hoveredItem: undefined
+        hoveredItem: undefined,
       });
     }
   };
@@ -126,10 +134,10 @@ export default class Select extends React.Component {
 
   onButtonClick = () => {
     const { isOpen } = this.state;
-    this.setState({
-      isOpen: !isOpen,
-    });
-
+    this.setState(
+      {
+        isOpen: !isOpen,
+      }, () => !isOpen && this.selectNode.focus());
   };
 
   onMoveUp = () => {
@@ -319,7 +327,9 @@ export default class Select extends React.Component {
         )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
           {items.map((item, idx) => [
-            item.hasDivider && <SelectItemDivider key={`${this.getItemId(item)  }--divider`} />,
+            item.hasDivider && (
+              <SelectItemDivider key={`${this.getItemId(item)}--divider`} />
+            ),
             <SelectItem
               hovered={hoveredItem === idx}
               key={this.getItemId(item)}
@@ -420,7 +430,7 @@ Select.propTypes = {
   isOpen: PropTypes.bool,
 
   /** Callback to be called when the Select menu gets closed */
-  onClose: PropTypes.func
+  onClose: PropTypes.func,
 };
 
 Select.defaultProps = {
@@ -440,5 +450,5 @@ Select.defaultProps = {
   searchPlaceholder: 'Search',
   tooltip: undefined,
   isOpen: null,
-  onClose: undefined
+  onClose: undefined,
 };
