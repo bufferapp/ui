@@ -11,7 +11,7 @@ export default class Search extends React.Component {
 
   componentDidUpdate(prevProps) {
     if(prevProps.isOpen !== this.props.isOpen){
-      this.inputRef.focus();
+      setTimeout(()=> this.inputRef.focus(), 50)
     }
   }
 
