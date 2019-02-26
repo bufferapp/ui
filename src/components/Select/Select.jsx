@@ -244,7 +244,7 @@ export default class Select extends React.Component {
 
   onClose = () => {
     const { onClose } = this.props;
-    this.setState({ isOpen: false, isFiltering: false }, onClose());
+    this.setState({ isOpen: false, isFiltering: false }, onClose && onClose());
   };
 
   getItemId = item => {
