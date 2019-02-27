@@ -18,6 +18,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -74,6 +75,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -129,6 +131,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={false}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -184,6 +187,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -230,6 +234,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={false}
     position="top"
@@ -277,6 +282,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   tabIndex={0}
 >
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -332,6 +338,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -387,6 +394,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -442,6 +450,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     />
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={true}
     position="top"
@@ -508,6 +517,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     type="secondary"
   />
   <ForwardRef
+    hasIconOnly={false}
     isMenu={false}
     isOpen={null}
     position="bottom"
@@ -528,6 +538,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     </ForwardRef>
   </ForwardRef>
   <ForwardRef
+    hasIconOnly={false}
     isOpen={null}
     isSplit={false}
     position="bottom"
