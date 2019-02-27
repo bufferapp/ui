@@ -15,11 +15,12 @@ const SidebarItem = ({ icon: Icon, label, url, active }) => (
 SidebarItem.propTypes = {
   icon: PropTypes.func,
   label: PropTypes.string.isRequired,
-  url: PropTypes.string.isRequired,
+  url: PropTypes.string,
   active: PropTypes.bool
 }
 
 SidebarItem.defaultProps = {
+  url: null,
   icon: null,
   active: false
 }

@@ -10,15 +10,15 @@ export default function ExampleSidebar() {
         {
           name: 'Settings',
           items: [
-            { label: 'Item 1', url: '/', icon: Person },
-            { label: 'Item 2', url: '/' }
+            { label: 'Item 1', icon: Person },
+            { label: 'Item 2' }
           ]
         },
         {
           name: 'Settings 2',
           items: [
-            { label: 'Item 3', url: '/' },
-            { label: 'Item 4', url: '/' }
+            { label: 'Item 3' },
+            { label: 'Item 4' }
           ]
         },
       ]}
