@@ -111,6 +111,61 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
 </ForwardRef>
 `;
 
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
+<ForwardRef
+  data-tip="jest-auto-snapshots String Fixture"
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <ForwardRef
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </ForwardRef>
+  <ForwardRef
+    isMenu={true}
+    isOpen={true}
+    position="top"
+  >
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
+    <ForwardRef>
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
+`;
+
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSearch" is set to: "false" 1`] = `
 <ForwardRef
   data-tip="jest-auto-snapshots String Fixture"

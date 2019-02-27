@@ -133,12 +133,18 @@ export default class Select extends React.Component {
   };
 
   onButtonClick = () => {
-    const { isOpen } = this.state;
+    const { isOpen, items } = this.state;
     this.setState(
       {
         isOpen: !isOpen,
       },
-      () => !isOpen && this.selectNode.focus()
+      () => {
+        !isOpen && this.selectNode.focus();
+        this.scrollToItem(
+          this.itemsNode,
+          document.getElementById(this.getItemId(items[0]))
+        );
+      }
     );
   };
 
@@ -254,7 +260,8 @@ export default class Select extends React.Component {
 
   onClose = () => {
     const { onClose } = this.props;
-    this.setState({ isOpen: false, isFiltering: false }, onClose && onClose());
+    this.setState({ isOpen: false, isFiltering: false, hoveredItem: 0 }, onClose && onClose());
+
   };
 
   getItemId = item => {
