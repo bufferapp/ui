@@ -25,6 +25,9 @@ yarn-error.log*
 # built docs
 /docs
 
+# Build lib
+/lib
+
 # Generated component data
 /config/componentData.js
 
