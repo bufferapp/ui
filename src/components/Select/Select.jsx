@@ -381,6 +381,7 @@ export default class Select extends React.Component {
       customButton,
       tooltip,
       hasIconOnly,
+      disabled,
     } = this.props;
     const { isOpen } = this.state;
 
@@ -392,7 +393,7 @@ export default class Select extends React.Component {
         tabIndex={0}
         isSplit={isSplit}
         ref={selectNode => (this.selectNode = selectNode)}
-        data-tip={tooltip}
+        data-tip={disabled ? '' : tooltip}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
