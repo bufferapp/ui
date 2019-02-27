@@ -260,8 +260,10 @@ export default class Select extends React.Component {
 
   onClose = () => {
     const { onClose } = this.props;
-    this.setState({ isOpen: false, isFiltering: false, hoveredItem: 0 }, onClose && onClose());
-
+    this.setState(
+      { isOpen: false, isFiltering: false, hoveredItem: 0 },
+      onClose && onClose()
+    );
   };
 
   getItemId = item => {
@@ -332,11 +334,17 @@ export default class Select extends React.Component {
       customButton,
       keyMap,
       searchPlaceholder,
+      hasIconOnly,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
     return (
-      <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton}>
+      <SelectStyled
+        isOpen={isOpen}
+        position={position}
+        isMenu={!!customButton}
+        hasIconOnly={hasIconOnly}
+      >
         {hasSearch && (
           <div id="searchInput" ref={node => (this.searchInputNode = node)}>
             <Search
@@ -367,7 +375,13 @@ export default class Select extends React.Component {
   };
 
   render() {
-    const { isSplit, position, customButton, tooltip } = this.props;
+    const {
+      isSplit,
+      position,
+      customButton,
+      tooltip,
+      hasIconOnly,
+    } = this.props;
     const { isOpen } = this.state;
 
     return (
@@ -383,7 +397,12 @@ export default class Select extends React.Component {
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
         {!customButton && (
-          <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
+          <Arrow
+            isOpen={isOpen}
+            isSplit={isSplit}
+            position={position}
+            hasIconOnly={hasIconOnly}
+          />
         )}
       </Wrapper>
     );
