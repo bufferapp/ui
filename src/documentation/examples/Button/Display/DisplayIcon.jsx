@@ -6,7 +6,7 @@ import { Folder } from '@bufferapp/ui/Icon';
 export default function ExampleButton() {
   return (
     <Button
-      type="secondary"
+      display="secondary"
       icon={<Folder />}
       hasIconOnly
       onClick={() => {}}

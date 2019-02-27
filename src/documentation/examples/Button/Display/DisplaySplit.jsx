@@ -7,7 +7,7 @@ export default function ExampleSplitButton() {
     <Button
       onSelectClick={() => true}
       onClick={() => true}
-      type="primary"
+      display="primary"
       isSplit
       items={[
         { id: '1', title: 'Reply + Pending' },

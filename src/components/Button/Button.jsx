@@ -8,7 +8,7 @@ import Select from '../Select/Select';
 export const ButtonStyled = styled.button`
   ${Styles.ButtonBase};
   ${props => Styles[props.size]};
-  ${props => Styles[props.disabled ? 'disabled' : props.type]};
+  ${props => Styles[props.disabled ? 'disabled' : props.display]};
   ${props => Styles[props.fullWidth ? 'fullWidth' : '']}
 `;
 
@@ -31,6 +31,7 @@ const Button = ({
   disabled,
   onClick,
   type,
+  display,
   size,
   label,
   isSplit,
@@ -48,6 +49,7 @@ const Button = ({
     disabled={disabled}
     size={size}
     type={type}
+    display={display}
     isSplit={isSplit}
     icon={icon}
     hasIconOnly={hasIconOnly}
@@ -57,16 +59,16 @@ const Button = ({
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
     {!hasIconOnly && <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>}
 
-    {isSelect && (type === 'primary' || type === 'secondary') && (
+    {isSelect && (display === 'primary' || display === 'secondary') && (
       <Styles.ButtonArrow>
-        <ChevronDown color={type === 'primary' ? 'white' : 'grayDark'} size={size} isChevron />
+        <ChevronDown color={display === 'primary' ? 'white' : 'grayDark'} size={size} isChevron />
       </Styles.ButtonArrow>
     )}
 
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
 
-    {isSplit && (type === 'primary' || type === 'secondary') && (
-      <Select onSelectClick={onSelectClick} items={items} type={type} isSplit position={selectPosition} disabled={disabled} />
+    {isSplit && (display === 'primary' || display === 'secondary') && (
+      <Select onSelectClick={onSelectClick} items={items} type={display} isSplit position={selectPosition} disabled={disabled} />
     )}
   </ButtonStyled>
 );
@@ -84,8 +86,11 @@ Button.propTypes = {
   /** Button label */
   label: PropTypes.string,
 
-  /** Type of button */
-  type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text']),
+  /** The type of Button */
+  type: PropTypes.string,
+
+  /** Display to be used */
+  display: PropTypes.oneOf(['link', 'primary', 'secondary', 'text']),
 
   /** Is the Button Split  */
   isSplit: PropTypes.bool,
@@ -125,7 +130,8 @@ Button.defaultProps = {
   isSplit: undefined,
   loading: false,
   size: 'medium',
-  type: 'secondary',
+  type: 'button',
+  display: 'primary',
   label: undefined,
   hasIconOnly: false,
   icon: undefined,

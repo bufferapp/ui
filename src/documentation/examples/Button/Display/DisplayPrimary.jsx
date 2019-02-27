@@ -1,12 +1,11 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
 
-/** Loading */
-export default function ExamplePrimaryLoading() {
+/** Primary */
+export default function ExampleTypePrimary() {
   return (
     <Button
       display="primary"
-      loading
       onClick={() => {}}
       label="Click Me"
     />

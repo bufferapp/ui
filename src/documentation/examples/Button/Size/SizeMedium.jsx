@@ -4,6 +4,6 @@ import Button from '@bufferapp/ui/Button';
 /** Normal */
 export default function ExampleSizeNormal() {
   return (
-    <Button type="primary" onClick={() => {}} label="Click Me" />
+    <Button display="primary" onClick={() => {}} label="Click Me" />
   );
 }

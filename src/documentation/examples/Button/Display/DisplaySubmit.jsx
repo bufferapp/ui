@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
 
-/** Text */
-export default function ExampleTypeText() {
+/** Submit */
+export default function ExampleTypePrimary() {
   return (
     <Button
-      type="text"
+      display="submit"
       onClick={() => {}}
       label="Click Me"
     />

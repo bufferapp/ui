@@ -5,7 +5,7 @@ import Button from '@bufferapp/ui/Button';
 export default function ExampleDisabled() {
   return (
     <Button
-      type="primary"
+      display="primary"
       disabled
       onClick={() => {}}
       label="Click Me"

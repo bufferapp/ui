@@ -1,13 +1,11 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
 
-/** Link */
-export default function ExampleTypeLink() {
+/** Secondary */
+export default function ExampleTypeSecondary() {
   return (
     <Button
-      type="link"
-      isSplit={false}
-      isSelect={false}
+      display="secondary"
       onClick={() => {}}
       label="Click Me"
     />
