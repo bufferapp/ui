@@ -7,7 +7,7 @@ export default function ExampleSelect() {
   return (
     <Select
       onSelectClick={() => true}
-      label="Click boop"
+      label="Click me"
       icon={<MoreIcon />}
       type="primary"
       items={[
@@ -16,6 +16,7 @@ export default function ExampleSelect() {
         { id: '3', title: 'Closed' },
       ]}
       hasIconOnly
+      position="right"
     />
   );
 }

@@ -27,13 +27,19 @@ export const SelectStyled = styled.div`
   width: auto;
   background-color: #ffffff;
   bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
-  top: ${props => (props.position === 'bottom' ? '100%' : 'initial')};
+  top: ${props =>
+    props.position === 'bottom' || 'right' ? '100%' : 'initial'};
   margin-bottom: ${props => (props.position === 'top' ? '8px' : '0')};
   margin-top: ${props =>
-    props.isMenu ? '32px' : props.position === 'bottom' ? '8px' : '0'};
+    props.isMenu
+      ? '32px'
+      : props.position === 'bottom' || 'right'
+      ? '8px'
+      : '0'};
   transform: translateX(
     ${props => (props.horizontalOffset ? props.horizontalOffset : '0')}
   );
+  left: ${props => (props.position === 'right' ? 0 : '')};
 `;
 
 export const SelectItems = styled.ul`
