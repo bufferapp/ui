@@ -28,12 +28,12 @@ export const SelectStyled = styled.div`
   background-color: #ffffff;
   bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
   top: ${props =>
-    props.position === 'bottom' || 'right' ? '100%' : 'initial'};
+    props.position === 'bottom' || props.position === 'right' ? '100%' : 'initial'};
   margin-bottom: ${props => (props.position === 'top' ? '8px' : '0')};
   margin-top: ${props =>
     props.isMenu
       ? '32px'
-      : props.position === 'bottom' || 'right'
+      : props.position === 'bottom' || props.position === 'right'
       ? '8px'
       : '0'};
   transform: translateX(
