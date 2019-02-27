@@ -18,11 +18,14 @@ const Loading = styled.img`
 `;
 
 const VisuallyHiddenLabel = styled.span`
-  position: absolute; 
-  overflow: hidden; 
-  clip: rect(0 0 0 0); 
-  height: 1px; width: 1px; 
-  margin: -1px; padding: 0; border: 0;  
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 `;
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
@@ -42,7 +45,7 @@ const Button = ({
   selectPosition,
   onSelectClick,
   fullWidth,
-  tooltip
+  tooltip,
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -57,18 +60,31 @@ const Button = ({
   >
     {icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
-    {!hasIconOnly && <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>}
+    {!hasIconOnly && (
+      <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>
+    )}
 
     {isSelect && (type === 'primary' || type === 'secondary') && (
       <Styles.ButtonArrow>
-        <ChevronDown color={type === 'primary' ? 'white' : 'grayDark'} size={size} isChevron />
+        <ChevronDown
+          color={type === 'primary' ? 'white' : 'grayDark'}
+          size={size}
+          isChevron
+        />
       </Styles.ButtonArrow>
     )}
 
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
 
     {isSplit && (type === 'primary' || type === 'secondary') && (
-      <Select onSelectClick={onSelectClick} items={items} type={type} isSplit position={selectPosition} disabled={disabled} />
+      <Select
+        onSelectClick={onSelectClick}
+        items={items}
+        type={type}
+        isSplit
+        position={selectPosition}
+        disabled={disabled}
+      />
     )}
   </ButtonStyled>
 );
@@ -109,7 +125,7 @@ Button.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
-    }),
+    })
   ),
 
   /** Position of the Select popup */
@@ -122,7 +138,7 @@ Button.propTypes = {
   fullWidth: PropTypes.bool,
 
   /** Tooltip to show on the component */
-  tooltip: PropTypes.string
+  tooltip: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -139,7 +155,7 @@ Button.defaultProps = {
   selectPosition: 'bottom',
   onSelectClick: undefined,
   fullWidth: false,
-  tooltip: undefined
+  tooltip: undefined,
 };
 
 export default Button;

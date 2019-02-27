@@ -11,6 +11,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
   <ForwardRef>
     <Select
       customButton={[Function]}
+      hasIconOnly={false}
       hasSearch={false}
       horizontalOffset="-16px"
       isOpen={null}
