@@ -137,7 +137,7 @@
     "gen:docs-watch": "npm run gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
     "lint": "./node_modules/eslint/bin/eslint.js .",
-    "test": "jest && npm run lint",
+    "test": "jest",
     "test-update": "NODE_ENV=production jest --no-coverage -u",
     "test-watch": "NODE_ENV=production jest --no-coverage --watch",
     "predeploy:docs": "npm run build:docs",
