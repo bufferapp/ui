@@ -13,8 +13,6 @@ export const SelectItemStyled = styled.li`
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
-  margin-left: 8px;
-  margin-right: 8px;
   border-radius: 4px;
   background-color: ${props => (props.hovered ? grayLight : 'transparent')};
   &:hover {
@@ -36,7 +34,7 @@ export const SelectItemLabel = styled.div`
 
 export const SelectItemIcon = styled.div`
   display: flex;
-  padding-right: 4px;
+  padding-right: 6px;
   svg {
     fill: ${props => (props.hovered ? grayDarker : gray)};
   }
