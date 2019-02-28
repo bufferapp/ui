@@ -13,9 +13,11 @@ fi
 newVersion=$1
 echo -e $BLUE"Publishing a new" $newVersion "version"$NC
 
-npm version $newVersion && \
+git checkout master && \
+  npm version $newVersion && \
   npm run build:lib && \
   cd ./lib && \
   npm publish && \
   cd ../ &&\
+  git push \
   npm run deploy:docs
