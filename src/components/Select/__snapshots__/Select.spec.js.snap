@@ -2,7 +2,7 @@
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -115,7 +115,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -171,7 +171,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSearch" is set to: "false" 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -218,7 +218,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -274,7 +274,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={false}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -322,7 +322,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiSelect" is set to: "false" 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -378,7 +378,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -434,7 +434,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`] = `
 <ForwardRef
-  data-tip="jest-auto-snapshots String Fixture"
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
