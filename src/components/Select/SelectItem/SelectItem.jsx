@@ -42,12 +42,14 @@ SelectItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
+    onItemClick: PropTypes.func,
     selected: PropTypes.bool,
     icon: PropTypes.node,
+    component: PropTypes.func
   }).isRequired,
 
   /** On click function */
-  onClick: PropTypes.func,
+  onClick: PropTypes.func.isRequired,
 
   /** Get the id of the item */
   getItemId: PropTypes.func.isRequired,
@@ -69,7 +71,6 @@ SelectItem.defaultProps = {
   hovered: undefined,
   keyMap: undefined,
   hasSelectedItems: undefined,
-  onClick: undefined
 };
 
 export default SelectItem;
