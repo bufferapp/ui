@@ -3,12 +3,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { includes, some } from 'lodash';
 import helper from 'immutability-helper';
+import SearchIcon from '@bufferapp/ui/Icon/Icons/Search';
 import {
   Wrapper,
   SelectStyled,
   SelectItems,
   Arrow,
   SelectItemDivider,
+  SearchBarWrapper,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
@@ -346,13 +348,17 @@ export default class Select extends React.Component {
         hasIconOnly={hasIconOnly}
       >
         {hasSearch && (
-          <div id="searchInput" ref={node => (this.searchInputNode = node)}>
+          <SearchBarWrapper
+            id="searchInput"
+            ref={node => (this.searchInputNode = node)}
+          >
+            <SearchIcon />
             <Search
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
             />
-          </div>
+          </SearchBarWrapper>
         )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
           {items.map((item, idx) => [

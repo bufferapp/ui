@@ -28,7 +28,9 @@ export const SelectStyled = styled.div`
   background-color: #ffffff;
   bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
   top: ${props =>
-    props.position === 'bottom' || props.position === 'right' ? '100%' : 'initial'};
+    props.position === 'bottom' || props.position === 'right'
+      ? '100%'
+      : 'initial'};
   margin-bottom: ${props => (props.position === 'top' ? '8px' : '0')};
   margin-top: ${props =>
     props.isMenu
@@ -83,4 +85,12 @@ export const SelectItemDivider = styled.li`
   padding: 0;
   pointer-events: none;
   width: 100%;
+`;
+
+export const SearchBarWrapper = styled.div`
+  display: flex;
+  border-bottom: 1px solid #ecf0f3;
+  align-items: center;
+  padding-left: 8px;
+  color: ${gray};
 `;
