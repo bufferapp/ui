@@ -22,10 +22,10 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only requir
   />
   <ForwardRef>
     <ForwardRef>
-      <mockConstructor />
+      <NodeFixture />
     </ForwardRef>
     <ForwardRef>
-      <mockConstructor />
+      <NodeFixture />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
