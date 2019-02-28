@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { grayDarker, grayDark, white, grayLight } from '../../style/colors';
+import { grayDarker, gray, grayLight } from '../../style/colors';
 import { fontWeightMedium, fontSize } from '../../style/fonts';
 
 export const SelectItemStyled = styled.li`
@@ -37,11 +37,11 @@ export const SelectItemLabel = styled.div`
 export const SelectItemIcon = styled.div`
   padding-right: 4px;
   svg {
-    fill: ${props => (props.hovered ? white : grayDark)};
+    fill: ${props => (props.hovered ? grayDarker : gray)};
   }
   ${SelectItemStyled}:hover & * {
-    color: ${white};
-    fill: ${white};
+    color: ${grayDarker};
+    fill: ${grayDarker};
   }
 `;
 
