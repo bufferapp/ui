@@ -40,6 +40,12 @@ const SelectItem = ({
 SelectItem.propTypes = {
   /** Item to render */
   item: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    onItemClick: PropTypes.func,
+    selected: PropTypes.bool,
+    icon: PropTypes.node,
+    component: PropTypes.func
   }).isRequired,
 
   /** On click function */
