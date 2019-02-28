@@ -35,6 +35,7 @@ export const SelectItemLabel = styled.div`
 `;
 
 export const SelectItemIcon = styled.div`
+  display: flex;
   padding-right: 4px;
   svg {
     fill: ${props => (props.hovered ? grayDarker : gray)};
