@@ -27,7 +27,7 @@ export default class Select extends React.Component {
   static getDerivedStateFromProps(props, state) {
     if (
       props.items &&
-      props.items.length !== state.items.length &&
+      props.items !== state.items &&
       !state.isFiltering
     ) {
       return { items: props.items };
