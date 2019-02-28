@@ -8,11 +8,13 @@ export default class Search extends React.Component {
     search: '',
   };
 
-  componentDidMount() {
-    if (this.inputRef) {
-      this.inputRef.focus();
+
+  componentDidUpdate(prevProps) {
+    if(prevProps.isOpen !== this.props.isOpen){
+      setTimeout(()=> this.inputRef.focus(), 50)
     }
   }
+
 
   onChange = (event) => {
     const { onChange } = this.props;
@@ -51,8 +53,12 @@ Search.propTypes = {
 
   /** Function to call on search input change */
   onChange: PropTypes.func.isRequired,
+
+  /** Is the select menu open */
+  isOpen: PropTypes.bool
 };
 
 Search.defaultProps = {
   placeholder: '',
+  isOpen: false
 }

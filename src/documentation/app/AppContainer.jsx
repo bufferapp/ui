@@ -10,12 +10,13 @@ import componentData from '../../../config/componentData';
 import documentationData from '../../../config/documentsData';
 import NavBar from './layout/navbar/NavBar';
 import UIComponent from '../markdown/UI.md';
+import pckage from '../../../package.json';
 
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
-  color: #242A31;
-  background: #F5F7F9;
+  color: #242a31;
+  background: #f5f7f9;
   display: flex;
   flex-direction: column;
 `;
@@ -33,7 +34,7 @@ const PageLayout = styled.div`
   min-height: calc(100vh - 201px);
   max-width: 850px;
   overflow: auto;
-  border-right: 1px solid #E6ECF1;
+  border-right: 1px solid #e6ecf1;
 `;
 
 /** The main Documentation app container that renders other components */
@@ -57,19 +58,25 @@ export default class AppContainer extends React.Component {
    *
    * @param {Event} event
    */
-  onKeyDown(event) { // eslint-disable-line
-    const { history, location: { pathname } } = this.props;
+  onKeyDown(event) {
+    // eslint-disable-line
+    const {
+      history,
+      location: { pathname },
+    } = this.props;
     // Ignore non-component paths (i.e., markdown docs)
     if (pathname.indexOf('/ui/') < 0) {
       return;
     }
-    if (event.keyCode === 27) { // escape
+    if (event.keyCode === 27) {
+      // escape
       if (pathname.endsWith('/fullscreen')) {
         const newPath = `${pathname.replace('/fullscreen', '')}`;
         history.push(newPath);
       }
     }
-    if (event.keyCode === 220 && !!event.shiftKey) { // Shift + \ (backslash)
+    if (event.keyCode === 220 && !!event.shiftKey) {
+      // Shift + \ (backslash)
       let newPath = '/';
       if (pathname.endsWith('/fullscreen')) {
         newPath = `${pathname.replace('/fullscreen', '')}`;
@@ -93,18 +100,23 @@ export default class AppContainer extends React.Component {
     return links;
   };
 
-  renderMarkdownComponent = () => <MarkdownToJsx>{UIComponent}</MarkdownToJsx>
-
+  renderMarkdownComponent = () => <MarkdownToJsx>{UIComponent}</MarkdownToJsx>;
 
   render() {
-    const { match: { params: { route, location, view } } } = this.props;
+    const {
+      match: {
+        params: { route, location, view },
+      },
+    } = this.props;
 
     const isUIRoot = location === 'ui' && route === 'ui';
 
     // by convention, the route in the url should match the components name
     // if there's no component specified, just show the first component in the list
-    const component = location === 'ui' ? componentData
-      .children.filter(x => x.id === route)[0] : null;
+    const component =
+      location === 'ui'
+        ? componentData.children.filter(x => x.id === route)[0]
+        : null;
 
     // concatenate the documentation data and the components data
     // to construct the links in the sidebar
@@ -112,14 +124,18 @@ export default class AppContainer extends React.Component {
 
     // from the documentation data, find the current page parent
     // in order to be able to identify the child we need to show on the page
-    const pageParents = documentationData.filter(x => x.fileName === location)[0];
+    const pageParents = documentationData.filter(
+      x => x.fileName === location
+    )[0];
 
     // find the child page we need to show
-    const page = pageParents && pageParents.children.filter(x => x.id === route)[0];
+    const page =
+      pageParents && pageParents.children.filter(x => x.id === route)[0];
 
     // dynamically import the documentation component
     // based on the location and fileName we are currently requesting
-    const PageComponent = page && require(`../markdown/${location}/${page.fileName}.md`);
+    const PageComponent =
+      page && require(`../markdown/${location}/${page.fileName}.md`);
 
     if (view === 'fullscreen') {
       return <Component component={component} fullscreen />;
@@ -127,12 +143,23 @@ export default class AppContainer extends React.Component {
 
     return (
       <Container>
-        <NavBar title="Buffer Components Documentation" />
+        <NavBar
+          title="Buffer Components Documentation"
+          version={pckage.version}
+        />
         <Wrapper>
           <Sidebar navigationLinks={navigationLinks} route={route} />
           <PageLayout>
-            {isUIRoot ? this.renderMarkdownComponent() : component ? <Component component={component} /> : (
-              <Markdown component={PageComponent} page={page} links={() => this.getFooterLinks(pageParents, route)} />
+            {isUIRoot ? (
+              this.renderMarkdownComponent()
+            ) : component ? (
+              <Component component={component} />
+            ) : (
+              <Markdown
+                component={PageComponent}
+                page={page}
+                links={() => this.getFooterLinks(pageParents, route)}
+              />
             )}
           </PageLayout>
         </Wrapper>

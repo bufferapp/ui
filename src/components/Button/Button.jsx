@@ -21,8 +21,11 @@ const VisuallyHiddenLabel = styled.span`
   position: absolute;
   overflow: hidden;
   clip: rect(0 0 0 0);
-  height: 1px; width: 1px;
-  margin: -1px; padding: 0; border: 0;
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 `;
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
@@ -43,6 +46,7 @@ const Button = ({
   selectPosition,
   onSelectClick,
   fullWidth,
+  tooltip,
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -54,10 +58,13 @@ const Button = ({
     icon={icon}
     hasIconOnly={hasIconOnly}
     fullWidth={fullWidth}
+    data-tip={tooltip}
   >
     {icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
-    {!hasIconOnly && <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>}
+    {!hasIconOnly && (
+      <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>
+    )}
 
     {isSelect && (display === 'primary' || display === 'secondary') && (
       <Styles.ButtonArrow>
@@ -110,9 +117,9 @@ Button.propTypes = {
   /** Items to display in the Split Button popup */
   items: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-    }),
+      id: PropTypes.string,
+      title: PropTypes.string,
+    })
   ),
 
   /** Position of the Select popup */
@@ -123,6 +130,9 @@ Button.propTypes = {
 
   /** Is the button the full width of the parent container */
   fullWidth: PropTypes.bool,
+
+  /** Tooltip to show on the component */
+  tooltip: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -140,7 +150,8 @@ Button.defaultProps = {
   selectPosition: 'bottom',
   onSelectClick: undefined,
   fullWidth: false,
-  onClick: null
+  onClick: null,
+  tooltip: undefined,
 };
 
 export default Button;

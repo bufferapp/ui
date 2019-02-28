@@ -1,5 +1,5 @@
-/* eslint-disable no-nested-ternary */
-import React, { Fragment } from 'react';
+/* eslint-disable no-unused-expressions, react/no-unused-state */
+import React from 'react';
 import PropTypes from 'prop-types';
 import { includes, some } from 'lodash';
 import helper from 'immutability-helper';
@@ -18,16 +18,21 @@ import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    isOpen: this.props.isOpen,
+    items: this.props.items || [],
+    isFiltering: false,
+  };
 
-    this.onButtonClick = this.onButtonClick.bind(this);
-    this.closePopover = this.closePopover.bind(this);
-
-    this.state = {
-      isOpen: false,
-      items: props.items,
-    };
+  static getDerivedStateFromProps(props, state) {
+    if (
+      props.items &&
+      props.items.length !== state.items.length &&
+      !state.isFiltering
+    ) {
+      return { items: props.items };
+    }
+    return null;
   }
 
   componentDidMount() {
@@ -37,16 +42,21 @@ export default class Select extends React.Component {
     document.addEventListener('click', this.closePopover, true);
 
     // catch the keypress to move the selected items up or down
-    if (this.selectNode) {
+    this.selectNode &&
       this.selectNode.addEventListener('keydown', this.keyDownPressed);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.isOpen !== this.props.isOpen) {
+      // focus the Select component in order to be able to catch the keyboard events
+      this.props.isOpen && this.onButtonClick();
     }
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true);
-    if (this.selectNode) {
+    this.selectNode &&
       this.selectNode.removeEventListener('keydown', this.keyDownPressed);
-    }
   }
 
   keyDownPressed = e => {
@@ -74,8 +84,8 @@ export default class Select extends React.Component {
   };
 
   // Close the popover
-  closePopover = (e) => {
-    if (this.selectNode && this.selectNode.contains(e.target)) return;
+  closePopover = e => {
+    if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
     const { isOpen } = this.state;
 
     if (isOpen) {
@@ -123,10 +133,19 @@ export default class Select extends React.Component {
   };
 
   onButtonClick = () => {
-    const { isOpen } = this.state;
-    this.setState({
-      isOpen: !isOpen,
-    });
+    const { isOpen, items } = this.state;
+    this.setState(
+      {
+        isOpen: !isOpen,
+      },
+      () => {
+        !isOpen && this.selectNode.focus();
+        this.scrollToItem(
+          this.itemsNode,
+          document.getElementById(this.getItemId(items[0]))
+        );
+      }
+    );
   };
 
   onMoveUp = () => {
@@ -171,11 +190,9 @@ export default class Select extends React.Component {
     const { onSelectClick } = this.props;
     const { items, hoveredItem } = this.state;
     const selectedItem = items[hoveredItem];
-    if (selectedItem && selectedItem.onItemClick) {
-      selectedItem.onItemClick(selectedItem);
-    } else {
-      onSelectClick(items[hoveredItem]);
-    }
+    selectedItem && selectedItem.onItemClick
+      ? selectedItem.onItemClick(selectedItem)
+      : onSelectClick(items[hoveredItem]);
   };
 
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
@@ -237,11 +254,16 @@ export default class Select extends React.Component {
     );
     this.setState({
       items: filteredItems,
+      isFiltering: true,
     });
   };
 
   onClose = () => {
-    this.setState({ isOpen: false });
+    const { onClose } = this.props;
+    this.setState(
+      { isOpen: false, isFiltering: false, hoveredItem: 0 },
+      onClose && onClose()
+    );
   };
 
   getItemId = item => {
@@ -259,6 +281,7 @@ export default class Select extends React.Component {
       disabled,
       icon,
       label,
+      hasIconOnly,
     } = this.props;
     const { items } = this.state;
 
@@ -277,6 +300,17 @@ export default class Select extends React.Component {
     }
     if (customButton) {
       return customButton(this.onButtonClick);
+    }
+    if (hasIconOnly) {
+      return (
+        <Button
+          type="text"
+          icon={icon}
+          hasIconOnly
+          onClick={() => this.onButtonClick()}
+          label="Click Me"
+        />
+      );
     }
 
     return (
@@ -299,42 +333,56 @@ export default class Select extends React.Component {
       hasSearch,
       customButton,
       keyMap,
-      horizontalOffset,
-      // searchPlaceholder,
+      searchPlaceholder,
+      hasIconOnly,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
     return (
-      <SelectStyled isOpen={isOpen} position={position} isMenu={!!customButton} horizontalOffset={horizontalOffset}>
+      <SelectStyled
+        isOpen={isOpen}
+        position={position}
+        isMenu={!!customButton}
+        hasIconOnly={hasIconOnly}
+      >
         {hasSearch && (
-          <Search
-            ref={node => (this.searchInputNode = node)}
-            onChange={this.onSearchChange}
-            onAddItem={this.onAddItem}
-            onClose={this.onClose}
-          />
+          <div id="searchInput" ref={node => (this.searchInputNode = node)}>
+            <Search
+              onChange={this.onSearchChange}
+              placeholder={searchPlaceholder}
+              isOpen={isOpen}
+            />
+          </div>
         )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
-          {items.map((item, idx) => (
-            <Fragment key={(item[keyMap ? keyMap.id : 'id']) || `id-${idx}`}>
-              {item.hasDivider && <SelectItemDivider />}
-              <SelectItem
-                hovered={hoveredItem === idx}
-                key={this.getItemId(item)}
-                getItemId={this.getItemId}
-                item={item}
-                keyMap={keyMap}
-                hasSelectedItems={some(items, { selected: true })}
-                onClick={event => this.handleSelectOption(item, event)}
-              />
-            </Fragment>))}
+          {items.map((item, idx) => [
+            item.hasDivider && (
+              <SelectItemDivider key={`${this.getItemId(item)}--divider`} />
+            ),
+            <SelectItem
+              hovered={hoveredItem === idx}
+              key={this.getItemId(item)}
+              getItemId={this.getItemId}
+              item={item}
+              keyMap={keyMap}
+              hasSelectedItems={some(items, { selected: true })}
+              onClick={event => this.handleSelectOption(item, event)}
+            />,
+          ])}
         </SelectItems>
       </SelectStyled>
     );
   };
 
   render() {
-    const { isSplit, position, customButton } = this.props;
+    const {
+      isSplit,
+      position,
+      customButton,
+      tooltip,
+      hasIconOnly,
+      disabled,
+    } = this.props;
     const { isOpen } = this.state;
 
     return (
@@ -345,11 +393,17 @@ export default class Select extends React.Component {
         tabIndex={0}
         isSplit={isSplit}
         ref={selectNode => (this.selectNode = selectNode)}
+        data-tip={disabled ? '' : tooltip}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
         {!customButton && (
-          <Arrow isOpen={isOpen} isSplit={isSplit} position={position} />
+          <Arrow
+            isOpen={isOpen}
+            isSplit={isSplit}
+            position={position}
+            hasIconOnly={hasIconOnly}
+          />
         )}
       </Wrapper>
     );
@@ -386,9 +440,6 @@ Select.propTypes = {
   /** Position of the popup */
   position: PropTypes.oneOf(['top', 'bottom']),
 
-  /** Amount to offset the popup horizontally, can be any valid CSS value (e.g., `10px`, `-5px`) */
-  horizontalOffset: PropTypes.string,
-
   /** Icon to show in the Button */
   icon: PropTypes.node,
 
@@ -411,7 +462,19 @@ Select.propTypes = {
   shortcutsEnabled: PropTypes.bool,
 
   /** Search placeholder */
-  // searchPlaceholder: PropTypes.string,
+  searchPlaceholder: PropTypes.string,
+
+  /** Tooltip to show on the component */
+  tooltip: PropTypes.string,
+
+  /** Should the component be opened */
+  isOpen: PropTypes.bool,
+
+  /** Callback to be called when the Select menu gets closed */
+  onClose: PropTypes.func,
+
+  /** Does the button have only an icon and no label */
+  hasIconOnly: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -420,7 +483,6 @@ Select.defaultProps = {
   type: 'secondary',
   size: 'medium',
   position: 'bottom',
-  horizontalOffset: '0',
   disabled: undefined,
   icon: undefined,
   hasSearch: false,
@@ -429,5 +491,9 @@ Select.defaultProps = {
   keyMap: undefined,
   multiSelect: undefined,
   shortcutsEnabled: true,
-  // searchPlaceholder: 'Search',
+  searchPlaceholder: 'Search',
+  tooltip: undefined,
+  isOpen: null,
+  onClose: undefined,
+  hasIconOnly: false,
 };

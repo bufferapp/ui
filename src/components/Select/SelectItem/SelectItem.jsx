@@ -1,19 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Flag } from '../../Icon';
+import { Checkmark } from '../../Icon';
 import {
-  SelectItemStyled, SelectItemLabel, SelectItemIcon, SelectItemTitle,
+  SelectItemStyled,
+  SelectItemLabel,
+  SelectItemIcon,
+  SelectItemTitle,
+  SelectItemCustom,
 } from './style';
 
 const SelectItem = ({
-  item, onClick, hovered, keyMap, hasSelectedItems, getItemId,
+  item,
+  onClick,
+  hovered,
+  keyMap,
+  hasSelectedItems,
+  getItemId,
 }) => (
-  <SelectItemStyled onClick={item.onItemClick || onClick} hovered={hovered} id={getItemId(item)}>
+  <SelectItemStyled
+    onClick={item.onItemClick || onClick}
+    hovered={hovered}
+    id={getItemId(item)}
+  >
     <SelectItemLabel>
-      {item.selected && <Flag color="gray" />}
-      <SelectItemIcon hovered={hovered}>
-        {item.component}
-      </SelectItemIcon>
+      {item.selected && <Checkmark color="gray" />}
+      {item.icon && (
+        <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
+      )}
+      {item.component && (
+        <SelectItemCustom dangerouslySetInnerHTML={{ __html: item.component(item) }} />
+      )}
       <SelectItemTitle moveRight={hasSelectedItems && !item.selected}>
         {item[keyMap ? keyMap.title : 'title']}
       </SelectItemTitle>
@@ -24,9 +40,12 @@ const SelectItem = ({
 SelectItem.propTypes = {
   /** Item to render */
   item: PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
+    id: PropTypes.string,
+    title: PropTypes.string,
     onItemClick: PropTypes.func,
+    selected: PropTypes.bool,
+    icon: PropTypes.node,
+    component: PropTypes.func
   }).isRequired,
 
   /** On click function */

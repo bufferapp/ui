@@ -2,6 +2,7 @@
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -17,38 +18,39 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     />
   </ForwardRef>
   <ForwardRef
-    horizontalOffset="jest-auto-snapshots String Fixture"
+    hasIconOnly={true}
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
-    <Search
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      placeholder=""
-    />
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          keyMap={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
@@ -56,6 +58,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef
+  data-tip="jest-auto-snapshots String Fixture"
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -72,38 +75,95 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     />
   </ForwardRef>
   <ForwardRef
-    horizontalOffset="jest-auto-snapshots String Fixture"
+    hasIconOnly={true}
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
-    <Search
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      placeholder=""
-    />
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          keyMap={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
+<ForwardRef
+  data-tip=""
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <ForwardRef
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </ForwardRef>
+  <ForwardRef
+    hasIconOnly={false}
+    isMenu={true}
+    isOpen={true}
+    position="top"
+  >
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
+    <ForwardRef>
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
@@ -111,6 +171,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSearch" is set to: "false" 1`] = `
 <ForwardRef
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -126,32 +187,86 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     />
   </ForwardRef>
   <ForwardRef
-    horizontalOffset="jest-auto-snapshots String Fixture"
+    hasIconOnly={true}
+    isMenu={true}
+    isOpen={true}
+    position="top"
+  >
+    <ForwardRef>
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        onClick={[Function]}
+      />
+    </ForwardRef>
+  </ForwardRef>
+</ForwardRef>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
+<ForwardRef
+  data-tip=""
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <ForwardRef
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </ForwardRef>
+  <ForwardRef
+    hasIconOnly={true}
     isMenu={true}
     isOpen={false}
     position="top"
   >
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={false}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          keyMap={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
@@ -159,6 +274,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <ForwardRef
+  data-tip=""
   isSplit={false}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -166,38 +282,39 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   tabIndex={0}
 >
   <ForwardRef
-    horizontalOffset="jest-auto-snapshots String Fixture"
+    hasIconOnly={true}
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
-    <Search
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      placeholder=""
-    />
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          keyMap={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
@@ -205,6 +322,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiSelect" is set to: "false" 1`] = `
 <ForwardRef
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -220,38 +338,39 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     />
   </ForwardRef>
   <ForwardRef
-    horizontalOffset="jest-auto-snapshots String Fixture"
+    hasIconOnly={true}
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
-    <Search
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      placeholder=""
-    />
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          keyMap={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
@@ -259,6 +378,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
 <ForwardRef
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -274,38 +394,39 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     />
   </ForwardRef>
   <ForwardRef
-    horizontalOffset="jest-auto-snapshots String Fixture"
+    hasIconOnly={true}
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
-    <Search
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      placeholder=""
-    />
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          keyMap={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
@@ -313,6 +434,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`] = `
 <ForwardRef
+  data-tip=""
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -328,38 +450,39 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     />
   </ForwardRef>
   <ForwardRef
-    horizontalOffset="jest-auto-snapshots String Fixture"
+    hasIconOnly={true}
     isMenu={true}
-    isOpen={false}
+    isOpen={true}
     position="top"
   >
-    <Search
-      onAddItem={[Function]}
-      onChange={[Function]}
-      onClose={[Function]}
-      placeholder=""
-    />
+    <div
+      id="searchInput"
+    >
+      <Search
+        isOpen={true}
+        onChange={[Function]}
+        placeholder="jest-auto-snapshots String Fixture"
+      />
+    </div>
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          keyMap={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
 </ForwardRef>
@@ -394,30 +517,29 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     type="secondary"
   />
   <ForwardRef
-    horizontalOffset="0"
+    hasIconOnly={false}
     isMenu={false}
-    isOpen={false}
+    isOpen={null}
     position="bottom"
   >
     <ForwardRef>
-      <React.Fragment>
-        <SelectItem
-          getItemId={[Function]}
-          hasSelectedItems={false}
-          hovered={false}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
           }
-          onClick={[Function]}
-        />
-      </React.Fragment>
+        }
+        onClick={[Function]}
+      />
     </ForwardRef>
   </ForwardRef>
   <ForwardRef
-    isOpen={false}
+    hasIconOnly={false}
+    isOpen={null}
     isSplit={false}
     position="bottom"
   />
