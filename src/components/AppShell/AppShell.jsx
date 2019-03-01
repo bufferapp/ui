@@ -7,15 +7,15 @@ import { AppShellStyled, Wrapper, SidebarWrapper, ContentWrapper } from './style
 /**
  * The AppShell component is a general purpose wrapper for all of our applications.
  */
-const AppShell = ({ user, sidebar, content }) => (
+const AppShell = ({ user, sidebar: SidebarComponent, content: ContentComponent }) => (
   <AppShellStyled>
     <NavBar user={user} />
     <Wrapper>
       <SidebarWrapper>
-        {sidebar}
+        <SidebarComponent />
       </SidebarWrapper>
       <ContentWrapper>
-        {content}
+        <ContentComponent />
       </ContentWrapper>
     </Wrapper>
   </AppShellStyled>
@@ -34,8 +34,8 @@ AppShell.propTypes = {
       onItemClick: PropTypes.func,
     })).isRequired,
   }).isRequired,
-  sidebar: PropTypes.node.isRequired,
-  content: PropTypes.node.isRequired,
+  sidebar: PropTypes.func.isRequired,
+  content: PropTypes.func.isRequired,
 };
 
 export default AppShell;
