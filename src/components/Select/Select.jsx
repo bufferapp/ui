@@ -8,7 +8,6 @@ import {
   Wrapper,
   SelectStyled,
   SelectItems,
-  Arrow,
   SelectItemDivider,
   SearchBarWrapper,
 } from './style';
@@ -373,6 +372,7 @@ export default class Select extends React.Component {
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
+              hasSearch={hasSearch}
             />,
           ])}
         </SelectItems>
@@ -381,15 +381,7 @@ export default class Select extends React.Component {
   };
 
   render() {
-    const {
-      isSplit,
-      position,
-      customButton,
-      tooltip,
-      hasIconOnly,
-      disabled,
-    } = this.props;
-    const { isOpen } = this.state;
+    const { isSplit, tooltip, disabled } = this.props;
 
     return (
       <Wrapper
@@ -403,14 +395,6 @@ export default class Select extends React.Component {
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
-        {!customButton && (
-          <Arrow
-            isOpen={isOpen}
-            isSplit={isSplit}
-            position={position}
-            hasIconOnly={hasIconOnly}
-          />
-        )}
       </Wrapper>
     );
   }

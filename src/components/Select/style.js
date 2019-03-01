@@ -59,24 +59,6 @@ export const SelectItems = styled.ul`
   list-style: none;
 `;
 
-export const Arrow = styled.div`
-  background-color: #fff;
-  border-left: 1px solid ${gray};
-  border-radius: 2px 0 0 0;
-  border-top: 1px solid ${gray};
-  display: ${props => (props.isOpen ? 'inline-block' : 'none')};
-  height: 10px;
-  right: ${props => (props.hasIconOnly ? '19px' : '15px')};
-  position: absolute;
-  width: 10px;
-  z-index: 1;
-  transform: ${props =>
-    props.position === 'top' ? 'rotate(225deg)' : 'rotate(45deg)'};
-  bottom: ${props => (props.position === 'top' ? '100%' : '-15px')};
-  top: ${props => (props.position === 'top' ? '-15px' : 'initial')};
-  z-index: 9999;
-`;
-
 export const SelectItemDivider = styled.li`
   background-color: ${grayLighter};
   height: 1px;

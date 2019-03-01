@@ -13,6 +13,8 @@ export const SelectItemStyled = styled.li`
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
+  margin-left: 8px;
+  margin-right: 8px;
   border-radius: 4px;
   background-color: ${props => (props.hovered ? grayLight : 'transparent')};
   &:hover {
@@ -27,14 +29,14 @@ export const SelectItemLabel = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
-  padding: 0px 16px;
+  padding: ${props => (props.hasSearch ? '0px 24px' : '0px 8px')};
   display: flex;
   align-items: center;
 `;
 
 export const SelectItemIcon = styled.div`
   display: flex;
-  padding-right: 6px;
+  padding-right: 8px;
   svg {
     fill: ${props => (props.hovered ? grayDarker : gray)};
   }
@@ -45,10 +47,15 @@ export const SelectItemIcon = styled.div`
 `;
 
 export const SelectItemTitle = styled.div`
-  margin-left: ${props => (props.moveRight ? '26px' : '10px')};
+  margin-left: ${props => (props.moveRight ? '24px' : '0px')};
 `;
 
 export const SelectItemCustom = styled.div`
   display: flex;
   align-items: center;
+`;
+
+export const CheckIconWrapper = styled.div`
+  margin-right: 8px;
+  display: flex;
 `;
