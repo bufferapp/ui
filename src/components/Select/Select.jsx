@@ -18,11 +18,14 @@ import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
-  static sameItems = (itemsA, itemsB) =>
+  static sameItems = (itemsA, itemsB) => (
     itemsA.length === itemsB.length &&
     itemsA.every(
-      (el, ix) => el.id === itemsB[ix].id && el.title === itemsB[ix].title
-    );
+      (el, ix) =>
+        el.id === itemsB[ix].id  &&
+        el.title === itemsB[ix].title
+    )
+  );
 
   state = {
     isOpen: this.props.isOpen,
@@ -40,6 +43,7 @@ export default class Select extends React.Component {
     }
     return null;
   }
+
 
   componentDidMount() {
     // When the selector is open and users click anywhere on the page,
