@@ -341,10 +341,10 @@ export default class Select extends React.Component {
     const {
       position,
       hasSearch,
-      customButton,
       keyMap,
       searchPlaceholder,
       hasIconOnly,
+      marginTop,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
@@ -352,8 +352,8 @@ export default class Select extends React.Component {
       <SelectStyled
         isOpen={isOpen}
         position={position}
-        isMenu={!!customButton}
         hasIconOnly={hasIconOnly}
+        marginTop={marginTop}
       >
         {hasSearch && (
           <div id="searchInput" ref={node => (this.searchInputNode = node)}>
@@ -485,6 +485,9 @@ Select.propTypes = {
 
   /** Does the button have only an icon and no label */
   hasIconOnly: PropTypes.bool,
+
+  /** Space between the dropdown and the button */
+  marginTop: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -506,4 +509,5 @@ Select.defaultProps = {
   isOpen: null,
   onClose: undefined,
   hasIconOnly: false,
+  marginTop: undefined,
 };
