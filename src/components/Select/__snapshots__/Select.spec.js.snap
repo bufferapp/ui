@@ -19,8 +19,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   </ForwardRef>
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -76,8 +76,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   </ForwardRef>
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -132,8 +132,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
   </ForwardRef>
   <ForwardRef
     hasIconOnly={false}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -188,8 +188,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
   </ForwardRef>
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <ForwardRef>
@@ -235,8 +235,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
   </ForwardRef>
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={false}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -283,8 +283,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
 >
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -339,8 +339,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
   </ForwardRef>
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -395,8 +395,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
   </ForwardRef>
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -451,8 +451,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   </ForwardRef>
   <ForwardRef
     hasIconOnly={true}
-    isMenu={true}
     isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
     <div
@@ -518,7 +518,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
   />
   <ForwardRef
     hasIconOnly={false}
-    isMenu={false}
     isOpen={null}
     position="bottom"
   >

@@ -19,6 +19,15 @@ import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
+  static sameItems = (itemsA, itemsB) => (
+    itemsA.length === itemsB.length &&
+    itemsA.every(
+      (el, ix) =>
+        el.id === itemsB[ix].id  &&
+        el.title === itemsB[ix].title
+    )
+  );
+
   state = {
     isOpen: this.props.isOpen,
     items: this.props.items || [],
@@ -28,13 +37,14 @@ export default class Select extends React.Component {
   static getDerivedStateFromProps(props, state) {
     if (
       props.items &&
-      props.items.length !== state.items.length &&
+      !Select.sameItems(props.items, state.items) &&
       !state.isFiltering
     ) {
       return { items: props.items };
     }
     return null;
   }
+
 
   componentDidMount() {
     // When the selector is open and users click anywhere on the page,
@@ -332,10 +342,10 @@ export default class Select extends React.Component {
     const {
       position,
       hasSearch,
-      customButton,
       keyMap,
       searchPlaceholder,
       hasIconOnly,
+      marginTop,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
@@ -343,8 +353,8 @@ export default class Select extends React.Component {
       <SelectStyled
         isOpen={isOpen}
         position={position}
-        isMenu={!!customButton}
         hasIconOnly={hasIconOnly}
+        marginTop={marginTop}
       >
         {hasSearch && (
           <SearchBarWrapper
@@ -465,6 +475,9 @@ Select.propTypes = {
 
   /** Does the button have only an icon and no label */
   hasIconOnly: PropTypes.bool,
+
+  /** Space between the dropdown and the button */
+  marginTop: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -486,4 +499,5 @@ Select.defaultProps = {
   isOpen: null,
   onClose: undefined,
   hasIconOnly: false,
+  marginTop: undefined,
 };

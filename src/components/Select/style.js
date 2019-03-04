@@ -33,8 +33,8 @@ export const SelectStyled = styled.div`
       : 'initial'};
   margin-bottom: ${props => (props.position === 'top' ? '8px' : '0')};
   margin-top: ${props =>
-    props.isMenu
-      ? '32px'
+    props.marginTop
+      ? props.marginTop
       : props.position === 'bottom' || props.position === 'right'
       ? '8px'
       : '0'};
