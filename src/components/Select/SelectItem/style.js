@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import styled from 'styled-components';
 import { grayDarker, gray, grayLight } from '../../style/colors';
 import { fontWeightMedium, fontSize } from '../../style/fonts';
@@ -29,7 +30,12 @@ export const SelectItemLabel = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
-  padding: ${props => (props.hasSearch ? '0px 24px' : '0px 8px')};
+  padding: ${props =>
+    !props.hasSearch
+      ? '0px 8px'
+      : props.hasSelectedItems
+      ? '0px 8px'
+      : '0px 32px'};
   display: flex;
   align-items: center;
 `;

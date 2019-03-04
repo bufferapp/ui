@@ -73,6 +73,6 @@ export const SearchBarWrapper = styled.div`
   display: flex;
   border-bottom: 1px solid #ecf0f3;
   align-items: center;
-  padding-left: 8px;
+  padding-left: 16px;
   color: ${gray};
 `;
