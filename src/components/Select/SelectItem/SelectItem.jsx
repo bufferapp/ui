@@ -18,6 +18,7 @@ const SelectItem = ({
   hasSelectedItems,
   getItemId,
   hasSearch,
+  multiSelect,
 }) => (
   <SelectItemStyled
     onClick={item.onItemClick || onClick}
@@ -40,7 +41,12 @@ const SelectItem = ({
           />
         </CheckIconWrapper>
       )}
-      <SelectItemTitle moveRight={hasSelectedItems && !item.selected}>
+      <SelectItemTitle
+        moveRight={
+          (hasSelectedItems && !item.selected) ||
+          (multiSelect && !item.selected)
+        }
+      >
         {item[keyMap ? keyMap.title : 'title']}
       </SelectItemTitle>
     </SelectItemLabel>
@@ -76,7 +82,11 @@ SelectItem.propTypes = {
   /** Does the Select have selected items to adjust the margin */
   hasSelectedItems: PropTypes.bool,
 
+  /** Does the Select have a search bar incorporated */
   hasSearch: PropTypes.bool,
+
+  /** Is it a multi select */
+  multiSelect: PropTypes.bool,
 };
 
 SelectItem.defaultProps = {
@@ -84,6 +94,7 @@ SelectItem.defaultProps = {
   keyMap: undefined,
   hasSelectedItems: undefined,
   hasSearch: undefined,
+  multiSelect: undefined,
 };
 
 export default SelectItem;
