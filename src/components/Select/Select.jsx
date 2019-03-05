@@ -22,12 +22,17 @@ export default class Select extends React.Component {
   static sameItems = (itemsA, itemsB) =>
     itemsA.length === itemsB.length &&
     itemsA.every(
-      (el, ix) => el.id === itemsB[ix].id && el.title === itemsB[ix].title
+      (el, ix) =>
+        el &&
+        itemsB[ix] &&
+        el.id === itemsB[ix].id &&
+        el.title === itemsB[ix].title
     );
 
   state = {
     isOpen: this.props.isOpen,
     items: this.props.items || [],
+    selectedItems: this.props.items || [],
     isFiltering: false,
   };
 
@@ -103,6 +108,15 @@ export default class Select extends React.Component {
     }
   };
 
+  updateItemsInState = (items, option, index) =>
+    index > -1
+      ? helper(items, {
+          [index]: {
+            selected: { $set: !option.selected },
+          },
+        })
+      : items;
+
   handleSelectOption = (option, event) => {
     const { onSelectClick, multiSelect } = this.props;
     const { items } = this.state;
@@ -119,18 +133,20 @@ export default class Select extends React.Component {
           })
         : items;
 
-    const optionIndex = deselectItems.findIndex(x => x.id === option.id);
+    const optionIndex = deselectItems.findIndex(
+      x => this.getItemId(x) === this.getItemId(option)
+    );
 
     this.setState({
       isOpen: multiSelect,
-      items:
-        optionIndex > -1
-          ? helper(deselectItems, {
-              [optionIndex]: {
-                selected: { $set: !option.selected },
-              },
-            })
-          : items,
+      items: this.updateItemsInState(deselectItems, option, optionIndex),
+      // we need to copy the items to another array here in order to use that one during search
+      // filtering
+      selectedItems: this.updateItemsInState(
+        deselectItems,
+        option,
+        optionIndex
+      ),
     });
   };
 
@@ -252,13 +268,28 @@ export default class Select extends React.Component {
     }
   };
 
+  findItemInState = item => {
+    const { selectedItems } = this.state;
+    return selectedItems.find(x => this.getItemId(x) === this.getItemId(item));
+  };
+
   onSearchChange = searchValue => {
     const { items, keyMap } = this.props;
     const searchFiled = keyMap ? keyMap.title : 'title';
 
-    const filteredItems = items.filter(item =>
-      includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase())
-    );
+    const filteredItems = items.reduce((filtered, item) => {
+      if (
+        includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase())
+      ) {
+        filtered.push({
+          ...item,
+          selected:
+            this.findItemInState(item) && this.findItemInState(item).selected,
+        });
+      }
+      return filtered;
+    }, []);
+
     this.setState({
       items: filteredItems,
       isFiltering: true,
@@ -268,7 +299,11 @@ export default class Select extends React.Component {
   onClose = () => {
     const { onClose } = this.props;
     this.setState(
-      { isOpen: false, isFiltering: false, hoveredItem: 0 },
+      {
+        isOpen: false,
+        isFiltering: false,
+        hoveredItem: 0,
+      },
       onClose && onClose()
     );
   };
