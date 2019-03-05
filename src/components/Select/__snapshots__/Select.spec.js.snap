@@ -23,18 +23,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -49,6 +51,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -80,18 +83,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -106,6 +111,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -136,18 +142,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -162,6 +170,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -195,6 +204,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={false}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -209,6 +219,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasSea
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -239,18 +250,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={false}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -265,6 +278,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -287,18 +301,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -313,6 +329,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -343,18 +360,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -369,6 +388,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={false}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -399,18 +419,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -425,6 +447,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -455,18 +478,20 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     marginTop="jest-auto-snapshots String Fixture"
     position="top"
   >
-    <div
+    <ForwardRef
       id="searchInput"
     >
+      <SearchIcon />
       <Search
         isOpen={true}
         onChange={[Function]}
         placeholder="jest-auto-snapshots String Fixture"
       />
-    </div>
+    </ForwardRef>
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={true}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -481,6 +506,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={true}
         onClick={[Function]}
       />
     </ForwardRef>
@@ -500,6 +526,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     disabled={false}
     fullWidth={false}
     hasIconOnly={false}
+    innerRef={[Function]}
     isSelect={true}
     items={
       Array [
@@ -524,6 +551,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     <ForwardRef>
       <SelectItem
         getItemId={[Function]}
+        hasSearch={false}
         hasSelectedItems={false}
         hovered={false}
         item={
@@ -536,11 +564,5 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
       />
     </ForwardRef>
   </ForwardRef>
-  <ForwardRef
-    hasIconOnly={false}
-    isOpen={null}
-    isSplit={false}
-    position="bottom"
-  />
 </ForwardRef>
 `;
