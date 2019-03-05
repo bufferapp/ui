@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { includes, some } from 'lodash';
 import helper from 'immutability-helper';
-import SearchIcon from '@bufferapp/ui/Icon/Icons/Search';
+import SearchIcon from '../Icon/Icons/Search';
 import {
   Wrapper,
   SelectStyled,
@@ -104,6 +104,10 @@ export default class Select extends React.Component {
       this.setState({
         isOpen: false,
         hoveredItem: undefined,
+      }, ()=> {
+
+        this.activeButton.focus()
+        console.log(document.activeElement)
       });
     }
   };
@@ -277,6 +281,15 @@ export default class Select extends React.Component {
     const { items, keyMap } = this.props;
     const searchFiled = keyMap ? keyMap.title : 'title';
 
+    // first, filter the items in the props that we get from the parent
+
+    // the items in the props don't have the {selected: true/false} information
+    // so we need to find out for each item in filteredProps if its selected or not
+
+    // that's why we made the selectedItems array in the state, to store that information
+    // and we need to check there to see, for each item, if its selected
+
+
     const filteredItems = items.reduce((filtered, item) => {
       if (
         includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase())
@@ -333,6 +346,7 @@ export default class Select extends React.Component {
           type={type}
           disabled={disabled}
           onClick={!disabled ? this.onButtonClick : undefined}
+          ref={activeButton => this.activeButton = activeButton}
         >
           <ChevronDown
             color={type === 'primary' && !disabled ? 'white' : 'grayDark'}
@@ -350,6 +364,7 @@ export default class Select extends React.Component {
           icon={icon}
           hasIconOnly
           onClick={() => this.onButtonClick()}
+          innerRef={activeButton => this.activeButton = activeButton}
           label="Click Me"
         />
       );
@@ -363,6 +378,7 @@ export default class Select extends React.Component {
         type={type}
         label={label}
         icon={icon}
+        innerRef={activeButton => this.activeButton = activeButton}
         onClick={this.onButtonClick}
         isSelect
       />
