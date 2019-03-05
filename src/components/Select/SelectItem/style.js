@@ -30,12 +30,11 @@ export const SelectItemLabel = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
-  padding: ${props =>
-    !props.hasSearch
-      ? '0px 8px'
-      : props.hasSelectedItems
-      ? '0px 8px'
-      : '0px 32px'};
+  padding-left: ${props =>
+    props.hasSearch && !props.hasSelectedItems && !props.hasComponent
+      ? '32px'
+      : '8px'};
+  padding-right: 8px;
   display: flex;
   align-items: center;
 `;

@@ -25,7 +25,11 @@ const SelectItem = ({
     hovered={hovered}
     id={getItemId(item)}
   >
-    <SelectItemLabel hasSearch={hasSearch} hasSelectedItems={hasSelectedItems}>
+    <SelectItemLabel
+      hasSearch={hasSearch}
+      hasSelectedItems={hasSelectedItems}
+      hasComponent={item.component}
+    >
       {item.selected && (
         <CheckIconWrapper>
           <Checkmark color="grayDarker" />

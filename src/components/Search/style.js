@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const SearchWrapper = styled.div`
   height: auto;
+  width: 100%;
 `;
 
 export const SearchInput = styled.input`
