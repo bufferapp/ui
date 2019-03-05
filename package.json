@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "1.15.2",
+  "version": "1.16.0",
   "engines": {
     "node": ">=4.0.0"
   },
