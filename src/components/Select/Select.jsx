@@ -104,11 +104,7 @@ export default class Select extends React.Component {
       this.setState({
         isOpen: false,
         hoveredItem: undefined,
-      }, ()=> {
-
-        this.activeButton.focus()
-        console.log(document.activeElement)
-      });
+      }, ()=> this.activeButton && this.activeButton.focus());
     }
   };
 
