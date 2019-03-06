@@ -12,8 +12,9 @@ const flexRow = css`
 
 export const AppShellStyled = styled.div`
   ${flexColumn}
-  min-height: 100%;
+  height: 100vh;
   overflow: auto;
+  background-color: #e5e5e5;
 `;
 
 export const Wrapper = styled.div`
