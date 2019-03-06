@@ -24,7 +24,8 @@ export const SelectStyled = styled.div`
   border-radius: 4px;
   display: ${props => (props.isOpen ? 'initial' : 'none')};
   min-width: 200px;
-  width: auto;
+  max-width: 200px;
+  width: 200px;
   background-color: #ffffff;
   bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
   top: ${props =>
@@ -50,7 +51,7 @@ export const SelectItems = styled.ul`
   padding-bottom: 10px;
   padding-top: 10px;
   position: relative;
-  z-index: 2;
+  z-index: -1;
   background: ${white};
   margin-block-start: 0px;
   margin-block-end: 0px;

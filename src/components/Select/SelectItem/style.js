@@ -51,8 +51,11 @@ export const SelectItemIcon = styled.div`
   }
 `;
 
-export const SelectItemTitle = styled.div`
-  margin-left: ${props => (props.moveRight ? '24px' : '0px')};
+export const SelectItemTitle = styled.p`
+  margin: ${props => (props.moveRight ? '0px 0px 0px 24px' : '0px')};
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
 `;
 
 export const SelectItemCustom = styled.div`
@@ -63,4 +66,8 @@ export const SelectItemCustom = styled.div`
 export const CheckIconWrapper = styled.div`
   margin-right: 8px;
   display: flex;
+  justify-content: center;
+  height: 16px;
+  width: 16px;
+}
 `;
