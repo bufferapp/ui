@@ -63,8 +63,8 @@ export const SelectItems = styled.ul`
 export const SelectItemDivider = styled.li`
   background-color: ${grayLighter};
   height: 1px;
-  margin-bottom: 4px;
-  margin-top: 4px;
+  margin-bottom: 8px;
+  margin-top: 8px;
   padding: 0;
   pointer-events: none;
   width: 100%;
