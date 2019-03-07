@@ -50,6 +50,7 @@ const SelectItem = ({
           (hasSelectedItems && !item.selected) ||
           (multiSelect && !item.selected)
         }
+        title={item[keyMap ? keyMap.title : 'title']}
       >
         {item[keyMap ? keyMap.title : 'title']}
       </SelectItemTitle>
