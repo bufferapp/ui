@@ -101,10 +101,13 @@ export default class Select extends React.Component {
     const { isOpen } = this.state;
 
     if (isOpen) {
-      this.setState({
-        isOpen: false,
-        hoveredItem: undefined,
-      }, ()=> this.activeButton && this.activeButton.focus());
+      this.setState(
+        {
+          isOpen: false,
+          hoveredItem: undefined,
+        },
+        () => this.activeButton && this.activeButton.focus()
+      );
     }
   };
 
@@ -285,7 +288,6 @@ export default class Select extends React.Component {
     // that's why we made the selectedItems array in the state, to store that information
     // and we need to check there to see, for each item, if its selected
 
-
     const filteredItems = items.reduce((filtered, item) => {
       if (
         includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase())
@@ -342,7 +344,7 @@ export default class Select extends React.Component {
           type={type}
           disabled={disabled}
           onClick={!disabled ? this.onButtonClick : undefined}
-          ref={activeButton => this.activeButton = activeButton}
+          ref={activeButton => (this.activeButton = activeButton)}
         >
           <ChevronDown
             color={type === 'primary' && !disabled ? 'white' : 'grayDark'}
@@ -360,7 +362,7 @@ export default class Select extends React.Component {
           icon={icon}
           hasIconOnly
           onClick={() => this.onButtonClick()}
-          innerRef={activeButton => this.activeButton = activeButton}
+          innerRef={activeButton => (this.activeButton = activeButton)}
           label="Click Me"
         />
       );
@@ -374,11 +376,17 @@ export default class Select extends React.Component {
         type={type}
         label={label}
         icon={icon}
-        innerRef={activeButton => this.activeButton = activeButton}
+        innerRef={activeButton => (this.activeButton = activeButton)}
         onClick={this.onButtonClick}
         isSelect
       />
     );
+  };
+
+  renderNoItems = (search, length) => {
+    if (search && length === 0) {
+      return <div>No search results</div>;
+    }
   };
 
   renderSelectPopup = () => {
@@ -400,20 +408,22 @@ export default class Select extends React.Component {
         hasIconOnly={hasIconOnly}
         marginTop={marginTop}
       >
-        {hasSearch && (
-          <SearchBarWrapper
-            id="searchInput"
-            ref={node => (this.searchInputNode = node)}
-          >
-            <SearchIcon />
-            <Search
-              onChange={this.onSearchChange}
-              placeholder={searchPlaceholder}
-              isOpen={isOpen}
-            />
-          </SearchBarWrapper>
-        )}
+        {hasSearch ||
+          (items.length > 6 && (
+            <SearchBarWrapper
+              id="searchInput"
+              ref={node => (this.searchInputNode = node)}
+            >
+              <SearchIcon />
+              <Search
+                onChange={this.onSearchChange}
+                placeholder={searchPlaceholder}
+                isOpen={isOpen}
+              />
+            </SearchBarWrapper>
+          ))}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
+          {this.renderNoItems(hasSearch, items.length)}
           {items.map((item, idx) => [
             item.hasDivider && (
               <SelectItemDivider key={`${this.getItemId(item)}--divider`} />
