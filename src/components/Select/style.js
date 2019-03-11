@@ -48,8 +48,8 @@ export const SelectStyled = styled.div`
 export const SelectItems = styled.ul`
   max-height: 135px;
   overflow-y: auto;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 16px;
+  padding-top: 16px;
   position: relative;
   z-index: -1;
   background: ${white};
@@ -75,5 +75,18 @@ export const SearchBarWrapper = styled.div`
   border-bottom: 1px solid #ecf0f3;
   align-items: center;
   padding-left: 16px;
+  color: ${gray};
+`;
+
+export const NoMatchesContainer = styled.p`
+  width: 116px;
+  height: 17px;
+  margin: 0 auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 14px;
+  letter-spacing: -0.233333px;
   color: ${gray};
 `;

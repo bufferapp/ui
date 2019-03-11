@@ -10,6 +10,7 @@ import {
   SelectItems,
   SelectItemDivider,
   SearchBarWrapper,
+  NoMatchesContainer,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
@@ -383,9 +384,9 @@ export default class Select extends React.Component {
     );
   };
 
-  renderNoItems = (search, length) => {
-    if (search && length === 0) {
-      return <div>No search results</div>;
+  renderNoItems = (hideSearch, length) => {
+    if (!hideSearch && length === 0) {
+      return <NoMatchesContainer>No matches found</NoMatchesContainer>;
     }
   };
 
