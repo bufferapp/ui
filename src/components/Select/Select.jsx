@@ -392,14 +392,14 @@ export default class Select extends React.Component {
   renderSelectPopup = () => {
     const {
       position,
-      hasSearch,
+      hideSearch,
       keyMap,
       searchPlaceholder,
       hasIconOnly,
       marginTop,
       multiSelect,
     } = this.props;
-    const { isOpen, hoveredItem, items } = this.state;
+    const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
     return (
       <SelectStyled
@@ -408,22 +408,21 @@ export default class Select extends React.Component {
         hasIconOnly={hasIconOnly}
         marginTop={marginTop}
       >
-        {hasSearch ||
-          (items.length > 6 && (
-            <SearchBarWrapper
-              id="searchInput"
-              ref={node => (this.searchInputNode = node)}
-            >
-              <SearchIcon />
-              <Search
-                onChange={this.onSearchChange}
-                placeholder={searchPlaceholder}
-                isOpen={isOpen}
-              />
-            </SearchBarWrapper>
-          ))}
+        {!hideSearch && (items.length > 6 || isFiltering) && (
+          <SearchBarWrapper
+            id="searchInput"
+            ref={node => (this.searchInputNode = node)}
+          >
+            <SearchIcon />
+            <Search
+              onChange={this.onSearchChange}
+              placeholder={searchPlaceholder}
+              isOpen={isOpen}
+            />
+          </SearchBarWrapper>
+        )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
-          {this.renderNoItems(hasSearch, items.length)}
+          {this.renderNoItems(hideSearch, items.length)}
           {items.map((item, idx) => [
             item.hasDivider && (
               <SelectItemDivider key={`${this.getItemId(item)}--divider`} />
@@ -436,7 +435,7 @@ export default class Select extends React.Component {
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
-              hasSearch={hasSearch}
+              hideSearch={hideSearch}
               multiSelect={multiSelect}
             />,
           ])}
@@ -499,7 +498,7 @@ Select.propTypes = {
   icon: PropTypes.node,
 
   /** Does the Select have a search bar */
-  hasSearch: PropTypes.bool,
+  hideSearch: PropTypes.bool,
 
   /** Custom Button component */
   customButton: PropTypes.func,
@@ -543,7 +542,7 @@ Select.defaultProps = {
   position: 'bottom',
   disabled: undefined,
   icon: undefined,
-  hasSearch: false,
+  hideSearch: false,
   customButton: undefined,
   onSelectClick: undefined,
   keyMap: undefined,

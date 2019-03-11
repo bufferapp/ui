@@ -36,7 +36,35 @@ export default function ExampleSelectMenu() {
           onItemClick: () => console.info('Settings Clicked'),
         },
         {
-          id: '3',
+          id: '4',
+          title: 'Logout',
+          icon: <ArrowLeft color="gray" />,
+          hasDivider: true,
+          onItemClick: () => console.info('Logout Clicked'),
+        },
+        {
+          id: '5',
+          title: 'Logout',
+          icon: <ArrowLeft color="gray" />,
+          hasDivider: true,
+          onItemClick: () => console.info('Logout Clicked'),
+        },
+        {
+          id: '6',
+          title: 'Logout',
+          icon: <ArrowLeft color="gray" />,
+          hasDivider: true,
+          onItemClick: () => console.info('Logout Clicked'),
+        },
+        {
+          id: '7',
+          title: 'Logout',
+          icon: <ArrowLeft color="gray" />,
+          hasDivider: true,
+          onItemClick: () => console.info('Logout Clicked'),
+        },
+        {
+          id: '8',
           title: 'Logout',
           icon: <ArrowLeft color="gray" />,
           hasDivider: true,
@@ -44,6 +72,7 @@ export default function ExampleSelectMenu() {
         },
       ]}
       marginTop="32px"
+      hideSearch
     />
   );
 }
