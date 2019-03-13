@@ -89,4 +89,5 @@ export const NoMatchesContainer = styled.p`
   font-size: 14px;
   letter-spacing: -0.233333px;
   color: ${gray};
+  background-color: ${props => (props.isCustomItemFocused ? 'red' : '')};
 `;

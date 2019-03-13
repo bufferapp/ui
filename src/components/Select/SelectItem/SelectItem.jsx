@@ -17,8 +17,7 @@ const SelectItem = ({
   keyMap,
   hasSelectedItems,
   getItemId,
-  hasSearch,
-  multiSelect,
+  hideSearch,
 }) => (
   <SelectItemStyled
     onClick={item.onItemClick || onClick}
@@ -26,7 +25,7 @@ const SelectItem = ({
     id={getItemId(item)}
   >
     <SelectItemLabel
-      hasSearch={hasSearch}
+      hideSearch={hideSearch}
       hasSelectedItems={hasSelectedItems}
       hasComponent={item.component}
     >
@@ -46,10 +45,7 @@ const SelectItem = ({
         </CheckIconWrapper>
       )}
       <SelectItemTitle
-        moveRight={
-          (hasSelectedItems && !item.selected) ||
-          (multiSelect && !item.selected)
-        }
+        moveRight={hasSelectedItems && !item.selected}
         title={item[keyMap ? keyMap.title : 'title']}
       >
         {item[keyMap ? keyMap.title : 'title']}
@@ -88,7 +84,7 @@ SelectItem.propTypes = {
   hasSelectedItems: PropTypes.bool,
 
   /** Does the Select have a search bar incorporated */
-  hasSearch: PropTypes.bool,
+  hideSearch: PropTypes.bool,
 
   /** Is it a multi select */
   multiSelect: PropTypes.bool,
@@ -98,7 +94,7 @@ SelectItem.defaultProps = {
   hovered: undefined,
   keyMap: undefined,
   hasSelectedItems: undefined,
-  hasSearch: undefined,
+  hideSearch: undefined,
   multiSelect: undefined,
 };
 

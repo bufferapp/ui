@@ -35,6 +35,8 @@ export default class Select extends React.Component {
     items: this.props.items || [],
     selectedItems: this.props.items || [],
     isFiltering: false,
+    searchValue: '',
+    isCustomItemFocused: false,
   };
 
   static getDerivedStateFromProps(props, state) {
@@ -176,8 +178,7 @@ export default class Select extends React.Component {
   };
 
   onMoveUp = () => {
-    const { items } = this.state;
-    const { hoveredItem } = this.state;
+    const { items, isCustomItemFocused, hoveredItem } = this.state;
     const itemsLength = items.length;
 
     for (
@@ -194,13 +195,20 @@ export default class Select extends React.Component {
         break;
       }
     }
+
+    if (isCustomItemFocused) {
+      this.setState({ isCustomItemFocused: false });
+    }
   };
 
   onMoveDown = () => {
-    const { items } = this.state;
-    const { hoveredItem } = this.state;
+    const { items, hoveredItem } = this.state;
+    const { hasCustomAction } = this.props;
     const itemsLength = items.length;
 
+    if (itemsLength === 0 && hasCustomAction) {
+      this.setState({ isCustomItemFocused: true });
+    }
     if (!hoveredItem) {
       this.setState(
         {
@@ -214,9 +222,15 @@ export default class Select extends React.Component {
   };
 
   onAddItem = () => {
-    const { onSelectClick } = this.props;
-    const { items, hoveredItem } = this.state;
+    const { onSelectClick, multiSelect } = this.props;
+    const { items, hoveredItem, isCustomItemFocused, searchValue } = this.state;
     const selectedItem = items[hoveredItem];
+
+    if (isCustomItemFocused) {
+      this.props.onCustomItemClick(searchValue);
+      this.setState({ isCustomItemFocused: false, isOpen: multiSelect });
+    }
+
     selectedItem && selectedItem.onItemClick
       ? selectedItem.onItemClick(selectedItem)
       : onSelectClick(items[hoveredItem]);
@@ -305,6 +319,7 @@ export default class Select extends React.Component {
     this.setState({
       items: filteredItems,
       isFiltering: true,
+      searchValue,
     });
   };
 
@@ -384,6 +399,19 @@ export default class Select extends React.Component {
     );
   };
 
+  renderCustomActionItem = (length, onCustomItemClick, customItemLabel) => {
+    if (length === 0) {
+      return (
+        <NoMatchesContainer
+          isCustomItemFocused={this.state.isCustomItemFocused}
+          onClick={() => onCustomItemClick(this.state.searchValue)}
+        >
+          {`${customItemLabel} ${this.state.searchValue}`}
+        </NoMatchesContainer>
+      );
+    }
+  };
+
   renderNoItems = (hideSearch, length) => {
     if (!hideSearch && length === 0) {
       return <NoMatchesContainer>No matches found</NoMatchesContainer>;
@@ -399,6 +427,9 @@ export default class Select extends React.Component {
       hasIconOnly,
       marginTop,
       multiSelect,
+      hasCustomAction,
+      onCustomItemClick,
+      customItemLabel,
     } = this.props;
     const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
@@ -409,7 +440,7 @@ export default class Select extends React.Component {
         hasIconOnly={hasIconOnly}
         marginTop={marginTop}
       >
-        {!hideSearch && (items.length > 6 || isFiltering) && (
+        {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
             id="searchInput"
             ref={node => (this.searchInputNode = node)}
@@ -423,7 +454,14 @@ export default class Select extends React.Component {
           </SearchBarWrapper>
         )}
         <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
-          {this.renderNoItems(hideSearch, items.length)}
+          {hasCustomAction
+            ? this.renderCustomActionItem(
+                items.length,
+                onCustomItemClick,
+                customItemLabel
+              )
+            : this.renderNoItems(hideSearch, items.length)}
+          {}
           {items.map((item, idx) => [
             item.hasDivider && (
               <SelectItemDivider key={`${this.getItemId(item)}--divider`} />
@@ -533,6 +571,15 @@ Select.propTypes = {
 
   /** Space between the dropdown and the button */
   marginTop: PropTypes.string,
+
+  /** Indicated whether the select has a custom action */
+  hasCustomAction: PropTypes.bool,
+
+  /** The custom action item */
+  onCustomItemClick: PropTypes.func,
+
+  /** A custom label for a custom item */
+  customItemLabel: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -555,4 +602,7 @@ Select.defaultProps = {
   onClose: undefined,
   hasIconOnly: false,
   marginTop: undefined,
+  hasCustomAction: false,
+  onCustomItemClick: undefined,
+  customItemLabel: undefined,
 };
