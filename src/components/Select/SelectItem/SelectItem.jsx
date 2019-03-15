@@ -8,6 +8,7 @@ import {
   SelectItemTitle,
   SelectItemCustom,
   CheckIconWrapper,
+  HotKeyPrompt,
 } from './style';
 
 const shouldItemMoveRight = (item, hasSelectedItems, hideSearch) =>
@@ -58,6 +59,9 @@ const SelectItem = ({
         )}
         {item[keyMap ? keyMap.title : 'title']}
       </SelectItemTitle>
+      {item.hotKeyPrompt && (
+        <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
+      )}
     </SelectItemLabel>
   </SelectItemStyled>
 );

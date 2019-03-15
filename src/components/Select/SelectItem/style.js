@@ -34,6 +34,7 @@ export const SelectItemLabel = styled.div`
   padding-right: 8px;
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 export const SelectItemIcon = styled.div`
@@ -56,16 +57,27 @@ export const SelectItemTitle = styled.p`
   display: flex;
 `;
 
-export const SelectItemCustom = styled.div`
+export const SelectItemCustom = styled.span`
   display: flex;
   align-items: center;
 `;
 
-export const CheckIconWrapper = styled.div`
+export const CheckIconWrapper = styled.span`
   margin-right: 8px;
   display: flex;
   justify-content: center;
   height: 16px;
   width: 16px;
 }
+`;
+
+export const HotKeyPrompt = styled.span`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 12px;
+  text-align: justify;
+  letter-spacing: -0.233333px;
+  color: ${gray};
 `;
