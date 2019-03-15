@@ -75,8 +75,16 @@ export default class Select extends React.Component {
   }
 
   keyDownPressed = e => {
-    const { shortcutsEnabled } = this.props;
+    const { shortcutsEnabled, hotKeys } = this.props;
     if (!shortcutsEnabled) return;
+
+    if (hotKeys) {
+      hotKeys.forEach(item => {
+        if (e.which === item.hotKey) {
+          item.onKeyPress();
+        }
+      });
+    }
 
     switch (e.which) {
       case 40: // Arrow down
@@ -580,6 +588,14 @@ Select.propTypes = {
 
   /** A custom label for a custom item */
   customItemLabel: PropTypes.string,
+
+  /** An array of objects containing HotKeys */
+  hotKeys: PropTypes.arrayOf(
+    PropTypes.shape({
+      hotKey: PropTypes.num,
+      onKeyPress: PropTypes.func,
+    })
+  ),
 };
 
 Select.defaultProps = {
@@ -605,4 +621,5 @@ Select.defaultProps = {
   hasCustomAction: false,
   onCustomItemClick: undefined,
   customItemLabel: undefined,
+  hotKeys: undefined,
 };

@@ -10,6 +10,13 @@ import {
   CheckIconWrapper,
 } from './style';
 
+const shouldItemMoveRight = (item, hasSelectedItems, hideSearch) =>
+  // if the item isn't selected, we need to check if other items are selected in the dropdown or if it has a search bar
+  !item.selected &&
+  (hasSelectedItems || !hideSearch) &&
+  // if it's not selected and it has a custom component, we shouldn't move the item
+  !(item.component && !hasSelectedItems);
+
 const SelectItem = ({
   item,
   onClick,
@@ -37,17 +44,18 @@ const SelectItem = ({
       {item.icon && (
         <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
       )}
-      {item.component && (
-        <CheckIconWrapper>
-          <SelectItemCustom
-            dangerouslySetInnerHTML={{ __html: item.component(item) }}
-          />
-        </CheckIconWrapper>
-      )}
+
       <SelectItemTitle
-        moveRight={hasSelectedItems && !item.selected}
+        moveRight={shouldItemMoveRight(item, hasSelectedItems, hideSearch)}
         title={item[keyMap ? keyMap.title : 'title']}
       >
+        {item.component && (
+          <CheckIconWrapper>
+            <SelectItemCustom
+              dangerouslySetInnerHTML={{ __html: item.component(item) }}
+            />
+          </CheckIconWrapper>
+        )}
         {item[keyMap ? keyMap.title : 'title']}
       </SelectItemTitle>
     </SelectItemLabel>

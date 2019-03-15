@@ -30,10 +30,7 @@ export const SelectItemLabel = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
-  padding-left: ${props =>
-    props.hideSearch && !props.hasSelectedItems && props.hasComponent
-      ? '8px'
-      : '32px'};
+  padding-left: 8px;
   padding-right: 8px;
   display: flex;
   align-items: center;
@@ -56,6 +53,7 @@ export const SelectItemTitle = styled.p`
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
+  display: flex;
 `;
 
 export const SelectItemCustom = styled.div`
