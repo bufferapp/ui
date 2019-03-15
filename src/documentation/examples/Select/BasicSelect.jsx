@@ -47,6 +47,10 @@ export default function ExampleSelect() {
           },
         },
       ]}
+      hasCustomAction
+      // eslint-disable-next-line
+      onCustomItemClick={string => console.log(string)}
+      customItemLabel="Create Tag"
     />
   );
 }

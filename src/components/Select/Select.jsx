@@ -11,6 +11,7 @@ import {
   SelectItemDivider,
   SearchBarWrapper,
   NoMatchesContainer,
+  CustomItemContainer,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
@@ -410,12 +411,12 @@ export default class Select extends React.Component {
   renderCustomActionItem = (length, onCustomItemClick, customItemLabel) => {
     if (length === 0) {
       return (
-        <NoMatchesContainer
+        <CustomItemContainer
           isCustomItemFocused={this.state.isCustomItemFocused}
           onClick={() => onCustomItemClick(this.state.searchValue)}
         >
           {`${customItemLabel} ${this.state.searchValue}`}
-        </NoMatchesContainer>
+        </CustomItemContainer>
       );
     }
   };

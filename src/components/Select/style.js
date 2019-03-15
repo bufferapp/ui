@@ -1,6 +1,13 @@
 /* eslint-disable no-nested-ternary */
 import styled from 'styled-components';
-import { grayShadow, grayLighter, white, gray } from '../style/colors';
+import {
+  grayShadow,
+  grayLighter,
+  white,
+  gray,
+  grayLight,
+  grayDarker,
+} from '../style/colors';
 
 export const Wrapper = styled.div`
   outline: 0;
@@ -89,5 +96,28 @@ export const NoMatchesContainer = styled.p`
   font-size: 14px;
   letter-spacing: -0.233333px;
   color: ${gray};
-  background-color: ${props => (props.isCustomItemFocused ? 'red' : '')};
+`;
+
+export const CustomItemContainer = styled.li`
+  min-height: 32px;
+  align-items: center;
+  color: ${grayDarker};
+  cursor: pointer;
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  user-select: none;
+  white-space: nowrap;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  &:hover {
+    background-color: ${grayLight};
+  }
+  background-color: ${props =>
+    props.isCustomItemFocused ? `${grayLight}` : ''};
 `;
