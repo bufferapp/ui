@@ -58,7 +58,7 @@ const Button = ({
     hasIconOnly={hasIconOnly}
     fullWidth={fullWidth}
     data-tip={tooltip}
-    ref={innerRef}
+    innerRef={innerRef}
   >
     {icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}

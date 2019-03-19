@@ -97,7 +97,8 @@ export default class Select extends React.Component {
 
   // Close the popover
   closePopover = e => {
-    if (this.searchInputNode && this.searchInputNode.contains(e.target)) return;
+    if (this.searchInputNode &&
+      this.searchInputNode.contains(e.target)) return;
     const { isOpen } = this.state;
 
     if (isOpen) {
@@ -342,7 +343,7 @@ export default class Select extends React.Component {
           type={type}
           disabled={disabled}
           onClick={!disabled ? this.onButtonClick : undefined}
-          ref={activeButton => this.activeButton = activeButton}
+          innerRef={activeButton => this.activeButton = activeButton}
         >
           <ChevronDown
             color={type === 'primary' && !disabled ? 'white' : 'grayDark'}
@@ -403,7 +404,7 @@ export default class Select extends React.Component {
         {hasSearch && (
           <SearchBarWrapper
             id="searchInput"
-            ref={node => (this.searchInputNode = node)}
+            innerRef={node => (this.searchInputNode = node)}
           >
             <SearchIcon />
             <Search
@@ -413,7 +414,7 @@ export default class Select extends React.Component {
             />
           </SearchBarWrapper>
         )}
-        <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
+        <SelectItems innerRef={itemsNode => (this.itemsNode = itemsNode)}>
           {items.map((item, idx) => [
             item.hasDivider && (
               <SelectItemDivider key={`${this.getItemId(item)}--divider`} />
@@ -445,7 +446,7 @@ export default class Select extends React.Component {
         onKeyUp={this.onClick}
         tabIndex={0}
         isSplit={isSplit}
-        ref={selectNode => (this.selectNode = selectNode)}
+        innerRef={selectNode => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
       >
         {this.renderSelectButton()}
