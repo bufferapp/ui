@@ -414,6 +414,7 @@ export default class Select extends React.Component {
         <CustomItemContainer
           isCustomItemFocused={this.state.isCustomItemFocused}
           onClick={() => onCustomItemClick(this.state.searchValue)}
+          key={length}
         >
           {`${customItemLabel} ${this.state.searchValue}`}
         </CustomItemContainer>
@@ -477,7 +478,7 @@ export default class Select extends React.Component {
             ),
             <SelectItem
               hovered={hoveredItem === idx}
-              key={this.getItemId(item)}
+              key={this.getItemId(item) + idx}
               getItemId={this.getItemId}
               item={item}
               keyMap={keyMap}
@@ -540,7 +541,7 @@ Select.propTypes = {
   size: PropTypes.oneOf(['small', 'large', 'medium']),
 
   /** Position of the popup */
-  position: PropTypes.oneOf(['top', 'bottom']),
+  position: PropTypes.oneOf(['top', 'bottom', 'right']),
 
   /** Icon to show in the Button */
   icon: PropTypes.node,

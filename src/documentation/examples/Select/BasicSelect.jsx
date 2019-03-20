@@ -35,21 +35,18 @@ export default function ExampleSelect() {
         {
           hotKey: 81,
           onKeyPress: () => {
-            // eslint-disable-next-line
-            console.log('hey');
+            console.info('hey');
           },
         },
         {
           hotKey: 87,
           onKeyPress: () => {
-            // eslint-disable-next-line
-            console.log('hello there');
+            console.info('hello there');
           },
         },
       ]}
       hasCustomAction
-      // eslint-disable-next-line
-      onCustomItemClick={string => console.log(string)}
+      onCustomItemClick={string => console.info(string)}
       customItemLabel="Create Tag"
     />
   );
