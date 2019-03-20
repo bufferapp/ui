@@ -20,17 +20,18 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
   />
-  <Text
-    hasError={true}
-    htmlFor="jest-auto-snapshots String Fixture"
-    light={false}
-    type="help"
-  >
+  <styled.div>
     <WarningIcon
       size="small"
     />
-     jest-auto-snapshots String Fixture
-  </Text>
+    <Styled(Text)
+      hasError={true}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
 </div>
 `;
 
@@ -54,14 +55,15 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
   />
-  <Text
-    hasError={false}
-    htmlFor="jest-auto-snapshots String Fixture"
-    light={false}
-    type="help"
-  >
-    jest-auto-snapshots String Fixture
-  </Text>
+  <styled.div>
+    <Styled(Text)
+      hasError={false}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
 </div>
 `;
 
@@ -85,17 +87,18 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
   />
-  <Text
-    hasError={true}
-    htmlFor="jest-auto-snapshots String Fixture"
-    light={false}
-    type="help"
-  >
+  <styled.div>
     <WarningIcon
       size="small"
     />
-     jest-auto-snapshots String Fixture
-  </Text>
+    <Styled(Text)
+      hasError={true}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
 </div>
 `;
 
