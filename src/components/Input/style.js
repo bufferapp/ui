@@ -15,6 +15,7 @@ import {
   fontWeight,
   lineHeight,
 } from '../style/fonts';
+import Text from '../Text';
 
 export const InputStyled = styled.input`
   background: ${ ({ hasError }) => hasError ? redLight : white };
@@ -59,4 +60,17 @@ export const InputStyled = styled.input`
       color: ${gray};
     }
   }
+`;
+
+export const HelpTextWrapper = styled.div`
+  display: flex;
+  display: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 8px;
+  color: ${red};
+`;
+
+export const HelpText = styled(Text)`
+  margin-left: ${props => props.hasError ? '4px' : '0px'};
 `;

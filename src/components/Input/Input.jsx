@@ -30,10 +30,12 @@ const Input = ({
       value={value}
     />
     {help.length > 0 && (
-      <Text type='help' htmlFor={name} hasError={hasError}>
+      <Styles.HelpTextWrapper>
         {hasError && <Warning size="small" />}
-        {`${hasError ? ' ' : ''}${help}`}
-      </Text>
+        <Styles.HelpText type='help' htmlFor={name} hasError={hasError}>
+          {help}
+        </Styles.HelpText>
+      </Styles.HelpTextWrapper>
     )}
   </div>
 );
