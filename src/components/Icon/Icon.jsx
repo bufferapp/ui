@@ -14,8 +14,8 @@ const StyledIcon = styled.svg`
 const Icon = ({ children, ...props }) => (<StyledIcon {...props}>{children}</StyledIcon>);
 
 Icon.propTypes = {
-  /** The size of the icon. Can be 'small', 'medium', or 'large' */
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  /** The size of the icon. Can be 'smallest', 'small', 'medium', or 'large' */
+  size: PropTypes.oneOf(['smallest', 'small', 'medium', 'large']),
 
   /** The `vertical-align` CSS value */
   verticalAlign: PropTypes.string,

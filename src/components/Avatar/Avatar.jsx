@@ -19,32 +19,32 @@ const Image = styled.img`
 const socialIconMap = new Map([
   ['instagram', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={instagram}>
-      <Instagram size="small" color="white" />
+      <Instagram size="smallest" color="white" />
     </Styles.SocialIconWrapper>
   )],
   ['facebook', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={facebook}>
-      <Facebook size="small" color="white" />
+      <Facebook size="smallest" color="white" />
     </Styles.SocialIconWrapper>
   )],
   ['twitter', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={twitter}>
-      <Twitter size="small" color="white" />
+      <Twitter size="smallest" color="white" />
     </Styles.SocialIconWrapper>
   )],
   ['linkedin', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={linkedin}>
-      <LinkedIn size="small" color="white" />
+      <LinkedIn size="smallest" color="white" />
     </Styles.SocialIconWrapper>
   )],
   ['pinterest', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={pinterest}>
-      <Pinterest size="small" color="white" />
+      <Pinterest size="smallest" color="white" />
     </Styles.SocialIconWrapper>
   )],
   ['googleplus', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={googleplus}>
-      <GooglePlus size="small" color="white" />
+      <GooglePlus size="smallest" color="white" />
     </Styles.SocialIconWrapper>
   )],
 ]);
