@@ -38,7 +38,6 @@ export const InputStyled = styled.input`
     }
   }};
   width: 100%;
-  cursor: pointer;
 
   &::placeholder {
     color: ${gray};
