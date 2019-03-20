@@ -22,7 +22,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
   />
   <styled.div>
     <WarningIcon
-      size="small"
+      size="medium"
     />
     <Styled(Text)
       hasError={true}
@@ -89,7 +89,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
   />
   <styled.div>
     <WarningIcon
-      size="small"
+      size="medium"
     />
     <Styled(Text)
       hasError={true}
