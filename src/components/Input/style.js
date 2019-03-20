@@ -18,10 +18,14 @@ import {
 import Text from '../Text';
 
 export const InputStyled = styled.input`
+  box-sizing: border-box;
   background: ${ ({ hasError }) => hasError ? redLight : white };
   border-radius: 4px;
   border: 1px solid ${ ({ hasError }) => hasError ? red : grayLight };
-  box-sizing: border-box;
+  box-shadow: 2px 2px 0 2px transparent;
+  transition-property: border-width, border-color, box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
   color: ${ ({ hasError }) => hasError ? red : grayDarker };
   font-family: ${fontFamily};
   font-size: ${fontSize};
@@ -47,6 +51,9 @@ export const InputStyled = styled.input`
     border: 1px solid ${ ({ hasError }) => hasError ? red : blue };
     box-shadow: 0px 0px 0px 3px ${ ({ hasError }) => hasError ? "#F3AFB9" : "#ABB7FF" };
     outline: none;
+    transition-property: border-width, border-color, box-shadow;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
   }
 
   &:disabled {
