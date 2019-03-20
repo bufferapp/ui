@@ -360,6 +360,7 @@ export default class Select extends React.Component {
       icon,
       label,
       hasIconOnly,
+      fullWidth,
     } = this.props;
     const { items } = this.state;
 
@@ -404,6 +405,7 @@ export default class Select extends React.Component {
         innerRef={activeButton => (this.activeButton = activeButton)}
         onClick={this.onButtonClick}
         isSelect
+        fullWidth={fullWidth}
       />
     );
   };
@@ -439,6 +441,7 @@ export default class Select extends React.Component {
       hasCustomAction,
       onCustomItemClick,
       customItemLabel,
+      fullWidth,
     } = this.props;
     const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
@@ -448,6 +451,7 @@ export default class Select extends React.Component {
         position={position}
         hasIconOnly={hasIconOnly}
         marginTop={marginTop}
+        fullWidth={fullWidth}
       >
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
@@ -493,7 +497,7 @@ export default class Select extends React.Component {
   };
 
   render() {
-    const { isSplit, tooltip, disabled } = this.props;
+    const { isSplit, tooltip, disabled, fullWidth } = this.props;
 
     return (
       <Wrapper
@@ -504,6 +508,7 @@ export default class Select extends React.Component {
         isSplit={isSplit}
         ref={selectNode => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
+        fullWidth={fullWidth}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
@@ -597,6 +602,9 @@ Select.propTypes = {
       onKeyPress: PropTypes.func,
     })
   ),
+
+  /** Is the select full width */
+  fullWidth: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -623,4 +631,5 @@ Select.defaultProps = {
   onCustomItemClick: undefined,
   customItemLabel: undefined,
   hotKeys: undefined,
+  fullWidth: undefined,
 };

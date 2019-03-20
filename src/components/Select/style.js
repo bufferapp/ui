@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
   :focus {
     outline: 0;
   }
-  width: ${props => (props.isSplit ? '100%' : 'auto')};
+  width: ${props => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
   height: ${props => (props.isSplit ? '100%' : 'auto')};
   max-height: ${props => (props.isSplit ? '100%' : '40px')};
   position: ${props => (props.isSplit ? 'initial' : 'relative')};
@@ -31,8 +31,8 @@ export const SelectStyled = styled.div`
   border-radius: 4px;
   display: ${props => (props.isOpen ? 'initial' : 'none')};
   min-width: 200px;
-  max-width: 200px;
-  width: 200px;
+  max-width: ${props => (props.fullWidth ? '' : '200px')};
+  width: ${props => (props.fullWidth ? '100%' : '200px')};
   background-color: #ffffff;
   bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
   top: ${props =>
