@@ -414,7 +414,6 @@ export default class Select extends React.Component {
         <CustomItemContainer
           isCustomItemFocused={this.state.isCustomItemFocused}
           onClick={() => onCustomItemClick(this.state.searchValue)}
-          key={length}
         >
           {`${customItemLabel} ${this.state.searchValue}`}
         </CustomItemContainer>
