@@ -17,7 +17,7 @@ const Input = ({
   type,
   value,
 }) => (
-  <div>
+  <Styles.InputWrapper>
     {label.length > 0 && <Text htmlFor={name} type='label'>{label}</Text>}
     <Styles.InputStyled
       disabled={disabled}
@@ -30,12 +30,14 @@ const Input = ({
       value={value}
     />
     {help.length > 0 && (
-      <Text type='help' htmlFor={name} hasError={hasError}>
-        {hasError && <Warning size="small" />}
-        {`${hasError ? ' ' : ''}${help}`}
-      </Text>
+      <Styles.HelpTextWrapper>
+        {hasError && <Warning size="medium" />}
+        <Styles.HelpText type='help' htmlFor={name} hasError={hasError}>
+          {help}
+        </Styles.HelpText>
+      </Styles.HelpTextWrapper>
     )}
-  </div>
+  </Styles.InputWrapper>
 );
 
 Input.propTypes = {
