@@ -589,7 +589,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
   />
   <styled.div
     hasIconOnly={false}
-    isOpen={null}
+    isOpen={false}
     position="bottom"
   >
     <styled.ul

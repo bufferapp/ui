@@ -14,7 +14,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       hasIconOnly={false}
       hasSearch={false}
       horizontalOffset="-16px"
-      isOpen={null}
+      isOpen={false}
       isSplit={false}
       items={
         Array [

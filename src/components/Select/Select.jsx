@@ -97,8 +97,9 @@ export default class Select extends React.Component {
 
   // Close the popover
   closePopover = e => {
-    if (this.searchInputNode &&
-      this.searchInputNode.contains(e.target)) return;
+    if (!this.props.customButton && this.selectNode &&
+      this.selectNode.contains(e.target)) return;
+
     const { isOpen } = this.state;
 
     if (isOpen) {
@@ -360,7 +361,7 @@ export default class Select extends React.Component {
           type="text"
           icon={icon}
           hasIconOnly
-          onClick={() => this.onButtonClick()}
+          onClick={this.onButtonClick}
           innerRef={activeButton => this.activeButton = activeButton}
           label="Click Me"
         />
@@ -542,7 +543,7 @@ Select.defaultProps = {
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
   tooltip: undefined,
-  isOpen: null,
+  isOpen: false,
   onClose: undefined,
   hasIconOnly: false,
   marginTop: undefined,
