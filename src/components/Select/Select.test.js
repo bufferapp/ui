@@ -10,7 +10,7 @@ describe('SomeComponent component', () => {
   it('openPopup: should open the closed popup', () => {
     const wrapper = mount(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
-    expect(wrapper.state().isOpen).toBe(null);
+    expect(wrapper.state().isOpen).toBe(false);
     instance.onButtonClick();
     expect(wrapper.state().isOpen).toBe(true);
   });
@@ -20,7 +20,7 @@ describe('SomeComponent component', () => {
     const instance = wrapper.instance();
     instance.onButtonClick();
     expect(wrapper.state().isOpen).toBe(true);
-    instance.closePopover();
+    instance.closePopover({ target: null });
     expect(wrapper.state().isOpen).toBe(false);
   });
 
