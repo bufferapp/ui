@@ -38,6 +38,10 @@ export default class Select extends React.Component {
     selectedItems: this.props.items || [],
     isFiltering: false,
     searchValue: '',
+    /* We've added the functionality of adding a custom item with an action so 
+    we're using this value to handle keyboard events on that custom item. We
+    use it to determine if the custom item has focus and listen for up, down 
+    and enter and well as highlighting on hover */
     isCustomItemFocused: false,
   };
 
