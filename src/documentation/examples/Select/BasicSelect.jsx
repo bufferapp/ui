@@ -53,7 +53,6 @@ export default function ExampleSelect() {
       hasCustomAction
       onCustomItemClick={string => console.info(string)}
       customItemLabel="Create Tag"
-      yPosition="top"
     />
   );
 }

@@ -47,27 +47,7 @@ export default function ExampleSelectMenu() {
           title: 'Logout',
           icon: <ArrowLeft color="gray" />,
           hasDivider: true,
-          onItemClick: () => console.info('Logout Clicked'),
-        },
-        {
-          id: '6',
-          title: 'Logout',
-          icon: <ArrowLeft color="gray" />,
-          hasDivider: true,
-          onItemClick: () => console.info('Logout Clicked'),
-        },
-        {
-          id: '7',
-          title: 'Logout',
-          icon: <ArrowLeft color="gray" />,
-          hasDivider: true,
-          onItemClick: () => console.info('Logout Clicked'),
-        },
-        {
-          id: '8',
-          title: 'Logout',
-          icon: <ArrowLeft color="gray" />,
-          hasDivider: true,
+          dividerTitle: 'Logout',
           onItemClick: () => console.info('Logout Clicked'),
         },
       ]}

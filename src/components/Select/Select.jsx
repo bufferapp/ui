@@ -12,6 +12,7 @@ import {
   SearchBarWrapper,
   NoMatchesContainer,
   CustomItemContainer,
+  SelectItemDividerTitle,
 } from './style';
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
@@ -485,7 +486,13 @@ export default class Select extends React.Component {
           {}
           {items.map((item, idx) => [
             item.hasDivider && (
-              <SelectItemDivider key={`${this.getItemId(item)}--divider`} />
+              <SelectItemDivider key={`${this.getItemId(item)}--divider`}>
+                {item.dividerTitle && (
+                  <SelectItemDividerTitle>
+                    {item.dividerTitle}
+                  </SelectItemDividerTitle>
+                )}
+              </SelectItemDivider>
             ),
             <SelectItem
               hovered={hoveredItem === idx}

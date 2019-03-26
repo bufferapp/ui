@@ -8,6 +8,7 @@ import {
   grayLight,
   grayDarker,
 } from '../style/colors';
+import { fontFamily } from '../style/fonts';
 
 export const Wrapper = styled.div`
   outline: 0;
@@ -72,6 +73,17 @@ export const SelectItemDivider = styled.li`
   padding: 0;
   pointer-events: none;
   width: 100%;
+`;
+
+export const SelectItemDividerTitle = styled.span`
+  position: relative;
+  top: -11px;
+  margin-left: 8px;
+  background: white;
+  padding: 0 8px;
+  font-size: 12px;
+  font-family: ${fontFamily};
+  color: ${gray};
 `;
 
 export const SearchBarWrapper = styled.div`
