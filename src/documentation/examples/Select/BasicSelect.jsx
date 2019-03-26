@@ -12,7 +12,12 @@ export default function ExampleSelect() {
         title: 'name',
       }}
       items={[
-        { _id: '1', name: 'Open', hotKeyPrompt: 'Q' },
+        {
+          _id: '1',
+          name: 'OpenOpenOpenOpenOpenOpenOpenOpenOpen',
+          hotKeyPrompt: 'Q',
+          disabled: true,
+        },
         { _id: '2', name: 'Pending' },
         { _id: '3', name: 'Closed' },
         { _id: '4', name: 'Open' },
@@ -48,6 +53,8 @@ export default function ExampleSelect() {
       hasCustomAction
       onCustomItemClick={string => console.info(string)}
       customItemLabel="Create Tag"
+      position="top"
+      tooltip="merp"
     />
   );
 }

@@ -31,6 +31,7 @@ const SelectItem = ({
     onClick={item.onItemClick || onClick}
     hovered={hovered}
     id={getItemId(item)}
+    disabled={item.disabled}
   >
     <SelectItemLabel
       hideSearch={hideSearch}

@@ -6,7 +6,7 @@ import { fontWeightMedium, fontSize } from '../../style/fonts';
 export const SelectItemStyled = styled.li`
   min-height: 32px;
   align-items: center;
-  color: ${grayDarker};
+  color: ${props => (props.disabled ? grayLight : grayDarker)};
   cursor: pointer;
   display: flex;
   font-size: ${fontSize};
@@ -21,6 +21,7 @@ export const SelectItemStyled = styled.li`
   &:hover {
     background-color: ${grayLight};
   }
+  pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
 `;
 
 export const SelectItemLabel = styled.div`
@@ -54,7 +55,8 @@ export const SelectItemTitle = styled.p`
   text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
-  display: flex;
+  display: block;
+  white-space: nowrap;
 `;
 
 export const SelectItemCustom = styled.span`
@@ -64,8 +66,7 @@ export const SelectItemCustom = styled.span`
 
 export const CheckIconWrapper = styled.span`
   margin-right: 8px;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
   height: 16px;
   width: 16px;
 }
