@@ -1,5 +1,5 @@
 # Guides
 
-#### This page is in-progress
-
-​
+<InfoCard color='orange'>
+This page is in progress
+</InfoCard>

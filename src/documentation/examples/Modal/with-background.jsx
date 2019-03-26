@@ -2,7 +2,6 @@ import React from 'react';
 import Modal from '@bufferapp/ui/Modal';
 import Text from '@bufferapp/ui/Text';
 
-
 /** Modal with background */
 export default function ModalTest() {
   return (

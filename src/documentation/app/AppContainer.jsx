@@ -9,6 +9,7 @@ import Component from './layout/content/Component';
 import componentData from '../../../config/componentData';
 import documentationData from '../../../config/documentsData';
 import NavBar from './layout/navbar/NavBar';
+import Home from './Home';
 import UIComponent from '../markdown/UI.md';
 import pckage from '../../../package.json';
 
@@ -27,14 +28,21 @@ const Wrapper = styled.div`
 `;
 
 const PageLayout = styled.div`
-  padding: 60px 88px;
+  padding: 50px;
   display: block;
   width: 100%;
-  background: #ffffff;
+  background: #FFFFFF url('/images/background.png');
+  background-size: cover;
   min-height: calc(100vh - 201px);
-  max-width: 850px;
   overflow: auto;
   border-right: 1px solid #e6ecf1;
+`;
+
+const PageContainer = styled.div`
+  background: #FFFFFF;
+  padding: 80px;
+  border-radius: 3px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 `;
 
 /** The main Documentation app container that renders other components */
@@ -109,6 +117,7 @@ export default class AppContainer extends React.Component {
       },
     } = this.props;
 
+    const isHome = location === 'GettingStarted' && route === 'getting-started';
     const isUIRoot = location === 'ui' && route === 'ui';
 
     // by convention, the route in the url should match the components name
@@ -144,23 +153,27 @@ export default class AppContainer extends React.Component {
     return (
       <Container>
         <NavBar
-          title="Buffer Components Documentation"
+          title="Buffer UI"
           version={pckage.version}
         />
         <Wrapper>
           <Sidebar navigationLinks={navigationLinks} route={route} />
           <PageLayout>
-            {isUIRoot ? (
-              this.renderMarkdownComponent()
-            ) : component ? (
-              <Component component={component} />
-            ) : (
-              <Markdown
-                component={PageComponent}
-                page={page}
-                links={() => this.getFooterLinks(pageParents, route)}
-              />
-            )}
+            <PageContainer>
+              {isHome ? (
+                <Home />
+              ) : isUIRoot ? (
+                this.renderMarkdownComponent()
+              ) : component ? (
+                <Component component={component} />
+              ) : (
+                <Markdown
+                  component={PageComponent}
+                  page={page}
+                  links={() => this.getFooterLinks(pageParents, route)}
+                />
+              )}
+            </PageContainer>
           </PageLayout>
         </Wrapper>
       </Container>

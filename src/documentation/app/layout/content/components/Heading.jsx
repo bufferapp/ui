@@ -13,12 +13,9 @@ const Text = styled.h2`
     display: block;
     margin: 0px;
     flex: 1 1 auto;
-    border-left: 2px solid #E6ECF1;
-    padding: 0 16px;
-    border-left-color: #2E5DF8;
-    font-size: 32px;
+    font-size: 40px;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 600;
 `;
 
 const Header = styled.div`
