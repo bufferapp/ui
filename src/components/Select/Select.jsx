@@ -437,7 +437,8 @@ export default class Select extends React.Component {
 
   renderSelectPopup = () => {
     const {
-      position,
+      xPosition,
+      yPosition,
       hideSearch,
       keyMap,
       searchPlaceholder,
@@ -454,7 +455,8 @@ export default class Select extends React.Component {
     return (
       <SelectStyled
         isOpen={isOpen}
-        position={position}
+        xPosition={xPosition}
+        yPosition={yPosition}
         hasIconOnly={hasIconOnly}
         marginTop={marginTop}
         fullWidth={fullWidth}
@@ -550,8 +552,11 @@ Select.propTypes = {
   /** Size of the Button */
   size: PropTypes.oneOf(['small', 'large', 'medium']),
 
-  /** Position of the popup */
-  position: PropTypes.oneOf(['top', 'bottom', 'right']),
+  /** Position of the popup right or left */
+  xPosition: PropTypes.oneOf(['right', 'left']),
+
+  /** Position of the popup top or bottom */
+  yPosition: PropTypes.oneOf(['top', 'bottom']),
 
   /** Icon to show in the Button */
   icon: PropTypes.node,
@@ -618,7 +623,8 @@ Select.defaultProps = {
   isSplit: false,
   type: 'secondary',
   size: 'medium',
-  position: 'bottom',
+  xPosition: 'left',
+  yPosition: 'bottom',
   disabled: undefined,
   icon: undefined,
   hideSearch: false,

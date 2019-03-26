@@ -53,8 +53,7 @@ export default function ExampleSelect() {
       hasCustomAction
       onCustomItemClick={string => console.info(string)}
       customItemLabel="Create Tag"
-      position="top"
-      tooltip="merp"
+      yPosition="top"
     />
   );
 }

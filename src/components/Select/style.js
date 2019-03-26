@@ -34,22 +34,19 @@ export const SelectStyled = styled.div`
   max-width: ${props => (props.fullWidth ? '' : '200px')};
   width: ${props => (props.fullWidth ? '100%' : '200px')};
   background-color: #ffffff;
-  bottom: ${props => (props.position === 'top' ? '100%' : 'initial')};
-  top: ${props =>
-    props.position === 'bottom' || props.position === 'right'
-      ? '100%'
-      : 'initial'};
-  margin-bottom: ${props => (props.position === 'top' ? '8px' : '0')};
+  bottom: ${props => (props.yPosition === 'top' ? '100%' : 'initial')};
+  top: ${props => (props.yPosition === 'bottom' ? '100%' : 'initial')};
+  margin-bottom: ${props => (props.yPosition === 'top' ? '8px' : '0')};
   margin-top: ${props =>
     props.marginTop
       ? props.marginTop
-      : props.position === 'bottom' || props.position === 'right'
+      : props.yPosition === 'bottom' || props.xPosition === 'right'
       ? '8px'
       : '0'};
   transform: translateX(
     ${props => (props.horizontalOffset ? props.horizontalOffset : '0')}
   );
-  left: ${props => (props.position === 'right' ? 0 : '')};
+  left: ${props => (props.xPosition === 'left' ? 0 : '')};
 `;
 
 export const SelectItems = styled.ul`
