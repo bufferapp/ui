@@ -53,11 +53,9 @@ export const SelectItemIcon = styled.div`
 
 export const SelectItemTitle = styled.p`
   margin: ${props => (props.moveRight ? '0px 0px 0px 24px' : '0px')};
-  text-overflow: ellipsis;
   width: 100%;
   overflow: hidden;
-  display: block;
-  white-space: nowrap;
+  display: flex;
 `;
 
 export const SelectItemCustom = styled.span`
@@ -82,4 +80,12 @@ export const HotKeyPrompt = styled.span`
   text-align: justify;
   letter-spacing: -0.233333px;
   color: ${gray};
+`;
+
+export const Title = styled.span`
+  display: inline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 8px;
 `;
