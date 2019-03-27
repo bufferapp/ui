@@ -58,7 +58,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   icon={<NodeFixture />}
   innerRef={<NodeFixture />}
   isSplit={true}
-  onClick={[MockFunction]}
   size="small"
   type="link"
 >
@@ -217,7 +216,6 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
 <styled.button
-  className="jest-auto-snapshots String Fixture"
   disabled={false}
   fullWidth={false}
   hasIconOnly={false}

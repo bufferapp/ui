@@ -148,7 +148,7 @@ Button.propTypes = {
   innerRef: PropTypes.node,
 
   /** class passed by the dom element */
-  className: PropTypes.string.isRequired
+  className: PropTypes.string
 };
 
 Button.defaultProps = {
@@ -166,7 +166,8 @@ Button.defaultProps = {
   onSelectClick: undefined,
   fullWidth: false,
   tooltip: undefined,
-  innerRef: undefined
+  innerRef: undefined,
+  className: undefined
 };
 
 export default Button;
