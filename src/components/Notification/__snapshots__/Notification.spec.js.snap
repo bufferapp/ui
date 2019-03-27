@@ -1,12 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > Notification Matches snapshot when passed all props 1`] = `
+<styled.div>
+  <styled.div>
+    <styled.div>
+      jest-auto-snapshots String Fixture
+    </styled.div>
+    <Styled(CrossIcon)
+      onClick={[MockFunction]}
+    />
+  </styled.div>
+  <styled.div>
+    <Styled(Button)
+      label="jest-auto-snapshots String Fixture"
+      onClick={[MockFunction]}
+      type="text"
+    />
+    <Styled(Button)
+      label="jest-auto-snapshots String Fixture"
+      onClick={[MockFunction]}
+      type="text"
+    />
+  </styled.div>
+</styled.div>
+`;
+
 exports[`jest-auto-snapshots > Notification Matches snapshot when passed only required props 1`] = `
-<ForwardRef>
-  <ForwardRef>
-    jest-auto-snapshots String Fixture
-  </ForwardRef>
-  <ForwardRef
-    onClick={[MockFunction]}
-  />
-</ForwardRef>
+<styled.div>
+  <styled.div>
+    <styled.div>
+      jest-auto-snapshots String Fixture
+    </styled.div>
+    <Styled(CrossIcon)
+      onClick={[MockFunction]}
+    />
+  </styled.div>
+</styled.div>
 `;
