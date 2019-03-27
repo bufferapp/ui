@@ -85,7 +85,8 @@ const Button = ({
         items={items}
         type={type}
         isSplit
-        position={selectPosition}
+        yPosition={selectPosition}
+        xPosition="right"
         disabled={disabled}
         hideSearch={hideSearch}
       />
@@ -167,7 +168,7 @@ Button.defaultProps = {
   fullWidth: false,
   tooltip: undefined,
   innerRef: undefined,
-  hideSearch: undefined,
+  hideSearch: true,
 };
 
 export default Button;
