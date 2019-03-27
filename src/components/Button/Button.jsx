@@ -59,7 +59,7 @@ const Button = ({
     hasIconOnly={hasIconOnly}
     fullWidth={fullWidth}
     data-tip={tooltip}
-    ref={innerRef}
+    innerRef={innerRef}
     className={className}
   >
     {icon}

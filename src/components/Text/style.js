@@ -64,7 +64,7 @@ export const Label = styled.label`
 export const Help = styled.label`
   color: ${({ hasError }) => hasError ? red : grayDarker };
   font-family: ${fontFamily};
-  font-size: 12px;
+  font-size: 14px;
   font-weight: ${fontWeightMedium};
   line-height: ${lineHeight};
 `;
