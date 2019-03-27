@@ -46,7 +46,8 @@ const Button = ({
   onSelectClick,
   fullWidth,
   tooltip,
-  innerRef
+  innerRef,
+  className
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -59,6 +60,7 @@ const Button = ({
     fullWidth={fullWidth}
     data-tip={tooltip}
     ref={innerRef}
+    className={className}
   >
     {icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
@@ -143,7 +145,10 @@ Button.propTypes = {
   tooltip: PropTypes.string,
 
   /** The prop to get the DOM element of the Button */
-  innerRef: PropTypes.node
+  innerRef: PropTypes.node,
+
+  /** class passed by the dom element */
+  className: PropTypes.string.isRequired
 };
 
 Button.defaultProps = {

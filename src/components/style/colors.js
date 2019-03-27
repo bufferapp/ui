@@ -27,3 +27,5 @@ export const instagram = '#e53c5f';
 export const linkedin = '#007bb6';
 export const pinterest = '#bd081c';
 export const twitter = '#55acee';
+
+export const transparent = 'transparent';
