@@ -50,7 +50,7 @@ const Button = ({
   className
 }) => (
   <ButtonStyled
-    onClick={!disabled && !isSplit ? onClick : undefined}
+    onClick={!disabled ? onClick : undefined}
     disabled={disabled}
     size={size}
     type={type}
