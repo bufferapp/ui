@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import Cross from '../Icon/Icons/Cross';
 import Button from '../Button/Button';
-import { white } from '../style/colors';
+import { white, grayLight } from '../style/colors';
 
 export const Container = styled.div`
   background: #3d3d3d;
@@ -34,9 +34,12 @@ export const ButtonsRow = styled.div`
 `;
 
 export const ButtonStyled = styled(Button)`
-  color:${white};
+  color: ${grayLight};
   :focus {
     box-shadow: none;
+  }
+  :hover {
+    color: ${white};
   }
 `;
 
@@ -54,6 +57,9 @@ export const Icon = styled(Cross)`
   font-size: 16px;
   top: 18px;
   right: 19px;
-  opacity: 0.7;
   cursor: pointer;
+  color: ${grayLight};
+  :hover {
+    color: ${white};
+  }
 `;
