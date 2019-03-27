@@ -1,27 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from 'styled-components';
+import styled from 'styled-components';
 import * as Styles from './style';
+import ChevronDown from '../Icon/Icons/ChevronDown';
+import Select from '../Select/Select';
 
-const ButtonStyled = style.div`  
-  ${Styles.buttonbase};
+export const ButtonStyled = styled.button`
+  ${Styles.ButtonBase};
   ${props => Styles[props.size]};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
+  ${props => Styles[props.fullWidth ? 'fullWidth' : '']}
 `;
 
-const ButtonArrow = style.div`
-  ${Styles.split};
-`;
-
-const Loading = style.img`
+const Loading = styled.img`
   width: 24px;
-  padding-left: 10px;
+  margin-left: 10px;
+`;
+
+const VisuallyHiddenLabel = styled.span`
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
 `;
 
 /** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
 const Button = ({
-  children,
   disabled,
   onClick,
   type,
@@ -29,26 +38,60 @@ const Button = ({
   label,
   isSplit,
   loading,
+  icon,
+  hasIconOnly,
+  isSelect,
+  items,
+  selectPosition,
+  onSelectClick,
+  fullWidth,
+  tooltip,
+  innerRef
 }) => (
   <ButtonStyled
-    onClick={!disabled && onClick}
+    onClick={!disabled ? onClick : undefined}
     disabled={disabled}
     size={size}
     type={type}
     isSplit={isSplit}
-    aria-label={label || null}
+    icon={icon}
+    hasIconOnly={hasIconOnly}
+    fullWidth={fullWidth}
+    data-tip={tooltip}
+    innerRef={innerRef}
   >
-    {children}
-    {isSplit && <ButtonArrow>▾</ButtonArrow>}
+    {icon}
+    {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
+    {!hasIconOnly && (
+      <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>
+    )}
+
+    {isSelect && (type === 'primary' || type === 'secondary') && (
+      <Styles.ButtonArrow>
+        <ChevronDown
+          color={type === 'primary' ? 'white' : 'grayDark'}
+          size={size}
+          isChevron
+        />
+      </Styles.ButtonArrow>
+    )}
+
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
+
+    {isSplit && (type === 'primary' || type === 'secondary') && (
+      <Select
+        onSelectClick={onSelectClick}
+        items={items}
+        type={type}
+        isSplit
+        position={selectPosition}
+        disabled={disabled}
+      />
+    )}
   </ButtonStyled>
 );
 
-
 Button.propTypes = {
-  /** Children node */
-  children: PropTypes.node.isRequired,
-
   /** Is the button disabled */
   disabled: PropTypes.bool,
 
@@ -58,26 +101,67 @@ Button.propTypes = {
   /** OnClick handler */
   onClick: PropTypes.func.isRequired,
 
-  /** Button label for accessibility */
-  label: PropTypes.string.isRequired,
+  /** Button label */
+  label: PropTypes.string,
 
   /** Type of button */
-  type: PropTypes.oneOf(['link', 'primarySplit', 'primary', 'secondary', 'text']).isRequired,
+  type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text']),
 
   /** Is the Button Split  */
   isSplit: PropTypes.bool,
 
+  /** Is this the Select button with chevron */
+  isSelect: PropTypes.bool,
+
   /** Is the Button Loading  */
   loading: PropTypes.bool,
-};
 
+  /** Does the button have only an icon and no label */
+  hasIconOnly: PropTypes.bool,
+
+  /** Icon to show with the label */
+  icon: PropTypes.node,
+
+  /** Items to display in the Split Button popup */
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      title: PropTypes.string,
+    })
+  ),
+
+  /** Position of the Select popup */
+  selectPosition: PropTypes.oneOf(['top', 'bottom']),
+
+  /** Function to call on Split Button selected item click */
+  onSelectClick: PropTypes.func,
+
+  /** Is the button the full width of the parent container */
+  fullWidth: PropTypes.bool,
+
+  /** Tooltip to show on the component */
+  tooltip: PropTypes.string,
+
+  /** The prop to get the DOM element of the Button */
+  innerRef: PropTypes.node
+};
 
 Button.defaultProps = {
   disabled: false,
-  isSplit: false,
+  isSplit: undefined,
   loading: false,
   size: 'medium',
+  type: 'secondary',
+  label: undefined,
+  hasIconOnly: false,
+  icon: undefined,
+  isSelect: undefined,
+  items: undefined,
+  selectPosition: 'bottom',
+  onSelectClick: undefined,
+  fullWidth: false,
+  tooltip: undefined,
+  innerRef: undefined
 };
-
 
 export default Button;

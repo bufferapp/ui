@@ -223,7 +223,7 @@ module.exports = {
             // Support React Native Web
             // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
             'react-native': 'react-native-web',
-            '@bufferapp/components-new': path.resolve(__dirname, '../src/components')
+            '@bufferapp/ui': path.resolve(__dirname, '../src/components')
         },
         plugins: [
             // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -272,6 +272,11 @@ module.exports = {
                 // match the requirements. When no loader matches it will fall
                 // back to the "file" loader at the end of the loader list.
                 oneOf: [
+                    // used to load .md files
+                    {
+                      test: /\.md/,
+                      use: 'raw-loader'
+                    },
                     // "url" loader works just like "file" loader but it also embeds
                     // assets smaller than specified size as data URLs to avoid requests.
                     {

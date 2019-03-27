@@ -1,8 +1,8 @@
 {
-  "extends": "airbnb",
+  "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
   "plugins": [
-    "react"
+    "react", "prettier"
   ],
   "env": {
     "browser": true,
@@ -30,6 +30,10 @@
     "react/prefer-stateless-function": 0,
     "import/no-unresolved": 0,
     "import/prefer-default-export": 0,
-    "prefer-template": "warn"
+    "react/no-array-index-key": 0,
+    "no-return-assign": 0,
+    "prefer-template": "warn",
+    "react/destructuring-assignment": 0,
+    "react/no-unused-prop-types": 0
   }
 }

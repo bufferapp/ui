@@ -3,6 +3,7 @@ const fse = require('fs-extra');
 
 const files = [
   'README.md',
+  'LICENSE',
 ];
 
 
@@ -45,7 +46,7 @@ function createPackageFile() {
         description,
         keywords,
         repository,
-        licence,
+        license,
         bugs,
         homepage,
         peerDependencies,
@@ -55,14 +56,14 @@ function createPackageFile() {
 
 
       const minimalPackage = {
-        name: '@bufferapp/components-new',
+        name: '@bufferapp/ui',
         author,
         version,
         description,
         main: './index.js',
         keywords,
         repository,
-        licence,
+        license,
         bugs,
         homepage,
         peerDependencies,

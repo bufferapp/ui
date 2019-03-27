@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
+<styled.nav>
+  <styled.div>
+    <BufferLogo />
+    <NavBarProduct
+      activeProduct="publish"
+    />
+  </styled.div>
+  <styled.div>
+    <Select
+      customButton={[Function]}
+      hasIconOnly={false}
+      hasSearch={false}
+      horizontalOffset="-16px"
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      position="bottom"
+      searchPlaceholder="Search"
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+    />
+  </styled.div>
+</styled.nav>
+`;

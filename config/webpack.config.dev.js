@@ -149,7 +149,7 @@ module.exports = {
             // Support React Native Web
             // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
             'react-native': 'react-native-web',
-            '@bufferapp/components-new': path.resolve(__dirname, '../src/components')
+            '@bufferapp/ui': path.resolve(__dirname, '../src/components')
         },
         plugins: [
             // Adds support for installing with Plug'n'Play, leading to faster installs and adding
@@ -221,6 +221,8 @@ module.exports = {
                             ),
 
                             plugins: [
+                                'react-hot-loader/babel',
+                                'babel-plugin-styled-components',
                                 [
                                     require.resolve('babel-plugin-named-asset-import'),
                                     {
@@ -312,6 +314,11 @@ module.exports = {
                             },
                             'sass-loader'
                         ),
+                    },
+                    // used to load .md files
+                    {
+                      test: /\.md/,
+                      use: 'raw-loader'
                     },
                     // "file" loader makes sure those assets get served by WebpackDevServer.
                     // When you `import` an asset, you get its (virtual) filename.
