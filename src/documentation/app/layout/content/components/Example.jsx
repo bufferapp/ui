@@ -25,15 +25,16 @@ const CodeButton = styled.a`
   justify-content: end;
   cursor: pointer;
   font-weight: 500;
+  margin-bottom: 15px;
 `;
 
 const Title = styled.div`
-    font-size: 16px;
-    font-weight: 600;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-block-start: 1.33em;
+  margin-block-end: 1.33em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 `;
 
 /** Displays components example information */
@@ -45,7 +46,7 @@ export default class Example extends React.Component {
     };
   }
 
-  toggleCode = (event) => {
+  toggleCode = event => {
     event.preventDefault();
     const { showCode } = this.state;
     this.setState({ showCode: !showCode });
@@ -54,9 +55,7 @@ export default class Example extends React.Component {
   render() {
     const { showCode } = this.state;
     const { example, componentName, fullscreen } = this.props;
-    const {
-      code, description, title, name,
-    } = example;
+    const { code, description, title, name } = example;
     const fileName = componentName.replace(' ', '');
 
     // Must use CommonJS require here to dynamically require components
