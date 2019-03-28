@@ -2,6 +2,7 @@
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
@@ -25,6 +26,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
@@ -48,6 +50,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={false}
   fullWidth={true}
@@ -72,6 +75,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={false}
@@ -95,6 +99,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
@@ -143,6 +148,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
@@ -166,6 +172,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
@@ -189,6 +196,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
@@ -208,6 +216,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}

@@ -188,7 +188,7 @@ export default class Select extends React.Component {
         isOpen: !isOpen,
       },
       () => {
-        !isOpen && this.selectNode.focus();
+        !isOpen && this.selectNode && this.selectNode.focus();
         this.scrollToItem(
           this.itemsNode,
           document.getElementById(this.getItemId(items[0]))

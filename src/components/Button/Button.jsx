@@ -48,6 +48,7 @@ const Button = ({
   tooltip,
   innerRef,
   hideSearch,
+  className,
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -60,6 +61,7 @@ const Button = ({
     fullWidth={fullWidth}
     data-tip={tooltip}
     innerRef={innerRef}
+    className={className}
   >
     {icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
@@ -150,6 +152,9 @@ Button.propTypes = {
 
   /** Is search hidden */
   hideSearch: PropTypes.bool,
+
+  /** class passed by the dom element */
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -169,6 +174,7 @@ Button.defaultProps = {
   tooltip: undefined,
   innerRef: undefined,
   hideSearch: true,
+  className: undefined,
 };
 
 export default Button;
