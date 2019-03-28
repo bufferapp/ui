@@ -1,7 +1,6 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
 
-
 /** Basic */
 export default function ExampleSelect() {
   return (
@@ -13,7 +12,12 @@ export default function ExampleSelect() {
         title: 'name',
       }}
       items={[
-        { _id: '1', name: 'Open' },
+        {
+          _id: '1',
+          name: 'OpenOpenOpenOpenOpenOpenOpenOpenOpen',
+          hotKeyPrompt: 'Q',
+          disabled: true,
+        },
         { _id: '2', name: 'Pending' },
         { _id: '3', name: 'Closed' },
         { _id: '4', name: 'Open' },
@@ -32,6 +36,23 @@ export default function ExampleSelect() {
         { _id: '52', name: 'Pending' },
         { _id: '63', name: 'Closed' },
       ]}
+      hotKeys={[
+        {
+          hotKey: 81,
+          onKeyPress: () => {
+            console.info('hey');
+          },
+        },
+        {
+          hotKey: 87,
+          onKeyPress: () => {
+            console.info('hello there');
+          },
+        },
+      ]}
+      hasCustomAction
+      onCustomItemClick={string => console.info(string)}
+      customItemLabel="Create Tag"
     />
   );
 }

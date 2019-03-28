@@ -8,7 +8,16 @@ import {
   SelectItemTitle,
   SelectItemCustom,
   CheckIconWrapper,
+  HotKeyPrompt,
+  Title,
 } from './style';
+
+const shouldItemMoveRight = (item, hasSelectedItems, hideSearch) =>
+  // if the item isn't selected, we need to check if other items are selected in the dropdown or if it has a search bar
+  !item.selected &&
+  (hasSelectedItems || !hideSearch) &&
+  // if it's not selected and it has a custom component, we shouldn't move the item
+  !(item.component && !hasSelectedItems);
 
 const SelectItem = ({
   item,
@@ -17,16 +26,16 @@ const SelectItem = ({
   keyMap,
   hasSelectedItems,
   getItemId,
-  hasSearch,
-  multiSelect,
+  hideSearch,
 }) => (
   <SelectItemStyled
     onClick={item.onItemClick || onClick}
     hovered={hovered}
     id={getItemId(item)}
+    disabled={item.disabled}
   >
     <SelectItemLabel
-      hasSearch={hasSearch}
+      hideSearch={hideSearch}
       hasSelectedItems={hasSelectedItems}
       hasComponent={item.component}
     >
@@ -38,21 +47,23 @@ const SelectItem = ({
       {item.icon && (
         <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
       )}
-      {item.component && (
-        <CheckIconWrapper>
-          <SelectItemCustom
-            dangerouslySetInnerHTML={{ __html: item.component(item) }}
-          />
-        </CheckIconWrapper>
-      )}
+
       <SelectItemTitle
-        moveRight={
-          (hasSelectedItems && !item.selected) ||
-          (multiSelect && !item.selected)
-        }
+        moveRight={shouldItemMoveRight(item, hasSelectedItems, hideSearch)}
+        title={item[keyMap ? keyMap.title : 'title']}
       >
-        {item[keyMap ? keyMap.title : 'title']}
+        {item.component && (
+          <CheckIconWrapper>
+            <SelectItemCustom
+              dangerouslySetInnerHTML={{ __html: item.component(item) }}
+            />
+          </CheckIconWrapper>
+        )}
+        <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
       </SelectItemTitle>
+      {item.hotKeyPrompt && (
+        <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
+      )}
     </SelectItemLabel>
   </SelectItemStyled>
 );
@@ -87,7 +98,7 @@ SelectItem.propTypes = {
   hasSelectedItems: PropTypes.bool,
 
   /** Does the Select have a search bar incorporated */
-  hasSearch: PropTypes.bool,
+  hideSearch: PropTypes.bool,
 
   /** Is it a multi select */
   multiSelect: PropTypes.bool,
@@ -97,7 +108,7 @@ SelectItem.defaultProps = {
   hovered: undefined,
   keyMap: undefined,
   hasSelectedItems: undefined,
-  hasSearch: undefined,
+  hideSearch: undefined,
   multiSelect: undefined,
 };
 

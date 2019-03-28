@@ -25,7 +25,7 @@ export default function ExampleSelectWithCustomItem() {
           component: item =>
             `<div style="background: ${
               item.color
-              }; width: 10px; height: 10px"/>`,
+            }; width: 10px; height: 10px"/>`,
           onItemClick: () => console.info('Organization Clicked'),
         },
         {
@@ -35,10 +35,11 @@ export default function ExampleSelectWithCustomItem() {
           component: item =>
             `<div style="background: ${
               item.color
-              }; width: 10px; height: 10px"/>`,
+            }; width: 10px; height: 10px"/>`,
           onItemClick: () => console.info('Settings Clicked'),
         },
       ]}
+      hideSearch
     />
   );
 }

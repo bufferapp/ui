@@ -6,7 +6,7 @@ import { fontFamily, fontWeightMedium, fontSize } from '../../style/fonts';
 export const SelectItemStyled = styled.li`
   min-height: 32px;
   align-items: center;
-  color: ${grayDarker};
+  color: ${props => (props.disabled ? grayLight : grayDarker)};
   cursor: pointer;
   display: flex;
   font-size: ${fontSize};
@@ -22,6 +22,7 @@ export const SelectItemStyled = styled.li`
   &:hover {
     background-color: ${grayLight};
   }
+  pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
 `;
 
 export const SelectItemLabel = styled.div`
@@ -31,13 +32,11 @@ export const SelectItemLabel = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
-  padding-left: ${props =>
-    props.hasSearch && !props.hasSelectedItems && !props.hasComponent
-      ? '32px'
-      : '8px'};
+  padding-left: 8px;
   padding-right: 8px;
   display: flex;
   align-items: center;
+  width: 100%;
 `;
 
 export const SelectItemIcon = styled.div`
@@ -52,16 +51,41 @@ export const SelectItemIcon = styled.div`
   }
 `;
 
-export const SelectItemTitle = styled.div`
-  margin-left: ${props => (props.moveRight ? '24px' : '0px')};
+export const SelectItemTitle = styled.p`
+  margin: ${props => (props.moveRight ? '0px 0px 0px 24px' : '0px')};
+  width: 100%;
+  overflow: hidden;
+  display: flex;
 `;
 
-export const SelectItemCustom = styled.div`
+export const SelectItemCustom = styled.span`
   display: flex;
   align-items: center;
 `;
 
-export const CheckIconWrapper = styled.div`
+export const CheckIconWrapper = styled.span`
   margin-right: 8px;
-  display: flex;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+}
+`;
+
+export const HotKeyPrompt = styled.span`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 12px;
+  text-align: justify;
+  letter-spacing: -0.233333px;
+  color: ${gray};
+`;
+
+export const Title = styled.span`
+  display: inline;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 8px;
 `;
