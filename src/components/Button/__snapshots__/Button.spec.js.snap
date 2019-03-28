@@ -125,6 +125,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
 <styled.button
+  className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
