@@ -358,7 +358,7 @@ export default class Select extends React.Component {
   getItemId = item => {
     if (!item) return;
     const { keyMap } = this.props;
-    return item[keyMap ? keyMap.id : 'id'];
+    return item[keyMap && keyMap.id ? keyMap.id : 'id'];
   };
 
   renderSelectButton = () => {
