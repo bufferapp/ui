@@ -47,7 +47,8 @@ const Button = ({
   fullWidth,
   tooltip,
   innerRef,
-  className
+  hideSearch,
+  className,
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -86,8 +87,10 @@ const Button = ({
         items={items}
         type={type}
         isSplit
-        position={selectPosition}
+        yPosition={selectPosition}
+        xPosition="right"
         disabled={disabled}
+        hideSearch={hideSearch}
       />
     )}
   </ButtonStyled>
@@ -147,8 +150,11 @@ Button.propTypes = {
   /** The prop to get the DOM element of the Button */
   innerRef: PropTypes.node,
 
+  /** Is search hidden */
+  hideSearch: PropTypes.bool,
+
   /** class passed by the dom element */
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 Button.defaultProps = {
@@ -167,7 +173,8 @@ Button.defaultProps = {
   fullWidth: false,
   tooltip: undefined,
   innerRef: undefined,
-  className: undefined
+  hideSearch: true,
+  className: undefined,
 };
 
 export default Button;

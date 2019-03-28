@@ -11,8 +11,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
   <styled.div>
     <Select
       customButton={[Function]}
+      hasCustomAction={false}
       hasIconOnly={false}
-      hasSearch={false}
+      hideSearch={false}
       horizontalOffset="-16px"
       isOpen={false}
       isSplit={false}
@@ -28,11 +29,12 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
         ]
       }
       label=""
-      position="bottom"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
       type="secondary"
+      xPosition="left"
+      yPosition="bottom"
     />
   </styled.div>
 </styled.nav>

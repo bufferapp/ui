@@ -11,9 +11,10 @@ export default function ExampleSplitButtonBottom() {
       type="primary"
       isSplit
       items={[
-        { id: '1', title: 'Reply + Pending' },
+        { id: '1', title: 'Reply + Pending1' },
         { id: '2', title: 'Reply + Close + Assign To Me' },
       ]}
+      hideSearch
     />
   );
 }
