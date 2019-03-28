@@ -14,6 +14,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
     disabled={false}
     hasError={true}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     size="jest-auto-snapshots String Fixture"
@@ -49,6 +50,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
     disabled={true}
     hasError={false}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     size="jest-auto-snapshots String Fixture"
@@ -81,6 +83,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
     disabled={true}
     hasError={true}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     size="jest-auto-snapshots String Fixture"
@@ -108,6 +111,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed only required 
     disabled={false}
     hasError={false}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[Function]}
     onChange={[MockFunction]}
     placeholder=""
     size="regular"
