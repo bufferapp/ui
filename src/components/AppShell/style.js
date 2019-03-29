@@ -20,11 +20,12 @@ export const AppShellStyled = styled.div`
 export const Wrapper = styled.div`
   ${flexRow}
   flex: 1;
+  height: calc(100vh - 64px);
 `;
 
 export const SidebarWrapper = styled.div`
   ${flexColumn}
-  width: 270px;
+  width: 248px;
 `;
 
 export const ContentWrapper = styled.div`
