@@ -5,8 +5,13 @@ import Notification from '@bufferapp/ui/Notification';
 export default function ExampleNotification() {
   return (
     // the wrapping div is only for documentation example purposes
-    <div style={{position: 'relative', height: '100px'}}>
-      <Notification text="Conversation has been set to Pending" type="action" leftLabel="Undo" rightLabel="Go Back" />
+    <div style={{ position: 'relative', height: '100px' }}>
+      <Notification
+        text="Conversation has been set to Pending"
+        type="action"
+        action={{ label: 'Undo' }}
+        secondaryAction={{ label: 'Go Back' }}
+      />
     </div>
   );
 }
