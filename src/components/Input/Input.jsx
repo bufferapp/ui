@@ -12,6 +12,7 @@ const Input = ({
   label,
   name,
   onChange,
+  onBlur,
   placeholder,
   size,
   type,
@@ -24,6 +25,7 @@ const Input = ({
       hasError={hasError}
       name={name}
       onChange={onChange}
+      onBlur={onBlur}
       placeholder={placeholder}
       type={type}
       size={size}
@@ -55,6 +57,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   /** The onChange event */
   onChange: PropTypes.func.isRequired,
+  /** The onBlur event */
+  onBlur: PropTypes.func,
   /** This is the vertical size of the input field, can be `small`, `regular`, or `tall` */
   size: PropTypes.string,
   /** The type of the input */
@@ -72,6 +76,7 @@ Input.defaultProps = {
   size: 'regular',
   type: 'text',
   value: undefined,
+  onBlur: () => {},
 }
 
 export default Input;

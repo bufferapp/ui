@@ -19,6 +19,7 @@ export Folder from './Icons/Folder';
 export Gear from './Icons/Gear';
 export GooglePlus from './Icons/GooglePlus';
 export Hide from './Icons/Hide';
+export Info from './Icons/Info';
 export Instagram from './Icons/Instagram';
 export Link from './Icons/Link';
 export LinkedIn from './Icons/LinkedIn';

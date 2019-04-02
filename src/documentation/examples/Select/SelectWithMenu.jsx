@@ -36,14 +36,23 @@ export default function ExampleSelectMenu() {
           onItemClick: () => console.info('Settings Clicked'),
         },
         {
-          id: '3',
+          id: '4',
           title: 'Logout',
           icon: <ArrowLeft color="gray" />,
           hasDivider: true,
           onItemClick: () => console.info('Logout Clicked'),
         },
+        {
+          id: '5',
+          title: 'Logout',
+          icon: <ArrowLeft color="gray" />,
+          hasDivider: true,
+          dividerTitle: 'Logout',
+          onItemClick: () => console.info('Logout Clicked'),
+        },
       ]}
       marginTop="32px"
+      hideSearch
     />
   );
 }

@@ -17,6 +17,7 @@ export default function ExampleSelect() {
       ]}
       hasIconOnly
       position="right"
+      hideSearch
     />
   );
 }

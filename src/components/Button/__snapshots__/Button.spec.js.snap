@@ -123,6 +123,30 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
 </styled.button>
 `;
 
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
+<styled.button
+  className="jest-auto-snapshots String Fixture"
+  data-tip="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  innerRef={<NodeFixture />}
+  isSplit={true}
+  size="small"
+  type="link"
+>
+  <NodeFixture />
+  <styled.span>
+    jest-auto-snapshots String Fixture
+  </styled.span>
+  <styled.img
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</styled.button>
+`;
+
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
 <styled.button
   className="jest-auto-snapshots String Fixture"
