@@ -1,22 +1,36 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
-export const AppShellStyled = styled.div`
+const flexColumn = css`
   display: flex;
   flex-direction: column;
 `;
 
-export const Wrapper = styled.div`
+const flexRow = css`
   display: flex;
-  margin-top: 16px;
+  flex-direction: row;
+`;
+
+export const AppShellStyled = styled.div`
+  ${flexColumn}
+  height: 100vh;
+  overflow: auto;
+  background-color: #e5e5e5;
+`;
+
+export const Wrapper = styled.div`
+  ${flexRow}
   flex: 1;
+  height: calc(100vh - 64px);
 `;
 
 export const SidebarWrapper = styled.div`
-  width: 224px;
-  margin: 0 8px 16px 16px;
+  ${flexColumn}
+  width: 248px;
 `;
 
 export const ContentWrapper = styled.div`
+  ${flexColumn}
+  align-items: center;
   flex: 1;
-  margin: 0 16px 16px 8px;
+  overflow: hidden;
 `;
