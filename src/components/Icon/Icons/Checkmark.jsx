@@ -9,8 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const CheckmarkIcon = createIconComponent({
   content: (
     <g>
-      <path d="M1.282 9.682a1 1 0 1 1 1.415-1.414l4.242 4.242-1.414 1.415-4.243-4.243z" />
-      <path d="M5.525 11.096l7.778-7.778a1 1 0 1 1 1.414 1.414L6.94 12.51l-1.414-1.414z" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M3.06 8.146a1 1 0 0 0 0 1.415l2.83 2.828 1.413-1.414 5.657-5.657a1 1 0 1 0-1.414-1.414L5.889 9.56 4.475 8.146a1 1 0 0 0-1.414 0z" />
     </g>
   ),
 });

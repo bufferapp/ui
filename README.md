@@ -50,7 +50,7 @@ For usage instructions and how to add, update, and work with the components, see
 
 ## Component Documentation / Reference
 
-Check out our ➡️ [documentation website](https://bufferapp.github.io/ui/#Button).
+Check out our ➡️ [documentation website](https://bufferapp.github.io/ui).
 
 
 ## Contributing
