@@ -16,6 +16,7 @@ import pckage from '../../../package.json';
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
+  overflow: hidden;
   color: #242a31;
   background: #f5f7f9;
   display: flex;
@@ -23,17 +24,18 @@ const Container = styled.div`
 `;
 
 const Wrapper = styled.div`
+  flex: 1;
   display: flex;
-  max-height: calc(100vh - 100px);
 `;
 
 const PageLayout = styled.div`
+  flex: 1;
   padding: 50px;
   display: block;
-  width: 100%;
+  box-sizing: border-box;
+  height: calc(100vh - 65px);
   background: #FFFFFF url('/images/background.png');
   background-size: cover;
-  min-height: calc(100vh - 201px);
   overflow: auto;
   border-right: 1px solid #e6ecf1;
 `;
@@ -41,7 +43,11 @@ const PageLayout = styled.div`
 const PageContainer = styled.div`
   background: #FFFFFF;
   padding: 80px;
+  width: 100%;
+  max-width: 1312px;
+  margin: 0 auto;
   border-radius: 3px;
+  box-sizing: border-box;
   box-shadow: 0 2px 12px rgba(0,0,0,0.1);
 `;
 
