@@ -9,12 +9,7 @@ import {
   redLight,
   white,
 } from '../style/colors';
-import {
-  fontFamily,
-  fontSize,
-  fontWeight,
-  lineHeight,
-} from '../style/fonts';
+import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
 import Text from '../Text';
 
 export const InputWrapper = styled.div`
@@ -24,20 +19,20 @@ export const InputWrapper = styled.div`
 export const InputStyled = styled.input`
   box-sizing: border-box;
   margin: 8px 0px;
-  background: ${ ({ hasError }) => hasError ? redLight : white };
+  background: ${({ hasError }) => (hasError ? redLight : white)};
   border-radius: 4px;
-  border: 1px solid ${ ({ hasError }) => hasError ? red : grayLight };
+  border: 1px solid ${({ hasError }) => (hasError ? red : grayLight)};
   box-shadow: 2px 2px 0 2px transparent;
   transition-property: border-width, border-color, box-shadow;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
-  color: ${ ({ hasError }) => hasError ? red : grayDarker };
+  color: ${({ hasError }) => (hasError ? red : grayDarker)};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
   line-height: ${lineHeight};
-  padding: ${ ({ size }) => {
-    switch(size) {
+  padding: ${({ size }) => {
+    switch (size) {
       case 'small':
         return '5px 8px 4px 8px';
       case 'tall':
@@ -53,8 +48,9 @@ export const InputStyled = styled.input`
   }
 
   &:focus {
-    border: 1px solid ${ ({ hasError }) => hasError ? red : blue };
-    box-shadow: 0px 0px 0px 3px ${ ({ hasError }) => hasError ? "#F3AFB9" : "#ABB7FF" };
+    border: 1px solid ${({ hasError }) => (hasError ? red : blue)};
+    box-shadow: 0px 0px 0px 3px
+      ${({ hasError }) => (hasError ? '#F3AFB9' : '#ABB7FF')};
     outline: none;
     transition-property: border-width, border-color, box-shadow;
     transition-duration: 0.1s;
@@ -82,5 +78,5 @@ export const HelpTextWrapper = styled.div`
 `;
 
 export const HelpText = styled(Text)`
-  margin-left: ${props => props.hasError ? '8px' : '0px'};
+  margin-left: ${props => (props.hasError ? '8px' : '0px')};
 `;
