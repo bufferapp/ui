@@ -38,7 +38,7 @@ const NavBar = ({ user }) => (
       <Select
         horizontalOffset="-16px"
         customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
-        items={user.menuItems}
+        items={[]}
       />
     </NavBarRight>
   </NavBarStyled>
