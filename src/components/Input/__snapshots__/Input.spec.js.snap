@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<div>
+<styled.div>
   <Text
     hasError={false}
     htmlFor="jest-auto-snapshots String Fixture"
@@ -10,32 +10,34 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef
+  <styled.input
     disabled={false}
     hasError={true}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     size="jest-auto-snapshots String Fixture"
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
   />
-  <Text
-    hasError={true}
-    htmlFor="jest-auto-snapshots String Fixture"
-    light={false}
-    type="help"
-  >
+  <styled.div>
     <WarningIcon
-      size="small"
+      size="medium"
     />
-     jest-auto-snapshots String Fixture
-  </Text>
-</div>
+    <Styled(Text)
+      hasError={true}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasError" is set to: "false" 1`] = `
-<div>
+<styled.div>
   <Text
     hasError={false}
     htmlFor="jest-auto-snapshots String Fixture"
@@ -44,29 +46,31 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef
+  <styled.input
     disabled={true}
     hasError={false}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     size="jest-auto-snapshots String Fixture"
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
   />
-  <Text
-    hasError={false}
-    htmlFor="jest-auto-snapshots String Fixture"
-    light={false}
-    type="help"
-  >
-    jest-auto-snapshots String Fixture
-  </Text>
-</div>
+  <styled.div>
+    <Styled(Text)
+      hasError={false}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] = `
-<div>
+<styled.div>
   <Text
     hasError={false}
     htmlFor="jest-auto-snapshots String Fixture"
@@ -75,40 +79,43 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef
+  <styled.input
     disabled={true}
     hasError={true}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     size="jest-auto-snapshots String Fixture"
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
   />
-  <Text
-    hasError={true}
-    htmlFor="jest-auto-snapshots String Fixture"
-    light={false}
-    type="help"
-  >
+  <styled.div>
     <WarningIcon
-      size="small"
+      size="medium"
     />
-     jest-auto-snapshots String Fixture
-  </Text>
-</div>
+    <Styled(Text)
+      hasError={true}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Input Matches snapshot when passed only required props 1`] = `
-<div>
-  <ForwardRef
+<styled.div>
+  <styled.input
     disabled={false}
     hasError={false}
     name="jest-auto-snapshots String Fixture"
+    onBlur={[Function]}
     onChange={[MockFunction]}
     placeholder=""
     size="regular"
     type="text"
   />
-</div>
+</styled.div>
 `;

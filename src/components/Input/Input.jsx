@@ -12,30 +12,34 @@ const Input = ({
   label,
   name,
   onChange,
+  onBlur,
   placeholder,
   size,
   type,
   value,
 }) => (
-  <div>
+  <Styles.InputWrapper>
     {label.length > 0 && <Text htmlFor={name} type='label'>{label}</Text>}
     <Styles.InputStyled
       disabled={disabled}
       hasError={hasError}
       name={name}
       onChange={onChange}
+      onBlur={onBlur}
       placeholder={placeholder}
       type={type}
       size={size}
       value={value}
     />
     {help.length > 0 && (
-      <Text type='help' htmlFor={name} hasError={hasError}>
-        {hasError && <Warning size="small" />}
-        {`${hasError ? ' ' : ''}${help}`}
-      </Text>
+      <Styles.HelpTextWrapper>
+        {hasError && <Warning size="medium" />}
+        <Styles.HelpText type='help' htmlFor={name} hasError={hasError}>
+          {help}
+        </Styles.HelpText>
+      </Styles.HelpTextWrapper>
     )}
-  </div>
+  </Styles.InputWrapper>
 );
 
 Input.propTypes = {
@@ -53,6 +57,8 @@ Input.propTypes = {
   placeholder: PropTypes.string,
   /** The onChange event */
   onChange: PropTypes.func.isRequired,
+  /** The onBlur event */
+  onBlur: PropTypes.func,
   /** This is the vertical size of the input field, can be `small`, `regular`, or `tall` */
   size: PropTypes.string,
   /** The type of the input */
@@ -70,6 +76,7 @@ Input.defaultProps = {
   size: 'regular',
   type: 'text',
   value: undefined,
+  onBlur: () => {},
 }
 
 export default Input;

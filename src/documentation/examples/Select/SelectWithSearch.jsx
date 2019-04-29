@@ -7,7 +7,6 @@ export default function ExampleSelectWithSearch() {
   return (
     <Select
       onSelectClick={item => console.info(item)}
-      hasSearch
       label="Search Me"
       icon={<Flag color="white" />}
       onSearchChange={() => true}
@@ -21,6 +20,9 @@ export default function ExampleSelectWithSearch() {
         { _id: '1', name: 'Open' },
         { _id: '2', name: 'Pending' },
         { _id: '3', name: 'Closed' },
+        { _id: '4', name: 'Open' },
+        { _id: '5', name: 'Pending' },
+        { _id: '6', name: 'Closed' },
       ]}
     />
   );

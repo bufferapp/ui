@@ -1,20 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
-<ForwardRef>
-  <ForwardRef>
+<styled.nav>
+  <styled.div>
     <BufferLogo />
     <NavBarProduct
       activeProduct="publish"
     />
-  </ForwardRef>
-  <ForwardRef>
+  </styled.div>
+  <styled.div>
     <Select
       customButton={[Function]}
+      hasCustomAction={false}
       hasIconOnly={false}
-      hasSearch={false}
+      hideSearch={false}
       horizontalOffset="-16px"
-      isOpen={null}
+      isOpen={false}
       isSplit={false}
       items={
         Array [
@@ -28,12 +29,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
         ]
       }
       label=""
-      position="bottom"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
       type="secondary"
+      xPosition="left"
+      yPosition="bottom"
     />
-  </ForwardRef>
-</ForwardRef>
+  </styled.div>
+</styled.nav>
 `;

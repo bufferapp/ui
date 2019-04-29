@@ -4,7 +4,7 @@ export const blueLighter = '#6B81FF';
 export const purple = '#9C2BFF';
 export const pink = '#D925AC';
 export const teal = '#00C8CF';
-export const red = '#E0364F';
+export const red = '#9D2637';
 export const redLight = '#FDF2F4';
 export const orange = '#FF702C';
 export const yellow = '#FADE2A';
@@ -27,3 +27,5 @@ export const instagram = '#e53c5f';
 export const linkedin = '#007bb6';
 export const pinterest = '#bd081c';
 export const twitter = '#55acee';
+
+export const transparent = 'transparent';
