@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavBar from '../NavBar';
+import GlobalStyles from '../GlobalStyles';
 
 import { AppShellStyled, Wrapper, SidebarWrapper, ContentWrapper } from './style';
 
@@ -9,6 +10,7 @@ import { AppShellStyled, Wrapper, SidebarWrapper, ContentWrapper } from './style
  */
 const AppShell = ({ user, sidebar, content }) => (
   <AppShellStyled>
+    <GlobalStyles />
     <NavBar user={user} />
     <Wrapper>
       <SidebarWrapper>
@@ -35,7 +37,7 @@ AppShell.propTypes = {
     })).isRequired,
   }).isRequired,
   sidebar: PropTypes.node.isRequired,
-  content: PropTypes.node.isRequired,
+  content: PropTypes.node.isRequired
 };
 
 export default AppShell;

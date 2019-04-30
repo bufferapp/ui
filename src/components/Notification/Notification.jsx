@@ -13,10 +13,8 @@ const Notification = ({
   text,
   onClose,
   type,
-  onLeftAction,
-  leftLabel,
-  onRightAction,
-  rightLabel,
+  action,
+  secondaryAction,
 }) => (
   <Container>
     <TextRow>
@@ -25,13 +23,13 @@ const Notification = ({
     </TextRow>
     {type === 'action' && (
       <ButtonsRow>
-        {leftLabel && (
-          <ButtonStyled onClick={onLeftAction} label={leftLabel} type="text" />
+        {action && (
+          <ButtonStyled onClick={action.callback} label={action.label} type="text" />
         )}
-        {rightLabel && (
+        {secondaryAction && (
           <ButtonStyled
-            onClick={onRightAction}
-            label={rightLabel}
+            onClick={secondaryAction.callback}
+            label={secondaryAction.label}
             type="text"
           />
         )}
@@ -50,25 +48,24 @@ Notification.propTypes = {
   /** Type of the notification */
   type: PropTypes.oneOf(['action', 'text']),
 
-  /** Function to call when the left button is pressed */
-  onLeftAction: PropTypes.func,
-
-  /** Left button label */
-  leftLabel: PropTypes.string,
-
-  /** Function to call when the right button is pressed */
-  onRightAction: PropTypes.func,
-
-  /** Right button label */
-  rightLabel: PropTypes.string,
+  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
+  action: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
+    callback: PropTypes.func,
+  }),
+  /** The secondary action settings {**label**: the label of the button, **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
+  secondaryAction: PropTypes.shape({
+    label: PropTypes.string.isRequired,
+    disabled: PropTypes.bool,
+    callback: PropTypes.func,
+  }),
 };
 
 Notification.defaultProps = {
   type: 'text',
-  onLeftAction: undefined,
-  leftLabel: undefined,
-  onRightAction: undefined,
-  rightLabel: undefined,
+  action: undefined,
+  secondaryAction: undefined,
 };
 
 export default Notification;
