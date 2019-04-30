@@ -1,5 +1,15 @@
-# UI Components
+# Components
 
-<InfoCard color='orange'>
-This page is in progress
-</InfoCard>
+Here are the articles in this section:
+
+[App Shell](ui/appshell)
+[Avatar](ui/avatar)
+[Button](ui/button)
+[Icon](ui/icon)
+[Input](ui/input)
+[Modal](ui/modal)
+[Nav Bar](ui/navbar)
+[Notification](ui/notification)
+[Search](ui/search)
+[Select](ui/select)
+[Text](ui/text)

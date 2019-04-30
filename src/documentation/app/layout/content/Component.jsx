@@ -30,9 +30,8 @@ const Body = styled.div`
     flex: 1 1 auto;
 `;
 
-
 const Description = styled.p`
-    font-size: 14px;
+    font-size: 16px;
     line-height: 24px;
     margin-bottom: 40px;
 `;

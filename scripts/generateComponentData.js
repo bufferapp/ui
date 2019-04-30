@@ -181,7 +181,7 @@ function generate(componentPaths) {
     id: 'ui',
     fileName: 'ui',
     level: 0,
-    name: 'UI Components',
+    name: 'Components',
     parentName: 'ui',
     children: getDirectories(componentPaths.components).filter(folder => !componentFoldersToIgnore.includes(folder)).map((componentName) => {
       try {
