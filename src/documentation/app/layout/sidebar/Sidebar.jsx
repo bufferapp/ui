@@ -13,6 +13,7 @@ const SidebarWrapper = styled.div`
     flex-direction: column;
     align-items: stretch;
     width: 250px;
+    overflow-x: hidden;
     height: calc(100vh - 65px);
     padding: 0 0 0 1rem;
     border-right: 1px solid #E6ECF1;

@@ -15,6 +15,7 @@ import pckage from '../../../package.json';
 const Container = styled.div`
   width: 100%;
   min-height: 100vh;
+  min-width: 1280px;
   overflow: hidden;
   color: #242a31;
   background: #f5f7f9;
