@@ -2,7 +2,6 @@
 
 Here are the articles in this section:
 
-[App Shell](ui/appshell)
 [Avatar](ui/avatar)
 [Button](ui/button)
 [Icon](ui/icon)

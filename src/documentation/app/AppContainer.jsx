@@ -1,7 +1,6 @@
 /* eslint-disable no-nested-ternary */
 import React from 'react';
 import PropTypes from 'prop-types';
-import MarkdownToJsx from 'markdown-to-jsx';
 import styled from 'styled-components';
 import Markdown from './layout/content/Markdown';
 import Sidebar from './layout/sidebar/Sidebar';
@@ -111,10 +110,15 @@ export default class AppContainer extends React.Component {
     const links = [];
     if (previousLink) links.push(previousLink);
     if (nextLink) links.push(nextLink);
+    console.info(links)
     return links;
   };
 
-  renderMarkdownComponent = () => <MarkdownToJsx>{UIComponent}</MarkdownToJsx>;
+  renderMarkdownComponent = () => (
+
+    <Markdown page={{name: "UI"}} component={UIComponent} links={[]} />
+
+);
 
   render() {
     const {

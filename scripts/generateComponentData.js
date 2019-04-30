@@ -17,6 +17,7 @@ const paths = {
 const componentFoldersToIgnore = [
   'style',
   'constants',
+  'AppShell'
 ];
 
 
