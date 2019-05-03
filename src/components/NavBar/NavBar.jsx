@@ -49,13 +49,13 @@ const NavBarHelpText = styled.span`
 
 
 /**
- * The NavBar is not generally consumed alone, but instead used by the AppShell component. (This page is WIP. Examples coming soon.)
+ * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
-const NavBar = ({ user, helpMenuItems }) => (
+const NavBar = ({ activeProduct, user, helpMenuItems }) => (
   <NavBarStyled>
     <NavBarLeft>
       <BufferLogo />
-      <NavBarProducts />
+      <NavBarProducts activeProduct={activeProduct} />
     </NavBarLeft>
     <NavBarRight>
       {helpMenuItems && (
@@ -82,6 +82,9 @@ const NavBar = ({ user, helpMenuItems }) => (
 );
 
 NavBar.propTypes = {
+  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
+  activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
+
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
@@ -104,6 +107,7 @@ NavBar.propTypes = {
 };
 
 NavBar.defaultProps = {
+  activeProduct: undefined,
   helpMenuItems: null,
 }
 

@@ -11,12 +11,12 @@ import {
 } from './style';
 
 /**
- * The AppShell component is a general purpose wrapper for all of our applications.
+ * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
-const AppShell = ({ user, helpMenuItems, sidebar, content }) => (
+const AppShell = ({ activeProduct, user, helpMenuItems, sidebar, content }) => (
   <AppShellStyled>
     {/* <GlobalStyles /> */}
-    <NavBar user={user} helpMenuItems={helpMenuItems} />
+    <NavBar activeProduct={activeProduct} user={user} helpMenuItems={helpMenuItems} />
     <Wrapper>
       {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
       <ContentWrapper>{content}</ContentWrapper>
@@ -25,6 +25,9 @@ const AppShell = ({ user, helpMenuItems, sidebar, content }) => (
 );
 
 AppShell.propTypes = {
+  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
+  activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
+
   /** See the prop description in the `NavBar` component. */
   user: NavBar.propTypes.user, // eslint-disable-line
 
@@ -40,6 +43,7 @@ AppShell.propTypes = {
 
 AppShell.defaultProps = {
   sidebar: null,
+  activeProduct: undefined,
 }
 
 export default AppShell;

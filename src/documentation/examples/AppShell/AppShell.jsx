@@ -55,6 +55,7 @@ const helpMenuItems = [
 export default function ExampleAppShell() {
   return (
     <AppShell
+      activeProduct="publish"
       user={{
         name: 'Hamish Macpherson',
         email: 'hamstu@gmail.com',
