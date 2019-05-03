@@ -8,13 +8,13 @@ import {
 /** NavBar Menu component used by the Select component to show a custom User name and avatar
  *  button */
 const NavBarMenu = ({ user, onClick }) => (
-  <NavBarStyled>
+  <NavBarStyled onClick={onClick}>
     <NavBarUser>
       <NavBarName>{user.name}</NavBarName>
       <NavBarEmail>{user.email}</NavBarEmail>
     </NavBarUser>
     <NavBarAvatar avatar={user.avatar} onClick={onClick} />
-    <NavBarChavron onClick={onClick}>
+    <NavBarChavron>
       <ChevronDown color="grayLight" size="large" />
     </NavBarChavron>
   </NavBarStyled>

@@ -8,7 +8,8 @@ export const NavBarStyled = styled.div`
   display: flex;
   align-items: center;
   background: ${grayDark};
-  padding: 12px 8px 12px 16px;
+  padding: 12px 8px 12px 24px;
+  cursor: pointer;
 `;
 
 export const NavBarUser = styled.div`
@@ -23,7 +24,6 @@ export const NavBarAvatar = styled.div`
   width: 40px;
   height: 40px;
   background: ${gray};
-  cursor: pointer;
   background-size: cover;
   background-image: url(${props => (props.avatar)});
 `;
