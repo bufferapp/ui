@@ -4,7 +4,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 <styled.nav>
   <styled.div>
     <BufferLogo />
-    <NavBarProduct />
+    <NavBarProduct
+      activeProduct="publish"
+    />
   </styled.div>
   <styled.div>
     <Select
@@ -69,7 +71,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 <styled.nav>
   <styled.div>
     <BufferLogo />
-    <NavBarProduct />
+    <NavBarProduct
+      activeProduct="publish"
+    />
   </styled.div>
   <styled.div>
     <Select
@@ -124,7 +128,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
 <styled.nav>
   <styled.div>
     <BufferLogo />
-    <NavBarProduct />
+    <NavBarProduct
+      activeProduct="publish"
+    />
   </styled.div>
   <styled.div>
     <Select
