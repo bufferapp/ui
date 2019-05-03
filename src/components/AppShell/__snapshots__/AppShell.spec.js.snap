@@ -1,29 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only required props 1`] = `
+exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1`] = `
 <styled.div>
   <NavBar
-    user={
-      Object {
-        "avatar": "jest-auto-snapshots String Fixture",
-        "email": "jest-auto-snapshots String Fixture",
-        "menuItems": Array [
-          Object {
-            "component": <NodeFixture />,
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-        ],
-        "name": "jest-auto-snapshots String Fixture",
-      }
-    }
+    helpMenuItems={null}
+    user={null}
   />
   <styled.div>
     <styled.div>
       <NodeFixture />
     </styled.div>
+    <styled.div>
+      <NodeFixture />
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <NavBar
+    helpMenuItems={null}
+  />
+  <styled.div>
     <styled.div>
       <NodeFixture />
     </styled.div>

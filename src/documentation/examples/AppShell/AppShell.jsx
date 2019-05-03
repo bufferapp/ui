@@ -63,7 +63,6 @@ export default function ExampleAppShell() {
       }}
       helpMenuItems={helpMenuItems}
       content={<div>Main content.</div>}
-      contentWidth="full"
     />
   );
 }

@@ -1,20 +1,203 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" has one item: "[object Object]" 1`] = `
 <styled.nav>
   <styled.div>
     <BufferLogo />
-    <NavBarProduct
-      activeProduct="publish"
-    />
+    <NavBarProduct />
   </styled.div>
   <styled.div>
     <Select
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
-      hideSearch={false}
+      hideSearch={true}
       horizontalOffset="-16px"
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      searchPlaceholder="Search"
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+    <Select
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      searchPlaceholder="Search"
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="left"
+      yPosition="bottom"
+    />
+  </styled.div>
+</styled.nav>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" is an empty array: "[]" 1`] = `
+<styled.nav>
+  <styled.div>
+    <BufferLogo />
+    <NavBarProduct />
+  </styled.div>
+  <styled.div>
+    <Select
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="-16px"
+      isOpen={false}
+      isSplit={false}
+      items={Array []}
+      label=""
+      searchPlaceholder="Search"
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+    <Select
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      searchPlaceholder="Search"
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="left"
+      yPosition="bottom"
+    />
+  </styled.div>
+</styled.nav>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`] = `
+<styled.nav>
+  <styled.div>
+    <BufferLogo />
+    <NavBarProduct />
+  </styled.div>
+  <styled.div>
+    <Select
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="-16px"
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      searchPlaceholder="Search"
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+    <Select
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      searchPlaceholder="Search"
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="left"
+      yPosition="bottom"
+    />
+  </styled.div>
+</styled.nav>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
+<styled.nav>
+  <styled.div>
+    <BufferLogo />
+    <NavBarProduct />
+  </styled.div>
+  <styled.div>
+    <Select
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
       isOpen={false}
       isSplit={false}
       items={

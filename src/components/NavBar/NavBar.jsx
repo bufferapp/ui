@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon } from '@bufferapp/ui/Icon';
+import { Info as InfoIcon } from '../Icon';
 
 import { grayDarker, gray } from '../style/colors';
 import { fontWeightMedium } from '../style/fonts';
