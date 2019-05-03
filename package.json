@@ -90,7 +90,7 @@
     "identity-obj-proxy": "3.0.0",
     "indent-string": "3.2.0",
     "inquirer": "6.2.1",
-    "jest": "=23.6.0",
+    "jest": "^24.7.1",
     "jest-auto-snapshots": "=3.0.1",
     "jest-pnp-resolver": "=1.0.1",
     "jest-resolve": "=23.6.0",

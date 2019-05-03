@@ -1,43 +1,45 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavBar from '../NavBar';
-import GlobalStyles from '../GlobalStyles';
+// import GlobalStyles from '../GlobalStyles';
 
-import { AppShellStyled, Wrapper, SidebarWrapper, ContentWrapper } from './style';
+import {
+  AppShellStyled,
+  Wrapper,
+  SidebarWrapper,
+  ContentWrapper,
+} from './style';
 
 /**
  * The AppShell component is a general purpose wrapper for all of our applications.
  */
-const AppShell = ({ user, sidebar, content }) => (
+const AppShell = ({ user, helpMenuItems, sidebar, content }) => (
   <AppShellStyled>
-    <GlobalStyles />
-    <NavBar user={user} />
+    {/* <GlobalStyles /> */}
+    <NavBar user={user} helpMenuItems={helpMenuItems} />
     <Wrapper>
-      <SidebarWrapper>
-        {sidebar}
-      </SidebarWrapper>
-      <ContentWrapper>
-        {content}
-      </ContentWrapper>
+      {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
+      <ContentWrapper>{content}</ContentWrapper>
     </Wrapper>
   </AppShellStyled>
 );
 
 AppShell.propTypes = {
-  user: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    email: PropTypes.string.isRequired,
-    avatar: PropTypes.string,
-    menuItems: PropTypes.arrayOf(PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      component: PropTypes.node,
-      hasDivider: PropTypes.bool,
-      onItemClick: PropTypes.func,
-    })).isRequired,
-  }).isRequired,
-  sidebar: PropTypes.node.isRequired,
-  content: PropTypes.node.isRequired
+  /** See the prop description in the `NavBar` component. */
+  user: NavBar.propTypes.user, // eslint-disable-line
+
+  /** See the prop description in the `NavBar` component. */
+  helpMenuItems: NavBar.propTypes.helpMenuItems, // eslint-disable-line
+
+  /** (Optional) Your sidebar component. */
+  sidebar: PropTypes.node,
+
+  /** (Optional) Your content component. */
+  content: PropTypes.node.isRequired,
 };
+
+AppShell.defaultProps = {
+  sidebar: null,
+}
 
 export default AppShell;

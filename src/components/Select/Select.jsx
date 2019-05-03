@@ -38,9 +38,9 @@ export default class Select extends React.Component {
     selectedItems: this.props.items || [],
     isFiltering: false,
     searchValue: '',
-    /* We've added the functionality of adding a custom item with an action so 
+    /* We've added the functionality of adding a custom item with an action so
     we're using this value to handle keyboard events on that custom item. We
-    use it to determine if the custom item has focus and listen for up, down 
+    use it to determine if the custom item has focus and listen for up, down
     and enter and well as highlighting on hover */
     isCustomItemFocused: false,
   };
@@ -444,6 +444,7 @@ export default class Select extends React.Component {
     const {
       xPosition,
       yPosition,
+      horizontalOffset,
       hideSearch,
       keyMap,
       searchPlaceholder,
@@ -465,6 +466,7 @@ export default class Select extends React.Component {
         hasIconOnly={hasIconOnly}
         marginTop={marginTop}
         fullWidth={fullWidth}
+        horizontalOffset={horizontalOffset}
       >
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
@@ -569,6 +571,9 @@ Select.propTypes = {
   /** Position of the popup top or bottom */
   yPosition: PropTypes.oneOf(['top', 'bottom']),
 
+  /** Offset the popup horizontally */
+  horizontalOffset: PropTypes.string,
+
   /** Icon to show in the Button */
   icon: PropTypes.node,
 
@@ -636,6 +641,7 @@ Select.defaultProps = {
   size: 'medium',
   xPosition: 'left',
   yPosition: 'bottom',
+  horizontalOffset: undefined,
   disabled: undefined,
   icon: undefined,
   hideSearch: false,

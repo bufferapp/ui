@@ -15,13 +15,14 @@ const StlyedNavBarProduct = styled.nav`
 `;
 
 const ProductLink = styled.a`
-  display: block;
+  height: 64px;
+  display: flex;
   color: #fff;
   padding: 0 20px;
   font-size: 16px;
   font-weight: ${fontWeightMedium};
   text-decoration: none;
-  align-self: center;
+  align-items: center;
   color: ${props => (props.active ? '#fff' : gray)};
   &:hover {
     color: #fff;
@@ -30,21 +31,20 @@ const ProductLink = styled.a`
 
 const ProductText = styled.span`
   margin-left: 8px;
-  vertical-align: middle;
 `;
 
 const NavBarProduct = ({ activeProduct }) => (
   <StlyedNavBarProduct>
     <ProductLink active={activeProduct === 'publish'} href={activeProduct !== 'publish' ? 'https://publish.buffer.com' : '/'}>
-      <IconPublish verticalAlign="middle" />
+      <IconPublish />
       <ProductText>Publish</ProductText>
     </ProductLink>
     <ProductLink active={activeProduct === 'reply'} href={activeProduct !== 'reply' ? 'https://reply.buffer.com' : '/'}>
-      <IconReply verticalAlign="middle" />
+      <IconReply />
       <ProductText>Reply</ProductText>
     </ProductLink>
     <ProductLink active={activeProduct === 'analyze'} href={activeProduct !== 'analyze' ? 'https://analyze.buffer.com' : '/'}>
-      <IconAnalyze verticalAlign="middle" />
+      <IconAnalyze />
       <ProductText>Analyze</ProductText>
     </ProductLink>
   </StlyedNavBarProduct>
@@ -55,7 +55,7 @@ NavBarProduct.propTypes = {
 };
 
 NavBarProduct.defaultProps = {
-  activeProduct: 'publish',
+  activeProduct: undefined,
 };
 
 export default NavBarProduct;
