@@ -20,7 +20,7 @@ const Logo = styled.h1`
   height: 64px;
   margin: 0px;
   padding: 0px;
-  background: transparent url('/images/logo.png') no-repeat top left;
+  background: transparent url('./images/logo.png') no-repeat top left;
   background-size: 100%;
   text-indent: -9999em;
   overflow: hidden;

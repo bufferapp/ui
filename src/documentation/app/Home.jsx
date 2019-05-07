@@ -21,7 +21,7 @@ const Content = styled.div`
 const Illustration = styled.div`
   flex: 1;
   box-sizing: border-box;
-  background: transparent url('/images/illustration.png') no-repeat center;
+  background: transparent url('./images/illustration.png') no-repeat center;
   background-size: contain;
 `;
 

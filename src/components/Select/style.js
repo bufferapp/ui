@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   }
   width: ${props => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
   height: ${props => (props.isSplit ? '100%' : 'auto')};
-  max-height: ${props => (props.isSplit ? '100%' : '40px')};
+  max-height: ${props => (props.isSplit ? '100%' : '')};
   position: ${props => (props.isSplit ? 'initial' : 'relative')};
   display: inline-block;
 `;

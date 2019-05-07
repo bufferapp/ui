@@ -23,6 +23,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -79,6 +80,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -135,6 +137,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -192,6 +195,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -248,6 +252,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
   <styled.div
     fullWidth={false}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -304,6 +309,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -360,6 +366,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
   <styled.div
     fullWidth={true}
     hasIconOnly={false}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -416,6 +423,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -472,6 +480,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={false}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -519,6 +528,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -575,6 +585,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -631,6 +642,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -687,6 +699,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"

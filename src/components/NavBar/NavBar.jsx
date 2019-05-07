@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Info as InfoIcon } from '../Icon';
 
-import { grayDarker } from '../style/colors';
+import { grayDarker, gray } from '../style/colors';
+import { fontWeightMedium } from '../style/fonts';
 import Select from '../Select';
 
 import BufferLogo from './BufferLogo';
@@ -25,26 +27,64 @@ const NavBarRight = styled.div`
   display: flex;
 `;
 
+const NavBarHelp = styled.a`
+  height: 64px;
+  display: flex;
+  color: #fff;
+  padding: 0 24px;
+  font-size: 16px;
+  font-weight: ${fontWeightMedium};
+  text-decoration: none;
+  align-items: center;
+  color: ${props => (props.active ? '#fff' : gray)};
+  &:hover {
+    color: #fff;
+  }
+  cursor: pointer;
+`;
+
+const NavBarHelpText = styled.span`
+  margin-left: 8px;
+`;
+
+
 /**
- * The NavBar is not generally consumed alone, but instead used by the AppShell component. (This page is WIP. Examples coming soon.)
+ * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
-const NavBar = ({ user }) => (
+const NavBar = ({ activeProduct, user, helpMenuItems }) => (
   <NavBarStyled>
     <NavBarLeft>
       <BufferLogo />
-      <NavBarProducts />
+      <NavBarProducts activeProduct={activeProduct} />
     </NavBarLeft>
     <NavBarRight>
+      {helpMenuItems && (
+        <Select
+          hideSearch
+          customButton={handleClick => (
+            <NavBarHelp onClick={handleClick}>
+              <InfoIcon />
+              <NavBarHelpText>Help</NavBarHelpText>
+            </NavBarHelp>
+          )}
+          items={helpMenuItems}
+          horizontalOffset="-16px"
+          xPosition="right"
+        />)}
       <Select
-        horizontalOffset="-16px"
+        hideSearch
         customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
-        items={[]}
+        items={user.menuItems}
+        horizontalOffset="16px"
       />
     </NavBarRight>
   </NavBarStyled>
 );
 
 NavBar.propTypes = {
+  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
+  activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
+
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
@@ -57,6 +97,18 @@ NavBar.propTypes = {
       onItemClick: PropTypes.func,
     })).isRequired,
   }).isRequired,
+  helpMenuItems: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    component: PropTypes.node,
+    hasDivider: PropTypes.bool,
+    onItemClick: PropTypes.func,
+  })),
 };
+
+NavBar.defaultProps = {
+  activeProduct: undefined,
+  helpMenuItems: null,
+}
 
 export default NavBar;

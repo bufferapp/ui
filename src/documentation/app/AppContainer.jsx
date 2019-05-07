@@ -34,7 +34,7 @@ const PageLayout = styled.div`
   display: block;
   box-sizing: border-box;
   height: calc(100vh - 65px);
-  background: #FFFFFF url('/images/background.png');
+  background: #FFFFFF url('./images/background.png');
   background-size: cover;
   overflow: auto;
   border-right: 1px solid #e6ecf1;
