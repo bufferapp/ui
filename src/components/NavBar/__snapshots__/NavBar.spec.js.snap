@@ -47,7 +47,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
-            "component": <NodeFixture />,
+            "component": [MockFunction],
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
@@ -104,7 +104,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
-            "component": <NodeFixture />,
+            "component": [MockFunction],
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
@@ -171,7 +171,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       items={
         Array [
           Object {
-            "component": <NodeFixture />,
+            "component": [MockFunction],
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
@@ -209,7 +209,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       items={
         Array [
           Object {
-            "component": <NodeFixture />,
+            "component": [MockFunction],
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],

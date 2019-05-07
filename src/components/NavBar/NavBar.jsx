@@ -92,7 +92,7 @@ NavBar.propTypes = {
     menuItems: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      component: PropTypes.node,
+      component: PropTypes.func,
       hasDivider: PropTypes.bool,
       onItemClick: PropTypes.func,
     })).isRequired,
