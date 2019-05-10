@@ -58,6 +58,7 @@ AppShell.propTypes = {
   /** (Optional) Your content component. */
   content: PropTypes.node.isRequired,
 
+  /** (Optional) Content of banner displayed below the navbar */
   bannerOptions: PropTypes.shape({
     text: PropTypes.string,
     actionButton: PropTypes.shape({
