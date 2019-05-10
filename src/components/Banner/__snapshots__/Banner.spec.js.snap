@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Banner Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <Text
+    hasError={false}
+    light={true}
+    type="label"
+  >
+    jest-auto-snapshots String Fixture
+  </Text>
+  <Button
+    disabled={false}
+    fullWidth={false}
+    hasIconOnly={false}
+    hideSearch={true}
+    label="jest-auto-snapshots String Fixture"
+    loading={false}
+    onClick={[MockFunction]}
+    selectPosition="bottom"
+    size="medium"
+    type="primary"
+  />
+  <Button
+    disabled={false}
+    fullWidth={false}
+    hasIconOnly={true}
+    hideSearch={true}
+    icon={<CrossIcon />}
+    label="Click Me"
+    loading={false}
+    onClick={[Function]}
+    selectPosition="bottom"
+    size="medium"
+    type="text"
+  />
+</styled.div>
+`;
