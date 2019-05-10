@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import NavBar from '../NavBar';
+import Banner from '../Banner';
 // import GlobalStyles from '../GlobalStyles';
 
 import {
@@ -16,7 +17,20 @@ import {
 const AppShell = ({ activeProduct, user, helpMenuItems, sidebar, content }) => (
   <AppShellStyled>
     {/* <GlobalStyles /> */}
-    <NavBar activeProduct={activeProduct} user={user} helpMenuItems={helpMenuItems} />
+    <NavBar
+      activeProduct={activeProduct}
+      user={user}
+      helpMenuItems={helpMenuItems}
+    />
+    <Banner
+      text="testinggggg"
+      actionButton={{
+        label: 'Click me now!',
+        action: () => {
+          console.info('yaaas');
+        },
+      }}
+    />
     <Wrapper>
       {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
       <ContentWrapper>{content}</ContentWrapper>
@@ -44,6 +58,6 @@ AppShell.propTypes = {
 AppShell.defaultProps = {
   sidebar: null,
   activeProduct: undefined,
-}
+};
 
 export default AppShell;

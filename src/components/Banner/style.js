@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const BannerStyled = styled.div`
   height: 64px;
-  width: 800px;
+  width: 100vw;
   background: #1f35b3;
   display: flex;
   justify-content: center;

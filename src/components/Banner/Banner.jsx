@@ -7,30 +7,41 @@ import CrossIcon from '../Icon/Icons/Cross';
 import { BannerStyled } from './style';
 
 export default class Banner extends React.Component {
+  state = {
+    isOpen: true,
+  };
+
   closeBanner = () => {
-    console.info('boop');
+    this.setState({ isOpen: false });
   };
 
   render() {
-    return (
-      <BannerStyled>
-        <Text type="label" light>
-          {this.props.text}
-        </Text>
-        <Button
-          type="primary"
-          onClick={this.props.actionButton.action}
-          label={this.props.actionButton.label}
-        />
-        <Button
-          type="text"
-          icon={<CrossIcon />}
-          hasIconOnly
-          onClick={this.closeBanner}
-          label="Click Me"
-        />
-      </BannerStyled>
-    );
+    if (this.state.isOpen) {
+      return (
+        <BannerStyled
+          ref={banner => {
+            this.banner = banner;
+          }}
+        >
+          <Text type="label" light>
+            {this.props.text}
+          </Text>
+          <Button
+            type="primary"
+            onClick={this.props.actionButton.action}
+            label={this.props.actionButton.label}
+          />
+          <Button
+            type="text"
+            icon={<CrossIcon />}
+            hasIconOnly
+            onClick={this.closeBanner}
+            label="Click Me"
+          />
+        </BannerStyled>
+      );
+    }
+    return null;
   }
 }
 
