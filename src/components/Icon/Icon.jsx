@@ -7,7 +7,6 @@ import * as styles from './style';
 const StyledIcon = styled.svg`
   ${styles.base};
   ${props => styles[props.size]};
-
   vertical-align: ${props =>
     props.verticalAlign ? props.verticalAlign : null};
 `;
@@ -22,15 +21,11 @@ Icon.propTypes = {
 
   /** The `vertical-align` CSS value */
   verticalAlign: PropTypes.string,
-
-  /** A custom color */
-  color: PropTypes.string,
 };
 
 Icon.defaultProps = {
   size: 'medium',
   verticalAlign: '',
-  color: 'currentcolor',
 };
 
 export default Icon;

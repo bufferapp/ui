@@ -4,7 +4,12 @@ import PropTypes from 'prop-types';
 import Button from '../Button';
 import Text from '../Text';
 import CrossIcon from '../Icon/Icons/Cross';
-import { BannerStyled } from './style';
+import {
+  BannerStyled,
+  BannerCloseButton,
+  Wrapper,
+  ButtonWrapper,
+} from './style';
 
 export default class Banner extends React.Component {
   state = {
@@ -20,28 +25,31 @@ export default class Banner extends React.Component {
       return (
         <BannerStyled>
           {this.props.text && (
-            <React.Fragment>
+            <Wrapper>
               <Text type="label" color="#FFF">
                 {this.props.text}
               </Text>
-              <Button
-                type="primary"
-                onClick={this.props.actionButton.action}
-                label={this.props.actionButton.label}
-              />
-            </React.Fragment>
+              <ButtonWrapper>
+                <Button
+                  type="primary"
+                  onClick={this.props.actionButton.action}
+                  label={this.props.actionButton.label}
+                />
+              </ButtonWrapper>
+            </Wrapper>
           )}
           {this.props.customHTML && (
             <div dangerouslySetInnerHTML={this.props.customHTML} /> // eslint-disable-line
           )}
-
-          <Button
-            type="text"
-            icon={<CrossIcon color="#FFF" />}
-            hasIconOnly
-            onClick={this.closeBanner}
-            label="Click Me"
-          />
+          <BannerCloseButton>
+            <Button
+              type="text"
+              icon={<CrossIcon color="white" />}
+              hasIconOnly
+              onClick={this.closeBanner}
+              label="Close"
+            />
+          </BannerCloseButton>
         </BannerStyled>
       );
     }

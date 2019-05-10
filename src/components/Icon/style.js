@@ -2,7 +2,7 @@ import { css } from 'styled-components';
 
 export const base = css`
   display: inline-block;
-  fill: ${props => props.color};
+  fill: currentcolor;
 `;
 
 export const small = css`
