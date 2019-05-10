@@ -18,11 +18,7 @@ export default class Banner extends React.Component {
   render() {
     if (this.state.isOpen) {
       return (
-        <BannerStyled
-          ref={banner => {
-            this.banner = banner;
-          }}
-        >
+        <BannerStyled>
           <Text type="label" light>
             {this.props.text}
           </Text>
