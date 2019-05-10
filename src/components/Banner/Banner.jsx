@@ -19,14 +19,22 @@ export default class Banner extends React.Component {
     if (this.state.isOpen) {
       return (
         <BannerStyled>
-          <Text type="label" light>
-            {this.props.text}
-          </Text>
-          <Button
-            type="primary"
-            onClick={this.props.actionButton.action}
-            label={this.props.actionButton.label}
-          />
+          {this.props.text && (
+            <React.Fragment>
+              <Text type="label" light>
+                {this.props.text}
+              </Text>
+              <Button
+                type="primary"
+                onClick={this.props.actionButton.action}
+                label={this.props.actionButton.label}
+              />
+            </React.Fragment>
+          )}
+          {this.props.customHTML && (
+            <div dangerouslySetInnerHTML={this.props.customHTML} /> // eslint-disable-line
+          )}
+
           <Button
             type="text"
             icon={<CrossIcon />}
@@ -42,9 +50,21 @@ export default class Banner extends React.Component {
 }
 
 Banner.propTypes = {
-  text: PropTypes.string.isRequired,
+  /** (Optional) The main text of the banner */
+  text: PropTypes.string,
+
+  /** (Optional) The text of the Call To Action of the banner */
   actionButton: PropTypes.shape({
     label: PropTypes.string,
     action: PropTypes.func,
-  }).isRequired,
+  }),
+
+  /** (Optional) custom html */
+  customHTML: PropTypes.shape({}),
+};
+
+Banner.defaultProps = {
+  text: '',
+  actionButton: {},
+  customHTML: null,
 };
