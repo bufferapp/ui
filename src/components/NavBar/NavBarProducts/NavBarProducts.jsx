@@ -2,9 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import IconPublish from '../../Icon/Icons/Plus';
-import IconAnalyze from '../../Icon/Icons/Compare';
-import IconReply from '../../Icon/Icons/Message';
+import {
+  Publish as IconPublish,
+  Analyze as IconAnalyze,
+  Reply as IconReply,
+} from '../../Icon';
 
 import { gray } from '../../style/colors';
 import { fontWeightMedium } from '../../style/fonts';
@@ -35,15 +37,24 @@ const ProductText = styled.span`
 
 const NavBarProduct = ({ activeProduct }) => (
   <StlyedNavBarProduct>
-    <ProductLink active={activeProduct === 'publish'} href={activeProduct !== 'publish' ? 'https://publish.buffer.com' : '/'}>
+    <ProductLink
+      active={activeProduct === 'publish'}
+      href={activeProduct !== 'publish' ? 'https://publish.buffer.com' : '/'}
+    >
       <IconPublish />
       <ProductText>Publish</ProductText>
     </ProductLink>
-    <ProductLink active={activeProduct === 'reply'} href={activeProduct !== 'reply' ? 'https://reply.buffer.com' : '/'}>
+    <ProductLink
+      active={activeProduct === 'reply'}
+      href={activeProduct !== 'reply' ? 'https://reply.buffer.com' : '/'}
+    >
       <IconReply />
       <ProductText>Reply</ProductText>
     </ProductLink>
-    <ProductLink active={activeProduct === 'analyze'} href={activeProduct !== 'analyze' ? 'https://analyze.buffer.com' : '/'}>
+    <ProductLink
+      active={activeProduct === 'analyze'}
+      href={activeProduct !== 'analyze' ? 'https://analyze.buffer.com' : '/'}
+    >
       <IconAnalyze />
       <ProductText>Analyze</ProductText>
     </ProductLink>
