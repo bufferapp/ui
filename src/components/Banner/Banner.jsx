@@ -21,7 +21,7 @@ export default class Banner extends React.Component {
         <BannerStyled>
           {this.props.text && (
             <React.Fragment>
-              <Text type="label" light>
+              <Text type="label" color="#FFF">
                 {this.props.text}
               </Text>
               <Button
@@ -37,7 +37,7 @@ export default class Banner extends React.Component {
 
           <Button
             type="text"
-            icon={<CrossIcon />}
+            icon={<CrossIcon color="#FFF" />}
             hasIconOnly
             onClick={this.closeBanner}
             label="Click Me"
