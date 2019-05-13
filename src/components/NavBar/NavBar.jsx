@@ -88,6 +88,7 @@ NavBar.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
+    // If missing we will use Gravatar to get the user avatar by email
     avatar: PropTypes.string,
     menuItems: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,

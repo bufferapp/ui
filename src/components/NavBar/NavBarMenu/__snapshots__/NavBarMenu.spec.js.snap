@@ -13,6 +13,7 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only requ
     </styled.div>
   </styled.div>
   <styled.div
+    avatar="https://www.gravatar.com/avatar/1b1191e0a25179e5999c65e64a9c2b20?d=https%3A%2F%2Fs3.amazonaws.com%2Fbuffer-ui%2FDefault%2BAvatar.png"
     onClick={[MockFunction]}
   />
   <styled.div>
