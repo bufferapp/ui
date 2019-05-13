@@ -14,7 +14,7 @@ export const AppShellStyled = styled.div`
   ${flexColumn}
   height: 100vh;
   overflow: auto;
-  background-color: #e5e5e5;
+  background-color: #f5f5f5;
 `;
 
 export const Wrapper = styled.div`
