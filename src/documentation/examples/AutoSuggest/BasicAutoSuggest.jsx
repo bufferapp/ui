@@ -50,6 +50,7 @@ export default function ExampleAutoSuggest() {
           },
         },
       ]}
+      selectPopupVisible
       hasCustomAction
       onCustomItemClick={string => console.info(string)}
       customItemLabel="Create Tag"

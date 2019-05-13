@@ -682,6 +682,68 @@ exports[`jest-auto-snapshots > AutoSuggest Matches snapshot when boolean prop "m
 </styled.div>
 `;
 
+exports[`jest-auto-snapshots > AutoSuggest Matches snapshot when boolean prop "selectPopupVisible" is set to: "false" 1`] = `
+<styled.div
+  data-tip=""
+  fullWidth={true}
+  innerRef={[Function]}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    id="searchInput"
+    innerRef={[Function]}
+  >
+    <SearchIcon />
+    <Search
+      height="small"
+      innerRef={[Function]}
+      isOpen={true}
+      onChange={[Function]}
+      onClick={[Function]}
+      placeholder="jest-auto-snapshots String Fixture"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={false}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul
+      innerRef={[Function]}
+    >
+      <SelectItem
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
 exports[`jest-auto-snapshots > AutoSuggest Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
 <styled.div
   data-tip=""

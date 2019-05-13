@@ -414,12 +414,13 @@ export default class AutoSuggest extends React.Component {
       onCustomItemClick,
       customItemLabel,
       fullWidth,
+      selectPopupVisible,
     } = this.props;
     const { isOpen, hoveredItem, items } = this.state;
 
     return (
       <SelectStyled
-        isOpen={isOpen}
+        isOpen={isOpen && selectPopupVisible}
         xPosition={xPosition}
         yPosition={yPosition}
         hasIconOnly={hasIconOnly}
@@ -578,11 +579,15 @@ AutoSuggest.propTypes = {
 
   /** Is the select full width */
   fullWidth: PropTypes.bool,
+
+  /** Indicates if the select popup should be visible */
+  selectPopupVisible: PropTypes.bool,
 };
 
 AutoSuggest.defaultProps = {
   label: '',
   isSplit: false,
+  selectPopupVisible: true,
   type: 'secondary',
   size: 'medium',
   xPosition: 'left',
