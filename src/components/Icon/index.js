@@ -1,3 +1,4 @@
+export Analyze from './Icons/Analyze';
 export ArrowDown from './Icons/ArrowDown';
 export ArrowLeft from './Icons/ArrowLeft';
 export ArrowRight from './Icons/ArrowRight';
@@ -37,7 +38,9 @@ export Person from './Icons/Person';
 export Pinterest from './Icons/Pinterest';
 export Placeholder from './Icons/Placeholder';
 export Plus from './Icons/Plus';
+export Publish from './Icons/Publish';
 export Refresh from './Icons/Refresh';
+export Reply from './Icons/Reply';
 export Return from './Icons/Return';
 export Search from './Icons/Search';
 export Sidebar from './Icons/Sidebar';
