@@ -6,7 +6,7 @@ import AutoSuggest from './AutoSuggest';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SomeComponent component', () => {
+describe('AutoSuggest component', () => {
   it('openPopup: should open the closed popup', () => {
     const wrapper = mount(<AutoSuggest onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
