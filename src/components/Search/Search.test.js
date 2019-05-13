@@ -15,6 +15,8 @@ describe('SearchComponent component', () => {
         onMoveDown={() => true}
         onAddItem={() => true}
         onClose={() => true}
+        onClick={() => {}}
+        height="tall"
         placeholder="Search"
       />
     );
