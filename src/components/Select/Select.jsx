@@ -462,13 +462,14 @@ export default class Select extends React.Component {
       fullWidth,
       capitalizeItemLabel,
       isInputSearch,
+      selectPopupVisible,
       noResultsCustomMessage
     } = this.props;
     const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
     return (
       <SelectStyled
-        isOpen={isOpen}
+        isOpen={isOpen && selectPopupVisible}
         xPosition={xPosition}
         yPosition={yPosition}
         hasIconOnly={hasIconOnly}
@@ -648,6 +649,9 @@ Select.propTypes = {
   /** Boolean to check if the select is triggered by an input instead of a button */
   isInputSearch: PropTypes.bool,
 
+  /** Indicates if the select popup should be visible */
+  selectPopupVisible: PropTypes.bool,
+
   /** Custom message to display when no results were found */
   noResultsCustomMessage: PropTypes.string,
 };
@@ -681,5 +685,6 @@ Select.defaultProps = {
   fullWidth: undefined,
   capitalizeItemLabel: true,
   isInputSearch: false,
+  selectPopupVisible: true,
   noResultsCustomMessage: 'No matches found',
 };
