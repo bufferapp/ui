@@ -39,21 +39,21 @@ const NavBarProduct = ({ activeProduct }) => (
   <StlyedNavBarProduct>
     <ProductLink
       active={activeProduct === 'publish'}
-      href={activeProduct !== 'publish' ? 'https://publish.buffer.com' : '/'}
+      href='https://publish.buffer.com'
     >
       <IconPublish />
       <ProductText>Publish</ProductText>
     </ProductLink>
     <ProductLink
       active={activeProduct === 'reply'}
-      href={activeProduct !== 'reply' ? 'https://reply.buffer.com' : '/'}
+      href='https://reply.buffer.com'
     >
       <IconReply />
       <ProductText>Reply</ProductText>
     </ProductLink>
     <ProductLink
       active={activeProduct === 'analyze'}
-      href={activeProduct !== 'analyze' ? 'https://analyze.buffer.com' : '/'}
+      href='https://analyze.buffer.com'
     >
       <IconAnalyze />
       <ProductText>Analyze</ProductText>
