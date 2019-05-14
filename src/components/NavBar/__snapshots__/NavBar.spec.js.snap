@@ -10,11 +10,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
   </styled.div>
   <styled.div>
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={
@@ -29,6 +31,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
@@ -37,11 +40,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       yPosition="bottom"
     />
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={
@@ -56,6 +61,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
@@ -77,15 +83,18 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
   </styled.div>
   <styled.div>
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={Array []}
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
@@ -94,11 +103,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       yPosition="bottom"
     />
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={
@@ -113,6 +124,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
@@ -134,11 +146,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
   </styled.div>
   <styled.div>
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={
@@ -153,6 +167,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
         ]
       }
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
@@ -161,11 +176,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       yPosition="bottom"
     />
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={
@@ -180,6 +197,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
         ]
       }
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
@@ -199,11 +217,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
   </styled.div>
   <styled.div>
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={
@@ -218,6 +238,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
         ]
       }
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       shortcutsEnabled={true}
       size="medium"
