@@ -7,6 +7,16 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
     helpMenuItems={null}
     user={null}
   />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={null}
+    text="jest-auto-snapshots String Fixture"
+  />
   <styled.div>
     <styled.div>
       <NodeFixture />
