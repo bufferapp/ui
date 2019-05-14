@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon, ArrowLeft } from '../Icon';
+import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
 
 import { grayDarker, gray } from '../style/colors';
 import { fontWeightMedium } from '../style/fonts';
@@ -78,7 +78,14 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
       <Select
         hideSearch
         customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
-        items={[...user.menuItems,
+        items={[
+          {
+            id: 'Account',
+            title: 'Account',
+            icon: <PersonIcon color={gray} />,
+            onItemClick: () => { window.location.assign(`https://account.buffer.com?product=${activeProduct}&username=${encodeURI(user.name)}`); },
+          },
+          ...user.menuItems,
           {
               id: 'logout',
               title: 'Logout',

@@ -53,6 +53,14 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "Account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
             "component": [MockFunction],
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -126,6 +134,14 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       isSplit={false}
       items={
         Array [
+          Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "Account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
           Object {
             "component": [MockFunction],
             "hasDivider": true,
@@ -211,6 +227,14 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       items={
         Array [
           Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "Account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
             "component": [MockFunction],
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -261,6 +285,14 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       isSplit={false}
       items={
         Array [
+          Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "Account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
           Object {
             "component": [MockFunction],
             "hasDivider": true,
