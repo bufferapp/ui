@@ -6,7 +6,7 @@ import {
   NavBarStyled, NavBarEmail, NavBarName, NavBarUser, NavBarAvatar, NavBarChavron,
 } from './style';
 
-function getUserAvatar(user) {
+export function getUserAvatar(user) {
   if (user.avatar) {
     return user.avatar
   }
