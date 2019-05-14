@@ -65,6 +65,7 @@ AppShell.propTypes = {
       label: PropTypes.string,
       action: PropTypes.func,
     }),
+    customHTML: PropTypes.shape({ __html: PropTypes.string }),
   }),
 };
 

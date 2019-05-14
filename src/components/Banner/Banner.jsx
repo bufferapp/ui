@@ -20,27 +20,34 @@ export default class Banner extends React.Component {
     this.setState({ isOpen: false });
   };
 
+  renderBannerContent = () => {
+    const { customHTML, text, actionButton } = this.props;
+    if (customHTML) {
+      return <div dangerouslySetInnerHTML={customHTML} />; // eslint-disable-line
+    }
+    return (
+      <Wrapper>
+        <Text type="label" color="#FFF">
+          {text}
+        </Text>
+        <ButtonWrapper>
+          <Button
+            type="primary"
+            onClick={actionButton.action}
+            label={actionButton.label}
+          />
+        </ButtonWrapper>
+      </Wrapper>
+    );
+  };
+
   render() {
-    if (this.state.isOpen) {
+    const { isOpen } = this.state;
+
+    if (isOpen) {
       return (
         <BannerStyled>
-          {this.props.text && (
-            <Wrapper>
-              <Text type="label" color="#FFF">
-                {this.props.text}
-              </Text>
-              <ButtonWrapper>
-                <Button
-                  type="primary"
-                  onClick={this.props.actionButton.action}
-                  label={this.props.actionButton.label}
-                />
-              </ButtonWrapper>
-            </Wrapper>
-          )}
-          {this.props.customHTML && (
-            <div dangerouslySetInnerHTML={this.props.customHTML} /> // eslint-disable-line
-          )}
+          {this.renderBannerContent()}
           <BannerCloseButton>
             <Button
               type="text"
@@ -68,7 +75,7 @@ Banner.propTypes = {
   }),
 
   /** (Optional) custom html */
-  customHTML: PropTypes.shape({}),
+  customHTML: PropTypes.shape({ __html: PropTypes.string }),
 };
 
 Banner.defaultProps = {
