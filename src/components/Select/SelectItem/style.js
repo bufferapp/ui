@@ -31,7 +31,7 @@ export const SelectItemLabel = styled.div`
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
-  text-transform: capitalize;
+  text-transform: ${props => (props.capitalizeItemLabel ? 'capitalize' : '')};
   padding-left: 8px;
   padding-right: 8px;
   display: flex;
