@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon } from '../Icon';
+import { Info as InfoIcon, ArrowLeft } from '../Icon';
 
 import { grayDarker, gray } from '../style/colors';
 import { fontWeightMedium } from '../style/fonts';
@@ -11,6 +11,10 @@ import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
 import NavBarProducts from './NavBarProducts/NavBarProducts';
 
+export function getLogoutUrl(baseUrl = '') {
+  const [, productPath] = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/);
+  return `https://login${productPath.includes('local') ? '.local' : ''}.buffer.com/logout?redirect=https://${productPath}.buffer.com`;
+}
 
 const NavBarStyled = styled.nav`
   height: 64px;
@@ -74,7 +78,17 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
       <Select
         hideSearch
         customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
-        items={user.menuItems}
+        items={[...user.menuItems,
+          {
+              id: 'logout',
+              title: 'Logout',
+              icon: <ArrowLeft color={gray} />,
+              hasDivider: true,
+              onItemClick: () => {
+              window.location.assign(getLogoutUrl());
+            },
+          },
+        ]}
         horizontalOffset="16px"
       />
     </NavBarRight>

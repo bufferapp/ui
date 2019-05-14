@@ -1,7 +1,7 @@
 import React from 'react';
 import AppShell from '@bufferapp/ui/AppShell';
 import {
-  Person, Gear, ArrowLeft,
+  Person, Gear,
 } from '@bufferapp/ui/Icon';
 
 import { gray } from '@bufferapp/ui/style/colors';
@@ -18,13 +18,6 @@ const userMenuItems = [
     title: 'Preferences',
     icon: <Gear color={gray} />,
     onItemClick: () => {},
-  },
-  {
-    id: '3',
-    title: 'Logout',
-    icon: <ArrowLeft color={gray} />,
-    hasDivider: true,
-    onItemClick: () => console.info('Logout Clicked'),
   },
 ];
 

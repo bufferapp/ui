@@ -59,6 +59,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
             "onItemClick": [MockFunction],
             "title": "jest-auto-snapshots String Fixture",
           },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
+          },
         ]
       }
       label=""
@@ -123,6 +132,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
           },
         ]
       }
@@ -199,6 +217,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
             "onItemClick": [MockFunction],
             "title": "jest-auto-snapshots String Fixture",
           },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
+          },
         ]
       }
       label=""
@@ -240,6 +267,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
           },
         ]
       }
