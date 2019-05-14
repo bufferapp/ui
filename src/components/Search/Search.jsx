@@ -55,7 +55,7 @@ export default class Search extends React.Component {
           onChange={event => this.onChange(event)}
           onClick={onClick}
           clearSearchOnBlur={clearSearchOnBlur}
-          onBlur={this.onClearSearch}
+          onBlur={clearSearchOnBlur && this.onClearSearch}
           height={height}
         />
       </SearchWrapper>
