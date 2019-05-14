@@ -3,8 +3,10 @@
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
 <styled.div>
   <styled.input
+    height="jest-auto-snapshots String Fixture"
     innerRef={[Function]}
     onChange={[Function]}
+    onClick={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     type="text"
     value=""
@@ -15,8 +17,10 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen
 exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`] = `
 <styled.div>
   <styled.input
+    height="jest-auto-snapshots String Fixture"
     innerRef={[Function]}
     onChange={[Function]}
+    onClick={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     type="text"
     value=""
@@ -27,8 +31,10 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`]
 exports[`jest-auto-snapshots > Search Matches snapshot when passed only required props 1`] = `
 <styled.div>
   <styled.input
+    height="tall"
     innerRef={[Function]}
     onChange={[Function]}
+    onClick={[Function]}
     placeholder=""
     type="text"
     value=""

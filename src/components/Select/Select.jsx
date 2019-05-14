@@ -183,12 +183,13 @@ export default class Select extends React.Component {
 
   onButtonClick = () => {
     const { isOpen, items } = this.state;
+    const { isInputSearch } = this.props;
     this.setState(
       {
         isOpen: !isOpen,
       },
       () => {
-        !isOpen && this.selectNode && this.selectNode.focus();
+        !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus();
         this.scrollToItem(
           this.itemsNode,
           document.getElementById(this.getItemId(items[0]))
@@ -372,6 +373,7 @@ export default class Select extends React.Component {
       label,
       hasIconOnly,
       fullWidth,
+      isInputSearch,
     } = this.props;
     const { items } = this.state;
 
@@ -388,6 +390,9 @@ export default class Select extends React.Component {
           />
         </ButtonSelect>
       );
+    }
+    if (customButton && isInputSearch) {
+      return customButton(this.onButtonClick, this.onSearchChange);
     }
     if (customButton) {
       return customButton(this.onButtonClick);
@@ -434,9 +439,9 @@ export default class Select extends React.Component {
     }
   };
 
-  renderNoItems = (hideSearch, length) => {
-    if (!hideSearch && length === 0) {
-      return <NoMatchesContainer>No matches found</NoMatchesContainer>;
+  renderNoItems = (hideSearch, length, isInputSearch, noResultsCustomMessage) => {
+    if (length === 0 && (!hideSearch || isInputSearch)) {
+      return <NoMatchesContainer>{noResultsCustomMessage}</NoMatchesContainer>;
     }
   };
 
@@ -455,12 +460,16 @@ export default class Select extends React.Component {
       onCustomItemClick,
       customItemLabel,
       fullWidth,
+      capitalizeItemLabel,
+      isInputSearch,
+      selectPopupVisible,
+      noResultsCustomMessage
     } = this.props;
     const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
     return (
       <SelectStyled
-        isOpen={isOpen}
+        isOpen={isOpen && selectPopupVisible}
         xPosition={xPosition}
         yPosition={yPosition}
         hasIconOnly={hasIconOnly}
@@ -488,7 +497,7 @@ export default class Select extends React.Component {
                 onCustomItemClick,
                 customItemLabel
               )
-            : this.renderNoItems(hideSearch, items.length)}
+            : this.renderNoItems(hideSearch, items.length, isInputSearch, noResultsCustomMessage)}
           {}
           {items.map((item, idx) => [
             item.hasDivider && (
@@ -505,6 +514,7 @@ export default class Select extends React.Component {
               key={this.getItemId(item) + idx}
               getItemId={this.getItemId}
               item={item}
+              capitalizeItemLabel={capitalizeItemLabel}
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
@@ -632,6 +642,18 @@ Select.propTypes = {
 
   /** Is the select full width */
   fullWidth: PropTypes.bool,
+
+  /** Should capitalize Item Label */
+  capitalizeItemLabel: PropTypes.bool,
+
+  /** Boolean to check if the select is triggered by an input instead of a button */
+  isInputSearch: PropTypes.bool,
+
+  /** Indicates if the select popup should be visible */
+  selectPopupVisible: PropTypes.bool,
+
+  /** Custom message to display when no results were found */
+  noResultsCustomMessage: PropTypes.string,
 };
 
 Select.defaultProps = {
@@ -661,4 +683,8 @@ Select.defaultProps = {
   customItemLabel: undefined,
   hotKeys: undefined,
   fullWidth: undefined,
+  capitalizeItemLabel: true,
+  isInputSearch: false,
+  selectPopupVisible: true,
+  noResultsCustomMessage: 'No matches found',
 };

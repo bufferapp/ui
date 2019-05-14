@@ -29,6 +29,8 @@ export default class Search extends React.Component {
   render() {
     const {
       placeholder,
+      onClick,
+      height,
     } = this.props;
 
     const { search } = this.state;
@@ -41,6 +43,8 @@ export default class Search extends React.Component {
           value={search}
           innerRef={inputRef => this.inputRef = inputRef}
           onChange={event => this.onChange(event)}
+          onClick={onClick}
+          height={height}
         />
       </SearchWrapper>
     );
@@ -55,10 +59,18 @@ Search.propTypes = {
   onChange: PropTypes.func.isRequired,
 
   /** Is the select menu open */
-  isOpen: PropTypes.bool
+  isOpen: PropTypes.bool,
+
+  /** Is onClick event */
+  onClick: PropTypes.func,
+
+  /** Is onClick event */
+  height: PropTypes.string
 };
 
 Search.defaultProps = {
   placeholder: '',
-  isOpen: false
+  height: 'tall',
+  isOpen: false,
+  onClick: () => {}
 }
