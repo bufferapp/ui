@@ -13,21 +13,22 @@ import { fontWeightMedium } from '../../style/fonts';
 
 const StlyedNavBarProduct = styled.nav`
   display: flex;
-  margin-left: 20px;
 `;
 
 const ProductLink = styled.a`
-  height: 64px;
+  height: 100%;
   display: flex;
   color: #fff;
-  padding: 0 20px;
+  padding: 0 24px;
   font-size: 16px;
   font-weight: ${fontWeightMedium};
   text-decoration: none;
   align-items: center;
   color: ${props => (props.active ? '#fff' : gray)};
+  background-color: ${props => (props.active ? '#525252' : 'transparent')};;
   &:hover {
     color: #fff;
+    background-color: #525252;
   }
 `;
 

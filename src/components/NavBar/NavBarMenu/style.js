@@ -1,22 +1,27 @@
 import styled from 'styled-components';
 import {
-  gray, grayDark, grayLight, white,
+  gray, grayDark, grayDarker, grayLight, white,
 } from '../../style/colors';
 import { fontSize, fontWeightMedium } from '../../style/fonts';
 
 export const NavBarStyled = styled.div`
-  display: flex;
   align-items: center;
-  background: ${grayDark};
-  padding: 12px 8px 12px 24px;
+  border-left: 1px solid #525252;
   cursor: pointer;
+  display: flex;
+  height: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  &:hover {
+    background-color: #525252;
+  }
 `;
 
 export const NavBarUser = styled.div`
   display: flex;
   align-items: end;
   flex-direction: column;
-  padding-right: 20px;
+  padding-right: 16px;
 `;
 
 export const NavBarAvatar = styled.div`
@@ -40,16 +45,16 @@ export const NavBarEmail = styled.div`
 `;
 
 export const NavBarChavron = styled.div`
-  background: #3D3D3D;
-  border: 1px solid #3D3D3D;
-  box-sizing: border-box;
-  border-radius: 4px;
-  color: ${gray};
-  height: 16px;
-  width: 16px;
-  display: flex;
   align-items: center;
-  position: relative;
-  left: -8px;
+  background: ${grayDark};
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px ${grayDarker};
+  box-sizing: border-box;
+  color: ${gray};
   cursor: pointer;
+  display: flex;
+  height: 16px;
+  position: absolute;
+  right: 8px;
+  width: 16px;
 `;

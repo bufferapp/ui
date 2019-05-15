@@ -35,7 +35,7 @@ export function getAccountUrl(baseUrl = '', user) {
 }
 
 const NavBarStyled = styled.nav`
-  height: 64px;
+  height: 56px;
   width: 100vw;
   background: ${grayDarker};
   display: flex;
@@ -50,7 +50,7 @@ const NavBarRight = styled.div`
 `;
 
 const NavBarHelp = styled.a`
-  height: 64px;
+  height: 100%;
   display: flex;
   color: #fff;
   padding: 0 24px;
@@ -61,6 +61,7 @@ const NavBarHelp = styled.a`
   color: ${props => (props.active ? '#fff' : gray)};
   &:hover {
     color: #fff;
+    background-color: #525252;
   }
   cursor: pointer;
 `;
@@ -105,6 +106,7 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
       <Select
         hideSearch
         capitalizeItemLabel={false}
+        xPosition="right"
         customButton={handleClick => (
           <NavBarMenu user={user} onClick={handleClick} />
         )}
@@ -128,7 +130,7 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
             },
           }),
         ].filter(e => e)}
-        horizontalOffset="16px"
+        horizontalOffset="-16px"
       />
     </NavBarRight>
   </NavBarStyled>
