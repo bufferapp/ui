@@ -92,7 +92,7 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
               icon: <ArrowLeft color={gray} />,
               hasDivider: true,
               onItemClick: () => {
-              window.location.assign(getLogoutUrl());
+              window.location.assign(getLogoutUrl(window.location.href));
             },
           },
         ]}
