@@ -23,11 +23,15 @@ function getRedirectUrl(baseUrl) {
 
 export function getLogoutUrl(baseUrl = '') {
   const productPath = getProductPath(baseUrl);
-  return `https://login${productPath.includes('local') ? '.local' : ''}.buffer.com/logout?redirect=${getRedirectUrl(baseUrl)}`;
+  return `https://login${
+    productPath.includes('local') ? '.local' : ''
+  }.buffer.com/logout?redirect=${getRedirectUrl(baseUrl)}`;
 }
 
 export function getAccountUrl(baseUrl = '', user) {
-  return `https://account.buffer.com?redirect=${getRedirectUrl(baseUrl)}&username=${encodeURI(user.name)}`
+  return `https://account.buffer.com?redirect=${getRedirectUrl(
+    baseUrl
+  )}&username=${encodeURI(user.name)}`;
 }
 
 const NavBarStyled = styled.nav`
@@ -73,7 +77,6 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
   return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
 }
 
-
 /**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
@@ -87,6 +90,7 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
       {helpMenuItems && (
         <Select
           hideSearch
+          capitalizeItemLabel={false}
           customButton={handleClick => (
             <NavBarHelp onClick={handleClick}>
               <InfoIcon />
@@ -96,21 +100,25 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
           items={helpMenuItems}
           horizontalOffset="-16px"
           xPosition="right"
-        />)}
+        />
+      )}
       <Select
         hideSearch
-        customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
+        capitalizeItemLabel={false}
+        customButton={handleClick => (
+          <NavBarMenu user={user} onClick={handleClick} />
+        )}
         items={[
-          (appendMenuItem(user.ignoreMenuItems, {
+          appendMenuItem(user.ignoreMenuItems, {
             id: 'account',
             title: 'Account',
             icon: <PersonIcon color={gray} />,
             onItemClick: () => {
               window.location.assign(getAccountUrl(window.location.href, user));
             },
-          })),
+          }),
           ...user.menuItems,
-          (appendMenuItem(user.ignoreMenuItems, {
+          appendMenuItem(user.ignoreMenuItems, {
             id: 'logout',
             title: 'Logout',
             icon: <ArrowLeft color={gray} />,
@@ -118,7 +126,7 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
             onItemClick: () => {
               window.location.assign(getLogoutUrl(window.location.href));
             },
-          })),
+          }),
         ].filter(e => e)}
         horizontalOffset="16px"
       />
@@ -137,26 +145,30 @@ NavBar.propTypes = {
     avatar: PropTypes.string,
     /** If missing we will use Gravatar to get the user avatar by email */
     ignoreMenuItems: PropTypes.arrayOf(PropTypes.string),
-    menuItems: PropTypes.arrayOf(PropTypes.shape({
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        component: PropTypes.func,
+        hasDivider: PropTypes.bool,
+        onItemClick: PropTypes.func,
+      })
+    ).isRequired,
+  }).isRequired,
+  helpMenuItems: PropTypes.arrayOf(
+    PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-      component: PropTypes.func,
+      component: PropTypes.node,
       hasDivider: PropTypes.bool,
       onItemClick: PropTypes.func,
-    })).isRequired,
-  }).isRequired,
-  helpMenuItems: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    component: PropTypes.node,
-    hasDivider: PropTypes.bool,
-    onItemClick: PropTypes.func,
-  })),
+    })
+  ),
 };
 
 NavBar.defaultProps = {
   activeProduct: undefined,
   helpMenuItems: null,
-}
+};
 
 export default NavBar;

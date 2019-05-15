@@ -37,7 +37,6 @@
     "react": ">= 0.14.0"
   },
   "dependencies": {
-    "blueimp-md5": "^2.10.0",
     "immutability-helper": "^2.9.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",
