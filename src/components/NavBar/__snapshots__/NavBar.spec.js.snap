@@ -56,7 +56,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
-            "id": "Account",
+            "id": "account",
             "onItemClick": [Function],
             "title": "Account",
           },
@@ -138,7 +138,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
-            "id": "Account",
+            "id": "account",
             "onItemClick": [Function],
             "title": "Account",
           },
@@ -230,7 +230,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
-            "id": "Account",
+            "id": "account",
             "onItemClick": [Function],
             "title": "Account",
           },
@@ -289,7 +289,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
-            "id": "Account",
+            "id": "account",
             "onItemClick": [Function],
             "title": "Account",
           },

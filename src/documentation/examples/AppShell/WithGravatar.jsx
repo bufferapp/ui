@@ -38,7 +38,7 @@ const helpMenuItems = [
   },
 ];
 
-/** AppShell Example */
+/** AppShell With Gravatar and no Account url */
 export default function ExampleAppShell() {
   return (
     <AppShell
@@ -47,6 +47,7 @@ export default function ExampleAppShell() {
         name: 'Hamish Macpherson',
         email: 'hamstu@gmail.com',
         menuItems: userMenuItems,
+        ignoreMenuItems: ['account'],
       }}
       helpMenuItems={helpMenuItems}
       content={<div>Main content.</div>}

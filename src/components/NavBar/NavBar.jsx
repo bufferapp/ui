@@ -51,6 +51,14 @@ const NavBarHelpText = styled.span`
   margin-left: 8px;
 `;
 
+export function appendMenuItem(ignoreMenuItems, menuItem) {
+  if (!ignoreMenuItems) {
+    return menuItem;
+  }
+
+  return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
+}
+
 
 /**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
@@ -79,23 +87,23 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
         hideSearch
         customButton={handleClick => (<NavBarMenu user={user} onClick={handleClick} />)}
         items={[
-          {
-            id: 'Account',
+          (appendMenuItem(user.ignoreMenuItems, {
+            id: 'account',
             title: 'Account',
             icon: <PersonIcon color={gray} />,
             onItemClick: () => { window.location.assign(`https://account.buffer.com?product=${activeProduct}&username=${encodeURI(user.name)}`); },
-          },
+          })),
           ...user.menuItems,
-          {
-              id: 'logout',
-              title: 'Logout',
-              icon: <ArrowLeft color={gray} />,
-              hasDivider: true,
-              onItemClick: () => {
+          (appendMenuItem(user.ignoreMenuItems, {
+            id: 'logout',
+            title: 'Logout',
+            icon: <ArrowLeft color={gray} />,
+            hasDivider: true,
+            onItemClick: () => {
               window.location.assign(getLogoutUrl(window.location.href));
             },
-          },
-        ]}
+          })),
+        ].filter(e => e)}
         horizontalOffset="16px"
       />
     </NavBarRight>
@@ -109,8 +117,10 @@ NavBar.propTypes = {
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
     email: PropTypes.string.isRequired,
-    // If missing we will use Gravatar to get the user avatar by email
+    /** If missing we will use Gravatar to get the user avatar by email */
     avatar: PropTypes.string,
+    /** If missing we will use Gravatar to get the user avatar by email */
+    ignoreMenuItems: PropTypes.arrayOf(PropTypes.string),
     menuItems: PropTypes.arrayOf(PropTypes.shape({
       id: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
