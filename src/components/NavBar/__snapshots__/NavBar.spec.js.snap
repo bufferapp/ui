@@ -46,7 +46,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
-      horizontalOffset="16px"
+      horizontalOffset="-16px"
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -85,7 +85,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       shortcutsEnabled={true}
       size="medium"
       type="secondary"
-      xPosition="left"
+      xPosition="right"
       yPosition="bottom"
     />
   </styled.div>
@@ -128,7 +128,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
-      horizontalOffset="16px"
+      horizontalOffset="-16px"
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -167,7 +167,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       shortcutsEnabled={true}
       size="medium"
       type="secondary"
-      xPosition="left"
+      xPosition="right"
       yPosition="bottom"
     />
   </styled.div>
@@ -220,7 +220,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
-      horizontalOffset="16px"
+      horizontalOffset="-16px"
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -259,7 +259,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       shortcutsEnabled={true}
       size="medium"
       type="secondary"
-      xPosition="left"
+      xPosition="right"
       yPosition="bottom"
     />
   </styled.div>
@@ -279,7 +279,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       hasCustomAction={false}
       hasIconOnly={false}
       hideSearch={true}
-      horizontalOffset="16px"
+      horizontalOffset="-16px"
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -318,7 +318,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       shortcutsEnabled={true}
       size="medium"
       type="secondary"
-      xPosition="left"
+      xPosition="right"
       yPosition="bottom"
     />
   </styled.div>
