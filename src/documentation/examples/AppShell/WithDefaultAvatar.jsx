@@ -1,8 +1,7 @@
 import React from 'react';
 import AppShell from '@bufferapp/ui/AppShell';
 
-const userMenuItems = [
-];
+const userMenuItems = [];
 
 const helpMenuItems = [
   {
@@ -27,7 +26,7 @@ const helpMenuItems = [
   },
 ];
 
-/** AppShell With Gravatar and no Account url */
+/** AppShell With default avatar */
 export default function ExampleAppShell() {
   return (
     <AppShell

@@ -10,7 +10,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
   </styled.div>
   <styled.div>
     <Select
-      capitalizeItemLabel={true}
+      capitalizeItemLabel={false}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
@@ -41,7 +41,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       yPosition="bottom"
     />
     <Select
-      capitalizeItemLabel={true}
+      capitalizeItemLabel={false}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
@@ -102,7 +102,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
   </styled.div>
   <styled.div>
     <Select
-      capitalizeItemLabel={true}
+      capitalizeItemLabel={false}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
@@ -123,7 +123,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       yPosition="bottom"
     />
     <Select
-      capitalizeItemLabel={true}
+      capitalizeItemLabel={false}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
@@ -184,7 +184,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
   </styled.div>
   <styled.div>
     <Select
-      capitalizeItemLabel={true}
+      capitalizeItemLabel={false}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
@@ -215,7 +215,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       yPosition="bottom"
     />
     <Select
-      capitalizeItemLabel={true}
+      capitalizeItemLabel={false}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
@@ -274,7 +274,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
   </styled.div>
   <styled.div>
     <Select
-      capitalizeItemLabel={true}
+      capitalizeItemLabel={false}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
