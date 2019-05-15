@@ -107,7 +107,6 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
             icon: <PersonIcon color={gray} />,
             onItemClick: () => {
               window.location.assign(getAccountUrl(window.location.href, user));
-              bbb
             },
           })),
           ...user.menuItems,
