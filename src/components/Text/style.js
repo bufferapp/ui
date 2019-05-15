@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-import {
-  grayDarker,
-  grayDark,
-  red,
-} from '../style/colors';
+import { grayDarker, red } from '../style/colors';
 import {
   fontFamily,
   fontSize,
@@ -54,7 +50,7 @@ export const H3 = styled.h3`
 `;
 
 export const Label = styled.label`
-  color: ${({ light }) => light ? grayDark : grayDarker };
+  color: ${props => props.color};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeightMedium};
@@ -62,10 +58,9 @@ export const Label = styled.label`
 `;
 
 export const Help = styled.label`
-  color: ${({ hasError }) => hasError ? red : grayDarker };
+  color: ${({ hasError }) => (hasError ? red : grayDarker)};
   font-family: ${fontFamily};
   font-size: 14px;
   font-weight: ${fontWeightMedium};
   line-height: ${lineHeight};
 `;
-

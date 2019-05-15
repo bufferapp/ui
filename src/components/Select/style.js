@@ -17,7 +17,7 @@ export const Wrapper = styled.div`
   }
   width: ${props => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
   height: ${props => (props.isSplit ? '100%' : 'auto')};
-  max-height: ${props => (props.isSplit ? '100%' : '40px')};
+  max-height: ${props => (props.isSplit ? '100%' : '')};
   position: ${props => (props.isSplit ? 'initial' : 'relative')};
   display: inline-block;
 `;
@@ -51,10 +51,10 @@ export const SelectStyled = styled.div`
 `;
 
 export const SelectItems = styled.ul`
-  max-height: 135px;
+  max-height: 195px;
   overflow-y: auto;
-  padding-bottom: 16px;
-  padding-top: 16px;
+  padding-bottom: 8px;
+  padding-top: 8px;
   position: relative;
   z-index: -1;
   background: ${white};

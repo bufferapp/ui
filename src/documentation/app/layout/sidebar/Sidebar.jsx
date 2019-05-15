@@ -8,14 +8,16 @@ import helper from 'immutability-helper';
 
 const SidebarWrapper = styled.div`
     z-index: 15;
-    flex: 0 0 auto;
     background: #F5F7F9;
     display: flex;
     flex-direction: column;
     align-items: stretch;
     width: 250px;
-    padding-left: calc((100% - 1448px) / 2);
+    overflow-x: hidden;
+    height: calc(100vh - 65px);
+    padding: 0 0 0 1rem;
     border-right: 1px solid #E6ECF1;
+    overflow-y: auto;
 `;
 
 const SidebarList = styled.ul`
@@ -26,8 +28,6 @@ const SidebarList = styled.ul`
     margin: 0px;
     padding: 0px;
     width: 100%;
-    flex: 1 1 auto;
-    overflow-y: auto;
     padding-bottom: 24px;
     font-size: 15px;
     margin-top: 32px;

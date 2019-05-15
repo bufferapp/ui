@@ -27,6 +27,7 @@ const SelectItem = ({
   hasSelectedItems,
   getItemId,
   hideSearch,
+  capitalizeItemLabel,
 }) => (
   <SelectItemStyled
     onClick={item.onItemClick || onClick}
@@ -35,6 +36,7 @@ const SelectItem = ({
     disabled={item.disabled}
   >
     <SelectItemLabel
+      capitalizeItemLabel={capitalizeItemLabel}
       hideSearch={hideSearch}
       hasSelectedItems={hasSelectedItems}
       hasComponent={item.component}
@@ -88,6 +90,9 @@ SelectItem.propTypes = {
   /** Is the item selected */
   hovered: PropTypes.bool,
 
+  /** Should capitalize Item Label */
+  capitalizeItemLabel: PropTypes.bool,
+
   /** Custom keys to used in the Items array */
   keyMap: PropTypes.shape({
     id: PropTypes.string,
@@ -110,6 +115,7 @@ SelectItem.defaultProps = {
   hasSelectedItems: undefined,
   hideSearch: undefined,
   multiSelect: undefined,
+  capitalizeItemLabel: true,
 };
 
 export default SelectItem;

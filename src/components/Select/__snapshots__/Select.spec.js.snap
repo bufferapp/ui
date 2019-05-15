@@ -23,6 +23,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -32,6 +33,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -79,6 +81,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -88,6 +91,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -135,6 +139,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -144,6 +149,65 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capitalizeItemLabel" is set to: "false" 1`] = `
+<styled.div
+  data-tip=""
+  fullWidth={true}
+  innerRef={[Function]}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    innerRef={[Function]}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul
+      innerRef={[Function]}
+    >
+      <SelectItem
+        capitalizeItemLabel={false}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -192,6 +256,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -201,6 +266,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -248,6 +314,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
   <styled.div
     fullWidth={false}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -257,6 +324,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -304,6 +372,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -313,6 +382,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -360,6 +430,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
   <styled.div
     fullWidth={true}
     hasIconOnly={false}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -369,6 +440,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -416,6 +488,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -425,9 +498,68 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={false}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInputSearch" is set to: "false" 1`] = `
+<styled.div
+  data-tip=""
+  fullWidth={true}
+  innerRef={[Function]}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    innerRef={[Function]}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul
+      innerRef={[Function]}
+    >
+      <SelectItem
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
         hovered={false}
         item={
           Object {
@@ -472,6 +604,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={false}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -481,6 +614,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -519,6 +653,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -528,6 +663,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -575,6 +711,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -584,6 +721,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -601,6 +739,64 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
           }
         }
         multiSelect={false}
+        onClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "selectPopupVisible" is set to: "false" 1`] = `
+<styled.div
+  data-tip=""
+  fullWidth={true}
+  innerRef={[Function]}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    innerRef={[Function]}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={false}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul
+      innerRef={[Function]}
+    >
+      <SelectItem
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
         onClick={[Function]}
       />
     </styled.ul>
@@ -631,6 +827,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -640,6 +837,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -687,6 +885,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   <styled.div
     fullWidth={true}
     hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
@@ -696,6 +895,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
@@ -761,6 +961,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
       innerRef={[Function]}
     >
       <SelectItem
+        capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={false}

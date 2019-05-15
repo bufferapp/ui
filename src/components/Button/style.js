@@ -160,8 +160,10 @@ export const ButtonSelect = style.div`
 export const ButtonArrow = style.div`
   padding-left: 5px;
   display: flex;
+  margin-right: -4px;
 `;
 
 export const ButtonLabel = style.div`
   margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
+  text-transform: capitalize;
 `;

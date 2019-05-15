@@ -15,7 +15,7 @@ export const SearchInput = styled.input`
     box-sizing: border-box;
     resize: none;
     font-size: 14px;
-    height: 48px;
+    height: ${props => (props.height === 'small' ? '28px' : '48px')};
     padding-left: 0px;
     &:focus {
       outline: none;

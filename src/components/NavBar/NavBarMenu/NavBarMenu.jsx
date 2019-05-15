@@ -1,20 +1,29 @@
 import React from 'react';
+import md5 from 'blueimp-md5';
 import PropTypes from 'prop-types';
 import { ChevronDown } from '../../Icon';
 import {
   NavBarStyled, NavBarEmail, NavBarName, NavBarUser, NavBarAvatar, NavBarChavron,
 } from './style';
 
+export function getUserAvatar(user) {
+  if (user.avatar) {
+    return user.avatar
+  }
+
+  return `https://www.gravatar.com/avatar/${md5(user.email)}?d=https%3A%2F%2Fs3.amazonaws.com%2Fbuffer-ui%2FDefault%2BAvatar.png`;
+}
+
 /** NavBar Menu component used by the Select component to show a custom User name and avatar
  *  button */
 const NavBarMenu = ({ user, onClick }) => (
-  <NavBarStyled>
+  <NavBarStyled onClick={onClick}>
     <NavBarUser>
       <NavBarName>{user.name}</NavBarName>
       <NavBarEmail>{user.email}</NavBarEmail>
     </NavBarUser>
-    <NavBarAvatar avatar={user.avatar} onClick={onClick} />
-    <NavBarChavron onClick={onClick}>
+    <NavBarAvatar avatar={getUserAvatar(user)} onClick={onClick} />
+    <NavBarChavron>
       <ChevronDown color="grayLight" size="large" />
     </NavBarChavron>
   </NavBarStyled>

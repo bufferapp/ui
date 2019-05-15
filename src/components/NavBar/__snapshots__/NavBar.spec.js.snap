@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" has one item: "[object Object]" 1`] = `
 <styled.nav>
   <styled.div>
     <BufferLogo />
@@ -10,11 +10,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
   </styled.div>
   <styled.div>
     <Select
+      capitalizeItemLabel={true}
       customButton={[Function]}
       hasCustomAction={false}
       hasIconOnly={false}
-      hideSearch={false}
+      hideSearch={true}
       horizontalOffset="-16px"
+      isInputSearch={false}
       isOpen={false}
       isSplit={false}
       items={
@@ -29,7 +31,290 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
         ]
       }
       label=""
+      noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
+      selectPopupVisible={true}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+    <Select
+      capitalizeItemLabel={true}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
+          },
+        ]
+      }
+      label=""
+      noResultsCustomMessage="No matches found"
+      searchPlaceholder="Search"
+      selectPopupVisible={true}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="left"
+      yPosition="bottom"
+    />
+  </styled.div>
+</styled.nav>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" is an empty array: "[]" 1`] = `
+<styled.nav>
+  <styled.div>
+    <BufferLogo />
+    <NavBarProduct
+      activeProduct="publish"
+    />
+  </styled.div>
+  <styled.div>
+    <Select
+      capitalizeItemLabel={true}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="-16px"
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={Array []}
+      label=""
+      noResultsCustomMessage="No matches found"
+      searchPlaceholder="Search"
+      selectPopupVisible={true}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+    <Select
+      capitalizeItemLabel={true}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
+          },
+        ]
+      }
+      label=""
+      noResultsCustomMessage="No matches found"
+      searchPlaceholder="Search"
+      selectPopupVisible={true}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="left"
+      yPosition="bottom"
+    />
+  </styled.div>
+</styled.nav>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`] = `
+<styled.nav>
+  <styled.div>
+    <BufferLogo />
+    <NavBarProduct
+      activeProduct="publish"
+    />
+  </styled.div>
+  <styled.div>
+    <Select
+      capitalizeItemLabel={true}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="-16px"
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      noResultsCustomMessage="No matches found"
+      searchPlaceholder="Search"
+      selectPopupVisible={true}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+    <Select
+      capitalizeItemLabel={true}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
+          },
+        ]
+      }
+      label=""
+      noResultsCustomMessage="No matches found"
+      searchPlaceholder="Search"
+      selectPopupVisible={true}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="left"
+      yPosition="bottom"
+    />
+  </styled.div>
+</styled.nav>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
+<styled.nav>
+  <styled.div>
+    <BufferLogo />
+    <NavBarProduct />
+  </styled.div>
+  <styled.div>
+    <Select
+      capitalizeItemLabel={true}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="16px"
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <ArrowLeftIcon
+              color="#B8B8B8"
+            />,
+            "id": "logout",
+            "onItemClick": [Function],
+            "title": "Logout",
+          },
+        ]
+      }
+      label=""
+      noResultsCustomMessage="No matches found"
+      searchPlaceholder="Search"
+      selectPopupVisible={true}
       shortcutsEnabled={true}
       size="medium"
       type="secondary"
