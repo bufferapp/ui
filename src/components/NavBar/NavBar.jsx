@@ -11,9 +11,23 @@ import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
 import NavBarProducts from './NavBarProducts/NavBarProducts';
 
-export function getLogoutUrl(baseUrl = '') {
+export function getProductPath(baseUrl) {
   const [, productPath] = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/);
-  return `https://login${productPath.includes('local') ? '.local' : ''}.buffer.com/logout?redirect=https://${productPath}.buffer.com`;
+  return productPath;
+}
+
+function getRedirectUrl(baseUrl) {
+  const productPath = getProductPath(baseUrl);
+  return `https://${productPath}.buffer.com`;
+}
+
+export function getLogoutUrl(baseUrl = '') {
+  const productPath = getProductPath(baseUrl);
+  return `https://login${productPath.includes('local') ? '.local' : ''}.buffer.com/logout?redirect=${getRedirectUrl(baseUrl)}`;
+}
+
+export function getAccountUrl(baseUrl = '', user) {
+  return `https://account.buffer.com?redirect=${getRedirectUrl(baseUrl)}&username=${encodeURI(user.name)}`
 }
 
 const NavBarStyled = styled.nav`
@@ -91,7 +105,10 @@ const NavBar = ({ activeProduct, user, helpMenuItems }) => (
             id: 'account',
             title: 'Account',
             icon: <PersonIcon color={gray} />,
-            onItemClick: () => { window.location.assign(`https://account.buffer.com?product=${activeProduct}&username=${encodeURI(user.name)}`); },
+            onItemClick: () => {
+              window.location.assign(getAccountUrl(window.location.href, user));
+              bbb
+            },
           })),
           ...user.menuItems,
           (appendMenuItem(user.ignoreMenuItems, {

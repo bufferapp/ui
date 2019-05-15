@@ -1,17 +1,34 @@
 import snap from 'jest-auto-snapshots';
-import NavBar, { getLogoutUrl, appendMenuItem } from './NavBar';
+import NavBar, {
+  getLogoutUrl,
+  appendMenuItem,
+  getProductPath,
+  getAccountUrl,
+} from './NavBar';
+
+describe('get productPath', () => {
+  it('return account path', () => {
+    const baseUrl = 'https://analyze.buffer.com/facebook/overview/4e88a092512f7e1556000000';
+    expect(getProductPath(baseUrl)).toBe(`analyze`);
+  });
+
+  it('return local product path', () => {
+    const baseUrl = 'https://analyze.local.buffer.com/facebook/overview/4e88a092512f7e1556000000';
+    expect(getProductPath(baseUrl)).toBe(`analyze.local`);
+  });
+});
 
 describe('Logout url', () => {
   it('return logout url', () => {
     const baseUrl = 'https://analyze.buffer.com/facebook/overview/4e88a092512f7e1556000000';
-    const productPath = 'analyze'
-    expect(getLogoutUrl(baseUrl)).toBe(`https://login${productPath.includes('local') ? '.local' : ''}.buffer.com/logout?redirect=https://${productPath}.buffer.com`);
+    expect(getLogoutUrl(baseUrl)).toBe(`https://login.buffer.com/logout?redirect=https://analyze.buffer.com`);
   });
+});
 
-  it('return local logout url', () => {
-    const baseUrl = 'https://analyze.local.buffer.com/facebook/overview/4e88a092512f7e1556000000';
-    const productPath = 'analyze.local'
-    expect(getLogoutUrl(baseUrl)).toBe(`https://login${productPath.includes('local') ? '.local' : ''}.buffer.com/logout?redirect=https://${productPath}.buffer.com`);
+describe('Account url', () => {
+  it('return account url', () => {
+    const baseUrl = 'https://analyze.buffer.com/facebook/overview/4e88a092512f7e1556000000';
+    expect(getAccountUrl(baseUrl, { name: 'foo' })).toBe(`https://account.buffer.com?redirect=https://analyze.buffer.com&username=foo`);
   });
 });
 
