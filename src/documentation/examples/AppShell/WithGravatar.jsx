@@ -1,18 +1,7 @@
 import React from 'react';
 import AppShell from '@bufferapp/ui/AppShell';
-import {
-  Gear,
-} from '@bufferapp/ui/Icon';
-
-import { gray } from '@bufferapp/ui/style/colors';
 
 const userMenuItems = [
-  {
-    id: '2',
-    title: 'Preferences',
-    icon: <Gear color={gray} />,
-    onItemClick: () => {},
-  },
 ];
 
 const helpMenuItems = [
