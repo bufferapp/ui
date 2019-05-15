@@ -1,5 +1,5 @@
 import styled from 'styled-components';
 
-export const SidebarStyled = styled.nav`
+export const SectionStyled = styled.section`
   color: red;
 `;

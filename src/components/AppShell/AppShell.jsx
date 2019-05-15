@@ -5,12 +5,7 @@ import NavBar from '../NavBar';
 import Banner from '../Banner';
 // import GlobalStyles from '../GlobalStyles';
 
-import {
-  AppShellStyled,
-  Wrapper,
-  SidebarWrapper,
-  ContentWrapper,
-} from './style';
+import { AppShellStyled, Wrapper, Section, ContentWrapper } from './style';
 
 /**
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
@@ -37,7 +32,7 @@ const AppShell = ({
       />
     )}
     <Wrapper>
-      {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
+      {sidebar && <Section>{sidebar}</Section>}
       <ContentWrapper>{content}</ContentWrapper>
     </Wrapper>
   </AppShellStyled>

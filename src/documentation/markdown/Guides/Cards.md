@@ -1,7 +1,7 @@
 # Cards
 
 ## Overview
-Cards are a simple UI element that can be used to group related content or actions and can help create clear separation between areas of the interface.
+Cards are a simple UI element that can be used to Section related content or actions and can help create clear separation between areas of the interface.
 
 ![Cards](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFNym8ScnaWKWBQFWTw%2F-LJozK0XyRhUuLn0z58k%2F-LJp0eV-SGAgYkizi6T1%2Fcard-dimensions%402x.png?alt=media&token=d8feed65-f11c-4238-8b2c-aed548f419ba)
 
@@ -12,7 +12,7 @@ Cards are a simple UI element that can be used to group related content or actio
 [Password](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFNym8ScnaWKWBQFWTw%2F-LJozK0XyRhUuLn0z58k%2F-LJp3QzyV4jrNNej5Jod%2Fcard-form-example%402x.png?alt=media&token=1babece8-c505-45bd-bc27-3c811079ba7d)
 
 <InfoCard title='Do:' color='green'>
-- Use cards as a container for content like settings groups, charts, status updates and modals.
+- Use cards as a container for content like settings Sections, charts, status updates and modals.
 </InfoCard>
 
 

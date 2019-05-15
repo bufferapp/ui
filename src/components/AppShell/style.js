@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
   height: calc(100vh - 64px);
 `;
 
-export const SidebarWrapper = styled.div`
+export const Section = styled.div`
   ${flexColumn}
   width: 248px;
 `;

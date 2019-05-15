@@ -1,18 +1,12 @@
 import React from 'react';
-
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import * as Styles from './style';
-import SidebarWrapper from './SidebarWrapper/SidebarWrapper';
-
-const SidebarStyled = styled.div`
-  ${Styles.base}
-`;
+import { SidebarStyled } from './style';
+import Section from './Section/Section';
 
 const Sidebar = ({ menuItems }) => (
   <SidebarStyled>
     {menuItems.map(item => (
-      <SidebarWrapper menuItem={item} />
+      <Section menuItem={item} />
     ))}
   </SidebarStyled>
 );
