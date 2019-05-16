@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 
 export const SidebarStyled = styled.nav`
-  color: red;
+  width: 248px;
+  border: 1px solid #000;
 `;
