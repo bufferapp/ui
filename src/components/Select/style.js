@@ -53,16 +53,13 @@ export const SelectStyled = styled.div`
 export const SelectItems = styled.ul`
   max-height: 195px;
   overflow-y: auto;
-  padding-bottom: 8px;
-  padding-top: 8px;
   position: relative;
   z-index: -1;
   background: ${white};
-  margin-block-start: 0px;
-  margin-block-end: 0px;
-  padding-inline-start: 0px;
   border-radius: 4px;
   list-style: none;
+  margin: 0;
+  padding: 8px 0;
 `;
 
 export const SelectItemDivider = styled.li`
