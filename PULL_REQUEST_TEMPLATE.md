@@ -27,4 +27,5 @@
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] All new and existing tests passed.
 - [ ] I have performed the accessibility audit of my UI changes according to the accessibility doc. <!--- Link to Accessibility Standards file coming soon. -->
+- [ ] [Buffer Engineers] Someone from the Design team reviewed and approved my changes
 - [ ] [Buffer Engineers] I have notified the BDS team of my changes in the #proj-design-system Slack channel
