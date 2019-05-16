@@ -20,7 +20,7 @@ export const AppShellStyled = styled.div`
 export const Wrapper = styled.div`
   ${flexRow}
   flex: 1;
-  height: calc(100vh - 64px);
+  overflow: auto;
 `;
 
 export const SidebarWrapper = styled.div`
