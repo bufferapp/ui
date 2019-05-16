@@ -81,60 +81,69 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
 /**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
-const NavBar = ({ activeProduct, user, helpMenuItems }) => (
-  <NavBarStyled>
-    <NavBarLeft>
-      <BufferLogo />
-      <NavBarProducts activeProduct={activeProduct} />
-    </NavBarLeft>
-    <NavBarRight>
-      {helpMenuItems && (
-        <Select
-          hideSearch
-          capitalizeItemLabel={false}
-          customButton={handleClick => (
-            <NavBarHelp onClick={handleClick}>
-              <InfoIcon />
-              <NavBarHelpText>Help</NavBarHelpText>
-            </NavBarHelp>
+class NavBar extends React.Component {
+  shouldComponentUpdate(nextProps) {
+    return nextProps.user.name !== this.props.user.name;
+  }
+
+  render() {
+    const { activeProduct, user, helpMenuItems } = this.props;
+    return (
+      <NavBarStyled>
+        <NavBarLeft>
+          <BufferLogo />
+          <NavBarProducts activeProduct={activeProduct} />
+        </NavBarLeft>
+        <NavBarRight>
+          {helpMenuItems && (
+            <Select
+              hideSearch
+              capitalizeItemLabel={false}
+              customButton={handleClick => (
+                <NavBarHelp onClick={handleClick}>
+                  <InfoIcon />
+                  <NavBarHelpText>Help</NavBarHelpText>
+                </NavBarHelp>
+              )}
+              items={helpMenuItems}
+              horizontalOffset="-16px"
+              xPosition="right"
+            />
           )}
-          items={helpMenuItems}
-          horizontalOffset="-16px"
-          xPosition="right"
-        />
-      )}
-      <Select
-        hideSearch
-        capitalizeItemLabel={false}
-        xPosition="right"
-        customButton={handleClick => (
-          <NavBarMenu user={user} onClick={handleClick} />
-        )}
-        items={[
-          appendMenuItem(user.ignoreMenuItems, {
-            id: 'account',
-            title: 'Account',
-            icon: <PersonIcon color={gray} />,
-            onItemClick: () => {
-              window.location.assign(getAccountUrl(window.location.href, user));
-            },
-          }),
-          ...user.menuItems,
-          appendMenuItem(user.ignoreMenuItems, {
-            id: 'logout',
-            title: 'Logout',
-            icon: <ArrowLeft color={gray} />,
-            hasDivider: user.menuItems && user.menuItems.length > 0,
-            onItemClick: () => {
-              window.location.assign(getLogoutUrl(window.location.href));
-            },
-          }),
-        ].filter(e => e)}
-        horizontalOffset="-16px"
-      />
-    </NavBarRight>
-  </NavBarStyled>
-);
+          <Select
+            hideSearch
+            capitalizeItemLabel={false}
+            xPosition="right"
+            customButton={handleClick => (
+              <NavBarMenu user={user} onClick={handleClick} />
+            )}
+            items={[
+              appendMenuItem(user.ignoreMenuItems, {
+                id: 'account',
+                title: 'Account',
+                icon: <PersonIcon color={gray} />,
+                onItemClick: () => {
+                  window.location.assign(getAccountUrl(window.location.href, this.props.user));
+                },
+              }),
+              ...user.menuItems,
+              appendMenuItem(user.ignoreMenuItems, {
+                id: 'logout',
+                title: 'Logout',
+                icon: <ArrowLeft color={gray} />,
+                hasDivider: user.menuItems && user.menuItems.length > 0,
+                onItemClick: () => {
+                  window.location.assign(getLogoutUrl(window.location.href));
+                },
+              }),
+            ].filter(e => e)}
+            horizontalOffset="-16px"
+          />
+        </NavBarRight>
+      </NavBarStyled>
+    );
+  }
+};
 
 NavBar.propTypes = {
   /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
