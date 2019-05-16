@@ -21,7 +21,6 @@ const ProductLink = styled.a`
   color: #fff;
   padding: 0 24px;
   font-size: 16px;
-  font-weight: ${fontWeightMedium};
   text-decoration: none;
   align-items: center;
   color: ${props => (props.active ? '#fff' : gray)};
@@ -33,6 +32,7 @@ const ProductLink = styled.a`
 `;
 
 const ProductText = styled.span`
+  font-weight: ${fontWeightMedium};
   margin-left: 8px;
 `;
 
