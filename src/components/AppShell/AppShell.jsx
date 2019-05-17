@@ -22,6 +22,7 @@ const AppShell = ({
   sidebar,
   content,
   bannerOptions,
+  onLogout,
 }) => (
   <AppShellStyled>
     {/* <GlobalStyles /> */}
@@ -29,6 +30,7 @@ const AppShell = ({
       activeProduct={activeProduct}
       user={user}
       helpMenuItems={helpMenuItems}
+      onLogout={onLogout}
     />
     {bannerOptions && (
       <Banner
@@ -56,7 +58,7 @@ AppShell.propTypes = {
   /** (Optional) Your sidebar component. */
   sidebar: PropTypes.node,
 
-  /** (Optional) Your content component. */
+  /** Your content component. */
   content: PropTypes.node.isRequired,
 
   /** (Optional) Content of banner displayed below the navbar */
@@ -68,12 +70,16 @@ AppShell.propTypes = {
     }),
     customHTML: PropTypes.shape({ __html: PropTypes.string }),
   }),
+
+  /** (Optional) Callback to be called before logout */
+  onLogout: PropTypes.func,
 };
 
 AppShell.defaultProps = {
   sidebar: null,
   activeProduct: undefined,
   bannerOptions: null,
+  onLogout: undefined,
 };
 
 export default AppShell;

@@ -87,7 +87,7 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { activeProduct, user, helpMenuItems } = this.props;
+    const { activeProduct, user, helpMenuItems, onLogout } = this.props;
     return (
       <NavBarStyled>
         <NavBarLeft>
@@ -123,7 +123,9 @@ class NavBar extends React.Component {
                 title: 'Account',
                 icon: <PersonIcon color={gray} />,
                 onItemClick: () => {
-                  window.location.assign(getAccountUrl(window.location.href, this.props.user));
+                  window.location.assign(
+                    getAccountUrl(window.location.href, this.props.user)
+                  );
                 },
               }),
               ...user.menuItems,
@@ -133,6 +135,7 @@ class NavBar extends React.Component {
                 icon: <ArrowLeft color={gray} />,
                 hasDivider: user.menuItems && user.menuItems.length > 0,
                 onItemClick: () => {
+                  if (typeof onLogout === 'function') onLogout();
                   window.location.assign(getLogoutUrl(window.location.href));
                 },
               }),
@@ -143,7 +146,7 @@ class NavBar extends React.Component {
       </NavBarStyled>
     );
   }
-};
+}
 
 NavBar.propTypes = {
   /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
@@ -175,11 +178,14 @@ NavBar.propTypes = {
       onItemClick: PropTypes.func,
     })
   ),
+
+  onLogout: PropTypes.func
 };
 
 NavBar.defaultProps = {
   activeProduct: undefined,
   helpMenuItems: null,
+  onLogout: undefined
 };
 
 export default NavBar;
