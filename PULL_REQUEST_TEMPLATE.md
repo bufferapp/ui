@@ -24,6 +24,7 @@
 - [ ] I have read the **CONTRIBUTING** document.
 - [ ] I have added tests to cover my changes.
 - [ ] I have performed a self-review of my own code
+- [ ] I have tested my changes/additions in the latest Chrome, Firefox, and Safari.
 - [ ] I have commented my code, particularly in hard-to-understand areas
 - [ ] All new and existing tests passed.
 - [ ] I have performed the accessibility audit of my UI changes according to the accessibility doc. <!--- Link to Accessibility Standards file coming soon. -->
