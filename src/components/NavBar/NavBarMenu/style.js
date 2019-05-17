@@ -34,14 +34,22 @@ export const NavBarAvatar = styled.div`
 `;
 
 export const NavBarName = styled.div`
-  font-size: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: ${white};
+  font-size: 16px;
   font-weight: ${fontWeightMedium};
+  max-width: 224px;
 `;
 
 export const NavBarEmail = styled.div`
-  font-size: ${fontSize};
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   color: ${grayLight};
+  font-size: ${fontSize};
+  max-width: 224px;
 `;
 
 export const NavBarChavron = styled.div`
