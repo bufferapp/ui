@@ -16,6 +16,10 @@ const Image = styled.img`
   ${props => Styles.image[props.type][props.size]}
 `;
 
+const Object = styled.object`
+  ${props => Styles.object[props.size]}
+`;
+
 const socialIconMap = new Map([
   ['instagram', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={instagram}>
@@ -56,12 +60,15 @@ const Avatar = ({
   size,
   isOnline,
   network,
+  fallbackUrl,
 }) => {
   const SocialIcon = network && socialIconMap.get(network);
   return (
     <Wrapper size={size}>
       {SocialIcon && <SocialIcon size={size} />}
-      <Image size={size} type={type} src={src} alt={alt} />
+      <Object data={src} size={size} type="image/jpg">
+        <Image size={size} type={type} src={fallbackUrl} alt={alt} />
+      </Object>
     </Wrapper>
   );
 };
@@ -71,6 +78,8 @@ Avatar.propTypes = {
   src: PropTypes.string.isRequired,
   /** The alt text for the avatar image. */
   alt: PropTypes.string.isRequired,
+  /** The fallback url for the avatar image. */
+  fallbackUrl: PropTypes.string,
   /** Can be `'default'` (default, plain avatar), `'status'` (online/offline indicator) or `'social'` (has social network icon from the `network` prop). */
   type: PropTypes.oneOf(['default', 'social', 'status']),
   /** Can be `'small'`, `'medium'` or `'large'` (`32px`, `40px` and `48px` respectively). */
@@ -84,6 +93,7 @@ Avatar.propTypes = {
 Avatar.defaultProps = {
   type: 'default',
   size: 'small',
+  fallbackUrl: '',
   isOnline: false,
   network: null,
 };

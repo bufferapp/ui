@@ -37,6 +37,20 @@ export const wrapper = {
   large: getWrapperCss({ size: 48 }),
 };
 
+const getObjectCss = ({ size }) => (
+  css`
+    border-radius: 100%;
+    width: ${size}px;
+    height: ${size}px;
+  `
+);
+
+export const object = {
+  small: getObjectCss({ size: 32 }),
+  medium: getObjectCss({ size: 40 }),
+  large: getObjectCss({ size: 48 }),
+};
+
 export const SocialIconWrapper = styled.div`
   position: absolute;
   bottom: 0;
