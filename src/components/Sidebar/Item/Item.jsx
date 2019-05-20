@@ -1,12 +1,13 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import { ItemStyled } from './style';
+import { ItemStyled, ItemIconWrapper } from './style';
 import Text from '../../Text/Text';
 
 const Item = ({ item }) => (
-  <ItemStyled>
-    <Text type="p">{item}</Text>
+  <ItemStyled onClick={item.onItemClick}>
+    <ItemIconWrapper>{item.icon}</ItemIconWrapper>
+    <Text type="p">{item.title}</Text>
   </ItemStyled>
 );
 
