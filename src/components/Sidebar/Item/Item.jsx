@@ -1,13 +1,26 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import { ItemStyled, ItemIconWrapper } from './style';
+import { ItemStyled } from './style';
+import {
+  CheckIconWrapper,
+  SelectItemCustom,
+} from '../../Select/SelectItem/style';
 import Text from '../../Text/Text';
 
 const Item = ({ item }) => (
   <ItemStyled onClick={item.onItemClick}>
-    <ItemIconWrapper>{item.icon}</ItemIconWrapper>
-    <Text type="p">{item.title}</Text>
+    {item.icon && <CheckIconWrapper>{item.icon}</CheckIconWrapper>}
+    {item.component && (
+      <CheckIconWrapper>
+        <SelectItemCustom
+          dangerouslySetInnerHTML={{ __html: item.component(item) }}
+        />
+      </CheckIconWrapper>
+    )}
+    <Text type="label" color="#FFFFFF">
+      {item.title}
+    </Text>
   </ItemStyled>
 );
 

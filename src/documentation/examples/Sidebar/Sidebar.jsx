@@ -12,18 +12,19 @@ export default function ExampleSidebar() {
         {
           _id: '1a',
           title: 'Inbox',
-          icon: <Person color="gray" />,
+          icon: <Person color="white" />,
           onItemClick: () => console.info('Inbox Clicked'),
         },
         {
           _id: '1b',
           title: 'Spam',
-          icon: <Person color="gray" />,
+          icon: <Person color="white" />,
           onItemClick: () => console.info('Spam Clicked'),
         },
         {
           _id: '1c',
           title: 'Assigned',
+          color: 'red',
           component: item =>
             `<div style="background: ${
               item.color

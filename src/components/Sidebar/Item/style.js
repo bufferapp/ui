@@ -4,8 +4,11 @@ export const ItemStyled = styled.li`
   list-style-type: none;
   display: flex;
   align-items: center;
-`;
-
-export const ItemIconWrapper = styled.span`
-  margin-right: 8px;
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+  }
+  cursor: pointer;
+  height: 32px;
+  border-radius: 4px;
+  padding-left: 8px;
 `;
