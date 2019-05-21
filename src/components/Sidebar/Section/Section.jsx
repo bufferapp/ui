@@ -15,7 +15,7 @@ const Section = ({ menuItem }) => (
     </TitleContainer> */}
     <StyledUnorderedList>
       {menuItem.items.map(item => (
-        <Item item={item.title} />
+        <Item item={item} />
       ))}
     </StyledUnorderedList>
   </SectionStyled>
