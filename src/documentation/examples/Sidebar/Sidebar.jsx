@@ -13,7 +13,7 @@ export default function ExampleSidebar() {
           _id: '1a',
           title: 'Inbox',
           icon: <Person color="white" />,
-          onItemClick: () => console.info('Inbox Clicked'),
+          onItemClick: item => console.info(item.title),
         },
         {
           _id: '1b',

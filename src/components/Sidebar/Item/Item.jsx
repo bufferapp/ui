@@ -9,7 +9,7 @@ import {
 import Text from '../../Text/Text';
 
 const Item = ({ item }) => (
-  <ItemStyled onClick={item.onItemClick}>
+  <ItemStyled onClick={() => item.onItemClick(item)}>
     {item.icon && <CheckIconWrapper>{item.icon}</CheckIconWrapper>}
     {item.component && (
       <CheckIconWrapper>
