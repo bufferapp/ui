@@ -7,23 +7,23 @@ export default function ExampleSidebar() {
   const mock = [
     {
       _id: '1',
-      title: 'Folders',
+      title: 'Section Header',
       items: [
         {
           _id: '1a',
-          title: 'Inbox',
+          title: 'Label Default',
           icon: <Person color="gray" />,
           onItemClick: item => console.info(item.title),
           badges: 123,
         },
         {
           _id: '1c',
-          title: 'Assigned',
-          color: 'red',
+          title: 'Label Default',
+          color: '#BFBFBF',
           component: item =>
             `<div style="background: ${
               item.color
-            }; width: 10px; height: 10px"/>`,
+            }; width: 16px; height: 16px; border-radius: 4px;"/>`,
           onItemClick: () => console.info('Assigned Clicked'),
           badges: 123,
         },

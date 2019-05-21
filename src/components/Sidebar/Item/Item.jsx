@@ -1,7 +1,7 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import { ItemStyled, Badge, NameHandleWrapper } from './style';
+import { ItemStyled, Badge, NameHandleWrapper, Handle } from './style';
 import {
   CheckIconWrapper,
   SelectItemCustom,
@@ -19,8 +19,7 @@ const Item = ({ item }) => (
         />
       </CheckIconWrapper>
     )}
-    {item.title && <Text type="label">{item.title}</Text>}
-    {item.user && (
+    {item.user ? (
       <React.Fragment>
         <Avatar
           src={item.user.profileImageUrl}
@@ -30,16 +29,15 @@ const Item = ({ item }) => (
           network="instagram"
         />
         <NameHandleWrapper>
-          <div>{item.user.name}</div>
-          <div>{item.user.handle}</div>
+          <Text type="label">{item.user.name}</Text>
+          <Handle>{item.user.handle}</Handle>
         </NameHandleWrapper>
       </React.Fragment>
+    ) : (
+      <Text type="label">{item.title}</Text>
     )}
-    {item.badges && (
-      <Badge>
-        <Text type="label">{item.badges}</Text>
-      </Badge>
-    )}
+
+    {item.badges && <Badge>{item.badges}</Badge>}
   </ItemStyled>
 );
 

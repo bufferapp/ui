@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import grayLight from '../../style/colors';
+// import grayLight from '../../style/colors';
 
 export const SectionStyled = styled.section`
-  padding: 16px 8px 0 16px;
+  padding: 40px;
 `;
 
 export const TitleContainer = styled.div`
@@ -10,8 +10,8 @@ export const TitleContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-right: 8px;
-  border-bottom: 1px solid;
-  border-bottom-color: ${grayLight};
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
 `;
 
 export const StyledUnorderedList = styled.ul`

@@ -11,13 +11,34 @@ export const ItemStyled = styled.li`
   height: 32px;
   border-radius: 4px;
   padding-left: 8px;
+  margin-top: 32px;
 `;
 
 export const Badge = styled.span`
   margin-left: auto;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: right;
+  color: #3d3d3d;
+  margin-right: 8px;
 `;
 
 export const NameHandleWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  margin-left: 16px;
+`;
+
+export const Handle = styled.span`
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.2px;
+
+  color: #636363;
 `;
