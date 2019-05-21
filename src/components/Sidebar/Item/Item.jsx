@@ -1,12 +1,13 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import { ItemStyled } from './style';
+import { ItemStyled, Badge, NameHandleWrapper } from './style';
 import {
   CheckIconWrapper,
   SelectItemCustom,
 } from '../../Select/SelectItem/style';
 import Text from '../../Text/Text';
+import Avatar from '../../Avatar/Avatar';
 
 const Item = ({ item }) => (
   <ItemStyled onClick={() => item.onItemClick(item)}>
@@ -18,9 +19,27 @@ const Item = ({ item }) => (
         />
       </CheckIconWrapper>
     )}
-    <Text type="label" color="#FFFFFF">
-      {item.title}
-    </Text>
+    {item.title && <Text type="label">{item.title}</Text>}
+    {item.user && (
+      <React.Fragment>
+        <Avatar
+          src={item.user.profileImageUrl}
+          alt={item.user.name}
+          size="small"
+          type="social"
+          network="instagram"
+        />
+        <NameHandleWrapper>
+          <div>{item.user.name}</div>
+          <div>{item.user.handle}</div>
+        </NameHandleWrapper>
+      </React.Fragment>
+    )}
+    {item.badges && (
+      <Badge>
+        <Text type="label">{item.badges}</Text>
+      </Badge>
+    )}
   </ItemStyled>
 );
 

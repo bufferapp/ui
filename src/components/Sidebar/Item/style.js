@@ -12,3 +12,12 @@ export const ItemStyled = styled.li`
   border-radius: 4px;
   padding-left: 8px;
 `;
+
+export const Badge = styled.span`
+  margin-left: auto;
+`;
+
+export const NameHandleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;

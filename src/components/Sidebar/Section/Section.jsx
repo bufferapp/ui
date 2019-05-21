@@ -1,18 +1,15 @@
 import React from 'react';
 
 import PropTypes from 'prop-types';
-import { SectionStyled, StyledUnorderedList } from './style';
-// import Text from '../../Text/Text';
+import { SectionStyled, StyledUnorderedList, TitleContainer } from './style';
+import Text from '../../Text/Text';
 import Item from '../Item/Item';
-// import ChevronDownIcon from '../../Icon/Icons/ChevronDown';
-// import gray from '../../style/colors';
 
 const Section = ({ menuItem }) => (
   <SectionStyled>
-    {/* <TitleContainer>
+    <TitleContainer>
       <Text type="label">{menuItem.title}</Text>
-      <ChevronDownIcon size="large" color={gray} />
-    </TitleContainer> */}
+    </TitleContainer>
     <StyledUnorderedList>
       {menuItem.items.map(item => (
         <Item item={item} />
