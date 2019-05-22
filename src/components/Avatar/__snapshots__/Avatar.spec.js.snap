@@ -7,18 +7,13 @@ exports[`jest-auto-snapshots > Avatar Matches snapshot when boolean prop "isOnli
   <Unknown
     size="large"
   />
-  <styled.object
-    data="jest-auto-snapshots String Fixture"
+  <styled.div
+    alt="jest-auto-snapshots String Fixture"
+    fallbackUrl="jest-auto-snapshots String Fixture"
     size="large"
-    type="image/jpg"
-  >
-    <styled.img
-      alt="jest-auto-snapshots String Fixture"
-      size="large"
-      src="jest-auto-snapshots String Fixture"
-      type="default"
-    />
-  </styled.object>
+    src="jest-auto-snapshots String Fixture"
+    type="default"
+  />
 </styled.div>
 `;
 
@@ -29,18 +24,13 @@ exports[`jest-auto-snapshots > Avatar Matches snapshot when passed all props 1`]
   <Unknown
     size="large"
   />
-  <styled.object
-    data="jest-auto-snapshots String Fixture"
+  <styled.div
+    alt="jest-auto-snapshots String Fixture"
+    fallbackUrl="jest-auto-snapshots String Fixture"
     size="large"
-    type="image/jpg"
-  >
-    <styled.img
-      alt="jest-auto-snapshots String Fixture"
-      size="large"
-      src="jest-auto-snapshots String Fixture"
-      type="default"
-    />
-  </styled.object>
+    src="jest-auto-snapshots String Fixture"
+    type="default"
+  />
 </styled.div>
 `;
 
@@ -48,17 +38,12 @@ exports[`jest-auto-snapshots > Avatar Matches snapshot when passed only required
 <styled.div
   size="small"
 >
-  <styled.object
-    data="jest-auto-snapshots String Fixture"
+  <styled.div
+    alt="jest-auto-snapshots String Fixture"
+    fallbackUrl=""
     size="small"
-    type="image/jpg"
-  >
-    <styled.img
-      alt="jest-auto-snapshots String Fixture"
-      size="small"
-      src=""
-      type="default"
-    />
-  </styled.object>
+    src="jest-auto-snapshots String Fixture"
+    type="default"
+  />
 </styled.div>
 `;
