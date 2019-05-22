@@ -12,12 +12,8 @@ const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}
 `;
 
-const Image = styled.img`
+const Image = styled.div`
   ${props => Styles.image[props.type][props.size]}
-`;
-
-const Object = styled.object`
-  ${props => Styles.object[props.size]}
 `;
 
 const socialIconMap = new Map([
@@ -66,9 +62,7 @@ const Avatar = ({
   return (
     <Wrapper size={size}>
       {SocialIcon && <SocialIcon size={size} />}
-      <Object data={src} size={size} type="image/jpg">
-        <Image size={size} type={type} src={fallbackUrl} alt={alt} />
-      </Object>
+      <Image size={size} type={type} src={src} fallbackUrl={fallbackUrl} alt={alt} />
     </Wrapper>
   );
 };

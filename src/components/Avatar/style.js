@@ -7,6 +7,8 @@ const getImageCss = ({ size, type = 'default' }) => (
     border-radius: 100%;
     -webkit-mask-size: cover;
     ${type === 'social' && `-webkit-mask-image: url(https://static.buffer.com/ui/avatar-mask-${size}.svg);`}
+    background: url(${props => props.src}) center no-repeat, url(${props => props.fallbackUrl}) center no-repeat;
+    background-size: ${size}px;
   `
 );
 
