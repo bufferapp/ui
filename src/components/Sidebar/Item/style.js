@@ -5,13 +5,15 @@ export const ItemStyled = styled.li`
   display: flex;
   align-items: center;
   &:hover {
-    background-color: rgba(0, 0, 0, 0.15);
+    background-color: ${props =>
+      props.isSelected ? '#2C4BFF' : 'rgba(0, 0, 0, 0.15)'};
   }
   cursor: pointer;
-  height: 32px;
+  height: ${props => (props.hasUser ? '48px' : '32px')};
   border-radius: 4px;
   padding-left: 8px;
   margin-top: 32px;
+  background-color: ${props => (props.isSelected ? '#2C4BFF' : 'transparent')};
 `;
 
 export const Badge = styled.span`
@@ -22,7 +24,7 @@ export const Badge = styled.span`
   font-size: 12px;
   line-height: 14px;
   text-align: right;
-  color: #3d3d3d;
+  color: ${props => (props.isSelected ? 'white' : '#3d3d3d')};
   margin-right: 8px;
 `;
 
@@ -39,6 +41,5 @@ export const Handle = styled.span`
   font-size: 12px;
   line-height: 14px;
   letter-spacing: -0.2px;
-
-  color: #636363;
+  color: ${props => (props.isSelected ? 'white' : '#636363')};
 `;

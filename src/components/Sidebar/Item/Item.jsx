@@ -10,7 +10,11 @@ import Text from '../../Text/Text';
 import Avatar from '../../Avatar/Avatar';
 
 const Item = ({ item }) => (
-  <ItemStyled onClick={() => item.onItemClick(item)}>
+  <ItemStyled
+    onClick={() => item.onItemClick(item)}
+    hasUser={item.user}
+    isSelected={item.selected}
+  >
     {item.icon && <CheckIconWrapper>{item.icon}</CheckIconWrapper>}
     {item.component && (
       <CheckIconWrapper>
@@ -29,15 +33,23 @@ const Item = ({ item }) => (
           network="instagram"
         />
         <NameHandleWrapper>
-          <Text type="label">{item.user.name}</Text>
-          <Handle>{item.user.handle}</Handle>
+          <Text
+            type="label"
+            title={item.title}
+            color={item.selected && 'white'}
+          >
+            {item.user.name}
+          </Text>
+          <Handle isSelected={item.selected}>{item.user.handle}</Handle>
         </NameHandleWrapper>
       </React.Fragment>
     ) : (
-      <Text type="label">{item.title}</Text>
+      <Text type="label" title={item.title}>
+        {item.title}
+      </Text>
     )}
 
-    {item.badges && <Badge>{item.badges}</Badge>}
+    {item.badges && <Badge isSelected={item.selected}>{item.badges}</Badge>}
   </ItemStyled>
 );
 

@@ -55,6 +55,10 @@ export const Label = styled.label`
   font-size: ${fontSize};
   font-weight: ${fontWeightMedium};
   line-height: ${lineHeight};
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: inherit;
 `;
 
 export const Help = styled.label`

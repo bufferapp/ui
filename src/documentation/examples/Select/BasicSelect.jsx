@@ -16,7 +16,6 @@ export default function ExampleSelect() {
           _id: '1',
           name: 'OpenOpenOpenOpenOpenOpenOpenOpenOpen',
           hotKeyPrompt: 'Q',
-          disabled: true,
         },
         { _id: '2', name: 'Pending' },
         { _id: '3', name: 'Closed' },
