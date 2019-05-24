@@ -32,6 +32,9 @@ export const NameHandleWrapper = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 16px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 `;
 
 export const Handle = styled.span`
@@ -42,4 +45,12 @@ export const Handle = styled.span`
   line-height: 14px;
   letter-spacing: -0.2px;
   color: ${props => (props.isSelected ? 'white' : '#636363')};
+`;
+
+export const LabelContainer = styled.div`
+  display: flex;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-right: 8px;
 `;

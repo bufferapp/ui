@@ -6,8 +6,7 @@ import { Person } from '@bufferapp/ui/Icon';
 export default function ExampleListItem() {
   const mock = {
     _id: '1a',
-    title:
-      'Label DefaultLabel DefaultLabel DefaultLabel DefaultLabel DefaultLabel DefaultLabel DefaultLabel DefaultLabel DefaultLabel DefaultLabel DefaultLabel Default',
+    title: 'Label Default',
     icon: <Person color="gray" />,
     onItemClick: item => console.info(item.title),
     badges: 123,
