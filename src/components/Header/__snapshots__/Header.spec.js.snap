@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Header Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <Text
+    color="#3D3D3D"
+    hasError={false}
+    type="label"
+  >
+    jest-auto-snapshots String Fixture
+  </Text>
+</styled.div>
+`;
