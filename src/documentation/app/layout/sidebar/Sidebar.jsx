@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronUp } from '@bufferapp/ui/Icon';
 import helper from 'immutability-helper';
 
-const Section = styled.div`
+const SidebarWrapper = styled.div`
   z-index: 15;
   background: #f5f7f9;
   display: flex;
@@ -115,7 +115,7 @@ class Sidebar extends React.Component {
     const { route } = this.props;
 
     return (
-      <Section>
+      <SidebarWrapper>
         <SidebarList>
           {navigationLinks.map(link => [
             <SidebarListItem
@@ -164,7 +164,7 @@ class Sidebar extends React.Component {
               : null,
           ])}
         </SidebarList>
-      </Section>
+      </SidebarWrapper>
     );
   }
 }
