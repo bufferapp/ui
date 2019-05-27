@@ -8,6 +8,7 @@ export default function ExampleListItem() {
     name: 'Joel Gascoigne',
     handle: '@joelgascogine',
     profileImageUrl: 'http://i.pravatar.cc/64?img=60',
+    network: 'instagram',
   };
 
   return (

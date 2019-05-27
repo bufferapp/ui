@@ -27,7 +27,7 @@ const Item = ({ title, icon, onItemClick, badges, selected, user }) => (
             alt={user.name}
             size="small"
             type="social"
-            network="instagram"
+            network={user.network}
           />
           <NameHandleWrapper>
             <Text
@@ -52,13 +52,26 @@ const Item = ({ title, icon, onItemClick, badges, selected, user }) => (
 );
 
 Item.propTypes = {
+  /** The id of the element */
   id: PropTypes.string,
+  /** What the label will say */
   title: PropTypes.string.isRequired,
+  /** An icon either from this library or a node of your choice */
   icon: PropTypes.node,
+  /** A function to perform when the item is clicked */
   onItemClick: PropTypes.func.isRequired,
+  /** A number to display at the far right side of the item */
   badges: PropTypes.number,
+  /** Whether the item is currently selected */
   selected: PropTypes.bool,
-  user: PropTypes.shape({}),
+  /** A user object if you'd like the item to display the user Avatar, social network and handle */
+  user: PropTypes.shape({
+    id: PropTypes.string,
+    name: PropTypes.string,
+    handle: PropTypes.string,
+    profileImageUrl: PropTypes.string,
+    network: PropTypes.string,
+  }),
 };
 
 Item.defaultProps = {
