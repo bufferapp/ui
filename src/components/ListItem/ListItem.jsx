@@ -30,14 +30,18 @@ const Item = ({ title, icon, onItemClick, badges, selected, user }) => (
             network="instagram"
           />
           <NameHandleWrapper>
-            <Text type="label" title={title} color={selected && 'white'}>
+            <Text
+              type="label"
+              title={title}
+              color={selected ? 'white' : undefined}
+            >
               {user.name}
             </Text>
             <Handle isSelected={selected}>{user.handle}</Handle>
           </NameHandleWrapper>
         </React.Fragment>
       ) : (
-        <Text type="label" title={title} color={selected && 'white'}>
+        <Text type="label" title={title} color={selected ? 'white' : undefined}>
           {title}
         </Text>
       )}
