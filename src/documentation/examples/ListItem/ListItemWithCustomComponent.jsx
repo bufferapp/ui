@@ -3,16 +3,22 @@ import ListItem from '@bufferapp/ui/ListItem';
 
 /** ListItem With Custom Component Example */
 export default function ExampleListItem() {
-  const mock = {
-    _id: '1c',
-    title: 'Label Default',
-    color: 'red',
-    component: item =>
-      `<div style="background: ${
-        item.color
-      }; width: 16px; height: 16px; border-radius: 4px;"/>`,
-    onItemClick: () => console.info('Assigned Clicked'),
-    badges: 123,
-  };
-  return <ListItem item={mock} />;
+  return (
+    <ListItem
+      id="1a"
+      title="Label Default"
+      icon={(
+        <div
+          style={{
+            background: 'red',
+            width: '16px',
+            height: '16px',
+            borderRadius: '4px',
+          }}
+        />
+)}
+      onItemClick={() => console.info('hey')}
+      badges={123}
+    />
+  );
 }

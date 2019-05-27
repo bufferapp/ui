@@ -4,13 +4,14 @@ import { Person } from '@bufferapp/ui/Icon';
 
 /** ListItem Selected Example */
 export default function ExampleListItem() {
-  const mock = {
-    _id: '1a',
-    title: 'Label Default',
-    icon: <Person color="gray" />,
-    onItemClick: item => console.info(item.title),
-    badges: 123,
-    selected: true,
-  };
-  return <ListItem item={mock} />;
+  return (
+    <ListItem
+      id="1a"
+      title="Label Default"
+      icon={<Person color="gray" />}
+      onItemClick={() => console.info('hey')}
+      badges={123}
+      selected
+    />
+  );
 }

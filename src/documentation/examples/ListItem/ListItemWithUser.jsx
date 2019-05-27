@@ -3,17 +3,20 @@ import ListItem from '@bufferapp/ui/ListItem';
 
 /** ListItem With User Example */
 export default function ExampleListItem() {
-  const mock = {
-    _id: '1c',
-    user: {
-      id: 'W_Lvu75KcgABAT6L',
-      name: 'Joel Gascoigne',
-      handle: '@joelgascogine',
-      profileImageUrl: 'http://i.pravatar.cc/64?img=60',
-    },
-    onItemClick: () => console.info('Assigned Clicked'),
-    badges: 123,
+  const userMock = {
+    id: 'W_Lvu75KcgABAT6L',
+    name: 'Joel Gascoigne',
+    handle: '@joelgascogine',
+    profileImageUrl: 'http://i.pravatar.cc/64?img=60',
   };
 
-  return <ListItem item={mock} />;
+  return (
+    <ListItem
+      id="1a"
+      title="Label Default"
+      onItemClick={() => console.info('hey')}
+      badges={123}
+      user={userMock}
+    />
+  );
 }

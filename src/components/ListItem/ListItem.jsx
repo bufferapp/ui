@@ -8,62 +8,61 @@ import {
   Handle,
   LabelContainer,
 } from './style';
-import { CheckIconWrapper, SelectItemCustom } from '../Select/SelectItem/style';
+import { CheckIconWrapper } from '../Select/SelectItem/style';
 import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
 
-const Item = ({ item }) => (
+const Item = ({ title, icon, onItemClick, badges, selected, user }) => (
   <ItemStyled
-    onClick={() => item.onItemClick(item)}
-    hasUser={item.user}
-    isSelected={item.selected}
+    onClick={() => onItemClick()}
+    hasUser={user}
+    isSelected={selected}
   >
-    {item.icon && <CheckIconWrapper>{item.icon}</CheckIconWrapper>}
-    {item.component && (
-      <CheckIconWrapper>
-        <SelectItemCustom
-          dangerouslySetInnerHTML={{ __html: item.component(item) }}
-        />
-      </CheckIconWrapper>
-    )}
+    {icon && <CheckIconWrapper>{icon}</CheckIconWrapper>}
     <LabelContainer>
-      {item.user ? (
+      {user ? (
         <React.Fragment>
           <Avatar
-            src={item.user.profileImageUrl}
-            alt={item.user.name}
+            src={user.profileImageUrl}
+            alt={user.name}
             size="small"
             type="social"
             network="instagram"
           />
           <NameHandleWrapper>
-            <Text
-              type="label"
-              title={item.title}
-              color={item.selected && 'white'}
-            >
-              {item.user.name}
+            <Text type="label" title={title} color={selected && 'white'}>
+              {user.name}
             </Text>
-            <Handle isSelected={item.selected}>{item.user.handle}</Handle>
+            <Handle isSelected={selected}>{user.handle}</Handle>
           </NameHandleWrapper>
         </React.Fragment>
       ) : (
-        <Text type="label" title={item.title} color={item.selected && 'white'}>
-          {item.title}
+        <Text type="label" title={title} color={selected && 'white'}>
+          {title}
         </Text>
       )}
     </LabelContainer>
 
-    {item.badges && <Badge isSelected={item.selected}>{item.badges}</Badge>}
+    {badges && <Badge isSelected={selected}>{badges}</Badge>}
   </ItemStyled>
 );
 
 Item.propTypes = {
-  item: PropTypes.string,
+  id: PropTypes.string,
+  title: PropTypes.string.isRequired,
+  icon: PropTypes.node,
+  onItemClick: PropTypes.func.isRequired,
+  badges: PropTypes.number,
+  selected: PropTypes.bool,
+  user: PropTypes.shape({}),
 };
 
 Item.defaultProps = {
-  item: '',
+  id: '',
+  icon: null,
+  badges: null,
+  selected: false,
+  user: null,
 };
 
 export default Item;
