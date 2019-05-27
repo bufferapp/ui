@@ -165,5 +165,4 @@ export const ButtonArrow = style.div`
 
 export const ButtonLabel = style.div`
   margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
-  text-transform: capitalize;
 `;
