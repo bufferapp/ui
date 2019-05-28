@@ -12,7 +12,7 @@ export const ItemStyled = styled.li`
   height: ${props => (props.hasUser ? '48px' : '32px')};
   border-radius: 4px;
   padding-left: 8px;
-  margin-top: 32px;
+  margin-top: 4px;
   background-color: ${props => (props.isSelected ? '#2C4BFF' : 'transparent')};
 `;
 
