@@ -1,11 +1,11 @@
 import React from 'react';
-import ListItem from '@bufferapp/ui/ListItem';
+import SidebarListItem from '@bufferapp/ui/SidebarListItem';
 import { Person } from '@bufferapp/ui/Icon';
 
-/** ListItem Selected Example */
-export default function ExampleListItem() {
+/** SidebarListItem Selected Example */
+export default function ExampleSidebarListItem() {
   return (
-    <ListItem
+    <SidebarListItem
       id="1a"
       title="Label Default"
       icon={<Person color="gray" />}

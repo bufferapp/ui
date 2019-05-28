@@ -4,14 +4,14 @@ import PropTypes from 'prop-types';
 import { TitleContainer } from './style';
 import Text from '../Text/Text';
 
-const Header = ({ title }) => (
+const SidebarHeader = ({ title }) => (
   <TitleContainer>
     <Text type="label">{title}</Text>
   </TitleContainer>
 );
 
-Header.propTypes = {
+SidebarHeader.propTypes = {
   title: PropTypes.string.isRequired,
 };
 
-export default Header;
+export default SidebarHeader;

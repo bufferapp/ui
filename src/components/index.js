@@ -6,5 +6,5 @@ export { default as Notification } from './Notification';
 export { default as Modal } from './Modal';
 export { default as Sidebar } from './Sidebar';
 export { default as Banner } from './Banner';
-export { default as ListItem } from './ListItem';
-export { default as Header } from './Header';
+export { default as SidebarListItem } from './SidebarListItem';
+export { default as SidebarHeader } from './SidebarHeader';

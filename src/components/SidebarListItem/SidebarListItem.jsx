@@ -12,7 +12,14 @@ import { CheckIconWrapper } from '../Select/SelectItem/style';
 import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
 
-const Item = ({ title, icon, onItemClick, badges, selected, user }) => (
+const SidebarListItem = ({
+  title,
+  icon,
+  onItemClick,
+  badges,
+  selected,
+  user,
+}) => (
   <ItemStyled
     onClick={() => onItemClick()}
     hasUser={user}
@@ -51,7 +58,7 @@ const Item = ({ title, icon, onItemClick, badges, selected, user }) => (
   </ItemStyled>
 );
 
-Item.propTypes = {
+SidebarListItem.propTypes = {
   /** The id of the element */
   id: PropTypes.string,
   /** What the label will say */
@@ -74,7 +81,7 @@ Item.propTypes = {
   }),
 };
 
-Item.defaultProps = {
+SidebarListItem.defaultProps = {
   id: '',
   icon: null,
   badges: null,
@@ -82,4 +89,4 @@ Item.defaultProps = {
   user: null,
 };
 
-export default Item;
+export default SidebarListItem;

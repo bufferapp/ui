@@ -1,10 +1,10 @@
 import React from 'react';
-import ListItem from '@bufferapp/ui/ListItem';
+import SidebarListItem from '@bufferapp/ui/SidebarListItem';
 
-/** ListItem With Custom Component Example */
-export default function ExampleListItem() {
+/** SidebarListItem With Custom Component Example */
+export default function ExampleSidebarListItem() {
   return (
-    <ListItem
+    <SidebarListItem
       id="1a"
       title="Label Default"
       icon={(

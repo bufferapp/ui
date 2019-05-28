@@ -56,7 +56,7 @@ export default class Example extends React.Component {
     const { showCode } = this.state;
     const { example, componentName, fullscreen } = this.props;
     const { code, description, title, name } = example;
-    const fileName = componentName.replace(' ', '');
+    const fileName = componentName.replace(/ /g, ''); // makes sure to replace all whitespaces
 
     // Must use CommonJS require here to dynamically require components
     // if we have the example title, that means that the example is located in a subfolder

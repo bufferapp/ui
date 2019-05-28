@@ -1,8 +1,8 @@
 import React from 'react';
-import ListItem from '@bufferapp/ui/ListItem';
+import SidebarListItem from '@bufferapp/ui/SidebarListItem';
 
-/** ListItem With User Selected Example */
-export default function ExampleListItem() {
+/** SidebarListItem With User Example */
+export default function ExampleSidebarListItem() {
   const userMock = {
     id: 'W_Lvu75KcgABAT6L',
     name: 'Joel Gascoigne',
@@ -12,13 +12,12 @@ export default function ExampleListItem() {
   };
 
   return (
-    <ListItem
+    <SidebarListItem
       id="1a"
       title="Label Default"
       onItemClick={() => console.info('hey')}
       badges={123}
       user={userMock}
-      selected
     />
   );
 }

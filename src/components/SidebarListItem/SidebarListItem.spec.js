@@ -2,6 +2,6 @@
 import snap from 'jest-auto-snapshots';
 import 'jest-styled-components';
 
-import Header from './Header';
+import SidebarListItem from './SidebarListItem';
 
-snap(Header, './Header.jsx');
+snap(SidebarListItem, './SidebarListItem.jsx');
