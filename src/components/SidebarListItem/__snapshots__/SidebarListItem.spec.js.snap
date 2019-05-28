@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > Item Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
 <styled.li
   hasUser={
     Object {
@@ -52,7 +52,7 @@ exports[`jest-auto-snapshots > Item Matches snapshot when boolean prop "selected
 </styled.li>
 `;
 
-exports[`jest-auto-snapshots > Item Matches snapshot when passed all props 1`] = `
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all props 1`] = `
 <styled.li
   hasUser={
     Object {
@@ -104,7 +104,7 @@ exports[`jest-auto-snapshots > Item Matches snapshot when passed all props 1`] =
 </styled.li>
 `;
 
-exports[`jest-auto-snapshots > Item Matches snapshot when passed only required props 1`] = `
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only required props 1`] = `
 <styled.li
   hasUser={null}
   isSelected={false}
