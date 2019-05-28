@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "3.7.4",
+  "version": "3.11.5",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -37,7 +37,6 @@
     "react": ">= 0.14.0"
   },
   "dependencies": {
-    "blueimp-md5": "^2.10.0",
     "immutability-helper": "^2.9.0",
     "react": "16.6.3",
     "react-dom": "16.6.3",

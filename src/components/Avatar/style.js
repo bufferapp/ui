@@ -7,6 +7,8 @@ const getImageCss = ({ size, type = 'default' }) => (
     border-radius: 100%;
     -webkit-mask-size: cover;
     ${type === 'social' && `-webkit-mask-image: url(https://static.buffer.com/ui/avatar-mask-${size}.svg);`}
+    background: url(${props => props.src}) center no-repeat, url(${props => props.fallbackUrl}) center no-repeat;
+    background-size: ${size}px;
   `
 );
 
@@ -35,6 +37,20 @@ export const wrapper = {
   small: getWrapperCss({ size: 32 }),
   medium: getWrapperCss({ size: 40 }),
   large: getWrapperCss({ size: 48 }),
+};
+
+const getObjectCss = ({ size }) => (
+  css`
+    border-radius: 100%;
+    width: ${size}px;
+    height: ${size}px;
+  `
+);
+
+export const object = {
+  small: getObjectCss({ size: 32 }),
+  medium: getObjectCss({ size: 40 }),
+  large: getObjectCss({ size: 48 }),
 };
 
 export const SocialIconWrapper = styled.div`

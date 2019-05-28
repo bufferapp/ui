@@ -1,19 +1,7 @@
 import React from 'react';
 import AppShell from '@bufferapp/ui/AppShell';
-import {
-  Gear,
-} from '@bufferapp/ui/Icon';
 
-import { gray } from '@bufferapp/ui/style/colors';
-
-const userMenuItems = [
-  {
-    id: '2',
-    title: 'Preferences',
-    icon: <Gear color={gray} />,
-    onItemClick: () => {},
-  },
-];
+const userMenuItems = [];
 
 const helpMenuItems = [
   {
@@ -38,7 +26,7 @@ const helpMenuItems = [
   },
 ];
 
-/** AppShell With Gravatar and no Account url */
+/** AppShell With default avatar */
 export default function ExampleAppShell() {
   return (
     <AppShell

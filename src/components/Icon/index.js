@@ -44,6 +44,7 @@ export Reply from './Icons/Reply';
 export Return from './Icons/Return';
 export Search from './Icons/Search';
 export Sidebar from './Icons/Sidebar';
+export Swap from './Icons/Swap';
 export Tag from './Icons/Tag';
 export Twitter from './Icons/Twitter';
 export Unlocked from './Icons/Unlocked';
