@@ -12,7 +12,7 @@ Cards are a simple UI element that can be used to group related content or actio
 [Password](https://blobscdn.gitbook.com/v0/b/gitbook-28427.appspot.com/o/assets%2F-LFNym8ScnaWKWBQFWTw%2F-LJozK0XyRhUuLn0z58k%2F-LJp3QzyV4jrNNej5Jod%2Fcard-form-example%402x.png?alt=media&token=1babece8-c505-45bd-bc27-3c811079ba7d)
 
 <InfoCard title='Do:' color='green'>
-- Use cards as a container for content like settings groups, charts, status updates and modals.
+- Use cards as a container for content like settings group, charts, status updates and modals.
 </InfoCard>
 
 

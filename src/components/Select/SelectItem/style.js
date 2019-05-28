@@ -68,6 +68,8 @@ export const CheckIconWrapper = styled.span`
   display: inline-block;
   height: 16px;
   width: 16px;
+  display: flex;
+  justify-content: center;
 }
 `;
 

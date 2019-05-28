@@ -1,0 +1,124 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
+<styled.li
+  hasUser={
+    Object {
+      "handle": "jest-auto-snapshots String Fixture",
+      "id": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+      "network": "jest-auto-snapshots String Fixture",
+      "profileImageUrl": "jest-auto-snapshots String Fixture",
+    }
+  }
+  isSelected={false}
+  onClick={[Function]}
+>
+  <styled.span>
+    <NodeFixture />
+  </styled.span>
+  <styled.div>
+    <React.Fragment>
+      <Avatar
+        alt="jest-auto-snapshots String Fixture"
+        isOnline={false}
+        network="jest-auto-snapshots String Fixture"
+        size="small"
+        src="jest-auto-snapshots String Fixture"
+        type="social"
+      />
+      <styled.div>
+        <Text
+          color="#3D3D3D"
+          hasError={false}
+          title="jest-auto-snapshots String Fixture"
+          type="label"
+        >
+          jest-auto-snapshots String Fixture
+        </Text>
+        <styled.span
+          isSelected={false}
+        >
+          jest-auto-snapshots String Fixture
+        </styled.span>
+      </styled.div>
+    </React.Fragment>
+  </styled.div>
+  <styled.span
+    isSelected={false}
+  >
+    1
+  </styled.span>
+</styled.li>
+`;
+
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all props 1`] = `
+<styled.li
+  hasUser={
+    Object {
+      "handle": "jest-auto-snapshots String Fixture",
+      "id": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+      "network": "jest-auto-snapshots String Fixture",
+      "profileImageUrl": "jest-auto-snapshots String Fixture",
+    }
+  }
+  isSelected={true}
+  onClick={[Function]}
+>
+  <styled.span>
+    <NodeFixture />
+  </styled.span>
+  <styled.div>
+    <React.Fragment>
+      <Avatar
+        alt="jest-auto-snapshots String Fixture"
+        isOnline={false}
+        network="jest-auto-snapshots String Fixture"
+        size="small"
+        src="jest-auto-snapshots String Fixture"
+        type="social"
+      />
+      <styled.div>
+        <Text
+          color="white"
+          hasError={false}
+          title="jest-auto-snapshots String Fixture"
+          type="label"
+        >
+          jest-auto-snapshots String Fixture
+        </Text>
+        <styled.span
+          isSelected={true}
+        >
+          jest-auto-snapshots String Fixture
+        </styled.span>
+      </styled.div>
+    </React.Fragment>
+  </styled.div>
+  <styled.span
+    isSelected={true}
+  >
+    1
+  </styled.span>
+</styled.li>
+`;
+
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only required props 1`] = `
+<styled.li
+  hasUser={null}
+  isSelected={false}
+  onClick={[Function]}
+>
+  <styled.div>
+    <Text
+      color="#3D3D3D"
+      hasError={false}
+      title="jest-auto-snapshots String Fixture"
+      type="label"
+    >
+      jest-auto-snapshots String Fixture
+    </Text>
+  </styled.div>
+</styled.li>
+`;
