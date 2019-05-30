@@ -114,7 +114,11 @@ export default class Select extends React.Component {
 
   // Close the popover
   closePopover = e => {
-    if (this.selectNode && this.selectNode.contains(e.target)) {
+    if (
+      !this.props.customButton &&
+      this.selectNode &&
+      this.selectNode.contains(e.target)
+    ) {
       return;
     }
 
