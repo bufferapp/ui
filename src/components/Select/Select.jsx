@@ -114,12 +114,9 @@ export default class Select extends React.Component {
 
   // Close the popover
   closePopover = e => {
-    if (
-      !this.props.customButton &&
-      this.selectNode &&
-      this.selectNode.contains(e.target)
-    )
+    if (this.selectNode && this.selectNode.contains(e.target)) {
       return;
+    }
 
     const { isOpen } = this.state;
 
@@ -439,7 +436,12 @@ export default class Select extends React.Component {
     }
   };
 
-  renderNoItems = (hideSearch, length, isInputSearch, noResultsCustomMessage) => {
+  renderNoItems = (
+    hideSearch,
+    length,
+    isInputSearch,
+    noResultsCustomMessage
+  ) => {
     if (length === 0 && (!hideSearch || isInputSearch)) {
       return <NoMatchesContainer>{noResultsCustomMessage}</NoMatchesContainer>;
     }
@@ -463,7 +465,7 @@ export default class Select extends React.Component {
       capitalizeItemLabel,
       isInputSearch,
       selectPopupVisible,
-      noResultsCustomMessage
+      noResultsCustomMessage,
     } = this.props;
     const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
@@ -497,7 +499,12 @@ export default class Select extends React.Component {
                 onCustomItemClick,
                 customItemLabel
               )
-            : this.renderNoItems(hideSearch, items.length, isInputSearch, noResultsCustomMessage)}
+            : this.renderNoItems(
+                hideSearch,
+                items.length,
+                isInputSearch,
+                noResultsCustomMessage
+              )}
           {}
           {items.map((item, idx) => [
             item.hasDivider && (
