@@ -21,6 +21,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
+        fallbackUrl=""
         isOnline={false}
         network="jest-auto-snapshots String Fixture"
         size="small"
@@ -73,6 +74,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
+        fallbackUrl=""
         isOnline={false}
         network="jest-auto-snapshots String Fixture"
         size="small"
