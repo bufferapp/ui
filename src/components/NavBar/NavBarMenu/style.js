@@ -11,6 +11,8 @@ export const NavBarStyled = styled.div`
   height: 100%;
   padding-left: 16px;
   padding-right: 16px;
+  position: relative;
+  z-index: 2;
   &:hover {
     background-color: ${grayLighter};
   }

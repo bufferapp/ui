@@ -53,15 +53,17 @@ const NavBarRight = styled.div`
 `;
 
 const NavBarHelp = styled.a`
-  height: 100%;
-  display: flex;
+  align-items: center;
   color: #fff;
-  padding: 0 24px;
+  color: ${props => (props.active ? blueDarker : grayDark)};
+  display: flex;
   font-size: 16px;
   font-weight: ${fontWeightMedium};
+  height: 100%;
+  padding: 0 24px;
+  position: relative;
   text-decoration: none;
-  align-items: center;
-  color: ${props => (props.active ? blueDarker : grayDark)};
+  z-index: 2;
   &:hover {
     color: ${props => (props.active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
@@ -76,10 +78,11 @@ const NavBarHelpText = styled.span`
 const NavBarVerticalRule = styled.div`
   background-color: ${grayLight};
   height: 24px;
+  margin-left: -1px;
   margin-right: -1px;
   position: relative;
-  transform: translateY(-50%);
   top: 50%;
+  transform: translateY(-50%);
   width: 1px;
   z-index: 1;
 `;
