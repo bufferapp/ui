@@ -1,5 +1,5 @@
 {
-  "lastModified": "2019-06-03T17:37:13.671884Z",
+  "lastModified": "2019-06-04T14:38:27.581451Z",
   "icons": {
     "349:774": {
       "id": "349:774",
@@ -292,20 +292,20 @@
     "575:33": {
       "id": "575:33",
       "name": "ico-publish",
-      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/93c9/0d3d/2b098716e19a0cf1b8d2617370a4927a",
-      "svgBody": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M13.9979 2V11.9992L4 2H13.9979ZM9.10453 9.69487L6.14946 6.73215H2L9.10453 13.8303V9.69487Z\" fill=\"#231F20\"/>\n</svg>\n"
+      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/ab62/13a5/5846d0a7b5d479c2e6c10c76f8d86949",
+      "svgBody": "<svg width=\"17\" height=\"16\" viewBox=\"0 0 17 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M5.61195 6.40006L9.60854 10.407V16L0 6.40006H5.61195Z\" fill=\"#231F20\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16.2265 13.5234V0H2.7049L16.2265 13.5234Z\" fill=\"black\"/>\n</svg>\n"
     },
     "575:34": {
       "id": "575:34",
       "name": "ico-reply",
-      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/f4ad/f79c/7ab218d0af44fd0ae111dcd5cff859df",
-      "svgBody": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M12.3541 2H2V12.4437L7.12755 12.4333V7.21142H12.3541V2ZM8.69557 8.77816H14V14H8.69557V8.77816Z\" fill=\"#231F20\"/>\n</svg>\n"
+      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/a75b/fc33/7b396fc0c912c1af3d63c0c0403ac698",
+      "svgBody": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path d=\"M16 9.03753H8.92739V16H16V9.03753Z\" fill=\"#231F20\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M0 0H13.8054V6.94854H6.83672V13.911L0 13.9249V0Z\" fill=\"#231F20\"/>\n</svg>\n"
     },
     "575:35": {
       "id": "575:35",
       "name": "ico-analyze",
-      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/5c07/79ca/f6971593560ad0eb0f20fad6165a8dcf",
-      "svgBody": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M8.7936 2C11.6713 2 14 4.3616 14 7.27999H8.7936V2ZM2.1672 8.71999C2.1672 5.8016 4.49589 3.44 7.37362 3.44V8.71999H12.58C12.58 11.6384 10.2513 14 7.37362 14C4.49589 14 2.1672 11.6384 2.1672 8.71999Z\" fill=\"#231F20\"/>\n</svg>\n"
+      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/ed72/6d59/45a06468819f06762c0e4965d456bbb4",
+      "svgBody": "<svg width=\"16\" height=\"17\" viewBox=\"0 0 16 17\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M7.1336 1.92676C3.28308 1.92676 0.167206 5.08667 0.167206 8.9916C0.167206 12.8965 3.28308 16.0564 7.1336 16.0564C10.9841 16.0564 14.1 12.8965 14.1 8.9916H7.1336V1.92676Z\" fill=\"#231F20\"/>\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M16 7.06484C16 3.15991 12.8841 0 9.03359 0V7.06484H16Z\" fill=\"#231F20\"/>\n</svg>\n"
     },
     "594:50": {
       "id": "594:50",
