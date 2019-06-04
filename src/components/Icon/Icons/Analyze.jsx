@@ -9,7 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const AnalyzeIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M12.882 2.632a5.894 5.894 0 0 1 1.732 4.181H8.7V.9c1.514 0 3.027.578 4.182 1.732zm-5.969.043v5.91h5.913a5.914 5.914 0 1 1-5.913-5.91z" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M8.794 2C11.67 2 14 4.362 14 7.28H8.794V2zM2.167 8.72c0-2.918 2.329-5.28 5.207-5.28v5.28h5.206c0 2.918-2.329 5.28-5.206 5.28-2.878 0-5.207-2.362-5.207-5.28z" />
     </g>
   ),
 });

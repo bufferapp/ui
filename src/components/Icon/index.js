@@ -4,6 +4,7 @@ export ArrowLeft from './Icons/ArrowLeft';
 export ArrowRight from './Icons/ArrowRight';
 export ArrowUp from './Icons/ArrowUp';
 export Attach from './Icons/Attach';
+export Buffer from './Icons/Buffer';
 export Camera from './Icons/Camera';
 export ChartLine from './Icons/ChartLine';
 export Checkmark from './Icons/Checkmark';
