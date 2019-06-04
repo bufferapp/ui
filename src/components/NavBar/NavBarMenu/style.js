@@ -1,19 +1,18 @@
 import styled from 'styled-components';
 import {
-  gray, grayDark, grayDarker, grayLight, white,
+  gray, grayDark, grayDarker, grayLight, grayLighter, white,
 } from '../../style/colors';
 import { fontSize, fontWeightMedium } from '../../style/fonts';
 
 export const NavBarStyled = styled.div`
   align-items: center;
-  border-left: 1px solid #525252;
   cursor: pointer;
   display: flex;
   height: 100%;
   padding-left: 16px;
   padding-right: 16px;
   &:hover {
-    background-color: #525252;
+    background-color: ${grayLighter};
   }
 `;
 
@@ -37,7 +36,7 @@ export const NavBarName = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: ${white};
+  color: ${grayDark};
   font-size: 16px;
   font-weight: ${fontWeightMedium};
   max-width: 224px;
@@ -47,18 +46,18 @@ export const NavBarEmail = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  color: ${grayLight};
+  color: ${gray};
   font-size: ${fontSize};
   max-width: 224px;
 `;
 
 export const NavBarChavron = styled.div`
   align-items: center;
-  background: ${grayDark};
+  background: ${white};
   border-radius: 4px;
-  box-shadow: 0 0 0 2px ${grayDarker};
+  box-shadow: 0 0 0 2px ${grayLight};
   box-sizing: border-box;
-  color: ${gray};
+  color: ${grayDarker};
   cursor: pointer;
   display: flex;
   height: 16px;
