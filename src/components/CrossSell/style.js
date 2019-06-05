@@ -38,7 +38,6 @@ export const Footer = styled.div`
 
 export const Card = styled.div`
   width: 291px;
-  height: 328px;
   background: #ffffff;
   box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
