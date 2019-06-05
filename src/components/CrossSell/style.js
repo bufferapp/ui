@@ -20,7 +20,7 @@ export const CrossSellHeader = styled.div`
 
 export const CardsContainer = styled.div`
   display: flex;
-  z-index: 1;
+  z-index: 2;
 `;
 
 export const ButtonContainer = styled.div`
@@ -47,6 +47,7 @@ export const Card = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  z-index: 1;
 `;
 
 export const CustomH3 = styled.h3`
