@@ -4,20 +4,23 @@ export const CrossSellStyled = styled.div`
   height: 100vh;
   width: 100vw;
   background-color: #f5f5f5;
-  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const CrossSellHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 582px;
   margin-top: 40px;
   text-align: center;
+  z-index: 1;
 `;
 
 export const CardsContainer = styled.div`
   display: flex;
+  z-index: 1;
 `;
 
 export const ButtonContainer = styled.div`
@@ -30,6 +33,7 @@ export const Footer = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
+  z-index: 1;
 `;
 
 export const Card = styled.div`
@@ -62,5 +66,6 @@ export const ButtonMargin = styled.div`
 export const SVGContainer = styled.div`
   width: 100%;
   position: fixed;
-  bottom: 0;
+  bottom: -4px;
+  z-index: -1;
 `;
