@@ -14,26 +14,25 @@ import {
 } from './style';
 import Text from '../Text/Text';
 import Button from '../Button/Button';
-import texts from './texts';
 
 export default class CrossSell extends React.Component {
   renderHeader = () => {
-    const { product } = this.props;
+    const { texts } = this.props;
 
     return (
       <CrossSellHeader>
-        <Text type="h1">{texts[product].title}</Text>
-        <Text type="h3">{texts[product].subtitle}</Text>
+        <Text type="h1">{texts.title}</Text>
+        <Text type="h3">{texts.subtitle}</Text>
       </CrossSellHeader>
     );
   };
 
   renderBody = () => {
-    const { product } = this.props;
+    const { texts } = this.props;
 
     return (
       <CardsContainer>
-        {texts[product].cards.map(card => (
+        {texts.cards.map(card => (
           <Card>
             <img src={card.image} alt="kitty" />
             <CustomH3>{card.title}</CustomH3>
@@ -45,7 +44,7 @@ export default class CrossSell extends React.Component {
   };
 
   renderFooter = () => {
-    const { product } = this.props;
+    const { texts } = this.props;
     return (
       <Footer>
         <ButtonContainer>
@@ -54,7 +53,7 @@ export default class CrossSell extends React.Component {
               type="primary"
               size="large"
               onClick={() => {}}
-              label={texts[product].leftButtonLabel}
+              label={texts.leftButtonLabel}
               fullWidth
             />
           </ButtonMargin>
@@ -63,12 +62,12 @@ export default class CrossSell extends React.Component {
               type="secondary"
               size="large"
               onClick={() => {}}
-              label={texts[product].rightButtonLabel}
+              label={texts.rightButtonLabel}
               fullWidth
             />
           </ButtonMargin>
         </ButtonContainer>
-        <Text type="p">{texts[product].priceTagline}</Text>
+        <Text type="p">{texts.priceTagline}</Text>
         <SVGContainer>
           <svg
             viewBox="0 0 1280 165"
@@ -97,5 +96,16 @@ export default class CrossSell extends React.Component {
 }
 
 CrossSell.propTypes = {
-  product: PropTypes.string.isRequired,
+  texts: PropTypes.shape({
+    title: PropTypes.string,
+    subtitle: PropTypes.string,
+    cards: PropTypes.shape({
+      image: PropTypes.string,
+      title: PropTypes.string,
+      description: PropTypes.string,
+    }),
+    leftButtonLabel: PropTypes.string,
+    rightButtonLabel: PropTypes.string,
+    priceTagline: PropTypes.string,
+  }).isRequired,
 };
