@@ -49,12 +49,8 @@ export const Card = styled.div`
   z-index: 1;
 `;
 
-export const CustomH3 = styled.h3`
-  font-family: Roboto;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 28px;
+export const TitleContainer = styled.div`
+  margin-top: 16px;
   margin-bottom: 8px;
 `;
 

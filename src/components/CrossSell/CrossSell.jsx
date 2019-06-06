@@ -8,9 +8,9 @@ import {
   ButtonContainer,
   Footer,
   Card,
-  CustomH3,
   ButtonMargin,
   SVGContainer,
+  TitleContainer,
 } from './style';
 import Text from '../Text/Text';
 import Button from '../Button/Button';
@@ -35,7 +35,9 @@ export default class CrossSell extends React.Component {
         {texts.cards.map(card => (
           <Card>
             <img src={card.image} alt="kitty" />
-            <CustomH3>{card.title}</CustomH3>
+            <TitleContainer>
+              <Text type="h3">{card.title}</Text>
+            </TitleContainer>
             <Text type="p">{card.description}</Text>
           </Card>
         ))}
