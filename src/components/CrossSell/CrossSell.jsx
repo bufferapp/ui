@@ -32,8 +32,8 @@ export default class CrossSell extends React.Component {
 
     return (
       <CardsContainer>
-        {texts.cards.map(card => (
-          <Card>
+        {texts.cards.map((card, idx) => (
+          <Card key={idx}>
             <img src={card.image} alt="kitty" />
             <TitleContainer>
               <Text type="h3">{card.title}</Text>
