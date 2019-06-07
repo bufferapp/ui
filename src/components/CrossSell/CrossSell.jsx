@@ -46,7 +46,8 @@ export default class CrossSell extends React.Component {
   };
 
   renderFooter = () => {
-    const { texts } = this.props;
+    const { leftButton, rightButton, priceTagline } = this.props.texts;
+
     return (
       <Footer>
         <ButtonContainer>
@@ -54,8 +55,8 @@ export default class CrossSell extends React.Component {
             <Button
               type="primary"
               size="large"
-              onClick={() => {}}
-              label={texts.leftButtonLabel}
+              onClick={leftButton.onClick}
+              label={leftButton.label}
               fullWidth
             />
           </ButtonMargin>
@@ -63,13 +64,13 @@ export default class CrossSell extends React.Component {
             <Button
               type="secondary"
               size="large"
-              onClick={() => {}}
-              label={texts.rightButtonLabel}
+              onClick={rightButton.onClick}
+              label={rightButton.label}
               fullWidth
             />
           </ButtonMargin>
         </ButtonContainer>
-        <Text type="p">{texts.priceTagline}</Text>
+        <Text type="p">{priceTagline}</Text>
         <SVGContainer>
           <svg
             viewBox="0 0 1280 165"
@@ -107,8 +108,27 @@ CrossSell.propTypes = {
         title: PropTypes.string,
         description: PropTypes.string,
     })),
-    leftButtonLabel: PropTypes.string,
-    rightButtonLabel: PropTypes.string,
+    leftButton: PropTypes.shape({
+      label: PropTypes.string,
+      onClick: PropTypes.func
+    }),
+    rightButton: PropTypes.shape({
+      label: PropTypes.string,
+      onClick: PropTypes.func
+    }),
     priceTagline: PropTypes.string,
   }).isRequired,
+};
+
+CrossSell.defaultProps = {
+  texts: {
+    leftButton: {
+      label: '',
+      onClick: () => {}
+    },
+    rightButton: {
+      label: '',
+      onClick: () => {}
+    }    
+  }
 };

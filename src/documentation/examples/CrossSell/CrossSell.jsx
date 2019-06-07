@@ -27,8 +27,14 @@ export default function ExampleCrossSell() {
           'Rules let you automatically tag or assign conversations based on specific criteria and improve your team efficiency.',
       },
     ],
-    leftButtonLabel: 'Start a 14-Day Free Trial',
-    rightButtonLabel: 'Learn More About Buffer Reply',
+    leftButton: {
+      label: 'Start a 14-Day Free Trial',
+      onClick: () => {}
+    },
+    rightButton: {
+      label: 'Learn More About Buffer Reply',
+      onClick: () => {}
+    },
     priceTagline: 'Pricing starts at $50/mo. Cancel anytime.',
   }
   return <CrossSell texts={replyMock} />;
