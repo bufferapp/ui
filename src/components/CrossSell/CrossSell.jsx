@@ -101,11 +101,12 @@ CrossSell.propTypes = {
   texts: PropTypes.shape({
     title: PropTypes.string,
     subtitle: PropTypes.string,
-    cards: PropTypes.shape({
-      image: PropTypes.string,
-      title: PropTypes.string,
-      description: PropTypes.string,
-    }),
+    cards: PropTypes.arrayOf(
+      PropTypes.shape({
+        image: PropTypes.string,
+        title: PropTypes.string,
+        description: PropTypes.string,
+    })),
     leftButtonLabel: PropTypes.string,
     rightButtonLabel: PropTypes.string,
     priceTagline: PropTypes.string,
