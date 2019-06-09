@@ -65,3 +65,7 @@ export const SVGContainer = styled.div`
   bottom: -4px;
   z-index: -1;
 `;
+
+export const CardImage = styled.img`
+  width: 100%;
+`

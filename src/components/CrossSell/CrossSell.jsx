@@ -11,6 +11,7 @@ import {
   ButtonMargin,
   SVGContainer,
   TitleContainer,
+  CardImage
 } from './style';
 import Text from '../Text/Text';
 import Button from '../Button/Button';
@@ -34,7 +35,7 @@ export default class CrossSell extends React.Component {
       <CardsContainer>
         {texts.cards.map((card, idx) => (
           <Card key={idx}>
-            <img src={card.image} alt="kitty" />
+            <CardImage src={card.image} alt={card.alt} />
             <TitleContainer>
               <Text type="h3">{card.title}</Text>
             </TitleContainer>
@@ -105,6 +106,7 @@ CrossSell.propTypes = {
     cards: PropTypes.arrayOf(
       PropTypes.shape({
         image: PropTypes.string,
+        alt: PropTypes.string,
         title: PropTypes.string,
         description: PropTypes.string,
     })),
