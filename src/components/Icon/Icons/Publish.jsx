@@ -9,7 +9,8 @@ import createIconComponent from '../utils/createIconComponent';
 const PublishIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M3.097 3.3L14.25 1.25 12.2 12.403 3.097 3.3zm4.217 10.922L1.25 8.158l3.28-.603 3.387 3.387-.603 3.28z" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M5.612 6.4l3.997 4.007V16L0 6.4h5.612z" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M16.227 13.523V0H2.705l13.522 13.523z" />
     </g>
   ),
 });

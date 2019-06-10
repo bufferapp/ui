@@ -4,6 +4,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 <styled.nav>
   <styled.div>
     <BufferLogo />
+    <styled.div />
     <NavBarProduct
       activeProduct="publish"
     />
@@ -40,6 +41,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       xPosition="right"
       yPosition="bottom"
     />
+    <styled.div />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -96,6 +98,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 <styled.nav>
   <styled.div>
     <BufferLogo />
+    <styled.div />
     <NavBarProduct
       activeProduct="publish"
     />
@@ -122,6 +125,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       xPosition="right"
       yPosition="bottom"
     />
+    <styled.div />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -178,6 +182,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
 <styled.nav>
   <styled.div>
     <BufferLogo />
+    <styled.div />
     <NavBarProduct
       activeProduct="publish"
     />
@@ -214,6 +219,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       xPosition="right"
       yPosition="bottom"
     />
+    <styled.div />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -270,9 +276,11 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
 <styled.nav>
   <styled.div>
     <BufferLogo />
+    <styled.div />
     <NavBarProduct />
   </styled.div>
   <styled.div>
+    <styled.div />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}

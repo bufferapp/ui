@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
 
-import { grayDarker, gray } from '../style/colors';
+import { gray, blueDarker, grayLight, grayLighter, grayDark, } from '../style/colors';
 import { fontWeightMedium } from '../style/fonts';
 import Select from '../Select';
 
@@ -35,11 +35,14 @@ export function getAccountUrl(baseUrl = '', user) {
 }
 
 const NavBarStyled = styled.nav`
-  height: 56px;
-  width: 100vw;
-  background: ${grayDarker};
+  background: #fff;
+  border-bottom: 1px solid ${grayLight};
+  box-shadow: 0 1px 10px -5px rgba(0,0,0,.15);
   display: flex;
+  height: 56px;
   justify-content: space-between;
+  position: relative;
+  width: 100vw;
 `;
 
 const NavBarLeft = styled.div`
@@ -50,24 +53,38 @@ const NavBarRight = styled.div`
 `;
 
 const NavBarHelp = styled.a`
-  height: 100%;
-  display: flex;
+  align-items: center;
   color: #fff;
-  padding: 0 24px;
+  color: ${props => (props.active ? blueDarker : grayDark)};
+  display: flex;
   font-size: 16px;
   font-weight: ${fontWeightMedium};
+  height: 100%;
+  padding: 0 24px;
+  position: relative;
   text-decoration: none;
-  align-items: center;
-  color: ${props => (props.active ? '#fff' : gray)};
+  z-index: 2;
   &:hover {
-    color: #fff;
-    background-color: #525252;
+    color: ${props => (props.active ? blueDarker : grayDark)};
+    background-color: ${grayLighter};
   }
   cursor: pointer;
 `;
 
 const NavBarHelpText = styled.span`
   margin-left: 8px;
+`;
+
+const NavBarVerticalRule = styled.div`
+  background-color: ${grayLight};
+  height: 24px;
+  margin-left: -1px;
+  margin-right: -1px;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  z-index: 1;
 `;
 
 export function appendMenuItem(ignoreMenuItems, menuItem) {
@@ -92,6 +109,7 @@ class NavBar extends React.Component {
       <NavBarStyled>
         <NavBarLeft>
           <BufferLogo />
+          <NavBarVerticalRule />
           <NavBarProducts activeProduct={activeProduct} />
         </NavBarLeft>
         <NavBarRight>
@@ -110,6 +128,7 @@ class NavBar extends React.Component {
               xPosition="right"
             />
           )}
+          <NavBarVerticalRule />
           <Select
             hideSearch
             capitalizeItemLabel={false}

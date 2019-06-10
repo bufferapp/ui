@@ -9,7 +9,8 @@ import createIconComponent from '../utils/createIconComponent';
 const ReplyIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M6.09 4.95L3.448 2.313 12.795 2l-4.83 4.83-6.085 6.09L0 11.04l6.09-6.09zm8.03-1.48L16 5.34l-6.09 6.09 2.641 2.637-9.346.314 4.83-4.83L14.12 3.47z" />
+      <path d="M16 9.038H8.927V16H16V9.038z" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M0 0h13.805v6.949H6.837v6.962L0 13.925V0z" />
     </g>
   ),
 });
