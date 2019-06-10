@@ -56,7 +56,7 @@ export default class CrossSell extends React.Component {
             <Button
               type="primary"
               size="large"
-              onClick={leftButton.onClick}
+              onClick={() => window.location.replace(leftButton.url)}
               label={leftButton.label}
               fullWidth
             />
@@ -65,7 +65,7 @@ export default class CrossSell extends React.Component {
             <Button
               type="secondary"
               size="large"
-              onClick={rightButton.onClick}
+              onClick={() => window.location.replace(rightButton.url)}
               label={rightButton.label}
               fullWidth
             />
@@ -112,11 +112,11 @@ CrossSell.propTypes = {
     })),
     leftButton: PropTypes.shape({
       label: PropTypes.string,
-      onClick: PropTypes.func
+      url: PropTypes.string
     }),
     rightButton: PropTypes.shape({
       label: PropTypes.string,
-      onClick: PropTypes.func
+      url: PropTypes.string
     }),
     priceTagline: PropTypes.string,
   }).isRequired,
@@ -126,11 +126,11 @@ CrossSell.defaultProps = {
   texts: {
     leftButton: {
       label: '',
-      onClick: () => {}
+      url: ''
     },
     rightButton: {
       label: '',
-      onClick: () => {}
+      url: ''
     }    
   }
 };

@@ -32,11 +32,11 @@ export default function ExampleCrossSell() {
     ],
     leftButton: {
       label: 'Start a 14-Day Free Trial',
-      onClick: () => {}
+      url: ''
     },
     rightButton: {
       label: 'Learn More About Buffer Reply',
-      onClick: () => {}
+      url: ''
     },
     priceTagline: 'Pricing starts at $50/mo. Cancel anytime.',
   }
