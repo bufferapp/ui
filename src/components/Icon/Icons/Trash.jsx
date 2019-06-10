@@ -9,8 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const TrashIcon = createIconComponent({
   content: (
     <g>
-      <path d="M4.89 13.124L4 6h8l-.89 7.124a1 1 0 0 1-.993.876H5.883a1 1 0 0 1-.993-.876zM8 4H5a1 1 0 0 0-1 1h8a1 1 0 0 0-1-1H8z" />
-      <path d="M7 4c0-1.333 2-1.333 2 0H7z" />
+      <path d="M3.91 14.1L3 5h10l-.91 9.1a1 1 0 0 1-.995.9h-6.19a1 1 0 0 1-.995-.9zM2 3a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2H3a1 1 0 0 1-1-1zM7 1.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5V2H7v-.5z" />
     </g>
   ),
 });
