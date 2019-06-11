@@ -7,8 +7,8 @@ import {
   NameHandleWrapper,
   Handle,
   LabelContainer,
+  IconContainer,
 } from './style';
-import { CheckIconWrapper } from '../Select/SelectItem/style';
 import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
 
@@ -20,12 +20,8 @@ const SidebarListItem = ({
   selected,
   user,
 }) => (
-  <ItemStyled
-    onClick={() => onItemClick()}
-    hasUser={user}
-    isSelected={selected}
-  >
-    {icon && <CheckIconWrapper>{icon}</CheckIconWrapper>}
+  <ItemStyled onClick={() => onItemClick()} hasUser={user} selected={selected}>
+    {icon && <IconContainer selected={selected}>{icon}</IconContainer>}
     <LabelContainer>
       {user ? (
         <React.Fragment>
@@ -44,7 +40,7 @@ const SidebarListItem = ({
             >
               {user.name}
             </Text>
-            <Handle isSelected={selected}>{user.handle}</Handle>
+            <Handle selected={selected}>{user.handle}</Handle>
           </NameHandleWrapper>
         </React.Fragment>
       ) : (
@@ -54,7 +50,7 @@ const SidebarListItem = ({
       )}
     </LabelContainer>
 
-    {badges && <Badge isSelected={selected}>{badges}</Badge>}
+    {badges && <Badge selected={selected}>{badges}</Badge>}
   </ItemStyled>
 );
 
@@ -85,7 +81,7 @@ SidebarListItem.defaultProps = {
   id: '',
   icon: null,
   badges: null,
-  selected: false,
+  selected: null,
   user: null,
 };
 
