@@ -14,7 +14,9 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
   isSelected={false}
   onClick={[Function]}
 >
-  <styled.span>
+  <styled.span
+    isSelected={false}
+  >
     <NodeFixture />
   </styled.span>
   <styled.div>
@@ -67,7 +69,9 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
   isSelected={true}
   onClick={[Function]}
 >
-  <styled.span>
+  <styled.span
+    isSelected={true}
+  >
     <NodeFixture />
   </styled.span>
   <styled.div>
