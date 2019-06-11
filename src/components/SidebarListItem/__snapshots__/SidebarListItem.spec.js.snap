@@ -11,11 +11,11 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
       "profileImageUrl": "jest-auto-snapshots String Fixture",
     }
   }
-  isSelected={false}
   onClick={[Function]}
+  selected={false}
 >
   <styled.span
-    isSelected={false}
+    selected={false}
   >
     <NodeFixture />
   </styled.span>
@@ -40,7 +40,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
           jest-auto-snapshots String Fixture
         </Text>
         <styled.span
-          isSelected={false}
+          selected={false}
         >
           jest-auto-snapshots String Fixture
         </styled.span>
@@ -48,7 +48,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
     </React.Fragment>
   </styled.div>
   <styled.span
-    isSelected={false}
+    selected={false}
   >
     1
   </styled.span>
@@ -66,11 +66,11 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
       "profileImageUrl": "jest-auto-snapshots String Fixture",
     }
   }
-  isSelected={true}
   onClick={[Function]}
+  selected={true}
 >
   <styled.span
-    isSelected={true}
+    selected={true}
   >
     <NodeFixture />
   </styled.span>
@@ -95,7 +95,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
           jest-auto-snapshots String Fixture
         </Text>
         <styled.span
-          isSelected={true}
+          selected={true}
         >
           jest-auto-snapshots String Fixture
         </styled.span>
@@ -103,7 +103,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
     </React.Fragment>
   </styled.div>
   <styled.span
-    isSelected={true}
+    selected={true}
   >
     1
   </styled.span>
@@ -113,8 +113,8 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only required props 1`] = `
 <styled.li
   hasUser={null}
-  isSelected={false}
   onClick={[Function]}
+  selected={null}
 >
   <styled.div>
     <Text
