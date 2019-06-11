@@ -36,7 +36,7 @@ export function getAccountUrl(baseUrl = '', user) {
 
 const NavBarStyled = styled.nav`
   background: #fff;
-  border-bottom: 1px solid ${grayLight};
+  border-bottom: 1px solid ${gray};
   box-shadow: 0 1px 10px -5px rgba(0,0,0,.15);
   display: flex;
   height: 56px;
