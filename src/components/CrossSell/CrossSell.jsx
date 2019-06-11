@@ -121,16 +121,3 @@ CrossSell.propTypes = {
     priceTagline: PropTypes.string,
   }).isRequired,
 };
-
-CrossSell.defaultProps = {
-  texts: {
-    leftButton: {
-      label: '',
-      url: ''
-    },
-    rightButton: {
-      label: '',
-      url: ''
-    }    
-  }
-};
