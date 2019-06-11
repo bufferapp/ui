@@ -3,7 +3,7 @@ import style, { css } from 'styled-components';
 import {
   grayDarker,
   blue,
-  blueDarker,
+  blueDark,
   blueLighter,
   white,
   grayDark,
@@ -67,7 +67,8 @@ export const primary = css`
   color: ${white};
   border: 1px solid ${blue};
   :hover {
-    background-color: ${blueDarker};
+    background-color: ${blueDark};
+    border-color: ${blueDark};
     color: ${white};
   }
 `;
@@ -90,7 +91,7 @@ export const link = css`
   background-color: transparent;
   color: ${blue};
   :hover {
-    color: ${blueDarker};
+    color: ${blueDark};
   }
 `;
 export const text = css`
@@ -148,7 +149,7 @@ export const ButtonSelect = style.div`
   width: 100%;
   height: 38px;
   ${ButtonStyled}:hover & {
-    background-color: ${blueDarker};
+    background-color: ${blueDark};
     color: ${white};
   }
   ${ButtonStyled}:focus & {
