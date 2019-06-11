@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { grayDarker, gray } from '../style/colors';
+import { grayDarker, gray, white, grayDark, blue } from '../style/colors';
 
 export const ItemStyled = styled.li`
   list-style-type: none;
@@ -7,13 +7,13 @@ export const ItemStyled = styled.li`
   align-items: center;
   &:hover {
     background-color: ${props =>
-      props.selected ? '#2C4BFF' : 'rgba(0, 0, 0, 0.15)'};
+      props.selected ? blue : 'rgba(0, 0, 0, 0.15)'};
   }
   cursor: pointer;
   height: ${props => (props.hasUser ? '48px' : '32px')};
   border-radius: 4px;
   padding-left: 8px;
-  background-color: ${props => (props.selected ? '#2C4BFF' : 'transparent')};
+  background-color: ${props => (props.selected ? blue : 'transparent')};
 `;
 
 export const Badge = styled.span`
@@ -24,7 +24,7 @@ export const Badge = styled.span`
   font-size: 12px;
   line-height: 14px;
   text-align: right;
-  color: ${props => (props.selected ? 'white' : '#3d3d3d')};
+  color: ${props => (props.selected ? 'white' : grayDarker)};
   margin-right: 8px;
 `;
 
@@ -44,7 +44,7 @@ export const Handle = styled.span`
   font-size: 12px;
   line-height: 14px;
   letter-spacing: -0.2px;
-  color: ${props => (props.selected ? 'white' : '#636363')};
+  color: ${props => (props.selected ? 'white' : grayDark)};
 `;
 
 export const LabelContainer = styled.div`
@@ -63,10 +63,10 @@ export const IconContainer = styled.span`
   display: flex;
   justify-content: center;
   svg {
-    fill: ${gray}};
+    fill: ${props => (props.selected ? white : gray)};
   }
   ${ItemStyled}:hover & * {
-    color: ${props => (props.selected ? gray : grayDarker)};
-    fill: ${props => (props.selected ? gray : grayDarker)};
+    color: ${props => (props.selected ? white : grayDarker)};
+    fill: ${props => (props.selected ? white : grayDarker)};
   }
 `;
