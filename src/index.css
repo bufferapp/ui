@@ -13,6 +13,7 @@ code {
   font-size: 14px;
 }
 
-p {
+p,
+h3 {
   margin: 0;
 }

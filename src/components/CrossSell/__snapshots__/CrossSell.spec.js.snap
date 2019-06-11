@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <styled.div>
+    <Text
+      color="#3D3D3D"
+      hasError={false}
+      type="h1"
+    >
+      jest-auto-snapshots String Fixture
+    </Text>
+    <Text
+      color="#3D3D3D"
+      hasError={false}
+      type="h3"
+    >
+      jest-auto-snapshots String Fixture
+    </Text>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.img
+        alt="jest-auto-snapshots String Fixture"
+        src="jest-auto-snapshots String Fixture"
+      />
+      <styled.div>
+        <Text
+          color="#3D3D3D"
+          hasError={false}
+          type="h3"
+        >
+          jest-auto-snapshots String Fixture
+        </Text>
+      </styled.div>
+      <Text
+        color="#3D3D3D"
+        hasError={false}
+        type="p"
+      >
+        jest-auto-snapshots String Fixture
+      </Text>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.div>
+        <Button
+          disabled={false}
+          fullWidth={true}
+          hasIconOnly={false}
+          hideSearch={true}
+          label="jest-auto-snapshots String Fixture"
+          loading={false}
+          onClick={[Function]}
+          selectPosition="bottom"
+          size="large"
+          type="primary"
+        />
+      </styled.div>
+      <styled.div>
+        <Button
+          disabled={false}
+          fullWidth={true}
+          hasIconOnly={false}
+          hideSearch={true}
+          label="jest-auto-snapshots String Fixture"
+          loading={false}
+          onClick={[Function]}
+          selectPosition="bottom"
+          size="large"
+          type="secondary"
+        />
+      </styled.div>
+    </styled.div>
+    <Text
+      color="#3D3D3D"
+      hasError={false}
+      type="p"
+    >
+      jest-auto-snapshots String Fixture
+    </Text>
+    <styled.div>
+      <svg
+        fill="none"
+        viewBox="0 0 1280 165"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M1364.93 523L1419 364.723C1419 364.723 1304.97 -127.978 974.074 31.9313C779.673 125.878 530.916 100.499 389.5 65.6508C95.8639 -6.70832 -53.8721 165.309 -174.355 199.539C-294.838 233.769 -335 101.25 -335 101.25V523H1364.93Z"
+          fill="white"
+        />
+      </svg>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
