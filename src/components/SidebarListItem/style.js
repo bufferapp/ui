@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { grayDarker, gray } from '../style/colors';
 
 export const ItemStyled = styled.li`
   list-style-type: none;
@@ -52,4 +53,20 @@ export const LabelContainer = styled.div`
   overflow: hidden;
   white-space: nowrap;
   margin-right: 8px;
+`;
+
+export const IconContainer = styled.span`
+  margin-right: 8px;
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  display: flex;
+  justify-content: center;
+  svg {
+    fill: ${gray}};
+  }
+  ${ItemStyled}:hover & * {
+    color: ${props => (props.isSelected ? gray : grayDarker)};
+    fill: ${props => (props.isSelected ? gray : grayDarker)};
+  }
 `;

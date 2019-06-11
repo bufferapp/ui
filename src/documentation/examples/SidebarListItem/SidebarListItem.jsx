@@ -8,7 +8,7 @@ export default function ExampleSidebarListItem() {
     <SidebarListItem
       id="1a"
       title="Label Default"
-      icon={<Person color="gray" />}
+      icon={<Person />}
       onItemClick={() => console.info('hey')}
       badges={123}
     />

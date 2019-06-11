@@ -7,8 +7,8 @@ import {
   NameHandleWrapper,
   Handle,
   LabelContainer,
+  IconContainer,
 } from './style';
-import { CheckIconWrapper } from '../Select/SelectItem/style';
 import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
 
@@ -25,7 +25,7 @@ const SidebarListItem = ({
     hasUser={user}
     isSelected={selected}
   >
-    {icon && <CheckIconWrapper>{icon}</CheckIconWrapper>}
+    {icon && <IconContainer isSelected={selected}>{icon}</IconContainer>}
     <LabelContainer>
       {user ? (
         <React.Fragment>
