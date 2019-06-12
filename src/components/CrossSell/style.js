@@ -6,7 +6,8 @@ export const CrossSellStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;
 
 export const CrossSellHeader = styled.div`
