@@ -6,7 +6,7 @@ export default function ExampleCrossSell() {
   const replyMock = {
     title: 'Provide amazing customer service on social media',
     subtitle:
-      'Resolve customer questions and engage your fans at the speed of social.',
+      'Respond to social conversations, resolve customer support requests, and create an outstanding experience.',
     cards: [
       {
         image: 'http://placekitten.com/259/167',

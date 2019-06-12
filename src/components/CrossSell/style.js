@@ -18,6 +18,10 @@ export const CrossSellHeader = styled.div`
   z-index: 1;
 `;
 
+export const SubHeaderWrapper = styled.div`
+  width: 530px;
+`
+
 export const CardsContainer = styled.div`
   display: flex;
   z-index: 2;

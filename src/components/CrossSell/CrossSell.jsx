@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import {
   CrossSellStyled,
   CrossSellHeader,
+  SubHeaderWrapper,
   CardsContainer,
   ButtonsContainer,
   ButtonWrapper,
@@ -23,7 +24,9 @@ export default class CrossSell extends React.Component {
     return (
       <CrossSellHeader>
         <Text type="h1">{texts.title}</Text>
-        <Text type="h3">{texts.subtitle}</Text>
+        <SubHeaderWrapper>
+          <Text type="h3">{texts.subtitle}</Text>
+        </SubHeaderWrapper>
       </CrossSellHeader>
     );
   };
