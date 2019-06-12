@@ -23,11 +23,15 @@ export default class Banner extends React.Component {
   renderBannerContent = () => {
     const { customHTML, text, actionButton } = this.props;
     if (customHTML) {
-      return <div dangerouslySetInnerHTML={customHTML} />; // eslint-disable-line
+      return (
+        <Wrapper>
+          <div dangerouslySetInnerHTML={customHTML} />
+        </Wrapper>
+      )
     }
     return (
       <Wrapper>
-        <Text type="label" color="#FFF">
+        <Text type="paragraph" color="#FFF">
           {text}
         </Text>
         <ButtonWrapper>
@@ -35,6 +39,7 @@ export default class Banner extends React.Component {
             type="primary"
             onClick={actionButton.action}
             label={actionButton.label}
+            size="small"
           />
         </ButtonWrapper>
       </Wrapper>
@@ -55,6 +60,7 @@ export default class Banner extends React.Component {
               hasIconOnly
               onClick={this.closeBanner}
               label="Close"
+              size="small"
             />
           </BannerCloseButton>
         </BannerStyled>
