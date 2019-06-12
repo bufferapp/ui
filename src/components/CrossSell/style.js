@@ -6,7 +6,8 @@ export const CrossSellStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;
 
 export const CrossSellHeader = styled.div`
@@ -20,6 +21,7 @@ export const CrossSellHeader = styled.div`
 
 export const SubHeaderWrapper = styled.div`
   width: 530px;
+  margin-top: 8px;
 `
 
 export const CardsContainer = styled.div`
