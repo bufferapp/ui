@@ -23,7 +23,7 @@ export const CardsContainer = styled.div`
   z-index: 2;
 `;
 
-export const ButtonContainer = styled.div`
+export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
@@ -54,9 +54,9 @@ export const TitleContainer = styled.div`
   margin-bottom: 8px;
 `;
 
-export const ButtonMargin = styled.div`
-  margin: 0 8px 16px;
-  width: 258px;
+export const ButtonWrapper = styled.div`
+  margin: 0 0 16px;
+  width: 182px;
 `;
 
 export const SVGContainer = styled.div`

@@ -5,10 +5,10 @@ import {
   CrossSellStyled,
   CrossSellHeader,
   CardsContainer,
-  ButtonContainer,
+  ButtonsContainer,
+  ButtonWrapper,
   Footer,
   Card,
-  ButtonMargin,
   SVGContainer,
   TitleContainer,
   CardImage
@@ -47,30 +47,21 @@ export default class CrossSell extends React.Component {
   };
 
   renderFooter = () => {
-    const { leftButton, rightButton, priceTagline } = this.props.texts;
+    const { button, priceTagline } = this.props.texts;
 
     return (
       <Footer>
-        <ButtonContainer>
-          <ButtonMargin>
+        <ButtonsContainer>
+          <ButtonWrapper>
             <Button
               type="primary"
               size="large"
-              onClick={() => window.location.replace(leftButton.url)}
-              label={leftButton.label}
+              onClick={() => window.location.replace(button.url)}
+              label={button.label}
               fullWidth
             />
-          </ButtonMargin>
-          <ButtonMargin>
-            <Button
-              type="secondary"
-              size="large"
-              onClick={() => window.location.replace(rightButton.url)}
-              label={rightButton.label}
-              fullWidth
-            />
-          </ButtonMargin>
-        </ButtonContainer>
+          </ButtonWrapper>
+        </ButtonsContainer>
         <Text type="p">{priceTagline}</Text>
         <SVGContainer>
           <svg
@@ -110,11 +101,7 @@ CrossSell.propTypes = {
         title: PropTypes.string,
         description: PropTypes.string,
     })),
-    leftButton: PropTypes.shape({
-      label: PropTypes.string,
-      url: PropTypes.string
-    }),
-    rightButton: PropTypes.shape({
+    button: PropTypes.shape({
       label: PropTypes.string,
       url: PropTypes.string
     }),
