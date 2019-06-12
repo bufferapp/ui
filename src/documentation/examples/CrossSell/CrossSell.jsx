@@ -4,7 +4,7 @@ import CrossSell from '@bufferapp/ui/CrossSell';
 /** CrossSell Example */
 export default function ExampleCrossSell() {
   const replyMock = {
-    title: 'Add Buffer Reply to your account?',
+    title: 'Provide amazing customer service on social media',
     subtitle:
       'Resolve customer questions and engage your fans at the speed of social.',
     cards: [
