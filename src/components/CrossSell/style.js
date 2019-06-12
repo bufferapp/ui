@@ -21,6 +21,7 @@ export const CrossSellHeader = styled.div`
 
 export const SubHeaderWrapper = styled.div`
   width: 530px;
+  margin-top: 8px;
 `
 
 export const CardsContainer = styled.div`
