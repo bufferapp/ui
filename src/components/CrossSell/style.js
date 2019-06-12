@@ -13,7 +13,7 @@ export const CrossSellHeader = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 56px;
   text-align: center;
   z-index: 1;
 `;
