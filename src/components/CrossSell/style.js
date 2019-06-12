@@ -63,13 +63,6 @@ export const ButtonWrapper = styled.div`
   width: 182px;
 `;
 
-export const SVGContainer = styled.div`
-  width: 100%;
-  position: fixed;
-  bottom: -4px;
-  z-index: -1;
-`;
-
 export const CardImage = styled.img`
   width: 100%;
 `
