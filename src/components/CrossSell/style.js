@@ -40,6 +40,7 @@ export const Footer = styled.div`
   align-items: center;
   width: 100%;
   z-index: 1;
+  margin-bottom: 56px;
 `;
 
 export const Card = styled.div`
