@@ -32,5 +32,5 @@ export const ContentWrapper = styled.div`
   ${flexColumn}
   align-items: center;
   flex: 1;
-  overflow: hidden;
+  overflow: auto;
 `;
