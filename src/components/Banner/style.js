@@ -1,17 +1,24 @@
 import styled from 'styled-components';
+import { blueDarker, orangeLighter, orangeDark } from '../style/colors';
 
 export const BannerStyled = styled.div`
   height: 64px;
   width: 100vw;
-  background: #1f35b3;
+  background: ${props => props.theme.color === 'blue' ? blueDarker : orangeLighter};
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+
+  /** Simple classes for customHTML */
+  .banner-text {
+    color: ${props => props.theme.color === 'blue' ? '#fff' : orangeDark};
+  }
 `;
 
 export const BannerCloseButton = styled.div`
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 8px;
 `;
 
 export const Wrapper = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react';
 import Banner from '@bufferapp/ui/Banner';
 
-/** Banner Example */
+/** Orange banner with customHTML */
 export default function ExampleBanner() {
-  return <Banner customHTML={{ __html: '<span>Hello there!!</span>' }} />;
+  return <Banner themeColor="orange" customHTML={{ __html: '<span class="banner-text">Hello, <b>world!</b></span>' }} />;
 }

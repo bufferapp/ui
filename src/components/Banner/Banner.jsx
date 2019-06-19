@@ -1,15 +1,18 @@
 import React from 'react';
-
+import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import Text from '../Text';
 import CrossIcon from '../Icon/Icons/Cross';
+
 import {
   BannerStyled,
   BannerCloseButton,
   Wrapper,
   ButtonWrapper,
 } from './style';
+
+import { orangeDark } from '../style/colors';
 
 export default class Banner extends React.Component {
   state = {
@@ -43,21 +46,24 @@ export default class Banner extends React.Component {
 
   render() {
     const { isOpen } = this.state;
+    const { themeColor } = this.props;
 
     if (isOpen) {
       return (
-        <BannerStyled>
-          {this.renderBannerContent()}
-          <BannerCloseButton>
-            <Button
-              type="text"
-              icon={<CrossIcon color="white" />}
-              hasIconOnly
-              onClick={this.closeBanner}
-              label="Close"
-            />
-          </BannerCloseButton>
-        </BannerStyled>
+        <ThemeProvider theme={{ color: themeColor }}>
+          <BannerStyled>
+            {this.renderBannerContent()}
+            <BannerCloseButton>
+              <Button
+                type="text"
+                icon={<CrossIcon color={themeColor === 'blue' ? '#fff' : orangeDark} />}
+                hasIconOnly
+                onClick={this.closeBanner}
+                label="Close"
+              />
+            </BannerCloseButton>
+          </BannerStyled>
+        </ThemeProvider>
       );
     }
     return null;
@@ -65,21 +71,25 @@ export default class Banner extends React.Component {
 }
 
 Banner.propTypes = {
-  /** (Optional) The main text of the banner */
+  /** The main text of the banner */
   text: PropTypes.string,
 
-  /** (Optional) The text of the Call To Action of the banner */
+  /** The text of the Call To Action of the banner */
   actionButton: PropTypes.shape({
     label: PropTypes.string,
     action: PropTypes.func,
   }),
 
-  /** (Optional) custom html */
+  /** custom html */
   customHTML: PropTypes.shape({ __html: PropTypes.string }),
+
+  /** Theme color. Can be `'blue'` or `'orange'` */
+  themeColor: PropTypes.oneOf(['blue', 'orange']),
 };
 
 Banner.defaultProps = {
   text: '',
   actionButton: {},
   customHTML: null,
+  themeColor: 'blue',
 };
