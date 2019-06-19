@@ -7,4 +7,3 @@ export { default as Modal } from './Modal';
 export { default as Banner } from './Banner';
 export { default as SidebarListItem } from './SidebarListItem';
 export { default as SidebarHeader } from './SidebarHeader';
-export { default as CrossSell } from './CrossSell';
