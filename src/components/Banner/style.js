@@ -11,6 +11,7 @@ export const BannerStyled = styled.div`
   padding-left: 8px;
   padding-right: 32px;
   position: relative;
+  box-sizing: border-box;
 `;
 
 export const BannerCloseButton = styled.div`

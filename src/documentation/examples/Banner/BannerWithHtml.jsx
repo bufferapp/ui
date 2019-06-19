@@ -10,6 +10,7 @@ export default function ExampleBanner() {
         __html:
           "<b>You're on the Business trial.</b> Complete your billing details to make the transition smooth.",
       }}
+      /* eslint-disable-next-line */
       onCloseBanner={() => console.log('Banner closed!')}
     />
   );
