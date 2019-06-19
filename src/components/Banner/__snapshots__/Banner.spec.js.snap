@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`] = `
-<styled.div>
+<styled.div
+  themeColor="blue"
+>
   <styled.div>
     <div
       dangerouslySetInnerHTML={
@@ -19,7 +21,7 @@ exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`]
       hideSearch={true}
       icon={
         <CrossIcon
-          color="white"
+          color="#fff"
         />
       }
       label="Close"

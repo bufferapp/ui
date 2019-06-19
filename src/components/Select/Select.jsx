@@ -646,7 +646,7 @@ Select.propTypes = {
   /** An array of objects containing HotKeys */
   hotKeys: PropTypes.arrayOf(
     PropTypes.shape({
-      hotKey: PropTypes.num,
+      hotKey: PropTypes.number,
       onKeyPress: PropTypes.func,
     })
   ),

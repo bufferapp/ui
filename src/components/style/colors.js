@@ -8,6 +8,9 @@ export const teal = '#00C8CF';
 export const red = '#9D2637';
 export const redLight = '#FDF2F4';
 export const orange = '#FF702C';
+export const orangeDark = '#662D12';
+export const orangeLight = '#FF9B6B';
+export const orangeLighter = '#FFC6AB';
 export const yellow = '#FADE2A';
 export const green = '#87C211';
 

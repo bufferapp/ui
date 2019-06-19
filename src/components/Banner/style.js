@@ -1,21 +1,22 @@
 import styled from 'styled-components';
-import { blueDarker } from '../style/colors';
+import { blueDarker, orangeLighter, orangeDark } from '../style/colors';
 
 export const BannerStyled = styled.div`
-  align-items: center;
-  background: ${blueDarker};
-  color: #fff;
   display: flex;
   height: 48px;
-  justify-content: center;
-  padding-left: 8px;
-  padding-right: 8px;
   width: 100vw;
+  align-items: center;
+  color: ${props => props.themeColor === 'blue' ? '#fff' : orangeDark};
+  background: ${props => props.themeColor === 'blue' ? blueDarker : orangeLighter};
+  padding-left: 8px;
+  padding-right: 32px;
+  position: relative;
+  box-sizing: border-box;
 `;
 
 export const BannerCloseButton = styled.div`
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 8px;
 `;
 
 export const Wrapper = styled.div`
