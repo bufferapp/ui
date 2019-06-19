@@ -34,8 +34,7 @@ const AppShell = ({
     />
     {bannerOptions && (
       <Banner
-        text={bannerOptions.text}
-        actionButton={bannerOptions.actionButton}
+        {...bannerOptions}
       />
     )}
     <Wrapper>
