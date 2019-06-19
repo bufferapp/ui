@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { blueDarker, orangeLighter, orangeDark } from '../style/colors';
+import { fontSize } from '../style/fonts';
 
 export const BannerStyled = styled.div`
   display: flex;
@@ -12,6 +13,7 @@ export const BannerStyled = styled.div`
   padding-right: 32px;
   position: relative;
   box-sizing: border-box;
+  font-size: ${fontSize};
 `;
 
 export const BannerCloseButton = styled.div`
