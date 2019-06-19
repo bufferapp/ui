@@ -15,8 +15,13 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
         "label": "jest-auto-snapshots String Fixture",
       }
     }
-    customHTML={null}
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
     text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
   />
   <styled.div>
     <styled.div>
