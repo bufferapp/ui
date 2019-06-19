@@ -14,6 +14,11 @@ export const BannerStyled = styled.div`
   position: relative;
   box-sizing: border-box;
   font-size: ${fontSize};
+
+  /** Style inline links */
+  a {
+    color: ${props => props.themeColor === 'blue' ? '#fff' : orangeDark};
+  }
 `;
 
 export const BannerCloseButton = styled.div`
