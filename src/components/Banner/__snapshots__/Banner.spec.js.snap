@@ -2,13 +2,15 @@
 
 exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`] = `
 <styled.div>
-  <div
-    dangerouslySetInnerHTML={
-      Object {
-        "__html": "jest-auto-snapshots String Fixture",
+  <styled.div>
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "jest-auto-snapshots String Fixture",
+        }
       }
-    }
-  />
+    />
+  </styled.div>
   <styled.div>
     <Button
       disabled={false}
@@ -24,7 +26,7 @@ exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`]
       loading={false}
       onClick={[Function]}
       selectPosition="bottom"
-      size="medium"
+      size="small"
       type="text"
     />
   </styled.div>

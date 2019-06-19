@@ -1,12 +1,16 @@
 import styled from 'styled-components';
+import { blueDarker } from '../style/colors';
 
 export const BannerStyled = styled.div`
-  height: 64px;
-  width: 100vw;
-  background: #1f35b3;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background: ${blueDarker};
+  color: #fff;
+  display: flex;
+  height: 48px;
+  justify-content: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 100vw;
 `;
 
 export const BannerCloseButton = styled.div`
@@ -16,9 +20,9 @@ export const BannerCloseButton = styled.div`
 
 export const Wrapper = styled.div`
   display: flex;
-  width: calc(100vw - 16px);
   justify-content: center;
   align-items: center;
+  flex: 1 1 auto;
 `;
 
 export const ButtonWrapper = styled.div`
