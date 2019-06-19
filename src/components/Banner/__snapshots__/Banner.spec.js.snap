@@ -1,42 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`] = `
-<ThemeProvider
-  theme={
-    Object {
-      "color": "blue",
-    }
-  }
+<styled.div
+  themeColor="blue"
 >
   <styled.div>
-    <styled.div>
-      <div
-        dangerouslySetInnerHTML={
-          Object {
-            "__html": "jest-auto-snapshots String Fixture",
-          }
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "jest-auto-snapshots String Fixture",
         }
-      />
-    </styled.div>
-    <styled.div>
-      <Button
-        disabled={false}
-        fullWidth={false}
-        hasIconOnly={true}
-        hideSearch={true}
-        icon={
-          <CrossIcon
-            color="#fff"
-          />
-        }
-        label="Close"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="small"
-        type="text"
-      />
-    </styled.div>
+      }
+    />
   </styled.div>
-</ThemeProvider>
+  <styled.div>
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={
+        <CrossIcon
+          color="#fff"
+        />
+      }
+      label="Close"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="small"
+      type="text"
+    />
+  </styled.div>
+</styled.div>
 `;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import Text from '../Text';
@@ -21,6 +20,10 @@ export default class Banner extends React.Component {
 
   closeBanner = () => {
     this.setState({ isOpen: false });
+    const { onCloseBanner } = this.props;
+    if (onCloseBanner) {
+      onCloseBanner();
+    }
   };
 
   renderBannerContent = () => {
@@ -56,21 +59,19 @@ export default class Banner extends React.Component {
 
     if (isOpen) {
       return (
-        <ThemeProvider theme={{ color: themeColor }}>
-          <BannerStyled>
-            {this.renderBannerContent()}
-            <BannerCloseButton>
-              <Button
-                type="text"
-                icon={<CrossIcon color={themeColor === 'blue' ? '#fff' : orangeDark} />}
-                hasIconOnly
-                onClick={this.closeBanner}
-                label="Close"
-                size="small"
-              />
-            </BannerCloseButton>
-          </BannerStyled>
-        </ThemeProvider>
+        <BannerStyled themeColor={themeColor}>
+          {this.renderBannerContent()}
+          <BannerCloseButton>
+            <Button
+              type="text"
+              icon={<CrossIcon color={themeColor === 'blue' ? '#fff' : orangeDark} />}
+              hasIconOnly
+              onClick={this.closeBanner}
+              label="Close"
+              size="small"
+            />
+          </BannerCloseButton>
+        </BannerStyled>
       );
     }
     return null;
@@ -87,11 +88,14 @@ Banner.propTypes = {
     action: PropTypes.func,
   }),
 
-  /** custom html */
+  /** Custom HTML */
   customHTML: PropTypes.shape({ __html: PropTypes.string }),
 
   /** Theme color. Can be `'blue'` or `'orange'` */
   themeColor: PropTypes.oneOf(['blue', 'orange']),
+
+  /** Handler when the banner closes */
+  onCloseBanner: PropTypes.func,
 };
 
 Banner.defaultProps = {
@@ -99,4 +103,5 @@ Banner.defaultProps = {
   actionButton: {},
   customHTML: null,
   themeColor: 'blue',
+  onCloseBanner: null,
 };

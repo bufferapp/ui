@@ -20,6 +20,7 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
         "__html": "jest-auto-snapshots String Fixture",
       }
     }
+    onCloseBanner={null}
     text="jest-auto-snapshots String Fixture"
     themeColor="blue"
   />

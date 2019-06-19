@@ -6,16 +6,11 @@ export const BannerStyled = styled.div`
   height: 48px;
   width: 100vw;
   align-items: center;
-  color: ${props => props.theme.color === 'blue' ? '#fff' : orangeDark};
-  background: ${props => props.theme.color === 'blue' ? blueDarker : orangeLighter};
+  color: ${props => props.themeColor === 'blue' ? '#fff' : orangeDark};
+  background: ${props => props.themeColor === 'blue' ? blueDarker : orangeLighter};
   padding-left: 8px;
   padding-right: 32px;
   position: relative;
-
-  /** Simple classes for customHTML */
-  .banner-text {
-    color: ${props => props.theme.color === 'blue' ? '#fff' : orangeDark};
-  }
 `;
 
 export const BannerCloseButton = styled.div`
