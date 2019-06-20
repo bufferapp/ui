@@ -51,8 +51,8 @@ const PublishLogo = () => (
 
 const ReplyLogo = () => (
   <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 9.03754H8.9274V16H16V9.03754Z" fill="#FF9B6B" />
-    <path fillRule="evenodd" clipRule="evenodd" d="M0 0H13.8055V6.94855H6.83673V13.911L0 13.925V0Z" fill="#132062" />
+    <path d="M16 9.03754H8.9274V16H16V9.03754Z" fill="#132062" />
+    <path fillRule="evenodd" clipRule="evenodd" d="M0 0H13.8055V6.94855H6.83673V13.911L0 13.925V0Z" fill="#FF9B6B" />
   </svg>
 );
 
