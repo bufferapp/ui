@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
+<styled.div>
+  <styled.div
+    onMouseEnter={[Function]}
+    onMouseLeave={[Function]}
+  >
+    <NodeFixture />
+  </styled.div>
+  <styled.div>
+    <styled.div
+      isVisible={false}
+    >
+      <styled.label
+        color="white"
+      >
+        jest-auto-snapshots String Fixture
+      </styled.label>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
