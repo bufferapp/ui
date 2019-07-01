@@ -22,6 +22,12 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
         isMultiline={false}
       >
         jest-auto-snapshots String Fixture
+        <styled.label
+          color="#B8B8B8"
+          isHotkey={true}
+        >
+          jest-auto-snapshots String Fixture
+        </styled.label>
       </styled.label>
     </styled.div>
   </styled.div>

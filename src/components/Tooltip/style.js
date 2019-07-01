@@ -13,7 +13,8 @@ export const Wrapper = styled.div`
 export const Label = styled.label`
   color: ${props => props.color};
   font-family: ${fontFamily};
-  font-size: ${fontSizeSmall};
+  font-size: ${props => props.isHotkey ? '10px' : fontSizeSmall};
+  margin-left: ${props => props.isHotkey ? '6px' : '0'};
   font-weight: ${fontWeight};
   line-height: ${lineHeightSmall};
   ${props => !props.isMultiline ? 'white-space: nowrap' : ''};

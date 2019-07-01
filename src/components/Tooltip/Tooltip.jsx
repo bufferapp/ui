@@ -20,7 +20,7 @@ class Tooltip extends React.Component {
     const childRect = this.childNode.getBoundingClientRect();
     const tooltipRect = this.tooltip.getBoundingClientRect();
     const gap = 8;
-    const maxWidth = 8;
+    const maxWidth = 200;
 
     switch (position) {
       case 'top': {
@@ -68,8 +68,14 @@ class Tooltip extends React.Component {
     });
   }
 
+  static renderLabel(label, hotkey) {
+    if (hotkey) {
+      return <Styles.Label color="#B8B8B8" isHotkey>{hotkey}</Styles.Label>;
+    }
+  }
+
   render() {
-    const { children, label, position } = this.props;
+    const { children, label, position, hotkey } = this.props;
     const { isVisible, isMultiline, top, left } = this.state;
 
     return (
@@ -95,6 +101,7 @@ class Tooltip extends React.Component {
                 isMultiline={isMultiline}
               >
                 {label}
+                {Tooltip.renderLabel(label, hotkey)}
               </Styles.Label>
             )}
           </Styles.TooltipStyled>
@@ -113,12 +120,16 @@ Tooltip.propTypes = {
 
   /** The tooltip position */
   position: PropTypes.string,
+
+  /** The tooltip position */
+  hotkey: PropTypes.string,
 };
 
 Tooltip.defaultProps = {
   children: undefined,
   position: 'bottom',
   label: '',
+  hotkey: '',
 };
 
 export default Tooltip;
