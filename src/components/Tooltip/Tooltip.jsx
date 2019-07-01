@@ -22,6 +22,10 @@ class Tooltip extends React.Component {
     const gap = 8;
     const maxWidth = 200;
 
+    /**
+     * Adjusting the styles according to the desired position
+     * The tooltip should be vertically or horizontally centered
+     */
     switch (position) {
       case 'top': {
         this.setState({
