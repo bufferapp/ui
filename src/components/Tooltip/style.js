@@ -16,9 +16,8 @@ export const Label = styled.label`
   font-size: ${fontSizeSmall};
   font-weight: ${fontWeight};
   line-height: ${lineHeightSmall};
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  ${props => !props.isMultiline ? 'white-space: nowrap' : ''};
+  max-width: 200px;
   cursor: inherit;
 `;
 
@@ -37,11 +36,13 @@ export const TooltipWrapperStyled = styled.div`
 export const TooltipStyled = styled.div`
   position: absolute;
   display: flex;
-  top: 8px;
   background: #3D3D3D;
   color: white;
   border: none;
   border-radius: 4px;
   padding: 0.3em 0.7em;
+  z-index: 1;
+  top: ${props => props.top ? `${props.top}`: '0'};
+  ${props => (props.position === 'left' || props.position === 'right') ? `left: ${props.left}`: ''};
   visibility: ${props => props.isVisible ? 'visible' : 'hidden'};
 `;

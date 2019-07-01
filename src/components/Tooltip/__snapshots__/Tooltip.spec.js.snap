@@ -3,6 +3,7 @@
 exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
 <styled.div>
   <styled.div
+    innerRef={[Function]}
     onMouseEnter={[Function]}
     onMouseLeave={[Function]}
   >
@@ -10,10 +11,15 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
   </styled.div>
   <styled.div>
     <styled.div
+      innerRef={[Function]}
       isVisible={false}
+      left="0"
+      position="jest-auto-snapshots String Fixture"
+      top="0"
     >
       <styled.label
         color="white"
+        isMultiline={false}
       >
         jest-auto-snapshots String Fixture
       </styled.label>
