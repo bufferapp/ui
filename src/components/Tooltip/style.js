@@ -7,7 +7,6 @@ import {
 } from '../style/fonts';
 
 export const Wrapper = styled.div`
-  width: 100%;
 `;
 
 export const Label = styled.label`
@@ -23,12 +22,11 @@ export const Label = styled.label`
 `;
 
 export const TooltipChildren = styled.div`
-  width: 100%;
 `;
 
 export const TooltipWrapperStyled = styled.div`
-  width: 100%;
-  display: flex;
+  display: inline-flex;
+  display: block;
   position: relative;
   align-items: center;
   justify-content: center;
@@ -42,8 +40,8 @@ export const TooltipStyled = styled.div`
   border: none;
   border-radius: 4px;
   padding: 0.3em 0.7em;
-  z-index: 1;
+  z-index: 9;
   top: ${props => props.top ? `${props.top}`: '0'};
-  ${props => (props.position === 'left' || props.position === 'right') ? `left: ${props.left}`: ''};
+  left: ${props => props.left ? `${props.left}`: '0'};
   visibility: ${props => props.isVisible ? 'visible' : 'hidden'};
 `;

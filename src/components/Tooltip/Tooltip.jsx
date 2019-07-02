@@ -1,12 +1,35 @@
-import React from 'react';
+import React, { Children } from 'react';
 import PropTypes from 'prop-types';
 import * as Styles from './style';
 
 class Tooltip extends React.Component {
+  /**
+   * Aligns Tooltip horizontally in relation to the child
+   *
+   * @param child prop
+   * @param tooltip element
+   * @returns left position
+   */
+  static centerHorizontally(child, tooltip) {
+    return (child.width / 2) - (tooltip.width / 2);
+  }
+
+  /**
+   * Aligns Tooltip vertically in relation to the child
+   *
+   * @param child prop
+   * @param tooltip element
+   * @returns top position
+   */
+  static centerVertically(child, tooltip) {
+    return (child.height / 2) + (tooltip.height / 2);
+  }
+
   constructor(props) {
     super(props);
 
     this.toggleTooltip = this.toggleTooltip.bind(this);
+    this.setTooltipPosition = this.setTooltipPosition.bind(this);
     this.state = {
       isVisible: false,
       isMultiline: false,
@@ -16,53 +39,77 @@ class Tooltip extends React.Component {
   }
 
   componentDidMount() {
-    const { position } = this.props;
-    const childRect = this.childNode.getBoundingClientRect();
     const tooltipRect = this.tooltip.getBoundingClientRect();
-    const gap = 8;
     const maxWidth = 200;
 
-    /**
-     * Adjusting the styles according to the desired position
-     * The tooltip should be vertically or horizontally centered
-     */
+    if (tooltipRect.width > maxWidth) {
+      this.setState({
+        isMultiline: true,
+      });
+    }
+
+    this.setTooltipPosition();
+    window.addEventListener("resize", this.setTooltipPosition);
+  }
+
+  /**
+   * Update Tooltip position if the multiline state changes,
+   * which means that the tooltip size updated.
+   */
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.isMultiline !== this.state.isMultiline) {
+      this.setTooltipPosition();
+    }
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.setTooltipPosition);
+  }
+
+  /**
+   * Adjusting the styles according to the desired position
+   * The tooltip should be vertically or horizontally centered
+   */
+  setTooltipPosition() {
+    const { position } = this.props;
+    const gap = 8;
+    const childNode = this.childNode.children;
+    const childRect = childNode[0].getBoundingClientRect();
+    const tooltipRect = this.tooltip.getBoundingClientRect();
+
     switch (position) {
       case 'top': {
         this.setState({
-          top: `-${childRect.height + (tooltipRect.height) + gap}px`
+          top: `-${childRect.height + (tooltipRect.height) + gap}px`,
+          left: `${Tooltip.centerHorizontally(childRect, tooltipRect)}px`,
         });
         break;
       }
       case 'bottom': {
         this.setState({
-          top: `${gap}px`
+          top: `${gap}px`,
+          left: `${Tooltip.centerHorizontally(childRect, tooltipRect)}px`,
         });
         break;
       }
       case 'left': {
         this.setState({
           left: `-${tooltipRect.width + gap}px`,
-          top: `-${(childRect.height/2) + (tooltipRect.height/2)}px`,
+          top: `-${Tooltip.centerVertically(childRect, tooltipRect)}px`,
         });
         break;
       }
       case 'right': {
         this.setState({
           left: `${childRect.width + gap}px`,
-          top: `-${(childRect.height/2) + (tooltipRect.height/2)}px`,
+          top: `-${Tooltip.centerVertically(childRect, tooltipRect)}px`,
         });
         break;
       }
       default:
         this.setState({
-          top: `${gap}px`
+          top: `${gap}px`,
         });
-    }
-
-    if (tooltipRect.width > maxWidth) {
-      this.setState({
-        isMultiline: true,
-      });
     }
   }
 
@@ -89,7 +136,7 @@ class Tooltip extends React.Component {
           onMouseEnter={() => this.toggleTooltip(true)}
           onMouseLeave={() => this.toggleTooltip(false)}
         >
-          {children}
+          {Children.only(children)}
         </Styles.TooltipChildren>
         <Styles.TooltipWrapperStyled>
           <Styles.TooltipStyled
@@ -116,7 +163,7 @@ class Tooltip extends React.Component {
 }
 
 Tooltip.propTypes = {
-  /** The component being wrapped */
+  /** The component being wrapped, expects a single child */
   children: PropTypes.node,
 
   /** The tooltip label */
