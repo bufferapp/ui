@@ -1,19 +1,24 @@
 import styled from 'styled-components';
 import { blueDarker, orangeLighter, orangeDark } from '../style/colors';
-import { fontSize } from '../style/fonts';
+
+import {
+  fontSize,
+  fontFamily
+} from '../style/fonts';
 
 export const BannerStyled = styled.div`
-  display: flex;
-  height: 48px;
-  width: 100vw;
   align-items: center;
-  color: ${props => props.themeColor === 'blue' ? '#fff' : orangeDark};
   background: ${props => props.themeColor === 'blue' ? blueDarker : orangeLighter};
+  box-sizing: border-box;
+  color: ${props => props.themeColor === 'blue' ? '#fff' : orangeDark};
+  display: flex;
+  font-family: ${fontFamily};
+  font-size: ${fontSize};
+  height: 48px;
   padding-left: 8px;
   padding-right: 32px;
   position: relative;
-  box-sizing: border-box;
-  font-size: ${fontSize};
+  width: 100vw;
 
   /** Style inline links */
   a {
