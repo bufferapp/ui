@@ -6,7 +6,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
 >
   <Styled(Tooltip)
     label={
-      <div>
+      <styled.div>
         <styled.label
           color="white"
         >
@@ -20,7 +20,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
             </styled.label>
           </styled.div>
         </styled.label>
-      </div>
+      </styled.div>
     }
     position={[Function]}
   >
@@ -37,9 +37,9 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only require
 >
   <Styled(Tooltip)
     label={
-      <div>
+      <styled.div>
         
-      </div>
+      </styled.div>
     }
     position={[Function]}
   >

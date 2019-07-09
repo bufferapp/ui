@@ -71,7 +71,7 @@ class Tooltip extends React.Component {
    * Rendering label with hotkey option if available
    */
   renderLabel = (label, hotkey) => (
-    <div>
+    <Styles.LabelWrapper>
       {label && (
         <Styles.Label
           color='white'
@@ -83,7 +83,7 @@ class Tooltip extends React.Component {
           </Styles.HotkeyWrapper>
         </Styles.Label>
       )}
-    </div>
+    </Styles.LabelWrapper>
   );
   
   render() {

@@ -36,3 +36,6 @@ export const HotkeyWrapper = styled.div`
   flex-direction: row;
   align-items: center;
 `;
+
+export const LabelWrapper = styled.div`
+`;
