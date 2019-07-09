@@ -38,8 +38,8 @@
   },
   "dependencies": {
     "immutability-helper": "^2.9.0",
-    "react": "16.6.3",
-    "react-dom": "16.6.3",
+    "react": "16.8.6",
+    "react-dom": "16.8.6",
     "styled-components": "3.4.10"
   },
   "devDependencies": {
@@ -116,7 +116,7 @@
     "react-docgen": "2.14.0",
     "react-hot-loader": "4.6.3",
     "react-router-dom": "4.3.1",
-    "react-test-renderer": "16.6.3",
+    "react-test-renderer": "16.8.6",
     "resolve": "1.8.1",
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
