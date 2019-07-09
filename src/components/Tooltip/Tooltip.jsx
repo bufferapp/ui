@@ -6,12 +6,22 @@ class Tooltip extends React.Component {
   constructor(props) {
     super(props);
 
+    this.setTooltipPosition = this.setTooltipPosition.bind(this);
     this.state = {
       childWidth: 0,
     };
   }
 
   componentDidMount() {
+    this.setTooltipPosition();
+    window.addEventListener("resize", this.setTooltipPosition);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("resize", this.setTooltipPosition);
+  }
+
+  setTooltipPosition() {
     const childWidth = this.tooltipWrapper.children[0].children[0].getBoundingClientRect().width;
     this.setState({
       childWidth,
