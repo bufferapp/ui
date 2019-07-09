@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import "@reach/tooltip/styles.css";
 import './index.css';
 import '../node_modules/highlight.js/styles/ocean.css';
 import { HashRouter as Router } from 'react-router-dom';

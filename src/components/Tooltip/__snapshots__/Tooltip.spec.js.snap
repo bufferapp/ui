@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
+<styled.div
+  innerRef={[Function]}
+>
+  <Styled(Tooltip)
+    label={
+      <div>
+        <styled.label
+          color="white"
+        >
+          <styled.div>
+            jest-auto-snapshots String Fixture
+            <styled.label
+              color="#B8B8B8"
+              isHotkey={true}
+            >
+              jest-auto-snapshots String Fixture
+            </styled.label>
+          </styled.div>
+        </styled.label>
+      </div>
+    }
+    position={[Function]}
+  >
+    <div>
+      <NodeFixture />
+    </div>
+  </Styled(Tooltip)>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only required props 1`] = `
+<styled.div
+  innerRef={[Function]}
+>
+  <Styled(Tooltip)
+    label={
+      <div>
+        
+      </div>
+    }
+    position={[Function]}
+  >
+    <div>
+      <NodeFixture />
+    </div>
+  </Styled(Tooltip)>
+</styled.div>
+`;
