@@ -2,7 +2,12 @@ import styled from 'styled-components';
 import {
   gray, grayDark, grayDarker, grayLight, grayLighter, white,
 } from '../../style/colors';
-import { fontSize, fontWeightMedium } from '../../style/fonts';
+
+import {
+  fontSize,
+  fontWeightMedium,
+  fontFamily
+} from '../../style/fonts';
 
 export const NavBarStyled = styled.div`
   align-items: center;
@@ -35,22 +40,24 @@ export const NavBarAvatar = styled.div`
 `;
 
 export const NavBarName = styled.div`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   color: ${grayDark};
+  font-family: ${fontFamily};
   font-size: 16px;
   font-weight: ${fontWeightMedium};
   max-width: 224px;
-`;
-
-export const NavBarEmail = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+`;
+
+export const NavBarEmail = styled.div`
   color: ${gray};
+  font-family: ${fontFamily};
   font-size: ${fontSize};
   max-width: 224px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;
 
 export const NavBarChavron = styled.div`

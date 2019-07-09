@@ -8,7 +8,10 @@ import {
   blueDarker
 } from '../../style/colors';
 
-import { fontWeightMedium } from '../../style/fonts';
+import {
+  fontWeightMedium,
+  fontFamily
+} from '../../style/fonts';
 
 const StlyedNavBarProduct = styled.nav`
   display: flex;
@@ -37,6 +40,7 @@ const ProductLink = styled.a`
 `;
 
 const ProductText = styled.span`
+  font-family: ${fontFamily};
   font-weight: ${fontWeightMedium};
   margin-left: 8px;
 `;

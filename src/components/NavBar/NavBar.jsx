@@ -4,7 +4,11 @@ import styled from 'styled-components';
 import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
 
 import { gray, blueDarker, grayLight, grayLighter, grayDark, } from '../style/colors';
-import { fontWeightMedium } from '../style/fonts';
+import {
+  fontWeightMedium,
+  fontFamily
+} from '../style/fonts';
+
 import Select from '../Select';
 
 import BufferLogo from './BufferLogo';
@@ -58,6 +62,7 @@ const NavBarHelp = styled.a`
   color: ${props => (props.active ? blueDarker : grayDark)};
   display: flex;
   font-size: 16px;
+  font-family: ${fontFamily};
   font-weight: ${fontWeightMedium};
   height: 100%;
   padding: 0 24px;
