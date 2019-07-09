@@ -22,6 +22,7 @@ class Tooltip extends React.Component {
   }
 
   setTooltipPosition() {
+    // Getting the first child width to calculate Tooltip position
     const childWidth = this.tooltipWrapper.children[0].children[0].getBoundingClientRect().width;
     this.setState({
       childWidth,
@@ -34,17 +35,33 @@ class Tooltip extends React.Component {
    */
   getTooltipPosition(triggerRect, tooltipRect, position) {
     const { childWidth } = this.state;
+    const gap = 8;
     const triggerCenter = triggerRect.left + childWidth / 2;
     const left = triggerCenter - tooltipRect.width / 2;
     const maxLeft = window.innerWidth - tooltipRect.width - 2;
+    const verticalCenter = triggerRect.top + triggerRect.height - ((triggerRect.height + tooltipRect.height) / 2) - window.scrollY;
 
     const newPosition = {
       left: Math.min(Math.max(2, left), maxLeft) + window.scrollX,
-      top: triggerRect.bottom + 8 + window.scrollY,
+      top: triggerRect.bottom + gap + window.scrollY,
     };
 
-    if (position === 'top') {
-      newPosition.top = triggerRect.top - tooltipRect.height - 8 - window.scrollY;
+    switch (position) {
+      case 'top': 
+        newPosition.top = triggerRect.top - tooltipRect.height - gap - window.scrollY;
+        break;
+
+      case 'right': 
+        newPosition.left = triggerRect.left + childWidth + gap + window.scrollX;
+        newPosition.top = verticalCenter;
+        break;
+
+      case 'left': 
+        newPosition.left = triggerRect.left - tooltipRect.width - gap - window.scrollX;
+        newPosition.top = verticalCenter;
+        break;
+
+      default:
     }
 
     return newPosition;
