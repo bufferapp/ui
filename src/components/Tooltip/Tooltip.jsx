@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '@reach/tooltip/styles.css';
 import * as Styles from './style';
 
 class Tooltip extends React.Component {
@@ -94,6 +95,7 @@ class Tooltip extends React.Component {
         <Styles.TooltipStyled
           label={this.renderLabel(label, hotkey)}
           position={(triggerRect, tooltipRect) => this.getTooltipPosition(triggerRect, tooltipRect, position)}
+          style={Styles.TooltipStyle}
         >
           <div>
             {children}

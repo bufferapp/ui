@@ -12,14 +12,17 @@ export const TooltipWrapper = styled.div`
 `;
 
 export const TooltipStyled = styled(Tooltip)`
-  background: hsla(0, 0%, 0%, 0.75);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  max-width: 200px;
-  white-space: normal;
 `;
+
+export const TooltipStyle = {
+  background: "hsla(0, 0%, 0%, 0.75)",
+  color: "white",
+  border: "none",
+  borderRadius: "4px",
+  padding: "0.5em 1em",
+  maxWidth: "200px",
+  whiteSpace: "normal",
+}
 
 export const Label = styled.label`
   color: ${props => props.color};
