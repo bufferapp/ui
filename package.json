@@ -176,7 +176,8 @@
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",
     "moduleNameMapper": {
-      "./src(.*)$": "<rootDir>/src/$1"
+      "./src(.*)$": "<rootDir>/src/$1",
+      "\\.(css|scss)$": "identity-obj-proxy"
     }
   },
   "babel": {

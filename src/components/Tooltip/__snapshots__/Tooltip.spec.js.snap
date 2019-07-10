@@ -23,6 +23,17 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
       </styled.div>
     }
     position={[Function]}
+    style={
+      Object {
+        "background": "hsla(0, 0%, 0%, 0.75)",
+        "border": "none",
+        "borderRadius": "4px",
+        "color": "white",
+        "maxWidth": "200px",
+        "padding": "0.5em 1em",
+        "whiteSpace": "normal",
+      }
+    }
   >
     <div>
       <NodeFixture />
@@ -42,6 +53,17 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only require
       </styled.div>
     }
     position={[Function]}
+    style={
+      Object {
+        "background": "hsla(0, 0%, 0%, 0.75)",
+        "border": "none",
+        "borderRadius": "4px",
+        "color": "white",
+        "maxWidth": "200px",
+        "padding": "0.5em 1em",
+        "whiteSpace": "normal",
+      }
+    }
   >
     <div>
       <NodeFixture />

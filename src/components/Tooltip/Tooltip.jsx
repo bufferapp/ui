@@ -88,8 +88,13 @@ class Tooltip extends React.Component {
   );
   
   render() {
-  const { children, label, position, hotkey } = this.props;
-  
+    const { children, label, position, hotkey } = this.props;
+    
+    // @todo: remove style from here and use the Styled component
+    // We are currently adding the stylings with the style tag,
+    // instead of the adding it in the Styled component
+    // because we still need to figure out a way to load the css file
+    // properly, and being able to use our customs styles.
     return (
       <Styles.TooltipWrapper innerRef={node => this.tooltipWrapper = node}>
         <Styles.TooltipStyled
