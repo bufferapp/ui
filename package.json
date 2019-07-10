@@ -177,7 +177,7 @@
     "testURL": "http://localhost",
     "moduleNameMapper": {
       "./src(.*)$": "<rootDir>/src/$1",
-      "\\.(css|scss)$": "identity-obj-proxy"
+      "\\.(css|scss)$": "<rootDir>/node_modules/@reach/tooltip/index.js"
     }
   },
   "babel": {
