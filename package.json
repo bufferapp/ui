@@ -37,6 +37,7 @@
     "react": ">= 0.14.0"
   },
   "dependencies": {
+    "@reach/tooltip": "0.2.2",
     "immutability-helper": "^2.9.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
@@ -175,7 +176,8 @@
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",
     "moduleNameMapper": {
-      "./src(.*)$": "<rootDir>/src/$1"
+      "./src(.*)$": "<rootDir>/src/$1",
+      "\\/tooltip/styles.(css|scss)$": "identity-obj-proxy"
     }
   },
   "babel": {

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
+<styled.div
+  innerRef={[Function]}
+>
+  <Styled(Tooltip)
+    label={
+      <styled.div>
+        <styled.label
+          color="white"
+        >
+          <styled.div>
+            jest-auto-snapshots String Fixture
+            <styled.label
+              color="#B8B8B8"
+              isHotkey={true}
+            >
+              jest-auto-snapshots String Fixture
+            </styled.label>
+          </styled.div>
+        </styled.label>
+      </styled.div>
+    }
+    position={[Function]}
+    style={
+      Object {
+        "background": "hsla(0, 0%, 0%, 0.75)",
+        "border": "none",
+        "borderRadius": "4px",
+        "color": "white",
+        "maxWidth": "200px",
+        "padding": "0.5em 1em",
+        "whiteSpace": "normal",
+      }
+    }
+  >
+    <div>
+      <NodeFixture />
+    </div>
+  </Styled(Tooltip)>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only required props 1`] = `
+<styled.div
+  innerRef={[Function]}
+>
+  <Styled(Tooltip)
+    label={
+      <styled.div>
+        
+      </styled.div>
+    }
+    position={[Function]}
+    style={
+      Object {
+        "background": "hsla(0, 0%, 0%, 0.75)",
+        "border": "none",
+        "borderRadius": "4px",
+        "color": "white",
+        "maxWidth": "200px",
+        "padding": "0.5em 1em",
+        "whiteSpace": "normal",
+      }
+    }
+  >
+    <div>
+      <NodeFixture />
+    </div>
+  </Styled(Tooltip)>
+</styled.div>
+`;
