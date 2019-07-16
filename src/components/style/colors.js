@@ -33,3 +33,39 @@ export const pinterest = '#bd081c';
 export const twitter = '#55acee';
 
 export const transparent = 'transparent';
+
+const colors = {
+  blue,
+  blueDark,
+  blueDarker,
+  blueLighter,
+  purple,
+  pink,
+  teal,
+  red,
+  redLight,
+  orange,
+  orangeDark,
+  orangeLight,
+  orangeLighter,
+  yellow,
+  green,
+  white,
+  grayLighter,
+  grayLight,
+  gray,
+  grayDark,
+  grayDarker,
+  grayDefault,
+  boxShadow,
+  grayShadow,
+  facebook,
+  googleplus,
+  instagram,
+  linkedin,
+  pinterest,
+  twitter,
+  transparent,
+};
+
+export default colors;
