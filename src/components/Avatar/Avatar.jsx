@@ -81,7 +81,7 @@ Avatar.propTypes = {
   /** Makes the status indictor green when `true`. Only applicable when `{ type: 'status' }` */
   isOnline: PropTypes.bool,
   /** Name of social network icon to overlay. (E.g., `'instagram'`). Only applicable when `{ type: 'social' }` */
-  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google']),
+  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest']),
 };
 
 Avatar.defaultProps = {

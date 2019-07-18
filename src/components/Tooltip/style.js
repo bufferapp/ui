@@ -22,6 +22,7 @@ export const TooltipStyle = {
   padding: "0.5em 1em",
   maxWidth: "200px",
   whiteSpace: "normal",
+  zIndex: 9999,
 }
 
 export const Label = styled.label`
