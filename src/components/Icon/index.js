@@ -22,6 +22,7 @@ export Folder from './Icons/Folder';
 export Folders from './Icons/Folders';
 export Gear from './Icons/Gear';
 export GooglePlus from './Icons/GooglePlus';
+export Hashtag from './Icons/Hashtag';
 export Hide from './Icons/Hide';
 export Inbox from './Icons/Inbox';
 export Info from './Icons/Info';
