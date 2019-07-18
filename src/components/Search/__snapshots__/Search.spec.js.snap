@@ -6,7 +6,6 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearS
     clearSearchOnBlur={false}
     height="jest-auto-snapshots String Fixture"
     innerRef={[Function]}
-    onBlur={false}
     onChange={[Function]}
     onClick={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
@@ -54,7 +53,6 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed only required
     clearSearchOnBlur={false}
     height="tall"
     innerRef={[Function]}
-    onBlur={false}
     onChange={[Function]}
     onClick={[Function]}
     placeholder=""
