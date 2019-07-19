@@ -24,10 +24,12 @@ class Tooltip extends React.Component {
 
   setTooltipPosition() {
     // Getting the first child width to calculate Tooltip position
-    const childWidth = this.tooltipWrapper.children[0].children[0].getBoundingClientRect().width;
-    this.setState({
-      childWidth,
-    });
+    if (this.tooltipWrapper) {
+      const childWidth = this.tooltipWrapper.children[0].children[0].getBoundingClientRect().width;
+      this.setState({
+        childWidth,
+      });
+    }
   }
 
   /**
