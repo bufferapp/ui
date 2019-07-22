@@ -50,7 +50,7 @@ export const H3 = styled.h3`
 `;
 
 export const Label = styled.label`
-  color: ${props => props.color};
+  color: ${props => colors[props.color]};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeightMedium};
