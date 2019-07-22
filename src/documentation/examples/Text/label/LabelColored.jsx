@@ -1,15 +1,15 @@
 import React from 'react';
 import Text from '@bufferapp/ui/Text';
 
-/** Label (light color) */
+/** Label (color) */
 export default function ExampleText() {
   return (
     <Text
       htmlFor="foo"
       type='label'
-      light
+      color='orange'
     >
-      This is a light colored Label
+      This is a colored Label
     </Text>
   );
 }
