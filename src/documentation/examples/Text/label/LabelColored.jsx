@@ -7,7 +7,7 @@ export default function ExampleText() {
     <Text
       htmlFor="foo"
       type='label'
-      color='orange'
+      color='gray'
     >
       This is a colored Label
     </Text>
