@@ -9,7 +9,7 @@ export default function ExampleText() {
       type='help'
       hasError
     >
-      This is a light colored Label
+      This is a help with error Label
     </Text>
   );
 }

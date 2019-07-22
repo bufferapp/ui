@@ -29,7 +29,7 @@ Text.propTypes = {
   hasError: PropTypes.bool,
   /** It's the name of the input it refers to. <br><i>This is only used for `label`.</i> */
   htmlFor: PropTypes.string,
-  /** It change the color of the text. */
+  /** It changes the color of the text. <br><i>Only accepts colors from the color palette. Not used for `span`.</i> */
   color: PropTypes.string,
   /** The type can be: `h1`, `h2`, `h3`, `p`, `label`, `help`. <br><i>If omitted will return a `span`</i> */
   type: PropTypes.string,

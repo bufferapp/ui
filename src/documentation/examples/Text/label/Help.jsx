@@ -8,7 +8,7 @@ export default function ExampleText() {
       htmlFor="foo"
       type='help'
     >
-      This is a light colored Label
+      This is a help Label
     </Text>
   );
 }
