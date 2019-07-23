@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
-<styled.li
+<ForwardRef(styled.li)
   hasUser={
     Object {
       "handle": "jest-auto-snapshots String Fixture",
@@ -14,12 +14,12 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
   onClick={[Function]}
   selected={false}
 >
-  <styled.span
+  <ForwardRef(styled.span)
     selected={false}
   >
     <NodeFixture />
-  </styled.span>
-  <styled.div>
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.div)>
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
@@ -30,7 +30,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
         src="jest-auto-snapshots String Fixture"
         type="social"
       />
-      <styled.div>
+      <ForwardRef(styled.div)>
         <Text
           color="grayDarker"
           hasError={false}
@@ -39,24 +39,24 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
         >
           jest-auto-snapshots String Fixture
         </Text>
-        <styled.span
+        <ForwardRef(styled.span)
           selected={false}
         >
           jest-auto-snapshots String Fixture
-        </styled.span>
-      </styled.div>
+        </ForwardRef(styled.span)>
+      </ForwardRef(styled.div)>
     </React.Fragment>
-  </styled.div>
-  <styled.span
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.span)
     selected={false}
   >
     1
-  </styled.span>
-</styled.li>
+  </ForwardRef(styled.span)>
+</ForwardRef(styled.li)>
 `;
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all props 1`] = `
-<styled.li
+<ForwardRef(styled.li)
   hasUser={
     Object {
       "handle": "jest-auto-snapshots String Fixture",
@@ -69,12 +69,12 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
   onClick={[Function]}
   selected={true}
 >
-  <styled.span
+  <ForwardRef(styled.span)
     selected={true}
   >
     <NodeFixture />
-  </styled.span>
-  <styled.div>
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.div)>
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
@@ -85,7 +85,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
         src="jest-auto-snapshots String Fixture"
         type="social"
       />
-      <styled.div>
+      <ForwardRef(styled.div)>
         <Text
           color="white"
           hasError={false}
@@ -94,29 +94,29 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
         >
           jest-auto-snapshots String Fixture
         </Text>
-        <styled.span
+        <ForwardRef(styled.span)
           selected={true}
         >
           jest-auto-snapshots String Fixture
-        </styled.span>
-      </styled.div>
+        </ForwardRef(styled.span)>
+      </ForwardRef(styled.div)>
     </React.Fragment>
-  </styled.div>
-  <styled.span
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.span)
     selected={true}
   >
     1
-  </styled.span>
-</styled.li>
+  </ForwardRef(styled.span)>
+</ForwardRef(styled.li)>
 `;
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only required props 1`] = `
-<styled.li
+<ForwardRef(styled.li)
   hasUser={null}
   onClick={[Function]}
   selected={null}
 >
-  <styled.div>
+  <ForwardRef(styled.div)>
     <Text
       color="grayDarker"
       hasError={false}
@@ -125,6 +125,6 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only
     >
       jest-auto-snapshots String Fixture
     </Text>
-  </styled.div>
-</styled.li>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.li)>
 `;

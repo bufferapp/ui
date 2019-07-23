@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   themeColor="blue"
 >
-  <styled.div>
+  <ForwardRef(styled.div)>
     <div
       dangerouslySetInnerHTML={
         Object {
@@ -12,8 +12,8 @@ exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`]
         }
       }
     />
-  </styled.div>
-  <styled.div>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
     <Button
       disabled={false}
       fullWidth={false}
@@ -31,6 +31,6 @@ exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`]
       size="small"
       type="text"
     />
-  </styled.div>
-</styled.div>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;

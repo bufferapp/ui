@@ -102,7 +102,7 @@ class Tooltip extends React.Component {
     // because we still need to figure out a way to load the css file
     // properly, and being able to use our customs styles.
     return (
-      <Styles.TooltipWrapper innerRef={node => this.tooltipWrapper = node}>
+      <Styles.TooltipWrapper ref={node => this.tooltipWrapper = node}>
         <Styles.TooltipStyled
           label={this.renderLabel(label, hotkey)}
           position={(triggerRect, tooltipRect) => this.getTooltipPosition(triggerRect, tooltipRect, position)}

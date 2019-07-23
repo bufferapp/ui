@@ -1,49 +1,49 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Avatar Matches snapshot when boolean prop "isOnline" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   size="large"
 >
   <Unknown
     size="large"
   />
-  <styled.div
+  <ForwardRef(styled.div)
     alt="jest-auto-snapshots String Fixture"
     fallbackUrl="jest-auto-snapshots String Fixture"
     size="large"
     src="jest-auto-snapshots String Fixture"
     type="default"
   />
-</styled.div>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Avatar Matches snapshot when passed all props 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   size="large"
 >
   <Unknown
     size="large"
   />
-  <styled.div
+  <ForwardRef(styled.div)
     alt="jest-auto-snapshots String Fixture"
     fallbackUrl="jest-auto-snapshots String Fixture"
     size="large"
     src="jest-auto-snapshots String Fixture"
     type="default"
   />
-</styled.div>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Avatar Matches snapshot when passed only required props 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   size="small"
 >
-  <styled.div
+  <ForwardRef(styled.div)
     alt="jest-auto-snapshots String Fixture"
     fallbackUrl=""
     size="small"
     src="jest-auto-snapshots String Fixture"
     type="default"
   />
-</styled.div>
+</ForwardRef(styled.div)>
 `;

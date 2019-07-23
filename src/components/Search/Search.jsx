@@ -51,7 +51,7 @@ export default class Search extends React.Component {
           placeholder={placeholder}
           type="text"
           value={search}
-          innerRef={inputRef => this.inputRef = inputRef}
+          ref={inputRef => this.inputRef = inputRef}
           onChange={event => this.onChange(event)}
           onClick={onClick}
           clearSearchOnBlur={clearSearchOnBlur}

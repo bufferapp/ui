@@ -46,7 +46,7 @@ const Button = ({
   onSelectClick,
   fullWidth,
   tooltip,
-  innerRef,
+  ref,
   hideSearch,
   className,
 }) => (
@@ -60,7 +60,7 @@ const Button = ({
     hasIconOnly={hasIconOnly}
     fullWidth={fullWidth}
     data-tip={tooltip}
-    innerRef={innerRef}
+    ref={ref}
     className={className}
   >
     {icon}
@@ -148,7 +148,7 @@ Button.propTypes = {
   tooltip: PropTypes.string,
 
   /** The prop to get the DOM element of the Button */
-  innerRef: PropTypes.node,
+  ref: PropTypes.node,
 
   /** Is search hidden */
   hideSearch: PropTypes.bool,
@@ -172,7 +172,7 @@ Button.defaultProps = {
   onSelectClick: undefined,
   fullWidth: false,
   tooltip: undefined,
-  innerRef: undefined,
+  ref: undefined,
   hideSearch: true,
   className: undefined,
 };

@@ -1,26 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearSearchOnBlur" is set to: "false" 1`] = `
-<styled.div>
-  <styled.input
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.input)
     clearSearchOnBlur={false}
     height="jest-auto-snapshots String Fixture"
-    innerRef={[Function]}
     onChange={[Function]}
     onClick={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
     type="text"
     value=""
   />
-</styled.div>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
-<styled.div>
-  <styled.input
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.input)
     clearSearchOnBlur={true}
     height="jest-auto-snapshots String Fixture"
-    innerRef={[Function]}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[MockFunction]}
@@ -28,15 +26,14 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen
     type="text"
     value=""
   />
-</styled.div>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`] = `
-<styled.div>
-  <styled.input
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.input)
     clearSearchOnBlur={true}
     height="jest-auto-snapshots String Fixture"
-    innerRef={[Function]}
     onBlur={[Function]}
     onChange={[Function]}
     onClick={[MockFunction]}
@@ -44,20 +41,19 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`]
     type="text"
     value=""
   />
-</styled.div>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Search Matches snapshot when passed only required props 1`] = `
-<styled.div>
-  <styled.input
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.input)
     clearSearchOnBlur={false}
     height="tall"
-    innerRef={[Function]}
     onChange={[Function]}
     onClick={[Function]}
     placeholder=""
     type="text"
     value=""
   />
-</styled.div>
+</ForwardRef(styled.div)>
 `;

@@ -13,7 +13,7 @@ export default function ModalTest() {
         type="primary"
         onClick={() => {}}
         label="Eyes on me!"
-        innerRef={previousFocusRef}
+        ref={previousFocusRef}
       />
       <Modal
         action={{ label: "Don’t Panic!" }}
