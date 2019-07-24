@@ -29,7 +29,7 @@ Text.propTypes = {
   hasError: PropTypes.bool,
   /** It's the name of the input it refers to. <br><i>This is only used for `label`.</i> */
   htmlFor: PropTypes.string,
-  /** The color can be: `white`, `gray`, `blue` and `red`.<br><i>Not used for `span`.</i> */
+  /** The color can be: `white`, `gray` and `red`.<br><i>Not used for `span` and `help`.</i> */
   color: PropTypes.string,
   /** The type can be: `h1`, `h2`, `h3`, `p`, `label`, `help`. <br><i>If omitted will return a `span`</i> */
   type: PropTypes.string,
@@ -39,7 +39,7 @@ Text.defaultProps = {
   children: undefined,
   hasError: false,
   htmlFor: undefined,
-  color: '#3D3D3D',
+  color: 'grayDarker',
   type: 'span',
 };
 

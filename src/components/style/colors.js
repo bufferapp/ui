@@ -34,11 +34,11 @@ export const twitter = '#55acee';
 
 export const transparent = 'transparent';
 
-const colors = {
-  blue,
+const textColors = {
   red,
   white,
   gray,
+  grayDarker,
 };
 
-export default colors;
+export default textColors;

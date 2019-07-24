@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors, { red, grayDarker } from '../style/colors';
+import textColors, { red, grayDarker } from '../style/colors';
 import {
   fontFamily,
   fontSize,
@@ -18,7 +18,7 @@ export const Span = styled.span`
 `;
 
 export const Paragraph = styled.p`
-  color: ${props => colors[props.color]};
+  color: ${props => textColors[props.color]};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
@@ -26,7 +26,7 @@ export const Paragraph = styled.p`
 `;
 
 export const H1 = styled.h1`
-  color: ${props => colors[props.color]};
+  color: ${props => textColors[props.color]};
   font-family: ${fontFamily};
   font-size: 32px;
   font-weight: ${fontWeightBold};
@@ -34,7 +34,7 @@ export const H1 = styled.h1`
 `;
 
 export const H2 = styled.h2`
-  color: ${props => colors[props.color]};
+  color: ${props => textColors[props.color]};
   font-family: ${fontFamily};
   font-size: 24px;
   font-weight: ${fontWeightBold};
@@ -42,7 +42,7 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
-  color: ${props => colors[props.color]};
+  color: ${props => textColors[props.color]};
   font-family: ${fontFamily};
   font-size: 18px;
   font-weight: ${fontWeightBold};
@@ -50,7 +50,7 @@ export const H3 = styled.h3`
 `;
 
 export const Label = styled.label`
-  color: ${props => colors[props.color]};
+  color: ${props => textColors[props.color]};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeightMedium};
