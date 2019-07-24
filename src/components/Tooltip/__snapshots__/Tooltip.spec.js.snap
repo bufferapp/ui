@@ -8,7 +8,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
     label={
       <styled.div>
         <styled.label
-          color="white"
+          color="#FFFFFF"
         >
           <styled.div>
             jest-auto-snapshots String Fixture
@@ -25,12 +25,12 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
     position={[Function]}
     style={
       Object {
-        "background": "hsla(0, 0%, 0%, 0.75)",
+        "background": "#3D3D3D",
         "border": "none",
         "borderRadius": "4px",
-        "color": "white",
+        "color": "#FFFFFF",
         "maxWidth": "200px",
-        "padding": "0.5em 1em",
+        "padding": "8px",
         "whiteSpace": "normal",
         "zIndex": 9999,
       }
@@ -56,12 +56,12 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only require
     position={[Function]}
     style={
       Object {
-        "background": "hsla(0, 0%, 0%, 0.75)",
+        "background": "#3D3D3D",
         "border": "none",
         "borderRadius": "4px",
-        "color": "white",
+        "color": "#FFFFFF",
         "maxWidth": "200px",
-        "padding": "0.5em 1em",
+        "padding": "8px",
         "whiteSpace": "normal",
         "zIndex": 9999,
       }

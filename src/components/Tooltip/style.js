@@ -1,12 +1,15 @@
 import styled from 'styled-components';
 import Tooltip from '@reach/tooltip';
-
 import {
   fontFamily,
   fontSizeSmall,
   fontWeight,
   lineHeightSmall
 } from '../style/fonts';
+import {
+  grayDarker,
+  white
+} from '../style/colors';
 
 export const TooltipWrapper = styled.div`
 `;
@@ -15,11 +18,11 @@ export const TooltipStyled = styled(Tooltip)`
 `;
 
 export const TooltipStyle = {
-  background: "hsla(0, 0%, 0%, 0.75)",
-  color: "white",
+  background: grayDarker,
+  color: white,
   border: "none",
   borderRadius: "4px",
-  padding: "0.5em 1em",
+  padding: "8px",
   maxWidth: "200px",
   whiteSpace: "normal",
   zIndex: 9999,
@@ -29,7 +32,7 @@ export const Label = styled.label`
   color: ${props => props.color};
   font-family: ${fontFamily};
   font-size: ${props => props.isHotkey ? '10px' : fontSizeSmall};
-  margin-left: ${props => props.isHotkey ? '6px' : '0'};
+  margin-left: ${props => props.isHotkey ? '8px' : '0'};
   font-weight: ${fontWeight};
   line-height: ${lineHeightSmall};
   cursor: inherit;
