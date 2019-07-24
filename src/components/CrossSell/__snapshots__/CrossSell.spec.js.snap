@@ -4,7 +4,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
 <styled.div>
   <styled.div>
     <Text
-      color="#3D3D3D"
+      color="grayDarker"
       hasError={false}
       type="h1"
     >
@@ -12,7 +12,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
     </Text>
     <styled.div>
       <Text
-        color="#3D3D3D"
+        color="grayDarker"
         hasError={false}
         type="h3"
       >
@@ -28,7 +28,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
       />
       <styled.div>
         <Text
-          color="#3D3D3D"
+          color="grayDarker"
           hasError={false}
           type="h3"
         >
@@ -36,7 +36,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
         </Text>
       </styled.div>
       <Text
-        color="#3D3D3D"
+        color="grayDarker"
         hasError={false}
         type="p"
       >
@@ -62,7 +62,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
       </styled.div>
     </styled.div>
     <Text
-      color="#3D3D3D"
+      color="grayDarker"
       hasError={false}
       type="p"
     >

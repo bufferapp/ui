@@ -3,7 +3,7 @@
 exports[`jest-auto-snapshots > SidebarHeader Matches snapshot when passed only required props 1`] = `
 <styled.div>
   <Text
-    color="#3D3D3D"
+    color="grayDarker"
     hasError={false}
     type="label"
   >

@@ -32,7 +32,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
       />
       <styled.div>
         <Text
-          color="#3D3D3D"
+          color="grayDarker"
           hasError={false}
           title="jest-auto-snapshots String Fixture"
           type="label"
@@ -118,7 +118,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only
 >
   <styled.div>
     <Text
-      color="#3D3D3D"
+      color="grayDarker"
       hasError={false}
       title="jest-auto-snapshots String Fixture"
       type="label"
