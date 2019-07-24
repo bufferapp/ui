@@ -3,7 +3,7 @@
 exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <styled.div>
   <Text
-    color="#3D3D3D"
+    color="grayDarker"
     hasError={false}
     htmlFor="jest-auto-snapshots String Fixture"
     type="label"
@@ -39,7 +39,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
 exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasError" is set to: "false" 1`] = `
 <styled.div>
   <Text
-    color="#3D3D3D"
+    color="grayDarker"
     hasError={false}
     htmlFor="jest-auto-snapshots String Fixture"
     type="label"
@@ -72,7 +72,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
 exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] = `
 <styled.div>
   <Text
-    color="#3D3D3D"
+    color="grayDarker"
     hasError={false}
     htmlFor="jest-auto-snapshots String Fixture"
     type="label"

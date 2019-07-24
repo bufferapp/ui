@@ -33,3 +33,12 @@ export const pinterest = '#bd081c';
 export const twitter = '#55acee';
 
 export const transparent = 'transparent';
+
+const textColors = {
+  red,
+  white,
+  gray,
+  grayDarker,
+};
+
+export default textColors;

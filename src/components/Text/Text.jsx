@@ -6,13 +6,13 @@ import * as Styles from './style';
 const Text = ({ children, type, ...props }) => {
   switch (type) {
     case 'h1':
-      return <Styles.H1>{children}</Styles.H1>;
+      return <Styles.H1 {...props}>{children}</Styles.H1>;
     case 'h2':
-      return <Styles.H2>{children}</Styles.H2>;
+      return <Styles.H2 {...props}>{children}</Styles.H2>;
     case 'h3':
-      return <Styles.H3>{children}</Styles.H3>;
+      return <Styles.H3 {...props}>{children}</Styles.H3>;
     case 'p':
-      return <Styles.Paragraph>{children}</Styles.Paragraph>;
+      return <Styles.Paragraph {...props}>{children}</Styles.Paragraph>;
     case 'label':
       return <Styles.Label {...props}>{children}</Styles.Label>;
     case 'help':
@@ -29,7 +29,7 @@ Text.propTypes = {
   hasError: PropTypes.bool,
   /** It's the name of the input it refers to. <br><i>This is only used for `label`.</i> */
   htmlFor: PropTypes.string,
-  /** It change the color of the text. <br><i>This is only used for `label`</i>. */
+  /** The color can be: `white`, `gray` and `red`.<br><i>Not used for `span` and `help`.</i> */
   color: PropTypes.string,
   /** The type can be: `h1`, `h2`, `h3`, `p`, `label`, `help`. <br><i>If omitted will return a `span`</i> */
   type: PropTypes.string,
@@ -39,7 +39,7 @@ Text.defaultProps = {
   children: undefined,
   hasError: false,
   htmlFor: undefined,
-  color: '#3D3D3D',
+  color: 'grayDarker',
   type: 'span',
 };
 
