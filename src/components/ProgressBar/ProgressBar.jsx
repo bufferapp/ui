@@ -8,9 +8,8 @@ import {
 
 const ProgressBar = ({
   progress,
-  fullWidth,
 }) => (
-  <ContainerStyled fullWidth={fullWidth}>
+  <ContainerStyled>
     <ProgressStyled progress={progress} />
   </ContainerStyled>
 );
@@ -18,12 +17,6 @@ const ProgressBar = ({
 ProgressBar.propTypes = {
   /** Percentage of progress. */
   progress: PropTypes.string.isRequired,
-  /** Is the ProgressBar the full width of the parent container. */
-  fullWidth: PropTypes.bool,
-};
-
-ProgressBar.defaultProps = {
-  fullWidth: false,
 };
 
 export default ProgressBar;
