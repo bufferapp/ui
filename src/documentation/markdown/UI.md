@@ -9,6 +9,7 @@ Here are the articles in this section:
 [Modal](ui/modal)
 [Nav Bar](ui/navbar)
 [Notification](ui/notification)
+[Progress Bar](ui/progressbar)
 [Search](ui/search)
 [Select](ui/select)
 [Text](ui/text)
