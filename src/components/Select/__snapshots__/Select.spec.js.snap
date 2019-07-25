@@ -1,26 +1,24 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" has one item: "[object Object]" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -29,9 +27,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -53,32 +49,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" is an empty array: "[]" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -87,9 +81,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -111,32 +103,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -145,9 +135,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -169,32 +157,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capitalizeItemLabel" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -203,9 +189,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={false}
         getItemId={[Function]}
@@ -227,33 +211,31 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip="jest-auto-snapshots String Fixture"
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={false}
-    innerRef={[Function]}
     onClick={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="white"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -262,9 +244,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -286,32 +266,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={false}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={false}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -320,9 +298,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -344,32 +320,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCustomAction" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -378,9 +352,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -402,32 +374,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={false}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -436,9 +406,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -460,32 +428,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -494,9 +460,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -518,32 +482,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInputSearch" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -552,9 +514,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -576,32 +536,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -610,9 +568,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -634,23 +590,22 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={false}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -659,9 +614,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -683,32 +636,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiSelect" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -717,9 +668,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -741,32 +690,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
         multiSelect={false}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "selectPopupVisible" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -775,9 +722,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -799,32 +744,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -833,9 +776,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -857,32 +798,30 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`] = `
-<styled.div
+<ForwardRef(styled.div)
   data-tip=""
   fullWidth={true}
-  innerRef={[Function]}
   isSplit={true}
   onClick={[Function]}
   onKeyUp={[Function]}
   role="button"
   tabIndex={0}
 >
-  <styled.div
+  <ForwardRef(styled.div)
     disabled={true}
-    innerRef={[Function]}
     type="primary"
   >
     <ChevronDownIcon
       color="grayDark"
     />
-  </styled.div>
-  <styled.div
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -891,9 +830,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     xPosition="right"
     yPosition="top"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -915,14 +852,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
         multiSelect={true}
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed only required props 1`] = `
-<styled.div
-  innerRef={[Function]}
+<ForwardRef(styled.div)
   isSplit={false}
   onClick={[Function]}
   onKeyUp={[Function]}
@@ -934,7 +870,6 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     fullWidth={false}
     hasIconOnly={false}
     hideSearch={true}
-    innerRef={[Function]}
     isSelect={true}
     items={
       Array [
@@ -951,15 +886,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     size="medium"
     type="secondary"
   />
-  <styled.div
+  <ForwardRef(styled.div)
     hasIconOnly={false}
     isOpen={false}
     xPosition="left"
     yPosition="bottom"
   >
-    <styled.ul
-      innerRef={[Function]}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -974,7 +907,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
         }
         onClick={[Function]}
       />
-    </styled.ul>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;

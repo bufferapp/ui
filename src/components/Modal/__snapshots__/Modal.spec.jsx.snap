@@ -1,14 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" is set to: "false" 1`] = `
-<styled.div>
-  <styled.section
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.section)
     background="jest-auto-snapshots String Fixture"
-    innerRef={[Function]}
     wide={false}
   >
     <NodeFixture />
-    <styled.div>
+    <ForwardRef(styled.div)>
       <NodeFixture />
       <Button
         disabled={true}
@@ -27,7 +26,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
         fullWidth={false}
         hasIconOnly={false}
         hideSearch={true}
-        innerRef={[Function]}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -35,20 +33,19 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
         size="medium"
         type="primary"
       />
-    </styled.div>
-  </styled.section>
-</styled.div>
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.section)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] = `
-<styled.div>
-  <styled.section
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.section)
     background="jest-auto-snapshots String Fixture"
-    innerRef={[Function]}
     wide={true}
   >
     <NodeFixture />
-    <styled.div>
+    <ForwardRef(styled.div)>
       <NodeFixture />
       <Button
         disabled={true}
@@ -67,7 +64,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         fullWidth={false}
         hasIconOnly={false}
         hideSearch={true}
-        innerRef={[Function]}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -75,26 +71,24 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         size="medium"
         type="primary"
       />
-    </styled.div>
-  </styled.section>
-</styled.div>
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.section)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required props 1`] = `
-<styled.div>
-  <styled.section
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.section)
     background={null}
-    innerRef={[Function]}
     wide={false}
   >
     <NodeFixture />
-    <styled.div>
+    <ForwardRef(styled.div)>
       <Button
         disabled={true}
         fullWidth={false}
         hasIconOnly={false}
         hideSearch={true}
-        innerRef={[Function]}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -102,7 +96,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required 
         size="medium"
         type="primary"
       />
-    </styled.div>
-  </styled.section>
-</styled.div>
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.section)>
+</ForwardRef(styled.div)>
 `;

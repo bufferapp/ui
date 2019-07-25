@@ -1,246 +1,236 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={false}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   onClick={[MockFunction]}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={false}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={false}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.div
+  <ForwardRef(styled.div)
     hasIcon={true}
   >
     jest-auto-snapshots String Fixture
-  </styled.div>
-  <styled.img
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={false}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-</styled.button>
+  </ForwardRef(styled.span)>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   hasIconOnly={true}
   icon={<NodeFixture />}
-  innerRef={<NodeFixture />}
   isSplit={true}
   size="small"
   type="link"
 >
   <NodeFixture />
-  <styled.span>
+  <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
-  </styled.span>
-  <styled.img
+  </ForwardRef(styled.span)>
+  <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
-<styled.button
+<ForwardRef(styled.button)
   disabled={false}
   fullWidth={false}
   hasIconOnly={false}
@@ -248,8 +238,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
   size="medium"
   type="secondary"
 >
-  <styled.div
+  <ForwardRef(styled.div)
     hasIcon={false}
   />
-</styled.button>
+</ForwardRef(styled.button)>
 `;

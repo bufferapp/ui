@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > SidebarHeader Matches snapshot when passed only required props 1`] = `
-<styled.div>
+<ForwardRef(styled.div)>
   <Text
     color="grayDarker"
     hasError={false}
@@ -9,5 +9,5 @@ exports[`jest-auto-snapshots > SidebarHeader Matches snapshot when passed only r
   >
     jest-auto-snapshots String Fixture
   </Text>
-</styled.div>
+</ForwardRef(styled.div)>
 `;

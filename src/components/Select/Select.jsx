@@ -130,7 +130,6 @@ export default class Select extends React.Component {
           isOpen: false,
           hoveredItem: undefined,
         },
-        () => this.activeButton && this.activeButton.focus()
       );
     }
   };
@@ -384,7 +383,6 @@ export default class Select extends React.Component {
           type={type}
           disabled={disabled}
           onClick={!disabled ? this.onButtonClick : undefined}
-          innerRef={activeButton => (this.activeButton = activeButton)}
         >
           <ChevronDown
             color={type === 'primary' && !disabled ? 'white' : 'grayDark'}
@@ -405,7 +403,6 @@ export default class Select extends React.Component {
           icon={icon}
           hasIconOnly
           onClick={this.onButtonClick}
-          innerRef={activeButton => (this.activeButton = activeButton)}
           label="Click Me"
         />
       );
@@ -419,7 +416,6 @@ export default class Select extends React.Component {
         type={type}
         label={label}
         icon={icon}
-        innerRef={activeButton => (this.activeButton = activeButton)}
         onClick={this.onButtonClick}
         isSelect
         fullWidth={fullWidth}
@@ -486,7 +482,7 @@ export default class Select extends React.Component {
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
             id="searchInput"
-            innerRef={node => (this.searchInputNode = node)}
+            ref={node => (this.searchInputNode = node)}
           >
             <SearchIcon />
             <Search
@@ -496,7 +492,7 @@ export default class Select extends React.Component {
             />
           </SearchBarWrapper>
         )}
-        <SelectItems innerRef={itemsNode => (this.itemsNode = itemsNode)}>
+        <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
           {hasCustomAction
             ? this.renderCustomActionItem(
                 items.length,
@@ -548,7 +544,7 @@ export default class Select extends React.Component {
         onKeyUp={this.onClick}
         tabIndex={0}
         isSplit={isSplit}
-        innerRef={selectNode => (this.selectNode = selectNode)}
+        ref={selectNode => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}
       >

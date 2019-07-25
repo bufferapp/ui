@@ -2,6 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import '@reach/tooltip/styles.css';
 import * as Styles from './style';
+import {
+  gray,
+  white
+} from '../style/colors';
 
 class Tooltip extends React.Component {
   constructor(props) {
@@ -50,16 +54,16 @@ class Tooltip extends React.Component {
     };
 
     switch (position) {
-      case 'top': 
+      case 'top':
         newPosition.top = triggerRect.top - tooltipRect.height - gap - window.scrollY;
         break;
 
-      case 'right': 
+      case 'right':
         newPosition.left = triggerRect.left + childWidth + gap + window.scrollX;
         newPosition.top = verticalCenter;
         break;
 
-      case 'left': 
+      case 'left':
         newPosition.left = triggerRect.left - tooltipRect.width - gap - window.scrollX;
         newPosition.top = verticalCenter;
         break;
@@ -77,28 +81,28 @@ class Tooltip extends React.Component {
     <Styles.LabelWrapper>
       {label && (
         <Styles.Label
-          color='white'
+          color={white}
         >
           <Styles.HotkeyWrapper>
             {label}
             {hotkey &&
-              <Styles.Label color="#B8B8B8" isHotkey>{hotkey}</Styles.Label>}
+              <Styles.Label color={gray} isHotkey>{hotkey}</Styles.Label>}
           </Styles.HotkeyWrapper>
         </Styles.Label>
       )}
     </Styles.LabelWrapper>
   );
-  
+
   render() {
     const { children, label, position, hotkey } = this.props;
-    
+
     // @todo: remove style from here and use the Styled component
     // We are currently adding the stylings with the style tag,
     // instead of the adding it in the Styled component
     // because we still need to figure out a way to load the css file
     // properly, and being able to use our customs styles.
     return (
-      <Styles.TooltipWrapper innerRef={node => this.tooltipWrapper = node}>
+      <Styles.TooltipWrapper ref={node => this.tooltipWrapper = node}>
         <Styles.TooltipStyled
           label={this.renderLabel(label, hotkey)}
           position={(triggerRect, tooltipRect) => this.getTooltipPosition(triggerRect, tooltipRect, position)}

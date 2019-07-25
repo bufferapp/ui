@@ -87,7 +87,7 @@ class Modal extends React.Component {
       <Styles.Container>
         <Styles.Modal
           background={background}
-          innerRef={modal => (this.modal = modal)}
+          ref={modal => (this.modal = modal)}
           wide={wide}
         >
           {children}
@@ -102,7 +102,7 @@ class Modal extends React.Component {
               />
             )}
             <Button
-              innerRef={ctaButton => (this.ctaButton = ctaButton)}
+              ref={ctaButton => (this.ctaButton = ctaButton)}
               type="primary"
               onClick={() => {this.handleAction(action); }}
               disabled={action.disabled}

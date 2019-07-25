@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1`] = `
-<styled.div>
+<ForwardRef(styled.div)>
   <NavBar
     activeProduct="publish"
     helpMenuItems={null}
@@ -24,26 +24,26 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
     text="jest-auto-snapshots String Fixture"
     themeColor="blue"
   />
-  <styled.div>
-    <styled.div>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
       <NodeFixture />
-    </styled.div>
-    <styled.div>
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
       <NodeFixture />
-    </styled.div>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
 
 exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only required props 1`] = `
-<styled.div>
+<ForwardRef(styled.div)>
   <NavBar
     helpMenuItems={null}
   />
-  <styled.div>
-    <styled.div>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
       <NodeFixture />
-    </styled.div>
-  </styled.div>
-</styled.div>
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
 `;
