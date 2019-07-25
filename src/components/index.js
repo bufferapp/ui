@@ -8,3 +8,4 @@ export { default as Banner } from './Banner';
 export { default as SidebarListItem } from './SidebarListItem';
 export { default as SidebarHeader } from './SidebarHeader';
 export { default as Tooltip } from './Tooltip';
+export { default as ProgressBar} from './ProgressBar';
