@@ -6,7 +6,7 @@ export const ContainerStyled = styled.div`
   width: 100%;
   height: 8px;
   background-color: ${grayLight};
-  border-radius: 4px;
+  border-radius: ${borderRadius};
   margin: 16px 0px;
 `;
 
@@ -14,5 +14,5 @@ export const ProgressStyled = styled.div`
   background-color: ${gray};
   height: 100%;
   width: ${props => props.progress || '100%'};
-  ${borderRadius};
+  border-radius: ${borderRadius};
 `;
