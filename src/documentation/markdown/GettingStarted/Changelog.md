@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.1.0] - 2019-07-25
+### Added
+- Progress Bar component.
+
 ## [5.0.0] - 2019-07-24
 ### Dependencies
 - Upgrade styled-components from 3.4.10 to 4.3.2
