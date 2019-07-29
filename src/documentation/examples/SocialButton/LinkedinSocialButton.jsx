@@ -5,7 +5,7 @@ import SocialButton from '@bufferapp/ui/SocialButton';
 export default function ExampleSocialButton() {
   return (
     <div style={{ position: 'relative' }}>
-      <SocialButton channel="linkedin" />
+      <SocialButton channel="linkedin" onClick={() => {}} />
     </div>
   );
 }

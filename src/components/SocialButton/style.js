@@ -42,6 +42,7 @@ export const SocialButtonStyled = styled.button`
   p {
     color: ${white};
     margin-left: 8px;
+    line-height: normal;
   }
   &:hover {
     background-color: ${props => calculateBgColor(props.channel, true)};
