@@ -12,4 +12,5 @@ Here are the articles in this section:
 [Progress Bar](ui/progressbar)
 [Search](ui/search)
 [Select](ui/select)
+[Social Button](ui/socialbutton)
 [Text](ui/text)
