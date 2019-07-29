@@ -1,30 +1,43 @@
 import styled from 'styled-components';
-import { white } from '../style/colors';
-import { borderRadius } from '../style/borders';
+import { 
+  white,
+  facebook,
+  facebookDark,
+  instagram,
+  instagramDark,
+  linkedin,
+  linkedinDark,
+  pinterest,
+  pinterestDark,
+  twitter,
+  twitterDark, 
+} from '../style/colors';
+import { ButtonBase, large } from '../Button/style';
 
 function calculateBgColor(channel, hover = false) {
   switch (channel) {
     case 'instagram':
-      return hover ? '#d0388e' : '#BD3381';
+      return hover ? instagramDark : instagram;
     case 'twitter':
-      return hover ? '#35aaf3' : '#1DA1F2';
+      return hover ? twitterDark : twitter;
     case 'facebook':
-      return hover ? '#4262a9' : '#4267B2';
+      return hover ? facebookDark : facebook;
+    case 'pinterest':
+      return hover ? pinterestDark : pinterest;
+    case 'linkedin':
+      return hover ? linkedinDark : linkedin;
     default:
       return 'gray';
   }
 };
 
 export const SocialButtonStyled = styled.button`
-  display: flex;
-  width: 100%;
-  height: 48px;
-  justify-content: space-between;
+  ${ButtonBase};
+  ${large};
   background-color: ${props => calculateBgColor(props.channel)};
   color: ${white};
-  border: none;
-  border-radius: ${borderRadius};
-  padding: 16px;
+  width: 100%;
+  justify-content: space-between;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   p {
     color: ${white};
@@ -32,7 +45,6 @@ export const SocialButtonStyled = styled.button`
   }
   &:hover {
     background-color: ${props => calculateBgColor(props.channel, true)};
-    transition: background-color 0.25s ease;
   }
 `;
 
