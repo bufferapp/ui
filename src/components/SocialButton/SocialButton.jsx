@@ -42,6 +42,7 @@ const SocialButton = ({
     <SocialButtonStyled
       onClick={!disabled ? onClick : undefined}
       channel={channel}
+      disabled={disabled}
     >
       <ChannelIconContainerStyled>
         {content.Icon}

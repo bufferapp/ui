@@ -3,6 +3,7 @@
 exports[`jest-auto-snapshots > SocialButton Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
   channel="twitter"
+  disabled={false}
   onClick={[MockFunction]}
 >
   <ForwardRef(styled.span)>
@@ -28,6 +29,7 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when boolean prop "
 exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.button)
   channel="twitter"
+  disabled={true}
 >
   <ForwardRef(styled.span)>
     <TwitterIcon />
@@ -52,6 +54,7 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed all pro
 exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.button)
   channel="twitter"
+  disabled={false}
   onClick={[MockFunction]}
 >
   <ForwardRef(styled.span)>
