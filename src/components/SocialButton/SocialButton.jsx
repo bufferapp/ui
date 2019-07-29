@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Twitter, Instagram, Facebook } from '../Icon';
+import { Twitter, Instagram, Facebook, Pinterest, LinkedIn } from '../Icon';
 import Text from '../Text/Text';
 
 import {
@@ -25,6 +25,16 @@ const renderContent = channel => {
       content.Icon = <Facebook />;
       content.name = "Facebook";
       content.cta = "Connect a Facebook page";
+      break;
+    case 'pinterest':
+      content.Icon = <Pinterest />;
+      content.name = "Pinterest";
+      content.cta = "Connect a Pinterest profile";
+      break;
+    case 'linkedin':
+      content.Icon = <LinkedIn />;
+      content.name = "LinkedIn";
+      content.cta = "Connect a LinkedIn profile";
       break;
     default:
       break;
@@ -61,7 +71,7 @@ SocialButton.propTypes = {
   /** Is the button disabled */
   disabled: PropTypes.bool,
   /** Channel */
-  channel: PropTypes.oneOf(['twitter', 'instagram', 'facebook']).isRequired,
+  channel: PropTypes.oneOf(['twitter', 'instagram', 'facebook', 'pinterest', 'linkedin']).isRequired,
   /** OnClick handler */
   onClick: PropTypes.func.isRequired,
 };
