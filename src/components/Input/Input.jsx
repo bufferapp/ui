@@ -17,9 +17,14 @@ const Input = ({
   size,
   type,
   value,
+  ...props
 }) => (
   <Styles.InputWrapper>
-    {label.length > 0 && <Text htmlFor={name} type='label'>{label}</Text>}
+    {label.length > 0 && (
+      <Text htmlFor={name} type="label">
+        {label}
+      </Text>
+    )}
     <Styles.InputStyled
       disabled={disabled}
       hasError={hasError}
@@ -30,11 +35,12 @@ const Input = ({
       type={type}
       size={size}
       value={value}
+      {...props}
     />
     {help.length > 0 && (
       <Styles.HelpTextWrapper>
         {hasError && <Warning size="medium" />}
-        <Styles.HelpText type='help' htmlFor={name} hasError={hasError}>
+        <Styles.HelpText type="help" htmlFor={name} hasError={hasError}>
           {help}
         </Styles.HelpText>
       </Styles.HelpTextWrapper>
@@ -77,6 +83,6 @@ Input.defaultProps = {
   type: 'text',
   value: undefined,
   onBlur: () => {},
-}
+};
 
 export default Input;
