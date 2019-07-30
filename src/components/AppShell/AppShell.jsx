@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 
 import NavBar from '../NavBar';
@@ -15,34 +15,40 @@ import {
 /**
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
-const AppShell = ({
-  activeProduct,
-  user,
-  helpMenuItems,
-  sidebar,
-  content,
-  bannerOptions,
-  onLogout,
-}) => (
-  <AppShellStyled>
-    {/* <GlobalStyles /> */}
-    <NavBar
-      activeProduct={activeProduct}
-      user={user}
-      helpMenuItems={helpMenuItems}
-      onLogout={onLogout}
-    />
-    {bannerOptions && (
-      <Banner
-        {...bannerOptions}
-      />
-    )}
-    <Wrapper>
-      {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
-      <ContentWrapper>{content}</ContentWrapper>
-    </Wrapper>
-  </AppShellStyled>
-);
+class AppShell extends Component {
+  render() {
+    const {
+      activeProduct,
+      user,
+      helpMenuItems,
+      sidebar,
+      content,
+      bannerOptions,
+      onLogout,      
+    } = this.props
+
+    return (
+      <AppShellStyled>
+        {/* <GlobalStyles /> */}
+        <NavBar
+          activeProduct={activeProduct}
+          user={user}
+          helpMenuItems={helpMenuItems}
+          onLogout={onLogout}
+        />
+        {bannerOptions && (
+          <Banner
+            {...bannerOptions}
+          />
+        )}
+        <Wrapper>
+          {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
+          <ContentWrapper>{content}</ContentWrapper>
+        </Wrapper>
+      </AppShellStyled>      
+    )
+  }
+}
 
 AppShell.propTypes = {
   /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
