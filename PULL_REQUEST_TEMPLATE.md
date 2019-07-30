@@ -21,7 +21,7 @@
 - [ ] My code follows the code style and guidelines of this project. <!--- Link to Standards file coming soon. -->
 - [ ] My change requires a change to the documentation.
 - [ ] I have updated the documentation accordingly.
-- [ ] I have read the **CONTRIBUTING** document.
+- [ ] I have updated the **CHANGELOG** document.
 - [ ] I have added tests to cover my changes.
 - [ ] I have performed a self-review of my own code
 - [ ] I have tested my changes/additions in the latest Chrome, Firefox, and Safari.
