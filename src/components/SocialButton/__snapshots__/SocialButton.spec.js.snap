@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SocialButton Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<ForwardRef(styled.button)
+  channel="twitter"
+  disabled={false}
+  onClick={[MockFunction]}
+>
+  <ForwardRef(styled.span)>
+    <TwitterIcon />
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="p"
+    >
+      Twitter
+    </Text>
+  </ForwardRef(styled.span)>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    type="p"
+  >
+    Connect a Twitter profile
+  </Text>
+</ForwardRef(styled.button)>
+`;
+
+exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.button)
+  channel="twitter"
+  disabled={true}
+>
+  <ForwardRef(styled.span)>
+    <TwitterIcon />
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="p"
+    >
+      Twitter
+    </Text>
+  </ForwardRef(styled.span)>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    type="p"
+  >
+    Connect a Twitter profile
+  </Text>
+</ForwardRef(styled.button)>
+`;
+
+exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.button)
+  channel="twitter"
+  disabled={false}
+  onClick={[MockFunction]}
+>
+  <ForwardRef(styled.span)>
+    <TwitterIcon />
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="p"
+    >
+      Twitter
+    </Text>
+  </ForwardRef(styled.span)>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    type="p"
+  >
+    Connect a Twitter profile
+  </Text>
+</ForwardRef(styled.button)>
+`;

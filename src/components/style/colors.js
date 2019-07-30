@@ -25,12 +25,17 @@ export const grayDefault = '#77797a';
 export const boxShadow = '#ABB7FF';
 export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16)';
 
-export const facebook = '#3b5998';
+export const facebook = '#4267B2';
+export const facebookDark = '#2B4373';
 export const googleplus = '#dd4b39';
-export const instagram = '#e53c5f';
-export const linkedin = '#007bb6';
-export const pinterest = '#bd081c';
-export const twitter = '#55acee';
+export const instagram = '#BD3381';
+export const instagramDark = '#782152';
+export const linkedin = '#0077B5';
+export const linkedinDark = '#003C5C';
+export const pinterest = '#BD081C';
+export const pinterestDark = '#6C0510';
+export const twitter = '#1DA1F2';
+export const twitterDark = '#0A6FAE';
 
 export const transparent = 'transparent';
 
