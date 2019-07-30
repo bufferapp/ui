@@ -17,7 +17,7 @@ const Input = ({
   size,
   type,
   value,
-  ...props
+  ref
 }) => (
   <Styles.InputWrapper>
     {label.length > 0 && (
@@ -35,7 +35,7 @@ const Input = ({
       type={type}
       size={size}
       value={value}
-      {...props}
+      ref={ref}
     />
     {help.length > 0 && (
       <Styles.HelpTextWrapper>
