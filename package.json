@@ -160,7 +160,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx}",
-      "!src/components/**/6tyle.js",
+      "!src/components/**/style.js",
       "!src/components/**/index.js"
     ],
     "coverageDirectory": "./coverage/",
