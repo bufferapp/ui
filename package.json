@@ -58,7 +58,7 @@
     "babel-loader": "8.0.4",
     "babel-plugin-module-resolver": "3.1.1",
     "babel-plugin-named-asset-import": "0.2.3",
-    "babel-plugin-styled-components": "1.10.0",
+    "babel-plugin-styled-components": "1.10.6",
     "babel-preset-react-app": "6.1.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
@@ -160,7 +160,7 @@
   "jest": {
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx}",
-      "!src/components/**/style.js",
+      "!src/components/**/6tyle.js",
       "!src/components/**/index.js"
     ],
     "coverageDirectory": "./coverage/",
