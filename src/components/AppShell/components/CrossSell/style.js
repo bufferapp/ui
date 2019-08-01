@@ -66,3 +66,8 @@ export const ButtonWrapper = styled.div`
 export const CardImage = styled.img`
   width: 100%;
 `
+
+export const Logo = styled.div`
+  height: 32px;
+  margin-bottom: 40px;
+`
