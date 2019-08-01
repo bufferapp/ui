@@ -110,13 +110,23 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { activeProduct, user, helpMenuItems, onLogout } = this.props;
+    const {
+      activeProduct,
+      user,
+      helpMenuItems,
+      onLogout,
+      onProductClicked
+    } = this.props;
+
     return (
       <NavBarStyled>
         <NavBarLeft>
           <BufferLogo />
           <NavBarVerticalRule />
-          <NavBarProducts activeProduct={activeProduct} />
+          <NavBarProducts
+            activeProduct={activeProduct}
+            onProductClicked={onProductClicked}
+          />
         </NavBarLeft>
         <NavBarRight>
           {helpMenuItems && (
@@ -204,13 +214,15 @@ NavBar.propTypes = {
     })
   ),
 
-  onLogout: PropTypes.func
+  onLogout: PropTypes.func,
+  onProductClicked: PropTypes.func
 };
 
 NavBar.defaultProps = {
   activeProduct: undefined,
   helpMenuItems: null,
-  onLogout: undefined
+  onLogout: undefined,
+  onProductClicked: null
 };
 
 export default NavBar;

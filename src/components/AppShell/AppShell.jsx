@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import NavBar from '../NavBar';
 import Banner from '../Banner';
-// import GlobalStyles from '../GlobalStyles';
+import CrossSell from './components/CrossSell';
 
 import {
   AppShellStyled,
@@ -16,6 +16,54 @@ import {
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
 class AppShell extends Component {
+
+  state = {
+    crossSelling: false,
+    crossSellingProduct: '',
+    userProductsLoaded: false,
+    userProducts: [],
+    error: null
+  }
+
+  componentDidMount() {
+    fetch("/core/buffer-products")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          this.setState({
+            productsLoaded: true,
+            userProducts: result.data.products
+          });
+        },
+        (error) => {
+          this.setState({
+            productsLoaded: true,
+            error
+          });
+        }
+      )
+  }
+
+  onProductClicked = (event, product) => {
+    const {
+      userProductsLoaded,
+      userProducts,
+      error
+    } = this.state;
+
+    if (!userProductsLoaded || error) return;
+
+    if (!userProducts.includes(product)) {
+      if (product !== 'publish') {
+        event.preventDefault();
+        this.setState({
+          crossSelling: true,
+          crossSellingProduct: product
+        });
+      }
+    }
+  }
+
   render() {
     const {
       activeProduct,
@@ -24,28 +72,40 @@ class AppShell extends Component {
       sidebar,
       content,
       bannerOptions,
-      onLogout,      
+      onLogout,
+      environment
     } = this.props
+
+    const {
+      crossSelling,
+      crossSellingProduct
+    } = this.state
 
     return (
       <AppShellStyled>
-        {/* <GlobalStyles /> */}
         <NavBar
           activeProduct={activeProduct}
           user={user}
           helpMenuItems={helpMenuItems}
           onLogout={onLogout}
+          onProductClicked={this.onProductClicked}
         />
-        {bannerOptions && (
-          <Banner
-            {...bannerOptions}
-          />
-        )}
-        <Wrapper>
-          {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
-          <ContentWrapper>{content}</ContentWrapper>
-        </Wrapper>
-      </AppShellStyled>      
+        {crossSelling ?
+          <CrossSell product={crossSellingProduct} environment={environment} />
+        :
+          <>
+            {bannerOptions && (
+              <Banner
+                {...bannerOptions}
+              />
+            )}
+            <Wrapper>
+              {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
+              <ContentWrapper>{content}</ContentWrapper>
+            </Wrapper>
+          </>
+        }
+      </AppShellStyled>
     )
   }
 }
@@ -78,6 +138,9 @@ AppShell.propTypes = {
 
   /** (Optional) Callback to be called before logout */
   onLogout: PropTypes.func,
+
+  /** The environment where the app is currently running on */
+  environment: PropTypes.string
 };
 
 AppShell.defaultProps = {
@@ -85,6 +148,7 @@ AppShell.defaultProps = {
   activeProduct: undefined,
   bannerOptions: null,
   onLogout: undefined,
+  environment: 'production'
 };
 
 export default AppShell;
