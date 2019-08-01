@@ -5,42 +5,52 @@ import * as Styles from './style';
 import { Warning } from '../Icon';
 import Text from '../Text';
 
-const Input = ({
-  disabled,
-  hasError,
-  help,
-  label,
-  name,
-  onChange,
-  onBlur,
-  placeholder,
-  size,
-  type,
-  value,
-}) => (
-  <Styles.InputWrapper>
-    {label.length > 0 && <Text htmlFor={name} type='label'>{label}</Text>}
-    <Styles.InputStyled
-      disabled={disabled}
-      hasError={hasError}
-      name={name}
-      onChange={onChange}
-      onBlur={onBlur}
-      placeholder={placeholder}
-      type={type}
-      size={size}
-      value={value}
-    />
-    {help.length > 0 && (
-      <Styles.HelpTextWrapper>
-        {hasError && <Warning size="medium" />}
-        <Styles.HelpText type='help' htmlFor={name} hasError={hasError}>
-          {help}
-        </Styles.HelpText>
-      </Styles.HelpTextWrapper>
+export default class Input extends React.Component {
+  render() {
+    const {
+      disabled,
+      hasError,
+      help,
+      label,
+      name,
+      onChange,
+      onBlur,
+      placeholder,
+      size,
+      type,
+      value,
+      forwardRef,
+    } = this.props; 
+    return (
+      <Styles.InputWrapper>
+        {label.length > 0 && (
+          <Text htmlFor={name} type="label">
+            {label}
+          </Text>
+        )}
+        <Styles.InputStyled
+          disabled={disabled}
+          hasError={hasError}
+          name={name}
+          onChange={onChange}
+          onBlur={onBlur}
+          placeholder={placeholder}
+          type={type}
+          size={size}
+          value={value}
+          ref={forwardRef}
+        />
+        {help.length > 0 && (
+          <Styles.HelpTextWrapper>
+            {hasError && <Warning size="medium" />}
+            <Styles.HelpText type="help" htmlFor={name} hasError={hasError}>
+              {help}
+            </Styles.HelpText>
+          </Styles.HelpTextWrapper>
+        )}
+      </Styles.InputWrapper>
     )}
-  </Styles.InputWrapper>
-);
+};
 
 Input.propTypes = {
   /** It disables the input field. </i> */
@@ -65,6 +75,11 @@ Input.propTypes = {
   type: PropTypes.string,
   /** The value of the input */
   value: PropTypes.string,
+  /** 
+   * this consumed by the default export that is wrapping the component into a ForwardRef
+   * @ignore
+   */
+  forwardRef: PropTypes.node,
 };
 
 Input.defaultProps = {
@@ -77,6 +92,6 @@ Input.defaultProps = {
   type: 'text',
   value: undefined,
   onBlur: () => {},
-}
+  forwardRef: undefined,
+};
 
-export default Input;
