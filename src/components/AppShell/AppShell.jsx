@@ -32,14 +32,12 @@ class AppShell extends Component {
       .then(res => res.json())
       .then(
         (result) => {
-          console.log('- Result OK');
           this.setState({
             loaded: true,
             products: result.data.products
           });
         },
         (error) => {
-          console.log('- Result ERROR');
           this.setState({
             loaded: true,
             error
