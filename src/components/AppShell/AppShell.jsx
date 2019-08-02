@@ -20,24 +20,26 @@ class AppShell extends Component {
   state = {
     crossSelling: false,
     crossSellingProduct: '',
-    userProductsLoaded: false,
-    userProducts: [],
+    loaded: false,
+    products: [],
     error: null
   }
 
   componentDidMount() {
-    fetch("/core/buffer-products")
+    fetch('/core/buffer-products')
       .then(res => res.json())
       .then(
         (result) => {
+          console.log('- Result OK');
           this.setState({
-            productsLoaded: true,
-            userProducts: result.data.products
+            loaded: true,
+            products: result.data.products
           });
         },
         (error) => {
+          console.log('- Result ERROR');
           this.setState({
-            productsLoaded: true,
+            loaded: true,
             error
           });
         }
@@ -46,21 +48,19 @@ class AppShell extends Component {
 
   onProductClicked = (event, product) => {
     const {
-      userProductsLoaded,
-      userProducts,
+      loaded,
+      products,
       error
     } = this.state;
 
-    if (!userProductsLoaded || error) return;
+    if (!loaded || error) return;
 
-    if (!userProducts.includes(product)) {
-      if (product !== 'publish') {
-        event.preventDefault();
-        this.setState({
-          crossSelling: true,
-          crossSellingProduct: product
-        });
-      }
+    if (!products.includes(product) && product !== 'publish') {
+      event.preventDefault();
+      this.setState({
+        crossSelling: true,
+        crossSellingProduct: product
+      });
     }
   }
 
@@ -139,7 +139,11 @@ AppShell.propTypes = {
   /** (Optional) Callback to be called before logout */
   onLogout: PropTypes.func,
 
-  /** The environment where the app is currently running on */
+  /**
+   * The environment where the app is currently running on.
+   * This is used to generate some URLs like the button URL on the
+   * cross-selling pages.
+   */
   environment: PropTypes.string
 };
 
