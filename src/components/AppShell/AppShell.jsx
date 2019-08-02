@@ -12,6 +12,8 @@ import {
   ContentWrapper,
 } from './style';
 
+const BUFFER_PRODUCTS_API = '/core/buffer-products';
+
 /**
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
@@ -26,7 +28,7 @@ class AppShell extends Component {
   }
 
   componentDidMount() {
-    fetch('/core/buffer-products')
+    fetch(BUFFER_PRODUCTS_API)
       .then(res => res.json())
       .then(
         (result) => {
