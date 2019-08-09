@@ -26,7 +26,7 @@ export default class Banner extends React.Component {
     }
   };
 
-  renderBannerContent = () => {
+  renderBannerContent = (themeColor) => {
     const { customHTML, text, actionButton } = this.props;
     if (customHTML) {
       return (
@@ -43,7 +43,7 @@ export default class Banner extends React.Component {
         </Text>
         <ButtonWrapper>
           <Button
-            type="primary"
+            type={themeColor === 'orange' ? 'orange' : 'primary'}
             onClick={actionButton.action}
             label={actionButton.label}
             size="small"
@@ -60,7 +60,7 @@ export default class Banner extends React.Component {
     if (isOpen) {
       return (
         <BannerStyled themeColor={themeColor}>
-          {this.renderBannerContent()}
+          {this.renderBannerContent(themeColor)}
           <BannerCloseButton>
             <Button
               type="text"
