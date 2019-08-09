@@ -18,16 +18,14 @@ export default function FormModalTest() {
         action={{ label: "Don't close yet!" }}
         dismissible={false}
       >
-        <div>
-          <div style={{ width: '100%', padding: '16px', boxSizing: 'border-box' }}>
-            <Text type="h3">Your name here</Text>
-            <Input
-              type='input'
-              onChange={()=>{}}
-              name='foo'
-              placeholder='placeholder text'
-            />
-          </div>
+        <div style={{ width: '100%', padding: '16px', boxSizing: 'border-box' }}>
+          <Text type="h3">Your name here</Text>
+          <Input
+            type='input'
+            onChange={()=>{}}
+            name='foo'
+            placeholder='placeholder text'
+          />
         </div>
       </Modal>
     </div>
