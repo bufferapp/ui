@@ -110,7 +110,7 @@ Button.propTypes = {
   label: PropTypes.string,
 
   /** Type of button */
-  type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text']),
+  type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text', 'error']),
 
   /** Is the Button Split  */
   isSplit: PropTypes.bool,

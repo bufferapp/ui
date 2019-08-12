@@ -11,6 +11,8 @@ import {
   grayDefault,
   boxShadow,
   grayLight,
+  orangeDark,
+  orange as orangeColor,
 } from '../style/colors';
 import {
   fontFamily,
@@ -98,6 +100,17 @@ export const text = css`
   background-color: transparent;
   :hover {
     color: ${grayDarker};
+  }
+`;
+
+export const orange = css`
+  background-color: ${orangeDark};
+  color: ${white};
+  border: 1px solid ${orangeDark};
+  :hover {
+    background-color: ${orangeColor};
+    border-color: ${orangeColor};
+    color: ${white};
   }
 `;
 
