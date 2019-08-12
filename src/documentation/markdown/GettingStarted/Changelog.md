@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.2.2] - 2019-08-12
+### Added
+- Adding *dismissible* prop to modal, to handle autoclosing on primary action.
+
 ## [5.2.0] - 2019-07-30
 ### Added
 - Social Button component.
