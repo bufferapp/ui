@@ -58,16 +58,18 @@ class Modal extends React.Component {
       setCookie(cookie.store, cookie.key, cookie.days, 'dismissed');
     }
 
-    if (this.props.previousFocus) {
+    if (this.props.previousFocus && this.props.previousFocus.current) {
       this.props.previousFocus.current.focus();
     }
   }
 
   handleAction(action) {
-    if(action.callback) {
+    if (action.callback) {
       action.callback();
     }
-    this.dismiss();
+    if (this.props.dismissible) {
+      this.dismiss();
+    }
   }
 
   render() {
@@ -120,13 +122,15 @@ Modal.propTypes = {
   background: PropTypes.string,
   /** The content of the modal */
   children: PropTypes.node.isRequired,
-    /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
+  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
   action: PropTypes.shape({
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     callback: PropTypes.func,
   }).isRequired,
-    /** The secondary action settings {**label**: the label of the button, **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
+  /** Verifies if the modal should be dismissed right after the action is executed, in case we are doing a validation inside the modal before closing it */
+  dismissible: PropTypes.bool,
+  /** The secondary action settings {**label**: the label of the button, **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
   secondaryAction: PropTypes.shape({
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
@@ -152,6 +156,7 @@ Modal.defaultProps = {
   footer: null,
   wide: false,
   previousFocus: null,
+  dismissible: true,
 }
 
 export default Modal;

@@ -1,5 +1,43 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismissible" is set to: "false" 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.section)
+    background="jest-auto-snapshots String Fixture"
+    wide={true}
+  >
+    <NodeFixture />
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        selectPosition="bottom"
+        size="medium"
+        type="text"
+      />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        selectPosition="bottom"
+        size="medium"
+        type="primary"
+      />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.section)>
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" is set to: "false" 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.section)
