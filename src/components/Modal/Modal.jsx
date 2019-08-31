@@ -122,11 +122,12 @@ Modal.propTypes = {
   background: PropTypes.string,
   /** The content of the modal */
   children: PropTypes.node.isRequired,
-  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
+  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss, **hide** to prevent the button from rendering */
   action: PropTypes.shape({
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     callback: PropTypes.func,
+    hide: PropTypes.bool,
   }).isRequired,
   /** Verifies if the modal should be dismissed right after the action is executed, in case we are doing a validation inside the modal before closing it */
   dismissible: PropTypes.bool,
