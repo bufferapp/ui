@@ -103,13 +103,15 @@ class Modal extends React.Component {
                 label={secondaryAction.label}
               />
             )}
-            <Button
-              ref={ctaButton => (this.ctaButton = ctaButton)}
-              type="primary"
-              onClick={() => {this.handleAction(action); }}
-              disabled={action.disabled}
-              label={action.label}
-            />
+            {!action.hide && (
+              <Button
+                ref={ctaButton => (this.ctaButton = ctaButton)}
+                type="primary"
+                onClick={() => {this.handleAction(action); }}
+                disabled={action.disabled}
+                label={action.label}
+              />
+            )}
           </Styles.Footer>
         </Styles.Modal>
       </Styles.Container>
