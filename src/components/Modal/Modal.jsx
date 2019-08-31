@@ -85,6 +85,9 @@ class Modal extends React.Component {
     if (this.state && this.state.dismissed) {
       return null;
     }
+
+    const hasFooterContent = footer || !action.hide || secondaryAction;
+
     return (
       <Styles.Container>
         <Styles.Modal
@@ -93,26 +96,28 @@ class Modal extends React.Component {
           wide={wide}
         >
           {children}
-          <Styles.Footer>
-            {footer}
-            {secondaryAction && (
-              <Button
-                type="text"
-                onClick={() => {this.handleAction(secondaryAction); }}
-                disabled={secondaryAction.disabled}
-                label={secondaryAction.label}
-              />
-            )}
-            {!action.hide && (
-              <Button
-                ref={ctaButton => (this.ctaButton = ctaButton)}
-                type="primary"
-                onClick={() => {this.handleAction(action); }}
-                disabled={action.disabled}
-                label={action.label}
-              />
-            )}
-          </Styles.Footer>
+          {hasFooterContent && (
+            <Styles.Footer>
+              {footer}
+              {secondaryAction && (
+                <Button
+                  type="text"
+                  onClick={() => {this.handleAction(secondaryAction); }}
+                  disabled={secondaryAction.disabled}
+                  label={secondaryAction.label}
+                />
+              )}
+              {!action.hide && (
+                <Button
+                  ref={ctaButton => (this.ctaButton = ctaButton)}
+                  type="primary"
+                  onClick={() => {this.handleAction(action); }}
+                  disabled={action.disabled}
+                  label={action.label}
+                />
+              )}
+            </Styles.Footer>
+          )}
         </Styles.Modal>
       </Styles.Container>
     );
