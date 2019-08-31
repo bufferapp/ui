@@ -129,7 +129,7 @@ Modal.propTypes = {
   background: PropTypes.string,
   /** The content of the modal */
   children: PropTypes.node.isRequired,
-  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss, **hide** to prevent the button from rendering */
+  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss, **hide** a boolean to prevent the button from rendering */
   action: PropTypes.shape({
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
@@ -165,6 +165,9 @@ Modal.defaultProps = {
   wide: false,
   previousFocus: null,
   dismissible: true,
+  action: {
+    hide: false,
+  },
 }
 
 export default Modal;
