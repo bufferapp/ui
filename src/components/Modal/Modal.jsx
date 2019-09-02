@@ -93,7 +93,7 @@ class Modal extends React.Component {
           wide={wide}
         >
           {children}
-          <Styles.Footer>
+          <Styles.Footer background={background}>
             {footer}
             {secondaryAction && (
               <Button
