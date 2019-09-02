@@ -7,7 +7,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
     wide={true}
   >
     <NodeFixture />
-    <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      background="jest-auto-snapshots String Fixture"
+    >
       <NodeFixture />
       <Button
         disabled={true}
@@ -45,7 +47,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
     wide={false}
   >
     <NodeFixture />
-    <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      background="jest-auto-snapshots String Fixture"
+    >
       <NodeFixture />
       <Button
         disabled={true}
@@ -83,7 +87,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
     wide={true}
   >
     <NodeFixture />
-    <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      background="jest-auto-snapshots String Fixture"
+    >
       <NodeFixture />
       <Button
         disabled={true}
@@ -121,7 +127,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required 
     wide={false}
   >
     <NodeFixture />
-    <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      background={null}
+    >
       <Button
         disabled={true}
         fullWidth={false}
