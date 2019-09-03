@@ -164,10 +164,7 @@ Modal.defaultProps = {
   footer: null,
   wide: false,
   previousFocus: null,
-  dismissible: true,
-  action: {
-    hide: false,
-  },
+  dismissible: true
 }
 
 export default Modal;
