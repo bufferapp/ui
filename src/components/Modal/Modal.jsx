@@ -96,7 +96,7 @@ class Modal extends React.Component {
           {children}
           <Styles.Footer>
             {footer || (
-              <>
+              <React.Fragment>
                 {secondaryAction && (
                   <Button
                     type="text"
@@ -112,7 +112,7 @@ class Modal extends React.Component {
                   disabled={action.disabled}
                   label={action.label}
                 />
-              </>
+              </React.Fragment>
             )}
           </Styles.Footer>
         </Styles.Modal>
