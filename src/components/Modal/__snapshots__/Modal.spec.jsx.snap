@@ -9,18 +9,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
     <NodeFixture />
     <ForwardRef(styled.div)>
       <NodeFixture />
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="text"
-      />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
@@ -35,18 +23,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
     <NodeFixture />
     <ForwardRef(styled.div)>
       <NodeFixture />
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="text"
-      />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
@@ -61,18 +37,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
     <NodeFixture />
     <ForwardRef(styled.div)>
       <NodeFixture />
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="text"
-      />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
@@ -85,6 +49,22 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required 
     wide={false}
   >
     <NodeFixture />
+    <ForwardRef(styled.div)>
+      <React.Fragment>
+        <Button
+          disabled={true}
+          fullWidth={false}
+          hasIconOnly={false}
+          hideSearch={true}
+          label="jest-auto-snapshots String Fixture"
+          loading={false}
+          onClick={[Function]}
+          selectPosition="bottom"
+          size="medium"
+          type="primary"
+        />
+      </React.Fragment>
+    </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
 `;
