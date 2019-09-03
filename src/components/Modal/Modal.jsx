@@ -86,8 +86,6 @@ class Modal extends React.Component {
       return null;
     }
 
-    const hasFooterContent = footer || !action.hide || secondaryAction;
-
     return (
       <Styles.Container>
         <Styles.Modal
@@ -96,18 +94,17 @@ class Modal extends React.Component {
           wide={wide}
         >
           {children}
-          {hasFooterContent && (
-            <Styles.Footer>
-              {footer}
-              {secondaryAction && (
-                <Button
-                  type="text"
-                  onClick={() => {this.handleAction(secondaryAction); }}
-                  disabled={secondaryAction.disabled}
-                  label={secondaryAction.label}
-                />
-              )}
-              {!action.hide && (
+          <Styles.Footer>
+            {footer || (
+              <>
+                {secondaryAction && (
+                  <Button
+                    type="text"
+                    onClick={() => {this.handleAction(secondaryAction); }}
+                    disabled={secondaryAction.disabled}
+                    label={secondaryAction.label}
+                  />
+                )}
                 <Button
                   ref={ctaButton => (this.ctaButton = ctaButton)}
                   type="primary"
@@ -115,9 +112,9 @@ class Modal extends React.Component {
                   disabled={action.disabled}
                   label={action.label}
                 />
-              )}
-            </Styles.Footer>
-          )}
+              </>
+            )}
+          </Styles.Footer>
         </Styles.Modal>
       </Styles.Container>
     );
@@ -134,7 +131,6 @@ Modal.propTypes = {
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     callback: PropTypes.func,
-    hide: PropTypes.bool,
   }).isRequired,
   /** Verifies if the modal should be dismissed right after the action is executed, in case we are doing a validation inside the modal before closing it */
   dismissible: PropTypes.bool,
