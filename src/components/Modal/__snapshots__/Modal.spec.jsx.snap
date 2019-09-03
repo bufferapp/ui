@@ -21,18 +21,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
         size="medium"
         type="text"
       />
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="primary"
-      />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
@@ -58,18 +46,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
         selectPosition="bottom"
         size="medium"
         type="text"
-      />
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="primary"
       />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
@@ -97,18 +73,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         size="medium"
         type="text"
       />
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="primary"
-      />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
@@ -121,20 +85,6 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required 
     wide={false}
   >
     <NodeFixture />
-    <ForwardRef(styled.div)>
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="primary"
-      />
-    </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
 `;
