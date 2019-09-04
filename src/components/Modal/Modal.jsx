@@ -53,10 +53,10 @@ class Modal extends React.Component {
   /** this must be invoked to properly dismiss the modal */
   dismiss() {
     const { cookie } = this.props;
+    this.setState({ dismissed: true });
     if (cookie) {
       setCookie(cookie.store, cookie.key, cookie.days, 'dismissed');
     }
-
     if (this.props.previousFocus && this.props.previousFocus.current) {
       this.props.previousFocus.current.focus();
     }
