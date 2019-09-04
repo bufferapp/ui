@@ -10,7 +10,7 @@ export const Container = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
-  position: absolute;
+  position: fixed;
   padding-top: 80px;
   box-sizing: border-box;
   width: 100%;
