@@ -42,13 +42,13 @@ class Modal extends React.Component {
   }
 
   onKeyDown = event => {
-      // ESC
-      if (event.which === 27) {
-        event.preventDefault();
-        event.stopPropagation();
-        this.dismiss();
-      }
-  }
+    // ESC
+    if (event.which === 27) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.dismiss();
+    }
+  };
 
   /** this must be invoked to properly dismiss the modal */
   dismiss() {
@@ -85,7 +85,6 @@ class Modal extends React.Component {
     if (this.state && this.state.dismissed) {
       return null;
     }
-
     return (
       <Styles.Container>
         <Styles.Modal
@@ -100,7 +99,9 @@ class Modal extends React.Component {
                 {secondaryAction && (
                   <Button
                     type="text"
-                    onClick={() => {this.handleAction(secondaryAction); }}
+                    onClick={() => {
+                      this.handleAction(secondaryAction);
+                    }}
                     disabled={secondaryAction.disabled}
                     label={secondaryAction.label}
                   />
@@ -108,7 +109,9 @@ class Modal extends React.Component {
                 <Button
                   ref={ctaButton => (this.ctaButton = ctaButton)}
                   type="primary"
-                  onClick={() => {this.handleAction(action); }}
+                  onClick={() => {
+                    this.handleAction(action);
+                  }}
                   disabled={action.disabled}
                   label={action.label}
                 />
