@@ -42,13 +42,13 @@ class Modal extends React.Component {
   }
 
   onKeyDown = event => {
-      // ESC
-      if (event.which === 27) {
-        event.preventDefault();
-        event.stopPropagation();
-        this.dismiss();
-      }
-  }
+    // ESC
+    if (event.which === 27) {
+      event.preventDefault();
+      event.stopPropagation();
+      this.dismiss();
+    }
+  };
 
   /** this must be invoked to properly dismiss the modal */
   dismiss() {
@@ -98,18 +98,24 @@ class Modal extends React.Component {
             {secondaryAction && (
               <Button
                 type="text"
-                onClick={() => {this.handleAction(secondaryAction); }}
+                onClick={() => {
+                  this.handleAction(secondaryAction);
+                }}
                 disabled={secondaryAction.disabled}
                 label={secondaryAction.label}
               />
             )}
-            <Button
-              ref={ctaButton => (this.ctaButton = ctaButton)}
-              type="primary"
-              onClick={() => {this.handleAction(action); }}
-              disabled={action.disabled}
-              label={action.label}
-            />
+            {action && (
+              <Button
+                ref={ctaButton => (this.ctaButton = ctaButton)}
+                type="primary"
+                onClick={() => {
+                  this.handleAction(action);
+                }}
+                disabled={action.disabled}
+                label={action.label}
+              />
+            )}
           </Styles.Footer>
         </Styles.Modal>
       </Styles.Container>
@@ -127,7 +133,7 @@ Modal.propTypes = {
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     callback: PropTypes.func,
-  }).isRequired,
+  }),
   /** Verifies if the modal should be dismissed right after the action is executed, in case we are doing a validation inside the modal before closing it */
   dismissible: PropTypes.bool,
   /** The secondary action settings {**label**: the label of the button, **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
@@ -152,11 +158,12 @@ Modal.propTypes = {
 Modal.defaultProps = {
   background: null,
   cookie: null,
+  action: null,
   secondaryAction: null,
   footer: null,
   wide: false,
   previousFocus: null,
   dismissible: true,
-}
+};
 
 export default Modal;
