@@ -94,28 +94,27 @@ class Modal extends React.Component {
         >
           {children}
           <Styles.Footer>
-            {footer || (
-              <React.Fragment>
-                {secondaryAction && (
-                  <Button
-                    type="text"
-                    onClick={() => {
-                      this.handleAction(secondaryAction);
-                    }}
-                    disabled={secondaryAction.disabled}
-                    label={secondaryAction.label}
-                  />
-                )}
-                <Button
-                  ref={ctaButton => (this.ctaButton = ctaButton)}
-                  type="primary"
-                  onClick={() => {
-                    this.handleAction(action);
-                  }}
-                  disabled={action.disabled}
-                  label={action.label}
-                />
-              </React.Fragment>
+            {footer}
+            {secondaryAction && (
+              <Button
+                type="text"
+                onClick={() => {
+                  this.handleAction(secondaryAction);
+                }}
+                disabled={secondaryAction.disabled}
+                label={secondaryAction.label}
+              />
+            )}
+            {action && (
+              <Button
+                ref={ctaButton => (this.ctaButton = ctaButton)}
+                type="primary"
+                onClick={() => {
+                  this.handleAction(action);
+                }}
+                disabled={action.disabled}
+                label={action.label}
+              />
             )}
           </Styles.Footer>
         </Styles.Modal>
@@ -134,7 +133,7 @@ Modal.propTypes = {
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     callback: PropTypes.func,
-  }).isRequired,
+  }),
   /** Verifies if the modal should be dismissed right after the action is executed, in case we are doing a validation inside the modal before closing it */
   dismissible: PropTypes.bool,
   /** The secondary action settings {**label**: the label of the button, **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
@@ -159,6 +158,7 @@ Modal.propTypes = {
 Modal.defaultProps = {
   background: null,
   cookie: null,
+  action: null,
   secondaryAction: null,
   footer: null,
   wide: false,
