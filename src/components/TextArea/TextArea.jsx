@@ -1,4 +1,3 @@
-/* eslint-disable no-nested-ternary */
 import React from 'react';
 
 import PropTypes from 'prop-types';
@@ -8,7 +7,7 @@ import {HelpTextWrapper, HelpText} from '../Input/style';
 import { Warning } from '../Icon';
 import {red, redLight, gray, white, boxShadow, grayLight} from '../style/colors'
 
-// mport * as Styles from './style';
+// import * as Styles from './style';
 
 const Container = styled.div`
   
@@ -33,8 +32,6 @@ const borderCss = ({disabled, hasError}) => {
   }
   return `1px solid ${gray}`;
 }
-
-// ${({ disabled }) => (disabled ? 'none' : `{1px solid ${({ hasError }) => (hasError ? red : gray)}};)};
 
 const StyledTextArea = styled.textarea`
   background-color: ${backgroundCss}; 
@@ -101,6 +98,5 @@ TextArea.defaultProps = {
   hasError: false,
   disabled: false
 }
-
 
 export default TextArea;
