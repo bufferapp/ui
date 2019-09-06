@@ -4,7 +4,7 @@ import TextArea from '@bufferapp/ui/TextArea';
 /** TextArea Example */
 export default function ExampleTextArea() {
   return (
-    <TextArea label='Textarea (Normal)' placeholder='ghosts and stuff' rows='10'>
+    <TextArea label='Textarea (Normal)' placeholder='ghosts and stuff' rows="10" hasError help="nope">
       Hello, world!
     </TextArea>
   );

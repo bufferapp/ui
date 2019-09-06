@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "hasError" is set to: "false" 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.label)
+    htmlFor="story"
+  >
+    <Text
+      color="grayDarker"
+      hasError={false}
+      htmlFor="foo"
+      type="label"
+    >
+      jest-auto-snapshots String Fixture
+    </Text>
+    <ForwardRef(styled.textarea)
+      hasError={false}
+      id="story"
+      placeholder="jest-auto-snapshots String Fixture"
+    >
+      <NodeFixture />
+    </ForwardRef(styled.textarea)>
+  </ForwardRef(styled.label)>
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.label)
@@ -14,12 +38,23 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1
       jest-auto-snapshots String Fixture
     </Text>
     <ForwardRef(styled.textarea)
+      hasError={true}
       id="story"
       placeholder="jest-auto-snapshots String Fixture"
     >
       <NodeFixture />
     </ForwardRef(styled.textarea)>
   </ForwardRef(styled.label)>
+  <ForwardRef(styled.div)>
+    <WarningIcon
+      size="medium"
+    />
+    <ForwardRef(Styled(Text))
+      hasError={true}
+      htmlFor="story"
+      type="help"
+    />
+  </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
 
@@ -37,6 +72,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed only requir
       jest-auto-snapshots String Fixture
     </Text>
     <ForwardRef(styled.textarea)
+      hasError={false}
       id="story"
     >
       <NodeFixture />
