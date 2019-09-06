@@ -1,10 +1,10 @@
 import React from 'react';
 import TextArea from '@bufferapp/ui/TextArea';
 
-/** TextArea With Error Example */
+/** TextArea Disabled Example */
 export default function ExampleTextArea() {
   return (
-    <TextArea label='Textarea (Error)' placeholder='ghosts and stuff' rows="10" hasError help="nope">
+    <TextArea label='Textarea (Disabled)' placeholder='ghosts and stuff' rows='10' disabled>
       Hello, world!
     </TextArea>
   );
