@@ -3,12 +3,12 @@
 exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.label)
-    htmlFor="story"
+    htmlFor="jest-auto-snapshots String Fixture"
   >
     <Text
       color="grayDarker"
       hasError={false}
-      htmlFor="foo"
+      htmlFor="jest-auto-snapshots String Fixture"
       type="label"
     >
       jest-auto-snapshots String Fixture
@@ -16,11 +16,11 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "disa
     <ForwardRef(styled.textarea)
       disabled={false}
       hasError={true}
-      id="story"
+      id="jest-auto-snapshots String Fixture"
+      onChange={[MockFunction]}
       placeholder="jest-auto-snapshots String Fixture"
-    >
-      <NodeFixture />
-    </ForwardRef(styled.textarea)>
+      rows={1}
+    />
   </ForwardRef(styled.label)>
   <ForwardRef(styled.div)>
     <WarningIcon
@@ -28,7 +28,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "disa
     />
     <ForwardRef(Styled(Text))
       hasError={true}
-      htmlFor="story"
+      htmlFor="jest-auto-snapshots String Fixture"
       type="help"
     />
   </ForwardRef(styled.div)>
@@ -38,12 +38,12 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "disa
 exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "hasError" is set to: "false" 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.label)
-    htmlFor="story"
+    htmlFor="jest-auto-snapshots String Fixture"
   >
     <Text
       color="grayDarker"
       hasError={false}
-      htmlFor="foo"
+      htmlFor="jest-auto-snapshots String Fixture"
       type="label"
     >
       jest-auto-snapshots String Fixture
@@ -51,11 +51,11 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "hasE
     <ForwardRef(styled.textarea)
       disabled={true}
       hasError={false}
-      id="story"
+      id="jest-auto-snapshots String Fixture"
+      onChange={[MockFunction]}
       placeholder="jest-auto-snapshots String Fixture"
-    >
-      <NodeFixture />
-    </ForwardRef(styled.textarea)>
+      rows={1}
+    />
   </ForwardRef(styled.label)>
 </ForwardRef(styled.div)>
 `;
@@ -63,12 +63,12 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "hasE
 exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.label)
-    htmlFor="story"
+    htmlFor="jest-auto-snapshots String Fixture"
   >
     <Text
       color="grayDarker"
       hasError={false}
-      htmlFor="foo"
+      htmlFor="jest-auto-snapshots String Fixture"
       type="label"
     >
       jest-auto-snapshots String Fixture
@@ -76,11 +76,11 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1
     <ForwardRef(styled.textarea)
       disabled={true}
       hasError={true}
-      id="story"
+      id="jest-auto-snapshots String Fixture"
+      onChange={[MockFunction]}
       placeholder="jest-auto-snapshots String Fixture"
-    >
-      <NodeFixture />
-    </ForwardRef(styled.textarea)>
+      rows={1}
+    />
   </ForwardRef(styled.label)>
   <ForwardRef(styled.div)>
     <WarningIcon
@@ -88,7 +88,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1
     />
     <ForwardRef(Styled(Text))
       hasError={true}
-      htmlFor="story"
+      htmlFor="jest-auto-snapshots String Fixture"
       type="help"
     />
   </ForwardRef(styled.div)>
@@ -98,12 +98,12 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1
 exports[`jest-auto-snapshots > TextArea Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.label)
-    htmlFor="story"
+    htmlFor="jest-auto-snapshots String Fixture"
   >
     <Text
       color="grayDarker"
       hasError={false}
-      htmlFor="foo"
+      htmlFor="jest-auto-snapshots String Fixture"
       type="label"
     >
       jest-auto-snapshots String Fixture
@@ -111,10 +111,10 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed only requir
     <ForwardRef(styled.textarea)
       disabled={false}
       hasError={false}
-      id="story"
-    >
-      <NodeFixture />
-    </ForwardRef(styled.textarea)>
+      id="jest-auto-snapshots String Fixture"
+      onChange={[MockFunction]}
+      rows={4}
+    />
   </ForwardRef(styled.label)>
 </ForwardRef(styled.div)>
 `;
