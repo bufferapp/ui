@@ -64,15 +64,15 @@ const pulseBottom = keyframes`
 }`;
 // Here we create a component that will rotate everything we pass in over two seconds
 const Top = styled.path`
-  animation: ${pulseTop} 2s linear infinite;
+  animation: ${pulseTop} 1s normal infinite;
 `;
 
 const Middle = styled.path`
-animation: ${pulseMiddle} 2s linear infinite;
+animation: ${pulseMiddle} 1s normal infinite;
 `;
 
 const Bottom = styled.path`
-animation: ${pulseBottom} 2s linear infinite;
+animation: ${pulseBottom} 1s normal infinite;
 `;
 
 const Loader = () => (
