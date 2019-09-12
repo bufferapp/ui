@@ -10,7 +10,7 @@ const StyledDiv = styled.div`
 export default function ExampleTextArea() {
   return (
     <StyledDiv>
-      <TextArea label='Textarea (Full Height)' placeholder='ghosts and stuff' onChange={()=>{}} value="hello, world!" id="example1" fullHeight />
+      <TextArea label='Textarea (Full Height)' placeholder='placeholder' onChange={()=>{}} id="example1" fullHeight />
     </StyledDiv>
     
   );
