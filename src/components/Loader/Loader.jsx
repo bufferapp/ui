@@ -11,38 +11,38 @@ const LoaderStyled = styled.div`
 
 // Create the keyframes
 const pulseTop = keyframes`
-  0%, 100% {
-    fill: rgba(61,61,61, 0.18);
+  0%, 60%{
+    fill: #FFF;
   }
-  10%, 80% {
+  70% {
     fill: rgba(61,61,61, 0.67);
   }
-  20%, 70% {
+  80% {
     fill: rgba(61,61,61, 0.9);
   }
-  30%, 60% {
+  90% {
     fill: #3D3D3D;
   } 
-  50% {
-    fill: #3D3D3D;
+  100% {
+    fill: #FFF;
   }
 `;
 
 const pulseMiddle = keyframes`
-0%, 100% {
+0%, 30% {
   fill: #FFF;
 }
-10%, 80% {
-  fill: rgba(61,61,61, 0.19);
+40% {
+  fill: #DDDDDD;
 }
-20%, 70% {
-  fill: rgba(61,61,61, 0.56);
+50% {
+  fill: #A9A9A9;
 }
-30%, 60% {
+60%, 90% {
   fill: #3D3D3D;
 } 
-50% {
-  fill: #3D3D3D;
+100% {
+  fill: #FFF;
 }
 `;
 
@@ -50,29 +50,29 @@ const pulseBottom = keyframes`
 0%, 100% {
   fill: #FFF;
 }
-10%, 80% {
-  fill: #FFF;
+10% {
+  fill: #DDDDDD;
 }
-20%, 70%{
-  fill: rgba(61,61,61, 0.44);
+20% {
+  fill: #A9A9A9;
 }
-30%, 60%{
+30% {
   fill: #3D3D3D;
 } 
-50% {
+40%, 90% {
   fill: #3D3D3D;
 }`;
 // Here we create a component that will rotate everything we pass in over two seconds
 const Top = styled.path`
-  animation: ${pulseTop} 1s normal infinite;
+  animation: ${pulseTop} 1s ease-in-out infinite;
 `;
 
 const Middle = styled.path`
-animation: ${pulseMiddle} 1s normal infinite;
+animation: ${pulseMiddle} 1s ease-in-out infinite;
 `;
 
 const Bottom = styled.path`
-animation: ${pulseBottom} 1s normal infinite;
+animation: ${pulseBottom} 1s ease-in-out infinite;
 `;
 
 const Loader = () => (
