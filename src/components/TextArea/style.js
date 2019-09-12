@@ -3,6 +3,9 @@ import {red, redLight, gray, white, blue, grayLight, grayDarker, redLighter, box
 import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 `;
 
 const backgroundCss = ({disabled, hasError}) => {
@@ -44,6 +47,7 @@ export const StyledTextArea = styled.textarea`
   font-size: ${fontSize};
   font-weight: ${fontWeight};
   line-height: ${lineHeight};
+  height: ${({ fullHeight }) => (fullHeight ? '100%' : 'auto')};
   :focus {
     border: 1px solid ${({ hasError }) => (hasError ? red : blue)};
     box-shadow: 0px 0px 0px 3px

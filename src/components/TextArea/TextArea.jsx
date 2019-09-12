@@ -5,27 +5,26 @@ import PropTypes from 'prop-types';
 import Text from '../Text';
 import {HelpTextWrapper, HelpText} from '../Input/style';
 import { Warning } from '../Icon';
-import {Container, StyledLabel, StyledTextArea} from './style';
+import {Container, StyledTextArea} from './style';
 
-const TextArea = ({value, label, hasError, help, disabled, rows, onChange, id, ...props }) => (
+const TextArea = ({value, label, hasError, help, disabled, rows, onChange, id, fullHeight, ...props }) => (
   <Container>
-    <StyledLabel htmlFor={id}>
-      <Text
-        htmlFor={id}
-        type='label'
-      >
-        {label}
-      </Text>
-      <StyledTextArea
-        id={id}
-        {...props}
-        hasError={hasError}
-        disabled={disabled}
-        rows={rows > 20 ? 20 : rows}
-        value={value}
-        onChange={onChange}
-      />
-    </StyledLabel>
+    <Text
+      htmlFor={id}
+      type='label'
+    >
+      {label}
+    </Text>
+    <StyledTextArea
+      id={id}
+      {...props}
+      hasError={hasError}
+      disabled={disabled}
+      rows={rows > 20 ? 20 : rows}
+      value={value}
+      onChange={onChange}
+      fullHeight={fullHeight}
+    />
     {hasError && (
       <HelpTextWrapper>
         <Warning size="medium" />
@@ -51,14 +50,17 @@ TextArea.propTypes = {
   /** Number of rows, max 20 */
   rows: PropTypes.number,
   /** The id to link the textarea with the label */
-  id: PropTypes.string.isRequired
+  id: PropTypes.string.isRequired,
+  /** If the textarea should take the height of the parent div */
+  fullHeight: PropTypes.bool
 };
 
 TextArea.defaultProps = {
   placeholder: undefined,
   hasError: false,
   disabled: false,
-  rows: 4
+  rows: 4,
+  fullHeight: false
 }
 
 export default TextArea;
