@@ -1,79 +1,5 @@
 import React from 'react';
-
-import PropTypes from 'prop-types';
-import styled,  { keyframes }  from 'styled-components';
-import * as Styles from './style';
-
-const LoaderStyled = styled.div`
-  ${Styles.base}
-`;
-
-
-// Create the keyframes
-const pulseTop = keyframes`
-  0%, 60%{
-    fill: #FFF;
-  }
-  70% {
-    fill: rgba(61,61,61, 0.67);
-  }
-  80% {
-    fill: rgba(61,61,61, 0.9);
-  }
-  90% {
-    fill: #3D3D3D;
-  } 
-  100% {
-    fill: #FFF;
-  }
-`;
-
-const pulseMiddle = keyframes`
-0%, 30% {
-  fill: #FFF;
-}
-40% {
-  fill: #DDDDDD;
-}
-50% {
-  fill: #A9A9A9;
-}
-60%, 90% {
-  fill: #3D3D3D;
-} 
-100% {
-  fill: #FFF;
-}
-`;
-
-const pulseBottom = keyframes`
-0%, 100% {
-  fill: #FFF;
-}
-10% {
-  fill: #DDDDDD;
-}
-20% {
-  fill: #A9A9A9;
-}
-30% {
-  fill: #3D3D3D;
-} 
-40%, 90% {
-  fill: #3D3D3D;
-}`;
-// Here we create a component that will rotate everything we pass in over two seconds
-const Top = styled.path`
-  animation: ${pulseTop} 1s ease-in-out infinite;
-`;
-
-const Middle = styled.path`
-animation: ${pulseMiddle} 1s ease-in-out infinite;
-`;
-
-const Bottom = styled.path`
-animation: ${pulseBottom} 1s ease-in-out infinite;
-`;
+import {LoaderStyled, Top, Middle, Bottom } from './style';
 
 const Loader = () => (
   <LoaderStyled>
@@ -84,9 +10,5 @@ const Loader = () => (
     </svg>
   </LoaderStyled>
 );
-
-Loader.propTypes = {
-  children: PropTypes.node.isRequired,
-};
 
 export default Loader;
