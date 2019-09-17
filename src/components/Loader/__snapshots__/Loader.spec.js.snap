@@ -5,10 +5,14 @@ exports[`jest-auto-snapshots > Loader Matches snapshot when rendered 1`] = `
   <svg
     fill="none"
     height="40"
+    role="img"
     viewBox="0 0 36 40"
     width="36"
     xmlns="http://www.w3.org/2000/svg"
   >
+    <title>
+      Loading
+    </title>
     <ForwardRef(styled.path)
       d="M17.914 0.695986L35.258 9.66199L17.89 18.579L0.707985 9.64801L17.914 0.695986Z"
       fill="#3D3D3D"
