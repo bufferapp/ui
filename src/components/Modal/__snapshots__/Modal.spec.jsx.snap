@@ -129,20 +129,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required 
     <NodeFixture />
     <ForwardRef(styled.div)
       background={null}
-    >
-      <Button
-        disabled={true}
-        fullWidth={false}
-        hasIconOnly={false}
-        hideSearch={true}
-        label="jest-auto-snapshots String Fixture"
-        loading={false}
-        onClick={[Function]}
-        selectPosition="bottom"
-        size="medium"
-        type="primary"
-      />
-    </ForwardRef(styled.div)>
+    />
   </ForwardRef(styled.section)>
 </ForwardRef(styled.div)>
 `;

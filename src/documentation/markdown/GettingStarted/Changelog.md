@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.2.4] - 2019-09-05
+### Added
+- Allow conditional rendering of the Modal component's primary action (button) if an *action* prop is provided.
+
+## [5.2.3] - 2019-08-12
+
 ## [5.2.2] - 2019-08-12
 ### Added
 - Adding *dismissible* prop to modal, to handle autoclosing on primary action.
