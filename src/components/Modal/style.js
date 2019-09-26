@@ -10,7 +10,7 @@ export const Container = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
-  position: absolute;
+  position: fixed;
   padding-top: 80px;
   box-sizing: border-box;
   width: 100%;
@@ -42,7 +42,7 @@ export const Modal = styled.section`
 export const Footer = styled.div`
   width: 100%;
   box-sizing: border-box;
-  background: ${white};
+  background: ${props => props.background ? 'transparent' : white};
   padding: 0 16px;
   margin-top: 16px;
 

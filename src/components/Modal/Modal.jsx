@@ -57,7 +57,6 @@ class Modal extends React.Component {
     if (cookie) {
       setCookie(cookie.store, cookie.key, cookie.days, 'dismissed');
     }
-
     if (this.props.previousFocus && this.props.previousFocus.current) {
       this.props.previousFocus.current.focus();
     }
@@ -93,7 +92,7 @@ class Modal extends React.Component {
           wide={wide}
         >
           {children}
-          <Styles.Footer>
+          <Styles.Footer background={background}>
             {footer}
             {secondaryAction && (
               <Button
