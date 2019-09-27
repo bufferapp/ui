@@ -19,3 +19,8 @@ export const large = css`
   width: 22px;
   height: 22px;
 `;
+
+export const extraLarge = css`
+  width: 32px;
+  height: 32px;
+`;
