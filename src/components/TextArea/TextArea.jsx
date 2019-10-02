@@ -73,7 +73,10 @@ TextArea.propTypes = {
    * this consumed by the default export that is wrapping the component into a ForwardRef
    * @ignore
    */
-  forwardRef: PropTypes.node,
+  forwardRef: PropTypes.oneOfType([
+    PropTypes.func, 
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  ]),
 };
 
 TextArea.defaultProps = {
