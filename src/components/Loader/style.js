@@ -1,13 +1,12 @@
-import styled,  { keyframes }  from 'styled-components';
-import {white, grayLight, gray, grayDarker} from '../style/colors';
+import styled, { keyframes } from 'styled-components';
+import { grayLight, gray, grayDarker } from '../style/colors';
 
-export const LoaderStyled = styled.div`
-`;
+export const LoaderStyled = styled.div``;
 
 // Create the keyframes
 const pulseTop = keyframes`
   0%, 60%{
-    fill: ${white};
+    fill: transparent;
   }
   70% {
     fill: ${grayLight};
@@ -19,13 +18,13 @@ const pulseTop = keyframes`
     fill: ${grayDarker};
   } 
   100% {
-    fill: ${white};
+    fill: transparent;
   }
 `;
 
 const pulseMiddle = keyframes`
 0%, 30% {
-  fill: ${white};
+  fill: transparent;
 }
 40% {
   fill: ${grayLight};
@@ -37,13 +36,13 @@ const pulseMiddle = keyframes`
   fill: ${grayDarker};
 } 
 100% {
-  fill: ${white};
+  fill: transparent;
 }
 `;
 
 const pulseBottom = keyframes`
 0%, 100% {
-  fill: ${white};
+  fill: transparent;
 }
 10% {
   fill: ${grayLight};
@@ -60,9 +59,9 @@ export const Top = styled.path`
 `;
 
 export const Middle = styled.path`
-animation: ${pulseMiddle} 1s ease-in-out infinite;
+  animation: ${pulseMiddle} 1s ease-in-out infinite;
 `;
 
 export const Bottom = styled.path`
-animation: ${pulseBottom} 1s ease-in-out infinite;
+  animation: ${pulseBottom} 1s ease-in-out infinite;
 `;
