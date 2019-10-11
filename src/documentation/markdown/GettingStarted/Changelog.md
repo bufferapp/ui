@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.4.0] - 2019-09-27
+### Added
+- Adding `extraLarge` size prop to Icon, to handle 32x32 icons.
+
 ## [5.2.4] - 2019-09-05
 ### Added
 - Allow conditional rendering of the Modal component's primary action (button) if an *action* prop is provided.

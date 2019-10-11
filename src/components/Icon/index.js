@@ -48,6 +48,7 @@ export Refresh from './Icons/Refresh';
 export Reply from './Icons/Reply';
 export Return from './Icons/Return';
 export Search from './Icons/Search';
+export Shopify from './Icons/Shopify';
 export Sidebar from './Icons/Sidebar';
 export Swap from './Icons/Swap';
 export Tag from './Icons/Tag';
