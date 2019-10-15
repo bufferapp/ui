@@ -49,6 +49,7 @@ const Button = ({
   ref,
   hideSearch,
   className,
+  children,
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -82,16 +83,20 @@ const Button = ({
     {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
 
     {isSplit && (type === 'primary' || type === 'secondary') && (
-      <Select
-        onSelectClick={onSelectClick}
-        items={items}
-        type={type}
-        isSplit
-        yPosition={selectPosition}
-        xPosition="right"
-        disabled={disabled}
-        hideSearch={hideSearch}
-      />
+      children ?
+        React.Children.map(children, (child) => React.cloneElement(child, { }))
+        : (
+          <Select
+            onSelectClick={onSelectClick}
+            items={items}
+            type={type}
+            isSplit
+            yPosition={selectPosition}
+            xPosition="right"
+            disabled={disabled}
+            hideSearch={hideSearch}
+          />
+        )
     )}
   </ButtonStyled>
 );
@@ -135,6 +140,9 @@ Button.propTypes = {
     })
   ),
 
+  /** Child element(s) to use for custom Split Button child content */
+  children: PropTypes.element,
+
   /** Position of the Select popup */
   selectPosition: PropTypes.oneOf(['top', 'bottom']),
 
@@ -175,6 +183,7 @@ Button.defaultProps = {
   ref: undefined,
   hideSearch: true,
   className: undefined,
+  children: undefined,
 };
 
 export default Button;
