@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.7.0] - 2019-10-15
+### Added
+- Adding support for a Custom child Select to Button with dropdown.
+
 ## [5.4.0] - 2019-09-27
 ### Added
 - Adding `extraLarge` size prop to Icon, to handle 32x32 icons.
