@@ -19,5 +19,5 @@ git checkout master && \
   cd ./lib && \
   npm publish && \
   cd ../ &&\
-  git push &&\
+  git push --follow-tags &&\
   npm run deploy:docs
