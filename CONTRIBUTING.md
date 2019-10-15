@@ -69,6 +69,15 @@ To build the package locally, run:
 npm run build:lib
 ```
 
+### Publishing your code
+
+To publish your code changes, you can run the following command from the root of the package:
+```sh
+npm run publish {major|minor|patch}
+```
+this will automatically tag the release, generate a build, and deploy to npm and github with your changes.
+Under the hood, this runs the script `scripts/publish.sh`
+
 ### Coding style
 
 Please follow the coding style of the project. We use eslint, so if possible, enable linting in your editor to get real-time feedback. The linting rules can be run manually with the following command `npm run lint`.
