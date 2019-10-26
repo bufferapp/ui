@@ -36,6 +36,7 @@ export Locked from './Icons/Locked';
 export Message from './Icons/Message';
 export Messenger from './Icons/Messenger';
 export More from './Icons/More';
+export OpenNew from './Icons/OpenNew';
 export Pause from './Icons/Pause';
 export Pencil from './Icons/Pencil';
 export People from './Icons/People';

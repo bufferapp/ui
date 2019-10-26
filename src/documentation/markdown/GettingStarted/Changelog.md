@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.11.0] - 2019-10-25
+### Added
+- Adding Loader component
+
+## [5.10.0] - 2019-10-24
+### Added
+- Adding OpenNewIcon from figma
+
 ## [5.7.0] - 2019-10-15
 ### Added
 - Adding support for a Custom child Select to Button with dropdown.
