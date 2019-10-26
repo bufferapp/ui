@@ -35,6 +35,7 @@ export Location from './Icons/Location';
 export Locked from './Icons/Locked';
 export Message from './Icons/Message';
 export Messenger from './Icons/Messenger';
+export Money from './Icons/Money';
 export More from './Icons/More';
 export OpenNew from './Icons/OpenNew';
 export Pause from './Icons/Pause';
