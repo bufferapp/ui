@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.12.1] - 2019-10-29
+### Fixed
+- Fix `prefix` position on Input component that also has a label.
+
 ## [5.12.0] - 2019-10-29
 ### Added
 - Added `prefix` prop to Input component.

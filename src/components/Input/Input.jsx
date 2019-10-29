@@ -21,27 +21,29 @@ export default class Input extends React.Component {
       type,
       value,
       forwardRef,
-    } = this.props; 
+    } = this.props;
     return (
-      <Styles.InputWrapper prefix={prefix} size={size}>
+      <Styles.InputWrapper>
         {label.length > 0 && (
           <Text htmlFor={name} type="label">
             {label}
           </Text>
         )}
-        <Styles.InputStyled
-          disabled={disabled}
-          hasError={hasError}
-          name={name}
-          onChange={onChange}
-          onBlur={onBlur}
-          prefix={prefix}
-          placeholder={placeholder}
-          type={type}
-          size={size}
-          value={value}
-          ref={forwardRef}
-        />
+        <Styles.InputFieldWrapper prefix={prefix} size={size}>
+          <Styles.InputStyled
+            disabled={disabled}
+            hasError={hasError}
+            name={name}
+            onChange={onChange}
+            onBlur={onBlur}
+            prefix={prefix}
+            placeholder={placeholder}
+            type={type}
+            size={size}
+            value={value}
+            ref={forwardRef}
+          />
+        </Styles.InputFieldWrapper>
         {help.length > 0 && (
           <Styles.HelpTextWrapper>
             {hasError && <Warning size="medium" />}
@@ -51,8 +53,9 @@ export default class Input extends React.Component {
           </Styles.HelpTextWrapper>
         )}
       </Styles.InputWrapper>
-    )}
-};
+    );
+  }
+}
 
 Input.propTypes = {
   /** It disables the input field. </i> */
@@ -68,7 +71,10 @@ Input.propTypes = {
   /** It's the placeholder value of the input. */
   placeholder: PropTypes.string,
   /** Optional object describing fixed text that is placed inside the input, format is `{ text: '@', paddingLeft: '30px' }` */
-  prefix: PropTypes.shape({ text: PropTypes.string.isRequired, paddingLeft: PropTypes.string.isRequired }),
+  prefix: PropTypes.shape({
+    text: PropTypes.string.isRequired,
+    paddingLeft: PropTypes.string.isRequired,
+  }),
   /** The onChange event */
   onChange: PropTypes.func.isRequired,
   /** The onBlur event */
@@ -79,7 +85,7 @@ Input.propTypes = {
   type: PropTypes.string,
   /** The value of the input */
   value: PropTypes.string,
-  /** 
+  /**
    * this consumed by the default export that is wrapping the component into a ForwardRef
    * @ignore
    */
@@ -99,4 +105,3 @@ Input.defaultProps = {
   forwardRef: undefined,
   prefix: null,
 };
-

@@ -7,6 +7,7 @@ export default function ExampleInput() {
     <Input
       onChange={()=>{}}
       name='foo'
+      label='What is your Twitter handle?'
       prefix={{ text: '@', paddingLeft: '25px' }}
     />
   );
