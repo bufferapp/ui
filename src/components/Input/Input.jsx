@@ -20,7 +20,7 @@ export default class Input extends React.Component {
       size,
       type,
       value,
-      forwardRef,
+      forwardedRef,
     } = this.props;
     return (
       <Styles.InputWrapper>
@@ -41,7 +41,7 @@ export default class Input extends React.Component {
             type={type}
             size={size}
             value={value}
-            ref={forwardRef}
+            ref={forwardedRef}
           />
         </Styles.InputFieldWrapper>
         {help.length > 0 && (
@@ -89,7 +89,7 @@ Input.propTypes = {
    * this consumed by the default export that is wrapping the component into a ForwardRef
    * @ignore
    */
-  forwardRef: PropTypes.node,
+  forwardedRef: PropTypes.shape({ current: PropTypes.any }),
 };
 
 Input.defaultProps = {
@@ -102,6 +102,6 @@ Input.defaultProps = {
   type: 'text',
   value: undefined,
   onBlur: () => {},
-  forwardRef: undefined,
+  forwardedRef: undefined,
   prefix: null,
 };
