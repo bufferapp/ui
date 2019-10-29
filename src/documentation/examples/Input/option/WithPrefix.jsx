@@ -1,0 +1,13 @@
+import React from 'react';
+import Input from '@bufferapp/ui/Input';
+
+/** Input with prefix text */
+export default function ExampleInput() {
+  return (
+    <Input
+      onChange={()=>{}}
+      name='foo'
+      prefix={{ text: '@', paddingLeft: '25px' }}
+    />
+  );
+}
