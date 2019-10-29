@@ -48,12 +48,14 @@ const inputPrefix = css`
 
 export const InputWrapper = styled.div`
   width: 100%;
+`;
+
+export const InputFieldWrapper = styled.div`
   position: relative;
   ${({ prefix }) => (prefix ? inputPrefix : '')};
 `;
 
 export const InputStyled = styled.input`
-  position: relative;
   box-sizing: border-box;
   margin: 8px 0px;
   background: ${({ hasError }) => (hasError ? redLight : white)};
