@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.12.2] - 2019-10-29
+### Fixed
+- Fix `ref` forwarding for Input. (The prop names weren't matching.)
+
 ## [5.12.1] - 2019-10-29
 ### Fixed
 - Fix `prefix` position on Input component that also has a label.
