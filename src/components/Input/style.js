@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   blue,
   gray,
@@ -12,11 +12,48 @@ import {
 import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
 import Text from '../Text';
 
+const inputPadding = css`
+  padding: ${({ size }) => {
+    switch (size) {
+      case 'small':
+        return '5px 8px 4px 8px';
+      case 'tall':
+        return '13px 16px 12px 16px';
+      default:
+        return '9px 8px 8px 8px';
+    }
+  }};
+`;
+
+const inputPrefix = css`
+  &:before {
+    content: '${({ prefix }) => prefix.text}';
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: ${gray};
+    width: ${({ prefix }) => prefix.paddingLeft};
+    z-index: 10;
+    font-family: ${fontFamily};
+    font-size: ${fontSize};
+    font-weight: ${fontWeight};
+    line-height: ${lineHeight};
+    margin: 8px 0;
+    ${inputPadding}
+    border: 1px solid transparent;
+    user-select: none;
+    pointer-events: none;
+  }
+`;
+
 export const InputWrapper = styled.div`
   width: 100%;
+  position: relative;
+  ${({ prefix }) => (prefix ? inputPrefix : '')};
 `;
 
 export const InputStyled = styled.input`
+  position: relative;
   box-sizing: border-box;
   margin: 8px 0px;
   background: ${({ hasError }) => (hasError ? redLight : white)};
@@ -31,17 +68,10 @@ export const InputStyled = styled.input`
   font-size: ${fontSize};
   font-weight: ${fontWeight};
   line-height: ${lineHeight};
-  padding: ${({ size }) => {
-    switch (size) {
-      case 'small':
-        return '5px 8px 4px 8px';
-      case 'tall':
-        return '13px 16px 12px 16px';
-      default:
-        return '9px 8px 8px 8px';
-    }
-  }};
+  ${inputPadding}
   width: 100%;
+
+  ${({ prefix }) => (prefix ? `padding-left: ${prefix.paddingLeft};` : '')}
 
   &::placeholder {
     color: ${gray};

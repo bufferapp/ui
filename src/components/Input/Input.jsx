@@ -15,6 +15,7 @@ export default class Input extends React.Component {
       name,
       onChange,
       onBlur,
+      prefix,
       placeholder,
       size,
       type,
@@ -22,7 +23,7 @@ export default class Input extends React.Component {
       forwardRef,
     } = this.props; 
     return (
-      <Styles.InputWrapper>
+      <Styles.InputWrapper prefix={prefix} size={size}>
         {label.length > 0 && (
           <Text htmlFor={name} type="label">
             {label}
@@ -34,6 +35,7 @@ export default class Input extends React.Component {
           name={name}
           onChange={onChange}
           onBlur={onBlur}
+          prefix={prefix}
           placeholder={placeholder}
           type={type}
           size={size}
@@ -65,6 +67,8 @@ Input.propTypes = {
   name: PropTypes.string.isRequired,
   /** It's the placeholder value of the input. */
   placeholder: PropTypes.string,
+  /** Optional object describing fixed text that is placed inside the input, format is `{ text: '@', paddingLeft: '30px' }` */
+  prefix: PropTypes.shape({ text: PropTypes.string.isRequired, paddingLeft: PropTypes.string.isRequired }),
   /** The onChange event */
   onChange: PropTypes.func.isRequired,
   /** The onBlur event */
@@ -93,5 +97,6 @@ Input.defaultProps = {
   value: undefined,
   onBlur: () => {},
   forwardRef: undefined,
+  prefix: null,
 };
 

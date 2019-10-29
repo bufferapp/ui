@@ -48,11 +48,35 @@ AppShell.propTypes = {
   /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
   activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
 
-  /** See the prop description in the `NavBar` component. */
-  user: NavBar.propTypes.user, // eslint-disable-line
+  /** The current user object */
+  user: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    email: PropTypes.string.isRequired,
+    /** If missing we will use Gravatar to get the user avatar by email */
+    avatar: PropTypes.string,
+    /** If missing we will use Gravatar to get the user avatar by email */
+    ignoreMenuItems: PropTypes.arrayOf(PropTypes.string),
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        component: PropTypes.func,
+        hasDivider: PropTypes.bool,
+        onItemClick: PropTypes.func,
+      })
+    ).isRequired,
+  }).isRequired,
 
-  /** See the prop description in the `NavBar` component. */
-  helpMenuItems: NavBar.propTypes.helpMenuItems, // eslint-disable-line
+  /** Menu items to show in the help menu */
+  helpMenuItems: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      component: PropTypes.node,
+      hasDivider: PropTypes.bool,
+      onItemClick: PropTypes.func,
+    })
+  ),
 
   /** (Optional) Your sidebar component. */
   sidebar: PropTypes.node,
@@ -79,6 +103,7 @@ AppShell.defaultProps = {
   activeProduct: undefined,
   bannerOptions: null,
   onLogout: undefined,
+  helpMenuItems: null,
 };
 
 export default AppShell;

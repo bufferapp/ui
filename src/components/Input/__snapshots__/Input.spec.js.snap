@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
+<ForwardRef(styled.div)
+  prefix={
+    Object {
+      "paddingLeft": "jest-auto-snapshots String Fixture",
+      "text": "jest-auto-snapshots String Fixture",
+    }
+  }
+  size="jest-auto-snapshots String Fixture"
+>
   <Text
     color="grayDarker"
     hasError={false}
@@ -17,6 +25,12 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
     onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
     size="jest-auto-snapshots String Fixture"
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
@@ -37,7 +51,15 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
 `;
 
 exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasError" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
+<ForwardRef(styled.div)
+  prefix={
+    Object {
+      "paddingLeft": "jest-auto-snapshots String Fixture",
+      "text": "jest-auto-snapshots String Fixture",
+    }
+  }
+  size="jest-auto-snapshots String Fixture"
+>
   <Text
     color="grayDarker"
     hasError={false}
@@ -53,6 +75,12 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
     onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
     size="jest-auto-snapshots String Fixture"
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
@@ -70,7 +98,15 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
 `;
 
 exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)>
+<ForwardRef(styled.div)
+  prefix={
+    Object {
+      "paddingLeft": "jest-auto-snapshots String Fixture",
+      "text": "jest-auto-snapshots String Fixture",
+    }
+  }
+  size="jest-auto-snapshots String Fixture"
+>
   <Text
     color="grayDarker"
     hasError={false}
@@ -86,6 +122,12 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
     onBlur={[MockFunction]}
     onChange={[MockFunction]}
     placeholder="jest-auto-snapshots String Fixture"
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
     size="jest-auto-snapshots String Fixture"
     type="jest-auto-snapshots String Fixture"
     value="jest-auto-snapshots String Fixture"
@@ -106,7 +148,10 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
 `;
 
 exports[`jest-auto-snapshots > Input Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
+<ForwardRef(styled.div)
+  prefix={null}
+  size="regular"
+>
   <ForwardRef(styled.input)
     disabled={false}
     hasError={false}
@@ -114,6 +159,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed only required 
     onBlur={[Function]}
     onChange={[MockFunction]}
     placeholder=""
+    prefix={null}
     size="regular"
     type="text"
   />
