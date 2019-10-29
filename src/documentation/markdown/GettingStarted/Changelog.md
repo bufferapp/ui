@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.12.0] - 2019-10-29
+### Added
+- Added `prefix` prop to Input component.
+
 ## [5.11.0] - 2019-10-25
 ### Added
 - Adding Loader component
