@@ -7,7 +7,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
       "handle": "jest-auto-snapshots String Fixture",
       "id": "jest-auto-snapshots String Fixture",
       "name": "jest-auto-snapshots String Fixture",
-      "network": "jest-auto-snapshots String Fixture",
+      "network": "facebook",
       "profileImageUrl": "jest-auto-snapshots String Fixture",
     }
   }
@@ -25,7 +25,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
         alt="jest-auto-snapshots String Fixture"
         fallbackUrl=""
         isOnline={false}
-        network="jest-auto-snapshots String Fixture"
+        network="facebook"
         size="small"
         src="jest-auto-snapshots String Fixture"
         type="social"
@@ -62,7 +62,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
       "handle": "jest-auto-snapshots String Fixture",
       "id": "jest-auto-snapshots String Fixture",
       "name": "jest-auto-snapshots String Fixture",
-      "network": "jest-auto-snapshots String Fixture",
+      "network": "facebook",
       "profileImageUrl": "jest-auto-snapshots String Fixture",
     }
   }
@@ -80,7 +80,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
         alt="jest-auto-snapshots String Fixture"
         fallbackUrl=""
         isOnline={false}
-        network="jest-auto-snapshots String Fixture"
+        network="facebook"
         size="small"
         src="jest-auto-snapshots String Fixture"
         type="social"
