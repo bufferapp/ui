@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.13.0] - 2019-10-31
+### Added
+- Added DollarIcon from Figma
+
 ## [5.12.2] - 2019-10-29
 ### Fixed
 - Fix `ref` forwarding for Input. (The prop names weren't matching.)
