@@ -15,6 +15,7 @@ export Clock from './Icons/Clock';
 export Compare from './Icons/Compare';
 export Copy from './Icons/Copy';
 export Cross from './Icons/Cross';
+export Dollar from './Icons/Dollar';
 export Emoji from './Icons/Emoji';
 export Facebook from './Icons/Facebook';
 export Flag from './Icons/Flag';
