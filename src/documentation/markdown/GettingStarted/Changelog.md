@@ -2,19 +2,19 @@
 
 ## [5.17.0] - 2019-10-31
 ### No change from 5.13.0
-- Attempted to publish 5.13.0 multiple times due to terminal error and was unaware that each attempt was successful and incremented the version.
+- This version was a result of attempting to publish 5.13.0 multiple times due to an error in the terminal. Each attempt successfully published and incremented the version.
 
 ## [5.16.0] - 2019-10-31
 ### No change from 5.13.0
-- Attempted to publish 5.13.0 multiple times due to terminal error and was unaware that each attempt was successful and incremented the version.
+- This version was a result of attempting to publish 5.13.0 multiple times due to an error in the terminal. Each attempt successfully published and incremented the version.
 
 ## [5.15.0] - 2019-10-31
 ### No change from 5.13.0
-- Attempted to publish 5.13.0 multiple times due to terminal error and was unaware that each attempt was successful and incremented the version.
+- This version was a result of attempting to publish 5.13.0 multiple times due to an error in the terminal. Each attempt successfully published and incremented the version.
 
 ## [5.14.0] - 2019-10-31
 ### No change from 5.13.0
-- Attempted to publish 5.13.0 multiple times due to terminal error and was unaware that each attempt was successful and incremented the version.
+- This version was a result of attempting to publish 5.13.0 multiple times due to an error in the terminal. Each attempt successfully published and incremented the version.
 
 ## [5.13.0] - 2019-10-31
 ### Added
