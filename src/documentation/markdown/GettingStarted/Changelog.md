@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.17.1] - 2019-11-06
+### Fixed
+- Adds selected and disabled as fields to check for rerendering the Select dropdown
+
 ## [5.17.0] - 2019-10-31
 ### No change from 5.13.0
 - This version was a result of attempting to publish 5.13.0 multiple times due to an error in the terminal. Each attempt successfully published and incremented the version.
