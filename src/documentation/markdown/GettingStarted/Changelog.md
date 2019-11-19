@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.17.3] - 2019-11-06
+### Fixed
+- Switches around the margin and padding in Select Item so it works across browsers
+
+
 ## [5.17.1] - 2019-11-06
 ### Fixed
 - Adds selected and disabled as fields to check for rerendering the Select dropdown
