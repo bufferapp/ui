@@ -24,6 +24,7 @@ exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`]
           color="#fff"
         />
       }
+      iconEnd={false}
       label="Close"
       loading={false}
       onClick={[Function]}

@@ -178,5 +178,6 @@ export const ButtonArrow = style.div`
 `;
 
 export const ButtonLabel = style.div`
-  margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
+  margin-left: ${props => (props.hasIcon && !props.iconEnd ? '5px' : '0px')};
+  margin-right: ${props => (props.hasIcon && props.iconEnd ? '5px' : '0px')};
 `;

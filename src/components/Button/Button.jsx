@@ -39,6 +39,7 @@ const Button = ({
   isSplit,
   loading,
   icon,
+  iconEnd,
   hasIconOnly,
   isSelect,
   items,
@@ -64,11 +65,12 @@ const Button = ({
     ref={ref}
     className={className}
   >
-    {icon}
+    {!iconEnd && icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
     {!hasIconOnly && (
-      <Styles.ButtonLabel hasIcon={!!icon}>{label}</Styles.ButtonLabel>
+      <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>{label}</Styles.ButtonLabel>
     )}
+    {iconEnd && icon}
 
     {isSelect && (type === 'primary' || type === 'secondary') && (
       <Styles.ButtonArrow>
@@ -132,6 +134,9 @@ Button.propTypes = {
   /** Icon to show with the label */
   icon: PropTypes.node,
 
+  /** Icon to show with the label */
+  iconEnd: PropTypes.bool,
+
   /** Items to display in the Split Button popup */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -174,6 +179,7 @@ Button.defaultProps = {
   label: undefined,
   hasIconOnly: false,
   icon: undefined,
+  iconEnd: false,
   isSelect: undefined,
   items: undefined,
   selectPosition: 'bottom',
