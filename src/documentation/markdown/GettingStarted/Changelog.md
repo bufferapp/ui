@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.18.0] - 2019-11-26
+### Fixed
+- Added the ability to display the icon at the end of buttons, using iconEnd attribute
+
+# Changelog
+
 ## [5.17.3] - 2019-11-06
 ### Fixed
 - Switches around the margin and padding in Select Item so it works across browsers
