@@ -18,6 +18,7 @@ export const TooltipStyled = styled(Tooltip)`
 `;
 
 export const TooltipStyle = {
+  position: "absolute",
   background: grayDarker,
   color: white,
   border: "none",
