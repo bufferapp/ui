@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.18.1] - 2019-12-04
+### Fixed
+- Added a position absolute for the Tooltip component, which stopped working in Publish
+
 ## [5.18.0] - 2019-11-26
 ### Fixed
 - Added the ability to display the icon at the end of buttons, using iconEnd attribute
