@@ -2,7 +2,7 @@
 
 ## [5.18.1] - 2019-12-04
 ### Fixed
-- Added a position absolute for the Tooltip component, which stopped working in Publish
+- Added a position absolute for the Tooltip component
 
 ## [5.18.0] - 2019-11-26
 ### Fixed
