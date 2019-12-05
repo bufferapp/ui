@@ -2,7 +2,7 @@
 
 ## [5.18.1-beta.bd7ed5d] - 2019-12-05
 ### Fixed
-- Added a position absolute for the Tooltip component
+- Added a position absolute for the Tooltip component, updated @reach/Tooltip version to 0.6.2
 
 ## [5.18.0] - 2019-11-26
 ### Fixed
