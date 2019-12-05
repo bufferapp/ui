@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.18.1] - 2019-12-04
+## [5.18.1-beta.bd7ed5d] - 2019-12-05
 ### Fixed
 - Added a position absolute for the Tooltip component
 
