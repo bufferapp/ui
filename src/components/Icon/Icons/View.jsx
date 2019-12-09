@@ -10,7 +10,7 @@ const ViewIcon = createIconComponent({
   content: (
     <g>
       <path fillRule="evenodd" clipRule="evenodd" d="M8 13.5c4.418 0 8-5.5 8-5.5s-3.582-6-8-6-8 6-8 6 3.582 5.5 8 5.5zM8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-      <circle cx="8" cy="8" r="2" />
+      <path d="M10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
     </g>
   ),
 });

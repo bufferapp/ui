@@ -9,7 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const MoreIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M10 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-2 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4zm0 6a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+      <path d="M10 2a2 2 0 1 1-4 0 2 2 0 0 1 4 0zM8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM8 16a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
     </g>
   ),
 });

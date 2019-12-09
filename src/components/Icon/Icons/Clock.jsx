@@ -9,7 +9,8 @@ import createIconComponent from '../utils/createIconComponent';
 const ClockIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M14 8A6 6 0 1 1 2 8a6 6 0 0 1 12 0zm2 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.5 3a.5.5 0 0 0-1 0v5.207l.146.147 2 2a.5.5 0 0 0 .708-.708L8.5 7.793V3z" />
+      <path d="M7.1 4.25a.75.75 0 1 1 1.5 0v3.451l2.037 1.71a.75.75 0 1 1-.964 1.149L7.375 8.63a.75.75 0 0 1-.256-.712.753.753 0 0 1-.019-.169v-3.5z" />
+      <path fillRule="evenodd" clipRule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-2 0A6 6 0 1 1 2 8a6 6 0 0 1 12 0z" />
     </g>
   ),
 });
