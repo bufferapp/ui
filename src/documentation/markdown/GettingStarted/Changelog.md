@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.19.0] - 2019-12-09
+### Fixed
+- Fixed the icon generation script (`npm run gen:icons`) to work with some of the SVGs we're getting back from the Figma API.
+### Updated
+- Added the result of generating latest Icons/* based on changes to the Figma.
+
 ## [5.18.1-beta.bd7ed5d] - 2019-12-05
 ### Fixed
 - Added a position absolute for the Tooltip component, updated @reach/Tooltip version to 0.6.2

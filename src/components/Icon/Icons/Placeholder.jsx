@@ -9,7 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const PlaceholderIcon = createIconComponent({
   content: (
     <g>
-      <rect width="16" height="16" rx="4" />
+      <path d="M0 4a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H4a4 4 0 0 1-4-4V4z" />
     </g>
   ),
 });

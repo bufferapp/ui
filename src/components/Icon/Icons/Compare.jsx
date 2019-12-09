@@ -9,7 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const CompareIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M7 3a1 1 0 1 1 2 0v10a1 1 0 1 1-2 0V3zm9 5a4 4 0 0 1-5 3.874V4.126A4 4 0 0 1 16 8zM5 12V4L.956 10.47A1 1 0 0 0 1.804 12H5z" />
+      <path d="M7 3a1 1 0 1 1 2 0v10a1 1 0 1 1-2 0V3zM16 8a4 4 0 0 1-5 3.874V4.126A4 4 0 0 1 16 8zM5 12V4L.956 10.47A1 1 0 0 0 1.804 12H5z" />
     </g>
   ),
 });
