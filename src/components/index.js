@@ -1,3 +1,4 @@
+// Components
 export { default as Button } from './Button';
 export { default as Select } from './Select';
 export { default as Avatar } from './Avatar';
@@ -14,3 +15,6 @@ export { default as ProgressBar} from './ProgressBar';
 export { default as SocialButton} from './SocialButton';
 export { default as Loader } from './Loader';
 export { default as TextArea } from './TextArea';
+
+// Styles
+export { borders, colors, fonts } from './style';
