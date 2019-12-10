@@ -396,7 +396,7 @@ export default class Select extends React.Component {
       return customButton(this.onButtonClick, this.onSearchChange);
     }
     if (customButton) {
-      return customButton(this.onButtonClick);
+      return customButton(this.onButtonClick, this.state.isOpen);
     }
     if (hasIconOnly) {
       return (
