@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.20.0] - 2019-12-11
+### Updated
+- Now passing isOpen state to customButton in Selects to use in outside apps
+
 ## [5.19.0] - 2019-12-09
 ### Fixed
 - Fixed the icon generation script (`npm run gen:icons`) to work with some of the SVGs we're getting back from the Figma API.
