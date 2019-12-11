@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.19.1] - 2019-12-11
+### Added
+- Add a `maxLength` prop to the Input component
+
 ## [5.19.0] - 2019-12-09
 ### Fixed
 - Fixed the icon generation script (`npm run gen:icons`) to work with some of the SVGs we're getting back from the Figma API.
