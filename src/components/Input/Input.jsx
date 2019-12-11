@@ -12,6 +12,7 @@ export default class Input extends React.Component {
       hasError,
       help,
       label,
+      maxLength,
       name,
       onChange,
       onBlur,
@@ -31,6 +32,7 @@ export default class Input extends React.Component {
         <Styles.InputStyled
           disabled={disabled}
           hasError={hasError}
+          maxLength={maxLength}
           name={name}
           onChange={onChange}
           onBlur={onBlur}
@@ -61,6 +63,8 @@ Input.propTypes = {
   help: PropTypes.string,
   /** It adds a label on top of the input box. */
   label: PropTypes.string,
+  /** It adds a maxlength option for the input. */
+  maxLength: PropTypes.string,
   /** It's the name of the input. */
   name: PropTypes.string.isRequired,
   /** It's the placeholder value of the input. */
@@ -93,5 +97,5 @@ Input.defaultProps = {
   value: undefined,
   onBlur: () => {},
   forwardRef: undefined,
+  maxLength: undefined,
 };
-
