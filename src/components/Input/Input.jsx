@@ -12,9 +12,11 @@ export default class Input extends React.Component {
       hasError,
       help,
       label,
+      maxLength,
       name,
       onChange,
       onBlur,
+      onKeyUp,
       prefix,
       placeholder,
       size,
@@ -33,9 +35,11 @@ export default class Input extends React.Component {
           <Styles.InputStyled
             disabled={disabled}
             hasError={hasError}
+            maxLength={maxLength}
             name={name}
             onChange={onChange}
             onBlur={onBlur}
+            onKeyUp={onKeyUp}
             prefix={prefix}
             placeholder={placeholder}
             type={type}
@@ -66,6 +70,8 @@ Input.propTypes = {
   help: PropTypes.string,
   /** It adds a label on top of the input box. */
   label: PropTypes.string,
+  /** It adds a maxlength option for the input. */
+  maxLength: PropTypes.string,
   /** It's the name of the input. */
   name: PropTypes.string.isRequired,
   /** It's the placeholder value of the input. */
@@ -79,6 +85,8 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   /** The onBlur event */
   onBlur: PropTypes.func,
+  /** The onKeyUp event */
+  onKeyUp: PropTypes.func,
   /** This is the vertical size of the input field, can be `small`, `regular`, or `tall` */
   size: PropTypes.string,
   /** The type of the input */
@@ -102,6 +110,8 @@ Input.defaultProps = {
   type: 'text',
   value: undefined,
   onBlur: () => {},
+  onKeyUp: () => {},
   forwardedRef: undefined,
   prefix: null,
+  maxLength: undefined,
 };

@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.21.0] - 2019-12-11
+### Added
+- Added `maxLength` & `onKeyUp` props to the Input component
+
 ## [5.20.0] - 2019-12-11
 ### Updated
 - Now passing isOpen state to customButton in Selects to use in outside apps
