@@ -1,8 +1,12 @@
 # Changelog
 
-## [5.19.1] - 2019-12-11
+## [5.21.0] - 2019-12-11
 ### Added
 - Add a `maxLength` prop to the Input component
+
+## [5.20.0] - 2019-12-11
+### Updated
+- Now passing isOpen state to customButton in Selects to use in outside apps
 
 ## [5.19.0] - 2019-12-09
 ### Fixed
