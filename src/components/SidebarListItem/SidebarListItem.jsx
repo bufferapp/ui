@@ -73,7 +73,7 @@ SidebarListItem.propTypes = {
     name: PropTypes.string,
     handle: PropTypes.string,
     profileImageUrl: PropTypes.string,
-    network: PropTypes.string,
+    network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest']),
   }),
 };
 

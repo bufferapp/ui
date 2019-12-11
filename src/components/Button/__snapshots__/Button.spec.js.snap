@@ -12,10 +12,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -35,10 +35,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -59,10 +59,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -82,10 +82,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -105,12 +105,13 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.div)
     hasIcon={true}
+    iconEnd={true}
   >
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.div)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -119,6 +120,29 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
+<ForwardRef(styled.button)
+  className="jest-auto-snapshots String Fixture"
+  data-tip="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  size="small"
+  type="link"
+>
+  <ForwardRef(styled.span)>
+    jest-auto-snapshots String Fixture
+  </ForwardRef(styled.span)>
+  <NodeFixture />
+  <ForwardRef(styled.img)
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef(styled.button)>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEnd" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
@@ -153,10 +177,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -176,10 +200,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -199,10 +223,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
 </ForwardRef(styled.button)>
 `;
 
@@ -218,10 +242,10 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   size="small"
   type="link"
 >
-  <NodeFixture />
   <ForwardRef(styled.span)>
     jest-auto-snapshots String Fixture
   </ForwardRef(styled.span)>
+  <NodeFixture />
   <ForwardRef(styled.img)
     alt="loading"
     src="./images/loading-gray.svg"
@@ -240,6 +264,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
 >
   <ForwardRef(styled.div)
     hasIcon={false}
+    iconEnd={false}
   />
 </ForwardRef(styled.button)>
 `;

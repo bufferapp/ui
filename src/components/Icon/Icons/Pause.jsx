@@ -9,15 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const PauseIcon = createIconComponent({
   content: (
     <g>
-      <g clipPath="url(#clip0)">
-        <path fillRule="evenodd" clipRule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM5 5.5a1 1 0 0 1 2 0v5a1 1 0 1 1-2 0v-5zm5-1a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0v-5a1 1 0 0 0-1-1z" />
-      </g>
-      <defs>
-        <clipPath id="clip0">
-          <path d="M0 0h16v16H0z" />
-        </clipPath>
-      </defs>
-
+      <path fillRule="evenodd" clipRule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM5 5.5a1 1 0 0 1 2 0v5a1 1 0 1 1-2 0v-5zm5-1a1 1 0 0 0-1 1v5a1 1 0 1 0 2 0v-5a1 1 0 0 0-1-1z" />
     </g>
   ),
 });

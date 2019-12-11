@@ -870,6 +870,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     fullWidth={false}
     hasIconOnly={false}
     hideSearch={true}
+    iconEnd={false}
     isSelect={true}
     items={
       Array [

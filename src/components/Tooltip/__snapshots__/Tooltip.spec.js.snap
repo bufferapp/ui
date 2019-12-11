@@ -29,6 +29,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
         "color": "#FFFFFF",
         "maxWidth": "200px",
         "padding": "8px",
+        "position": "absolute",
         "whiteSpace": "normal",
         "zIndex": 9999,
       }
@@ -58,6 +59,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only require
         "color": "#FFFFFF",
         "maxWidth": "200px",
         "padding": "8px",
+        "position": "absolute",
         "whiteSpace": "normal",
         "zIndex": 9999,
       }

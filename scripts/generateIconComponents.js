@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 require('dotenv').config();
 
 const fs = require('fs');
@@ -24,7 +26,7 @@ const figmaIconFileId = 'D9T6BuWxbTVKhlDU8faZSQ9G';
 const figmaIconFileUrl = `https://www.figma.com/file/${figmaIconFileId}/`;
 
 const iconsToIgnore = [
-  'icon-grid', // ignore this since it's just the grid background for the icons file
+  'Grids', // ignore this since it's just the grid background for the icons file
 ];
 
 const figma = new Figma.Api({
@@ -230,6 +232,24 @@ function generateReactIconComponents(icons, spinner) {
 }
 
 /**
+ * For some reason the Figma API sometimes returns our icons wrapped in a <g clip-path='...'>
+ * which causes them to render blank. This method strips out that clip path manually.
+ * 
+ * @todo Revisit this in the future in case we figure it out in the Figma source file or API
+ * side, since it feels very hacky/brittle to use a RegEx here for this.
+ * 
+ * @param {String} svgBody 
+ */
+function removeClipPath(svgBody) {    
+  const clipPathStartRegex = /<g clip-path="url\(#clip0\)">/ims;
+  const clipPathEndRegex = /<\/g>\n<defs>\n<clipPath id="clip0">\n<\/clipPath>\n<\/defs>/ims;
+
+  return svgBody
+    .replace(clipPathStartRegex, '')
+    .replace(clipPathEndRegex, '');
+}
+
+/**
  * Optimize icon SVG with `svgo`
  *
  * @param {Object} icons
@@ -243,7 +263,8 @@ function optimizeSvgs(icons) {
   const newIcons = Object.assign({}, icons);
   return new Promise((resolve) => {
     eachLimit(Object.values(icons), 10, async (icon) => {
-      const result = await svgo.optimize(icon.svgBody);
+      const removedClipPath = removeClipPath(icon.svgBody);
+      const result = await svgo.optimize(removedClipPath);
       const transformed = await svg2jsx(result.data);
       const prettified = pretty(transformed);
       newIcons[icon.id].svgBodyOptimized = prettified.trim();

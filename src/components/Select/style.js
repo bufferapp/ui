@@ -58,8 +58,8 @@ export const SelectItems = styled.ul`
   background: ${white};
   border-radius: 4px;
   list-style: none;
-  margin: 0;
-  padding: 8px 0;
+  margin: 8px 0px;
+  padding: 0;
 `;
 
 export const SelectItemDivider = styled.li`

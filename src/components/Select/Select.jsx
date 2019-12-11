@@ -29,7 +29,9 @@ export default class Select extends React.Component {
         el &&
         itemsB[ix] &&
         el.id === itemsB[ix].id &&
-        el.title === itemsB[ix].title
+        el.title === itemsB[ix].title &&
+        el.selected === itemsB[ix].selected &&
+        el.disabled === itemsB[ix].disabled
     );
 
   state = {
