@@ -16,6 +16,7 @@ export default class Input extends React.Component {
       name,
       onChange,
       onBlur,
+      onKeyUp,
       prefix,
       placeholder,
       size,
@@ -38,6 +39,7 @@ export default class Input extends React.Component {
             name={name}
             onChange={onChange}
             onBlur={onBlur}
+            onKeyUp={onKeyUp}
             prefix={prefix}
             placeholder={placeholder}
             type={type}
@@ -83,6 +85,8 @@ Input.propTypes = {
   onChange: PropTypes.func.isRequired,
   /** The onBlur event */
   onBlur: PropTypes.func,
+  /** The onKeyUp event */
+  onKeyUp: PropTypes.func,
   /** This is the vertical size of the input field, can be `small`, `regular`, or `tall` */
   size: PropTypes.string,
   /** The type of the input */
@@ -106,6 +110,7 @@ Input.defaultProps = {
   type: 'text',
   value: undefined,
   onBlur: () => {},
+  onKeyUp: () => {},
   forwardedRef: undefined,
   prefix: null,
   maxLength: undefined,

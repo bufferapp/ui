@@ -2,7 +2,7 @@
 
 ## [5.21.0] - 2019-12-11
 ### Added
-- Add a `maxLength` prop to the Input component
+- Added `maxLength` & `onKeyUp` props to the Input component
 
 ## [5.20.0] - 2019-12-11
 ### Updated
