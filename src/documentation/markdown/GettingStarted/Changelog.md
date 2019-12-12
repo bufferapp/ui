@@ -3,6 +3,7 @@
 ## [5.21.0] - 2019-12-11
 ### Added
 - Added `maxLength` & `onKeyUp` props to the Input component
+- Added a position absolute for the Tooltip component, updated @reach/Tooltip version to 0.6.2
 
 ## [5.20.0] - 2019-12-11
 ### Updated
