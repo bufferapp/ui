@@ -49,6 +49,7 @@ export const Handle = styled.span`
 
 export const LabelContainer = styled.div`
   display: flex;
+  align-items: center;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -67,6 +68,13 @@ export const IconContainer = styled.span`
   }
   ${ItemStyled}:hover & * {
     color: ${props => (props.selected ? white : grayDarker)};
+    fill: ${props => (props.selected ? white : grayDarker)};
+  }
+`;
+
+export const BadgeIconContainer = styled(IconContainer)`
+  margin-left: auto;
+  svg {
     fill: ${props => (props.selected ? white : grayDarker)};
   }
 `;

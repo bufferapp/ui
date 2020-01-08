@@ -8,6 +8,7 @@ import {
   Handle,
   LabelContainer,
   IconContainer,
+  BadgeIconContainer,
 } from './style';
 import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
@@ -17,6 +18,7 @@ const SidebarListItem = ({
   icon,
   onItemClick,
   badges,
+  badgeIcon,
   selected,
   user,
 }) => (
@@ -50,7 +52,8 @@ const SidebarListItem = ({
       )}
     </LabelContainer>
 
-    {badges && <Badge selected={selected}>{badges}</Badge>}
+    {!badgeIcon && badges && <Badge selected={selected}>{badges}</Badge>}
+    {badgeIcon && <BadgeIconContainer selected={selected}>{badgeIcon}</BadgeIconContainer>}
   </ItemStyled>
 );
 
@@ -65,6 +68,8 @@ SidebarListItem.propTypes = {
   onItemClick: PropTypes.func.isRequired,
   /** A number to display at the far right side of the item */
   badges: PropTypes.number,
+  /** An icon either from this library or a node of your choice */
+  badgeIcon: PropTypes.node,
   /** Whether the item is currently selected */
   selected: PropTypes.bool,
   /** A user object if you'd like the item to display the user Avatar, social network and handle */
@@ -80,6 +85,7 @@ SidebarListItem.propTypes = {
 SidebarListItem.defaultProps = {
   id: '',
   icon: null,
+  badgeIcon: null,
   badges: null,
   selected: null,
   user: null,
