@@ -24,7 +24,7 @@ export const Badge = styled.span`
   font-size: 12px;
   line-height: 14px;
   text-align: right;
-  color: ${props => (props.selected ? 'white' : grayDarker)};
+  color: ${props => (props.selected ? white : grayDarker)};
   margin-right: 8px;
 `;
 
@@ -44,7 +44,7 @@ export const Handle = styled.span`
   font-size: 12px;
   line-height: 14px;
   letter-spacing: -0.2px;
-  color: ${props => (props.selected ? 'white' : grayDark)};
+  color: ${props => (props.selected ? white : grayDark)};
 `;
 
 export const LabelContainer = styled.div`
@@ -75,6 +75,6 @@ export const IconContainer = styled.span`
 export const BadgeIconContainer = styled(IconContainer)`
   margin-left: auto;
   svg {
-    fill: ${props => (props.selected ? white : grayDarker)};
+    fill: ${props => (props.selected ? white : 'inherit')};
   }
 `;

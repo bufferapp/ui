@@ -10,7 +10,7 @@ export default function ExampleSidebarListItem() {
       title="Label Default"
       onItemClick={() => console.info('hey')}
       badges={123}
-      badgeIcon={<Warning color="grayDarker" />}
+      badgeIcon={<Warning />}
     />
   );
 }
