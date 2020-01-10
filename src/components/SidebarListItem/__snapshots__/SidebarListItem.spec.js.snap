@@ -4,6 +4,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
 <ForwardRef(styled.li)
   hasUser={
     Object {
+      "fallbackUrl": "jest-auto-snapshots String Fixture",
       "handle": "jest-auto-snapshots String Fixture",
       "id": "jest-auto-snapshots String Fixture",
       "name": "jest-auto-snapshots String Fixture",
@@ -23,7 +24,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
-        fallbackUrl=""
+        fallbackUrl="jest-auto-snapshots String Fixture"
         isOnline={false}
         network="facebook"
         size="small"
@@ -47,11 +48,11 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
       </ForwardRef(styled.div)>
     </React.Fragment>
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.span)
+  <ForwardRef(Styled(styled.span))
     selected={false}
   >
-    1
-  </ForwardRef(styled.span)>
+    <NodeFixture />
+  </ForwardRef(Styled(styled.span))>
 </ForwardRef(styled.li)>
 `;
 
@@ -59,6 +60,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
 <ForwardRef(styled.li)
   hasUser={
     Object {
+      "fallbackUrl": "jest-auto-snapshots String Fixture",
       "handle": "jest-auto-snapshots String Fixture",
       "id": "jest-auto-snapshots String Fixture",
       "name": "jest-auto-snapshots String Fixture",
@@ -78,7 +80,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
-        fallbackUrl=""
+        fallbackUrl="jest-auto-snapshots String Fixture"
         isOnline={false}
         network="facebook"
         size="small"
@@ -102,11 +104,11 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
       </ForwardRef(styled.div)>
     </React.Fragment>
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.span)
+  <ForwardRef(Styled(styled.span))
     selected={true}
   >
-    1
-  </ForwardRef(styled.span)>
+    <NodeFixture />
+  </ForwardRef(Styled(styled.span))>
 </ForwardRef(styled.li)>
 `;
 
