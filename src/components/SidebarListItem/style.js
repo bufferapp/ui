@@ -75,6 +75,6 @@ export const IconContainer = styled.span`
 export const BadgeIconContainer = styled(IconContainer)`
   margin-left: auto;
   svg {
-    fill: ${props => (props.selected ? white : 'inherit')};
+    fill: ${props => (props.selected ? white : 'currentColor')};
   }
 `;
