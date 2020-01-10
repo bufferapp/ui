@@ -29,6 +29,7 @@ const SidebarListItem = ({
         <React.Fragment>
           <Avatar
             src={user.profileImageUrl}
+            fallbackUrl={user.fallbackUrl}
             alt={user.name}
             size="small"
             type="social"
@@ -66,8 +67,8 @@ SidebarListItem.propTypes = {
   icon: PropTypes.node,
   /** A function to perform when the item is clicked */
   onItemClick: PropTypes.func.isRequired,
-  /** A number to display at the far right side of the item */
-  badges: PropTypes.number,
+  /** A string to display at the far right side of the item */
+  badges: PropTypes.string,
   /** An icon either from this library or a node of your choice */
   badgeIcon: PropTypes.node,
   /** Whether the item is currently selected */
@@ -78,6 +79,7 @@ SidebarListItem.propTypes = {
     name: PropTypes.string,
     handle: PropTypes.string,
     profileImageUrl: PropTypes.string,
+    fallbackUrl: PropTypes.string,
     network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest']),
   }),
 };
