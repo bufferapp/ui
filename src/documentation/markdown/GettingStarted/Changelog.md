@@ -1,5 +1,5 @@
 # Changelog
-## [5.22.0] - 2020-01-23
+## [5.23.0] - 2020-01-23
 ### Added
 - *badgeIcon* and *fallbackUrl* prop to the SidebarListItem component.
 
