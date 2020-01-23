@@ -8,6 +8,7 @@ import {
   Handle,
   LabelContainer,
   IconContainer,
+  BadgeIconContainer,
 } from './style';
 import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
@@ -17,6 +18,7 @@ const SidebarListItem = ({
   icon,
   onItemClick,
   badges,
+  badgeIcon,
   selected,
   user,
 }) => (
@@ -27,6 +29,7 @@ const SidebarListItem = ({
         <React.Fragment>
           <Avatar
             src={user.profileImageUrl}
+            fallbackUrl={user.fallbackUrl}
             alt={user.name}
             size="small"
             type="social"
@@ -50,7 +53,8 @@ const SidebarListItem = ({
       )}
     </LabelContainer>
 
-    {badges && <Badge selected={selected}>{badges}</Badge>}
+    {!badgeIcon && badges && <Badge selected={selected}>{badges}</Badge>}
+    {badgeIcon && <BadgeIconContainer selected={selected}>{badgeIcon}</BadgeIconContainer>}
   </ItemStyled>
 );
 
@@ -63,8 +67,10 @@ SidebarListItem.propTypes = {
   icon: PropTypes.node,
   /** A function to perform when the item is clicked */
   onItemClick: PropTypes.func.isRequired,
-  /** A number to display at the far right side of the item */
-  badges: PropTypes.number,
+  /** A string to display at the far right side of the item */
+  badges: PropTypes.string,
+  /** An icon either from this library or a node of your choice */
+  badgeIcon: PropTypes.node,
   /** Whether the item is currently selected */
   selected: PropTypes.bool,
   /** A user object if you'd like the item to display the user Avatar, social network and handle */
@@ -73,6 +79,7 @@ SidebarListItem.propTypes = {
     name: PropTypes.string,
     handle: PropTypes.string,
     profileImageUrl: PropTypes.string,
+    fallbackUrl: PropTypes.string,
     network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest']),
   }),
 };
@@ -80,6 +87,7 @@ SidebarListItem.propTypes = {
 SidebarListItem.defaultProps = {
   id: '',
   icon: null,
+  badgeIcon: null,
   badges: null,
   selected: null,
   user: null,
