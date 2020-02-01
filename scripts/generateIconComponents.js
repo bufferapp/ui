@@ -242,7 +242,7 @@ function generateReactIconComponents(icons, spinner) {
  */
 function removeClipPath(svgBody) {    
   const clipPathStartRegex = /<g clip-path="url\(#clip0\)">/ims;
-  const clipPathEndRegex = /<\/g>\n<defs>\n<clipPath id="clip0">\n<\/clipPath>\n<\/defs>/ims;
+  const clipPathEndRegex = /<\/g>\n<defs>\n<clipPath id="clip0">\n(.*?)\n<\/clipPath>\n<\/defs>/ims;
 
   return svgBody
     .replace(clipPathStartRegex, '')
@@ -264,13 +264,21 @@ function optimizeSvgs(icons) {
   return new Promise((resolve) => {
     eachLimit(Object.values(icons), 10, async (icon) => {
       const removedClipPath = removeClipPath(icon.svgBody);
-      const result = await svgo.optimize(removedClipPath);
+      let result;
+      try {
+        result = await svgo.optimize(removedClipPath);
+      } catch (e) {
+        console.error(`Failed to optimize icon ${icon.name} – it's possible the Figma API 
+          has changed their SVG output. Please ask for help in #proj-design-system.`, e);
+        console.log('Raw icon data:', icon);
+        process.exit();
+      }
       const transformed = await svg2jsx(result.data);
       const prettified = pretty(transformed);
       newIcons[icon.id].svgBodyOptimized = prettified.trim();
     }, (err) => {
       if (err) {
-        console.error('Error optimizing SVG!', err);
+        console.error('Error optimizing SVG! ', err);
       }
       resolve(newIcons);
     });
