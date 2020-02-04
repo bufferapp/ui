@@ -21,6 +21,7 @@ export Email from './Icons/Email';
 export Emoji from './Icons/Emoji';
 export Facebook from './Icons/Facebook';
 export Flag from './Icons/Flag';
+export Flash from './Icons/Flash';
 export Folder from './Icons/Folder';
 export Folders from './Icons/Folders';
 export Gear from './Icons/Gear';
