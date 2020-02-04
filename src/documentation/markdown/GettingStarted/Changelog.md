@@ -1,4 +1,12 @@
 # Changelog
+## [5.23.1] - 2020-02-03
+### Added
+- *Flash* icon.
+### Fixed
+- Fixed the icon generation script (`npm run gen:icons`).
+
+### Updated
+- *badge* proptype is now a string.
 ## [5.23.0] - 2020-01-23
 ### Added
 - *badgeIcon* and *fallbackUrl* prop to the SidebarListItem component.
