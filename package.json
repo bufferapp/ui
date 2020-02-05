@@ -41,7 +41,8 @@
     "immutability-helper": "^2.9.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "styled-components": "4.3.2"
+    "react-is": "16.8.6",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "@babel/cli": "7.1.5",
@@ -58,7 +59,7 @@
     "babel-loader": "8.0.4",
     "babel-plugin-module-resolver": "3.1.1",
     "babel-plugin-named-asset-import": "0.2.3",
-    "babel-plugin-styled-components": "1.10.6",
+    "babel-plugin-styled-components": "1.10.7",
     "babel-preset-react-app": "6.1.0",
     "bfj": "6.1.1",
     "case-sensitive-paths-webpack-plugin": "2.1.2",
@@ -95,7 +96,7 @@
     "jest-auto-snapshots": "=3.0.1",
     "jest-pnp-resolver": "=1.0.1",
     "jest-resolve": "=23.6.0",
-    "jest-styled-components": "=6.3.1",
+    "jest-styled-components": "7.0.0",
     "markdown-to-jsx": "6.9.0",
     "mini-css-extract-plugin": "0.4.3",
     "node-fetch": "2.3.0",
