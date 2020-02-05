@@ -4,8 +4,8 @@ import Avatar from '@bufferapp/ui/Avatar'; // eslint-disable-line
 
 const customHTML = (
   <div>
-    <span style={{ color: '#21F32A', display: 'inline' }}>0.4%</span>
-    <p>potential reach</p>
+    <span style={{ color: '#21F32A'}}>0.4%</span>
+    <p style={{ display: 'inline' }}> potential reach</p>
   </div>
 );
 
