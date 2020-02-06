@@ -1,4 +1,9 @@
 # Changelog
+
+## [5.24.0] - 2020-02-06
+### Added
+- optional customHTML for tooltips
+
 ## [5.23.1] - 2020-02-03
 ### Added
 - *Flash* icon.
