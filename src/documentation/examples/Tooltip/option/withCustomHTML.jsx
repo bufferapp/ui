@@ -14,7 +14,7 @@ export default function ExampleTooltip() {
   return (
     <Tooltip customHTML={customHTML} position="bottom">
       <Avatar
-        src="https://pbs.twimg.com/profile_images/988613046510628866/Io1ZQUpy_400x400.jpg"
+        src="https://s3.amazonaws.com/buffer-ui/Default+Avatar.png"
         alt="@joelgascoigne"
         size="medium"
       />
