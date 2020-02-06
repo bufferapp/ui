@@ -18,9 +18,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
             </ForwardRef(styled.label)>
           </ForwardRef(styled.div)>
         </ForwardRef(styled.label)>
-        Object {
-          "__html": "jest-auto-snapshots String Fixture",
-        }
+        <NodeFixture />
       </ForwardRef(styled.div)>
     }
     position={[Function]}

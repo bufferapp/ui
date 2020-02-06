@@ -77,7 +77,7 @@ class Tooltip extends React.Component {
   /**
    * Rendering label with hotkey option if available
    */
-  renderLabel = (label, hotkey, customHTML) => (
+  renderLabel = (label, hotkey, customHTML = null) => (
     <Styles.LabelWrapper>
       {label && (
         <Styles.Label
@@ -90,7 +90,7 @@ class Tooltip extends React.Component {
           </Styles.HotkeyWrapper>
         </Styles.Label>
       )}
-      {customHTML && customHTML}
+      {customHTML}
     </Styles.LabelWrapper>
   );
 
@@ -132,7 +132,7 @@ Tooltip.propTypes = {
   hotkey: PropTypes.string,
 
   /** Custom HTML */
-  customHTML: PropTypes.shape({ __html: PropTypes.string }),
+  customHTML: PropTypes.node,
 };
 
 Tooltip.defaultProps = {
