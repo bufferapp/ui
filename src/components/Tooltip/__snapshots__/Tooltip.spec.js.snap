@@ -18,6 +18,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
             </ForwardRef(styled.label)>
           </ForwardRef(styled.div)>
         </ForwardRef(styled.label)>
+        <NodeFixture />
       </ForwardRef(styled.div)>
     }
     position={[Function]}
@@ -47,6 +48,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only require
   <ForwardRef(Styled(Tooltip))
     label={
       <ForwardRef(styled.div)>
+        
         
       </ForwardRef(styled.div)>
     }

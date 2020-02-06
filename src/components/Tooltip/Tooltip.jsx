@@ -77,7 +77,7 @@ class Tooltip extends React.Component {
   /**
    * Rendering label with hotkey option if available
    */
-  renderLabel = (label, hotkey) => (
+  renderLabel = (label, hotkey, customHTML = null) => (
     <Styles.LabelWrapper>
       {label && (
         <Styles.Label
@@ -90,11 +90,12 @@ class Tooltip extends React.Component {
           </Styles.HotkeyWrapper>
         </Styles.Label>
       )}
+      {customHTML}
     </Styles.LabelWrapper>
   );
 
   render() {
-    const { children, label, position, hotkey } = this.props;
+    const { children, label, position, hotkey, customHTML } = this.props;
 
     // @todo: remove style from here and use the Styled component
     // We are currently adding the stylings with the style tag,
@@ -104,7 +105,7 @@ class Tooltip extends React.Component {
     return (
       <Styles.TooltipWrapper ref={node => this.tooltipWrapper = node}>
         <Styles.TooltipStyled
-          label={this.renderLabel(label, hotkey)}
+          label={this.renderLabel(label, hotkey, customHTML)}
           position={(triggerRect, tooltipRect) => this.getTooltipPosition(triggerRect, tooltipRect, position)}
           style={Styles.TooltipStyle}
         >
@@ -129,12 +130,16 @@ Tooltip.propTypes = {
 
   /** The tooltip position */
   hotkey: PropTypes.string,
+
+  /** Custom HTML */
+  customHTML: PropTypes.node,
 };
 
 Tooltip.defaultProps = {
   label: '',
   position: 'bottom',
   hotkey: '',
+  customHTML: '',
 };
 
 export default Tooltip;
