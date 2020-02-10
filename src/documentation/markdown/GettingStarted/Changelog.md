@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.24.1] - 2020-02-10
+### Fixed
+- renames customHTML to customLabel for tooltips
+
 ## [5.24.0] - 2020-02-06
 ### Added
 - optional customHTML for tooltips
