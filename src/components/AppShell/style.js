@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { grayLighter } from '../style/colors';
 
 const flexColumn = css`
   display: flex;
@@ -14,7 +15,7 @@ export const AppShellStyled = styled.div`
   ${flexColumn}
   height: 100vh;
   overflow: auto;
-  background-color: #f5f5f5;
+  background-color: ${grayLighter};
 `;
 
 export const Wrapper = styled.div`

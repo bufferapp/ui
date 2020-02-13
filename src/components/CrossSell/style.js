@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { grayLighter } from '../style/colors';
 
 export const CrossSellStyled = styled.div`
   width: 100vw;
-  background-color: #f5f5f5;
+  background-color: ${grayLighter};
   display: flex;
   flex-direction: column;
   align-items: center;

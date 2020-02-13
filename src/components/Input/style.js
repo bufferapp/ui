@@ -1,12 +1,14 @@
 import styled, { css } from 'styled-components';
 import {
   blue,
+  blueLighter,
   gray,
   grayLight,
   grayDarker,
   grayDark,
   red,
   redLight,
+  redLighter,
   white,
 } from '../style/colors';
 import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
@@ -82,7 +84,7 @@ export const InputStyled = styled.input`
   &:focus {
     border: 1px solid ${({ hasError }) => (hasError ? red : blue)};
     box-shadow: 0px 0px 0px 3px
-      ${({ hasError }) => (hasError ? '#F3AFB9' : '#ABB7FF')};
+      ${({ hasError }) => (hasError ? redLighter : blueLighter)};
     outline: none;
     transition-property: border-width, border-color, box-shadow;
     transition-duration: 0.1s;
