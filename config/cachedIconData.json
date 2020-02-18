@@ -1,5 +1,5 @@
 {
-  "lastModified": "2020-02-14T21:18:53.494007Z",
+  "lastModified": "2020-02-18T16:43:19.778536Z",
   "icons": {
     "960:1249": {
       "id": "960:1249",
@@ -424,8 +424,8 @@
     "1003:1319": {
       "id": "1003:1319",
       "name": "ico-calendar",
-      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/da39/a3ee/5e6b4b0d3255bfef95601890afd80709",
-      "svgBody": ""
+      "svgUrl": "https://s3-us-west-2.amazonaws.com/figma-alpha-api/img/6b2c/097f/e5b139abedaaababb08f077bc49095cf",
+      "svgBody": "<svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n<path fill-rule=\"evenodd\" clip-rule=\"evenodd\" d=\"M4 0C4.55228 0 5 0.447715 5 1V2H11V1C11 0.447715 11.4477 0 12 0C12.5523 0 13 0.447715 13 1V2H14C14.5523 2 15 2.44772 15 3V14C15 14.5523 14.5523 15 14 15H2C1.44772 15 1 14.5523 1 14V3C1 2.44772 1.44772 2 2 2H3L3 1C3 0.447715 3.44772 0 4 0ZM3 7V13H13V7H3Z\" fill=\"black\"/>\n</svg>\n"
     }
   }
 }
