@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.25.0] - 2020-02-18
+### Added
+- *Calendar* icon
+
 ## [5.24.1] - 2020-02-10
 ### Fixed
 - renames customHTML to customLabel for tooltips
