@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import Cross from '../Icon/Icons/Cross';
 import Button from '../Button/Button';
-import { white, grayLight } from '../style/colors';
+import { white, grayLight, grayDarker, grayDark } from '../style/colors';
 
 export const Container = styled.div`
-  background: #3d3d3d;
+  background: ${grayDarker};
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
   position: absolute;
@@ -25,7 +25,7 @@ export const TextRow = styled.div`
 `;
 
 export const ButtonsRow = styled.div`
-  background: #636363;
+  background: ${grayDark};
   padding-right: 10px;
   height: 49px;
   display: flex;

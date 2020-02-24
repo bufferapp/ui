@@ -1,19 +1,22 @@
 export const blue = '#2c4bff';
 export const blueDark = '#1F35B3';
 export const blueDarker = '#121E66';
-export const blueLighter = '#6B81FF';
+export const blueLight = '#6B81FF';
+export const blueLighter = '#ABB7FF';
 export const purple = '#9C2BFF';
 export const pink = '#D925AC';
+export const pinkLighter  = '#F0A8DE';
 export const teal = '#00C8CF';
-export const red = '#9D2637';
-export const redLight = '#FDF2F4';
+export const red = '#E0364F';
+export const redDark = '#9D2637';
+export const redLight = '#E97284';
 export const redLighter = '#F3AFB9';
 export const orange = '#FF702C';
 export const orangeDark = '#662D12';
 export const orangeLight = '#FF9B6B';
 export const orangeLighter = '#FFC6AB';
 export const yellow = '#FADE2A';
-export const green = '#87C211';
+export const green = '#87C221';
 
 export const white = '#FFFFFF';
 export const grayLighter = '#F5F5F5';
@@ -44,7 +47,9 @@ const textColors = {
   red,
   white,
   gray,
+  grayDark,
   grayDarker,
+  blue,
 };
 
 export default textColors;
