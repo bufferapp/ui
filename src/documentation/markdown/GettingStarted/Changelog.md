@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.26.0] - 2020-02-24
+### Fixed
+- *red*, *blueLighter*, *green* and *redLight* color codes.
+
+### Added
+- *pinkLighter*, *blueLight* and *redDark* to the list of colors.
+- possibility to add color prop *blue* and *grayDark* to Text.
+
 ## [5.25.0] - 2020-02-18
 ### Added
 - *Calendar* icon
@@ -15,11 +23,13 @@
 ## [5.23.1] - 2020-02-03
 ### Added
 - *Flash* icon.
+
 ### Fixed
 - Fixed the icon generation script (`npm run gen:icons`).
 
 ### Updated
 - *badge* proptype is now a string.
+
 ## [5.23.0] - 2020-01-23
 ### Added
 - *badgeIcon* and *fallbackUrl* prop to the SidebarListItem component.
@@ -39,6 +49,7 @@
 ## [5.19.0] - 2019-12-09
 ### Fixed
 - Fixed the icon generation script (`npm run gen:icons`) to work with some of the SVGs we're getting back from the Figma API.
+
 ### Updated
 - Added the result of generating latest Icons/* based on changes to the Figma.
 
