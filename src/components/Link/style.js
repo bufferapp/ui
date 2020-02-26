@@ -12,6 +12,8 @@ export const LinkStyled = styled.a`
   font-size: ${fontSize};
   font-weight: ${fontWeightMedium};
   line-height: ${lineHeight};
+  cursor: pointer;
+  text-decoration: none;
   color: ${blue};
   :hover {
     color: ${blueDark};

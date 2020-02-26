@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Link Matches snapshot when boolean prop "download" is set to: "false" 1`] = `
+<ForwardRef(styled.a)
+  download={false}
+  href="jest-auto-snapshots String Fixture"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <NodeFixture />
+</ForwardRef(styled.a)>
+`;
+
+exports[`jest-auto-snapshots > Link Matches snapshot when boolean prop "newTab" is set to: "false" 1`] = `
+<ForwardRef(styled.a)
+  download={true}
+  href="jest-auto-snapshots String Fixture"
+  rel=""
+  target="_self"
+>
+  <NodeFixture />
+</ForwardRef(styled.a)>
+`;
+
+exports[`jest-auto-snapshots > Link Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.a)
+  download={true}
+  href="jest-auto-snapshots String Fixture"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  <NodeFixture />
+</ForwardRef(styled.a)>
+`;
+
+exports[`jest-auto-snapshots > Link Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.a)
+  download={false}
+  href="jest-auto-snapshots String Fixture"
+  rel=""
+  target="_self"
+>
+  <NodeFixture />
+</ForwardRef(styled.a)>
+`;
