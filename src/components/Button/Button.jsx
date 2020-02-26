@@ -56,11 +56,11 @@ const Button = ({
     Deprecated since version 5.27.0
     Will be deleted in version 6.0.0
     For similar behavior, use a Link component.
-    Otherwise chose a different type of button.
+    Otherwise choose a different type of button.
   */
   if (type === 'link') {
     // eslint-disable-next-line
-    console.warn('WARNING! Obsolete Link Button');
+    console.warn('WARNING! Obsolete Link Button. Deprecated since version 5.27.0. Will be deleted in version 6.0.0. For similar behavior, use a Link component. Otherwise choose a different type of button.');
   }
   return (
     <ButtonStyled
