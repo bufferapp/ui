@@ -51,6 +51,7 @@ const Button = ({
   hideSearch,
   className,
   children,
+  isExpanded,
 }) => (
   <ButtonStyled
     onClick={!disabled ? onClick : undefined}
@@ -64,6 +65,8 @@ const Button = ({
     data-tip={tooltip}
     ref={ref}
     className={className}
+    aria-haspopup={isSplit}
+    aria-expanded={isSplit ? isExpanded : null}
   >
     {!iconEnd && icon}
     {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
@@ -119,6 +122,9 @@ Button.propTypes = {
   /** Type of button */
   type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text', 'error']),
 
+  /** Is the split button currently expanded  */
+  isExpanded: PropTypes.bool,
+
   /** Is the Button Split  */
   isSplit: PropTypes.bool,
 
@@ -173,6 +179,7 @@ Button.propTypes = {
 Button.defaultProps = {
   disabled: false,
   isSplit: undefined,
+  isExpanded: false,
   loading: false,
   size: 'medium',
   type: 'secondary',
