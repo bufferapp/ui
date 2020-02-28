@@ -231,7 +231,7 @@ NavBar.propTypes = {
 NavBar.defaultProps = {
   activeProduct: undefined,
   helpMenuItems: null,
-  isImpersonation: true,
+  isImpersonation: false,
   onLogout: undefined
 };
 
