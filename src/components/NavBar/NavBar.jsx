@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
+import { Info as InfoIcon, ArrowLeft, Person as PersonIcon, Cross } from '../Icon';
 
-import { gray, blueDarker, grayLight, grayLighter, grayDark, } from '../style/colors';
+import { gray, blueDarker, grayLight, grayLighter, grayDark, orangeLighter } from '../style/colors';
 import {
   fontWeightMedium,
   fontFamily
@@ -38,9 +38,17 @@ export function getAccountUrl(baseUrl = '', user) {
   )}&username=${encodeURI(user.name)}`;
 }
 
+export function getStopImpersonationUrl(baseUrl = '') { 
+  const productPath = getProductPath(baseUrl);
+  return `https://admin${
+    productPath.includes('local') ? '-next.local' : ''
+  }.buffer.com/stopImpersonation?redirect=${getRedirectUrl(baseUrl)}`;
+}
+
 const NavBarStyled = styled.nav`
   background: #fff;
   border-bottom: 1px solid ${gray};
+  border-top: ${props => (props.isImpersonation ? `2px solid ${orangeLighter}` : `none`)};
   box-shadow: 0 1px 10px -5px rgba(0,0,0,.15);
   display: flex;
   height: 56px;
@@ -90,6 +98,7 @@ const NavBarVerticalRule = styled.div`
   transform: translateY(-50%);
   width: 1px;
   z-index: 1;
+  display: ${props => (props.isImpersonation ? `none` : `block`)};
 `;
 
 export function appendMenuItem(ignoreMenuItems, menuItem) {
@@ -110,9 +119,9 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { activeProduct, user, helpMenuItems, onLogout } = this.props;
+    const { activeProduct, user, helpMenuItems, onLogout, isImpersonation } = this.props;
     return (
-      <NavBarStyled>
+      <NavBarStyled isImpersonation={isImpersonation}>
         <NavBarLeft>
           <BufferLogo />
           <NavBarVerticalRule />
@@ -134,13 +143,14 @@ class NavBar extends React.Component {
               xPosition="right"
             />
           )}
-          <NavBarVerticalRule />
+          <NavBarVerticalRule isImpersonation={isImpersonation} />
           <Select
             hideSearch
             capitalizeItemLabel={false}
             xPosition="right"
+            isImpersonation={isImpersonation}
             customButton={handleClick => (
-              <NavBarMenu user={user} onClick={handleClick} />
+              <NavBarMenu user={user} onClick={handleClick} isImpersonation={isImpersonation} />
             )}
             items={[
               appendMenuItem(user.ignoreMenuItems, {
@@ -154,7 +164,17 @@ class NavBar extends React.Component {
                 },
               }),
               ...user.menuItems,
-              appendMenuItem(user.ignoreMenuItems, {
+              appendMenuItem(user.ignoreMenuItems, isImpersonation ? {
+                id: 'Stop Impersonation',
+                title: 'Stop Impersonation',
+                icon: <Cross color={gray} />,
+                hasDivider: user.menuItems && user.menuItems.length > 0,
+                onItemClick: () => {
+                  window.location.assign(
+                    getStopImpersonationUrl(window.location.href)
+                  );
+                },
+              } : {
                 id: 'logout',
                 title: 'Logout',
                 icon: <ArrowLeft color={gray} />,
@@ -203,6 +223,7 @@ NavBar.propTypes = {
       onItemClick: PropTypes.func,
     })
   ),
+  isImpersonation: PropTypes.bool,
 
   onLogout: PropTypes.func
 };
@@ -210,6 +231,7 @@ NavBar.propTypes = {
 NavBar.defaultProps = {
   activeProduct: undefined,
   helpMenuItems: null,
+  isImpersonation: true,
   onLogout: undefined
 };
 

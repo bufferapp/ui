@@ -20,11 +20,11 @@ export function getUserAvatar(user) {
 
 /** NavBar Menu component used by the Select component to show a custom User name and avatar
  *  button */
-const NavBarMenu = ({ user, onClick }) => (
-  <NavBarStyled onClick={onClick}>
+const NavBarMenu = ({ user, onClick, isImpersonation }) => (
+  <NavBarStyled onClick={onClick} isImpersonation={isImpersonation}>
     <NavBarUser>
-      <NavBarName>{user.name}</NavBarName>
-      <NavBarEmail>{user.email}</NavBarEmail>
+      <NavBarName isImpersonation={isImpersonation}>{user.name}</NavBarName>
+      <NavBarEmail isImpersonation={isImpersonation}>{user.email}</NavBarEmail>
     </NavBarUser>
     <NavBarAvatar avatar={getUserAvatar(user)} onClick={onClick} />
     <NavBarChavron>
@@ -42,6 +42,11 @@ NavBarMenu.propTypes = {
 
   /** OnClick function to be called on Avatar click, passed by the Select component */
   onClick: PropTypes.func.isRequired,
+  isImpersonation: PropTypes.bool
+};
+
+NavBarMenu.defaultProps = {
+  isImpersonation: false
 };
 
 export default NavBarMenu;

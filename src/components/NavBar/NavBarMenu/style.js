@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  gray, grayDark, grayDarker, grayLight, grayLighter, white,
+  gray, grayDark, grayDarker, grayLight, grayLighter, white, orangeLighter, orangeDark,
 } from '../../style/colors';
 
 import {
@@ -11,6 +11,7 @@ import {
 
 export const NavBarStyled = styled.div`
   align-items: center;
+  background-color: ${props => (props.isImpersonation ? orangeLighter : `#fff`)}; 
   cursor: pointer;
   display: flex;
   height: 100%;
@@ -19,7 +20,7 @@ export const NavBarStyled = styled.div`
   position: relative;
   z-index: 2;
   &:hover {
-    background-color: ${grayLighter};
+    background-color: ${props => (props.isImpersonation ? orangeLighter : grayLighter)};
   }
 `;
 
@@ -40,7 +41,7 @@ export const NavBarAvatar = styled.div`
 `;
 
 export const NavBarName = styled.div`
-  color: ${grayDark};
+  color: ${props => (props.isImpersonation ? orangeDark : grayDark)};
   font-family: ${fontFamily};
   font-size: 16px;
   font-weight: ${fontWeightMedium};
@@ -51,7 +52,7 @@ export const NavBarName = styled.div`
 `;
 
 export const NavBarEmail = styled.div`
-  color: ${gray};
+  color: ${props => (props.isImpersonation ? orangeDark : gray)};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   max-width: 224px;

@@ -459,6 +459,7 @@ export default class Select extends React.Component {
       searchPlaceholder,
       hasIconOnly,
       marginTop,
+      isImpersonation,
       multiSelect,
       hasCustomAction,
       onCustomItemClick,
@@ -479,6 +480,7 @@ export default class Select extends React.Component {
         hasIconOnly={hasIconOnly}
         marginTop={marginTop}
         fullWidth={fullWidth}
+        isImpersonation={isImpersonation}
         horizontalOffset={horizontalOffset}
       >
         {!hideSearch && (items.length > 5 || isFiltering) && (
@@ -494,7 +496,7 @@ export default class Select extends React.Component {
             />
           </SearchBarWrapper>
         )}
-        <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
+        <SelectItems isImpersonation={isImpersonation} ref={itemsNode => (this.itemsNode = itemsNode)}>
           {hasCustomAction
             ? this.renderCustomActionItem(
                 items.length,
@@ -510,7 +512,7 @@ export default class Select extends React.Component {
           {}
           {items.map((item, idx) => [
             item.hasDivider && (
-              <SelectItemDivider key={`${this.getItemId(item)}--divider`}>
+              <SelectItemDivider isImpersonation={isImpersonation} key={`${this.getItemId(item)}--divider`}>
                 {item.dividerTitle && (
                   <SelectItemDividerTitle>
                     {item.dividerTitle}
@@ -529,6 +531,7 @@ export default class Select extends React.Component {
               onClick={event => this.handleSelectOption(item, event)}
               hideSearch={hideSearch}
               multiSelect={multiSelect}
+              isImpersonation={isImpersonation}
             />,
           ])}
         </SelectItems>
@@ -663,6 +666,9 @@ Select.propTypes = {
 
   /** Custom message to display when no results were found */
   noResultsCustomMessage: PropTypes.string,
+
+  /** Is the current session an impersonation session */
+  isImpersonation: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -696,4 +702,5 @@ Select.defaultProps = {
   isInputSearch: false,
   selectPopupVisible: true,
   noResultsCustomMessage: 'No matches found',
+  isImpersonation: false,
 };

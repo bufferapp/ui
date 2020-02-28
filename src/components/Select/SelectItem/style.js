@@ -70,7 +70,6 @@ export const CheckIconWrapper = styled.span`
   width: 16px;
   display: flex;
   justify-content: center;
-}
 `;
 
 export const HotKeyPrompt = styled.span`
