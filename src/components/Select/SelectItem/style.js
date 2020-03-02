@@ -1,12 +1,12 @@
 /* eslint-disable no-nested-ternary */
 import styled from 'styled-components';
-import { grayDarker, gray, grayLight } from '../../style/colors';
+import { grayDarker, gray, grayLight, orangeDark } from '../../style/colors';
 import { fontFamily, fontWeightMedium, fontSize } from '../../style/fonts';
 
 export const SelectItemStyled = styled.li`
   min-height: 32px;
   align-items: center;
-  color: ${props => (props.disabled ? grayLight : grayDarker)};
+  color: ${props => (props.disabled ? grayLight : (props.isImpersonation ? orangeDark : grayDarker))};
   cursor: pointer;
   display: flex;
   font-size: ${fontSize};
@@ -43,7 +43,9 @@ export const SelectItemIcon = styled.div`
   display: flex;
   padding-right: 8px;
   svg {
-    fill: ${props => (props.hovered ? grayDarker : gray)};
+    fill: ${props => (props.isImpersonation ?
+      (props.hovered ? grayDarker : orangeDark) :
+      (props.hovered ? grayDarker : gray))};
   }
   ${SelectItemStyled}:hover & * {
     color: ${grayDarker};
