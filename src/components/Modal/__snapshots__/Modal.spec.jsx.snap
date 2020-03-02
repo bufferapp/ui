@@ -17,6 +17,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
         hasIconOnly={false}
         hideSearch={true}
         iconEnd={false}
+        isExpanded={false}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -30,6 +31,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
         hasIconOnly={false}
         hideSearch={true}
         iconEnd={false}
+        isExpanded={false}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -59,6 +61,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
         hasIconOnly={false}
         hideSearch={true}
         iconEnd={false}
+        isExpanded={false}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -72,6 +75,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
         hasIconOnly={false}
         hideSearch={true}
         iconEnd={false}
+        isExpanded={false}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -101,6 +105,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         hasIconOnly={false}
         hideSearch={true}
         iconEnd={false}
+        isExpanded={false}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
@@ -114,6 +119,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         hasIconOnly={false}
         hideSearch={true}
         iconEnd={false}
+        isExpanded={false}
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}

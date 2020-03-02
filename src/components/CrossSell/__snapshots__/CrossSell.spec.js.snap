@@ -53,6 +53,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
           hasIconOnly={false}
           hideSearch={true}
           iconEnd={false}
+          isExpanded={false}
           label="jest-auto-snapshots String Fixture"
           loading={false}
           onClick={[Function]}

@@ -2,6 +2,8 @@
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -25,6 +27,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -48,6 +52,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={false}
@@ -72,6 +78,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -95,6 +103,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -121,6 +131,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -144,6 +156,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEnd" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -165,8 +179,35 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEn
 </ForwardRef(styled.button)>
 `;
 
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isExpanded" is set to: "false" 1`] = `
+<ForwardRef(styled.button)
+  aria-expanded={false}
+  aria-haspopup={true}
+  className="jest-auto-snapshots String Fixture"
+  data-tip="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  hasIconOnly={true}
+  icon={<NodeFixture />}
+  isSplit={true}
+  size="small"
+  type="link"
+>
+  <ForwardRef(styled.span)>
+    jest-auto-snapshots String Fixture
+  </ForwardRef(styled.span)>
+  <NodeFixture />
+  <ForwardRef(styled.img)
+    alt="loading"
+    src="./images/loading-gray.svg"
+  />
+</ForwardRef(styled.button)>
+`;
+
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -190,6 +231,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={null}
+  aria-haspopup={false}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -213,6 +256,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -232,6 +277,8 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={true}
+  aria-haspopup={true}
   className="jest-auto-snapshots String Fixture"
   data-tip="jest-auto-snapshots String Fixture"
   disabled={true}
@@ -255,6 +302,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.button)
+  aria-expanded={null}
   disabled={false}
   fullWidth={false}
   hasIconOnly={false}
