@@ -23,6 +23,7 @@ const AppShell = ({
   content,
   bannerOptions,
   onLogout,
+  isImpersonation,
 }) => (
   <AppShellStyled>
     {/* <GlobalStyles /> */}
@@ -31,6 +32,7 @@ const AppShell = ({
       user={user}
       helpMenuItems={helpMenuItems}
       onLogout={onLogout}
+      isImpersonation={isImpersonation}
     />
     {bannerOptions && (
       <Banner
@@ -96,6 +98,9 @@ AppShell.propTypes = {
 
   /** (Optional) Callback to be called before logout */
   onLogout: PropTypes.func,
+
+  /** (Optional) Is the current session an impersonation session */
+  isImpersonation: PropTypes.bool,
 };
 
 AppShell.defaultProps = {
@@ -104,6 +109,7 @@ AppShell.defaultProps = {
   bannerOptions: null,
   onLogout: undefined,
   helpMenuItems: null,
+  isImpersonation: false,
 };
 
 export default AppShell;

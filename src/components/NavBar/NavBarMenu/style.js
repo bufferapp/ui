@@ -31,6 +31,19 @@ export const NavBarUser = styled.div`
   padding-right: 16px;
 `;
 
+export const NavBarImpersonating = styled.div`
+  font-family: ${fontFamily};
+  background: ${orangeDark};
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  color: ${orangeLighter};
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-top: -8px;
+  text-transform: uppercase;
+`;
+
 export const NavBarAvatar = styled.div`
   border-radius: 100px;
   width: 40px;

@@ -8,6 +8,7 @@ import {
   NavBarUser,
   NavBarAvatar,
   NavBarChavron,
+  NavBarImpersonating,
 } from './style';
 
 export function getUserAvatar(user) {
@@ -23,6 +24,9 @@ export function getUserAvatar(user) {
 const NavBarMenu = ({ user, onClick, isImpersonation }) => (
   <NavBarStyled onClick={onClick} isImpersonation={isImpersonation}>
     <NavBarUser>
+      {isImpersonation && (
+        <NavBarImpersonating>Impersonating</NavBarImpersonating>
+      )}
       <NavBarName isImpersonation={isImpersonation}>{user.name}</NavBarName>
       <NavBarEmail isImpersonation={isImpersonation}>{user.email}</NavBarEmail>
     </NavBarUser>
@@ -42,7 +46,7 @@ NavBarMenu.propTypes = {
 
   /** OnClick function to be called on Avatar click, passed by the Select component */
   onClick: PropTypes.func.isRequired,
-  isImpersonation: PropTypes.bool
+  isImpersonation: PropTypes.bool,
 };
 
 NavBarMenu.defaultProps = {
