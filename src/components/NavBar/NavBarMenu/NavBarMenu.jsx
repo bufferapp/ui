@@ -25,7 +25,7 @@ const NavBarMenu = ({ user, onClick, isImpersonation }) => (
   <NavBarStyled onClick={onClick} isImpersonation={isImpersonation}>
     <NavBarUser>
       {isImpersonation && (
-        <NavBarImpersonating>Impersonating</NavBarImpersonating>
+        <NavBarImpersonating user={user}>Impersonating</NavBarImpersonating>
       )}
       <NavBarName isImpersonation={isImpersonation}>{user.name}</NavBarName>
       <NavBarEmail isImpersonation={isImpersonation}>{user.email}</NavBarEmail>

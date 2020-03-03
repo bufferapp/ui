@@ -115,7 +115,7 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
 class NavBar extends React.Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.user.name !== this.props.user.name ||
-      nextProps.user.email !== this.props.user.email;
+      nextProps.user.email !== this.props.user.email || nextProps.isImpersonation !== this.props.isImpersonation;
   }
 
   render() {

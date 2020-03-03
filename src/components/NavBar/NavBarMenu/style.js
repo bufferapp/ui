@@ -40,7 +40,8 @@ export const NavBarImpersonating = styled.div`
   color: ${orangeLighter};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin-top: -8px;
+  margin-top: ${props => (props.user.name ? '-8px' : '-21px')};
+  margin-bottom: ${props => (props.user.name ? '0px' : '5px')};
   text-transform: uppercase;
 `;
 
