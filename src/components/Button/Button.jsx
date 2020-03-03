@@ -51,43 +51,57 @@ const Button = ({
   hideSearch,
   className,
   children,
-}) => (
-  <ButtonStyled
-    onClick={!disabled ? onClick : undefined}
-    disabled={disabled}
-    size={size}
-    type={type}
-    isSplit={isSplit}
-    icon={icon}
-    hasIconOnly={hasIconOnly}
-    fullWidth={fullWidth}
-    data-tip={tooltip}
-    ref={ref}
-    className={className}
-  >
-    {!iconEnd && icon}
-    {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
-    {!hasIconOnly && (
-      <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>{label}</Styles.ButtonLabel>
-    )}
-    {iconEnd && icon}
+}) => {
+  /** 
+    Deprecated since version 5.27.0
+    Will be deleted in version 6.0.0
+    For similar behavior, use a Link component.
+    Otherwise choose a different type of button.
+  */
+  if (type === 'link') {
+    // eslint-disable-next-line
+    console.warn('WARNING! Obsolete Link Button. Deprecated since version 5.27.0. Will be deleted in version 6.0.0. For similar behavior, use a Link component. Otherwise choose a different type of button.');
+  }
+  return (
+    <ButtonStyled
+      onClick={!disabled ? onClick : undefined}
+      disabled={disabled}
+      size={size}
+      type={type}
+      isSplit={isSplit}
+      icon={icon}
+      hasIconOnly={hasIconOnly}
+      fullWidth={fullWidth}
+      data-tip={tooltip}
+      ref={ref}
+      className={className}
+    >
+      {!iconEnd && icon}
+      {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
+      {!hasIconOnly && (
+        <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>
+          {label}
+        </Styles.ButtonLabel>
+      )}
+      {iconEnd && icon}
 
-    {isSelect && (type === 'primary' || type === 'secondary') && (
-      <Styles.ButtonArrow>
-        <ChevronDown
-          color={type === 'primary' ? 'white' : 'grayDark'}
-          size={size}
-          isChevron
-        />
-      </Styles.ButtonArrow>
-    )}
+      {isSelect && (type === 'primary' || type === 'secondary') && (
+        <Styles.ButtonArrow>
+          <ChevronDown
+            color={type === 'primary' ? 'white' : 'grayDark'}
+            size={size}
+            isChevron
+          />
+        </Styles.ButtonArrow>
+      )}
 
-    {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
+      {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
 
-    {isSplit && (type === 'primary' || type === 'secondary') && (
-      children ?
-        React.Children.map(children, (child) => React.cloneElement(child, { }))
-        : (
+      {isSplit &&
+        (type === 'primary' || type === 'secondary') &&
+        (children ? (
+          React.Children.map(children, child => React.cloneElement(child, {}))
+        ) : (
           <Select
             onSelectClick={onSelectClick}
             items={items}
@@ -98,10 +112,10 @@ const Button = ({
             disabled={disabled}
             hideSearch={hideSearch}
           />
-        )
-    )}
-  </ButtonStyled>
-);
+        ))}
+    </ButtonStyled>
+  );
+};
 
 Button.propTypes = {
   /** Is the button disabled */
