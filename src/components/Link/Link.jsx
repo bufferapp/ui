@@ -3,13 +3,14 @@ import PropTypes from 'prop-types';
 
 import { LinkStyled } from './style';
 
-const Link = ({ children, href, newTab, download, className }) => (
+const Link = ({ children, href, newTab, download, className, title }) => (
   <LinkStyled
     href={href}
     target={newTab ? '_blank' : '_self'}
     rel={newTab ? 'noopener noreferrer' : undefined}
     download={download}
     className={className}
+    title={title}
   >
     {children}
   </LinkStyled>
@@ -24,14 +25,17 @@ Link.propTypes = {
   newTab: PropTypes.bool,
   /** Saves the linked URL instead of navigating to it. */
   download: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
-  /** class passed by the dom element */
+  /** Class passed by the DOM element. */
   className: PropTypes.string,
+  /** Title of the link. */
+  title: PropTypes.string,
 };
 
 Link.defaultProps = {
   newTab: false,
   download: false,
   className: undefined,
+  title: '',
 };
 
 export default Link;
