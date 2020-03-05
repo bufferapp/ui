@@ -42,7 +42,7 @@ export function getStopImpersonationUrl(baseUrl = '') {
   const productPath = getProductPath(baseUrl);
   return `https://admin${
     productPath.includes('local') ? '-next.local' : ''
-  }.buffer.com/stopImpersonation?redirect=${getRedirectUrl(baseUrl)}`;
+  }.buffer.com/clearImpersonation`;
 }
 
 const NavBarStyled = styled.nav`
