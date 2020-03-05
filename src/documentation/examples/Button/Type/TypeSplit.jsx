@@ -14,6 +14,8 @@ export default function ExampleSplitButton() {
         { id: '2', title: 'Reply + Close + Assign To Me' },
       ]}
       label="Click Me"
+      aria-haspopup
+      aria-expanded={false}
     />
   );
 }

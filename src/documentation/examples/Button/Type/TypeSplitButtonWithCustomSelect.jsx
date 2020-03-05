@@ -18,6 +18,8 @@ export default function ExampleSplitButtonWithCustomSelect() {
       onClick={() => true}
       type="primary"
       isSplit
+      aria-haspopup
+      aria-expanded={false}
       label="Click Me"
     >
       <Select
