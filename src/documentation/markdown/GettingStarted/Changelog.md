@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.27.0] - 2020-03-03
+### Added
+- Link component.
+- Deprecation warning for Link Button.
+
 ## [5.26.0] - 2020-02-24
 ### Fixed
 - *red*, *blueLighter*, *green* and *redLight* color codes.
@@ -60,8 +65,6 @@
 ## [5.18.0] - 2019-11-26
 ### Fixed
 - Added the ability to display the icon at the end of buttons, using iconEnd attribute
-
-# Changelog
 
 ## [5.17.3] - 2019-11-06
 ### Fixed
