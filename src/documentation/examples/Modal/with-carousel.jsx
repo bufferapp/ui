@@ -21,7 +21,7 @@ export default function ModalTest() {
           wide
         >
           <div>
-            <Carousel width="200em">
+            <Carousel width="200px">
               <img src="http://placekitten.com/200/300" alt="" />
               <img src="http://placekitten.com/200/300" alt="" />
               <img src="http://placekitten.com/200/300" alt="" />

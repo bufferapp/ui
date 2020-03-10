@@ -12,7 +12,7 @@ const CarouselStyled = styled.div`
 
 const Window = styled.div`
   overflow: hidden;
-  width: 200px;
+  width: ${props => props.width};
   padding: 8px;
   display: flex;
 `;
@@ -22,6 +22,7 @@ const MainList = styled.ul`
   padding: 0;
   position: relative;
   left: ${props => props.left + 'px'};
+  transition: left 0.5s ease-in;
 `;
 
 class Carousel extends React.Component {
