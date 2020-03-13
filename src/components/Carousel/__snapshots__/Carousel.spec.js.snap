@@ -1,0 +1,206 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when array prop "children" has one item: "jest-auto-snapshots String Fixture" 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+    1
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    left={true}
+  >
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowLeftIcon />}
+      iconEnd={false}
+      label="Backwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      width="jest-auto-snapshots String Fixture"
+    >
+      <ForwardRef(styled.ul)
+        left={0}
+      >
+        <ForwardRef(styled.li)
+          aria-hidden={false}
+        >
+          jest-auto-snapshots String Fixture
+        </ForwardRef(styled.li)>
+      </ForwardRef(styled.ul)>
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.ol)>
+      <ForwardRef(styled.li)>
+        <ForwardRef(styled.button)
+          active={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </ForwardRef(styled.li)>
+    </ForwardRef(styled.ol)>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowRightIcon />}
+      iconEnd={false}
+      label="Forwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when array prop "children" is an empty array: "[]" 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+    0
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    left={true}
+  >
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowLeftIcon />}
+      iconEnd={false}
+      label="Backwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      width="jest-auto-snapshots String Fixture"
+    >
+      <ForwardRef(styled.ul)
+        left={0}
+      />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.ol) />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowRightIcon />}
+      iconEnd={false}
+      label="Forwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+    1
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    left={true}
+  >
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowLeftIcon />}
+      iconEnd={false}
+      label="Backwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      width="jest-auto-snapshots String Fixture"
+    >
+      <ForwardRef(styled.ul)
+        left={0}
+      >
+        <ForwardRef(styled.li)
+          aria-hidden={false}
+        >
+          jest-auto-snapshots String Fixture
+        </ForwardRef(styled.li)>
+      </ForwardRef(styled.ul)>
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.ol)>
+      <ForwardRef(styled.li)>
+        <ForwardRef(styled.button)
+          active={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </ForwardRef(styled.li)>
+    </ForwardRef(styled.ol)>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowRightIcon />}
+      iconEnd={false}
+      label="Forwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
