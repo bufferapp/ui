@@ -204,3 +204,75 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when passed all props 1
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    left={true}
+  >
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowLeftIcon />}
+      iconEnd={false}
+      label="Backwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      width="jest-auto-snapshots String Fixture"
+    >
+      <ForwardRef(styled.ul)
+        left={0}
+      >
+        <CarouselItems
+          currentSlideIndex={0}
+        >
+          <NodeFixture />
+        </CarouselItems>
+      </ForwardRef(styled.ul)>
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.ol)>
+      <ForwardRef(styled.li)>
+        <ForwardRef(styled.button)
+          active={true}
+          onClick={[Function]}
+          type="button"
+        />
+      </ForwardRef(styled.li)>
+    </ForwardRef(styled.ol)>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <Button
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={true}
+      hideSearch={true}
+      icon={<ArrowRightIcon />}
+      iconEnd={false}
+      label="Forwards"
+      loading={false}
+      onClick={[Function]}
+      selectPosition="bottom"
+      size="medium"
+      type="secondary"
+    />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
