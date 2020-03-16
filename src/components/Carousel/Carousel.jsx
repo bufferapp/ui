@@ -65,8 +65,9 @@ const IndicatorListItem = styled.li`
 `;
 
 const IndicatorButton = styled.button`
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
+  padding: 0;
   border: none;
   border-radius: 50%;
   background-color: ${props => (props.active ? white : gray)};
@@ -153,7 +154,14 @@ class Carousel extends React.Component {
                   type="button"
                   onClick={() => this.goToSlide(index)}
                   active={index === currentSlideIndex}
-                />
+                >
+                  <Announcement as="p">
+                    {index === currentSlideIndex
+                      ? `Currently on slide
+                    ${index + 1}`
+                      : `Go to slide ${index + 1}`}
+                  </Announcement>
+                </IndicatorButton>
               </IndicatorListItem>
             ))}
           </IndicatorList>
