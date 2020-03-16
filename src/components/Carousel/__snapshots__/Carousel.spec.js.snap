@@ -49,7 +49,14 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when passed only requir
           active={true}
           onClick={[Function]}
           type="button"
-        />
+        >
+          <ForwardRef(styled.div)
+            as="p"
+          >
+            Currently on slide
+                    1
+          </ForwardRef(styled.div)>
+        </ForwardRef(styled.button)>
       </ForwardRef(styled.li)>
     </ForwardRef(styled.ol)>
   </ForwardRef(styled.div)>
