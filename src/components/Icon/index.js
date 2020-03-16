@@ -6,6 +6,7 @@ export ArrowUp from './Icons/ArrowUp';
 export Attach from './Icons/Attach';
 export Bell from './Icons/Bell';
 export Buffer from './Icons/Buffer';
+export Calendar from './Icons/Calendar';
 export Camera from './Icons/Camera';
 export ChartLine from './Icons/ChartLine';
 export Checkmark from './Icons/Checkmark';

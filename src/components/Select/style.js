@@ -34,7 +34,7 @@ export const SelectStyled = styled.div`
   min-width: 200px;
   max-width: ${props => (props.fullWidth ? '' : '200px')};
   width: ${props => (props.fullWidth ? '100%' : '200px')};
-  background-color: #ffffff;
+  background-color: ${white};
   bottom: ${props => (props.yPosition === 'top' ? '100%' : 'initial')};
   top: ${props => (props.yPosition === 'bottom' ? '100%' : 'initial')};
   margin-bottom: ${props => (props.yPosition === 'top' ? '8px' : '0')};

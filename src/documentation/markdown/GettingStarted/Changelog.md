@@ -1,12 +1,40 @@
 # Changelog
+
+## [5.27.0] - 2020-03-03
+### Added
+- Link component.
+- Deprecation warning for Link Button.
+
+## [5.26.0] - 2020-02-24
+### Fixed
+- *red*, *blueLighter*, *green* and *redLight* color codes.
+
+### Added
+- *pinkLighter*, *blueLight* and *redDark* to the list of colors.
+- possibility to add color prop *blue* and *grayDark* to Text.
+
+## [5.25.0] - 2020-02-18
+### Added
+- *Calendar* icon
+
+## [5.24.1] - 2020-02-10
+### Fixed
+- renames customHTML to customLabel for tooltips
+
+## [5.24.0] - 2020-02-06
+### Added
+- optional customHTML for tooltips
+
 ## [5.23.1] - 2020-02-03
 ### Added
 - *Flash* icon.
+
 ### Fixed
 - Fixed the icon generation script (`npm run gen:icons`).
 
 ### Updated
 - *badge* proptype is now a string.
+
 ## [5.23.0] - 2020-01-23
 ### Added
 - *badgeIcon* and *fallbackUrl* prop to the SidebarListItem component.
@@ -26,6 +54,7 @@
 ## [5.19.0] - 2019-12-09
 ### Fixed
 - Fixed the icon generation script (`npm run gen:icons`) to work with some of the SVGs we're getting back from the Figma API.
+
 ### Updated
 - Added the result of generating latest Icons/* based on changes to the Figma.
 
@@ -36,8 +65,6 @@
 ## [5.18.0] - 2019-11-26
 ### Fixed
 - Added the ability to display the icon at the end of buttons, using iconEnd attribute
-
-# Changelog
 
 ## [5.17.3] - 2019-11-06
 ### Fixed

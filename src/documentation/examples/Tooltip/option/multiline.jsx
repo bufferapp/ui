@@ -7,7 +7,7 @@ export default function ExampleTooltip() {
     return (
       <Tooltip label="My Tooltip Label with multiple lines. Adding up an example here with a long tooltip text.">
         <Avatar
-          src="https://pbs.twimg.com/profile_images/988613046510628866/Io1ZQUpy_400x400.jpg"
+          src="https://s3.amazonaws.com/buffer-ui/Default+Avatar.png"
           alt="@joelgascoigne"
           size="medium"
         />
