@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.28.0] - 2020-03-16
+### Added
+- Carousel component.
+
 ## [5.27.0] - 2020-03-03
 ### Added
 - Link component.
