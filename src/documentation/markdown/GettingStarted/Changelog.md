@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.29.0] - 2020-03-19
+### Added
+- New icons - Carousel, InstagramComment, InstagramLike, Movie
+
 ## [5.28.0] - 2020-03-16
 ### Added
 - Carousel component.
