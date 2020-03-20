@@ -563,7 +563,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isOpen={false}
+    isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
@@ -717,7 +717,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isOpen={false}
+    isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
