@@ -147,7 +147,7 @@ export default class Select extends React.Component {
   handleSelectOption = (option, event) => {
     const { onSelectClick, multiSelect } = this.props;
     const { items } = this.state;
-    onSelectClick(option, event);
+    onSelectClick && onSelectClick(option, event);
 
     const selectedIndex = items.findIndex(x => x.selected === true);
 
@@ -165,7 +165,7 @@ export default class Select extends React.Component {
     );
 
     this.setState({
-      isOpen: multiSelect,
+      isOpen: multiSelect || false,
       items: this.updateItemsInState(deselectItems, option, optionIndex),
       // we need to copy the items to another array here in order to use that one during search
       // filtering
@@ -472,7 +472,7 @@ export default class Select extends React.Component {
 
     return (
       <SelectStyled
-        isOpen={isOpen && selectPopupVisible}
+        isOpen={isOpen || selectPopupVisible}
         xPosition={xPosition}
         yPosition={yPosition}
         hasIconOnly={hasIconOnly}
@@ -693,6 +693,6 @@ Select.defaultProps = {
   fullWidth: undefined,
   capitalizeItemLabel: true,
   isInputSearch: false,
-  selectPopupVisible: true,
+  selectPopupVisible: false,
   noResultsCustomMessage: 'No matches found',
 };

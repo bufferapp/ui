@@ -3,6 +3,7 @@ import React from 'react';
 import Enzyme, { shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Select from './Select';
+import Button from '../Button';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -41,6 +42,36 @@ describe('SomeComponent component', () => {
     expect(onSelectClickSply).toBeCalled();
   });
 
+  it('handleSelectOption: should call onSelectClick for custom items', () => {
+    const onCustomItemClick = jest.fn();
+    const items = [
+      {
+        id: '1',
+        title: 'Item 1',
+        selectedItemClick: () => {
+          onCustomItemClick();
+        },
+      },
+      {
+        id: '2',
+        title: 'Item 2',
+        selectedItemClick: () => {
+          onCustomItemClick();
+        },
+      },
+    ];
+    const SelectComponent = (
+      <Select
+        label="Select"
+        onSelectClick={selectedItem => selectedItem.selectedItemClick()}
+        items={items}
+      />
+    );
+    const wrapper = shallow(SelectComponent);
+    const instance = wrapper.instance();
+    instance.handleSelectOption(items[0]);
+    expect(onCustomItemClick).toBeCalled();
+  });
 
   it('onClick: should call stopImmediatePropagation', () => {
     const event = {
