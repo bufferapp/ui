@@ -32,6 +32,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       label=""
+      multiSelect={false}
       noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       selectPopupVisible={false}
@@ -81,6 +82,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       label=""
+      multiSelect={false}
       noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       selectPopupVisible={false}
@@ -116,6 +118,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       isSplit={false}
       items={Array []}
       label=""
+      multiSelect={false}
       noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       selectPopupVisible={false}
@@ -165,6 +168,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       label=""
+      multiSelect={false}
       noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       selectPopupVisible={false}
@@ -210,6 +214,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
         ]
       }
       label=""
+      multiSelect={false}
       noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       selectPopupVisible={false}
@@ -259,6 +264,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
         ]
       }
       label=""
+      multiSelect={false}
       noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       selectPopupVisible={false}
@@ -320,6 +326,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
         ]
       }
       label=""
+      multiSelect={false}
       noResultsCustomMessage="No matches found"
       searchPlaceholder="Search"
       selectPopupVisible={false}

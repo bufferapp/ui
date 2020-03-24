@@ -906,6 +906,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={false}
         onClick={[Function]}
       />
     </ForwardRef(styled.ul)>

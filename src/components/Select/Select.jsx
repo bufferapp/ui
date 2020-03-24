@@ -165,7 +165,7 @@ export default class Select extends React.Component {
     );
 
     this.setState({
-      isOpen: multiSelect || false,
+      isOpen: multiSelect,
       items: this.updateItemsInState(deselectItems, option, optionIndex),
       // we need to copy the items to another array here in order to use that one during search
       // filtering
@@ -678,7 +678,7 @@ Select.defaultProps = {
   customButton: undefined,
   onSelectClick: undefined,
   keyMap: undefined,
-  multiSelect: undefined,
+  multiSelect: false,
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
   tooltip: undefined,
