@@ -1,12 +1,10 @@
 /* eslint-disable no-confusing-arrow */
 import styled from 'styled-components';
-import {
-  white,
-} from '../style/colors';
+import { white } from '../style/colors';
 import { borderRadius } from '../style/borders';
 
 export const Container = styled.div`
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   height: 100%;
   align-items: center;
@@ -20,16 +18,26 @@ export const Container = styled.div`
   left: 0px;
 `;
 
+const getWidth = props => {
+  if (props.wide || props.width === 'wide') {
+    return '730px';
+  }
+  if (props.width) {
+    return props.customWidth;
+  }
+  return '512px';
+};
+
 export const Modal = styled.section`
   background: ${props => props.background};
-  background-color: ${white};
+  background-color: ${props => props.noBackground ? 'transparent': white};
   background-size: 100% auto;
   border-radius: ${borderRadius};
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: ${props => props.noBackground ? 'none' : '0px 1px 4px rgba(0, 0, 0, 0.16)'} ;
   box-sizing: border-box;
   margin: 0 0 1rem;
   padding: 16px 0 16px 0;
-  width: ${props => props.wide ? '730px': '512px' };
+  width: ${props => getWidth(props)};
   overflow: hidden;
 
   display: flex;
@@ -39,10 +47,21 @@ export const Modal = styled.section`
   flex-grow: 0;
 `;
 
+export const IconContainer = styled.button`
+  background: none;
+  border: none;
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  svg {
+    fill: #fff;
+  }
+`;
+
 export const Footer = styled.div`
   width: 100%;
   box-sizing: border-box;
-  background: ${props => props.background ? 'transparent' : white};
+  background: ${props => (props.background ? 'transparent' : white)};
   padding: 0 16px;
   margin-top: 16px;
 
@@ -52,7 +71,6 @@ export const Footer = styled.div`
 
   & > span,
   & > p {
-    margin:  0 auto 0 0;
+    margin: 0 auto 0 0;
   }
 `;
-

@@ -17,26 +17,28 @@ export default function ModalTest() {
       />
       {modalOpen && (
         <Modal
-          action={{ label: 'Don’t Panic!', callback: () => openModal(false) }}
-          wide
+          width="1100px"
+          closeButton={{callback: () => openModal(false)}}
+          noBackground
+          dismissible
         >
           <div>
-            <Carousel width="400px">
-              <img
-                src="https://buffer-analyze.s3.amazonaws.com/images/modal-pro-bg.png"
-                alt="slide 1"
-                width="400"
-              />
-              <img
-                src="https://buffer-analyze.s3.amazonaws.com/images/modal-pro-bg.png"
-                alt="slide 2"
-                width="400"
-              />
-              <img
-                src="https://buffer-analyze.s3.amazonaws.com/images/modal-pro-bg.png"
-                alt="slide 3"
-                width="400"
-              />
+            <Carousel width="1000px">
+              <div
+                style={{ height: '500px', width: '1000px', background: 'red' }}
+              >
+                hello
+              </div>
+              <div
+                style={{ height: '500px', width: '1000px', background: 'blue' }}
+              >
+                hello
+              </div>
+              <div
+                style={{ height: '500px', width: '1000px', background: 'green' }}
+              >
+                hello
+              </div>
             </Carousel>
           </div>
         </Modal>
