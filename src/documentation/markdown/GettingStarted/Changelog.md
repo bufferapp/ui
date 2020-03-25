@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.30.0] - 2020-03-25
+### Fixed
+- Fixed toggle for Select component when Select uses Custom Button.
+
 ## [5.29.0] - 2020-03-19
 ### Added
 - New icons - Carousel, InstagramComment, InstagramLike, Movie
