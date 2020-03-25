@@ -43,6 +43,7 @@ const ProductText = styled.span`
   font-family: ${fontFamily};
   font-weight: ${fontWeightMedium};
   margin-left: 8px;
+  text-transform: capitalize;
 `;
 
 // Notee: Custom SVGs to support multi-color product icons (instead of using icon component)
@@ -67,38 +68,43 @@ const AnalyzeLogo = () => (
   </svg>
 );
 
+const getLogo = (product) => {
+  switch (product) {
+    case 'reply':
+      return ReplyLogo;
+    case 'analyze':
+      return AnalyzeLogo;
+    case 'publish':
+      return PublishLogo;
+    case 'engage':
+    default:
+      return null;
+  }
+}
 
-const NavBarProduct = ({ activeProduct }) => (
+const NavBarProduct = ({ products, activeProduct }) => (
   <StlyedNavBarProduct>
-    <ProductLink
-      active={activeProduct === 'publish'}
-      href='https://publish.buffer.com'
-    >
-      <PublishLogo />
-      <ProductText>Publish</ProductText>
-    </ProductLink>
-    <ProductLink
-      active={activeProduct === 'reply'}
-      href='https://reply.buffer.com'
-    >
-      <ReplyLogo />
-      <ProductText>Reply</ProductText>
-    </ProductLink>
-    <ProductLink
-      active={activeProduct === 'analyze'}
-      href='https://analyze.buffer.com'
-    >
-      <AnalyzeLogo />
-      <ProductText>Analyze</ProductText>
-    </ProductLink>
+    {products.map(product => (
+      <ProductLink
+        active={activeProduct === product}
+        href={`https://${product}.buffer.com`}
+      >
+        {getLogo(product)}
+        <ProductText>
+          {product}
+        </ProductText>
+      </ProductLink>
+    ))}
   </StlyedNavBarProduct>
 );
 
 NavBarProduct.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'analyze', 'reply', 'engage'])),
   activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
 };
 
 NavBarProduct.defaultProps = {
+  products: [],
   activeProduct: undefined,
 };
 

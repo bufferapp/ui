@@ -114,13 +114,13 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { activeProduct, user, helpMenuItems, onLogout } = this.props;
+    const { products, activeProduct, user, helpMenuItems, onLogout } = this.props;
     return (
       <NavBarStyled>
         <NavBarLeft>
           <BufferLogo />
           <NavBarVerticalRule />
-          <NavBarProducts activeProduct={activeProduct} />
+          <NavBarProducts products={products} activeProduct={activeProduct} />
         </NavBarLeft>
         <NavBarRight>
           {helpMenuItems && (
@@ -179,6 +179,9 @@ class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
+  /** The list of available products */
+  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'reply', 'analyze', 'engage'])),
+
   /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
   activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
 
@@ -213,6 +216,7 @@ NavBar.propTypes = {
 };
 
 NavBar.defaultProps = {
+  products: [],
   activeProduct: undefined,
   helpMenuItems: null,
   onLogout: undefined
