@@ -28,9 +28,10 @@ const SelectItem = ({
   getItemId,
   hideSearch,
   capitalizeItemLabel,
+  onItemClick,
 }) => (
   <SelectItemStyled
-    onClick={item.onItemClick || onClick}
+    onClick={onItemClick || onClick}
     hovered={hovered}
     id={getItemId(item)}
     disabled={item.disabled}
@@ -83,6 +84,9 @@ SelectItem.propTypes = {
 
   /** On click function */
   onClick: PropTypes.func.isRequired,
+
+  /** On click function */
+  onItemClick: PropTypes.func.isRequired,
 
   /** Get the id of the item */
   getItemId: PropTypes.func.isRequired,

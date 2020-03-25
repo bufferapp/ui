@@ -16,7 +16,11 @@ import NavBarMenu from './NavBarMenu/NavBarMenu';
 import NavBarProducts from './NavBarProducts/NavBarProducts';
 
 export function getProductPath(baseUrl) {
-  const [, productPath] = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/);
+  const result = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/);
+  let productPath = baseUrl;
+  if (result instanceof Array) {
+    [, productPath] = result;
+  }
   return productPath;
 }
 
@@ -136,6 +140,7 @@ class NavBar extends React.Component {
           )}
           <NavBarVerticalRule />
           <Select
+            onSelectClick={selectedItem => selectedItem.onItemClick()}
             hideSearch
             capitalizeItemLabel={false}
             xPosition="right"

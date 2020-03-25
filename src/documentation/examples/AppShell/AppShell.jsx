@@ -11,7 +11,7 @@ const userMenuItems = [
     id: '2',
     title: 'Preferences',
     icon: <Gear color={gray} />,
-    onItemClick: () => {},
+    onItemClick: () => { console.log('Preferences') },
   },
 ];
 
