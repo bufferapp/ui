@@ -101,12 +101,28 @@ class Carousel extends React.Component {
 
     // going backwards
     if (currentSlideIndex > index) {
-      if (left === 0) return;
+      // if it's the first slide, loop back to the last one
+      if (left === 0) {
+        const finalLength =
+          (React.Children.count(children) - 1) * parseInt(width, 10);
+        this.setState({
+          left: -finalLength,
+          currentSlideIndex: React.Children.count(children) - 1,
+        });
+        return;
+      }
     }
 
     // going forwards
     if (currentSlideIndex < index) {
-      if (this.verifyLastItem(React.Children.count(children), width)) return;
+      // if it's the last slide, loop back to the first one
+      if (this.verifyLastItem(React.Children.count(children), width)) {
+        this.setState({
+          left: 0,
+          currentSlideIndex: 0,
+        });
+        return;
+      }
     }
 
     const newLeft = parseInt(width, 10) * index;

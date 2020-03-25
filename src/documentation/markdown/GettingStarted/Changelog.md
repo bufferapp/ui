@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.32.0] - 2020-03-25
+### Fixed
+- Extends Modal component with width, noBackground and closeButton props
+
 ## [5.31.0] - 2020-03-25
 ### Fixed
 - Fixed AppShell after 5.30.0 fix to close popup when selecting an item in the menu
