@@ -84,6 +84,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       label=""
       multiSelect={false}
       noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
       searchPlaceholder="Search"
       selectPopupVisible={false}
       shortcutsEnabled={true}
@@ -170,6 +171,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       label=""
       multiSelect={false}
       noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
       searchPlaceholder="Search"
       selectPopupVisible={false}
       shortcutsEnabled={true}
@@ -266,6 +268,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       label=""
       multiSelect={false}
       noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
       searchPlaceholder="Search"
       selectPopupVisible={false}
       shortcutsEnabled={true}
@@ -328,6 +331,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       label=""
       multiSelect={false}
       noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
       searchPlaceholder="Search"
       selectPopupVisible={false}
       shortcutsEnabled={true}

@@ -526,6 +526,7 @@ export default class Select extends React.Component {
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
+              onItemClick={() => this.handleSelectOption(item, item.onItemClick)}
               hideSearch={hideSearch}
               multiSelect={multiSelect}
             />,
