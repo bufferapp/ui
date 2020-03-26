@@ -117,7 +117,6 @@ export default class Select extends React.Component {
   // Close the popover
   closePopover = e => {
     if (
-      !this.props.customButton &&
       this.selectNode &&
       this.selectNode.contains(e.target)
     ) {
@@ -148,7 +147,7 @@ export default class Select extends React.Component {
   handleSelectOption = (option, event) => {
     const { onSelectClick, multiSelect } = this.props;
     const { items } = this.state;
-    onSelectClick(option, event);
+    onSelectClick && onSelectClick(option, event);
 
     const selectedIndex = items.findIndex(x => x.selected === true);
 
@@ -473,7 +472,7 @@ export default class Select extends React.Component {
 
     return (
       <SelectStyled
-        isOpen={isOpen && selectPopupVisible}
+        isOpen={isOpen || selectPopupVisible}
         xPosition={xPosition}
         yPosition={yPosition}
         hasIconOnly={hasIconOnly}
@@ -527,6 +526,7 @@ export default class Select extends React.Component {
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
+              onItemClick={() => this.handleSelectOption(item, item.onItemClick)}
               hideSearch={hideSearch}
               multiSelect={multiSelect}
             />,
@@ -679,7 +679,7 @@ Select.defaultProps = {
   customButton: undefined,
   onSelectClick: undefined,
   keyMap: undefined,
-  multiSelect: undefined,
+  multiSelect: false,
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
   tooltip: undefined,
@@ -694,6 +694,6 @@ Select.defaultProps = {
   fullWidth: undefined,
   capitalizeItemLabel: true,
   isInputSearch: false,
-  selectPopupVisible: true,
+  selectPopupVisible: false,
   noResultsCustomMessage: 'No matches found',
 };

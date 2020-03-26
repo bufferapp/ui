@@ -1,12 +1,12 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
-import { Person, People, Gear, ArrowLeft } from '@bufferapp/ui/Icon';
 import { NavBarMenu } from '@bufferapp/ui/NavBar';
 
 /** With Custom Component */
 export default function ExampleSelectMenu() {
   return (
     <Select
+      onSelectClick={() => console.info('Selected')}
       customButton={onButtonClick => (
         <NavBarMenu
           user={{
@@ -17,39 +17,9 @@ export default function ExampleSelectMenu() {
         />
       )}
       items={[
-        {
-          id: '1',
-          title: 'Account',
-          icon: <Person color="gray" />,
-          onItemClick: () => console.info('Account Clicked'),
-        },
-        {
-          id: '2',
-          title: 'Organization',
-          icon: <People color="gray" />,
-          onItemClick: () => console.info('Organization Clicked'),
-        },
-        {
-          id: '3',
-          title: 'Settings',
-          icon: <Gear color="gray" />,
-          onItemClick: () => console.info('Settings Clicked'),
-        },
-        {
-          id: '4',
-          title: 'Logout',
-          icon: <ArrowLeft color="gray" />,
-          hasDivider: true,
-          onItemClick: () => console.info('Logout Clicked'),
-        },
-        {
-          id: '5',
-          title: 'Logout',
-          icon: <ArrowLeft color="gray" />,
-          hasDivider: true,
-          dividerTitle: 'Logout',
-          onItemClick: () => console.info('Logout Clicked'),
-        },
+        { id: '1', title: 'Option 1' },
+        { id: '2', title: 'Option 2' },
+        { id: '3', title: 'Option 3' },
       ]}
       marginTop="32px"
       hideSearch

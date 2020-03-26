@@ -1,5 +1,25 @@
 # Changelog
 
+## [5.32.0] - 2020-03-25
+### Fixed
+- Extends Modal component with width, noBackground and closeButton props
+
+## [5.31.0] - 2020-03-25
+### Fixed
+- Fixed AppShell after 5.30.0 fix to close popup when selecting an item in the menu
+
+## [5.30.0] - 2020-03-25
+### Fixed
+- Fixed toggle for Select component when Select uses Custom Button.
+
+## [5.29.0] - 2020-03-19
+### Added
+- New icons - Carousel, InstagramComment, InstagramLike, Movie
+
+## [5.28.0] - 2020-03-16
+### Added
+- Carousel component.
+
 ## [5.27.0] - 2020-03-03
 ### Added
 - Link component.

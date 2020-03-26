@@ -48,6 +48,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -102,6 +103,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -156,6 +158,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -210,6 +213,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -265,6 +269,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -319,6 +324,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -373,6 +379,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -427,6 +434,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -481,6 +489,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -535,6 +544,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -563,7 +573,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isOpen={false}
+    isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
@@ -589,6 +599,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -635,6 +646,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -689,6 +701,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
         }
         multiSelect={false}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -717,7 +730,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isOpen={false}
+    isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
@@ -743,6 +756,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -797,6 +811,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -851,6 +866,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
         }
         multiSelect={true}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>
@@ -906,7 +922,9 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
             "title": "jest-auto-snapshots String Fixture",
           }
         }
+        multiSelect={false}
         onClick={[Function]}
+        onItemClick={[Function]}
       />
     </ForwardRef(styled.ul)>
   </ForwardRef(styled.div)>

@@ -5,7 +5,7 @@ import Select from '@bufferapp/ui/Select';
 export default function ExampleSelectWithCustomItem() {
   return (
     <Select
-      onSelectClick={() => console.info('Main select clicked')}
+      onSelectClick={selectedItem => selectedItem.selectedItemClick()}
       label="Click Me"
       items={[
         {
@@ -16,7 +16,7 @@ export default function ExampleSelectWithCustomItem() {
             `<div style="background: ${
               item.color
             }; width: 10px; height: 10px"/>`,
-          onItemClick: () => console.info('Account Clicked'),
+          selectedItemClick: () => console.info('Red Clicked'),
         },
         {
           id: '2',
@@ -26,7 +26,7 @@ export default function ExampleSelectWithCustomItem() {
             `<div style="background: ${
               item.color
             }; width: 10px; height: 10px"/>`,
-          onItemClick: () => console.info('Organization Clicked'),
+          selectedItemClick: () => console.info('Green Clicked'),
         },
         {
           id: '3',
@@ -36,7 +36,7 @@ export default function ExampleSelectWithCustomItem() {
             `<div style="background: ${
               item.color
             }; width: 10px; height: 10px"/>`,
-          onItemClick: () => console.info('Settings Clicked'),
+          selectedItemClick: () => console.info('Blue Clicked'),
         },
       ]}
       hideSearch
