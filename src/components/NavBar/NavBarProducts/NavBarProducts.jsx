@@ -71,12 +71,11 @@ const AnalyzeLogo = () => (
 const getLogo = (product) => {
   switch (product) {
     case 'reply':
-      return ReplyLogo;
+      return <ReplyLogo />;
     case 'analyze':
-      return AnalyzeLogo;
+      return <AnalyzeLogo />;
     case 'publish':
-      return PublishLogo;
-    case 'engage':
+      return <PublishLogo />;
     default:
       return null;
   }
@@ -99,7 +98,7 @@ const NavBarProduct = ({ products, activeProduct }) => (
 );
 
 NavBarProduct.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'analyze', 'reply', 'engage'])),
+  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'analyze', 'reply'])),
   activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
 };
 

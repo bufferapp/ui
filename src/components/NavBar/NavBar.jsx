@@ -180,7 +180,7 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
   /** The list of available products */
-  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'reply', 'analyze', 'engage'])),
+  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'reply', 'analyze'])),
 
   /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
   activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),

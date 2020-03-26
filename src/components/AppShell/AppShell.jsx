@@ -16,7 +16,7 @@ import {
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
 const AppShell = ({
-  featureFlips,
+  products,
   activeProduct,
   user,
   helpMenuItems,
@@ -24,39 +24,31 @@ const AppShell = ({
   content,
   bannerOptions,
   onLogout,
-}) => {
-
-  const products = ['publish', 'analyze'];
-  if (featureFlips.includes('hasReply')) {
-    products.push('reply');
-  }
-
-  return (
-    <AppShellStyled>
-      {/* <GlobalStyles /> */}
-      <NavBar
-        products={products}
-        activeProduct={activeProduct}
-        user={user}
-        helpMenuItems={helpMenuItems}
-        onLogout={onLogout}
+}) => (
+  <AppShellStyled>
+    {/* <GlobalStyles /> */}
+    <NavBar
+      products={products}
+      activeProduct={activeProduct}
+      user={user}
+      helpMenuItems={helpMenuItems}
+      onLogout={onLogout}
+    />
+    {bannerOptions && (
+      <Banner
+        {...bannerOptions}
       />
-      {bannerOptions && (
-        <Banner
-          {...bannerOptions}
-        />
-      )}
-      <Wrapper>
-        {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
-        <ContentWrapper>{content}</ContentWrapper>
-      </Wrapper>
-    </AppShellStyled>
-  );
-};
+    )}
+    <Wrapper>
+      {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
+      <ContentWrapper>{content}</ContentWrapper>
+    </Wrapper>
+  </AppShellStyled>
+);
 
 AppShell.propTypes = {
-  /** Feature flips used to decide which behavior should be enabled on the AppShell */
-  featureFlips: PropTypes.arrayOf(PropTypes.string),
+  /** The list of products that the user has access to */
+  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'reply', 'analyze'])),
 
   /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
   activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
@@ -112,7 +104,7 @@ AppShell.propTypes = {
 };
 
 AppShell.defaultProps = {
-  featureFlips: [],
+  products: ['publish', 'analyze', 'reply'],
   sidebar: null,
   activeProduct: undefined,
   bannerOptions: null,
