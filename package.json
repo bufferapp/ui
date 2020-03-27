@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "5.32.0-beta.a0f6f6c",
+  "version": "5.32.0",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -34,15 +34,15 @@
   },
   "homepage": "https://bufferapp.github.io/ui",
   "peerDependencies": {
-    "react": ">= 0.14.0"
+    "react": ">= 0.14.0",
+    "styled-components": "^5.0.1"
   },
   "dependencies": {
     "@reach/tooltip": "0.6.2",
     "immutability-helper": "^2.9.0",
     "react": "16.8.6",
     "react-dom": "16.8.6",
-    "react-is": "16.8.6",
-    "styled-components": "^5.0.1"
+    "react-is": "16.8.6"
   },
   "devDependencies": {
     "@babel/cli": "7.1.5",
@@ -123,6 +123,7 @@
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.0",
+    "styled-components": "^5.0.1",
     "svgo": "1.1.1",
     "terser-webpack-plugin": "^2.3.4",
     "url-loader": "1.1.1",
