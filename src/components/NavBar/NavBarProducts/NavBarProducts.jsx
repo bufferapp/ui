@@ -87,6 +87,7 @@ const NavBarProduct = ({ products, activeProduct }) => (
       <ProductLink
         active={activeProduct === product}
         href={`https://${product}.buffer.com`}
+        key={product}
       >
         {getLogo(product)}
         <ProductText>

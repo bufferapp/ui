@@ -42,7 +42,7 @@ const helpMenuItems = [
 export default function ExampleAppShell() {
   return (
     <AppShell
-      products={['publish', 'analyze']}
+      featureFlips={[]}
       activeProduct="publish"
       user={{
         name: 'Hamish Macpherson',
