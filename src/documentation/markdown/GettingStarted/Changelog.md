@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.33.0] - 2020-03-30
+### Fixed
+- Fixed AppShell bug, not clicking on help items
+
 ## [5.32.0] - 2020-03-25
 ### Fixed
 - Extends Modal component with width, noBackground and closeButton props
