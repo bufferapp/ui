@@ -125,6 +125,7 @@ class NavBar extends React.Component {
         <NavBarRight>
           {helpMenuItems && (
             <Select
+              onSelectClick={selectedItem => selectedItem.onItemClick()}
               hideSearch
               capitalizeItemLabel={false}
               customButton={handleClick => (

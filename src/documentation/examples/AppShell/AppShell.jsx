@@ -19,7 +19,7 @@ const helpMenuItems = [
   {
     id: '1',
     title: 'FAQ',
-    onItemClick: () => {},
+    onItemClick: () => console.info('FAQ'),
   },
   {
     id: '2',
