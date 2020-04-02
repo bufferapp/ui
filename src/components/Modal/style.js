@@ -39,6 +39,7 @@ export const Modal = styled.section`
   padding: 16px 0 16px 0;
   width: ${props => getWidth(props)};
   overflow: hidden;
+  position: absolute;
 
   display: flex;
   align-items: center;
@@ -52,8 +53,8 @@ export const IconContainer = styled.button`
   background: none;
   border: none;
   position: absolute;
-  top: 80px;
-  right: 230px;
+  top: 0px;
+  right: 0px;
   svg {
     fill: #fff;
   }
