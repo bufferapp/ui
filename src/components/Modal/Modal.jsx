@@ -34,6 +34,9 @@ class Modal extends React.Component {
     if (this.modal) {
       this.modal.addEventListener('keydown', this.onKeyDown);
       this.modal.focus();
+      if (this.props.closeButton) {
+        this.container.addEventListener('click', e => this.clickToClose(e));
+      }
     }
   }
 
@@ -54,6 +57,13 @@ class Modal extends React.Component {
       this.dismiss();
     }
   };
+
+  clickToClose(e) {
+    e.preventDefault();
+    if (e.target !== this.container) return;
+    this.props.closeButton.callback();
+    this.dismiss();
+  }
 
   /** this must be invoked to properly dismiss the modal */
   dismiss() {
@@ -101,7 +111,7 @@ class Modal extends React.Component {
     }
 
     return (
-      <Styles.Container>
+      <Styles.Container ref={container => (this.container = container)}>
         <Styles.Modal
           background={background}
           ref={modal => (this.modal = modal)}
