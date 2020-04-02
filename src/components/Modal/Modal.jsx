@@ -33,6 +33,7 @@ class Modal extends React.Component {
     }
     if (this.modal) {
       this.modal.addEventListener('keydown', this.onKeyDown);
+      this.modal.focus();
     }
   }
 
@@ -115,7 +116,7 @@ class Modal extends React.Component {
                 this.handleAction(closeButton);
               }}
             >
-              <Cross />
+              <Cross size="large" />
             </Styles.IconContainer>
           )}
           {children}

@@ -45,14 +45,15 @@ export const Modal = styled.section`
   justify-content: center;
   flex-direction: column;
   flex-grow: 0;
+  outline: none;
 `;
 
 export const IconContainer = styled.button`
   background: none;
   border: none;
   position: absolute;
-  top: 32px;
-  right: 32px;
+  top: 80px;
+  right: 230px;
   svg {
     fill: #fff;
   }
