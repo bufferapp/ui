@@ -4,7 +4,7 @@ import { white } from '../style/colors';
 import { borderRadius } from '../style/borders';
 
 export const Container = styled.div`
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   height: 100%;
   align-items: center;
