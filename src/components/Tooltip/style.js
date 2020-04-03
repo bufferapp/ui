@@ -15,6 +15,7 @@ export const TooltipWrapper = styled.div`
 `;
 
 export const TooltipStyled = styled(Tooltip)`
+  opacity: ${props => props.opacity}
 `;
 
 export const TooltipStyle = {
