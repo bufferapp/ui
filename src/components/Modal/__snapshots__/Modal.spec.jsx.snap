@@ -12,7 +12,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
     <ForwardRef(styled.button)
       onClick={[Function]}
     >
-      <CrossIcon />
+      <CrossIcon
+        size="large"
+      />
     </ForwardRef(styled.button)>
     <NodeFixture />
     <ForwardRef(styled.div)
@@ -62,7 +64,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "noBackg
     <ForwardRef(styled.button)
       onClick={[Function]}
     >
-      <CrossIcon />
+      <CrossIcon
+        size="large"
+      />
     </ForwardRef(styled.button)>
     <NodeFixture />
     <ForwardRef(styled.div)
@@ -112,7 +116,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
     <ForwardRef(styled.button)
       onClick={[Function]}
     >
-      <CrossIcon />
+      <CrossIcon
+        size="large"
+      />
     </ForwardRef(styled.button)>
     <NodeFixture />
     <ForwardRef(styled.div)
@@ -162,7 +168,9 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
     <ForwardRef(styled.button)
       onClick={[Function]}
     >
-      <CrossIcon />
+      <CrossIcon
+        size="large"
+      />
     </ForwardRef(styled.button)>
     <NodeFixture />
     <ForwardRef(styled.div)

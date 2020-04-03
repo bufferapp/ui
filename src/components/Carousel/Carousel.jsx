@@ -135,6 +135,7 @@ class Carousel extends React.Component {
   render() {
     const { left, currentSlideIndex } = this.state;
     const { children, width } = this.props;
+
     return (
       <CarouselStyled>
         {/* this announcement is hidden but notifies screen reader users when the slide has changed */}
@@ -144,17 +145,19 @@ class Carousel extends React.Component {
           out of
           {children.length}
         </Announcement>
-        <ButtonOverlapContainer left>
-          <Button
-            type="secondary"
-            icon={<ArrowLeft />}
-            hasIconOnly
-            onClick={() => {
-              this.goToSlide(currentSlideIndex - 1);
-            }}
-            label="Backwards"
-          />
-        </ButtonOverlapContainer>
+        {React.Children.count(children) > 1 && (
+          <ButtonOverlapContainer left>
+            <Button
+              type="secondary"
+              icon={<ArrowLeft />}
+              hasIconOnly
+              onClick={() => {
+                this.goToSlide(currentSlideIndex - 1);
+              }}
+              label="Backwards"
+            />
+          </ButtonOverlapContainer>
+        )}
         <Content>
           <Window width={width}>
             <MainList left={left}>
@@ -163,36 +166,40 @@ class Carousel extends React.Component {
               </CarouselItems>
             </MainList>
           </Window>
-          <IndicatorList>
-            {React.Children.map(children, (child, index) => (
-              <IndicatorListItem key={index}>
-                <IndicatorButton
-                  type="button"
-                  onClick={() => this.goToSlide(index)}
-                  active={index === currentSlideIndex}
-                >
-                  <Announcement as="p">
-                    {index === currentSlideIndex
-                      ? `Currently on slide
+          {React.Children.count(children) > 1 && (
+            <IndicatorList>
+              {React.Children.map(children, (child, index) => (
+                <IndicatorListItem key={index}>
+                  <IndicatorButton
+                    type="button"
+                    onClick={() => this.goToSlide(index)}
+                    active={index === currentSlideIndex}
+                  >
+                    <Announcement as="p">
+                      {index === currentSlideIndex
+                        ? `Currently on slide
                     ${index + 1}`
-                      : `Go to slide ${index + 1}`}
-                  </Announcement>
-                </IndicatorButton>
-              </IndicatorListItem>
-            ))}
-          </IndicatorList>
+                        : `Go to slide ${index + 1}`}
+                    </Announcement>
+                  </IndicatorButton>
+                </IndicatorListItem>
+              ))}
+            </IndicatorList>
+          )}
         </Content>
-        <ButtonOverlapContainer>
-          <Button
-            type="secondary"
-            icon={<ArrowRight />}
-            hasIconOnly
-            onClick={() => {
-              this.goToSlide(currentSlideIndex + 1);
-            }}
-            label="Forwards"
-          />
-        </ButtonOverlapContainer>
+        {React.Children.count(children) > 1 && (
+          <ButtonOverlapContainer>
+            <Button
+              type="secondary"
+              icon={<ArrowRight />}
+              hasIconOnly
+              onClick={() => {
+                this.goToSlide(currentSlideIndex + 1);
+              }}
+              label="Forwards"
+            />
+          </ButtonOverlapContainer>
+        )}
       </CarouselStyled>
     );
   }

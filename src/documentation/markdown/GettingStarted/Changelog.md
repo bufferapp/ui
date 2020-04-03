@@ -1,5 +1,13 @@
 # Changelog
 
+## [5.33.1] - 2020-04-03
+### Fixed
+- moves close button closer to the modal content
+- focuses the modal after open so that ESC works right away
+- removes buttons and nav in the carousel if there's only 1 item
+- adds click anywhere outside the modal to close for modals with closeButton
+- adds opacity option to tooltip
+
 ## [5.33.0] - 2020-03-30
 ### Fixed
 - Fixed AppShell bug, not clicking on help items
