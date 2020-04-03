@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.33.2] - 2020-04-03
+- darkens the modal overlay background
+
 ## [5.33.1] - 2020-04-03
 ### Fixed
 - moves close button closer to the modal content
