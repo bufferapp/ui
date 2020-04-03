@@ -21,6 +21,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
         <NodeFixture />
       </ForwardRef(styled.div)>
     }
+    opacity={1}
     position={[Function]}
     style={
       Object {
@@ -52,6 +53,7 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only require
         
       </ForwardRef(styled.div)>
     }
+    opacity={1}
     position={[Function]}
     style={
       Object {
