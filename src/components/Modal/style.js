@@ -53,8 +53,8 @@ export const IconContainer = styled.button`
   background: none;
   border: none;
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: -4px;
+  right: 47px;
   svg {
     fill: #fff;
   }
