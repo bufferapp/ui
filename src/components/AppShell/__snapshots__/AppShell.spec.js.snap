@@ -1,5 +1,143 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featureFlips" has one item: "jest-auto-snapshots String Fixture" 1`] = `
+<ForwardRef(styled.div)>
+  <NavBar
+    activeProduct="publish"
+    helpMenuItems={
+      Array [
+        Object {
+          "component": <NodeFixture />,
+          "hasDivider": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "onItemClick": [MockFunction],
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    onLogout={[MockFunction]}
+    products={
+      Array [
+        "publish",
+        "analyze",
+      ]
+    }
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "ignoreMenuItems": Array [
+          "jest-auto-snapshots String Fixture",
+        ],
+        "menuItems": Array [
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
+    onCloseBanner={null}
+    text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
+  />
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featureFlips" is an empty array: "[]" 1`] = `
+<ForwardRef(styled.div)>
+  <NavBar
+    activeProduct="publish"
+    helpMenuItems={
+      Array [
+        Object {
+          "component": <NodeFixture />,
+          "hasDivider": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "onItemClick": [MockFunction],
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    onLogout={[MockFunction]}
+    products={
+      Array [
+        "publish",
+        "analyze",
+      ]
+    }
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "ignoreMenuItems": Array [
+          "jest-auto-snapshots String Fixture",
+        ],
+        "menuItems": Array [
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
+    onCloseBanner={null}
+    text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
+  />
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMenuItems" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.div)>
   <NavBar
@@ -16,6 +154,12 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
       ]
     }
     onLogout={[MockFunction]}
+    products={
+      Array [
+        "publish",
+        "analyze",
+      ]
+    }
     user={
       Object {
         "avatar": "jest-auto-snapshots String Fixture",
@@ -69,6 +213,12 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     activeProduct="publish"
     helpMenuItems={Array []}
     onLogout={[MockFunction]}
+    products={
+      Array [
+        "publish",
+        "analyze",
+      ]
+    }
     user={
       Object {
         "avatar": "jest-auto-snapshots String Fixture",
@@ -132,6 +282,12 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
       ]
     }
     onLogout={[MockFunction]}
+    products={
+      Array [
+        "publish",
+        "analyze",
+      ]
+    }
     user={
       Object {
         "avatar": "jest-auto-snapshots String Fixture",
@@ -183,6 +339,13 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only requir
 <ForwardRef(styled.div)>
   <NavBar
     helpMenuItems={null}
+    products={
+      Array [
+        "publish",
+        "analyze",
+        "reply",
+      ]
+    }
     user={
       Object {
         "avatar": "jest-auto-snapshots String Fixture",

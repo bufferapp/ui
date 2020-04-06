@@ -16,6 +16,7 @@ import {
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
 const AppShell = ({
+  featureFlips,
   activeProduct,
   user,
   helpMenuItems,
@@ -23,30 +24,42 @@ const AppShell = ({
   content,
   bannerOptions,
   onLogout,
-}) => (
-  <AppShellStyled>
-    {/* <GlobalStyles /> */}
-    <NavBar
-      activeProduct={activeProduct}
-      user={user}
-      helpMenuItems={helpMenuItems}
-      onLogout={onLogout}
-    />
-    {bannerOptions && (
-      <Banner
-        {...bannerOptions}
+}) => {
+
+  const enabledProducts = ['publish', 'analyze'];
+  if (featureFlips.includes('enableReply')) {
+    enabledProducts.push('reply');
+  }
+
+  return (
+    <AppShellStyled>
+      {/* <GlobalStyles /> */}
+      <NavBar
+        products={enabledProducts}
+        activeProduct={activeProduct}
+        user={user}
+        helpMenuItems={helpMenuItems}
+        onLogout={onLogout}
       />
-    )}
-    <Wrapper>
-      {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
-      <ContentWrapper>{content}</ContentWrapper>
-    </Wrapper>
-  </AppShellStyled>
-);
+      {bannerOptions && (
+        <Banner
+          {...bannerOptions}
+        />
+      )}
+      <Wrapper>
+        {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
+        <ContentWrapper>{content}</ContentWrapper>
+      </Wrapper>
+    </AppShellStyled>
+  );
+};
 
 AppShell.propTypes = {
-  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
-  activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
+  /** The list of features enabled for the user */
+  featureFlips: PropTypes.arrayOf(PropTypes.string),
+
+  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'analyze', 'reply'` */
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
 
   /** The current user object */
   user: PropTypes.shape({
@@ -99,6 +112,7 @@ AppShell.propTypes = {
 };
 
 AppShell.defaultProps = {
+  featureFlips: ['enableReply'],
   sidebar: null,
   activeProduct: undefined,
   bannerOptions: null,
