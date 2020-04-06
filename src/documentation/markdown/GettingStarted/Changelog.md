@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.34.0] - 2020-04-06
+- Adds 'featureFlips' parameter in AppShell.
+
 ## [5.33.3] - 2020-04-06
 - moves the close button on the modal closer
 
