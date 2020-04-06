@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.34.1] - 2020-04-06
+- Fix tests.
+
 ## [5.34.0] - 2020-04-06
 - Adds 'featureFlips' parameter in AppShell.
 

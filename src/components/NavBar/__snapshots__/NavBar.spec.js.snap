@@ -235,6 +235,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       label=""
       multiSelect={false}
       noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
       searchPlaceholder="Search"
       selectPopupVisible={false}
       shortcutsEnabled={true}
@@ -333,6 +334,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       label=""
       multiSelect={false}
       noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
       searchPlaceholder="Search"
       selectPopupVisible={false}
       shortcutsEnabled={true}
