@@ -59,7 +59,6 @@ class Modal extends React.Component {
   };
 
   clickToClose(e) {
-    e.preventDefault();
     if (e.target !== this.container) return;
     this.props.closeButton.callback();
     this.dismiss();

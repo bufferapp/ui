@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.34.3] - 2020-04-07
+- allow clicks on Links inside of modal
+
 ## [5.34.2] - 2020-04-07
 - Allow NavBar to re-render if the contents of "products" prop changes.
 
