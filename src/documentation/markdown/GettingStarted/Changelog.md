@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.34.2] - 2020-04-07
+- Allow NavBar to re-render if the contents of "products" prop changes.
+
 ## [5.34.1] - 2020-04-06
 - Fix tests.
 
