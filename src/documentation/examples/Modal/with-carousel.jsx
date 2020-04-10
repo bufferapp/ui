@@ -25,19 +25,49 @@ export default function ModalTest() {
           <div>
             <Carousel width="1000px">
               <div
-                style={{ height: '500px', width: '1000px', background: 'red' }}
+                style={{
+                  height: '500px',
+                  width: '1000px',
+                  background: '#cecece url("https://picsum.photos/id/1002/1000/500")',
+                  display: 'flex',
+                  color: 'white',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '100px',
+                  fontWeight: 500,
+                }}
               >
-                hello
+                oh
               </div>
               <div
-                style={{ height: '500px', width: '1000px', background: 'blue' }}
+                style={{
+                  height: '500px',
+                  width: '1000px',
+                  background: '#cecece url("https://picsum.photos/id/1052/1000/500")',
+                  display: 'flex',
+                  color: 'white',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '100px',
+                  fontWeight: 500,
+                }}
               >
-                hello
+                hi
               </div>
               <div
-                style={{ height: '500px', width: '1000px', background: 'green' }}
+                style={{
+                  height: '500px',
+                  width: '1000px',
+                  background: '#cecece url("https://picsum.photos/id/1032/1000/500")',
+                  display: 'flex',
+                  color: 'white',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  fontSize: '100px',
+                  fontWeight: 500,
+                }}
               >
-                hello
+                there
               </div>
             </Carousel>
           </div>
