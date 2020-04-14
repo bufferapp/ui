@@ -1,7 +1,18 @@
 /* eslint-disable no-confusing-arrow */
-import styled from 'styled-components';
-import { white } from '../style/colors';
+import styled, { keyframes } from 'styled-components';
+import { white, red } from '../style/colors';
 import { borderRadius } from '../style/borders';
+import { easeOutQuart } from '../style/animations';
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
   background: rgba(0, 0, 0, 0.7);
@@ -16,6 +27,8 @@ export const Container = styled.div`
   flex-direction: column;
   top: 0px;
   left: 0px;
+
+  animation: 200ms ${fadeIn} ${easeOutQuart};
 `;
 
 const getWidth = props => {
@@ -27,6 +40,18 @@ const getWidth = props => {
   }
   return '512px';
 };
+
+const stagingAnimation = keyframes`
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
 
 export const Modal = styled.section`
   background: ${props => props.background};
@@ -47,6 +72,8 @@ export const Modal = styled.section`
   flex-direction: column;
   flex-grow: 0;
   outline: none;
+
+  animation: 300ms ${stagingAnimation} ${easeOutQuart};
 `;
 
 export const IconContainer = styled.button`
@@ -55,8 +82,19 @@ export const IconContainer = styled.button`
   position: absolute;
   top: -4px;
   right: 47px;
+  cursor: pointer;
+
+  transition: transform 0.15s ease-out;
   svg {
-    fill: #fff;
+    fill: ${white};
+    transition: fill 0.15s ease-out;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    svg {
+      fill: ${red};
+    }
   }
 `;
 
