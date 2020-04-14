@@ -1,4 +1,9 @@
 # Changelog
+## [5.34.5] - 2020-04-13
+- aligns items in select
+
+## [5.34.4] - 2020-04-13
+- adds modal and carousel animations
 
 ## [5.34.3] - 2020-04-07
 - allow clicks on Links inside of modal

@@ -56,6 +56,7 @@ export const SelectItemTitle = styled.p`
   width: 100%;
   overflow: hidden;
   display: flex;
+  align-items: center;
 `;
 
 export const SelectItemCustom = styled.span`
