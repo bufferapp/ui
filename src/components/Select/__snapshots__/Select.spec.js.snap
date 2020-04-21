@@ -2,6 +2,8 @@
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -57,6 +59,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" is an empty array: "[]" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -112,6 +116,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -167,6 +173,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capitalizeItemLabel" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -222,6 +230,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip="jest-auto-snapshots String Fixture"
   fullWidth={true}
   isSplit={true}
@@ -278,6 +288,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={false}
   isSplit={true}
@@ -333,6 +345,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCustomAction" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -388,6 +402,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -443,6 +459,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -498,6 +516,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInputSearch" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -553,6 +573,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={false}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -608,6 +630,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={false}
@@ -655,6 +679,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiSelect" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -710,6 +736,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "selectPopupVisible" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -765,6 +793,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -820,6 +850,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
   data-tip=""
   fullWidth={true}
   isSplit={true}
@@ -875,6 +907,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)
+  aria-expanded={false}
+  aria-haspopup="true"
   isSplit={false}
   onClick={[Function]}
   onKeyUp={[Function]}

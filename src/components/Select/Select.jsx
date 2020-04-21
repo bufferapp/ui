@@ -549,6 +549,8 @@ export default class Select extends React.Component {
         ref={selectNode => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}
+        aria-haspopup="true"
+        aria-expanded={this.state.isOpen}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
