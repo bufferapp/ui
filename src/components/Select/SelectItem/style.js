@@ -66,12 +66,11 @@ export const SelectItemCustom = styled.span`
 
 export const CheckIconWrapper = styled.span`
   margin-right: 8px;
-  display: inline-block;
   height: 16px;
   width: 16px;
   display: flex;
   justify-content: center;
-}
+  flex-shrink: 0;
 `;
 
 export const HotKeyPrompt = styled.span`

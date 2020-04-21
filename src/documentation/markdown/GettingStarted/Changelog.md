@@ -1,4 +1,7 @@
 # Changelog
+## [5.34.6] - 2020-04-21
+- add flex-shrink in select for when text overflows
+
 ## [5.34.5] - 2020-04-13
 - aligns items in select
 
