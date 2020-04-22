@@ -80,6 +80,7 @@ export const ButtonNestedBase = css`
   background: none transparent;
   border: 0;
   color: inherit;
+  cursor: pointer;
   display: flex;
   font-family: inherit;
   font-size: inherit;
