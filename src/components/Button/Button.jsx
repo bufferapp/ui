@@ -5,11 +5,27 @@ import * as Styles from './style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Select from '../Select/Select';
 
-export const ButtonStyled = styled.button`
-  ${Styles.ButtonBase};
-  ${props => Styles[props.size]};
+/*
+Since buttons keep their own inline-block display type, we can only imitate this by using a wrapper (with
+ `display: inline-block`) an internal container (with `display: flex`), and then the actual contents (including real
+  buttons
+ */
+export const ButtonWrapperStyled = styled.div`
+  ${Styles.ButtonWrapperBase};
   ${props => Styles[props.disabled ? 'disabled' : props.type]};
-  ${props => Styles[props.fullWidth ? 'fullWidth' : '']}
+  ${props => (props.fullWidth ? Styles.fullWidth : '')};
+`;
+
+export const ButtonContainerStyled = styled.div`
+  ${Styles.ButtonContainerBase};
+  
+`;
+
+export const ButtonStyled = styled.button`
+  ${Styles.ButtonNestedBase};
+  ${props => Styles[props.size]};
+  ${props => (props.disabled ? Styles.disabled : '')};
+  ${props => (props.fullWidth ? Styles.fullWidth : '')};
 `;
 
 const Loading = styled.img`
@@ -52,68 +68,77 @@ const Button = ({
   className,
   children,
 }) => {
-  /** 
-    Deprecated since version 5.27.0
-    Will be deleted in version 6.0.0
-    For similar behavior, use a Link component.
-    Otherwise choose a different type of button.
-  */
+  /**
+   Deprecated since version 5.27.0
+   Will be deleted in version 6.0.0
+   For similar behavior, use a Link component.
+   Otherwise choose a different type of button.
+   */
   if (type === 'link') {
     // eslint-disable-next-line
-    console.warn('WARNING! Obsolete Link Button. Deprecated since version 5.27.0. Will be deleted in version 6.0.0. For similar behavior, use a Link component. Otherwise choose a different type of button.');
+    console.warn(
+      'WARNING! Obsolete Link Button. Deprecated since version 5.27.0. Will be deleted in version 6.0.0. For similar behavior, use a Link component. Otherwise choose a different type of button.'
+    );
   }
   return (
-    <ButtonStyled
-      onClick={!disabled ? onClick : undefined}
-      disabled={disabled}
-      size={size}
-      type={type}
-      isSplit={isSplit}
-      icon={icon}
-      hasIconOnly={hasIconOnly}
-      fullWidth={fullWidth}
-      data-tip={tooltip}
-      ref={ref}
+    <ButtonWrapperStyled
       className={className}
+      disabled={disabled}
+      type={type}
+      fullWidth={fullWidth}
     >
-      {!iconEnd && icon}
-      {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
-      {!hasIconOnly && (
-        <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>
-          {label}
-        </Styles.ButtonLabel>
-      )}
-      {iconEnd && icon}
+      <ButtonContainerStyled>
+        <ButtonStyled
+          onClick={!disabled ? onClick : undefined}
+          disabled={disabled}
+          isSplit={isSplit}
+          icon={icon}
+          hasIconOnly={hasIconOnly}
+          data-tip={tooltip}
+          ref={ref}
+          aria-haspopup="false"
+          size={size}
+          fullWidth={fullWidth}
+        >
+          {!iconEnd && icon}
+          {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
+          {!hasIconOnly && (
+            <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>
+              {label}
+            </Styles.ButtonLabel>
+          )}
+          {iconEnd && icon}
 
-      {isSelect && (type === 'primary' || type === 'secondary') && (
-        <Styles.ButtonArrow>
-          <ChevronDown
-            color={type === 'primary' ? 'white' : 'grayDark'}
-            size={size}
-            isChevron
-          />
-        </Styles.ButtonArrow>
-      )}
+          {isSelect && (type === 'primary' || type === 'secondary') && (
+            <Styles.ButtonArrow>
+              <ChevronDown
+                color={type === 'primary' ? 'white' : 'grayDark'}
+                size={size}
+                isChevron
+              />
+            </Styles.ButtonArrow>
+          )}
 
-      {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
-
-      {isSplit &&
-        (type === 'primary' || type === 'secondary') &&
-        (children ? (
-          React.Children.map(children, child => React.cloneElement(child, {}))
-        ) : (
-          <Select
-            onSelectClick={onSelectClick}
-            items={items}
-            type={type}
-            isSplit
-            yPosition={selectPosition}
-            xPosition="right"
-            disabled={disabled}
-            hideSearch={hideSearch}
-          />
-        ))}
-    </ButtonStyled>
+          {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
+        </ButtonStyled>
+        {isSplit &&
+          (type === 'primary' || type === 'secondary') &&
+          (children ? (
+            React.Children.map(children, child => React.cloneElement(child, {}))
+          ) : (
+            <Select
+              onSelectClick={onSelectClick}
+              items={items}
+              type={type}
+              isSplit
+              yPosition={selectPosition}
+              xPosition="right"
+              disabled={disabled}
+              hideSearch={hideSearch}
+            />
+          ))}
+      </ButtonContainerStyled>
+    </ButtonWrapperStyled>
   );
 };
 
