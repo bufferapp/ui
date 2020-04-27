@@ -24,6 +24,7 @@ const AppShell = ({
   content,
   bannerOptions,
   onLogout,
+  displaySkipLink,
 }) => {
 
   const enabledProducts = ['publish', 'analyze'];
@@ -40,6 +41,7 @@ const AppShell = ({
         user={user}
         helpMenuItems={helpMenuItems}
         onLogout={onLogout}
+        displaySkipLink={displaySkipLink}
       />
       {bannerOptions && (
         <Banner
@@ -109,6 +111,7 @@ AppShell.propTypes = {
 
   /** (Optional) Callback to be called before logout */
   onLogout: PropTypes.func,
+  displaySkipLink: PropTypes.bool,
 };
 
 AppShell.defaultProps = {
@@ -118,6 +121,7 @@ AppShell.defaultProps = {
   bannerOptions: null,
   onLogout: undefined,
   helpMenuItems: null,
+  displaySkipLink: false,
 };
 
 export default AppShell;

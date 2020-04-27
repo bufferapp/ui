@@ -10,6 +10,7 @@ import {
 } from '../style/fonts';
 
 import Select from '../Select';
+import Link from '../Link';
 
 import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
@@ -105,6 +106,31 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
 }
 
 /**
+ * A11Y feature: A skip to main content link appears when a user is on a screen reader 
+ * and the link is in focus. To work properly, the page will need to have a main tag with the id main
+ * This feature is optional
+ */
+const SkipToMainLink = styled(Link)`
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+  :focus {
+    left: auto;
+    top: auto;
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    margin: auto;
+    margin-left: 10px;
+  }
+`;
+
+/**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
 class NavBar extends React.Component {
@@ -115,10 +141,11 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { products, activeProduct, user, helpMenuItems, onLogout } = this.props;
+    const { products, activeProduct, user, helpMenuItems, onLogout, displaySkipLink } = this.props;
     return (
       <NavBarStyled>
         <NavBarLeft>
+          {displaySkipLink && <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>}
           <BufferLogo />
           <NavBarVerticalRule />
           <NavBarProducts products={products} activeProduct={activeProduct} />
@@ -214,14 +241,16 @@ NavBar.propTypes = {
     })
   ),
 
-  onLogout: PropTypes.func
+  onLogout: PropTypes.func,
+  displaySkipLink: PropTypes.bool,
 };
 
 NavBar.defaultProps = {
   products: [],
   activeProduct: undefined,
   helpMenuItems: null,
-  onLogout: undefined
+  onLogout: undefined,
+  displaySkipLink: false,
 };
 
 export default NavBar;
