@@ -97,18 +97,10 @@ const NavBarVerticalRule = styled.div`
   z-index: 1;
 `;
 
-export function appendMenuItem(ignoreMenuItems, menuItem) {
-  if (!ignoreMenuItems) {
-    return menuItem;
-  }
-
-  return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
-}
-
 /**
  * A11Y feature: A skip to main content link appears when a user is on a screen reader 
- * and the link is in focus. To work properly, the page will need to have a main tag with the id main
- * This feature is optional
+ * and the link is in focus. To work properly, each page will need to have an element with the id main
+ * example: <main id="main"></main> This feature is optional
  */
 const SkipToMainLink = styled(Link)`
   position: absolute;
@@ -129,6 +121,14 @@ const SkipToMainLink = styled(Link)`
     margin-left: 10px;
   }
 `;
+
+export function appendMenuItem(ignoreMenuItems, menuItem) {
+  if (!ignoreMenuItems) {
+    return menuItem;
+  }
+
+  return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
+}
 
 /**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
