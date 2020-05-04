@@ -36,6 +36,7 @@ export default class Input extends React.Component {
             disabled={disabled}
             hasError={hasError}
             maxLength={maxLength}
+            id={name}
             name={name}
             onChange={onChange}
             onBlur={onBlur}
