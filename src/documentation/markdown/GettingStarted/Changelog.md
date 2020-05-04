@@ -1,4 +1,8 @@
 # Changelog
+
+## [5.35.0] - 2020-05-04
+- add a hidden skip to main content link in the navbar
+
 ## [5.34.6] - 2020-04-21
 - add flex-shrink in select for when text overflows
 
