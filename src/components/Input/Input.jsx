@@ -23,6 +23,7 @@ export default class Input extends React.Component {
       type,
       value,
       forwardedRef,
+      required,
     } = this.props;
     return (
       <Styles.InputWrapper>
@@ -47,6 +48,8 @@ export default class Input extends React.Component {
             size={size}
             value={value}
             ref={forwardedRef}
+            required={required}
+            aria-required={required ? true: undefined}
           />
         </Styles.InputFieldWrapper>
         {help.length > 0 && (
@@ -67,6 +70,8 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   /** It colors the field in red. */
   hasError: PropTypes.bool,
+  /** Aria-required value  */
+  required: PropTypes.bool,
   /** It adds an help text below the input box. */
   help: PropTypes.string,
   /** It adds a label on top of the input box. */
@@ -104,6 +109,7 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
   hasError: false,
+  required: false,
   help: '',
   label: '',
   placeholder: '',
