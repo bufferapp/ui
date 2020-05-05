@@ -233,7 +233,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed only required 
     <ForwardRef(styled.input)
       disabled={false}
       hasError={false}
-      id="jest-auto-snapshots String Fixture"
+      id=""
       name="jest-auto-snapshots String Fixture"
       onBlur={[Function]}
       onChange={[MockFunction]}

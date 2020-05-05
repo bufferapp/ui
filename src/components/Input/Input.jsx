@@ -13,6 +13,7 @@ export default class Input extends React.Component {
       help,
       label,
       maxLength,
+      id,
       name,
       onChange,
       onBlur,
@@ -28,7 +29,7 @@ export default class Input extends React.Component {
     return (
       <Styles.InputWrapper>
         {label.length > 0 && (
-          <Text htmlFor={name} type="label">
+          <Text htmlFor={id} type="label">
             {label}
           </Text>
         )}
@@ -37,7 +38,7 @@ export default class Input extends React.Component {
             disabled={disabled}
             hasError={hasError}
             maxLength={maxLength}
-            id={name}
+            id={id}
             name={name}
             onChange={onChange}
             onBlur={onBlur}
@@ -74,6 +75,8 @@ Input.propTypes = {
   required: PropTypes.bool,
   /** It adds an help text below the input box. */
   help: PropTypes.string,
+  /** Id to link label with input for a11y */
+  id: PropTypes.string,
   /** It adds a label on top of the input box. Make sure you also add an id for a11y */
   label: PropTypes.string,
   /** It adds a maxlength option for the input. */
@@ -111,6 +114,7 @@ Input.defaultProps = {
   hasError: false,
   required: false,
   help: '',
+  id: '',
   label: '',
   placeholder: '',
   size: 'regular',
