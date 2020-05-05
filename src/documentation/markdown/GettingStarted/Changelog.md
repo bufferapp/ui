@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.36.0] - 2020-05-04
+- add id and required props for Input component to match the htmlFor from label for a11y
+
 ## [5.35.0] - 2020-05-04
 - add a hidden skip to main content link in the navbar
 
