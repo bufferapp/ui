@@ -70,11 +70,11 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   /** It colors the field in red. */
   hasError: PropTypes.bool,
-  /** Marks the input as required  */
+  /** Marks the input as required */
   required: PropTypes.bool,
   /** It adds an help text below the input box. */
   help: PropTypes.string,
-  /** It adds a label on top of the input box.  Make sure you also add an id for a11y */
+  /** It adds a label on top of the input box. Make sure you also add an id for a11y */
   label: PropTypes.string,
   /** It adds a maxlength option for the input. */
   maxLength: PropTypes.string,
