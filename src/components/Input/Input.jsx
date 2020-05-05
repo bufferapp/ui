@@ -74,7 +74,7 @@ Input.propTypes = {
   required: PropTypes.bool,
   /** It adds an help text below the input box. */
   help: PropTypes.string,
-  /** It adds a label on top of the input box. */
+  /** It adds a label on top of the input box.  Make sure you also add an id for a11y */
   label: PropTypes.string,
   /** It adds a maxlength option for the input. */
   maxLength: PropTypes.string,
