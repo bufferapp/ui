@@ -70,7 +70,7 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   /** It colors the field in red. */
   hasError: PropTypes.bool,
-  /** Aria-required value  */
+  /** Marks the input as required  */
   required: PropTypes.bool,
   /** It adds an help text below the input box. */
   help: PropTypes.string,
