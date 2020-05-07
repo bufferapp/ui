@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.37.1] - 2020-05-07
+- Improve accessibility of buttons, split buttons and select elements 
+
 ## [5.36.0] - 2020-05-04
 - add id and required props for Input component to match the htmlFor from label for a11y
 
