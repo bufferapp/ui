@@ -180,6 +180,24 @@ export default class Select extends React.Component {
   onClick = e => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
+    if (this.props.isSplit && !this.props.disabled) {
+       this.onButtonClick(e);
+    }
+  };
+
+  onKeyUp = e => {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+    if (this.props.isSplit && !this.props.disabled) {
+      const altPlusUp = e.altKey && ['Up', 'ArrowUp'].indexOf(e.key) >= 0;
+      const altPlusDown = e.altKey && ['Down', 'ArrowDown'].indexOf(e.key) >= 0;
+      const space = ['Space', ' '].indexOf(e.key) >= 0;
+      const enter = ['Enter'].indexOf(e.key) >= 0;
+      if (altPlusUp || altPlusDown || space || enter) {
+        e.preventDefault();
+        this.onButtonClick(e);
+      }
+    }
   };
 
   onButtonClick = () => {
@@ -542,13 +560,15 @@ export default class Select extends React.Component {
     return (
       <Wrapper
         role="button"
-        onClick={this.onClick}
-        onKeyUp={this.onClick}
+        onClick={(e) => this.onClick(e)}
+        onKeyUp={(e) => this.onKeyUp(e)}
         tabIndex={0}
         isSplit={isSplit}
         ref={selectNode => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}
+        aria-haspopup="true"
+        aria-expanded={this.state.isOpen}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
