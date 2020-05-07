@@ -20,8 +20,10 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
     size="jest-auto-snapshots String Fixture"
   >
     <ForwardRef(styled.input)
+      aria-required={true}
       disabled={false}
       hasError={true}
+      id="jest-auto-snapshots String Fixture"
       maxLength="jest-auto-snapshots String Fixture"
       name="jest-auto-snapshots String Fixture"
       onBlur={[MockFunction]}
@@ -34,6 +36,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
           "text": "jest-auto-snapshots String Fixture",
         }
       }
+      required={true}
       size="jest-auto-snapshots String Fixture"
       type="jest-auto-snapshots String Fixture"
       value="jest-auto-snapshots String Fixture"
@@ -74,8 +77,10 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
     size="jest-auto-snapshots String Fixture"
   >
     <ForwardRef(styled.input)
+      aria-required={true}
       disabled={true}
       hasError={false}
+      id="jest-auto-snapshots String Fixture"
       maxLength="jest-auto-snapshots String Fixture"
       name="jest-auto-snapshots String Fixture"
       onBlur={[MockFunction]}
@@ -88,6 +93,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
           "text": "jest-auto-snapshots String Fixture",
         }
       }
+      required={true}
       size="jest-auto-snapshots String Fixture"
       type="jest-auto-snapshots String Fixture"
       value="jest-auto-snapshots String Fixture"
@@ -96,6 +102,62 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Text))
       hasError={false}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </ForwardRef(Styled(Text))>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "required" is set to: "false" 1`] = `
+<ForwardRef(styled.div)>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    htmlFor="jest-auto-snapshots String Fixture"
+    type="label"
+  >
+    jest-auto-snapshots String Fixture
+  </Text>
+  <ForwardRef(styled.div)
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
+    size="jest-auto-snapshots String Fixture"
+  >
+    <ForwardRef(styled.input)
+      disabled={true}
+      hasError={true}
+      id="jest-auto-snapshots String Fixture"
+      maxLength="jest-auto-snapshots String Fixture"
+      name="jest-auto-snapshots String Fixture"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onKeyUp={[MockFunction]}
+      placeholder="jest-auto-snapshots String Fixture"
+      prefix={
+        Object {
+          "paddingLeft": "jest-auto-snapshots String Fixture",
+          "text": "jest-auto-snapshots String Fixture",
+        }
+      }
+      required={false}
+      size="jest-auto-snapshots String Fixture"
+      type="jest-auto-snapshots String Fixture"
+      value="jest-auto-snapshots String Fixture"
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <WarningIcon
+      size="medium"
+    />
+    <ForwardRef(Styled(Text))
+      hasError={true}
       htmlFor="jest-auto-snapshots String Fixture"
       type="help"
     >
@@ -125,8 +187,10 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
     size="jest-auto-snapshots String Fixture"
   >
     <ForwardRef(styled.input)
+      aria-required={true}
       disabled={true}
       hasError={true}
+      id="jest-auto-snapshots String Fixture"
       maxLength="jest-auto-snapshots String Fixture"
       name="jest-auto-snapshots String Fixture"
       onBlur={[MockFunction]}
@@ -139,6 +203,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
           "text": "jest-auto-snapshots String Fixture",
         }
       }
+      required={true}
       size="jest-auto-snapshots String Fixture"
       type="jest-auto-snapshots String Fixture"
       value="jest-auto-snapshots String Fixture"
@@ -168,12 +233,14 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed only required 
     <ForwardRef(styled.input)
       disabled={false}
       hasError={false}
+      id=""
       name="jest-auto-snapshots String Fixture"
       onBlur={[Function]}
       onChange={[MockFunction]}
       onKeyUp={[Function]}
       placeholder=""
       prefix={null}
+      required={false}
       size="regular"
       type="text"
     />
