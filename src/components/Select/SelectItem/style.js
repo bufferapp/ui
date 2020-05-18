@@ -64,13 +64,14 @@ export const SelectItemCustom = styled.span`
   align-items: center;
 `;
 
-export const CheckIconWrapper = styled.span`
+export const IconWrapper = styled.span`
   margin-right: 8px;
-  height: 16px;
-  width: 16px;
+  height: ${props => props.custom ? '' : '16px'};
+  width: ${props => props.custom ? '' : '16px'};
   display: flex;
   justify-content: center;
   flex-shrink: 0;
+  padding: ${props => props.custom ? '2px 0' : ''};
 `;
 
 export const HotKeyPrompt = styled.span`
