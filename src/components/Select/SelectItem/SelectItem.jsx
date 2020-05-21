@@ -7,7 +7,7 @@ import {
   SelectItemIcon,
   SelectItemTitle,
   SelectItemCustom,
-  CheckIconWrapper,
+  IconWrapper,
   HotKeyPrompt,
   Title,
 } from './style';
@@ -43,9 +43,9 @@ const SelectItem = ({
       hasComponent={item.component}
     >
       {item.selected && (
-        <CheckIconWrapper>
+        <IconWrapper>
           <Checkmark color="grayDarker" />
-        </CheckIconWrapper>
+        </IconWrapper>
       )}
       {item.icon && (
         <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
@@ -56,11 +56,11 @@ const SelectItem = ({
         title={item[keyMap ? keyMap.title : 'title']}
       >
         {item.component && (
-          <CheckIconWrapper>
+          <IconWrapper custom>
             <SelectItemCustom
               dangerouslySetInnerHTML={{ __html: item.component(item) }}
             />
-          </CheckIconWrapper>
+          </IconWrapper>
         )}
         <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
       </SelectItemTitle>
