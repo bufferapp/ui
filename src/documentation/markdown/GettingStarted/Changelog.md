@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.37.2] - 2020-05-21
+- add flexibility for height and width in custom icons for Select 
+
 ## [5.37.1] - 2020-05-07
 - Improve accessibility of buttons, split buttons and select elements 
 
