@@ -129,7 +129,7 @@ export default class Select extends React.Component {
       this.setState(
         {
           isOpen: false,
-          hoveredItem: undefined,
+          hoveredItem: undefined
         },
       );
     }
@@ -508,6 +508,7 @@ export default class Select extends React.Component {
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
+              clearSearchOnBlur
             />
           </SearchBarWrapper>
         )}
