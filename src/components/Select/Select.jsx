@@ -201,11 +201,12 @@ export default class Select extends React.Component {
   };
 
   onButtonClick = () => {
-    const { isOpen, items } = this.state;
-    const { isInputSearch } = this.props;
+    const { isOpen } = this.state;
+    const { isInputSearch, items } = this.props;
     this.setState(
       {
         isOpen: !isOpen,
+        items
       },
       () => {
         !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus();
