@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
 
-import { gray, blueDarker, grayLight, grayLighter, grayDark, } from '../style/colors';
+import { gray, blueDarker, grayLight, grayLighter, grayDark, blue, } from '../style/colors';
 import {
   fontWeightMedium,
   fontFamily
@@ -11,6 +11,7 @@ import {
 
 import Select from '../Select';
 import Link from '../Link';
+import DropdownMenu from '../DropdownMenu';
 
 import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
@@ -78,6 +79,9 @@ const NavBarHelp = styled.a`
     color: ${props => (props.active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
   }
+  &:focus {
+    outline: 2px solid ${blue};
+  }
   cursor: pointer;
 `;
 
@@ -143,14 +147,33 @@ class NavBar extends React.Component {
   render() {
     const { products, activeProduct, user, helpMenuItems, onLogout, displaySkipLink } = this.props;
     return (
-      <NavBarStyled>
+      <NavBarStyled aria-label="Main Navigation">
         <NavBarLeft>
           {displaySkipLink && <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>}
           <BufferLogo />
           <NavBarVerticalRule />
           <NavBarProducts products={products} activeProduct={activeProduct} />
         </NavBarLeft>
-        <NavBarRight>
+        <NavBarRight aria-label="Settings Navigation">
+          <DropdownMenu
+            name="Help"
+            menubarItem={(
+              // eslint-disable-next-line jsx-a11y/role-supports-aria-props
+              <NavBarHelp
+                role="menuitem"
+                aria-expanded="false"
+                aria-haspopup="true"
+                onClick={ev => {
+                  ev.preventDefault();
+                }}
+                tabIndex="0"
+              >
+                <InfoIcon />
+                <NavBarHelpText>Help</NavBarHelpText>
+              </NavBarHelp>
+            )}
+            items={helpMenuItems}
+          />
           {helpMenuItems && (
             <Select
               onSelectClick={selectedItem => selectedItem.onItemClick()}

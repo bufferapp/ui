@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main Navigation"
+>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -19,7 +21,37 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-label="Settings Navigation"
+  >
+    <DropdownMenu
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)
+          aria-expanded="false"
+          aria-haspopup="true"
+          onClick={[Function]}
+          role="menuitem"
+          tabIndex="0"
+        >
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      name="Help"
+    />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -109,7 +141,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main Navigation"
+>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -127,7 +161,27 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-label="Settings Navigation"
+  >
+    <DropdownMenu
+      items={Array []}
+      menubarItem={
+        <ForwardRef(styled.a)
+          aria-expanded="false"
+          aria-haspopup="true"
+          onClick={[Function]}
+          role="menuitem"
+          tabIndex="0"
+        >
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      name="Help"
+    />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -207,7 +261,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "publish" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main Navigation"
+>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -225,7 +281,37 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-label="Settings Navigation"
+  >
+    <DropdownMenu
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)
+          aria-expanded="false"
+          aria-haspopup="true"
+          onClick={[Function]}
+          role="menuitem"
+          tabIndex="0"
+        >
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      name="Help"
+    />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -315,7 +401,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main Navigation"
+>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -329,7 +417,37 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       products={Array []}
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-label="Settings Navigation"
+  >
+    <DropdownMenu
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)
+          aria-expanded="false"
+          aria-haspopup="true"
+          onClick={[Function]}
+          role="menuitem"
+          tabIndex="0"
+        >
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      name="Help"
+    />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -419,7 +537,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displaySkipLink" is set to: "false" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main Navigation"
+>
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
@@ -432,7 +552,37 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-label="Settings Navigation"
+  >
+    <DropdownMenu
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)
+          aria-expanded="false"
+          aria-haspopup="true"
+          onClick={[Function]}
+          role="menuitem"
+          tabIndex="0"
+        >
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      name="Help"
+    />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -522,7 +672,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main Navigation"
+>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -540,7 +692,37 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-label="Settings Navigation"
+  >
+    <DropdownMenu
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)
+          aria-expanded="false"
+          aria-haspopup="true"
+          onClick={[Function]}
+          role="menuitem"
+          tabIndex="0"
+        >
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      name="Help"
+    />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -630,7 +812,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main Navigation"
+>
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
@@ -638,7 +822,27 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       products={Array []}
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    aria-label="Settings Navigation"
+  >
+    <DropdownMenu
+      items={null}
+      menubarItem={
+        <ForwardRef(styled.a)
+          aria-expanded="false"
+          aria-haspopup="true"
+          onClick={[Function]}
+          role="menuitem"
+          tabIndex="0"
+        >
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      name="Help"
+    />
     <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}

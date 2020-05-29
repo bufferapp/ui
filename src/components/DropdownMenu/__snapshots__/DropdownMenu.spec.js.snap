@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<nav
+  aria-label="Main Menu"
+  role="navigation"
+>
+  <ForwardRef(styled.ul)
+    aria-label="Main Menu"
+    role="menubar"
+  >
+    <ForwardRef(styled.li)
+      role="none"
+    >
+      <NodeFixture />
+      <ForwardRef(styled.ul)
+        aria-label="jest-auto-snapshots String Fixture"
+        isOpen={false}
+        role="menu"
+        yPosition="bottom"
+      >
+        <ForwardRef(styled.li)
+          role="none"
+        >
+          <ForwardRef(styled.button)
+            fullWidth={true}
+            role="menuitem"
+            tabIndex="-1"
+            type="button"
+          >
+            jest-auto-snapshots String Fixture
+          </ForwardRef(styled.button)>
+        </ForwardRef(styled.li)>
+      </ForwardRef(styled.ul)>
+    </ForwardRef(styled.li)>
+  </ForwardRef(styled.ul)>
+</nav>
+`;
+
+exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only required props 1`] = `
+<nav
+  aria-label="Main Menu"
+  role="navigation"
+>
+  <ForwardRef(styled.ul)
+    aria-label="Main Menu"
+    role="menubar"
+  >
+    <ForwardRef(styled.li)
+      role="none"
+    >
+      <NodeFixture />
+      <ForwardRef(styled.ul)
+        aria-label="jest-auto-snapshots String Fixture"
+        isOpen={false}
+        role="menu"
+        yPosition="bottom"
+      >
+        <ForwardRef(styled.li)
+          role="none"
+        >
+          <ForwardRef(styled.button)
+            fullWidth={true}
+            role="menuitem"
+            tabIndex="-1"
+            type="button"
+          >
+            jest-auto-snapshots String Fixture
+          </ForwardRef(styled.button)>
+        </ForwardRef(styled.li)>
+      </ForwardRef(styled.ul)>
+    </ForwardRef(styled.li)>
+  </ForwardRef(styled.ul)>
+</nav>
+`;
