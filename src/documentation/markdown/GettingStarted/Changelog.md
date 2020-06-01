@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.37.3] - 2020-06-01
+- Allow select to reset even if searching is interrupted 
+
 ## [5.37.2] - 2020-05-21
 - add flexibility for height and width in custom icons for Select 
 
