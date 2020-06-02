@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)
+<ForwardRef(styled.a)
   onClick={[MockFunction]}
+  user={
+    Object {
+      "email": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+    }
+  }
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.div)>
@@ -22,5 +28,5 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only requ
       size="large"
     />
   </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+</ForwardRef(styled.a)>
 `;

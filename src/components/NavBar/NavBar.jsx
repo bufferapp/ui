@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
 
-import { gray, blueDarker, grayLight, grayLighter, grayDark, blue, } from '../style/colors';
 import {
-  fontWeightMedium,
-  fontFamily
-} from '../style/fonts';
+  gray,
+  blueDarker,
+  grayLight,
+  grayLighter,
+  grayDark,
+} from '../style/colors';
+import { fontWeightMedium, fontFamily } from '../style/fonts';
 
 import Select from '../Select';
 import Link from '../Link';
@@ -47,7 +50,7 @@ export function getAccountUrl(baseUrl = '', user) {
 const NavBarStyled = styled.nav`
   background: #fff;
   border-bottom: 1px solid ${gray};
-  box-shadow: 0 1px 10px -5px rgba(0,0,0,.15);
+  box-shadow: 0 1px 10px -5px rgba(0, 0, 0, 0.15);
   display: flex;
   height: 56px;
   justify-content: space-between;
@@ -79,9 +82,6 @@ const NavBarHelp = styled.a`
     color: ${props => (props.active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
   }
-  &:focus {
-    outline: 2px solid ${blue};
-  }
   cursor: pointer;
 `;
 
@@ -102,7 +102,7 @@ const NavBarVerticalRule = styled.div`
 `;
 
 /**
- * A11Y feature: A skip to main content link appears when a user is on a screen reader 
+ * A11Y feature: A skip to main content link appears when a user is on a screen reader
  * and the link is in focus. To work properly, each page will need to have an element with the id main
  * example: <main id="main"></main> This feature is optional
  */
@@ -139,57 +139,93 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
  */
 class NavBar extends React.Component {
   shouldComponentUpdate(nextProps) {
-    return nextProps.user.name !== this.props.user.name ||
+    return (
+      nextProps.user.name !== this.props.user.name ||
       nextProps.user.email !== this.props.user.email ||
-      nextProps.products !== this.props.products;
+      nextProps.products !== this.props.products
+    );
   }
 
   render() {
-    const { products, activeProduct, user, helpMenuItems, onLogout, displaySkipLink } = this.props;
+    const {
+      products,
+      activeProduct,
+      user,
+      helpMenuItems,
+      onLogout,
+      displaySkipLink,
+    } = this.props;
     return (
-      <NavBarStyled aria-label="Main Navigation">
+      <NavBarStyled aria-label="Main menu">
         <NavBarLeft>
-          {displaySkipLink && <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>}
+          {displaySkipLink && (
+            <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>
+          )}
           <BufferLogo />
           <NavBarVerticalRule />
           <NavBarProducts products={products} activeProduct={activeProduct} />
         </NavBarLeft>
-        <NavBarRight aria-label="Settings Navigation">
-          <DropdownMenu
-            name="Help"
-            menubarItem={(
-              // eslint-disable-next-line jsx-a11y/role-supports-aria-props
-              <NavBarHelp
-                role="menuitem"
-                aria-expanded="false"
-                aria-haspopup="true"
-                onClick={ev => {
-                  ev.preventDefault();
-                }}
-                tabIndex="0"
-              >
-                <InfoIcon />
-                <NavBarHelpText>Help</NavBarHelpText>
-              </NavBarHelp>
-            )}
-            items={helpMenuItems}
-          />
+        <NavBarRight>
           {helpMenuItems && (
-            <Select
-              onSelectClick={selectedItem => selectedItem.onItemClick()}
-              hideSearch
-              capitalizeItemLabel={false}
-              customButton={handleClick => (
-                <NavBarHelp onClick={handleClick}>
+            <DropdownMenu
+              ariaLabel="Help Menu"
+              name="Help"
+              menubarItem={(
+                <NavBarHelp
+                  onClick={ev => {
+                    ev.preventDefault();
+                  }}
+                >
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
               )}
               items={helpMenuItems}
-              horizontalOffset="-16px"
-              xPosition="right"
             />
           )}
+          <NavBarVerticalRule />
+          <DropdownMenu
+            ariaLabel="Account Menu"
+            name="Account"
+            horizontalOffset="-16px"
+            menubarItem={(
+              <NavBarMenu
+                user={user}
+                onClick={ev => {
+                  ev.preventDefault();
+                }}
+              />
+            )}
+            items={[
+              appendMenuItem(user.ignoreMenuItems, {
+                id: 'account',
+                title: 'Account',
+                icon: <PersonIcon color={gray} />,
+                onItemClick: () => {
+                  console.info('Account');
+                  /*
+                  window.location.assign(
+                  getAccountUrl(window.location.href, this.props.user)
+                  );
+                  */
+                },
+              }),
+              ...user.menuItems,
+              appendMenuItem(user.ignoreMenuItems, {
+                id: 'logout',
+                title: 'Logout',
+                icon: <ArrowLeft color={gray} />,
+                hasDivider: user.menuItems && user.menuItems.length > 0,
+                onItemClick: () => {
+                  console.info('Logout');
+                  /*
+                  if (typeof onLogout === 'function') onLogout();
+                  window.location.assign(getLogoutUrl(window.location.href));
+                  */
+                },
+              }),
+            ].filter(e => e)}
+          />
           <NavBarVerticalRule />
           <Select
             onSelectClick={selectedItem => selectedItem.onItemClick()}

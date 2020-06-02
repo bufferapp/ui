@@ -2,34 +2,43 @@
 
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <nav
-  aria-label="Main Menu"
+  aria-label="jest-auto-snapshots String Fixture"
   role="navigation"
 >
   <ForwardRef(styled.ul)
-    aria-label="Main Menu"
+    aria-label="jest-auto-snapshots String Fixture"
     role="menubar"
   >
     <ForwardRef(styled.li)
       role="none"
     >
-      <NodeFixture />
+      <NodeFixture
+        aria-expanded={false}
+        aria-haspopup="true"
+        onClick={[Function]}
+        role="menuitem"
+        tabIndex="0"
+      />
       <ForwardRef(styled.ul)
         aria-label="jest-auto-snapshots String Fixture"
         isOpen={false}
+        onBlur={[Function]}
         role="menu"
         yPosition="bottom"
       >
         <ForwardRef(styled.li)
           role="none"
         >
-          <ForwardRef(styled.button)
-            fullWidth={true}
-            role="menuitem"
-            tabIndex="-1"
-            type="button"
-          >
-            jest-auto-snapshots String Fixture
-          </ForwardRef(styled.button)>
+          <ButtonItem
+            index={0}
+            item={
+              Object {
+                "id": "jest-auto-snapshots String Fixture",
+                "title": "jest-auto-snapshots String Fixture",
+              }
+            }
+            shouldFocus={false}
+          />
         </ForwardRef(styled.li)>
       </ForwardRef(styled.ul)>
     </ForwardRef(styled.li)>
@@ -39,34 +48,43 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
 
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only required props 1`] = `
 <nav
-  aria-label="Main Menu"
+  aria-label="jest-auto-snapshots String Fixture"
   role="navigation"
 >
   <ForwardRef(styled.ul)
-    aria-label="Main Menu"
+    aria-label="jest-auto-snapshots String Fixture"
     role="menubar"
   >
     <ForwardRef(styled.li)
       role="none"
     >
-      <NodeFixture />
+      <NodeFixture
+        aria-expanded={false}
+        aria-haspopup="true"
+        onClick={[Function]}
+        role="menuitem"
+        tabIndex="0"
+      />
       <ForwardRef(styled.ul)
         aria-label="jest-auto-snapshots String Fixture"
         isOpen={false}
+        onBlur={[Function]}
         role="menu"
         yPosition="bottom"
       >
         <ForwardRef(styled.li)
           role="none"
         >
-          <ForwardRef(styled.button)
-            fullWidth={true}
-            role="menuitem"
-            tabIndex="-1"
-            type="button"
-          >
-            jest-auto-snapshots String Fixture
-          </ForwardRef(styled.button)>
+          <ButtonItem
+            index={0}
+            item={
+              Object {
+                "id": "jest-auto-snapshots String Fixture",
+                "title": "jest-auto-snapshots String Fixture",
+              }
+            }
+            shouldFocus={false}
+          />
         </ForwardRef(styled.li)>
       </ForwardRef(styled.ul)>
     </ForwardRef(styled.li)>

@@ -4,21 +4,24 @@ import {
   gray,
   white,
   grayLight,
+  grayLighter,
   grayDarker,
   grayShadow,
 } from '../style/colors';
+import { fontFamily } from '../style/fonts';
 import { ButtonBase, medium } from '../Button/style';
-// import Button from '../Button/Button';
 
 export const DropdownItems = styled.ul`
   padding: 0;
   margin: 0;
   position: relative;
+  display: flex;
+  height: 100%;
 
   &[role='menubar'] > li {
-    display: inline;
-    &:focus {
-      outline: 2px solid ${blue};
+    display: flex;
+    & a:focus {
+      outline: 12px auto ${blue};
     }
   }
 `;
@@ -51,6 +54,12 @@ export const PopupMenu = styled.ul`
   );
   left: ${props => (props.xPosition === 'left' ? 0 : '')};
   padding: 8px 0;
+
+  &[role='menu'] > li {
+    & button:focus {
+      outline: 12px auto ${blue};
+    }
+  }
 `;
 
 export const Item = styled.li`
@@ -67,34 +76,36 @@ export const Item = styled.li`
   margin-right: 8px;
   border-radius: 4px;
   background-color: ${props => (props.hovered ? grayLight : 'transparent')};
-  &:hover {
-    background-color: ${grayLight};
-  }
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
 `;
 
-/*
-export const ButtomItem = styled(Button)`
-  color: ${grayDarker};
-  background-color: rgba(240, 248, 255, 0);
-  border-radius: 0;
-  button {
-    padding: 0;
-    justify-content: flex-start;
-    margin-left: 8px;
-    margin-right: 8px;
-    border-radius: 4px;
-    height: 32px;
-  };
+export const ItemDivider = styled.li`
+  background-color: ${grayLighter};
+  height: 1px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+  padding: 0;
+  pointer-events: none;
+  width: 100%;
+  list-style: none;
 `;
-*/
 
+export const ItemDividerTitle = styled.span`
+  position: relative;
+  top: -11px;
+  margin-left: 8px;
+  background: white;
+  padding: 0 8px;
+  font-size: 12px;
+  font-family: ${fontFamily};
+  color: ${gray};
+`;
 
-export const ButtomItem = styled.button`
+export const ButtonItemStyled = styled.button`
   ${ButtonBase};
   ${medium};
   color: ${grayDarker};
-  background-color: rgba(240, 248, 255, 0);
+  background: none transparent;
   border-radius: 0;
   justify-content: flex-start;
   border-radius: 4px;
@@ -105,4 +116,12 @@ export const ButtomItem = styled.button`
   :focus {
     box-shadow: none;
   }
+  :hover {
+    background-color: ${grayLight};
+  }
+`;
+
+export const ButtonLabel = styled.div`
+  margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
+  margin-right: ${props => (props.hasIcon ? '5px' : '0px')};
 `;

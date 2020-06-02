@@ -1,23 +1,28 @@
-/* eslint-disable no-console */
+/* eslint-disable jsx-a11y/role-supports-aria-props */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { DropdownItems, Item, PopupMenu, ButtomItem } from './style';
+import {
+  DropdownItems,
+  Item,
+  ItemDivider,
+  ItemDividerTitle,
+  PopupMenu,
+} from './style';
+import ButtonItem from './ButtonItem/ButtonItem';
 
 export default class DropdownMenu extends React.Component {
   constructor(props) {
     super(props);
 
-    /*
-    const items = props.items.map(item => {
-      item.tabIndex = "-1";
-      return item;
-    });
-    */
-
     this.state = {
       isOpen: false,
+      focusedItem: -1,
     };
+
+    this.firstItem = props.items.length > 0 ? 0 : -1;
+    this.lastItem = props.items.length - 1 || -1;
+
     this.keyCode = Object.freeze({
       TAB: 9,
       RETURN: 13,
@@ -34,65 +39,100 @@ export default class DropdownMenu extends React.Component {
     });
 
     this.handleKeydown = this.handleKeydown.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.handleFocus = this.handleFocus.bind(this);
-    this.handleBlur = this.handleBlur.bind(this);
     this.handleMouseover = this.handleMouseover.bind(this);
     this.handleMouseout = this.handleMouseout.bind(this);
+    this.handlePopupBlur = this.handlePopupBlur.bind(this);
   }
 
   componentDidMount() {
     this.itemsNode.addEventListener('keydown', this.handleKeydown);
-    this.itemsNode.addEventListener('click', this.handleClick);
-    this.itemsNode.addEventListener('focus', this.handleFocus);
-    this.itemsNode.addEventListener('blur', this.handleBlur);
     this.itemsNode.addEventListener('mouseover', this.handleMouseover);
     this.itemsNode.addEventListener('mouseout', this.handleMouseout);
   }
 
   componentWillUnmount() {
     this.itemsNode.removeEventListener('keydown', this.handleKeydown);
-    this.itemsNode.removeEventListener('click', this.handleClick);
-    this.itemsNode.removeEventListener('focus', this.handleFocus);
-    this.itemsNode.removeEventListener('blur', this.handleBlur);
     this.itemsNode.removeEventListener('mouseover', this.handleMouseover);
     this.itemsNode.removeEventListener('mouseout', this.handleMouseout);
   }
 
+  togglePopup = () => {
+    if (this.isPopupOpen()) {
+      this.closePopup();
+    } else {
+      this.openPopup();
+      this.setFocusToFirstItem();
+    }
+  };
+
+  isPopupOpen = () => this.state.isOpen;
+
   openPopup = () => {
+    this.popupMenu.focus();
     this.setState({ isOpen: true });
-  }
+  };
 
   closePopup = () => {
-    this.setState({ isOpen: false });
-  }
+    this.setState({ isOpen: false, focusedItem: -1 });
+  };
 
   setFocusToItem = index => {
-    this.props.items.forEach((item, i) => {
-      const elem = this[`item_${i}_ref`];
-      if (index === i) {
-        elem.focus();
-        elem.tabIndex = "0";
-        elem['aria-expanded'] = "true";
-      } else {
-        elem.tabIndex = "-1";
-      }
-      console.log('tabIndex --->', elem, elem.tabIndex, elem['aria-expanded']);
-    });
-  }
+    this.setState({ focusedItem: index });
+  };
 
   setFocusToFirstItem = () => {
     this.setFocusToItem(0);
-  }
+  };
+
+  openPopupAndFocusFirstItem = () => {
+    this.openPopup();
+    this.setFocusToFirstItem();
+  };
+
+  isFirstItem = index => index === this.firstItem;
+
+  isLastItem = index => index === this.lastItem;
+
+  setFocusToNextItem = () => {
+    const { focusedItem } = this.state;
+
+    const newIndex = this.isLastItem(focusedItem)
+      ? this.firstItem
+      : focusedItem + 1;
+
+    this.setFocusToItem(newIndex);
+  };
+
+  setFocusToPreviousItem = () => {
+    const { focusedItem } = this.state;
+
+    const newIndex = this.isFirstItem(focusedItem)
+      ? this.lastItem
+      : focusedItem - 1;
+
+    this.setFocusToItem(newIndex);
+  };
 
   handleKeydown = event => {
     let flag = false;
     switch (event.keyCode) {
       case this.keyCode.SPACE:
       case this.keyCode.RETURN:
+        if (!this.isPopupOpen()) {
+          this.openPopupAndFocusFirstItem();
+          flag = true;
+        }
+        break;
       case this.keyCode.DOWN:
-        this.openPopup();
-        this.setFocusToFirstItem();
+        if (!this.isPopupOpen()) {
+          this.openPopupAndFocusFirstItem();
+        } else {
+          this.setFocusToNextItem();
+        }
+        flag = true;
+        break;
+      case this.keyCode.UP:
+        this.setFocusToPreviousItem();
         flag = true;
         break;
       case this.keyCode.LEFT:
@@ -104,9 +144,10 @@ export default class DropdownMenu extends React.Component {
         // this.menu.setFocusToNextItem(this);
         flag = true;
         break;
+      case this.keyCode.ESC:
       case this.keyCode.TAB:
         this.closePopup();
-      break;
+        break;
       default:
         console.info('DEFAULT');
         break;
@@ -118,48 +159,76 @@ export default class DropdownMenu extends React.Component {
     }
   };
 
-  handleClick = () => {};
+  handlePopupBlur = event => {
+    const outsideOfPopup = !event.currentTarget.contains(event.relatedTarget);
 
-  handleFocus = () => {};
+    setTimeout(() => {
+      if (this.isPopupOpen() && outsideOfPopup) {
+        this.closePopup();
+      }
+    }, 300);
 
-  handleBlur = () => {};
+    event.stopPropagation();
+    event.preventDefault();
+  };
 
   handleMouseover = () => {};
 
   handleMouseout = () => {};
 
-  renderItems = items => (
-    items.map((item, index) => {
-      const { title, onItemClick } = item;
-      return (
-        <Item key={`item-${index}`} role="none">
-          <ButtomItem
-            ref={button => (this[`item_${index}_ref`] = button)}
-            role="menuitem"
-            onClick={onItemClick}
-            tabIndex={item.tabIndex}
-            type="button"
-            fullWidth
-          >
-            {title}
-          </ButtomItem>
-        </Item>
-      )
-    })
-  );
+  renderItems = items =>
+    items.map((item, index) => [
+      item.hasDivider && (
+        <ItemDivider key={`${item.id}--divider`}>
+          {item.dividerTitle && (
+            <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
+          )}
+        </ItemDivider>
+      ),
+      <Item key={`item-${index}`} role="none">
+        <ButtonItem
+          index={index}
+          item={item}
+          shouldFocus={index === this.state.focusedItem}
+        />
+      </Item>,
+    ]);
 
   render() {
-    const { menubarItem, name, items } = this.props;
+    const {
+      menubarItem,
+      name,
+      items,
+      ariaLabel,
+      horizontalOffset,
+    } = this.props;
+    const MenubarItem = React.cloneElement(menubarItem);
+
     return (
       <nav
         role="navigation"
-        aria-label="Main Menu" 
+        aria-label={ariaLabel}
         ref={itemsNode => (this.itemsNode = itemsNode)}
       >
-        <DropdownItems role="menubar" aria-label="Main Menu">
+        <DropdownItems role="menubar" aria-label={ariaLabel}>
           <Item role="none">
-            {menubarItem}
-            <PopupMenu role="menu" aria-label={name} isOpen={this.state.isOpen} yPosition="bottom">
+            <MenubarItem.type
+              {...MenubarItem.props}
+              role="menuitem"
+              tabIndex="0"
+              aria-haspopup="true"
+              aria-expanded={this.state.isOpen}
+              onClick={this.togglePopup}
+            />
+            <PopupMenu
+              ref={popupMenu => (this.popupMenu = popupMenu)}
+              role="menu"
+              aria-label={name}
+              isOpen={this.state.isOpen}
+              yPosition="bottom"
+              horizontalOffset={horizontalOffset}
+              onBlur={event => this.handlePopupBlur(event)}
+            >
               {this.renderItems(items)}
             </PopupMenu>
           </Item>
@@ -175,6 +244,7 @@ DropdownMenu.propTypes = {
 
   /** Menu name */
   name: PropTypes.string.isRequired,
+  ariaLabel: PropTypes.string.isRequired,
 
   /** Items to display in the popup */
   items: PropTypes.arrayOf(
