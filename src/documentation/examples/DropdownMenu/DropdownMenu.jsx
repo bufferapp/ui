@@ -59,7 +59,7 @@ export default function ExampleDropdownMenu() {
     <Navigation>
       <DropdownMenu
         ariaLabel="Help Menu"
-        name="Help"
+        ariaLabelPopup="Help"
         menubarItem={(
           <MenuItem
             onClick={ev => {

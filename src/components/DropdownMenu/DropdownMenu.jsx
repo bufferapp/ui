@@ -197,9 +197,9 @@ export default class DropdownMenu extends React.Component {
   render() {
     const {
       menubarItem,
-      name,
       items,
       ariaLabel,
+      ariaLabelPopup,
       horizontalOffset,
     } = this.props;
     const MenubarItem = React.cloneElement(menubarItem);
@@ -218,7 +218,7 @@ export default class DropdownMenu extends React.Component {
           <PopupMenu
             ref={popupMenu => (this.popupMenu = popupMenu)}
             role="menu"
-            aria-label={name}
+            aria-label={ariaLabelPopup}
             isOpen={this.state.isOpen}
             yPosition="bottom"
             horizontalOffset={horizontalOffset}
@@ -236,15 +236,21 @@ DropdownMenu.propTypes = {
   /** Link in the NavBar that triggers the popup */
   menubarItem: PropTypes.node.isRequired,
 
-  /** Menu name */
-  name: PropTypes.string.isRequired,
+  /** Aria label for list component */
   ariaLabel: PropTypes.string.isRequired,
 
-  /** Items to display in the popup */
+  /** Aria label for popup menu, it should preferibly be the same as the menubarItem name */
+  ariaLabelPopup: PropTypes.string,
+
+  /** Items list to display in the popup menu */
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
     })
   ).isRequired,
+};
+
+DropdownMenu.defaultProps = {
+  ariaLabelPopup: null,
 };

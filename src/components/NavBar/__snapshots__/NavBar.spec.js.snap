@@ -24,6 +24,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
   <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -45,11 +46,11 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           </ForwardRef(styled.span)>
         </ForwardRef(styled.a)>
       }
-      name="Help"
     />
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       items={
         Array [
@@ -103,7 +104,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           }
         />
       }
-      name="Account"
     />
   </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
@@ -133,6 +133,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
   <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={Array []}
       menubarItem={
         <ForwardRef(styled.a)
@@ -144,11 +145,11 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           </ForwardRef(styled.span)>
         </ForwardRef(styled.a)>
       }
-      name="Help"
     />
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       items={
         Array [
@@ -202,7 +203,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           }
         />
       }
-      name="Account"
     />
   </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
@@ -232,6 +232,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
   <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -253,11 +254,11 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
           </ForwardRef(styled.span)>
         </ForwardRef(styled.a)>
       }
-      name="Help"
     />
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       items={
         Array [
@@ -311,7 +312,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
           }
         />
       }
-      name="Account"
     />
   </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
@@ -337,6 +337,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
   <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -358,11 +359,11 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
           </ForwardRef(styled.span)>
         </ForwardRef(styled.a)>
       }
-      name="Help"
     />
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       items={
         Array [
@@ -416,7 +417,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
           }
         />
       }
-      name="Account"
     />
   </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
@@ -441,6 +441,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
   <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -462,11 +463,11 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
           </ForwardRef(styled.span)>
         </ForwardRef(styled.a)>
       }
-      name="Help"
     />
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       items={
         Array [
@@ -520,7 +521,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
           }
         />
       }
-      name="Account"
     />
   </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
@@ -550,6 +550,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
   <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -571,11 +572,11 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
           </ForwardRef(styled.span)>
         </ForwardRef(styled.a)>
       }
-      name="Help"
     />
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       items={
         Array [
@@ -629,7 +630,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
           }
         />
       }
-      name="Account"
     />
   </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
@@ -650,6 +650,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       items={
         Array [
@@ -703,7 +704,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
           }
         />
       }
-      name="Account"
     />
   </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>

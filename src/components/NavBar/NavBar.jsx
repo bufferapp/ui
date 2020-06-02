@@ -168,7 +168,7 @@ class NavBar extends React.Component {
           {helpMenuItems && (
             <DropdownMenu
               ariaLabel="Help Menu"
-              name="Help"
+              ariaLabelPopup="Help"
               menubarItem={(
                 <NavBarHelp
                   onClick={ev => {
@@ -185,7 +185,7 @@ class NavBar extends React.Component {
           <NavBarVerticalRule />
           <DropdownMenu
             ariaLabel="Account Menu"
-            name="Account"
+            ariaLabelPopup="Account"
             horizontalOffset="-16px"
             menubarItem={(
               <NavBarMenu
