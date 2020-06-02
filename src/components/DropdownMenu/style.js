@@ -21,7 +21,8 @@ export const DropdownItems = styled.ul`
   &[role='menubar'] > li {
     display: flex;
     & a:focus {
-      outline: 12px auto ${blue};
+      outline: 1px solid ${blue};
+      height: calc(100% - 2px);
     }
   }
 `;
@@ -57,7 +58,7 @@ export const PopupMenu = styled.ul`
 
   &[role='menu'] > li {
     & button:focus {
-      outline: 12px auto ${blue};
+      outline: 1px solid ${blue};
     }
   }
 `;
@@ -68,7 +69,7 @@ export const Item = styled.li`
   color: ${props => (props.disabled ? grayLight : grayDarker)};
   cursor: pointer;
   display: flex;
-  overflow: hidden;
+  /*overflow: hidden;*/
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
