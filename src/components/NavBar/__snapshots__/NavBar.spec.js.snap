@@ -21,7 +21,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
       items={
@@ -105,58 +105,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
       name="Account"
     />
-    <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
-      items={
-        Array [
-          Object {
-            "icon": <PersonIcon
-              color="#B8B8B8"
-            />,
-            "id": "account",
-            "onItemClick": [Function],
-            "title": "Account",
-          },
-          Object {
-            "component": [MockFunction],
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-          Object {
-            "hasDivider": true,
-            "icon": <ArrowLeftIcon
-              color="#B8B8B8"
-            />,
-            "id": "logout",
-            "onItemClick": [Function],
-            "title": "Logout",
-          },
-        ]
-      }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
-      xPosition="right"
-      yPosition="bottom"
-    />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
@@ -181,7 +130,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
       items={Array []}
@@ -255,58 +204,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
       name="Account"
     />
-    <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
-      items={
-        Array [
-          Object {
-            "icon": <PersonIcon
-              color="#B8B8B8"
-            />,
-            "id": "account",
-            "onItemClick": [Function],
-            "title": "Account",
-          },
-          Object {
-            "component": [MockFunction],
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-          Object {
-            "hasDivider": true,
-            "icon": <ArrowLeftIcon
-              color="#B8B8B8"
-            />,
-            "id": "logout",
-            "onItemClick": [Function],
-            "title": "Logout",
-          },
-        ]
-      }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
-      xPosition="right"
-      yPosition="bottom"
-    />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
@@ -331,7 +229,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
       items={
@@ -415,58 +313,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
       name="Account"
     />
-    <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
-      items={
-        Array [
-          Object {
-            "icon": <PersonIcon
-              color="#B8B8B8"
-            />,
-            "id": "account",
-            "onItemClick": [Function],
-            "title": "Account",
-          },
-          Object {
-            "component": [MockFunction],
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-          Object {
-            "hasDivider": true,
-            "icon": <ArrowLeftIcon
-              color="#B8B8B8"
-            />,
-            "id": "logout",
-            "onItemClick": [Function],
-            "title": "Logout",
-          },
-        ]
-      }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
-      xPosition="right"
-      yPosition="bottom"
-    />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
@@ -487,7 +334,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       products={Array []}
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
       items={
@@ -571,58 +418,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
       name="Account"
     />
-    <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
-      items={
-        Array [
-          Object {
-            "icon": <PersonIcon
-              color="#B8B8B8"
-            />,
-            "id": "account",
-            "onItemClick": [Function],
-            "title": "Account",
-          },
-          Object {
-            "component": [MockFunction],
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-          Object {
-            "hasDivider": true,
-            "icon": <ArrowLeftIcon
-              color="#B8B8B8"
-            />,
-            "id": "logout",
-            "onItemClick": [Function],
-            "title": "Logout",
-          },
-        ]
-      }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
-      xPosition="right"
-      yPosition="bottom"
-    />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
@@ -642,7 +438,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
       items={
@@ -726,58 +522,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       }
       name="Account"
     />
-    <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
-      items={
-        Array [
-          Object {
-            "icon": <PersonIcon
-              color="#B8B8B8"
-            />,
-            "id": "account",
-            "onItemClick": [Function],
-            "title": "Account",
-          },
-          Object {
-            "component": [MockFunction],
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-          Object {
-            "hasDivider": true,
-            "icon": <ArrowLeftIcon
-              color="#B8B8B8"
-            />,
-            "id": "logout",
-            "onItemClick": [Function],
-            "title": "Logout",
-          },
-        ]
-      }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
-      xPosition="right"
-      yPosition="bottom"
-    />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
@@ -802,7 +547,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <DropdownMenu
       ariaLabel="Help Menu"
       items={
@@ -886,58 +631,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       }
       name="Account"
     />
-    <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
-      items={
-        Array [
-          Object {
-            "icon": <PersonIcon
-              color="#B8B8B8"
-            />,
-            "id": "account",
-            "onItemClick": [Function],
-            "title": "Account",
-          },
-          Object {
-            "component": [MockFunction],
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-          Object {
-            "hasDivider": true,
-            "icon": <ArrowLeftIcon
-              color="#B8B8B8"
-            />,
-            "id": "logout",
-            "onItemClick": [Function],
-            "title": "Logout",
-          },
-        ]
-      }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
-      xPosition="right"
-      yPosition="bottom"
-    />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
@@ -952,7 +646,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       products={Array []}
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <ForwardRef(styled.div) />
     <DropdownMenu
       ariaLabel="Account Menu"
@@ -1011,57 +705,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       }
       name="Account"
     />
-    <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
-      items={
-        Array [
-          Object {
-            "icon": <PersonIcon
-              color="#B8B8B8"
-            />,
-            "id": "account",
-            "onItemClick": [Function],
-            "title": "Account",
-          },
-          Object {
-            "component": [MockFunction],
-            "hasDivider": true,
-            "id": "jest-auto-snapshots String Fixture",
-            "onItemClick": [MockFunction],
-            "title": "jest-auto-snapshots String Fixture",
-          },
-          Object {
-            "hasDivider": true,
-            "icon": <ArrowLeftIcon
-              color="#B8B8B8"
-            />,
-            "id": "logout",
-            "onItemClick": [Function],
-            "title": "Logout",
-          },
-        ]
-      }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
-      xPosition="right"
-      yPosition="bottom"
-    />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;

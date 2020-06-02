@@ -12,7 +12,6 @@ import {
 } from '../style/colors';
 import { fontWeightMedium, fontFamily } from '../style/fonts';
 
-import Select from '../Select';
 import Link from '../Link';
 import DropdownMenu from '../DropdownMenu';
 
@@ -61,7 +60,7 @@ const NavBarStyled = styled.nav`
 const NavBarLeft = styled.div`
   display: flex;
 `;
-const NavBarRight = styled.div`
+const NavBarRight = styled.nav`
   display: flex;
 `;
 
@@ -202,48 +201,9 @@ class NavBar extends React.Component {
                 title: 'Account',
                 icon: <PersonIcon color={gray} />,
                 onItemClick: () => {
-                  console.info('Account');
-                  /*
                   window.location.assign(
                   getAccountUrl(window.location.href, this.props.user)
                   );
-                  */
-                },
-              }),
-              ...user.menuItems,
-              appendMenuItem(user.ignoreMenuItems, {
-                id: 'logout',
-                title: 'Logout',
-                icon: <ArrowLeft color={gray} />,
-                hasDivider: user.menuItems && user.menuItems.length > 0,
-                onItemClick: () => {
-                  console.info('Logout');
-                  /*
-                  if (typeof onLogout === 'function') onLogout();
-                  window.location.assign(getLogoutUrl(window.location.href));
-                  */
-                },
-              }),
-            ].filter(e => e)}
-          />
-          <NavBarVerticalRule />
-          <Select
-            onSelectClick={selectedItem => selectedItem.onItemClick()}
-            hideSearch
-            capitalizeItemLabel={false}
-            xPosition="right"
-            customButton={handleClick => (
-              <NavBarMenu user={user} onClick={handleClick} />
-            )}
-            items={[
-              appendMenuItem(user.ignoreMenuItems, {
-                id: 'account',
-                title: 'Account',
-                icon: <PersonIcon color={gray} />,
-                onItemClick: () => {
-                  window.location.assign(
-                    getAccountUrl(window.location.href, this.props.user)
-                  );
                 },
               }),
               ...user.menuItems,
@@ -258,7 +218,6 @@ class NavBar extends React.Component {
                 },
               }),
             ].filter(e => e)}
-            horizontalOffset="-16px"
           />
         </NavBarRight>
       </NavBarStyled>

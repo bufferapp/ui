@@ -179,7 +179,7 @@ export default class DropdownMenu extends React.Component {
   renderItems = items =>
     items.map((item, index) => [
       item.hasDivider && (
-        <ItemDivider key={`${item.id}--divider`}>
+        <ItemDivider key={`${item.id}--divider`} role="none">
           {item.dividerTitle && (
             <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
           )}
@@ -205,35 +205,29 @@ export default class DropdownMenu extends React.Component {
     const MenubarItem = React.cloneElement(menubarItem);
 
     return (
-      <nav
-        role="navigation"
-        aria-label={ariaLabel}
-        ref={itemsNode => (this.itemsNode = itemsNode)}
-      >
-        <DropdownItems role="menubar" aria-label={ariaLabel}>
-          <Item role="none">
-            <MenubarItem.type
-              {...MenubarItem.props}
-              role="menuitem"
-              tabIndex="0"
-              aria-haspopup="true"
-              aria-expanded={this.state.isOpen}
-              onClick={this.togglePopup}
-            />
-            <PopupMenu
-              ref={popupMenu => (this.popupMenu = popupMenu)}
-              role="menu"
-              aria-label={name}
-              isOpen={this.state.isOpen}
-              yPosition="bottom"
-              horizontalOffset={horizontalOffset}
-              onBlur={event => this.handlePopupBlur(event)}
-            >
-              {this.renderItems(items)}
-            </PopupMenu>
-          </Item>
-        </DropdownItems>
-      </nav>
+      <DropdownItems ref={itemsNode => (this.itemsNode = itemsNode)} role="menu" aria-label={ariaLabel}>
+        <Item role="none">
+          <MenubarItem.type
+            {...MenubarItem.props}
+            role="menuitem"
+            tabIndex="0"
+            aria-haspopup="true"
+            aria-expanded={this.state.isOpen}
+            onClick={this.togglePopup}
+          />
+          <PopupMenu
+            ref={popupMenu => (this.popupMenu = popupMenu)}
+            role="menu"
+            aria-label={name}
+            isOpen={this.state.isOpen}
+            yPosition="bottom"
+            horizontalOffset={horizontalOffset}
+            onBlur={event => this.handlePopupBlur(event)}
+          >
+            {this.renderItems(items)}
+          </PopupMenu>
+        </Item>
+      </DropdownItems>
     );
   }
 }

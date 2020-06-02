@@ -1,93 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
-<nav
+<ForwardRef(styled.ul)
   aria-label="jest-auto-snapshots String Fixture"
-  role="navigation"
+  role="menu"
 >
-  <ForwardRef(styled.ul)
-    aria-label="jest-auto-snapshots String Fixture"
-    role="menubar"
+  <ForwardRef(styled.li)
+    role="none"
   >
-    <ForwardRef(styled.li)
-      role="none"
+    <NodeFixture
+      aria-expanded={false}
+      aria-haspopup="true"
+      onClick={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    />
+    <ForwardRef(styled.ul)
+      aria-label="jest-auto-snapshots String Fixture"
+      isOpen={false}
+      onBlur={[Function]}
+      role="menu"
+      yPosition="bottom"
     >
-      <NodeFixture
-        aria-expanded={false}
-        aria-haspopup="true"
-        onClick={[Function]}
-        role="menuitem"
-        tabIndex="0"
-      />
-      <ForwardRef(styled.ul)
-        aria-label="jest-auto-snapshots String Fixture"
-        isOpen={false}
-        onBlur={[Function]}
-        role="menu"
-        yPosition="bottom"
+      <ForwardRef(styled.li)
+        role="none"
       >
-        <ForwardRef(styled.li)
-          role="none"
-        >
-          <ButtonItem
-            index={0}
-            item={
-              Object {
-                "id": "jest-auto-snapshots String Fixture",
-                "title": "jest-auto-snapshots String Fixture",
-              }
+        <ButtonItem
+          index={0}
+          item={
+            Object {
+              "id": "jest-auto-snapshots String Fixture",
+              "title": "jest-auto-snapshots String Fixture",
             }
-            shouldFocus={false}
-          />
-        </ForwardRef(styled.li)>
-      </ForwardRef(styled.ul)>
-    </ForwardRef(styled.li)>
-  </ForwardRef(styled.ul)>
-</nav>
+          }
+          shouldFocus={false}
+        />
+      </ForwardRef(styled.li)>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.li)>
+</ForwardRef(styled.ul)>
 `;
 
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only required props 1`] = `
-<nav
+<ForwardRef(styled.ul)
   aria-label="jest-auto-snapshots String Fixture"
-  role="navigation"
+  role="menu"
 >
-  <ForwardRef(styled.ul)
-    aria-label="jest-auto-snapshots String Fixture"
-    role="menubar"
+  <ForwardRef(styled.li)
+    role="none"
   >
-    <ForwardRef(styled.li)
-      role="none"
+    <NodeFixture
+      aria-expanded={false}
+      aria-haspopup="true"
+      onClick={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    />
+    <ForwardRef(styled.ul)
+      aria-label="jest-auto-snapshots String Fixture"
+      isOpen={false}
+      onBlur={[Function]}
+      role="menu"
+      yPosition="bottom"
     >
-      <NodeFixture
-        aria-expanded={false}
-        aria-haspopup="true"
-        onClick={[Function]}
-        role="menuitem"
-        tabIndex="0"
-      />
-      <ForwardRef(styled.ul)
-        aria-label="jest-auto-snapshots String Fixture"
-        isOpen={false}
-        onBlur={[Function]}
-        role="menu"
-        yPosition="bottom"
+      <ForwardRef(styled.li)
+        role="none"
       >
-        <ForwardRef(styled.li)
-          role="none"
-        >
-          <ButtonItem
-            index={0}
-            item={
-              Object {
-                "id": "jest-auto-snapshots String Fixture",
-                "title": "jest-auto-snapshots String Fixture",
-              }
+        <ButtonItem
+          index={0}
+          item={
+            Object {
+              "id": "jest-auto-snapshots String Fixture",
+              "title": "jest-auto-snapshots String Fixture",
             }
-            shouldFocus={false}
-          />
-        </ForwardRef(styled.li)>
-      </ForwardRef(styled.ul)>
-    </ForwardRef(styled.li)>
-  </ForwardRef(styled.ul)>
-</nav>
+          }
+          shouldFocus={false}
+        />
+      </ForwardRef(styled.li)>
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.li)>
+</ForwardRef(styled.ul)>
 `;
