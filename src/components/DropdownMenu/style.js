@@ -18,11 +18,11 @@ export const DropdownItems = styled.ul`
   display: flex;
   height: 100%;
 
-  &[role='menubar'] > li {
+  &[role='menu'] > li {
     display: flex;
-    & a:focus {
+    & [role='menuitem']:focus {
       outline: 1px solid ${blue};
-      height: calc(100% - 2px);
+      outline-offset: -1px;
     }
   }
 `;
