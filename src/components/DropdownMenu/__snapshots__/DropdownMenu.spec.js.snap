@@ -15,29 +15,22 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
       role="menuitem"
       tabIndex="0"
     />
-    <ForwardRef(styled.ul)
+    <ForwardRef
       aria-label="jest-auto-snapshots String Fixture"
+      focusedItem={-1}
       isOpen={false}
+      items={
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
       onBlur={[Function]}
       role="menu"
       yPosition="bottom"
-    >
-      <ForwardRef(styled.li)
-        role="none"
-      >
-        <ButtonItem
-          ariaHaspopup={false}
-          index={0}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
-          }
-          shouldFocus={false}
-        />
-      </ForwardRef(styled.li)>
-    </ForwardRef(styled.ul)>
+    />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>
 `;
@@ -57,29 +50,22 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
       role="menuitem"
       tabIndex="0"
     />
-    <ForwardRef(styled.ul)
+    <ForwardRef
       aria-label="jest-auto-snapshots String Fixture"
+      focusedItem={-1}
       isOpen={false}
+      items={
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
       onBlur={[Function]}
       role="menu"
       yPosition="bottom"
-    >
-      <ForwardRef(styled.li)
-        role="none"
-      >
-        <ButtonItem
-          ariaHaspopup={false}
-          index={0}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
-          }
-          shouldFocus={false}
-        />
-      </ForwardRef(styled.li)>
-    </ForwardRef(styled.ul)>
+    />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>
 `;
@@ -99,29 +85,22 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
       role="menuitem"
       tabIndex="0"
     />
-    <ForwardRef(styled.ul)
+    <ForwardRef
       aria-label={null}
+      focusedItem={-1}
       isOpen={false}
+      items={
+        Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
       onBlur={[Function]}
       role="menu"
       yPosition="bottom"
-    >
-      <ForwardRef(styled.li)
-        role="none"
-      >
-        <ButtonItem
-          ariaHaspopup={false}
-          index={0}
-          item={
-            Object {
-              "id": "jest-auto-snapshots String Fixture",
-              "title": "jest-auto-snapshots String Fixture",
-            }
-          }
-          shouldFocus={false}
-        />
-      </ForwardRef(styled.li)>
-    </ForwardRef(styled.ul)>
+    />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>
 `;

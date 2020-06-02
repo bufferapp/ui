@@ -1,8 +1,14 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/role-supports-aria-props */
-/* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonItemStyled, ButtonLabel, ChevronLeftIcon } from '../style';
+import {
+  ButtonItemStyled,
+  ButtonLabel,
+  ChevronLeftIcon,
+  PopupMenuStyled,
+  Item,
+} from '../style';
 // import { ORG_SWITCHER } from '../../NavBar/NavBar';
 
 export default class ButtonItem extends React.Component {
@@ -30,11 +36,17 @@ export default class ButtonItem extends React.Component {
     });
 
     this.handleKeydown = this.handleKeydown.bind(this);
+    this.handleMouseover = this.handleMouseover.bind(this);
+    this.handleMouseout = this.handleMouseout.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
+    this.handlePopupBlur = this.handlePopupBlur.bind(this);
   }
 
   componentDidMount() {
     this.item.addEventListener('keydown', this.handleKeydown);
     this.item.addEventListener('click', this.handleClick);
+    // this.item.addEventListener('mouseover', this.handleMouseover);
+    // this.item.addEventListener('mouseout', this.handleMouseout);
   }
 
   componentDidUpdate(prevProps) {
@@ -46,6 +58,8 @@ export default class ButtonItem extends React.Component {
   componentWillUnmount() {
     this.item.removeEventListener('keydown', this.handleKeydown);
     this.item.removeEventListener('click', this.handleClick);
+    // this.item.removeEventListener('mouseover', this.handleMouseover);
+    // this.item.removeEventListener('mouseout', this.handleMouseout);
   }
 
   setFocusToItem() {
@@ -83,6 +97,18 @@ export default class ButtonItem extends React.Component {
     this.item.focus();
   };
 
+  handleMouseover = () => {
+    // console.info('HOVERED!', this.item);
+  };
+
+  handlePopupBlur = () => {};
+
+  handleMouseout = () => {};
+
+  handleFocus = () => {
+    // console.info('FOCUSED!', this.item);
+  };
+
   updateTabIndexNeeded(prevProps) {
     if (prevProps.shouldFocus !== this.props.shouldFocus) {
       this.setFocusToItem();
@@ -114,7 +140,7 @@ export default class ButtonItem extends React.Component {
 
   render() {
     const {
-      item: { title, onItemClick, icon },
+      item: { title, onItemClick, icon, subItems },
       ariaHaspopup,
     } = this.props;
     const hasIcon = ariaHaspopup || !!icon;
@@ -132,6 +158,8 @@ export default class ButtonItem extends React.Component {
         tabIndex={this.state.tabIndex}
         aria-expanded={this.state.ariaExpanded}
         aria-haspopup={ariaHaspopup}
+        onFocus={this.handleFocus}
+        onMouseOver={this.handleMouseover}
       >
         {ariaHaspopup && <ChevronLeftIcon />}
         {icon || null}

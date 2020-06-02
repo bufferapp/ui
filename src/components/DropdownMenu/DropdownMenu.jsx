@@ -1,15 +1,8 @@
 /* eslint-disable jsx-a11y/role-supports-aria-props */
 import React from 'react';
 import PropTypes from 'prop-types';
-
-import {
-  DropdownItems,
-  Item,
-  ItemDivider,
-  ItemDividerTitle,
-  PopupMenu,
-} from './style';
-import ButtonItem from './ButtonItem/ButtonItem';
+import { DropdownItems, Item } from './style';
+import PopupMenu from './PopupMenu/PopupMenuWithRef';
 
 export default class DropdownMenu extends React.Component {
   constructor(props) {
@@ -39,21 +32,15 @@ export default class DropdownMenu extends React.Component {
     });
 
     this.handleKeydown = this.handleKeydown.bind(this);
-    this.handleMouseover = this.handleMouseover.bind(this);
-    this.handleMouseout = this.handleMouseout.bind(this);
     this.handlePopupBlur = this.handlePopupBlur.bind(this);
   }
 
   componentDidMount() {
     this.itemsNode.addEventListener('keydown', this.handleKeydown);
-    this.itemsNode.addEventListener('mouseover', this.handleMouseover);
-    this.itemsNode.addEventListener('mouseout', this.handleMouseout);
   }
 
   componentWillUnmount() {
     this.itemsNode.removeEventListener('keydown', this.handleKeydown);
-    this.itemsNode.removeEventListener('mouseover', this.handleMouseover);
-    this.itemsNode.removeEventListener('mouseout', this.handleMouseout);
   }
 
   togglePopup = () => {
@@ -172,31 +159,6 @@ export default class DropdownMenu extends React.Component {
     event.preventDefault();
   };
 
-  handleMouseover = () => {};
-
-  handleMouseout = () => {};
-
-  hasSubMenu = item => item.subItems && item.subItems.length > 0;
-
-  renderItems = items =>
-    items.map((item, index) => [
-      item.hasDivider && (
-        <ItemDivider key={`${item.id}--divider`} role="none">
-          {item.dividerTitle && (
-            <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
-          )}
-        </ItemDivider>
-      ),
-      <Item key={`item-${index}`} role="none" type={item.type}>
-        <ButtonItem
-          index={index}
-          item={item}
-          shouldFocus={index === this.state.focusedItem}
-          ariaHaspopup={this.hasSubMenu(item)}
-        />
-      </Item>,
-    ]);
-
   render() {
     const {
       menubarItem,
@@ -205,6 +167,7 @@ export default class DropdownMenu extends React.Component {
       ariaLabelPopup,
       horizontalOffset,
     } = this.props;
+
     const MenubarItem = React.cloneElement(menubarItem);
 
     return (
@@ -221,14 +184,14 @@ export default class DropdownMenu extends React.Component {
           <PopupMenu
             ref={popupMenu => (this.popupMenu = popupMenu)}
             role="menu"
-            aria-label={ariaLabelPopup}
-            isOpen={this.state.isOpen}
             yPosition="bottom"
+            items={items}
+            aria-label={ariaLabelPopup}
             horizontalOffset={horizontalOffset}
+            isOpen={this.state.isOpen}
+            focusedItem={this.state.focusedItem}
             onBlur={event => this.handlePopupBlur(event)}
-          >
-            {this.renderItems(items)}
-          </PopupMenu>
+          />
         </Item>
       </DropdownItems>
     );

@@ -30,7 +30,7 @@ export const DropdownItems = styled.ul`
   }
 `;
 
-export const PopupMenu = styled.ul`
+export const PopupMenuStyled = styled.ul`
   right: ${props => (props.hasIconOnly ? '6px' : '0')};
   position: absolute;
   z-index: 1000;
