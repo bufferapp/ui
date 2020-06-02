@@ -26,6 +26,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
         role="none"
       >
         <ButtonItem
+          ariaHaspopup={false}
           index={0}
           item={
             Object {
@@ -67,6 +68,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
         role="none"
       >
         <ButtonItem
+          ariaHaspopup={false}
           index={0}
           item={
             Object {
@@ -108,6 +110,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
         role="none"
       >
         <ButtonItem
+          ariaHaspopup={false}
           index={0}
           item={
             Object {

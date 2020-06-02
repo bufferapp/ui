@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import ChevronUpIcon from '../Icon/Icons/ChevronUp';
 import {
   blue,
   gray,
@@ -10,6 +11,8 @@ import {
 } from '../style/colors';
 import { fontFamily } from '../style/fonts';
 import { ButtonBase, medium } from '../Button/style';
+
+import { ORG_SWITCHER } from '../NavBar/NavBar';
 
 export const DropdownItems = styled.ul`
   padding: 0;
@@ -69,15 +72,14 @@ export const Item = styled.li`
   color: ${props => (props.disabled ? grayLight : grayDarker)};
   cursor: pointer;
   display: flex;
-  /*overflow: hidden;*/
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
-  margin-left: 8px;
-  margin-right: 8px;
-  border-radius: 4px;
   background-color: ${props => (props.hovered ? grayLight : 'transparent')};
+  background-color: ${props => (props.type && props.type === ORG_SWITCHER ? grayLighter : 'transparent')};
   pointer-events: ${props => (props.disabled ? 'none' : 'auto')};
+  padding-left: 8px;
+  padding-right: 8px;
 `;
 
 export const ItemDivider = styled.li`
@@ -125,4 +127,8 @@ export const ButtonItemStyled = styled.button`
 export const ButtonLabel = styled.div`
   margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
   margin-right: ${props => (props.hasIcon ? '5px' : '0px')};
+`;
+
+export const ChevronLeftIcon = styled(ChevronUpIcon)`
+  transform: rotate(-90deg);
 `;

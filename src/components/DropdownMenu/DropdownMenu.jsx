@@ -176,6 +176,8 @@ export default class DropdownMenu extends React.Component {
 
   handleMouseout = () => {};
 
+  hasSubMenu = item => item.subItems && item.subItems.length > 0;
+
   renderItems = items =>
     items.map((item, index) => [
       item.hasDivider && (
@@ -185,11 +187,12 @@ export default class DropdownMenu extends React.Component {
           )}
         </ItemDivider>
       ),
-      <Item key={`item-${index}`} role="none">
+      <Item key={`item-${index}`} role="none" type={item.type}>
         <ButtonItem
           index={index}
           item={item}
           shouldFocus={index === this.state.focusedItem}
+          ariaHaspopup={this.hasSubMenu(item)}
         />
       </Item>,
     ]);

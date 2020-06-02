@@ -2,7 +2,8 @@
 /* eslint-disable no-console */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonItemStyled, ButtonLabel } from '../style';
+import { ButtonItemStyled, ButtonLabel, ChevronLeftIcon } from '../style';
+// import { ORG_SWITCHER } from '../../NavBar/NavBar';
 
 export default class ButtonItem extends React.Component {
   constructor(props) {
@@ -114,7 +115,9 @@ export default class ButtonItem extends React.Component {
   render() {
     const {
       item: { title, onItemClick, icon },
+      ariaHaspopup,
     } = this.props;
+    const hasIcon = ariaHaspopup || !!icon;
     return (
       <ButtonItemStyled
         ref={item => (this.item = item)}
@@ -128,9 +131,11 @@ export default class ButtonItem extends React.Component {
         }}
         tabIndex={this.state.tabIndex}
         aria-expanded={this.state.ariaExpanded}
+        aria-haspopup={ariaHaspopup}
       >
+        {ariaHaspopup && <ChevronLeftIcon />}
         {icon || null}
-        <ButtonLabel hasIcon={!!icon}>{title}</ButtonLabel>
+        <ButtonLabel hasIcon={hasIcon}>{title}</ButtonLabel>
       </ButtonItemStyled>
     );
   }
@@ -138,6 +143,7 @@ export default class ButtonItem extends React.Component {
 
 ButtonItem.propTypes = {
   shouldFocus: PropTypes.bool,
+  ariaHaspopup: PropTypes.bool,
   index: PropTypes.number.isRequired,
   item: PropTypes.shape({
     id: PropTypes.string,
@@ -148,4 +154,5 @@ ButtonItem.propTypes = {
 
 ButtonItem.defaultProps = {
   shouldFocus: false,
+  ariaHaspopup: false,
 };

@@ -55,6 +55,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -153,6 +160,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       horizontalOffset="-16px"
       items={
         Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
           Object {
             "icon": <PersonIcon
               color="#B8B8B8"
@@ -263,6 +277,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       items={
         Array [
           Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -368,6 +389,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       items={
         Array [
           Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -471,6 +499,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       horizontalOffset="-16px"
       items={
         Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
           Object {
             "icon": <PersonIcon
               color="#B8B8B8"
@@ -580,6 +615,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       horizontalOffset="-16px"
       items={
         Array [
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
           Object {
             "icon": <PersonIcon
               color="#B8B8B8"

@@ -46,6 +46,8 @@ export function getAccountUrl(baseUrl = '', user) {
   )}&username=${encodeURI(user.name)}`;
 }
 
+export const ORG_SWITCHER = 'org_switcher';
+
 const NavBarStyled = styled.nav`
   background: #fff;
   border-bottom: 1px solid ${gray};
@@ -133,6 +135,20 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
   return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
 }
 
+export function appendOrgSwitcher(orgSwitcher) {
+  if (!orgSwitcher) {
+    return [];
+  }
+  
+  orgSwitcher.menuItems.map(item => {
+    item.type = ORG_SWITCHER;
+    return item;
+  })
+  
+  console.info(orgSwitcher.menuItems);
+  return orgSwitcher.menuItems;
+}
+
 /**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
@@ -153,6 +169,7 @@ class NavBar extends React.Component {
       helpMenuItems,
       onLogout,
       displaySkipLink,
+      orgSwitcher,
     } = this.props;
     return (
       <NavBarStyled aria-label="Main menu">
@@ -196,6 +213,7 @@ class NavBar extends React.Component {
               />
             )}
             items={[
+              ...appendOrgSwitcher(orgSwitcher),
               appendMenuItem(user.ignoreMenuItems, {
                 id: 'account',
                 title: 'Account',
@@ -261,6 +279,19 @@ NavBar.propTypes = {
 
   onLogout: PropTypes.func,
   displaySkipLink: PropTypes.bool,
+
+  /** Optional menu for selecting the user's organization */
+  orgSwitcher: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        selected: PropTypes.bool.isRequired,
+        onItemClick: PropTypes.func,
+      })
+    ).isRequired,
+  }),
 };
 
 NavBar.defaultProps = {
@@ -269,6 +300,7 @@ NavBar.defaultProps = {
   helpMenuItems: null,
   onLogout: undefined,
   displaySkipLink: false,
+  orgSwitcher: undefined,
 };
 
 export default NavBar;

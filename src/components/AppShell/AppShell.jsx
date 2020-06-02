@@ -25,6 +25,7 @@ const AppShell = ({
   bannerOptions,
   onLogout,
   displaySkipLink,
+  orgSwitcher,
 }) => {
 
   const enabledProducts = ['publish', 'analyze'];
@@ -42,6 +43,7 @@ const AppShell = ({
         helpMenuItems={helpMenuItems}
         onLogout={onLogout}
         displaySkipLink={displaySkipLink}
+        orgSwitcher={orgSwitcher}
       />
       {bannerOptions && (
         <Banner
