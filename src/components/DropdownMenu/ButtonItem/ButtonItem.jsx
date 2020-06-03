@@ -2,13 +2,7 @@
 /* eslint-disable jsx-a11y/role-supports-aria-props */
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-  ButtonItemStyled,
-  ButtonLabel,
-  ChevronLeftIcon,
-  PopupMenuStyled,
-  Item,
-} from '../style';
+import { ButtonItemStyled, ButtonLabel, ChevronLeftIcon } from '../style';
 // import { ORG_SWITCHER } from '../../NavBar/NavBar';
 
 export default class ButtonItem extends React.Component {
@@ -176,7 +170,6 @@ ButtonItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
-    icon: PropTypes.string,
   }).isRequired,
 };
 

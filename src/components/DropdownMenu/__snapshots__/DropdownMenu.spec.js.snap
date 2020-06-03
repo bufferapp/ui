@@ -3,7 +3,7 @@
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.ul)
   aria-label="jest-auto-snapshots String Fixture"
-  role="menu"
+  role="menubar"
 >
   <ForwardRef(styled.li)
     role="none"
@@ -29,7 +29,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
       }
       onBlur={[Function]}
       role="menu"
-      yPosition="bottom"
+      xPosition="right"
     />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>
@@ -38,7 +38,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.ul)
   aria-label="jest-auto-snapshots String Fixture"
-  role="menu"
+  role="menubar"
 >
   <ForwardRef(styled.li)
     role="none"
@@ -64,7 +64,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
       }
       onBlur={[Function]}
       role="menu"
-      yPosition="bottom"
+      xPosition="right"
     />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>
@@ -73,7 +73,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.ul)
   aria-label="jest-auto-snapshots String Fixture"
-  role="menu"
+  role="menubar"
 >
   <ForwardRef(styled.li)
     role="none"
@@ -99,7 +99,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
       }
       onBlur={[Function]}
       role="menu"
-      yPosition="bottom"
+      xPosition="right"
     />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>

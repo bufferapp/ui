@@ -171,7 +171,11 @@ export default class DropdownMenu extends React.Component {
     const MenubarItem = React.cloneElement(menubarItem);
 
     return (
-      <DropdownItems ref={itemsNode => (this.itemsNode = itemsNode)} role="menu" aria-label={ariaLabel}>
+      <DropdownItems
+        ref={itemsNode => (this.itemsNode = itemsNode)}
+        role="menubar"
+        aria-label={ariaLabel}
+      >
         <Item role="none">
           <MenubarItem.type
             {...MenubarItem.props}
@@ -184,7 +188,7 @@ export default class DropdownMenu extends React.Component {
           <PopupMenu
             ref={popupMenu => (this.popupMenu = popupMenu)}
             role="menu"
-            yPosition="bottom"
+            xPosition="right"
             items={items}
             aria-label={ariaLabelPopup}
             horizontalOffset={horizontalOffset}

@@ -1,39 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import {
-  Item,
-  ItemDivider,
-  ItemDividerTitle,
-  PopupMenuStyled,
-} from '../style';
+import { Item, ItemDividerTitle } from '../style';
+import { PopupMenuStyled, ItemDivider } from './style';
 import ButtonItem from '../ButtonItem/ButtonItem';
 
 export default class PopupMenu extends React.Component {
-
   hasSubMenu = item => item.subItems && item.subItems.length > 0;
 
   renderItems = items => {
     const { focusedItem } = this.props;
 
-    return items.map((item, index) => [
-      item.hasDivider && (
-        <ItemDivider key={`${item.id}--divider`} role="none">
-          {item.dividerTitle && (
-            <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
-          )}
-        </ItemDivider>
-      ),
-      <Item key={`item-${index}`} role="none" type={item.type}>
-        <ButtonItem
-          index={index}
-          item={item}
-          shouldFocus={index === focusedItem}
-          ariaHaspopup={this.hasSubMenu(item)}
-        />
-      </Item>,
-    ]);
-  }
+    return items.map((item, index) => {
+      const hasSubMenu = this.hasSubMenu(item);
+
+      return [
+        item.hasDivider && (
+          <ItemDivider key={`${item.id}--divider`} role="none">
+            {item.dividerTitle && (
+              <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
+            )}
+          </ItemDivider>
+        ),
+        <Item key={`item-${index}`} role="none" type={item.type}>
+          <ButtonItem
+            index={index}
+            item={item}
+            shouldFocus={index === focusedItem}
+            ariaHaspopup={hasSubMenu}
+          />
+          {hasSubMenu && `Popup`}
+        </Item>,
+      ];
+    });
+  };
 
   render() {
     const {
@@ -43,6 +43,7 @@ export default class PopupMenu extends React.Component {
       items,
       isOpen,
       onBlur,
+      xPosition,
     } = this.props;
 
     return (
@@ -51,13 +52,13 @@ export default class PopupMenu extends React.Component {
         role="menu"
         aria-label={ariaLabelPopup}
         isOpen={isOpen}
-        yPosition="bottom"
+        xPosition={xPosition}
         horizontalOffset={horizontalOffset}
         onBlur={onBlur}
       >
         {this.renderItems(items)}
       </PopupMenuStyled>
-    )
+    );
   }
 }
 
@@ -79,13 +80,15 @@ PopupMenu.propTypes = {
 
   focusedItem: PropTypes.number,
 
-  horizontalOffset: PropTypes.number,
+  horizontalOffset: PropTypes.string,
+
+  xPosition: PropTypes.string,
 
   /**
    * this consumed by the default export that is wrapping the component into a ForwardRef
    * @ignore
    */
-  forwardedRef: PropTypes.shape({ current: PropTypes.any }),
+  forwardedRef: PropTypes.func,
 };
 
 PopupMenu.defaultProps = {
@@ -93,4 +96,5 @@ PopupMenu.defaultProps = {
   horizontalOffset: null,
   forwardedRef: undefined,
   focusedItem: -1,
+  xPosition: 'left',
 };
