@@ -728,7 +728,7 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only requir
           "enabled": false,
           "id": "engage",
           "isNew": true,
-          "visible": true,
+          "visible": false,
         },
       ]
     }
