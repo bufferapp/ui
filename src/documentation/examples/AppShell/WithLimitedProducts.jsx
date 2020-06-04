@@ -43,6 +43,7 @@ export default function ExampleAppShell() {
   return (
     <AppShell
       featureFlips={[]}
+      enabledProducts={['publish', 'analyze']}
       activeProduct="publish"
       user={{
         name: 'Hamish Macpherson',
