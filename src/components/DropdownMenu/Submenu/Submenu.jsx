@@ -4,32 +4,19 @@ import PropTypes from 'prop-types';
 import { PopupMenuStyled } from '../PopupMenu/style';
 import ButtonItem from '../ButtonItem/ButtonItem';
 import { Item } from '../style';
+import { keyCode } from '../keyCode';
 
 export default class Submenu extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      focusedItem: '-1',
+      focusedItem: -1,
     };
 
     this.firstItem = props.items.length > 0 ? 0 : -1;
     this.lastItem = props.items.length - 1 || -1;
-
-    this.keyCode = Object.freeze({
-      TAB: 9,
-      RETURN: 13,
-      ESC: 27,
-      SPACE: 32,
-      PAGEUP: 33,
-      PAGEDOWN: 34,
-      END: 35,
-      HOME: 36,
-      LEFT: 37,
-      UP: 38,
-      RIGHT: 39,
-      DOWN: 40,
-    });
+    this.keyCode = keyCode;
 
     this.handleKeydown = this.handleKeydown.bind(this);
   }
@@ -84,21 +71,13 @@ export default class Submenu extends React.Component {
 
   handleKeydown = event => {
     let flag = false;
+
     switch (event.keyCode) {
-      case this.keyCode.SPACE:
-      case this.keyCode.RETURN:
-        /*
-        if (!this.isPopupOpen()) {
-          this.openPopupAndFocusFirstItem();
-          flag = true;
-        }
-        */
-        break;
       case this.keyCode.DOWN:
         if (this.isPopupOpen()) {
           this.setFocusToNextItem();
+          flag = true;
         }
-        flag = true;
         break;
       case this.keyCode.UP:
         if (this.isPopupOpen()) {
@@ -110,7 +89,6 @@ export default class Submenu extends React.Component {
         if (this.props.closeSubMenu) {
           this.props.closeSubMenu();
         }
-        // this.menu.setFocusToNextItem(this);
         flag = true;
         break;
       case this.keyCode.ESC:
@@ -132,7 +110,6 @@ export default class Submenu extends React.Component {
   updateIfNeeded(prevProps) {
     const { isOpen } = this.props;
     if (prevProps.isOpen !== isOpen) {
-      console.info('isOpen!!', this.submenu);
       this.submenu.focus();
       this.setFocusToFirstItem();
     }
@@ -140,17 +117,20 @@ export default class Submenu extends React.Component {
 
   renderItems = items => {
     const { focusedItem } = this.state;
-
-    return items.map((item, index) => (
-      <Item key={`submenu-item-${index}`} role="none" type={item.type}>
-        <ButtonItem
-          index={index}
-          item={item}
-          shouldFocus={index === focusedItem}
-          ariaHaspopup={false}
-        />
-      </Item>
-    ));
+    
+    return items.map((item, index) => {
+      const shouldFocus = index === focusedItem && this.isPopupOpen();
+      return (
+        <Item key={`submenu-item-${index}`} role="none" type={item.type}>
+          <ButtonItem
+            index={index}
+            item={item}
+            shouldFocus={shouldFocus}
+            ariaHaspopup={false}
+          />
+        </Item>
+      );
+    })
   };
 
   render() {
@@ -181,19 +161,25 @@ export default class Submenu extends React.Component {
 }
 
 Submenu.propTypes = {
+  /** Boolean to check if the Submenu is open */
   isOpen: PropTypes.bool.isRequired,
 
+  /** Additional horizontal space for popup alignment */
+  horizontalOffset: PropTypes.string,
+
+  /** Horizontal alignment to display popup */
+  xPosition: PropTypes.string,
+
+  /** Function that handles onBlur event for popup */
   onBlur: PropTypes.func.isRequired,
 
+  /** Function that handles closing the popup */
   closeSubMenu: PropTypes.func.isRequired,
 
   /** Aria label for popup menu, it should preferibly be the same as the menubarItem name */
   ariaLabelPopup: PropTypes.string,
 
-  xPosition: PropTypes.string,
-
-  horizontalOffset: PropTypes.string,
-
+  /** Items list to display in the menu */
   items: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,

@@ -2,7 +2,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { DropdownItems, Item } from './style';
-import PopupMenu from './PopupMenu/PopupMenuWithRef';
+import PopupMenu from './PopupMenu/PopupMenu';
+import { keyCode } from './keyCode';
 
 export default class DropdownMenu extends React.Component {
   constructor(props) {
@@ -10,26 +11,9 @@ export default class DropdownMenu extends React.Component {
 
     this.state = {
       isOpen: false,
-      focusedItem: -1,
     };
 
-    this.firstItem = props.items.length > 0 ? 0 : -1;
-    this.lastItem = props.items.length - 1 || -1;
-
-    this.keyCode = Object.freeze({
-      TAB: 9,
-      RETURN: 13,
-      ESC: 27,
-      SPACE: 32,
-      PAGEUP: 33,
-      PAGEDOWN: 34,
-      END: 35,
-      HOME: 36,
-      LEFT: 37,
-      UP: 38,
-      RIGHT: 39,
-      DOWN: 40,
-    });
+    this.keyCode = keyCode;
 
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handlePopupBlur = this.handlePopupBlur.bind(this);
@@ -48,56 +32,17 @@ export default class DropdownMenu extends React.Component {
       this.closePopup();
     } else {
       this.openPopup();
-      this.setFocusToFirstItem();
     }
   };
 
   isPopupOpen = () => this.state.isOpen;
 
   openPopup = () => {
-    this.popupMenu.focus();
     this.setState({ isOpen: true });
   };
 
   closePopup = () => {
-    this.setState({ isOpen: false, focusedItem: -1 });
-  };
-
-  setFocusToItem = index => {
-    this.setState({ focusedItem: index });
-  };
-
-  setFocusToFirstItem = () => {
-    this.setFocusToItem(0);
-  };
-
-  openPopupAndFocusFirstItem = () => {
-    this.openPopup();
-    this.setFocusToFirstItem();
-  };
-
-  isFirstItem = index => index === this.firstItem;
-
-  isLastItem = index => index === this.lastItem;
-
-  setFocusToNextItem = () => {
-    const { focusedItem } = this.state;
-
-    const newIndex = this.isLastItem(focusedItem)
-      ? this.firstItem
-      : focusedItem + 1;
-
-    this.setFocusToItem(newIndex);
-  };
-
-  setFocusToPreviousItem = () => {
-    const { focusedItem } = this.state;
-
-    const newIndex = this.isFirstItem(focusedItem)
-      ? this.lastItem
-      : focusedItem - 1;
-
-    this.setFocusToItem(newIndex);
+    this.setState({ isOpen: false });
   };
 
   handleKeydown = event => {
@@ -105,38 +50,17 @@ export default class DropdownMenu extends React.Component {
     switch (event.keyCode) {
       case this.keyCode.SPACE:
       case this.keyCode.RETURN:
-        if (!this.isPopupOpen()) {
-          this.openPopupAndFocusFirstItem();
-          flag = true;
-        }
-        break;
       case this.keyCode.DOWN:
         if (!this.isPopupOpen()) {
-          this.openPopupAndFocusFirstItem();
-        } else {
-          this.setFocusToNextItem();
+          this.openPopup();
+          flag = true;
         }
-        flag = true;
-        break;
-      case this.keyCode.UP:
-        this.setFocusToPreviousItem();
-        flag = true;
-        break;
-      case this.keyCode.LEFT:
-        // this.menu.setFocusToPreviousItem(this);
-        flag = true;
-        break;
-
-      case this.keyCode.RIGHT:
-        // this.menu.setFocusToNextItem(this);
-        flag = true;
         break;
       case this.keyCode.ESC:
       case this.keyCode.TAB:
         this.closePopup();
         break;
       default:
-        console.info('DEFAULT');
         break;
     }
 
@@ -148,7 +72,6 @@ export default class DropdownMenu extends React.Component {
 
   handlePopupBlur = event => {
     const outsideOfPopup = !event.currentTarget.contains(event.relatedTarget);
-
     setTimeout(() => {
       if (this.isPopupOpen() && outsideOfPopup) {
         this.closePopup();
@@ -186,14 +109,13 @@ export default class DropdownMenu extends React.Component {
             onClick={this.togglePopup}
           />
           <PopupMenu
-            ref={popupMenu => (this.popupMenu = popupMenu)}
             role="menu"
             xPosition="right"
             items={items}
             aria-label={ariaLabelPopup}
             horizontalOffset={horizontalOffset}
             isOpen={this.state.isOpen}
-            focusedItem={this.state.focusedItem}
+            closePopup={this.closePopup}
             onBlur={event => this.handlePopupBlur(event)}
           />
         </Item>

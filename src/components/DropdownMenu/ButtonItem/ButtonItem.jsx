@@ -9,29 +9,9 @@ export default class ButtonItem extends React.Component {
     this.state = {
       tabIndex: '-1',
     };
-
-    this.keyCode = Object.freeze({
-      TAB: 9,
-      RETURN: 13,
-      ESC: 27,
-      SPACE: 32,
-      PAGEUP: 33,
-      PAGEDOWN: 34,
-      END: 35,
-      HOME: 36,
-      LEFT: 37,
-      UP: 38,
-      RIGHT: 39,
-      DOWN: 40,
-    });
-
-    this.handleKeydown = this.handleKeydown.bind(this);
-    this.handleMouseover = this.handleMouseover.bind(this);
-    this.handleFocus = this.handleFocus.bind(this);
   }
 
   componentDidMount() {
-    this.item.addEventListener('keydown', this.handleKeydown);
     this.item.addEventListener('click', this.handleClick);
   }
 
@@ -42,7 +22,6 @@ export default class ButtonItem extends React.Component {
   }
 
   componentWillUnmount() {
-    this.item.removeEventListener('keydown', this.handleKeydown);
     this.item.removeEventListener('click', this.handleClick);
   }
 
@@ -56,25 +35,9 @@ export default class ButtonItem extends React.Component {
     this.setState({ tabIndex: newTabIndex });
   }
 
-  handleKeydown = event => {
-    switch (event.keyCode) {
-      case this.keyCode.LEFT: {
-        const { onClickLeft } = this.props;
-        if (onClickLeft) onClickLeft();
-        break;
-      }
-      default:
-        break;
-    }
-  };
-
   handleClick = () => {
     this.item.focus();
   };
-
-  handleMouseover = () => {};
-
-  handleFocus = () => {};
 
   updateTabIndexIfNeeded(prevProps) {
     if (prevProps.shouldFocus !== this.props.shouldFocus) {
@@ -102,8 +65,6 @@ export default class ButtonItem extends React.Component {
         }}
         tabIndex={this.state.tabIndex}
         aria-haspopup={ariaHaspopup}
-        onFocus={this.handleFocus}
-        onMouseOver={this.handleMouseover}
       >
         {ariaHaspopup && <ChevronLeftIcon />}
         {icon || null}
@@ -114,7 +75,6 @@ export default class ButtonItem extends React.Component {
 }
 
 ButtonItem.propTypes = {
-  onClickLeft: PropTypes.func,
   shouldFocus: PropTypes.bool,
   ariaHaspopup: PropTypes.bool,
   index: PropTypes.number.isRequired,
@@ -127,5 +87,4 @@ ButtonItem.propTypes = {
 ButtonItem.defaultProps = {
   shouldFocus: false,
   ariaHaspopup: false,
-  onClickLeft: () => {},
 };

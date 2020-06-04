@@ -15,9 +15,11 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
       role="menuitem"
       tabIndex="0"
     />
-    <ForwardRef
+    <PopupMenu
       aria-label="jest-auto-snapshots String Fixture"
-      focusedItem={-1}
+      ariaLabelPopup={null}
+      closePopup={[Function]}
+      horizontalOffset={null}
       isOpen={false}
       items={
         Array [
@@ -50,9 +52,11 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
       role="menuitem"
       tabIndex="0"
     />
-    <ForwardRef
+    <PopupMenu
       aria-label="jest-auto-snapshots String Fixture"
-      focusedItem={-1}
+      ariaLabelPopup={null}
+      closePopup={[Function]}
+      horizontalOffset={null}
       isOpen={false}
       items={
         Array [
@@ -85,9 +89,11 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
       role="menuitem"
       tabIndex="0"
     />
-    <ForwardRef
+    <PopupMenu
       aria-label={null}
-      focusedItem={-1}
+      ariaLabelPopup={null}
+      closePopup={[Function]}
+      horizontalOffset={null}
       isOpen={false}
       items={
         Array [
