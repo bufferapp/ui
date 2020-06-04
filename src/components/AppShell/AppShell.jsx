@@ -12,8 +12,6 @@ import {
   ContentWrapper,
 } from './style';
 
-const ENABLE_PUBLISH_URL = 'https://buffer.com/pricing/publish';
-const ENABLE_ANALYZE_URL = 'https://account.buffer.com/analyze';
 const ENABLE_ENGAGE_URL = 'https://login.buffer.com/signup?product=engage';
 
 /**
@@ -38,14 +36,14 @@ const AppShell = ({
       isNew: false,
       visible: true,
       enabled: true,
-      enableURL: ENABLE_PUBLISH_URL
+      enableURL: null
     },
     {
       id: 'analyze',
       isNew: false,
       visible: true,
       enabled: true,
-      enableURL: ENABLE_ANALYZE_URL
+      enableURL: null
     },
     {
       id: 'engage',
