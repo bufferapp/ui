@@ -5,7 +5,9 @@ import styled from 'styled-components';
 import {
   grayLighter,
   grayDark,
-  blueDarker
+  blueDarker,
+  green,
+  white
 } from '../../style/colors';
 
 import {
@@ -13,7 +15,7 @@ import {
   fontFamily
 } from '../../style/fonts';
 
-const StlyedNavBarProduct = styled.nav`
+const StlyedNavBarProducts = styled.nav`
   display: flex;
   position: relative;
   z-index: 2;
@@ -46,18 +48,21 @@ const ProductText = styled.span`
   text-transform: capitalize;
 `;
 
+const NewLabel = styled.span`
+  color: ${white};
+  font-family: ${fontFamily};
+  font-weight: ${fontWeightMedium};
+  background: ${green};
+  border-radius: 4px;
+  padding: 2px 8px;
+  margin-left: 8px;
+`;
+
 // Notee: Custom SVGs to support multi-color product icons (instead of using icon component)
 const PublishLogo = () => (
   <svg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'>
     <path fillRule='evenodd' clipRule='evenodd' d='M6.38324 6.40009L10.3798 10.407V16.0001L0.771271 6.40009H6.38324Z' fill='#132062' />
     <path fillRule='evenodd' clipRule='evenodd' d='M16.9979 13.5234V0H3.47618L16.9979 13.5234Z' fill='#6B81FF' />
-  </svg>
-);
-
-const ReplyLogo = () => (
-  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M16 9.03754H8.9274V16H16V9.03754Z" fill="#132062" />
-    <path fillRule="evenodd" clipRule="evenodd" d="M0 0H13.8055V6.94855H6.83673V13.911L0 13.925V0Z" fill="#FF9B6B" />
   </svg>
 );
 
@@ -68,44 +73,64 @@ const AnalyzeLogo = () => (
   </svg>
 );
 
+const EngageLogo = () => (
+  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 9.03754H8.9274V16H16V9.03754Z" fill="#132062" />
+    <path fillRule="evenodd" clipRule="evenodd" d="M0 0H13.8055V6.94855H6.83673V13.911L0 13.925V0Z" fill="#87C221" />
+  </svg>
+);
+
 const getLogo = (product) => {
   switch (product) {
-    case 'reply':
-      return <ReplyLogo />;
     case 'analyze':
       return <AnalyzeLogo />;
     case 'publish':
       return <PublishLogo />;
+    case 'engage':
+      return <EngageLogo />;
     default:
       return null;
   }
 }
 
-const NavBarProduct = ({ products, activeProduct }) => (
-  <StlyedNavBarProduct>
-    {products.map(product => (
-      <ProductLink
-        active={activeProduct === product}
-        href={`https://${product}.buffer.com`}
-        key={product}
-      >
-        {getLogo(product)}
-        <ProductText>
-          {product}
-        </ProductText>
-      </ProductLink>
-    ))}
-  </StlyedNavBarProduct>
-);
+const NavBarProducts = ({ products, activeProduct }) => {
+  const visibleProducts = products.filter(product => product.visible);
 
-NavBarProduct.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'analyze', 'reply'])),
-  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
+  return (
+    <StlyedNavBarProducts>
+      {visibleProducts.map(({ id, enabled, enableURL, isNew }) => (
+        <ProductLink
+          active={activeProduct === id}
+          href={enabled ? `https://${id}.buffer.com` : enableURL}
+          key={id}
+          id={`product-${id}`}
+        >
+          {getLogo(id)}
+          <ProductText>
+            {id}
+          </ProductText>
+          {isNew && <NewLabel>New!</NewLabel>}
+        </ProductLink>
+      ))}
+    </StlyedNavBarProducts>
+  );
+}
+
+NavBarProducts.propTypes = {
+  products: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    isNew: PropTypes.bool,
+    visible: PropTypes.bool,
+    enabled: PropTypes.bool,
+    enableURL: PropTypes.string
+  })),
+
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
 };
 
-NavBarProduct.defaultProps = {
+NavBarProducts.defaultProps = {
   products: [],
   activeProduct: undefined,
 };
 
-export default NavBarProduct;
+export default NavBarProducts;
