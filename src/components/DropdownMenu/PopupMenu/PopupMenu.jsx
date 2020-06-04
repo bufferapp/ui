@@ -222,7 +222,7 @@ export default class PopupMenu extends React.Component {
           </ItemDivider>
         ),
         item.header && (
-          <Item role="none" type="header">
+          <Item key={`item-header-${index}`} role="none" type="header">
             {item.header}
           </Item>
         ),
