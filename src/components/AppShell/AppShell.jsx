@@ -140,7 +140,7 @@ AppShell.propTypes = {
 };
 
 AppShell.defaultProps = {
-  featureFlips: ['engageAccess'],
+  featureFlips: [],
   sidebar: null,
   enabledProducts: [],
   activeProduct: undefined,
