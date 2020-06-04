@@ -30,7 +30,6 @@ const helpMenuItems = [
 export default function ExampleAppShell() {
   return (
     <AppShell
-      enabledProducts={['publish', 'analyze', 'engage']}
       activeProduct="publish"
       user={{
         name: 'Hamish Macpherson',

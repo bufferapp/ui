@@ -42,8 +42,7 @@ const helpMenuItems = [
 export default function ExampleAppShell() {
   return (
     <AppShell
-      enabledProducts={['publish', 'analyze', 'engage']}
-      activeProduct="engage"
+      activeProduct="publish"
       user={{
         name: 'Hamish Macpherson',
         email: 'hamstu@gmail.com',
