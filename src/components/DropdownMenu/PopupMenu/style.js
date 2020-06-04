@@ -13,16 +13,25 @@ export const PopupMenuStyled = styled.ul`
   max-width: 200px;
   width: 200px;
   background-color: ${white};
-  top: 100%;
+  top: ${props => (props.isSubmenu ? '-1px' : '100%')};
   bottom: initial;
-  left: ${props => (props.xPosition === 'left' ? 0 : '')};
-  right: ${props => (props.xPosition === 'right' ? 0 : '')};
   margin-bottom: 0;
-  margin-top: 8px;
+  margin-top: ${props => (props.isSubmenu ? '' : '8px')};
   padding: 8px;
   transform: translateX(
     ${props => (props.horizontalOffset ? props.horizontalOffset : '0')}
   );
+  right: ${props => {
+    const { xPosition, isSubmenu } = props;
+    if (xPosition === 'left' && isSubmenu) return '100%';
+    if (xPosition === 'right' && !isSubmenu) return 0;
+    return '';
+  }};
+  left: ${props => {
+    const { xPosition, isSubmenu } = props;
+    if (xPosition === 'left' && !isSubmenu) return 0;
+    return '';
+  }};
 
   &[role='menu'] > li {
     & button:focus {

@@ -29,6 +29,7 @@ export const DropdownItems = styled.ul`
 `;
 
 export const Item = styled.li`
+  position: ${props => (props.type === ORG_SWITCHER ? 'relative' : '')};
   min-height: 32px;
   align-items: center;
   color: ${props => (props.disabled ? grayLight : grayDarker)};

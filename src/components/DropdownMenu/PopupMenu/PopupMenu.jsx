@@ -1,12 +1,54 @@
+/* eslint-disable react/no-unused-state */
 import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Item, ItemDividerTitle } from '../style';
 import { PopupMenuStyled, ItemDivider } from './style';
 import ButtonItem from '../ButtonItem/ButtonItem';
+import Submenu from '../Submenu/SubmenuWithRef';
 
 export default class PopupMenu extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isOpen: false,
+      focusedItemSubmenu: -1,
+      openedSubmenu: -1,
+    };
+  }
+
+  openSubMenu = index => {
+    this.setState({ isOpen: true, openedSubmenu: index });
+  };
+
+  closeSubMenu = () => {
+    this.setState({ isOpen: false, openedSubmenu: -1 });
+  };
+
   hasSubMenu = item => item.subItems && item.subItems.length > 0;
+
+  renderSubMenu = (item, index) => {
+    if (!this.hasSubMenu(item)) return null;
+
+    const { subItems } = item;
+    const isOpen = index === this.state.openedSubmenu;
+
+    return (
+      <Submenu
+        ref={ref => (this[`submenu_${index}_ref`] = ref)}
+        aria-label="Submenu"
+        xPosition="left"
+        horizontalOffset="-17px"
+        isOpen={this.state.isOpen && isOpen}
+        closeSubMenu={this.closeSubMenu}
+        onBlur={() => {
+          console.info('On blur');
+        }}
+        items={subItems}
+      />
+    );
+  };
 
   renderItems = items => {
     const { focusedItem } = this.props;
@@ -22,14 +64,22 @@ export default class PopupMenu extends React.Component {
             )}
           </ItemDivider>
         ),
-        <Item key={`item-${index}`} role="none" type={item.type}>
+        <Item
+          ref={ref => (this[`item_${index}_ref`] = ref)}
+          key={`item-${index}`}
+          role="none"
+          type={item.type}
+        >
           <ButtonItem
             index={index}
             item={item}
             shouldFocus={index === focusedItem}
             ariaHaspopup={hasSubMenu}
+            onClickLeft={() => {
+              if (hasSubMenu) this.openSubMenu(index);
+            }}
           />
-          {hasSubMenu && `Popup`}
+          {hasSubMenu && this.renderSubMenu(item, index)}
         </Item>,
       ];
     });

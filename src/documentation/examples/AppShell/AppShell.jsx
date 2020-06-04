@@ -48,24 +48,25 @@ const orgSwitcher = {
         {
           id: '1',
           title: '@lunnaflyers',
-          network: 'instagram'
+          network: 'instagram',
+          onItemClick: () => console.info('lunnaflyers'),
         },
         {
           id: '2',
           title: '@lunnasneakers',
-          network: 'twitter'
+          network: 'twitter',
         },
         {
           id: '3',
           title: 'Lunna Sneakers US',
-          network: 'facebook'
+          network: 'facebook',
         },
         {
           id: '4',
           title: 'Lunna Sneakers',
-          network: 'pinterest'
-        }
-      ]
+          network: 'pinterest',
+        },
+      ],
     },
     {
       id: '2',
@@ -76,16 +77,16 @@ const orgSwitcher = {
         {
           id: '1',
           title: '@bufferinsta',
-          network: 'instagram'
+          network: 'instagram',
         },
         {
           id: '2',
           title: '@buffer',
-          network: 'twitter'
+          network: 'twitter',
         },
-      ]
+      ],
     },
-  ]
+  ],
 };
 
 /** AppShell Example */

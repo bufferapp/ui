@@ -1,9 +1,6 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable jsx-a11y/role-supports-aria-props */
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonItemStyled, ButtonLabel, ChevronLeftIcon } from '../style';
-// import { ORG_SWITCHER } from '../../NavBar/NavBar';
 
 export default class ButtonItem extends React.Component {
   constructor(props) {
@@ -11,7 +8,6 @@ export default class ButtonItem extends React.Component {
 
     this.state = {
       tabIndex: '-1',
-      ariaExpanded: 'false',
     };
 
     this.keyCode = Object.freeze({
@@ -31,44 +27,29 @@ export default class ButtonItem extends React.Component {
 
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handleMouseover = this.handleMouseover.bind(this);
-    this.handleMouseout = this.handleMouseout.bind(this);
     this.handleFocus = this.handleFocus.bind(this);
-    this.handlePopupBlur = this.handlePopupBlur.bind(this);
   }
 
   componentDidMount() {
     this.item.addEventListener('keydown', this.handleKeydown);
     this.item.addEventListener('click', this.handleClick);
-    // this.item.addEventListener('mouseover', this.handleMouseover);
-    // this.item.addEventListener('mouseout', this.handleMouseout);
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.shouldFocus) {
-      this.updateTabIndexNeeded(prevProps);
+      this.updateTabIndexIfNeeded(prevProps);
     }
   }
 
   componentWillUnmount() {
     this.item.removeEventListener('keydown', this.handleKeydown);
     this.item.removeEventListener('click', this.handleClick);
-    // this.item.removeEventListener('mouseover', this.handleMouseover);
-    // this.item.removeEventListener('mouseout', this.handleMouseout);
   }
 
   setFocusToItem() {
-    // const { tabIndex, ariaExpanded } = this.state;
     const { shouldFocus } = this.props;
-
-    /*
-    let flag = false;
-    if (tabIndex === '0') {
-      flag = ariaExpanded === 'true';
-    }
-    */
-    // const flag = tabIndex === '0' && ariaExpanded === 'true';
-
     const newTabIndex = shouldFocus ? '0' : '-1';
+
     if (shouldFocus) {
       this.item.focus();
     }
@@ -77,11 +58,11 @@ export default class ButtonItem extends React.Component {
 
   handleKeydown = event => {
     switch (event.keyCode) {
-      case this.keyCode.RETURN:
-        // this.item.click();
+      case this.keyCode.LEFT: {
+        const { onClickLeft } = this.props;
+        if (onClickLeft) onClickLeft();
         break;
-      case this.keyCode.DOWN:
-        break;
+      }
       default:
         break;
     }
@@ -91,53 +72,23 @@ export default class ButtonItem extends React.Component {
     this.item.focus();
   };
 
-  handleMouseover = () => {
-    // console.info('HOVERED!', this.item);
-  };
+  handleMouseover = () => {};
 
-  handlePopupBlur = () => {};
+  handleFocus = () => {};
 
-  handleMouseout = () => {};
-
-  handleFocus = () => {
-    // console.info('FOCUSED!', this.item);
-  };
-
-  updateTabIndexNeeded(prevProps) {
+  updateTabIndexIfNeeded(prevProps) {
     if (prevProps.shouldFocus !== this.props.shouldFocus) {
       this.setFocusToItem();
     }
   }
 
-  /*
-    var flag = false;
-    for (var i = 0; i < this.menubarItems.length; i++) {
-      var mbi = this.menubarItems[i];
-
-      if (mbi.domNode.tabIndex == 0) {
-        flag = mbi.domNode.getAttribute('aria-expanded') === 'true';
-      }
-
-      mbi.domNode.tabIndex = -1;
-      if (mbi.popupMenu) {
-        mbi.popupMenu.close();
-      }
-    }
-
-    newItem.domNode.focus();
-    newItem.domNode.tabIndex = 0;
-
-    if (flag && newItem.popupMenu) {
-      newItem.popupMenu.open();
-    }
-  */
-
   render() {
     const {
-      item: { title, onItemClick, icon, subItems },
+      item: { title, onItemClick, icon },
       ariaHaspopup,
     } = this.props;
     const hasIcon = ariaHaspopup || !!icon;
+
     return (
       <ButtonItemStyled
         ref={item => (this.item = item)}
@@ -145,12 +96,11 @@ export default class ButtonItem extends React.Component {
         role="menuitem"
         fullWidth
         onClick={event => {
-          onItemClick();
+          if (onItemClick) onItemClick();
           event.stopPropagation();
           event.preventDefault();
         }}
         tabIndex={this.state.tabIndex}
-        aria-expanded={this.state.ariaExpanded}
         aria-haspopup={ariaHaspopup}
         onFocus={this.handleFocus}
         onMouseOver={this.handleMouseover}
@@ -164,6 +114,7 @@ export default class ButtonItem extends React.Component {
 }
 
 ButtonItem.propTypes = {
+  onClickLeft: PropTypes.func,
   shouldFocus: PropTypes.bool,
   ariaHaspopup: PropTypes.bool,
   index: PropTypes.number.isRequired,
@@ -176,4 +127,5 @@ ButtonItem.propTypes = {
 ButtonItem.defaultProps = {
   shouldFocus: false,
   ariaHaspopup: false,
+  onClickLeft: () => {},
 };
