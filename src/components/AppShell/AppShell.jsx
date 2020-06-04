@@ -37,14 +37,14 @@ const AppShell = ({
       id: 'publish',
       isNew: false,
       visible: true,
-      enabled: enabledProducts.includes('publish'),
+      enabled: true,
       enableURL: ENABLE_PUBLISH_URL
     },
     {
       id: 'analyze',
       isNew: false,
       visible: true,
-      enabled: enabledProducts.includes('analyze'),
+      enabled: true,
       enableURL: ENABLE_ANALYZE_URL
     },
     {
