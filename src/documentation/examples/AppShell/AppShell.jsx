@@ -43,7 +43,7 @@ export default function ExampleAppShell() {
   return (
     <AppShell
       enabledProducts={['publish', 'analyze', 'engage']}
-      activeProduct="analyze"
+      activeProduct="engage"
       user={{
         name: 'Hamish Macpherson',
         email: 'hamstu@gmail.com',
