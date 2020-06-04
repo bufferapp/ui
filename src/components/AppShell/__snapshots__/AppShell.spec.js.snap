@@ -19,8 +19,27 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "enableURL": "https://buffer.com/pricing/publish",
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://account.buffer.com/analyze",
+          "enabled": false,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
       ]
     }
     user={
@@ -89,8 +108,27 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "enableURL": "https://buffer.com/pricing/publish",
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://account.buffer.com/analyze",
+          "enabled": false,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
       ]
     }
     user={
@@ -159,8 +197,27 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "enableURL": "https://buffer.com/pricing/publish",
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://account.buffer.com/analyze",
+          "enabled": false,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
       ]
     }
     user={
@@ -219,8 +276,27 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "enableURL": "https://buffer.com/pricing/publish",
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://account.buffer.com/analyze",
+          "enabled": false,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
       ]
     }
     user={
@@ -289,8 +365,27 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when boolean prop "disp
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "enableURL": "https://buffer.com/pricing/publish",
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://account.buffer.com/analyze",
+          "enabled": false,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
       ]
     }
     user={
@@ -359,8 +454,27 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "enableURL": "https://buffer.com/pricing/publish",
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://account.buffer.com/analyze",
+          "enabled": false,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
       ]
     }
     user={
@@ -417,9 +531,27 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only requir
     helpMenuItems={null}
     products={
       Array [
-        "publish",
-        "analyze",
-        "reply",
+        Object {
+          "enableURL": "https://buffer.com/pricing/publish",
+          "enabled": false,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://account.buffer.com/analyze",
+          "enabled": false,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": true,
+        },
       ]
     }
     user={
