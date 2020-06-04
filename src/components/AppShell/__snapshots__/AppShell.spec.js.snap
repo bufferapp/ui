@@ -1,5 +1,183 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enabledProducts" has one item: "jest-auto-snapshots String Fixture" 1`] = `
+<ForwardRef(styled.div)>
+  <NavBar
+    activeProduct="publish"
+    displaySkipLink={true}
+    helpMenuItems={
+      Array [
+        Object {
+          "component": <NodeFixture />,
+          "hasDivider": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "onItemClick": [MockFunction],
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    onLogout={[MockFunction]}
+    products={
+      Array [
+        Object {
+          "enableURL": null,
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": null,
+          "enabled": true,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
+      ]
+    }
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "ignoreMenuItems": Array [
+          "jest-auto-snapshots String Fixture",
+        ],
+        "menuItems": Array [
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
+    onCloseBanner={null}
+    text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
+  />
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enabledProducts" is an empty array: "[]" 1`] = `
+<ForwardRef(styled.div)>
+  <NavBar
+    activeProduct="publish"
+    displaySkipLink={true}
+    helpMenuItems={
+      Array [
+        Object {
+          "component": <NodeFixture />,
+          "hasDivider": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "onItemClick": [MockFunction],
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    onLogout={[MockFunction]}
+    products={
+      Array [
+        Object {
+          "enableURL": null,
+          "enabled": true,
+          "id": "publish",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": null,
+          "enabled": true,
+          "id": "analyze",
+          "isNew": false,
+          "visible": true,
+        },
+        Object {
+          "enableURL": "https://login.buffer.com/signup?product=engage",
+          "enabled": false,
+          "id": "engage",
+          "isNew": true,
+          "visible": false,
+        },
+      ]
+    }
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "ignoreMenuItems": Array [
+          "jest-auto-snapshots String Fixture",
+        ],
+        "menuItems": Array [
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
+    onCloseBanner={null}
+    text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
+  />
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featureFlips" has one item: "jest-auto-snapshots String Fixture" 1`] = `
 <ForwardRef(styled.div)>
   <NavBar
@@ -20,15 +198,15 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
     products={
       Array [
         Object {
-          "enableURL": "https://buffer.com/pricing/publish",
+          "enableURL": null,
           "enabled": true,
           "id": "publish",
           "isNew": false,
           "visible": true,
         },
         Object {
-          "enableURL": "https://account.buffer.com/analyze",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "analyze",
           "isNew": false,
           "visible": true,
@@ -109,15 +287,15 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
     products={
       Array [
         Object {
-          "enableURL": "https://buffer.com/pricing/publish",
+          "enableURL": null,
           "enabled": true,
           "id": "publish",
           "isNew": false,
           "visible": true,
         },
         Object {
-          "enableURL": "https://account.buffer.com/analyze",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "analyze",
           "isNew": false,
           "visible": true,
@@ -198,15 +376,15 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     products={
       Array [
         Object {
-          "enableURL": "https://buffer.com/pricing/publish",
+          "enableURL": null,
           "enabled": true,
           "id": "publish",
           "isNew": false,
           "visible": true,
         },
         Object {
-          "enableURL": "https://account.buffer.com/analyze",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "analyze",
           "isNew": false,
           "visible": true,
@@ -277,15 +455,15 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     products={
       Array [
         Object {
-          "enableURL": "https://buffer.com/pricing/publish",
+          "enableURL": null,
           "enabled": true,
           "id": "publish",
           "isNew": false,
           "visible": true,
         },
         Object {
-          "enableURL": "https://account.buffer.com/analyze",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "analyze",
           "isNew": false,
           "visible": true,
@@ -366,15 +544,15 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when boolean prop "disp
     products={
       Array [
         Object {
-          "enableURL": "https://buffer.com/pricing/publish",
+          "enableURL": null,
           "enabled": true,
           "id": "publish",
           "isNew": false,
           "visible": true,
         },
         Object {
-          "enableURL": "https://account.buffer.com/analyze",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "analyze",
           "isNew": false,
           "visible": true,
@@ -455,15 +633,15 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
     products={
       Array [
         Object {
-          "enableURL": "https://buffer.com/pricing/publish",
+          "enableURL": null,
           "enabled": true,
           "id": "publish",
           "isNew": false,
           "visible": true,
         },
         Object {
-          "enableURL": "https://account.buffer.com/analyze",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "analyze",
           "isNew": false,
           "visible": true,
@@ -532,15 +710,15 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only requir
     products={
       Array [
         Object {
-          "enableURL": "https://buffer.com/pricing/publish",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "publish",
           "isNew": false,
           "visible": true,
         },
         Object {
-          "enableURL": "https://account.buffer.com/analyze",
-          "enabled": false,
+          "enableURL": null,
+          "enabled": true,
           "id": "analyze",
           "isNew": false,
           "visible": true,
