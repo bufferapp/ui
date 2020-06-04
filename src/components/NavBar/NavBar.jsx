@@ -98,7 +98,7 @@ const NavBarVerticalRule = styled.div`
 `;
 
 /**
- * A11Y feature: A skip to main content link appears when a user is on a screen reader 
+ * A11Y feature: A skip to main content link appears when a user is on a screen reader
  * and the link is in focus. To work properly, each page will need to have an element with the id main
  * example: <main id="main"></main> This feature is optional
  */
@@ -141,7 +141,15 @@ class NavBar extends React.Component {
   }
 
   render() {
-    const { products, activeProduct, user, helpMenuItems, onLogout, displaySkipLink } = this.props;
+    const {
+      products,
+      activeProduct,
+      user,
+      helpMenuItems,
+      onLogout,
+      displaySkipLink
+    } = this.props;
+
     return (
       <NavBarStyled>
         <NavBarLeft>
@@ -209,10 +217,16 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
   /** The list of available products */
-  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'analyze', 'reply'])),
+  products: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    isNew: PropTypes.bool,
+    visible: PropTypes.bool,
+    enabled: PropTypes.bool,
+    enableURL: PropTypes.string
+  })),
 
-  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'analyze', 'reply'` */
-  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
+  /** The currently active (highlighted) product in the `NavBar`. */
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
 
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
