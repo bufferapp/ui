@@ -83,7 +83,7 @@ AppShell.propTypes = {
   featureFlips: PropTypes.arrayOf(PropTypes.string),
 
   /** The list of products that the user has enabled on their account. */
-  enabledProducts: PropTypes.oneOf(['publish', 'analyze', 'engage']),
+  enabledProducts: PropTypes.arrayOf(PropTypes.string),
 
   /** The currently active (highlighted) product in the `NavBar`. */
   activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
