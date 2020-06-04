@@ -12,11 +12,16 @@ import {
   ContentWrapper,
 } from './style';
 
+const ENABLE_PUBLISH_URL = 'https://buffer.com/pricing/publish';
+const ENABLE_ANALYZE_URL = 'https://account.buffer.com/analyze';
+const ENABLE_ENGAGE_URL = 'https://login.buffer.com/signup?product=engage';
+
 /**
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
 const AppShell = ({
   featureFlips,
+  enabledProducts,
   activeProduct,
   user,
   helpMenuItems,
@@ -27,16 +32,35 @@ const AppShell = ({
   displaySkipLink,
 }) => {
 
-  const enabledProducts = ['publish', 'analyze'];
-  if (featureFlips.includes('enableReply')) {
-    enabledProducts.push('reply');
-  }
+  const products = [
+    {
+      id: 'publish',
+      isNew: false,
+      visible: true,
+      enabled: enabledProducts.includes('publish'),
+      enableURL: ENABLE_PUBLISH_URL
+    },
+    {
+      id: 'analyze',
+      isNew: false,
+      visible: true,
+      enabled: enabledProducts.includes('analyze'),
+      enableURL: ENABLE_ANALYZE_URL
+    },
+    {
+      id: 'engage',
+      isNew: true,
+      visible: featureFlips.includes('engageAccess'),
+      enabled: enabledProducts.includes('engage'),
+      enableURL: ENABLE_ENGAGE_URL
+    }
+  ];
 
   return (
     <AppShellStyled>
       {/* <GlobalStyles /> */}
       <NavBar
-        products={enabledProducts}
+        products={products}
         activeProduct={activeProduct}
         user={user}
         helpMenuItems={helpMenuItems}
@@ -60,8 +84,11 @@ AppShell.propTypes = {
   /** The list of features enabled for the user */
   featureFlips: PropTypes.arrayOf(PropTypes.string),
 
-  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'analyze', 'reply'` */
-  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
+  /** The list of products that the user has enabled on their account. */
+  enabledProducts: PropTypes.oneOf(['publish', 'analyze', 'engage']),
+
+  /** The currently active (highlighted) product in the `NavBar`. */
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
 
   /** The current user object */
   user: PropTypes.shape({
@@ -115,8 +142,9 @@ AppShell.propTypes = {
 };
 
 AppShell.defaultProps = {
-  featureFlips: ['enableReply'],
+  featureFlips: ['engageAccess'],
   sidebar: null,
+  enabledProducts: [],
   activeProduct: undefined,
   bannerOptions: null,
   onLogout: undefined,
