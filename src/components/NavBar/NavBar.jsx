@@ -144,8 +144,7 @@ export function appendOrgSwitcher(orgSwitcher) {
     item.type = ORG_SWITCHER;
     return item;
   })
-  
-  console.info(orgSwitcher.menuItems);
+
   return orgSwitcher.menuItems;
 }
 
