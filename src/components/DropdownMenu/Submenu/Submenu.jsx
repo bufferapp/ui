@@ -10,6 +10,7 @@ import PinterestIcon from '../../Icon/Icons/Pinterest';
 import { Item } from '../style';
 import { keyCode } from '../keyCode';
 import { instagram, twitter, facebook, pinterest } from '../../style/colors';
+import { ORG_SWITCHER } from '../../NavBar/NavBar';
 
 export default class Submenu extends React.Component {
   constructor(props) {
@@ -145,7 +146,7 @@ export default class Submenu extends React.Component {
       item.icon = this.getNetworkIcon(item);
 
       return (
-        <Item key={`submenu-item-${index}`} role="none" type={item.type}>
+        <Item key={`submenu-item-${index}`} role="none" type={ORG_SWITCHER}>
           <ButtonItem
             index={index}
             item={item}
@@ -159,6 +160,7 @@ export default class Submenu extends React.Component {
 
   render() {
     const {
+      header,
       ariaLabelPopup,
       horizontalOffset,
       items,
@@ -178,13 +180,20 @@ export default class Submenu extends React.Component {
         onBlur={onBlur}
         isSubmenu
       >
-        {this.renderItems(items)}
+        <>
+          <Item role="none" type="header">
+            {header}
+          </Item>
+          {this.renderItems(items)}
+        </>
       </PopupMenuStyled>
     );
   }
 }
 
 Submenu.propTypes = {
+  header: PropTypes.string,
+
   /** Boolean to check if the Submenu is open */
   isOpen: PropTypes.bool.isRequired,
 
@@ -214,6 +223,7 @@ Submenu.propTypes = {
 
 Submenu.defaultProps = {
   ariaLabelPopup: null,
+  header: null,
   xPosition: 'left',
   horizontalOffset: null,
 };

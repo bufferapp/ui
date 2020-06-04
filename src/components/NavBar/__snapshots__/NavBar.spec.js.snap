@@ -55,6 +55,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
+            "header": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "selected": true,
@@ -161,6 +162,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
+            "header": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "selected": true,
@@ -277,6 +279,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       items={
         Array [
           Object {
+            "header": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "selected": true,
@@ -389,6 +392,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       items={
         Array [
           Object {
+            "header": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "selected": true,
@@ -500,6 +504,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       items={
         Array [
           Object {
+            "header": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "selected": true,
@@ -616,6 +621,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       items={
         Array [
           Object {
+            "header": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "onItemClick": [MockFunction],
             "selected": true,

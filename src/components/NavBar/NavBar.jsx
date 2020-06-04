@@ -140,8 +140,11 @@ export function appendOrgSwitcher(orgSwitcher) {
     return [];
   }
   
-  orgSwitcher.menuItems.map(item => {
+  orgSwitcher.menuItems.map((item, index) => {
     item.type = ORG_SWITCHER;
+    if (orgSwitcher.title && index === 0) {
+      item.header = orgSwitcher.title;
+    }
     return item;
   })
 

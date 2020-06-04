@@ -7,7 +7,7 @@ import {
   grayLighter,
   grayDarker,
 } from '../style/colors';
-import { fontFamily } from '../style/fonts';
+import { fontFamily, fontWeightMedium } from '../style/fonts';
 import { ButtonBase, medium } from '../Button/style';
 import { ORG_SWITCHER } from '../NavBar/NavBar';
 
@@ -29,10 +29,14 @@ export const DropdownItems = styled.ul`
 `;
 
 export const Item = styled.li`
+  font-family: ${fontFamily};
+  font-weight: ${fontWeightMedium};
+  font-size: 14px;
+  line-height: 16px;
   position: ${props => (props.type === ORG_SWITCHER ? 'relative' : '')};
   min-height: 32px;
   align-items: center;
-  color: ${props => (props.disabled ? grayLight : grayDarker)};
+  color: ${props => (props.disabled ? grayLight : gray)};
   cursor: pointer;
   display: flex;
   text-overflow: ellipsis;
@@ -40,6 +44,8 @@ export const Item = styled.li`
   white-space: nowrap;
   background-color: ${props =>
     props.type && props.type === ORG_SWITCHER ? grayLighter : 'transparent'};
+  margin-left: ${props => (props.type === 'header' ? '5px': '')};
+  margin-bottom: ${props => (props.type === 'header' ? '5px': '')};
 `;
 
 export const ItemDividerTitle = styled.span`

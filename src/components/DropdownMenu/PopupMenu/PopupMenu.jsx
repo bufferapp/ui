@@ -194,7 +194,8 @@ export default class PopupMenu extends React.Component {
 
     return (
       <Submenu
-        aria-label="Submenu"
+        header="Social Accounts"
+        aria-label="Profiles Menu"
         xPosition="left"
         horizontalOffset="-10px"
         isOpen={isOpen}
@@ -220,8 +221,12 @@ export default class PopupMenu extends React.Component {
             )}
           </ItemDivider>
         ),
+        item.header && (
+          <Item role="none" type="header">
+            {item.header}
+          </Item>
+        ),
         <Item
-          ref={ref => (this[`item_${index}_ref`] = ref)}
           key={`item-${index}`}
           role="none"
           type={item.type}
