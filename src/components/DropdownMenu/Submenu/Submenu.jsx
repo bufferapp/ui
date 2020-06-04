@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { PopupMenuStyled } from '../PopupMenu/style';
+import { PopupMenuStyled, ItemDivider } from '../PopupMenu/style';
 import ButtonItem from '../ButtonItem/ButtonItem';
 import InstagramIcon from '../../Icon/Icons/Instagram';
 import TwitterIcon from '../../Icon/Icons/Twitter';
@@ -143,10 +143,14 @@ export default class Submenu extends React.Component {
     
     return items.map((item, index) => {
       const shouldFocus = index === focusedItem && this.isPopupOpen();
-      item.icon = this.getNetworkIcon(item);
+      const type = item.network ? ORG_SWITCHER : '';
+      item.icon = item.network ? this.getNetworkIcon(item) : item.icon;
 
-      return (
-        <Item key={`submenu-item-${index}`} role="none" type={ORG_SWITCHER}>
+      return [
+        item.hasDivider && (
+          <ItemDivider key={`${item.id}--divider`} role="none" />
+        ),
+        <Item key={`submenu-item-${index}`} role="none" type={type}>
           <ButtonItem
             index={index}
             item={item}
@@ -154,7 +158,7 @@ export default class Submenu extends React.Component {
             ariaHaspopup={false}
           />
         </Item>
-      );
+      ];
     })
   };
 

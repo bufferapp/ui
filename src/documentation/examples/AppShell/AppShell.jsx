@@ -1,6 +1,6 @@
 import React from 'react';
 import AppShell from '@bufferapp/ui/AppShell';
-import { Gear } from '@bufferapp/ui/Icon';
+import { Gear, Pencil } from '@bufferapp/ui/Icon';
 
 import { gray } from '@bufferapp/ui/style/colors';
 
@@ -65,6 +65,13 @@ const orgSwitcher = {
           id: '4',
           title: 'Lunna Sneakers',
           network: 'pinterest',
+        },
+        {
+          id: '5',
+          title: 'Edit Organization',
+          hasDivider: true,
+          icon: <Pencil color={gray} />,
+          onItemClick: () => console.info('edit organization'),
         },
       ],
     },
