@@ -196,7 +196,7 @@ export default class PopupMenu extends React.Component {
       <Submenu
         aria-label="Submenu"
         xPosition="left"
-        horizontalOffset="-17px"
+        horizontalOffset="-10px"
         isOpen={isOpen}
         closeSubMenu={this.closeSubMenu}
         onBlur={event => this.handleSubmenuBlur(event, isOpen)}

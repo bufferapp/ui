@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 
 import { PopupMenuStyled } from '../PopupMenu/style';
 import ButtonItem from '../ButtonItem/ButtonItem';
+import InstagramIcon from '../../Icon/Icons/Instagram';
+import TwitterIcon from '../../Icon/Icons/Twitter';
+import FacebookIcon from '../../Icon/Icons/Facebook';
+import PinterestIcon from '../../Icon/Icons/Pinterest';
 import { Item } from '../style';
 import { keyCode } from '../keyCode';
+import { instagram, twitter, facebook, pinterest } from '../../style/colors';
 
 export default class Submenu extends React.Component {
   constructor(props) {
@@ -107,6 +112,23 @@ export default class Submenu extends React.Component {
     }
   };
 
+  getNetworkIcon = item => {
+    if (item.network) {
+      switch (item.network) {
+        case 'instagram':
+          return <InstagramIcon size="medium" color={instagram} />;
+        case 'twitter':
+          return <TwitterIcon size="medium" color={twitter} />;
+        case 'facebook':
+          return <FacebookIcon size="medium" color={facebook} />;
+        case 'pinterest':
+          return <PinterestIcon size="medium" color={pinterest} />;
+        default:
+        break;
+      }
+    }
+  }
+
   updateIfNeeded(prevProps) {
     const { isOpen } = this.props;
     if (prevProps.isOpen !== isOpen) {
@@ -120,6 +142,8 @@ export default class Submenu extends React.Component {
     
     return items.map((item, index) => {
       const shouldFocus = index === focusedItem && this.isPopupOpen();
+      item.icon = this.getNetworkIcon(item);
+
       return (
         <Item key={`submenu-item-${index}`} role="none" type={item.type}>
           <ButtonItem

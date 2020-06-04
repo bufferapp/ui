@@ -17,7 +17,7 @@ export const PopupMenuStyled = styled.ul`
   bottom: initial;
   margin-bottom: 0;
   margin-top: ${props => (props.isSubmenu ? '' : '8px')};
-  padding: 8px;
+  padding: 8px 0;
   transform: translateX(
     ${props => (props.horizontalOffset ? props.horizontalOffset : '0')}
   );
@@ -37,6 +37,7 @@ export const PopupMenuStyled = styled.ul`
     & button:focus {
       outline: 1px solid ${blue};
     }
+    padding: 0 8px;
   }
 `;
 
