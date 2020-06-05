@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ButtonItemStyled, ButtonLabel, ChevronLeftIcon } from '../style';
+import { ButtonItemStyled, ButtonLabel } from '../style';
 
 export default class ButtonItem extends React.Component {
   constructor(props) {
@@ -50,7 +50,7 @@ export default class ButtonItem extends React.Component {
       item: { title, onItemClick, icon },
       ariaHaspopup,
     } = this.props;
-    const hasIcon = ariaHaspopup || !!icon;
+    const hasIcon = !!icon;
 
     return (
       <ButtonItemStyled
@@ -66,7 +66,6 @@ export default class ButtonItem extends React.Component {
         tabIndex={this.state.tabIndex}
         aria-haspopup={ariaHaspopup}
       >
-        {ariaHaspopup && <ChevronLeftIcon />}
         {icon || null}
         <ButtonLabel hasIcon={hasIcon}>{title}</ButtonLabel>
       </ButtonItemStyled>

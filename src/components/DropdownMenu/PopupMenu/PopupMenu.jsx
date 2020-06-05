@@ -212,19 +212,15 @@ export default class PopupMenu extends React.Component {
     return items.map((item, index) => {
       const hasSubMenu = this.hasSubMenu(item);
       const shouldFocus = index === focusedItem && !this.isSubmenuOpen();
+      const type = index === 0 ? 'header' : '';
 
       return [
         item.hasDivider && (
-          <ItemDivider key={`${item.id}--divider`} role="none">
+          <ItemDivider key={`${item.id}--divider`} role="none" type={type}>
             {item.dividerTitle && (
               <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
             )}
           </ItemDivider>
-        ),
-        item.header && (
-          <Item key={`item-header-${index}`} role="none" type="header">
-            {item.header}
-          </Item>
         ),
         <Item
           key={`item-${index}`}

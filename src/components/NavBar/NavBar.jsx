@@ -1,10 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
+import {
+  Info as InfoIcon,
+  ArrowLeft,
+  Person as PersonIcon,
+  Checkmark as CheckmarkIcon,
+} from '../Icon';
 
 import {
   gray,
+  green,
   blueDarker,
   grayLight,
   grayLighter,
@@ -143,7 +149,11 @@ export function appendOrgSwitcher(orgSwitcher) {
   orgSwitcher.menuItems.map((item, index) => {
     item.type = ORG_SWITCHER;
     if (orgSwitcher.title && index === 0) {
-      item.header = orgSwitcher.title;
+      item.hasDivider = true;
+      item.dividerTitle = orgSwitcher.title;
+    }
+    if (item.selected) {
+      item.icon = <CheckmarkIcon color={green} />;
     }
     return item;
   })
@@ -173,6 +183,8 @@ class NavBar extends React.Component {
       displaySkipLink,
       orgSwitcher,
     } = this.props;
+    const orgSwitcherHasItems = orgSwitcher && orgSwitcher.menuItems && orgSwitcher.menuItems.length > 0;
+
     return (
       <NavBarStyled aria-label="Main menu">
         <NavBarLeft>
@@ -220,6 +232,7 @@ class NavBar extends React.Component {
                 id: 'account',
                 title: 'Account',
                 icon: <PersonIcon color={gray} />,
+                hasDivider: orgSwitcherHasItems,
                 onItemClick: () => {
                   window.location.assign(
                   getAccountUrl(window.location.href, this.props.user)

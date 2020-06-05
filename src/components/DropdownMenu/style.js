@@ -4,7 +4,6 @@ import {
   blue,
   gray,
   grayLight,
-  grayLighter,
   grayDarker,
 } from '../style/colors';
 import { fontFamily, fontWeightMedium } from '../style/fonts';
@@ -42,10 +41,10 @@ export const Item = styled.li`
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
-  background-color: ${props =>
-    props.type && props.type === ORG_SWITCHER ? grayLighter : 'transparent'};
+  background-color: transparent;
   margin-left: ${props => (props.type === 'header' ? '5px': '')};
   margin-bottom: ${props => (props.type === 'header' ? '5px': '')};
+  padding: 0 8px;
 `;
 
 export const ItemDividerTitle = styled.span`
@@ -80,7 +79,7 @@ export const ButtonItemStyled = styled.button`
 `;
 
 export const ButtonLabel = styled.div`
-  margin-left: ${props => (props.hasIcon ? '5px' : '0px')};
+  margin-left: ${props => (props.hasIcon ? '5px' : '21px')};
   margin-right: ${props => (props.hasIcon ? '5px' : '0px')};
 `;
 

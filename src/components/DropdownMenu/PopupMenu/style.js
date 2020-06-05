@@ -37,7 +37,6 @@ export const PopupMenuStyled = styled.ul`
     & button:focus {
       outline: 1px solid ${blue};
     }
-    padding: 0 8px;
   }
 `;
 
@@ -50,4 +49,5 @@ export const ItemDivider = styled.li`
   pointer-events: none;
   width: 100%;
   list-style: none;
+  margin-top: ${props => (props.type && props.type === 'header' ? '15px' : '')};
 `;
