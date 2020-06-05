@@ -50,7 +50,7 @@ const AppShell = ({
     {
       id: 'engage',
       isNew: true,
-      visible: engageEnabled || featureFlips.includes('engageAccess'),
+      visible: engageEnabled || featureFlips.includes('engageRollOut'),
       enabled: engageEnabled,
       enableURL: ENABLE_ENGAGE_URL
     }
