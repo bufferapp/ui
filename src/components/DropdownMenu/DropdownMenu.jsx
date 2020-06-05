@@ -11,28 +11,33 @@ export default class DropdownMenu extends React.Component {
 
     this.state = {
       isOpen: false,
+      usingMouse: false,
     };
 
     this.keyCode = keyCode;
 
     this.handleKeydown = this.handleKeydown.bind(this);
     this.handlePopupBlur = this.handlePopupBlur.bind(this);
+    this.handleMousedown = this.handleMousedown.bind(this);
   }
 
   componentDidMount() {
     this.itemsNode.addEventListener('keydown', this.handleKeydown);
+    this.itemsNode.addEventListener('mousedown', this.handleMousedown);
   }
 
   componentWillUnmount() {
     this.itemsNode.removeEventListener('keydown', this.handleKeydown);
+    this.itemsNode.removeEventListener('mousedown', this.handleMousedown);
+  }
+
+  handleMousedown = () => {
+    this.setState({ usingMouse: true });
   }
 
   togglePopup = () => {
-    if (this.isPopupOpen()) {
-      this.closePopup();
-    } else {
-      this.openPopup();
-    }
+    const { isOpen } = this.state;
+    this.setState({ isOpen: !isOpen });
   };
 
   isPopupOpen = () => this.state.isOpen;
@@ -63,6 +68,8 @@ export default class DropdownMenu extends React.Component {
       default:
         break;
     }
+
+    this.setState({ usingMouse: false });
 
     if (flag) {
       event.stopPropagation();
@@ -98,6 +105,7 @@ export default class DropdownMenu extends React.Component {
         ref={itemsNode => (this.itemsNode = itemsNode)}
         role="menubar"
         aria-label={ariaLabel}
+        usingMouse={this.state.usingMouse}
       >
         <Item role="none">
           <MenubarItem.type
@@ -115,6 +123,7 @@ export default class DropdownMenu extends React.Component {
             aria-label={ariaLabelPopup}
             horizontalOffset={horizontalOffset}
             isOpen={this.state.isOpen}
+            usingMouse={this.state.usingMouse}
             closePopup={this.closePopup}
             onBlur={event => this.handlePopupBlur(event)}
           />

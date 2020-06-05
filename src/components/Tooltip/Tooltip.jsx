@@ -40,15 +40,20 @@ class Tooltip extends React.Component {
    * Adjusting the styles according to the desired position
    * The tooltip should be vertically or horizontally centered
    */
-  getTooltipPosition(triggerRect, tooltipRect, position, verticalAlignment) {
+  getTooltipPosition(triggerRect, tooltipRect, position, verticalAlign) {
     const { childWidth } = this.state;
     const gap = 8;
     const triggerCenter = triggerRect.left + childWidth / 2;
     const left = triggerCenter - tooltipRect.width / 2;
     const maxLeft = window.innerWidth - tooltipRect.width - 2;
-    const verticalCenter = triggerRect.top + triggerRect.height - ((triggerRect.height + tooltipRect.height) / 2) - window.scrollY;
+    const verticalCenter =
+      triggerRect.top +
+      triggerRect.height -
+      (triggerRect.height + tooltipRect.height) / 2 -
+      window.scrollY;
     const verticalTop = triggerRect.top;
-    const topPosition = verticalAlignment === 'top' ? verticalTop : verticalCenter;
+    const topPosition =
+      verticalAlign === 'top' ? verticalTop : verticalCenter;
 
     const newPosition = {
       left: Math.min(Math.max(2, left), maxLeft) + window.scrollX,
@@ -97,7 +102,7 @@ class Tooltip extends React.Component {
   );
 
   render() {
-    const { children, label, position, verticalAlignment, hotkey, customLabel, opacity } = this.props;
+    const { children, label, position, verticalAlign, hotkey, customLabel, opacity } = this.props;
 
     // @todo: remove style from here and use the Styled component
     // We are currently adding the stylings with the style tag,
@@ -108,7 +113,7 @@ class Tooltip extends React.Component {
       <Styles.TooltipWrapper ref={node => this.tooltipWrapper = node}>
         <Styles.TooltipStyled
           label={this.renderLabel(label, hotkey, customLabel)}
-          position={(triggerRect, tooltipRect) => this.getTooltipPosition(triggerRect, tooltipRect, position, verticalAlignment)}
+          position={(triggerRect, tooltipRect) => this.getTooltipPosition(triggerRect, tooltipRect, position, verticalAlign)}
           style={Styles.TooltipStyle}
           opacity={opacity}
         >
@@ -132,7 +137,7 @@ Tooltip.propTypes = {
   position: PropTypes.string,
 
   /** The tooltip vertical position: this only applies for left and right positioned tooltip */
-  verticalAlignment: PropTypes.string,
+  verticalAlign: PropTypes.string,
 
   /** The tooltip position */
   hotkey: PropTypes.string,
@@ -147,7 +152,7 @@ Tooltip.propTypes = {
 Tooltip.defaultProps = {
   label: '',
   position: 'bottom',
-  verticalAlignment: 'center',
+  verticalAlign: 'center',
   hotkey: '',
   customLabel: '',
   opacity: 1

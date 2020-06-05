@@ -20,7 +20,7 @@ export const DropdownItems = styled.ul`
     position: relative;
 
     & [role='menuitem']:focus {
-      outline: 1px solid ${blue};
+      outline: ${props => (props.usingMouse ? 'none' : `1px solid ${blue}`)};
       outline-offset: -1px;
     }
   }

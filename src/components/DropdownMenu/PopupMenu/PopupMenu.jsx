@@ -121,14 +121,6 @@ export default class PopupMenu extends React.Component {
     this.setFocusToItem(0);
   };
 
-  onButtonMouseOver = () => {};
-
-  onButtonMouseOut = () => {};
-
-  onButtonFocus = () => {};
-
-  onButtonBlur = () => {};
-
   updateIfNeeded(prevProps) {
     const { isOpen } = this.props;
     if (prevProps.isOpen !== isOpen) {
@@ -145,7 +137,7 @@ export default class PopupMenu extends React.Component {
 
     return items.map((item, index) => {
       const hasSubItems = this.hasSubItems(item);
-      const shouldFocus = index === focusedItem;
+      const shouldFocus = index === focusedItem && !this.props.usingMouse;
       const type = index === 0 ? 'header' : '';
 
       return [
@@ -177,10 +169,6 @@ export default class PopupMenu extends React.Component {
             key={`item-${index}`}
             role="none"
             type={item.type}
-            onMouseOver={() => this.onButtonMouseOver(index)}
-            onMouseOut={this.onButtonMouseOut}
-            onFocus={this.onButtonFocus}
-            onBlur={this.onButtonBlur}
           >
             <ButtonItem
               index={index}
@@ -239,6 +227,8 @@ PopupMenu.propTypes = {
   /** Aria label for popup menu, it should preferibly be the same as the menubarItem name */
   ariaLabelPopup: PropTypes.string,
 
+  usingMouse: PropTypes.bool,
+
   /** Items list to display in the popup menu */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -252,4 +242,5 @@ PopupMenu.defaultProps = {
   ariaLabelPopup: null,
   horizontalOffset: null,
   xPosition: 'left',
+  usingMouse: false,
 };
