@@ -30,6 +30,8 @@ const AppShell = ({
   displaySkipLink,
 }) => {
 
+  const engageEnabled = enabledProducts.includes('engage');
+
   const products = [
     {
       id: 'publish',
@@ -48,8 +50,8 @@ const AppShell = ({
     {
       id: 'engage',
       isNew: true,
-      visible: featureFlips.includes('engageAccess'),
-      enabled: enabledProducts.includes('engage'),
+      visible: engageEnabled || featureFlips.includes('engageAccess'),
+      enabled: engageEnabled,
       enableURL: ENABLE_ENGAGE_URL
     }
   ];
