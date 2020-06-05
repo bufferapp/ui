@@ -117,7 +117,6 @@ export default class Select extends React.Component {
   // Close the popover
   closePopover = e => {
     if (
-      !this.props.customButton &&
       this.selectNode &&
       this.selectNode.contains(e.target)
     ) {
@@ -130,7 +129,7 @@ export default class Select extends React.Component {
       this.setState(
         {
           isOpen: false,
-          hoveredItem: undefined,
+          hoveredItem: undefined
         },
       );
     }
@@ -148,7 +147,7 @@ export default class Select extends React.Component {
   handleSelectOption = (option, event) => {
     const { onSelectClick, multiSelect } = this.props;
     const { items } = this.state;
-    onSelectClick(option, event);
+    onSelectClick && onSelectClick(option, event);
 
     const selectedIndex = items.findIndex(x => x.selected === true);
 
@@ -181,14 +180,33 @@ export default class Select extends React.Component {
   onClick = e => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
+    if (this.props.isSplit && !this.props.disabled) {
+       this.onButtonClick(e);
+    }
+  };
+
+  onKeyUp = e => {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+    if (this.props.isSplit && !this.props.disabled) {
+      const altPlusUp = e.altKey && ['Up', 'ArrowUp'].indexOf(e.key) >= 0;
+      const altPlusDown = e.altKey && ['Down', 'ArrowDown'].indexOf(e.key) >= 0;
+      const space = ['Space', ' '].indexOf(e.key) >= 0;
+      const enter = ['Enter'].indexOf(e.key) >= 0;
+      if (altPlusUp || altPlusDown || space || enter) {
+        e.preventDefault();
+        this.onButtonClick(e);
+      }
+    }
   };
 
   onButtonClick = () => {
-    const { isOpen, items } = this.state;
-    const { isInputSearch } = this.props;
+    const { isOpen } = this.state;
+    const { isInputSearch, items } = this.props;
     this.setState(
       {
         isOpen: !isOpen,
+        items
       },
       () => {
         !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus();
@@ -474,7 +492,7 @@ export default class Select extends React.Component {
 
     return (
       <SelectStyled
-        isOpen={isOpen && selectPopupVisible}
+        isOpen={isOpen || selectPopupVisible}
         xPosition={xPosition}
         yPosition={yPosition}
         hasIconOnly={hasIconOnly}
@@ -493,6 +511,7 @@ export default class Select extends React.Component {
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
+              clearSearchOnBlur
             />
           </SearchBarWrapper>
         )}
@@ -529,6 +548,7 @@ export default class Select extends React.Component {
               keyMap={keyMap}
               hasSelectedItems={some(items, { selected: true })}
               onClick={event => this.handleSelectOption(item, event)}
+              onItemClick={() => this.handleSelectOption(item, item.onItemClick)}
               hideSearch={hideSearch}
               multiSelect={multiSelect}
               isImpersonation={isImpersonation}
@@ -545,13 +565,15 @@ export default class Select extends React.Component {
     return (
       <Wrapper
         role="button"
-        onClick={this.onClick}
-        onKeyUp={this.onClick}
+        onClick={(e) => this.onClick(e)}
+        onKeyUp={(e) => this.onKeyUp(e)}
         tabIndex={0}
         isSplit={isSplit}
         ref={selectNode => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}
+        aria-haspopup="true"
+        aria-expanded={this.state.isOpen}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
@@ -685,7 +707,7 @@ Select.defaultProps = {
   customButton: undefined,
   onSelectClick: undefined,
   keyMap: undefined,
-  multiSelect: undefined,
+  multiSelect: false,
   shortcutsEnabled: true,
   searchPlaceholder: 'Search',
   tooltip: undefined,
@@ -700,7 +722,7 @@ Select.defaultProps = {
   fullWidth: undefined,
   capitalizeItemLabel: true,
   isInputSearch: false,
-  selectPopupVisible: true,
+  selectPopupVisible: false,
   noResultsCustomMessage: 'No matches found',
   isImpersonation: false,
 };

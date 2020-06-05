@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Styles from './style';
 import Button from '../Button';
+import { Cross } from '../Icon';
 
 function setCookie(cookie, cookieKey, days, value) {
   const expiresInDays = days * 24 * 60 * 60;
@@ -32,6 +33,10 @@ class Modal extends React.Component {
     }
     if (this.modal) {
       this.modal.addEventListener('keydown', this.onKeyDown);
+      this.modal.focus();
+      if (this.props.closeButton) {
+        this.container.addEventListener('click', e => this.clickToClose(e));
+      }
     }
   }
 
@@ -46,9 +51,18 @@ class Modal extends React.Component {
     if (event.which === 27) {
       event.preventDefault();
       event.stopPropagation();
+      if (this.props.closeButton) {
+        this.props.closeButton.callback();
+      }
       this.dismiss();
     }
   };
+
+  clickToClose(e) {
+    if (e.target !== this.container) return;
+    this.props.closeButton.callback();
+    this.dismiss();
+  }
 
   /** this must be invoked to properly dismiss the modal */
   dismiss() {
@@ -79,18 +93,41 @@ class Modal extends React.Component {
       secondaryAction,
       footer,
       wide,
+      width,
+      noBackground,
+      closeButton,
     } = this.props;
 
     if (this.state && this.state.dismissed) {
       return null;
     }
+
+    if (wide) {
+      // eslint-disable-next-line
+      console.warn(
+        'WARNING! Obsolete Modal prop `wide`. Deprecated since version 5.32.0. Will be deleted in version 6.0.0. For similar behavior, use `width` prop.'
+      );
+    }
+
     return (
-      <Styles.Container>
+      <Styles.Container ref={container => (this.container = container)}>
         <Styles.Modal
           background={background}
           ref={modal => (this.modal = modal)}
           wide={wide}
+          width={width}
+          tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
+          noBackground={noBackground}
         >
+          {closeButton && (
+            <Styles.IconContainer
+              onClick={() => {
+                this.handleAction(closeButton);
+              }}
+            >
+              <Cross size="large" />
+            </Styles.IconContainer>
+          )}
           {children}
           <Styles.Footer background={background}>
             {footer}
@@ -148,10 +185,18 @@ Modal.propTypes = {
     key: PropTypes.string.isRequired,
   }),
   footer: PropTypes.node,
-  /** set modal width to 73px */
+  /** set modal width to 730px, this will be deprecated in a future version, use width instead */
   wide: PropTypes.bool,
   /** this element will regain focus on modal close */
   previousFocus: PropTypes.node,
+  /** set a custom modal width, accepts 'wide' as a preset for 730px */
+  width: PropTypes.string,
+  /** remove the background so only the content shows */
+  noBackground: PropTypes.bool,
+  /** adds a close icon, the function to close remains in your app */
+  closeButton: PropTypes.shape({
+    callback: PropTypes.func.isRequired,
+  }),
 };
 
 Modal.defaultProps = {
@@ -163,6 +208,9 @@ Modal.defaultProps = {
   wide: false,
   previousFocus: null,
   dismissible: true,
+  width: null,
+  noBackground: false,
+  closeButton: null,
 };
 
 export default Modal;

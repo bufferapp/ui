@@ -4,8 +4,70 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
 <ForwardRef(styled.div)>
   <ForwardRef(styled.section)
     background="jest-auto-snapshots String Fixture"
+    noBackground={true}
+    tabIndex="0"
     wide={true}
+    width="jest-auto-snapshots String Fixture"
   >
+    <ForwardRef(styled.button)
+      onClick={[Function]}
+    >
+      <CrossIcon
+        size="large"
+      />
+    </ForwardRef(styled.button)>
+    <NodeFixture />
+    <ForwardRef(styled.div)
+      background="jest-auto-snapshots String Fixture"
+    >
+      <NodeFixture />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        selectPosition="bottom"
+        size="medium"
+        type="text"
+      />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        selectPosition="bottom"
+        size="medium"
+        type="primary"
+      />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.section)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "noBackground" is set to: "false" 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.section)
+    background="jest-auto-snapshots String Fixture"
+    noBackground={false}
+    tabIndex="0"
+    wide={true}
+    width="jest-auto-snapshots String Fixture"
+  >
+    <ForwardRef(styled.button)
+      onClick={[Function]}
+    >
+      <CrossIcon
+        size="large"
+      />
+    </ForwardRef(styled.button)>
     <NodeFixture />
     <ForwardRef(styled.div)
       background="jest-auto-snapshots String Fixture"
@@ -46,8 +108,18 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
 <ForwardRef(styled.div)>
   <ForwardRef(styled.section)
     background="jest-auto-snapshots String Fixture"
+    noBackground={true}
+    tabIndex="0"
     wide={false}
+    width="jest-auto-snapshots String Fixture"
   >
+    <ForwardRef(styled.button)
+      onClick={[Function]}
+    >
+      <CrossIcon
+        size="large"
+      />
+    </ForwardRef(styled.button)>
     <NodeFixture />
     <ForwardRef(styled.div)
       background="jest-auto-snapshots String Fixture"
@@ -88,8 +160,18 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
 <ForwardRef(styled.div)>
   <ForwardRef(styled.section)
     background="jest-auto-snapshots String Fixture"
+    noBackground={true}
+    tabIndex="0"
     wide={true}
+    width="jest-auto-snapshots String Fixture"
   >
+    <ForwardRef(styled.button)
+      onClick={[Function]}
+    >
+      <CrossIcon
+        size="large"
+      />
+    </ForwardRef(styled.button)>
     <NodeFixture />
     <ForwardRef(styled.div)
       background="jest-auto-snapshots String Fixture"
@@ -130,7 +212,10 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required 
 <ForwardRef(styled.div)>
   <ForwardRef(styled.section)
     background={null}
+    noBackground={false}
+    tabIndex="0"
     wide={false}
+    width={null}
   >
     <NodeFixture />
     <ForwardRef(styled.div)

@@ -11,7 +11,7 @@ const userMenuItems = [
     id: '2',
     title: 'Preferences',
     icon: <Gear color={gray} />,
-    onItemClick: () => {},
+    onItemClick: () => { console.info('Preferences') },
   },
 ];
 
@@ -19,7 +19,7 @@ const helpMenuItems = [
   {
     id: '1',
     title: 'FAQ',
-    onItemClick: () => {},
+    onItemClick: () => console.info('FAQ'),
   },
   {
     id: '2',
@@ -51,6 +51,7 @@ export default function ExampleAppShell() {
       }}
       helpMenuItems={helpMenuItems}
       content={<div>Main content.</div>}
+      displaySkipLink
     />
   );
 }

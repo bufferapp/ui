@@ -1,12 +1,21 @@
 /* eslint-disable no-confusing-arrow */
-import styled from 'styled-components';
-import {
-  white,
-} from '../style/colors';
+import styled, { keyframes } from 'styled-components';
+import { white, red } from '../style/colors';
 import { borderRadius } from '../style/borders';
+import { easeOutQuart } from '../style/animations';
+
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+`;
 
 export const Container = styled.div`
-  background: rgba(0, 0, 0, .4);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   height: 100%;
   align-items: center;
@@ -18,31 +27,81 @@ export const Container = styled.div`
   flex-direction: column;
   top: 0px;
   left: 0px;
+
+  animation: 200ms ${fadeIn} ${easeOutQuart};
+`;
+
+const getWidth = props => {
+  if (props.wide || props.width === 'wide') {
+    return '730px';
+  }
+  if (props.width) {
+    return props.customWidth;
+  }
+  return '512px';
+};
+
+const stagingAnimation = keyframes`
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 `;
 
 export const Modal = styled.section`
   background: ${props => props.background};
-  background-color: ${white};
+  background-color: ${props => props.noBackground ? 'transparent': white};
   background-size: 100% auto;
   border-radius: ${borderRadius};
-  box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
+  box-shadow: ${props => props.noBackground ? 'none' : '0px 1px 4px rgba(0, 0, 0, 0.16)'} ;
   box-sizing: border-box;
   margin: 0 0 1rem;
   padding: 16px 0 16px 0;
-  width: ${props => props.wide ? '730px': '512px' };
+  width: ${props => getWidth(props)};
   overflow: hidden;
+  position: absolute;
 
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   flex-grow: 0;
+  outline: none;
+
+  animation: 300ms ${stagingAnimation} ${easeOutQuart};
+`;
+
+export const IconContainer = styled.button`
+  background: none;
+  border: none;
+  position: absolute;
+  top: -4px;
+  right: 47px;
+  cursor: pointer;
+
+  transition: transform 0.15s ease-out;
+  svg {
+    fill: ${white};
+    transition: fill 0.15s ease-out;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    svg {
+      fill: ${red};
+    }
+  }
 `;
 
 export const Footer = styled.div`
   width: 100%;
   box-sizing: border-box;
-  background: ${props => props.background ? 'transparent' : white};
+  background: ${props => (props.background ? 'transparent' : white)};
   padding: 0 16px;
   margin-top: 16px;
 
@@ -52,7 +111,6 @@ export const Footer = styled.div`
 
   & > span,
   & > p {
-    margin:  0 auto 0 0;
+    margin: 0 auto 0 0;
   }
 `;
-

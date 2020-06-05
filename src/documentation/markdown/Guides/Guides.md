@@ -8,5 +8,6 @@ Here are the articles in this section:
 [Forms](Guides/forms)
 [Grids And Spacing](Guides/grids-and-spacing)
 [Icons](Guides/icons)
+[Links](Guides/links)
 [Principles](Guides/principles)
 [Typography](Guides/typography)

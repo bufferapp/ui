@@ -10,13 +10,18 @@ import {
 } from '../style/fonts';
 
 import Select from '../Select';
+import Link from '../Link';
 
 import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
 import NavBarProducts from './NavBarProducts/NavBarProducts';
 
 export function getProductPath(baseUrl) {
-  const [, productPath] = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/);
+  const result = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/);
+  let productPath = baseUrl;
+  if (result instanceof Array) {
+    [, productPath] = result;
+  }
   return productPath;
 }
 
@@ -38,7 +43,7 @@ export function getAccountUrl(baseUrl = '', user) {
   )}&username=${encodeURI(user.name)}`;
 }
 
-export function getStopImpersonationUrl(baseUrl = '') { 
+export function getStopImpersonationUrl(baseUrl = '') {
   const productPath = getProductPath(baseUrl);
   return `https://admin${
     productPath.includes('local') ? '-next.local' : ''
@@ -101,6 +106,31 @@ const NavBarVerticalRule = styled.div`
   display: ${props => (props.isImpersonation ? `none` : `block`)};
 `;
 
+/**
+ * A11Y feature: A skip to main content link appears when a user is on a screen reader
+ * and the link is in focus. To work properly, each page will need to have an element with the id main
+ * example: <main id="main"></main> This feature is optional
+ */
+const SkipToMainLink = styled(Link)`
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+  :focus {
+    left: auto;
+    top: auto;
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    margin: auto;
+    margin-left: 10px;
+  }
+`;
+
 export function appendMenuItem(ignoreMenuItems, menuItem) {
   if (!ignoreMenuItems) {
     return menuItem;
@@ -115,21 +145,34 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
 class NavBar extends React.Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.user.name !== this.props.user.name ||
-      nextProps.user.email !== this.props.user.email || nextProps.isImpersonation !== this.props.isImpersonation;
+      nextProps.user.email !== this.props.user.email ||
+      nextProps.isImpersonation !== this.props.isImpersonation ||
+      nextProps.products !== this.props.products;
   }
 
   render() {
-    const { activeProduct, user, helpMenuItems, onLogout, isImpersonation } = this.props;
+    const {
+      products,
+      activeProduct,
+      user,
+      helpMenuItems,
+      onLogout,
+      isImpersonation,
+      displaySkipLink
+    } = this.props;
+
     return (
       <NavBarStyled isImpersonation={isImpersonation}>
         <NavBarLeft>
+          {displaySkipLink && <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>}
           <BufferLogo />
           <NavBarVerticalRule />
-          <NavBarProducts activeProduct={activeProduct} />
+          <NavBarProducts products={products} activeProduct={activeProduct} />
         </NavBarLeft>
         <NavBarRight>
           {helpMenuItems && (
             <Select
+              onSelectClick={selectedItem => selectedItem.onItemClick()}
               hideSearch
               capitalizeItemLabel={false}
               customButton={handleClick => (
@@ -145,6 +188,7 @@ class NavBar extends React.Component {
           )}
           <NavBarVerticalRule isImpersonation={isImpersonation} />
           <Select
+            onSelectClick={selectedItem => selectedItem.onItemClick()}
             hideSearch
             capitalizeItemLabel={false}
             xPosition="right"
@@ -194,8 +238,11 @@ class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
-  activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
+  /** The list of available products */
+  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'analyze', 'reply'])),
+
+  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'analyze', 'reply'` */
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
 
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -225,14 +272,17 @@ NavBar.propTypes = {
   ),
   isImpersonation: PropTypes.bool,
 
-  onLogout: PropTypes.func
+  onLogout: PropTypes.func,
+  displaySkipLink: PropTypes.bool,
 };
 
 NavBar.defaultProps = {
+  products: [],
   activeProduct: undefined,
   helpMenuItems: null,
   isImpersonation: false,
-  onLogout: undefined
+  onLogout: undefined,
+  displaySkipLink: false
 };
 
 export default NavBar;

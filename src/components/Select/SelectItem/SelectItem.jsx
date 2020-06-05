@@ -7,7 +7,7 @@ import {
   SelectItemIcon,
   SelectItemTitle,
   SelectItemCustom,
-  CheckIconWrapper,
+  IconWrapper,
   HotKeyPrompt,
   Title,
 } from './style';
@@ -29,9 +29,10 @@ const SelectItem = ({
   hideSearch,
   capitalizeItemLabel,
   isImpersonation,
+  onItemClick,
 }) => (
   <SelectItemStyled
-    onClick={item.onItemClick || onClick}
+    onClick={onItemClick || onClick}
     hovered={hovered}
     id={getItemId(item)}
     disabled={item.disabled}
@@ -44,9 +45,9 @@ const SelectItem = ({
       hasComponent={item.component}
     >
       {item.selected && (
-        <CheckIconWrapper>
+        <IconWrapper>
           <Checkmark color="grayDarker" />
-        </CheckIconWrapper>
+        </IconWrapper>
       )}
       {item.icon && (
         <SelectItemIcon hovered={hovered} isImpersonation={isImpersonation}>{item.icon}</SelectItemIcon>
@@ -57,11 +58,11 @@ const SelectItem = ({
         title={item[keyMap ? keyMap.title : 'title']}
       >
         {item.component && (
-          <CheckIconWrapper>
+          <IconWrapper custom>
             <SelectItemCustom
               dangerouslySetInnerHTML={{ __html: item.component(item) }}
             />
-          </CheckIconWrapper>
+          </IconWrapper>
         )}
         <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
       </SelectItemTitle>
@@ -85,6 +86,9 @@ SelectItem.propTypes = {
 
   /** On click function */
   onClick: PropTypes.func.isRequired,
+
+  /** On click function */
+  onItemClick: PropTypes.func.isRequired,
 
   /** Get the id of the item */
   getItemId: PropTypes.func.isRequired,

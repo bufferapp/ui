@@ -1,5 +1,84 @@
 # Changelog
 
+## [5.37.3] - 2020-06-01
+- Allow select to reset even if searching is interrupted 
+
+## [5.37.2] - 2020-05-21
+- add flexibility for height and width in custom icons for Select 
+
+## [5.37.1] - 2020-05-07
+- Improve accessibility of buttons, split buttons and select elements 
+
+## [5.36.0] - 2020-05-04
+- add id and required props for Input component to match the htmlFor from label for a11y
+
+## [5.35.0] - 2020-05-04
+- add a hidden skip to main content link in the navbar
+
+## [5.34.6] - 2020-04-21
+- add flex-shrink in select for when text overflows
+
+## [5.34.5] - 2020-04-13
+- aligns items in select
+
+## [5.34.4] - 2020-04-13
+- adds modal and carousel animations
+
+## [5.34.3] - 2020-04-07
+- allow clicks on Links inside of modal
+
+## [5.34.2] - 2020-04-07
+- Allow NavBar to re-render if the contents of "products" prop changes.
+
+## [5.34.1] - 2020-04-06
+- Fix tests.
+
+## [5.34.0] - 2020-04-06
+- Adds 'featureFlips' parameter in AppShell.
+
+## [5.33.3] - 2020-04-06
+- moves the close button on the modal closer
+
+## [5.33.2] - 2020-04-03
+- darkens the modal overlay background
+
+## [5.33.1] - 2020-04-03
+### Fixed
+- moves close button closer to the modal content
+- focuses the modal after open so that ESC works right away
+- removes buttons and nav in the carousel if there's only 1 item
+- adds click anywhere outside the modal to close for modals with closeButton
+- adds opacity option to tooltip
+
+## [5.33.0] - 2020-03-30
+### Fixed
+- Fixed AppShell bug, not clicking on help items
+
+## [5.32.0] - 2020-03-25
+### Fixed
+- Extends Modal component with width, noBackground and closeButton props
+
+## [5.31.0] - 2020-03-25
+### Fixed
+- Fixed AppShell after 5.30.0 fix to close popup when selecting an item in the menu
+
+## [5.30.0] - 2020-03-25
+### Fixed
+- Fixed toggle for Select component when Select uses Custom Button.
+
+## [5.29.0] - 2020-03-19
+### Added
+- New icons - Carousel, InstagramComment, InstagramLike, Movie
+
+## [5.28.0] - 2020-03-16
+### Added
+- Carousel component.
+
+## [5.27.0] - 2020-03-03
+### Added
+- Link component.
+- Deprecation warning for Link Button.
+
 ## [5.26.0] - 2020-02-24
 ### Fixed
 - *red*, *blueLighter*, *green* and *redLight* color codes.
@@ -60,8 +139,6 @@
 ## [5.18.0] - 2019-11-26
 ### Fixed
 - Added the ability to display the icon at the end of buttons, using iconEnd attribute
-
-# Changelog
 
 ## [5.17.3] - 2019-11-06
 ### Fixed

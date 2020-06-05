@@ -13,6 +13,7 @@ export default class Input extends React.Component {
       help,
       label,
       maxLength,
+      id,
       name,
       onChange,
       onBlur,
@@ -23,11 +24,12 @@ export default class Input extends React.Component {
       type,
       value,
       forwardedRef,
+      required,
     } = this.props;
     return (
       <Styles.InputWrapper>
         {label.length > 0 && (
-          <Text htmlFor={name} type="label">
+          <Text htmlFor={id} type="label">
             {label}
           </Text>
         )}
@@ -36,6 +38,7 @@ export default class Input extends React.Component {
             disabled={disabled}
             hasError={hasError}
             maxLength={maxLength}
+            id={id}
             name={name}
             onChange={onChange}
             onBlur={onBlur}
@@ -46,6 +49,8 @@ export default class Input extends React.Component {
             size={size}
             value={value}
             ref={forwardedRef}
+            required={required}
+            aria-required={required ? true: undefined}
           />
         </Styles.InputFieldWrapper>
         {help.length > 0 && (
@@ -66,9 +71,13 @@ Input.propTypes = {
   disabled: PropTypes.bool,
   /** It colors the field in red. */
   hasError: PropTypes.bool,
+  /** Marks the input as required */
+  required: PropTypes.bool,
   /** It adds an help text below the input box. */
   help: PropTypes.string,
-  /** It adds a label on top of the input box. */
+  /** Id to link label with input for a11y */
+  id: PropTypes.string,
+  /** It adds a label on top of the input box. Make sure you also add an id for a11y */
   label: PropTypes.string,
   /** It adds a maxlength option for the input. */
   maxLength: PropTypes.string,
@@ -103,7 +112,9 @@ Input.propTypes = {
 Input.defaultProps = {
   disabled: false,
   hasError: false,
+  required: false,
   help: '',
+  id: '',
   label: '',
   placeholder: '',
   size: 'regular',

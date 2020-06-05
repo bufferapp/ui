@@ -14,3 +14,5 @@ export { default as ProgressBar} from './ProgressBar';
 export { default as SocialButton} from './SocialButton';
 export { default as Loader } from './Loader';
 export { default as TextArea } from './TextArea';
+export { default as Link } from './Link';
+export { default as Carousel } from './Carousel';

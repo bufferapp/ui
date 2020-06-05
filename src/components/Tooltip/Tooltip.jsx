@@ -95,7 +95,7 @@ class Tooltip extends React.Component {
   );
 
   render() {
-    const { children, label, position, hotkey, customLabel } = this.props;
+    const { children, label, position, hotkey, customLabel, opacity } = this.props;
 
     // @todo: remove style from here and use the Styled component
     // We are currently adding the stylings with the style tag,
@@ -108,6 +108,7 @@ class Tooltip extends React.Component {
           label={this.renderLabel(label, hotkey, customLabel)}
           position={(triggerRect, tooltipRect) => this.getTooltipPosition(triggerRect, tooltipRect, position)}
           style={Styles.TooltipStyle}
+          opacity={opacity}
         >
           <div>
             {children}
@@ -133,6 +134,9 @@ Tooltip.propTypes = {
 
   /** Custom Label */
   customLabel: PropTypes.node,
+
+  /** Custom Opacity */
+  opacity: PropTypes.number,
 };
 
 Tooltip.defaultProps = {
@@ -140,6 +144,7 @@ Tooltip.defaultProps = {
   position: 'bottom',
   hotkey: '',
   customLabel: '',
+  opacity: 1
 };
 
 export default Tooltip;
