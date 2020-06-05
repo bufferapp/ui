@@ -49,7 +49,6 @@ const orgSwitcher = {
           id: '1',
           title: '@lunnaflyers',
           network: 'instagram',
-          onItemClick: () => console.info('lunnaflyers'),
         },
         {
           id: '2',
@@ -58,7 +57,7 @@ const orgSwitcher = {
         },
         {
           id: '3',
-          title: 'Lunna Sneakers US',
+          title: 'Lunna Sneakers US Page',
           network: 'facebook',
         },
         {
@@ -66,11 +65,21 @@ const orgSwitcher = {
           title: 'Lunna Sneakers',
           network: 'pinterest',
         },
+        {
+          id: '5',
+          title: 'Lunna Sneakers US',
+          network: 'facebook',
+        },
+        {
+          id: '6',
+          title: '@lunnastwitter',
+          network: 'twitter',
+        },
       ],
     },
     {
       id: '2',
-      title: 'My Organization 2',
+      title: 'My Organization Super Long',
       selected: true,
       onItemClick: () => console.info('My Organization 2'),
       subItems: [

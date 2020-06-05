@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import ChevronUpIcon from '../Icon/Icons/ChevronUp';
 import {
   blue,
   gray,
@@ -79,10 +78,9 @@ export const ButtonItemStyled = styled.button`
 `;
 
 export const ButtonLabel = styled.div`
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   margin-left: ${props => (props.hasIcon ? '5px' : '21px')};
   margin-right: ${props => (props.hasIcon ? '5px' : '0px')};
-`;
-
-export const ChevronLeftIcon = styled(ChevronUpIcon)`
-  transform: rotate(-90deg);
 `;

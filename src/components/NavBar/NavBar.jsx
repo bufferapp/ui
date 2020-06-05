@@ -6,6 +6,10 @@ import {
   ArrowLeft,
   Person as PersonIcon,
   Checkmark as CheckmarkIcon,
+  Instagram as InstagramIcon,
+  Twitter as TwitterIcon,
+  Facebook as FacebookIcon,
+  Pinterest as PinterestIcon,
 } from '../Icon';
 
 import {
@@ -16,6 +20,7 @@ import {
   grayLighter,
   grayDark,
 } from '../style/colors';
+
 import { fontWeightMedium, fontFamily } from '../style/fonts';
 
 import Link from '../Link';
@@ -141,12 +146,29 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
   return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
 }
 
+function getNetworkIcon(item) {
+  if (!item.network) return null;
+
+  switch (item.network) {
+    case 'instagram':
+      return <InstagramIcon size="medium" />;
+    case 'twitter':
+      return <TwitterIcon size="medium" />;
+    case 'facebook':
+      return <FacebookIcon size="medium" />;
+    case 'pinterest':
+      return <PinterestIcon size="medium" />;
+    default:
+    break;
+  }
+}
+
 export function appendOrgSwitcher(orgSwitcher) {
-  if (!orgSwitcher) {
+  if (!orgSwitcher || !orgSwitcher.menuItems) {
     return [];
   }
   
-  orgSwitcher.menuItems.map((item, index) => {
+  return orgSwitcher.menuItems.map((item, index) => {
     item.type = ORG_SWITCHER;
     if (orgSwitcher.title && index === 0) {
       item.hasDivider = true;
@@ -155,10 +177,13 @@ export function appendOrgSwitcher(orgSwitcher) {
     if (item.selected) {
       item.icon = <CheckmarkIcon color={green} />;
     }
+    if (item.subItems) {
+      item.subItems.forEach(subItem => {
+        subItem.icon = getNetworkIcon(subItem);
+      });
+    }
     return item;
-  })
-
-  return orgSwitcher.menuItems;
+  });
 }
 
 /**
@@ -183,7 +208,11 @@ class NavBar extends React.Component {
       displaySkipLink,
       orgSwitcher,
     } = this.props;
-    const orgSwitcherHasItems = orgSwitcher && orgSwitcher.menuItems && orgSwitcher.menuItems.length > 0;
+
+    const orgSwitcherHasItems =
+      orgSwitcher &&
+      orgSwitcher.menuItems &&
+      orgSwitcher.menuItems.length > 0;
 
     return (
       <NavBarStyled aria-label="Main menu">

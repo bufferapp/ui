@@ -1,6 +1,6 @@
 import React from 'react';
 import AppShell from '@bufferapp/ui/AppShell';
-import { Gear, Pencil } from '@bufferapp/ui/Icon';
+import { Gear } from '@bufferapp/ui/Icon';
 
 import { gray } from '@bufferapp/ui/style/colors';
 
@@ -49,7 +49,6 @@ const orgSwitcher = {
           id: '1',
           title: '@lunnaflyers',
           network: 'instagram',
-          onItemClick: () => console.info('lunnaflyers'),
         },
         {
           id: '2',
@@ -58,7 +57,7 @@ const orgSwitcher = {
         },
         {
           id: '3',
-          title: 'Lunna Sneakers US',
+          title: 'Lunna Sneakers US Page',
           network: 'facebook',
         },
         {
@@ -68,16 +67,19 @@ const orgSwitcher = {
         },
         {
           id: '5',
-          title: 'Edit Organization',
-          hasDivider: true,
-          icon: <Pencil color={gray} />,
-          onItemClick: () => console.info('edit organization'),
+          title: 'Lunna Sneakers US',
+          network: 'facebook',
+        },
+        {
+          id: '6',
+          title: '@lunnastwitter',
+          network: 'twitter',
         },
       ],
     },
     {
       id: '2',
-      title: 'My Organization 2',
+      title: 'My Organization Super Long',
       selected: true,
       onItemClick: () => console.info('My Organization 2'),
       subItems: [

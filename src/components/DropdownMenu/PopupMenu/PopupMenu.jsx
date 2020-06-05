@@ -4,16 +4,18 @@ import PropTypes from 'prop-types';
 import { Item, ItemDividerTitle } from '../style';
 import { PopupMenuStyled, ItemDivider } from './style';
 import ButtonItem from '../ButtonItem/ButtonItem';
-import Submenu from '../Submenu/Submenu';
+import Tooltip from '../../Tooltip/Tooltip';
 import { keyCode } from '../keyCode';
+import TooltipLabel from '../TooltipLabel/TooltipLabel';
+
+const OptionalWrapper = ({ condition, wrapper, children }) =>
+  condition ? wrapper(children) : children;
 
 export default class PopupMenu extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      isOpenSubmenu: false,
-      openedSubmenu: -1,
       focusedItem: -1,
     };
 
@@ -29,9 +31,7 @@ export default class PopupMenu extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.isOpen) {
-      this.updateIfNeeded(prevProps);
-    }
+    this.updateIfNeeded(prevProps);
   }
 
   componentWillUnmount() {
@@ -45,29 +45,9 @@ export default class PopupMenu extends React.Component {
     this.setState({ focusedItem: -1 });
   };
 
-  toggleSubMenu = () => {
-    if (!this.isSubmenuOpen()) {
-      const { focusedItem } = this.state;
-      this.openSubMenu(focusedItem);
-    } else {
-      this.closeSubMenu();
-    }
-  };
-
-  openSubMenu = index => {
-    this.setState({ isOpenSubmenu: true, openedSubmenu: index });
-  };
-
-  closeSubMenu = () => {
-    this.setState({ isOpenSubmenu: false, openedSubmenu: -1 });
-    this.focusPopup();
-  };
-
-  isSubmenuOpen = () => this.state.isOpenSubmenu;
-
   isPopupOpen = () => this.props.isOpen;
 
-  hasSubMenu = item => item.subItems && item.subItems.length > 0;
+  hasSubItems = item => item.subItems && item.subItems.length > 0;
 
   isFirstItem = index => index === this.firstItem;
 
@@ -107,31 +87,17 @@ export default class PopupMenu extends React.Component {
       case this.keyCode.DOWN:
         if (this.isPopupOpen()) {
           this.setFocusToNextItem();
-          this.closeSubMenu();
         }
         flag = true;
         break;
       case this.keyCode.UP:
         if (this.isPopupOpen()) {
           this.setFocusToPreviousItem();
-          this.closeSubMenu();
         }
-        flag = true;
-        break;
-      case this.keyCode.LEFT: {
-        const { focusedItem } = this.state;
-        this.openSubMenu(focusedItem);
-        flag = true;
-        break;
-      }
-      case this.keyCode.RIGHT:
-        this.closeSubMenu();
-        this.focusPopup();
         flag = true;
         break;
       case this.keyCode.ESC:
       case this.keyCode.TAB:
-        this.closeSubMenu();
         this.closePopup();
         break;
       default:
@@ -144,101 +110,86 @@ export default class PopupMenu extends React.Component {
     }
   };
 
-  handleSubmenuBlur = (event, isOpen) => {
-    const outsideOfPopup = !event.currentTarget.contains(event.relatedTarget);
-    setTimeout(() => {
-      if (isOpen && outsideOfPopup) {
-        this.closeSubMenu();
-      }
-    }, 300);
-
-    event.stopPropagation();
-    event.preventDefault();
-  };
-
   focusPopup = () => {
     const { focusedItem } = this.state;
     this.popup.focus();
     this.setFocusToItem(focusedItem);
-  }
+  };
 
   focusPopupToFirstItem = () => {
     this.popup.focus();
     this.setFocusToItem(0);
-  }
+  };
 
-  onButtonMouseOver = index => {
-    this.setFocusToItem(index);
-    const { focusedItem } = this.state;
-    this.openSubMenu(focusedItem);
-  }
+  onButtonMouseOver = () => {};
 
-  onButtonMouseOut = () => {}
+  onButtonMouseOut = () => {};
 
-  onButtonFocus = () => {}
+  onButtonFocus = () => {};
 
-  onButtonBlur = () => {}
+  onButtonBlur = () => {};
 
   updateIfNeeded(prevProps) {
     const { isOpen } = this.props;
     if (prevProps.isOpen !== isOpen) {
-      this.focusPopupToFirstItem();
+      if (isOpen) {
+        this.focusPopupToFirstItem();
+      } else {
+        this.setFocusToItem(-1);
+      }
     }
   }
 
-  renderSubMenu = (item, index) => {
-    if (!this.hasSubMenu(item)) return null;
-
-    const { subItems } = item;
-    const isOpen = this.state.isOpenSubmenu && index === this.state.openedSubmenu;
-
-    return (
-      <Submenu
-        header="Social Accounts"
-        aria-label="Profiles Menu"
-        xPosition="left"
-        horizontalOffset="-10px"
-        isOpen={isOpen}
-        closeSubMenu={this.closeSubMenu}
-        onBlur={event => this.handleSubmenuBlur(event, isOpen)}
-        items={subItems}
-      />
-    );
-  };
-
   renderItems = items => {
     const { focusedItem } = this.state;
-    
+
     return items.map((item, index) => {
-      const hasSubMenu = this.hasSubMenu(item);
-      const shouldFocus = index === focusedItem && !this.isSubmenuOpen();
+      const hasSubItems = this.hasSubItems(item);
+      const shouldFocus = index === focusedItem;
       const type = index === 0 ? 'header' : '';
 
       return [
         item.hasDivider && (
-          <ItemDivider key={`${item.id}--divider`} role="none" type={type}>
+          <ItemDivider
+            key={`${item.id}--divider`}
+            role="none"
+            type={type}
+          >
             {item.dividerTitle && (
               <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
             )}
           </ItemDivider>
         ),
-        <Item
-          key={`item-${index}`}
-          role="none"
-          type={item.type}
-          onMouseOver={() => this.onButtonMouseOver(index)}
-          onMouseOut={this.onButtonMouseOut}
-          onFocus={this.onButtonFocus}
-          onBlur={this.onButtonBlur}
+        <OptionalWrapper
+          key={`item-wrapper-${index}`}
+          condition={hasSubItems}
+          wrapper={children => (
+            <Tooltip
+              customLabel={<TooltipLabel maxItems={5} items={item.subItems} />}
+              position="left"
+              verticalAlignment="top"
+            >
+              {children}
+            </Tooltip>
+          )}
         >
-          <ButtonItem
-            index={index}
-            item={item}
-            shouldFocus={shouldFocus}
-            ariaHaspopup={hasSubMenu}
-          />
-          {hasSubMenu && this.renderSubMenu(item, index)}
-        </Item>,
+          <Item
+            key={`item-${index}`}
+            role="none"
+            type={item.type}
+            onMouseOver={() => this.onButtonMouseOver(index)}
+            onMouseOut={this.onButtonMouseOut}
+            onFocus={this.onButtonFocus}
+            onBlur={this.onButtonBlur}
+          >
+            <ButtonItem
+              index={index}
+              item={item}
+              shouldFocus={shouldFocus}
+              ariaHaspopup={false}
+            />
+          </Item>
+        </OptionalWrapper>,
       ];
     });
   };
