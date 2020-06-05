@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonItemStyled, ButtonLabel } from '../style';
+import { Checkmark as CheckmarkIcon } from '../../Icon';
+import { green } from '../../style/colors';
 
 export default class ButtonItem extends React.Component {
   constructor(props) {
@@ -47,10 +49,10 @@ export default class ButtonItem extends React.Component {
 
   render() {
     const {
-      item: { title, onItemClick, icon },
+      item: { type, title, onItemClick, icon, selected },
       ariaHaspopup,
     } = this.props;
-    const hasIcon = !!icon;
+    const hasIcon = !!icon || !!selected;
 
     return (
       <ButtonItemStyled
@@ -66,8 +68,9 @@ export default class ButtonItem extends React.Component {
         tabIndex={this.state.tabIndex}
         aria-haspopup={ariaHaspopup}
       >
+        {selected && <CheckmarkIcon color={green} />}
         {icon || null}
-        <ButtonLabel hasIcon={hasIcon}>{title}</ButtonLabel>
+        <ButtonLabel hasIcon={hasIcon} type={type}>{title}</ButtonLabel>
       </ButtonItemStyled>
     );
   }

@@ -70,6 +70,7 @@ export default function ExampleDropdownMenu() {
           </MenuItem>
         )}
         items={menuItems}
+        xPosition="left"
       />
     </Navigation>
   );

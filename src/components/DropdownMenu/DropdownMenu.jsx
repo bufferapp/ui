@@ -96,6 +96,7 @@ export default class DropdownMenu extends React.Component {
       ariaLabel,
       ariaLabelPopup,
       horizontalOffset,
+      xPosition,
     } = this.props;
 
     const MenubarItem = React.cloneElement(menubarItem);
@@ -107,7 +108,7 @@ export default class DropdownMenu extends React.Component {
         aria-label={ariaLabel}
         usingMouse={this.state.usingMouse}
       >
-        <Item role="none">
+        <Item role="none" menuOption>
           <MenubarItem.type
             {...MenubarItem.props}
             role="menuitem"
@@ -118,7 +119,7 @@ export default class DropdownMenu extends React.Component {
           />
           <PopupMenu
             role="menu"
-            xPosition="right"
+            xPosition={xPosition}
             items={items}
             aria-label={ariaLabelPopup}
             horizontalOffset={horizontalOffset}
@@ -143,6 +144,8 @@ DropdownMenu.propTypes = {
   /** Aria label for popup menu, it should preferibly be the same as the menubarItem name */
   ariaLabelPopup: PropTypes.string,
 
+  xPosition: PropTypes.string,
+
   /** Items list to display in the popup menu */
   items: PropTypes.arrayOf(
     PropTypes.shape({
@@ -154,4 +157,5 @@ DropdownMenu.propTypes = {
 
 DropdownMenu.defaultProps = {
   ariaLabelPopup: null,
+  xPosition: "right",
 };

@@ -5,7 +5,6 @@ import {
   Info as InfoIcon,
   ArrowLeft,
   Person as PersonIcon,
-  Checkmark as CheckmarkIcon,
   Instagram as InstagramIcon,
   Twitter as TwitterIcon,
   Facebook as FacebookIcon,
@@ -14,7 +13,6 @@ import {
 
 import {
   gray,
-  green,
   blueDarker,
   grayLight,
   grayLighter,
@@ -174,9 +172,6 @@ export function appendOrgSwitcher(orgSwitcher) {
       item.hasDivider = true;
       item.dividerTitle = orgSwitcher.title;
     }
-    if (item.selected) {
-      item.icon = <CheckmarkIcon color={green} />;
-    }
     if (item.subItems) {
       item.subItems.forEach(subItem => {
         subItem.icon = getNetworkIcon(subItem);
@@ -227,6 +222,7 @@ class NavBar extends React.Component {
         <NavBarRight>
           {helpMenuItems && (
             <DropdownMenu
+              xPosition="right"
               ariaLabel="Help Menu"
               ariaLabelPopup="Help"
               menubarItem={(
@@ -244,6 +240,7 @@ class NavBar extends React.Component {
           )}
           <NavBarVerticalRule />
           <DropdownMenu
+            xPosition="right"
             ariaLabel="Account Menu"
             ariaLabelPopup="Account"
             horizontalOffset="-16px"

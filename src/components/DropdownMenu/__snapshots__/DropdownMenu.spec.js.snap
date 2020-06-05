@@ -7,6 +7,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
   usingMouse={false}
 >
   <ForwardRef(styled.li)
+    menuOption={true}
     role="none"
   >
     <NodeFixture
@@ -33,7 +34,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
       onBlur={[Function]}
       role="menu"
       usingMouse={false}
-      xPosition="right"
+      xPosition="jest-auto-snapshots String Fixture"
     />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>
@@ -46,6 +47,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
   usingMouse={false}
 >
   <ForwardRef(styled.li)
+    menuOption={true}
     role="none"
   >
     <NodeFixture
@@ -72,7 +74,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
       onBlur={[Function]}
       role="menu"
       usingMouse={false}
-      xPosition="right"
+      xPosition="jest-auto-snapshots String Fixture"
     />
   </ForwardRef(styled.li)>
 </ForwardRef(styled.ul)>
@@ -85,6 +87,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
   usingMouse={false}
 >
   <ForwardRef(styled.li)
+    menuOption={true}
     role="none"
   >
     <NodeFixture

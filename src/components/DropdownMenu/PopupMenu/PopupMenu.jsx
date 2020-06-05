@@ -159,7 +159,7 @@ export default class PopupMenu extends React.Component {
             <Tooltip
               customLabel={<TooltipLabel maxItems={5} items={item.subItems} />}
               position="left"
-              verticalAlignment="top"
+              verticalAlign="top"
             >
               {children}
             </Tooltip>

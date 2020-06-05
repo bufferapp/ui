@@ -13,23 +13,22 @@ export const PopupMenuStyled = styled.ul`
   max-width: 200px;
   width: 200px;
   background-color: ${white};
-  top: ${props => (props.isSubmenu ? '-1px' : '100%')};
+  top: 100%;
   bottom: initial;
   margin-bottom: 0;
-  margin-top: ${props => (props.isSubmenu ? '' : '8px')};
+  margin-top: 8px;
   padding: 8px 0;
   transform: translateX(
     ${props => (props.horizontalOffset ? props.horizontalOffset : '0')}
   );
   right: ${props => {
-    const { xPosition, isSubmenu } = props;
-    if (xPosition === 'left' && isSubmenu) return '100%';
-    if (xPosition === 'right' && !isSubmenu) return 0;
+    const { xPosition } = props;
+    if (xPosition === 'right') return 0;
     return '';
   }};
   left: ${props => {
-    const { xPosition, isSubmenu } = props;
-    if (xPosition === 'left' && !isSubmenu) return 0;
+    const { xPosition } = props;
+    if (xPosition === 'left') return 0;
     return '';
   }};
 

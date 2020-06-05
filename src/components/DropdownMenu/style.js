@@ -41,9 +41,14 @@ export const Item = styled.li`
   user-select: none;
   white-space: nowrap;
   background-color: transparent;
-  margin-left: ${props => (props.type === 'header' ? '5px': '')};
-  margin-bottom: ${props => (props.type === 'header' ? '5px': '')};
-  padding: 0 8px;
+  padding: ${props => props.menuOption ? 0 : '0 8px'};
+  margin: ${props => {
+    const { menuOption, type } = props;
+    if (type === 'header') {
+      return '0 0 5px 5px';
+    }
+    return menuOption ? '0 8px' : '';
+  }};
 `;
 
 export const ItemDividerTitle = styled.span`
@@ -81,6 +86,12 @@ export const ButtonLabel = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: ${props => (props.hasIcon ? '5px' : '21px')};
+  margin-left: ${props => {
+    const { hasIcon, type } = props;
+    if (type === ORG_SWITCHER) {
+      return hasIcon ? '5px' : '21px';
+    }
+    return hasIcon ? '5px' : '0px';
+  }};
   margin-right: ${props => (props.hasIcon ? '5px' : '0px')};
 `;
