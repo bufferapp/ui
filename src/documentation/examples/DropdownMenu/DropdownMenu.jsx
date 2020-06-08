@@ -60,15 +60,7 @@ export default function ExampleDropdownMenu() {
       <DropdownMenu
         ariaLabel="Help Menu"
         ariaLabelPopup="Help"
-        menubarItem={(
-          <MenuItem
-            onClick={ev => {
-              ev.preventDefault();
-            }}
-          >
-            Help
-          </MenuItem>
-        )}
+        menubarItem={<MenuItem>Help</MenuItem>}
         items={menuItems}
         xPosition="left"
       />
