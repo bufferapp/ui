@@ -226,11 +226,7 @@ class NavBar extends React.Component {
               ariaLabel="Help Menu"
               ariaLabelPopup="Help"
               menubarItem={(
-                <NavBarHelp
-                  onClick={ev => {
-                    ev.preventDefault();
-                  }}
-                >
+                <NavBarHelp>
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
@@ -244,14 +240,7 @@ class NavBar extends React.Component {
             ariaLabel="Account Menu"
             ariaLabelPopup="Account"
             horizontalOffset="-16px"
-            menubarItem={(
-              <NavBarMenu
-                user={user}
-                onClick={ev => {
-                  ev.preventDefault();
-                }}
-              />
-            )}
+            menubarItem={<NavBarMenu user={user} />}
             items={[
               ...appendOrgSwitcher(orgSwitcher),
               appendMenuItem(user.ignoreMenuItems, {

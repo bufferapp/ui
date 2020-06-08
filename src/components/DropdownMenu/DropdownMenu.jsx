@@ -84,9 +84,6 @@ export default class DropdownMenu extends React.Component {
         this.closePopup();
       }
     }, 300);
-
-    event.stopPropagation();
-    event.preventDefault();
   };
 
   render() {
@@ -115,7 +112,10 @@ export default class DropdownMenu extends React.Component {
             tabIndex="0"
             aria-haspopup="true"
             aria-expanded={this.state.isOpen}
-            onClick={this.togglePopup}
+            onClick={ev => {
+              this.togglePopup();
+              ev.preventDefault();
+            }}
           />
           <PopupMenu
             role="menu"

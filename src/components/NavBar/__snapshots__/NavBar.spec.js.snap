@@ -37,9 +37,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)
-          onClick={[Function]}
-        >
+        <ForwardRef(styled.a)>
           <InfoIcon />
           <ForwardRef(styled.span)>
             Help
@@ -93,7 +91,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
       menubarItem={
         <NavBarMenu
-          onClick={[Function]}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -148,9 +145,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       ariaLabelPopup="Help"
       items={Array []}
       menubarItem={
-        <ForwardRef(styled.a)
-          onClick={[Function]}
-        >
+        <ForwardRef(styled.a)>
           <InfoIcon />
           <ForwardRef(styled.span)>
             Help
@@ -204,7 +199,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
       menubarItem={
         <NavBarMenu
-          onClick={[Function]}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -269,9 +263,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)
-          onClick={[Function]}
-        >
+        <ForwardRef(styled.a)>
           <InfoIcon />
           <ForwardRef(styled.span)>
             Help
@@ -325,7 +317,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
       menubarItem={
         <NavBarMenu
-          onClick={[Function]}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -386,9 +377,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)
-          onClick={[Function]}
-        >
+        <ForwardRef(styled.a)>
           <InfoIcon />
           <ForwardRef(styled.span)>
             Help
@@ -442,7 +431,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
       menubarItem={
         <NavBarMenu
-          onClick={[Function]}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -502,9 +490,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)
-          onClick={[Function]}
-        >
+        <ForwardRef(styled.a)>
           <InfoIcon />
           <ForwardRef(styled.span)>
             Help
@@ -558,7 +544,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       }
       menubarItem={
         <NavBarMenu
-          onClick={[Function]}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -623,9 +608,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)
-          onClick={[Function]}
-        >
+        <ForwardRef(styled.a)>
           <InfoIcon />
           <ForwardRef(styled.span)>
             Help
@@ -679,7 +662,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       }
       menubarItem={
         <NavBarMenu
-          onClick={[Function]}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -755,7 +737,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       }
       menubarItem={
         <NavBarMenu
-          onClick={[Function]}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",

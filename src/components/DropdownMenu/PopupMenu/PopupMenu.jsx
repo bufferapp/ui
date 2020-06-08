@@ -17,6 +17,7 @@ export default class PopupMenu extends React.Component {
 
     this.state = {
       focusedItem: -1,
+      tabIndex: '-1',
     };
 
     this.firstItem = props.items.length > 0 ? 0 : -1;
@@ -55,10 +56,6 @@ export default class PopupMenu extends React.Component {
 
   setFocusToItem = index => {
     this.setState({ focusedItem: index });
-  };
-
-  setFocusToFirstItem = () => {
-    this.setFocusToItem(0);
   };
 
   setFocusToNextItem = () => {
@@ -110,25 +107,24 @@ export default class PopupMenu extends React.Component {
     }
   };
 
-  focusPopup = () => {
-    const { focusedItem } = this.state;
+  focusPopupToItem = index => {
     this.popup.focus();
-    this.setFocusToItem(focusedItem);
-  };
-
-  focusPopupToFirstItem = () => {
-    this.popup.focus();
-    this.setFocusToItem(0);
+    this.setFocusToItem(index);
   };
 
   updateIfNeeded(prevProps) {
-    const { isOpen } = this.props;
+    const { isOpen, usingMouse } = this.props;
+    let newTabIndex = '-1';
+
     if (prevProps.isOpen !== isOpen) {
       if (isOpen) {
-        this.focusPopupToFirstItem();
+        if (usingMouse) newTabIndex = '0';
+        this.focusPopupToItem(0);
       } else {
         this.setFocusToItem(-1);
       }
+
+      this.setState({ tabIndex: newTabIndex });
     }
   }
 
@@ -201,6 +197,7 @@ export default class PopupMenu extends React.Component {
         xPosition={xPosition}
         horizontalOffset={horizontalOffset}
         onBlur={onBlur}
+        tabIndex={this.state.tabIndex}
       >
         {this.renderItems(items)}
       </PopupMenuStyled>

@@ -37,6 +37,9 @@ export const PopupMenuStyled = styled.ul`
       outline: 1px solid ${blue};
     }
   }
+  &:focus {
+    outline: none
+  }
 `;
 
 export const ItemDivider = styled.li`
