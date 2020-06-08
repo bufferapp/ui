@@ -93,36 +93,30 @@ const getLogo = (product) => {
   }
 }
 
-const NavBarProducts = ({ products, activeProduct }) => {
-  const visibleProducts = products.filter(product => product.visible);
-
-  return (
-    <StlyedNavBarProducts>
-      {visibleProducts.map(({ id, enabled, enableURL, isNew }) => (
-        <ProductLink
-          active={activeProduct === id}
-          href={enabled ? `https://${id}.buffer.com` : enableURL}
-          key={id}
-          id={`product-${id}`}
-        >
-          {getLogo(id)}
-          <ProductText>
-            {id}
-          </ProductText>
-          {isNew && <NewLabel>New!</NewLabel>}
-        </ProductLink>
-      ))}
-    </StlyedNavBarProducts>
-  );
-}
+const NavBarProducts = ({ products, activeProduct }) => (
+  <StlyedNavBarProducts>
+    {products.map(({ id, href, isNew }) => (
+      <ProductLink
+        active={activeProduct === id}
+        href={href}
+        key={id}
+        id={`product-${id}`}
+      >
+        {getLogo(id)}
+        <ProductText>
+          {id}
+        </ProductText>
+        {isNew && <NewLabel>New!</NewLabel>}
+      </ProductLink>
+    ))}
+  </StlyedNavBarProducts>
+);
 
 NavBarProducts.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     isNew: PropTypes.bool,
-    visible: PropTypes.bool,
-    enabled: PropTypes.bool,
-    enableURL: PropTypes.string
+    href: PropTypes.string
   })),
 
   activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),

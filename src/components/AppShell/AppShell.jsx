@@ -31,30 +31,30 @@ const AppShell = ({
 }) => {
 
   const engageEnabled = enabledProducts.includes('engage');
+  const engageAccess = featureFlips.includes('engageRollOut');
 
-  const products = [
-    {
-      id: 'publish',
-      isNew: false,
-      visible: true,
-      enabled: true,
-      enableURL: null
-    },
-    {
-      id: 'analyze',
-      isNew: false,
-      visible: true,
-      enabled: true,
-      enableURL: null
-    },
-    {
-      id: 'engage',
-      isNew: true,
-      visible: engageEnabled || featureFlips.includes('engageRollOut'),
-      enabled: engageEnabled,
-      enableURL: ENABLE_ENGAGE_URL
+  let products = ['publish', 'analyze'];
+  if (engageEnabled || engageAccess) {
+    products.push('engage');
+  }
+
+  products = products.map(product => {
+    const productURL = `https://${product}.buffer.com`;
+
+    if (product === 'engage') {
+      return {
+        id: product,
+        isNew: true,
+        href: engageEnabled ? productURL : ENABLE_ENGAGE_URL
+      }
     }
-  ];
+
+    return {
+      id: product,
+      isNew: false,
+      href: productURL
+    }
+  });
 
   return (
     <AppShellStyled>

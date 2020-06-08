@@ -220,9 +220,7 @@ NavBar.propTypes = {
   products: PropTypes.arrayOf(PropTypes.shape({
     id: PropTypes.string,
     isNew: PropTypes.bool,
-    visible: PropTypes.bool,
-    enabled: PropTypes.bool,
-    enableURL: PropTypes.string
+    href: PropTypes.string
   })),
 
   /** The currently active (highlighted) product in the `NavBar`. */
