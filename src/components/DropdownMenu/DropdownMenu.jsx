@@ -112,6 +112,7 @@ export default class DropdownMenu extends React.Component {
             tabIndex="0"
             aria-haspopup="true"
             aria-expanded={this.state.isOpen}
+            onKeyDown={ev => this.handleKeydown(ev)}
             onClick={ev => {
               this.togglePopup();
               ev.preventDefault();

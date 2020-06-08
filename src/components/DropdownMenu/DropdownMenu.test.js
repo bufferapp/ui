@@ -3,6 +3,7 @@ import React from 'react';
 import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import DropdownMenu from './DropdownMenu';
+import { keyCode } from './keyCode';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -35,7 +36,7 @@ describe('DropdownMenu component', () => {
       <DropdownMenu
         ariaLabel="Help Menu"
         ariaLabelPopup="Help"
-        menubarItem={<div>Help</div>}
+        menubarItem={<a href="/#">Help</a>}
         items={items}
         xPosition="left"
       />
@@ -55,5 +56,39 @@ describe('DropdownMenu component', () => {
 
     expect(instance.props.items[0].onItemClick).toHaveBeenCalled();
     expect(instance.props.items[0].onItemClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('should navigate menu with with keyboard and select an option', () => {
+    const wrapper = mount(
+      <DropdownMenu
+        ariaLabel="Help Menu"
+        ariaLabelPopup="Help"
+        menubarItem={<a href="/#">Help Menu</a>}
+        items={items}
+        xPosition="left"
+      />
+    );
+
+    const instance = wrapper.instance();
+    const helpMenuButton = wrapper.find('a').at(0);
+    helpMenuButton.simulate('keydown', { key: 'Enter', keyCode: keyCode.RETURN });
+    expect(wrapper.state().isOpen).toBe(true);
+
+    const popupMenu = wrapper.find('ul').at(1);
+    const childState = wrapper.find('PopupMenu').instance();
+    expect(childState.state.focusedItem).toBe(0);
+
+    popupMenu.simulate('keydown', { key: 'Down', keyCode: keyCode.DOWN });
+    expect(childState.state.focusedItem).toBe(1);
+    
+    popupMenu.simulate('keydown', { key: 'Down', keyCode: keyCode.DOWN });
+    expect(childState.state.focusedItem).toBe(2);
+
+    const menuItems = wrapper.find('button');
+    const firstButton = menuItems.at(2);
+    firstButton.simulate('keydown', { key: 'Enter', keyCode: keyCode.RETURN });
+
+    expect(instance.props.items[2].onItemClick).toHaveBeenCalled();
+    expect(instance.props.items[2].onItemClick).toHaveBeenCalledTimes(1);
   });
 });

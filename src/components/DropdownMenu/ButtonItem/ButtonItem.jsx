@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ButtonItemStyled, ButtonLabel } from '../style';
 import { Checkmark as CheckmarkIcon } from '../../Icon';
 import { green } from '../../style/colors';
+import { keyCode } from '../keyCode';
 
 export default class ButtonItem extends React.Component {
   constructor(props) {
@@ -11,10 +12,14 @@ export default class ButtonItem extends React.Component {
     this.state = {
       tabIndex: '-1',
     };
+
+    this.keyCode = keyCode;
+    this.handleKeydown = this.handleKeydown.bind(this);
   }
 
   componentDidMount() {
     this.item.addEventListener('click', this.handleClick);
+    this.item.addEventListener('keydown', this.handleKeydown);
   }
 
   componentDidUpdate(prevProps) {
@@ -25,6 +30,7 @@ export default class ButtonItem extends React.Component {
 
   componentWillUnmount() {
     this.item.removeEventListener('click', this.handleClick);
+    this.item.removeEventListener('keydown', this.handleKeydown);
   }
 
   setFocusToItem() {
@@ -36,6 +42,28 @@ export default class ButtonItem extends React.Component {
     }
     this.setState({ tabIndex: newTabIndex });
   }
+
+  handleKeydown = event => {
+    let flag = false;
+    switch (event.keyCode) {
+      case this.keyCode.SPACE:
+      case this.keyCode.RETURN: {
+        const { item: { onItemClick } } = this.props;
+        if (onItemClick) {
+          onItemClick();
+          flag = true;
+        }
+        }
+        break;
+      default:
+        break;
+    }
+
+    if (flag) {
+      event.stopPropagation();
+      event.preventDefault();
+    }
+  };
 
   handleClick = () => {
     this.item.focus();
@@ -60,6 +88,7 @@ export default class ButtonItem extends React.Component {
         type="button"
         role="menuitem"
         fullWidth
+        onKeyDown={ev => this.handleKeydown(ev)}
         onClick={event => {
           if (onItemClick) onItemClick();
           event.stopPropagation();

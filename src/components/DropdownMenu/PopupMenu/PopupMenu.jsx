@@ -198,6 +198,7 @@ export default class PopupMenu extends React.Component {
         horizontalOffset={horizontalOffset}
         onBlur={onBlur}
         tabIndex={this.state.tabIndex}
+        onKeyDown={ev => this.handleKeydown(ev)}
       >
         {this.renderItems(items)}
       </PopupMenuStyled>
