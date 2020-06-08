@@ -225,6 +225,7 @@ PopupMenu.propTypes = {
   /** Aria label for popup menu, it should preferibly be the same as the menubarItem name */
   ariaLabelPopup: PropTypes.string,
 
+  /** Determines if the user is using the mouse to navigate in the menu */
   usingMouse: PropTypes.bool,
 
   /** Items list to display in the popup menu */

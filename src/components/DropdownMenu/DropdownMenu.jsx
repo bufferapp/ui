@@ -145,6 +145,7 @@ DropdownMenu.propTypes = {
   /** Aria label for popup menu, it should preferibly be the same as the menubarItem name */
   ariaLabelPopup: PropTypes.string,
 
+  /** xPosition for Dropdown menu */
   xPosition: PropTypes.string,
 
   /** Items list to display in the popup menu */

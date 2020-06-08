@@ -36,68 +36,6 @@ const helpMenuItems = [
   },
 ];
 
-const orgSwitcher = {
-  title: 'Organizations',
-  menuItems: [
-    {
-      id: '1',
-      title: 'My Organization 1',
-      selected: false,
-      onItemClick: () => console.info('My Organization 1'),
-      subItems: [
-        {
-          id: '1',
-          title: '@lunnaflyers',
-          network: 'instagram',
-        },
-        {
-          id: '2',
-          title: '@lunnasneakers',
-          network: 'twitter',
-        },
-        {
-          id: '3',
-          title: 'Lunna Sneakers US Page',
-          network: 'facebook',
-        },
-        {
-          id: '4',
-          title: 'Lunna Sneakers',
-          network: 'pinterest',
-        },
-        {
-          id: '5',
-          title: 'Lunna Sneakers US',
-          network: 'facebook',
-        },
-        {
-          id: '6',
-          title: '@lunnastwitter',
-          network: 'twitter',
-        },
-      ],
-    },
-    {
-      id: '2',
-      title: 'My Organization Super Long',
-      selected: true,
-      onItemClick: () => console.info('My Organization 2'),
-      subItems: [
-        {
-          id: '1',
-          title: '@bufferinsta',
-          network: 'instagram',
-        },
-        {
-          id: '2',
-          title: '@buffer',
-          network: 'twitter',
-        },
-      ],
-    },
-  ],
-};
-
 /** AppShell Example */
 export default function ExampleAppShell() {
   return (
@@ -113,7 +51,6 @@ export default function ExampleAppShell() {
       helpMenuItems={helpMenuItems}
       content={<div>Main content.</div>}
       displaySkipLink
-      orgSwitcher={orgSwitcher}
     />
   );
 }
