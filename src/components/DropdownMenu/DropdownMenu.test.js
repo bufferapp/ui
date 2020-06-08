@@ -56,6 +56,8 @@ describe('DropdownMenu component', () => {
 
     expect(instance.props.items[0].onItemClick).toHaveBeenCalled();
     expect(instance.props.items[0].onItemClick).toHaveBeenCalledTimes(1);
+
+    wrapper.unmount();
   });
 
   it('should navigate menu with with keyboard and select an option', () => {
@@ -69,26 +71,31 @@ describe('DropdownMenu component', () => {
       />
     );
 
-    const instance = wrapper.instance();
+    const dropdownInstance = wrapper.instance();
     const helpMenuButton = wrapper.find('a').at(0);
     helpMenuButton.simulate('keydown', { key: 'Enter', keyCode: keyCode.RETURN });
     expect(wrapper.state().isOpen).toBe(true);
 
-    const popupMenu = wrapper.find('ul').at(1);
-    const childState = wrapper.find('PopupMenu').instance();
-    expect(childState.state.focusedItem).toBe(0);
+    const popupMenu = wrapper.find('PopupMenu');
+    const popupMenuInstance = popupMenu.instance();
+    expect(popupMenuInstance.state.focusedItem).toBe(0);
 
     popupMenu.simulate('keydown', { key: 'Down', keyCode: keyCode.DOWN });
-    expect(childState.state.focusedItem).toBe(1);
+    expect(popupMenuInstance.state.focusedItem).toBe(1);
     
     popupMenu.simulate('keydown', { key: 'Down', keyCode: keyCode.DOWN });
-    expect(childState.state.focusedItem).toBe(2);
+    expect(popupMenuInstance.state.focusedItem).toBe(2);
 
     const menuItems = wrapper.find('button');
-    const firstButton = menuItems.at(2);
-    firstButton.simulate('keydown', { key: 'Enter', keyCode: keyCode.RETURN });
+    const itemButton = menuItems.at(2);
+    itemButton.simulate('keydown', { key: 'Enter', keyCode: keyCode.RETURN });
+    
+    expect(dropdownInstance.props.items[2].onItemClick).toHaveBeenCalled();
+    expect(dropdownInstance.props.items[2].onItemClick).toHaveBeenCalledTimes(1);
 
-    expect(instance.props.items[2].onItemClick).toHaveBeenCalled();
-    expect(instance.props.items[2].onItemClick).toHaveBeenCalledTimes(1);
+    popupMenu.simulate('keydown', { key: 'Escape', keyCode: keyCode.ESC });
+    expect(wrapper.state().isOpen).toBe(false);
+
+    wrapper.unmount();
   });
 });
