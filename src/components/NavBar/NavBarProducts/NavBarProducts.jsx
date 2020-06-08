@@ -106,7 +106,11 @@ const NavBarProducts = ({ products, activeProduct }) => (
         <ProductText>
           {id}
         </ProductText>
-        {isNew && <NewLabel>New!</NewLabel>}
+        {isNew && (
+          <NewLabel aria-label="This is a new product! Give it a try!">
+            New!
+          </NewLabel>
+        )}
       </ProductLink>
     ))}
   </StyledNavBarProducts>
