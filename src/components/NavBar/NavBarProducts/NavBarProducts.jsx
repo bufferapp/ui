@@ -15,7 +15,7 @@ import {
   fontFamily
 } from '../../style/fonts';
 
-const StlyedNavBarProducts = styled.nav`
+const StyledNavBarProducts = styled.nav`
   display: flex;
   position: relative;
   z-index: 2;
@@ -94,7 +94,7 @@ const getLogo = (product) => {
 }
 
 const NavBarProducts = ({ products, activeProduct }) => (
-  <StlyedNavBarProducts>
+  <StyledNavBarProducts>
     {products.map(({ id, href, isNew }) => (
       <ProductLink
         active={activeProduct === id}
@@ -109,7 +109,7 @@ const NavBarProducts = ({ products, activeProduct }) => (
         {isNew && <NewLabel>New!</NewLabel>}
       </ProductLink>
     ))}
-  </StlyedNavBarProducts>
+  </StyledNavBarProducts>
 );
 
 NavBarProducts.propTypes = {

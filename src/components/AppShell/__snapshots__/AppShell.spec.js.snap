@@ -20,25 +20,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enable
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -109,25 +98,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enable
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -198,25 +176,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -287,25 +254,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -376,25 +332,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -455,25 +400,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -544,25 +478,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when boolean prop "disp
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -633,25 +556,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }
@@ -710,25 +622,14 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only requir
     products={
       Array [
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://publish.buffer.com",
           "id": "publish",
           "isNew": false,
-          "visible": true,
         },
         Object {
-          "enableURL": null,
-          "enabled": true,
+          "href": "https://analyze.buffer.com",
           "id": "analyze",
           "isNew": false,
-          "visible": true,
-        },
-        Object {
-          "enableURL": "https://login.buffer.com/signup?product=engage",
-          "enabled": false,
-          "id": "engage",
-          "isNew": true,
-          "visible": false,
         },
       ]
     }

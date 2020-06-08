@@ -15,11 +15,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       products={
         Array [
           Object {
-            "enableURL": "jest-auto-snapshots String Fixture",
-            "enabled": true,
+            "href": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "isNew": true,
-            "visible": true,
           },
         ]
       }
@@ -129,11 +127,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       products={
         Array [
           Object {
-            "enableURL": "jest-auto-snapshots String Fixture",
-            "enabled": true,
+            "href": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "isNew": true,
-            "visible": true,
           },
         ]
       }
@@ -233,11 +229,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       products={
         Array [
           Object {
-            "enableURL": "jest-auto-snapshots String Fixture",
-            "enabled": true,
+            "href": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "isNew": true,
-            "visible": true,
           },
         ]
       }
@@ -446,11 +440,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       products={
         Array [
           Object {
-            "enableURL": "jest-auto-snapshots String Fixture",
-            "enabled": true,
+            "href": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "isNew": true,
-            "visible": true,
           },
         ]
       }
@@ -560,11 +552,9 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       products={
         Array [
           Object {
-            "enableURL": "jest-auto-snapshots String Fixture",
-            "enabled": true,
+            "href": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "isNew": true,
-            "visible": true,
           },
         ]
       }
