@@ -25,7 +25,12 @@ const NavBarMenu = ({ user, onClick, isImpersonation }) => (
   <NavBarStyled onClick={onClick} isImpersonation={isImpersonation}>
     <NavBarUser>
       {isImpersonation && (
-        <NavBarImpersonating user={user}>Impersonating</NavBarImpersonating>
+        <NavBarImpersonating
+          user={user}
+          aria-label="You are impersonating a user"
+        >
+Impersonating
+        </NavBarImpersonating>
       )}
       <NavBarName isImpersonation={isImpersonation}>{user.name}</NavBarName>
       <NavBarEmail isImpersonation={isImpersonation}>{user.email}</NavBarEmail>

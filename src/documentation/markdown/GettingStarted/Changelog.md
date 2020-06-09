@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.38.0] - 2020-06-11
+ - Impersonation support. Change CSS of App Shell dropdown menu when impersonating.
+
 ## [5.37.3] - 2020-06-01
 - Allow select to reset even if searching is interrupted 
 

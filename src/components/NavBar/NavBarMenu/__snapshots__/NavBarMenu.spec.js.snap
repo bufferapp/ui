@@ -37,6 +37,7 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed all props
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.div)
+      aria-label="You are impersonating a user"
       user={
         Object {
           "email": "jest-auto-snapshots String Fixture",
