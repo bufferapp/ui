@@ -43,11 +43,8 @@ export const Item = styled.li`
   background-color: transparent;
   padding: ${props => props.menuOption ? 0 : '0 8px'};
   margin: ${props => {
-    const { menuOption, type } = props;
-    if (type === 'header') {
-      return '0 0 5px 5px';
-    }
-    return menuOption ? '0 8px' : '';
+    const { type } = props;
+    return type === 'header' ? '0 0 5px 5px' : '';
   }};
 `;
 
@@ -79,6 +76,13 @@ export const ButtonItemStyled = styled.button`
   }
   :hover {
     background-color: ${grayLight};
+    svg {
+      fill: ${grayDarker};
+    }
+    & * {
+      color: ${grayDarker};
+      fill: ${grayDarker};
+    }
   }
 `;
 
