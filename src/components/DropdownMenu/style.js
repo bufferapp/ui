@@ -1,12 +1,20 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import {
   blue,
+  white,
   gray,
+  grayDefault,
+  boxShadow,
   grayLight,
   grayDarker,
 } from '../style/colors';
-import { fontFamily, fontWeightMedium } from '../style/fonts';
-import { ButtonBase, medium } from '../Button/style';
+import {
+  fontFamily,
+  fontSize,
+  lineHeight,
+  fontWeightMedium,
+} from '../style/fonts';
+import { borderRadius } from '../style/borders';
 import { ORG_SWITCHER } from '../NavBar/NavBar';
 
 export const DropdownItems = styled.ul`
@@ -59,8 +67,50 @@ export const ItemDividerTitle = styled.span`
   color: ${gray};
 `;
 
+const buttonBase = css`
+  -webkit-appearance: none;
+  align-items: center;
+  background-color: ${white};
+  border: 0;
+  border-radius: ${borderRadius};
+  color: ${grayDefault};
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  font-family: ${fontFamily};
+  font-size: ${fontSize};
+  font-weight: ${fontWeightMedium};
+  line-height: ${lineHeight};
+  min-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  user-select: none;
+  :active {
+    top: 1px;
+  }
+  :focus {
+    box-shadow: 0 0 0 3px ${boxShadow};
+  }
+  :hover {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+  }
+`;
+
+const medium = css`
+  padding-right: 16px;
+  padding-left: 16px;
+  height: 40px;
+`;
+
 export const ButtonItemStyled = styled.button`
-  ${ButtonBase};
+  ${buttonBase};
   ${medium};
   color: ${grayDarker};
   background: none transparent;
