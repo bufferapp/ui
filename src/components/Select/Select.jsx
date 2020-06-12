@@ -129,7 +129,7 @@ export default class Select extends React.Component {
       this.setState(
         {
           isOpen: false,
-          hoveredItem: undefined,
+          hoveredItem: undefined
         },
       );
     }
@@ -201,11 +201,12 @@ export default class Select extends React.Component {
   };
 
   onButtonClick = () => {
-    const { isOpen, items } = this.state;
-    const { isInputSearch } = this.props;
+    const { isOpen } = this.state;
+    const { isInputSearch, items } = this.props;
     this.setState(
       {
         isOpen: !isOpen,
+        items
       },
       () => {
         !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus();
@@ -508,6 +509,7 @@ export default class Select extends React.Component {
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
+              clearSearchOnBlur
             />
           </SearchBarWrapper>
         )}
