@@ -38,12 +38,13 @@ const helpMenuItems = [
   },
 ];
 
-/** AppShell with limited products */
+/** AppShell with Engage enabled */
 export default function ExampleAppShell() {
   return (
     <AppShell
-      featureFlips={[]}
-      activeProduct="publish"
+      featureFlips={['engageRollOut']}
+      enabledProducts={['publish', 'analyze', 'engage']}
+      activeProduct="engage"
       user={{
         name: 'Hamish Macpherson',
         email: 'hamstu@gmail.com',
