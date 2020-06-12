@@ -2,18 +2,13 @@
 
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
-  isImpersonation={false}
   onClick={[MockFunction]}
 >
   <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
-      isImpersonation={false}
-    >
+    <ForwardRef(styled.div)>
       jest-auto-snapshots String Fixture
     </ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
-      isImpersonation={false}
-    >
+    <ForwardRef(styled.div)>
       jest-auto-snapshots String Fixture
     </ForwardRef(styled.div)>
   </ForwardRef(styled.div)>
@@ -32,7 +27,6 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when boolean prop "is
 
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)
-  isImpersonation={true}
   onClick={[MockFunction]}
 >
   <ForwardRef(styled.div)>
@@ -47,14 +41,10 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed all props
     >
       Impersonating
     </ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.div)>
       jest-auto-snapshots String Fixture
     </ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.div)>
       jest-auto-snapshots String Fixture
     </ForwardRef(styled.div)>
   </ForwardRef(styled.div)>
@@ -73,18 +63,13 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed all props
 
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)
-  isImpersonation={false}
   onClick={[MockFunction]}
 >
   <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
-      isImpersonation={false}
-    >
+    <ForwardRef(styled.div)>
       jest-auto-snapshots String Fixture
     </ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
-      isImpersonation={false}
-    >
+    <ForwardRef(styled.div)>
       jest-auto-snapshots String Fixture
     </ForwardRef(styled.div)>
   </ForwardRef(styled.div)>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import {
-  gray, grayDark, grayDarker, grayLight, grayLighter, white, orangeLighter, orangeDark,
+  gray, grayDark, grayDarker, grayLight, grayLighter, white,
 } from '../../style/colors';
 
 import {
@@ -11,7 +11,6 @@ import {
 
 export const NavBarStyled = styled.div`
   align-items: center;
-  background-color: ${props => (props.isImpersonation ? orangeLighter : `#fff`)}; 
   cursor: pointer;
   display: flex;
   height: 100%;
@@ -20,7 +19,7 @@ export const NavBarStyled = styled.div`
   position: relative;
   z-index: 2;
   &:hover {
-    background-color: ${props => (props.isImpersonation ? orangeLighter : grayLighter)};
+    background-color: ${grayLighter};
   }
 `;
 
@@ -33,11 +32,11 @@ export const NavBarUser = styled.div`
 
 export const NavBarImpersonating = styled.div`
   font-family: ${fontFamily};
-  background: ${orangeDark};
+  background: ${grayDarker};
   font-size: 12px;
   font-weight: bold;
   padding: 2px 8px;
-  color: ${orangeLighter};
+  color: ${white};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-top: ${props => (props.user.name ? '-8px' : '-21px')};
@@ -55,7 +54,7 @@ export const NavBarAvatar = styled.div`
 `;
 
 export const NavBarName = styled.div`
-  color: ${props => (props.isImpersonation ? orangeDark : grayDark)};
+  color: ${grayDark};
   font-family: ${fontFamily};
   font-size: 16px;
   font-weight: ${fontWeightMedium};
@@ -66,7 +65,7 @@ export const NavBarName = styled.div`
 `;
 
 export const NavBarEmail = styled.div`
-  color: ${props => (props.isImpersonation ? orangeDark : gray)};
+  color: ${gray};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   max-width: 224px;

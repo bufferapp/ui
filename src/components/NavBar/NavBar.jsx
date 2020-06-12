@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Info as InfoIcon, ArrowLeft, Person as PersonIcon, Cross } from '../Icon';
 
-import { gray, blueDarker, grayLight, grayLighter, grayDark, orangeLighter } from '../style/colors';
+import { gray, blueDarker, grayLight, grayLighter, grayDark } from '../style/colors';
 import {
   fontWeightMedium,
   fontFamily
@@ -53,7 +53,6 @@ export function getStopImpersonationUrl(baseUrl = '') {
 const NavBarStyled = styled.nav`
   background: #fff;
   border-bottom: 1px solid ${gray};
-  border-top: ${props => (props.isImpersonation ? `2px solid ${orangeLighter}` : `none`)};
   box-shadow: 0 1px 10px -5px rgba(0,0,0,.15);
   display: flex;
   height: 56px;
@@ -103,7 +102,6 @@ const NavBarVerticalRule = styled.div`
   transform: translateY(-50%);
   width: 1px;
   z-index: 1;
-  display: ${props => (props.isImpersonation ? `none` : `block`)};
 `;
 
 /**
@@ -162,7 +160,7 @@ class NavBar extends React.Component {
     } = this.props;
 
     return (
-      <NavBarStyled isImpersonation={isImpersonation}>
+      <NavBarStyled>
         <NavBarLeft>
           {displaySkipLink && <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>}
           <BufferLogo />
@@ -186,7 +184,7 @@ class NavBar extends React.Component {
               xPosition="right"
             />
           )}
-          <NavBarVerticalRule isImpersonation={isImpersonation} />
+          <NavBarVerticalRule />
           <Select
             onSelectClick={selectedItem => selectedItem.onItemClick()}
             hideSearch

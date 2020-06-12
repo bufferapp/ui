@@ -24,22 +24,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -85,22 +81,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -146,22 +138,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -207,22 +195,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={false}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -269,22 +253,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -330,22 +310,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
     fullWidth={false}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -391,22 +367,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -452,22 +424,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
     fullWidth={true}
     hasIconOnly={false}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -513,83 +481,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={false}
         hovered={false}
-        isImpersonation={true}
-        item={
-          Object {
-            "id": "jest-auto-snapshots String Fixture",
-            "title": "jest-auto-snapshots String Fixture",
-          }
-        }
-        keyMap={
-          Object {
-            "id": "jest-auto-snapshots String Fixture",
-            "title": "jest-auto-snapshots String Fixture",
-          }
-        }
-        multiSelect={true}
-        onClick={[Function]}
-        onItemClick={[Function]}
-      />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
-`;
-
-exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
-  aria-expanded={true}
-  aria-haspopup="true"
-  data-tip=""
-  fullWidth={true}
-  isSplit={true}
-  onClick={[Function]}
-  onKeyUp={[Function]}
-  role="button"
-  tabIndex={0}
->
-  <ForwardRef(styled.div)
-    disabled={true}
-    type="primary"
-  >
-    <ChevronDownIcon
-      color="grayDark"
-    />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
-    fullWidth={true}
-    hasIconOnly={true}
-    horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={false}
-    isOpen={true}
-    marginTop="jest-auto-snapshots String Fixture"
-    xPosition="right"
-    yPosition="top"
-  >
-    <ForwardRef(styled.ul)
-      isImpersonation={false}
-    >
-      <SelectItem
-        capitalizeItemLabel={true}
-        getItemId={[Function]}
-        hasSelectedItems={false}
-        hideSearch={true}
-        hovered={false}
-        isImpersonation={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -635,22 +538,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -696,22 +595,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -749,22 +644,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -810,22 +701,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -871,22 +758,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -932,22 +815,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -993,22 +872,18 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
-    isImpersonation={true}
     isOpen={true}
     marginTop="jest-auto-snapshots String Fixture"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={true}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={true}
         hovered={false}
-        isImpersonation={true}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",
@@ -1064,21 +939,17 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
   />
   <ForwardRef(styled.div)
     hasIconOnly={false}
-    isImpersonation={false}
     isOpen={false}
     xPosition="left"
     yPosition="bottom"
   >
-    <ForwardRef(styled.ul)
-      isImpersonation={false}
-    >
+    <ForwardRef(styled.ul)>
       <SelectItem
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
         hideSearch={false}
         hovered={false}
-        isImpersonation={false}
         item={
           Object {
             "id": "jest-auto-snapshots String Fixture",

@@ -7,8 +7,6 @@ import {
   gray,
   grayLight,
   grayDarker,
-  orangeLighter,
-  orangeDark,
 } from '../style/colors';
 import { fontFamily } from '../style/fonts';
 
@@ -36,7 +34,7 @@ export const SelectStyled = styled.div`
   min-width: 200px;
   max-width: ${props => (props.fullWidth ? '' : '200px')};
   width: ${props => (props.fullWidth ? '100%' : '200px')};
-  background-color: ${props => (props.isImpersonation ? orangeLighter : white)};
+  background-color: ${white};
   bottom: ${props => (props.yPosition === 'top' ? '100%' : 'initial')};
   top: ${props => (props.yPosition === 'bottom' ? '100%' : 'initial')};
   margin-bottom: ${props => (props.yPosition === 'top' ? '8px' : '0')};
@@ -57,7 +55,7 @@ export const SelectItems = styled.ul`
   overflow-y: auto;
   position: relative;
   z-index: -1;
-  background: ${props => (props.isImpersonation ? orangeLighter : white)};
+  background: ${white};
   border-radius: 4px;
   list-style: none;
   margin: 8px 0px;
@@ -65,7 +63,7 @@ export const SelectItems = styled.ul`
 `;
 
 export const SelectItemDivider = styled.li`
-  background-color: ${props => (props.isImpersonation ? orangeDark : grayLighter)};
+  background-color: ${grayLighter};
   height: 1px;
   margin-bottom: 8px;
   margin-top: 8px;

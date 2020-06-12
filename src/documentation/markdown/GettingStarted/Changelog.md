@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.38.0] - 2020-06-11
+## [5.38.0] - 2020-06-12
  - Impersonation support. Change CSS of App Shell dropdown menu when impersonating.
 
 ## [5.37.3] - 2020-06-01

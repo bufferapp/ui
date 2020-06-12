@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={true}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -29,7 +27,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
-      isImpersonation={false}
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -56,9 +53,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       xPosition="right"
       yPosition="bottom"
     />
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -115,9 +110,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={true}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -143,7 +136,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
-      isImpersonation={false}
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -160,9 +152,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       xPosition="right"
       yPosition="bottom"
     />
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -219,9 +209,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "publish" 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={true}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -247,7 +235,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
-      isImpersonation={false}
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -274,9 +261,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       xPosition="right"
       yPosition="bottom"
     />
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -333,9 +318,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={true}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -357,7 +340,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
-      isImpersonation={false}
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -384,9 +366,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       xPosition="right"
       yPosition="bottom"
     />
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -443,9 +423,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displaySkipLink" is set to: "false" 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={true}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
@@ -466,7 +444,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
-      isImpersonation={false}
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -493,9 +470,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       xPosition="right"
       yPosition="bottom"
     />
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -552,9 +527,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={false}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -580,7 +553,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
-      isImpersonation={false}
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -607,9 +579,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
       xPosition="right"
       yPosition="bottom"
     />
-    <ForwardRef(styled.div)
-      isImpersonation={false}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -666,9 +636,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={true}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -694,7 +662,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       hasIconOnly={false}
       hideSearch={true}
       horizontalOffset="-16px"
-      isImpersonation={false}
       isInputSearch={false}
       isOpen={false}
       isSplit={false}
@@ -721,9 +688,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       xPosition="right"
       yPosition="bottom"
     />
-    <ForwardRef(styled.div)
-      isImpersonation={true}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}
@@ -780,9 +745,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.nav)
-  isImpersonation={false}
->
+<ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
@@ -791,9 +754,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
     />
   </ForwardRef(styled.div)>
   <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
-      isImpersonation={false}
-    />
+    <ForwardRef(styled.div) />
     <Select
       capitalizeItemLabel={false}
       customButton={[Function]}

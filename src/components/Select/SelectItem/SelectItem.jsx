@@ -28,7 +28,6 @@ const SelectItem = ({
   getItemId,
   hideSearch,
   capitalizeItemLabel,
-  isImpersonation,
   onItemClick,
 }) => (
   <SelectItemStyled
@@ -36,7 +35,6 @@ const SelectItem = ({
     hovered={hovered}
     id={getItemId(item)}
     disabled={item.disabled}
-    isImpersonation={isImpersonation}
   >
     <SelectItemLabel
       capitalizeItemLabel={capitalizeItemLabel}
@@ -50,7 +48,7 @@ const SelectItem = ({
         </IconWrapper>
       )}
       {item.icon && (
-        <SelectItemIcon hovered={hovered} isImpersonation={isImpersonation}>{item.icon}</SelectItemIcon>
+        <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
       )}
 
       <SelectItemTitle
@@ -113,9 +111,6 @@ SelectItem.propTypes = {
 
   /** Is it a multi select */
   multiSelect: PropTypes.bool,
-
-  /** Is the current session an impersonation session */
-  isImpersonation: PropTypes.bool,
 };
 
 SelectItem.defaultProps = {
@@ -125,7 +120,6 @@ SelectItem.defaultProps = {
   hideSearch: undefined,
   multiSelect: undefined,
   capitalizeItemLabel: true,
-  isImpersonation: true,
 };
 
 export default SelectItem;
