@@ -3,6 +3,7 @@
 ## [5.38.0] - 2020-06-12
 - Add new icons
 - Remove Reply and add Engage
+- Remove lodash
 
 ## [5.37.3] - 2020-06-01
 - Allow select to reset even if searching is interrupted
