@@ -552,11 +552,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />

@@ -16,6 +16,7 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enable
         },
       ]
     }
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
@@ -94,6 +95,7 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enable
         },
       ]
     }
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
@@ -482,8 +484,16 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when boolean prop "disp
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
