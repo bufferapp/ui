@@ -43,10 +43,14 @@ export function getAccountUrl(baseUrl = '', user) {
   )}&username=${encodeURI(user.name)}`;
 }
 
-export function getStopImpersonationUrl(baseUrl = '') {
-  const productPath = getProductPath(baseUrl);
-  return `https://admin${
-    productPath.includes('local') ? '-next.local' : ''
+export function getStopImpersonationUrl() {
+  const { hostname } = window.location;
+  if (!hostname.endsWith('buffer.com')) {
+    return null;
+  }
+
+  return `https://admin${hostname.includes('local') ?
+    '-next.local' : ''
   }.buffer.com/clearImpersonation`;
 }
 
@@ -213,7 +217,7 @@ class NavBar extends React.Component {
                 hasDivider: user.menuItems && user.menuItems.length > 0,
                 onItemClick: () => {
                   window.location.assign(
-                    getStopImpersonationUrl(window.location.href)
+                    getStopImpersonationUrl()
                   );
                 },
               } : {
