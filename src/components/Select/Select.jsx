@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-expressions, react/no-unused-state */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { includes, some } from 'lodash';
 import helper from 'immutability-helper';
 import SearchIcon from '../Icon/Icons/Search';
 import {
@@ -346,7 +345,7 @@ export default class Select extends React.Component {
 
     const filteredItems = items.reduce((filtered, item) => {
       if (
-        includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase())
+        item[searchFiled].toLowerCase().includes(searchValue.toLowerCase())
       ) {
         filtered.push({
           ...item,
@@ -544,7 +543,7 @@ export default class Select extends React.Component {
               item={item}
               capitalizeItemLabel={capitalizeItemLabel}
               keyMap={keyMap}
-              hasSelectedItems={some(items, { selected: true })}
+              hasSelectedItems={items.some(i => i.selected)}
               onClick={event => this.handleSelectOption(item, event)}
               onItemClick={() => this.handleSelectOption(item, item.onItemClick)}
               hideSearch={hideSearch}
