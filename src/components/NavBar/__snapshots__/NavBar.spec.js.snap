@@ -10,11 +10,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -118,11 +122,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -206,7 +214,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 </ForwardRef(styled.nav)>
 `;
 
-exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "publish" 1`] = `
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.nav)>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
@@ -216,11 +224,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -324,7 +336,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={Array []}
     />
@@ -423,11 +435,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -531,11 +547,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -634,7 +654,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       products={Array []}
     />
   </ForwardRef(styled.div)>
