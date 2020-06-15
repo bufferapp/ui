@@ -1,5 +1,66 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
+<ForwardRef(styled.div)
+  onClick={[MockFunction]}
+>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      jest-auto-snapshots String Fixture
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      jest-auto-snapshots String Fixture
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    avatar="https://s3.amazonaws.com/buffer-ui/Default+Avatar.png"
+    onClick={[MockFunction]}
+  />
+  <ForwardRef(styled.div)>
+    <ChevronDownIcon
+      color="grayLight"
+      size="large"
+    />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.div)
+  onClick={[MockFunction]}
+>
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)
+      aria-label="You are impersonating a user"
+      user={
+        Object {
+          "email": "jest-auto-snapshots String Fixture",
+          "name": "jest-auto-snapshots String Fixture",
+        }
+      }
+    >
+      Impersonating
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      jest-auto-snapshots String Fixture
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      jest-auto-snapshots String Fixture
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    avatar="https://s3.amazonaws.com/buffer-ui/Default+Avatar.png"
+    onClick={[MockFunction]}
+  />
+  <ForwardRef(styled.div)>
+    <ChevronDownIcon
+      color="grayLight"
+      size="large"
+    />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.a)
   onClick={[MockFunction]}

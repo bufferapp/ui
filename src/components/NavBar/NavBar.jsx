@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {
+  Cross,
   Info as InfoIcon,
   ArrowLeft,
   Person as PersonIcon,
@@ -56,6 +57,17 @@ export function getAccountUrl(baseUrl = '', user) {
 }
 
 export const ORG_SWITCHER = 'org_switcher';
+
+export function getStopImpersonationUrl() {
+  const { hostname } = window.location;
+  if (!hostname.endsWith('buffer.com')) {
+    return null;
+  }
+
+  return `https://admin${hostname.includes('local') ?
+    '-next.local' : ''
+  }.buffer.com/clearImpersonation`;
+}
 
 const NavBarStyled = styled.nav`
   background: #fff;
@@ -189,6 +201,7 @@ class NavBar extends React.Component {
     return (
       nextProps.user.name !== this.props.user.name ||
       nextProps.user.email !== this.props.user.email ||
+      nextProps.isImpersonation !== this.props.isImpersonation ||
       nextProps.products !== this.props.products
     );
   }
@@ -201,6 +214,7 @@ class NavBar extends React.Component {
       helpMenuItems,
       onLogout,
       displaySkipLink,
+      isImpersonation,
       orgSwitcher,
     } = this.props;
 
@@ -240,7 +254,8 @@ class NavBar extends React.Component {
             ariaLabel="Account Menu"
             ariaLabelPopup="Account"
             horizontalOffset="-16px"
-            menubarItem={<NavBarMenu user={user} />}
+            isImpersonation={isImpersonation}
+            menubarItem={<NavBarMenu user={user} isImpersonation={isImpersonation} />}
             items={[
               ...appendOrgSwitcher(orgSwitcher),
               appendMenuItem(user.ignoreMenuItems, {
@@ -255,7 +270,17 @@ class NavBar extends React.Component {
                 },
               }),
               ...user.menuItems,
-              appendMenuItem(user.ignoreMenuItems, {
+              appendMenuItem(user.ignoreMenuItems, isImpersonation ? {
+                id: 'Stop Impersonation',
+                title: 'Stop Impersonation',
+                icon: <Cross color={gray} />,
+                hasDivider: user.menuItems && user.menuItems.length > 0,
+                onItemClick: () => {
+                  window.location.assign(
+                    getStopImpersonationUrl()
+                  );
+                },
+              } : {
                 id: 'logout',
                 title: 'Logout',
                 icon: <ArrowLeft color={gray} />,
@@ -275,10 +300,14 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
   /** The list of available products */
-  products: PropTypes.arrayOf(PropTypes.oneOf(['publish', 'analyze', 'reply'])),
+  products: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.string,
+    isNew: PropTypes.bool,
+    href: PropTypes.string
+  })),
 
-  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'analyze', 'reply'` */
-  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'reply']),
+  /** The currently active (highlighted) product in the `NavBar`. */
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
 
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -306,6 +335,7 @@ NavBar.propTypes = {
       onItemClick: PropTypes.func,
     })
   ),
+  isImpersonation: PropTypes.bool,
 
   onLogout: PropTypes.func,
   displaySkipLink: PropTypes.bool,
@@ -328,6 +358,7 @@ NavBar.defaultProps = {
   products: [],
   activeProduct: undefined,
   helpMenuItems: null,
+  isImpersonation: false,
   onLogout: undefined,
   displaySkipLink: false,
   orgSwitcher: undefined,

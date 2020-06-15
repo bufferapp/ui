@@ -12,11 +12,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -51,6 +55,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
+<<<<<<< HEAD
+=======
+      isImpersonation={true}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+>>>>>>> master
       items={
         Array [
           Object {
@@ -80,12 +91,12 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           },
           Object {
             "hasDivider": true,
-            "icon": <ArrowLeftIcon
+            "icon": <CrossIcon
               color="#B8B8B8"
             />,
-            "id": "logout",
+            "id": "Stop Impersonation",
             "onItemClick": [Function],
-            "title": "Logout",
+            "title": "Stop Impersonation",
           },
         ]
       }
@@ -130,11 +141,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -159,6 +174,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
+<<<<<<< HEAD
+=======
+      isImpersonation={true}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+>>>>>>> master
       items={
         Array [
           Object {
@@ -188,12 +210,12 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           },
           Object {
             "hasDivider": true,
-            "icon": <ArrowLeftIcon
+            "icon": <CrossIcon
               color="#B8B8B8"
             />,
-            "id": "logout",
+            "id": "Stop Impersonation",
             "onItemClick": [Function],
-            "title": "Logout",
+            "title": "Stop Impersonation",
           },
         ]
       }
@@ -226,10 +248,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 </ForwardRef(styled.nav)>
 `;
 
+<<<<<<< HEAD
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "publish" 1`] = `
 <ForwardRef(styled.nav)
   aria-label="Main menu"
 >
+=======
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "[object Object]" 1`] = `
+<ForwardRef(styled.nav)>
+>>>>>>> master
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -238,11 +265,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -277,6 +308,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
+<<<<<<< HEAD
+=======
+      isImpersonation={true}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+>>>>>>> master
       items={
         Array [
           Object {
@@ -306,12 +344,12 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
           },
           Object {
             "hasDivider": true,
-            "icon": <ArrowLeftIcon
+            "icon": <CrossIcon
               color="#B8B8B8"
             />,
-            "id": "logout",
+            "id": "Stop Impersonation",
             "onItemClick": [Function],
-            "title": "Logout",
+            "title": "Stop Impersonation",
           },
         ]
       }
@@ -356,7 +394,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={Array []}
     />
@@ -391,6 +429,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
+<<<<<<< HEAD
+=======
+      isImpersonation={true}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+>>>>>>> master
       items={
         Array [
           Object {
@@ -420,12 +465,12 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
           },
           Object {
             "hasDivider": true,
-            "icon": <ArrowLeftIcon
+            "icon": <CrossIcon
               color="#B8B8B8"
             />,
-            "id": "logout",
+            "id": "Stop Impersonation",
             "onItemClick": [Function],
-            "title": "Logout",
+            "title": "Stop Impersonation",
           },
         ]
       }
@@ -465,11 +510,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -504,6 +553,126 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
+<<<<<<< HEAD
+=======
+      isImpersonation={true}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <CrossIcon
+              color="#B8B8B8"
+            />,
+            "id": "Stop Impersonation",
+            "onItemClick": [Function],
+            "title": "Stop Impersonation",
+          },
+        ]
+      }
+      label=""
+      multiSelect={false}
+      noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
+      searchPlaceholder="Search"
+      selectPopupVisible={false}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.nav)>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
+<ForwardRef(styled.nav)>
+  <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Link))
+      href="#main"
+    >
+      Skip to main content
+    </ForwardRef(Styled(Link))>
+    <BufferLogo />
+    <ForwardRef(styled.div) />
+    <NavBarProducts
+      activeProduct="publish"
+      products={
+        Array [
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
+        ]
+      }
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)>
+    <Select
+      capitalizeItemLabel={false}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="-16px"
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      label=""
+      multiSelect={false}
+      noResultsCustomMessage="No matches found"
+      onSelectClick={[Function]}
+      searchPlaceholder="Search"
+      selectPopupVisible={false}
+      shortcutsEnabled={true}
+      size="medium"
+      type="secondary"
+      xPosition="right"
+      yPosition="bottom"
+    />
+    <ForwardRef(styled.div) />
+    <Select
+      capitalizeItemLabel={false}
+      customButton={[Function]}
+      hasCustomAction={false}
+      hasIconOnly={false}
+      hideSearch={true}
+      horizontalOffset="-16px"
+      isImpersonation={false}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+>>>>>>> master
       items={
         Array [
           Object {
@@ -583,11 +752,15 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
     </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
       products={
         Array [
-          "publish",
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
         ]
       }
     />
@@ -622,6 +795,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
+<<<<<<< HEAD
+=======
+      isImpersonation={true}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+>>>>>>> master
       items={
         Array [
           Object {
@@ -651,12 +831,12 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
           },
           Object {
             "hasDivider": true,
-            "icon": <ArrowLeftIcon
+            "icon": <CrossIcon
               color="#B8B8B8"
             />,
-            "id": "logout",
+            "id": "Stop Impersonation",
             "onItemClick": [Function],
-            "title": "Logout",
+            "title": "Stop Impersonation",
           },
         ]
       }
@@ -696,7 +876,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       products={Array []}
     />
   </ForwardRef(styled.div)>
@@ -706,6 +886,13 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
+<<<<<<< HEAD
+=======
+      isImpersonation={false}
+      isInputSearch={false}
+      isOpen={false}
+      isSplit={false}
+>>>>>>> master
       items={
         Array [
           Object {

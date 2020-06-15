@@ -1,5 +1,163 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enabledProducts" has one item: "jest-auto-snapshots String Fixture" 1`] = `
+<ForwardRef(styled.div)>
+  <NavBar
+    activeProduct="publish"
+    displaySkipLink={true}
+    helpMenuItems={
+      Array [
+        Object {
+          "component": <NodeFixture />,
+          "hasDivider": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "onItemClick": [MockFunction],
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    isImpersonation={true}
+    onLogout={[MockFunction]}
+    products={
+      Array [
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
+      ]
+    }
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "ignoreMenuItems": Array [
+          "jest-auto-snapshots String Fixture",
+        ],
+        "menuItems": Array [
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
+    onCloseBanner={null}
+    text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
+  />
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "enabledProducts" is an empty array: "[]" 1`] = `
+<ForwardRef(styled.div)>
+  <NavBar
+    activeProduct="publish"
+    displaySkipLink={true}
+    helpMenuItems={
+      Array [
+        Object {
+          "component": <NodeFixture />,
+          "hasDivider": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "onItemClick": [MockFunction],
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    isImpersonation={true}
+    onLogout={[MockFunction]}
+    products={
+      Array [
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
+      ]
+    }
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "ignoreMenuItems": Array [
+          "jest-auto-snapshots String Fixture",
+        ],
+        "menuItems": Array [
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
+    onCloseBanner={null}
+    text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
+  />
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featureFlips" has one item: "jest-auto-snapshots String Fixture" 1`] = `
 <ForwardRef(styled.div)>
   <NavBar
@@ -16,11 +174,20 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
         },
       ]
     }
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
@@ -86,11 +253,20 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "featur
         },
       ]
     }
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
@@ -156,11 +332,20 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
         },
       ]
     }
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
@@ -216,11 +401,20 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when array prop "helpMe
     activeProduct="publish"
     displaySkipLink={true}
     helpMenuItems={Array []}
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
@@ -286,11 +480,99 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when boolean prop "disp
         },
       ]
     }
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
+      ]
+    }
+    user={
+      Object {
+        "avatar": "jest-auto-snapshots String Fixture",
+        "email": "jest-auto-snapshots String Fixture",
+        "ignoreMenuItems": Array [
+          "jest-auto-snapshots String Fixture",
+        ],
+        "menuItems": Array [
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ],
+        "name": "jest-auto-snapshots String Fixture",
+      }
+    }
+  />
+  <Banner
+    actionButton={
+      Object {
+        "action": [MockFunction],
+        "label": "jest-auto-snapshots String Fixture",
+      }
+    }
+    customHTML={
+      Object {
+        "__html": "jest-auto-snapshots String Fixture",
+      }
+    }
+    onCloseBanner={null}
+    text="jest-auto-snapshots String Fixture"
+    themeColor="blue"
+  />
+  <ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+    <ForwardRef(styled.div)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > AppShell Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
+<ForwardRef(styled.div)>
+  <NavBar
+    activeProduct="publish"
+    displaySkipLink={true}
+    helpMenuItems={
+      Array [
+        Object {
+          "component": <NodeFixture />,
+          "hasDivider": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "onItemClick": [MockFunction],
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    isImpersonation={false}
+    onLogout={[MockFunction]}
+    products={
+      Array [
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
@@ -356,11 +638,20 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed all props 1
         },
       ]
     }
+    isImpersonation={true}
     onLogout={[MockFunction]}
     products={
       Array [
-        "publish",
-        "analyze",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
@@ -415,11 +706,19 @@ exports[`jest-auto-snapshots > AppShell Matches snapshot when passed only requir
   <NavBar
     displaySkipLink={false}
     helpMenuItems={null}
+    isImpersonation={false}
     products={
       Array [
-        "publish",
-        "analyze",
-        "reply",
+        Object {
+          "href": "https://publish.buffer.com",
+          "id": "publish",
+          "isNew": false,
+        },
+        Object {
+          "href": "https://analyze.buffer.com",
+          "id": "analyze",
+          "isNew": false,
+        },
       ]
     }
     user={
