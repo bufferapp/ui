@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.41.0] - 2020-06-15
+- Add org switcher support to AppShell / NavBar
+
 ## [5.40.0] - 2020-06-15
 - Add support for impersonation
 
