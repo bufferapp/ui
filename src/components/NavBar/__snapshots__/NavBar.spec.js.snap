@@ -55,13 +55,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
-<<<<<<< HEAD
-=======
       isImpersonation={true}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
->>>>>>> master
       items={
         Array [
           Object {
@@ -102,6 +96,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
       menubarItem={
         <NavBarMenu
+          isImpersonation={true}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -174,13 +169,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
-<<<<<<< HEAD
-=======
       isImpersonation={true}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
->>>>>>> master
       items={
         Array [
           Object {
@@ -221,6 +210,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       }
       menubarItem={
         <NavBarMenu
+          isImpersonation={true}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -248,15 +238,10 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
 </ForwardRef(styled.nav)>
 `;
 
-<<<<<<< HEAD
-exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "publish" 1`] = `
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.nav)
   aria-label="Main menu"
 >
-=======
-exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.nav)>
->>>>>>> master
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -308,13 +293,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
-<<<<<<< HEAD
-=======
       isImpersonation={true}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
->>>>>>> master
       items={
         Array [
           Object {
@@ -355,6 +334,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
       menubarItem={
         <NavBarMenu
+          isImpersonation={true}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -429,13 +409,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
-<<<<<<< HEAD
-=======
       isImpersonation={true}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
->>>>>>> master
       items={
         Array [
           Object {
@@ -476,6 +450,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       }
       menubarItem={
         <NavBarMenu
+          isImpersonation={true}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -553,15 +528,20 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
-<<<<<<< HEAD
-=======
       isImpersonation={true}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
       items={
         Array [
           Object {
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -587,24 +567,40 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={true}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
       xPosition="right"
-      yPosition="bottom"
     />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Link))
       href="#main"
@@ -626,17 +622,10 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
       }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -648,31 +637,22 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
       xPosition="right"
-      yPosition="bottom"
     />
     <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
       isImpersonation={false}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
->>>>>>> master
       items={
         Array [
           Object {
@@ -713,6 +693,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
       }
       menubarItem={
         <NavBarMenu
+          isImpersonation={false}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -795,13 +776,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
-<<<<<<< HEAD
-=======
       isImpersonation={true}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
->>>>>>> master
       items={
         Array [
           Object {
@@ -842,6 +817,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       }
       menubarItem={
         <NavBarMenu
+          isImpersonation={true}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
@@ -886,13 +862,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
       horizontalOffset="-16px"
-<<<<<<< HEAD
-=======
       isImpersonation={false}
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
->>>>>>> master
       items={
         Array [
           Object {
@@ -924,6 +894,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       }
       menubarItem={
         <NavBarMenu
+          isImpersonation={false}
           user={
             Object {
               "avatar": "jest-auto-snapshots String Fixture",
