@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
+import { Info as InfoIcon, ArrowLeft, Person as PersonIcon, Cross } from '../Icon';
 
-import { gray, blueDarker, grayLight, grayLighter, grayDark, } from '../style/colors';
+import { gray, blueDarker, grayLight, grayLighter, grayDark } from '../style/colors';
 import {
   fontWeightMedium,
   fontFamily
@@ -41,6 +41,17 @@ export function getAccountUrl(baseUrl = '', user) {
   return `https://account.buffer.com?redirect=${getRedirectUrl(
     baseUrl
   )}&username=${encodeURI(user.name)}`;
+}
+
+export function getStopImpersonationUrl() {
+  const { hostname } = window.location;
+  if (!hostname.endsWith('buffer.com')) {
+    return null;
+  }
+
+  return `https://admin${hostname.includes('local') ?
+    '-next.local' : ''
+  }.buffer.com/clearImpersonation`;
 }
 
 const NavBarStyled = styled.nav`
@@ -137,6 +148,7 @@ class NavBar extends React.Component {
   shouldComponentUpdate(nextProps) {
     return nextProps.user.name !== this.props.user.name ||
       nextProps.user.email !== this.props.user.email ||
+      nextProps.isImpersonation !== this.props.isImpersonation ||
       nextProps.products !== this.props.products;
   }
 
@@ -147,6 +159,7 @@ class NavBar extends React.Component {
       user,
       helpMenuItems,
       onLogout,
+      isImpersonation,
       displaySkipLink
     } = this.props;
 
@@ -181,8 +194,9 @@ class NavBar extends React.Component {
             hideSearch
             capitalizeItemLabel={false}
             xPosition="right"
+            isImpersonation={isImpersonation}
             customButton={handleClick => (
-              <NavBarMenu user={user} onClick={handleClick} />
+              <NavBarMenu user={user} onClick={handleClick} isImpersonation={isImpersonation} />
             )}
             items={[
               appendMenuItem(user.ignoreMenuItems, {
@@ -196,7 +210,17 @@ class NavBar extends React.Component {
                 },
               }),
               ...user.menuItems,
-              appendMenuItem(user.ignoreMenuItems, {
+              appendMenuItem(user.ignoreMenuItems, isImpersonation ? {
+                id: 'Stop Impersonation',
+                title: 'Stop Impersonation',
+                icon: <Cross color={gray} />,
+                hasDivider: user.menuItems && user.menuItems.length > 0,
+                onItemClick: () => {
+                  window.location.assign(
+                    getStopImpersonationUrl()
+                  );
+                },
+              } : {
                 id: 'logout',
                 title: 'Logout',
                 icon: <ArrowLeft color={gray} />,
@@ -252,6 +276,7 @@ NavBar.propTypes = {
       onItemClick: PropTypes.func,
     })
   ),
+  isImpersonation: PropTypes.bool,
 
   onLogout: PropTypes.func,
   displaySkipLink: PropTypes.bool,
@@ -261,8 +286,9 @@ NavBar.defaultProps = {
   products: [],
   activeProduct: undefined,
   helpMenuItems: null,
+  isImpersonation: false,
   onLogout: undefined,
-  displaySkipLink: false,
+  displaySkipLink: false
 };
 
 export default NavBar;

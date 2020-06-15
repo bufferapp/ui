@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.39.0] - 2020-06-15
+- Add support for impersonation
+
 ## [5.38.0] - 2020-06-12
 - Add new icons
 - Remove Reply and add Engage

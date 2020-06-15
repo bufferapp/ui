@@ -27,7 +27,8 @@ const AppShell = ({
   content,
   bannerOptions,
   onLogout,
-  displaySkipLink,
+  isImpersonation,
+  displaySkipLink
 }) => {
 
   const engageEnabled = enabledProducts.includes('engage');
@@ -66,6 +67,7 @@ const AppShell = ({
         helpMenuItems={helpMenuItems}
         onLogout={onLogout}
         displaySkipLink={displaySkipLink}
+        isImpersonation={isImpersonation}
       />
       {bannerOptions && (
         <Banner
@@ -138,7 +140,11 @@ AppShell.propTypes = {
 
   /** (Optional) Callback to be called before logout */
   onLogout: PropTypes.func,
-  displaySkipLink: PropTypes.bool,
+
+  /** (Optional) Is the current session an impersonation session */
+  isImpersonation: PropTypes.bool,
+
+  displaySkipLink: PropTypes.bool
 };
 
 AppShell.defaultProps = {
@@ -149,7 +155,8 @@ AppShell.defaultProps = {
   bannerOptions: null,
   onLogout: undefined,
   helpMenuItems: null,
-  displaySkipLink: false,
+  isImpersonation: false,
+  displaySkipLink: false
 };
 
 export default AppShell;

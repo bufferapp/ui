@@ -42,9 +42,7 @@ export const SelectItemLabel = styled.div`
 export const SelectItemIcon = styled.div`
   display: flex;
   padding-right: 8px;
-  svg {
-    fill: ${props => (props.hovered ? grayDarker : gray)};
-  }
+  fill: ${props => (props.hovered ? grayDarker : gray)};
   ${SelectItemStyled}:hover & * {
     color: ${grayDarker};
     fill: ${grayDarker};
