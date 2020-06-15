@@ -21,26 +21,30 @@ export function getUserAvatar(user) {
 
 /** NavBar Menu component used by the Select component to show a custom User name and avatar
  *  button */
-const NavBarMenu = ({ user, onClick, isImpersonation }) => (
-  <NavBarStyled onClick={onClick}>
-    <NavBarUser>
-      {isImpersonation && (
-        <NavBarImpersonating
-          user={user}
-          aria-label="You are impersonating a user"
-        >
-Impersonating
-        </NavBarImpersonating>
-      )}
-      <NavBarName>{user.name}</NavBarName>
-      <NavBarEmail>{user.email}</NavBarEmail>
-    </NavBarUser>
-    <NavBarAvatar avatar={getUserAvatar(user)} onClick={onClick} />
-    <NavBarChavron>
-      <ChevronDown color="grayLight" size="large" />
-    </NavBarChavron>
-  </NavBarStyled>
-);
+const NavBarMenu = props => {
+  const { user, onClick, isImpersonation } = props;
+
+  return (
+    <NavBarStyled onClick={onClick} {...props}>
+      <NavBarUser>
+        {isImpersonation && (
+          <NavBarImpersonating
+            user={user}
+            aria-label="You are impersonating a user"
+          >
+            Impersonating
+          </NavBarImpersonating>
+        )}
+        <NavBarName>{user.name}</NavBarName>
+        <NavBarEmail>{user.email}</NavBarEmail>
+      </NavBarUser>
+      <NavBarAvatar avatar={getUserAvatar(user)} onClick={onClick} />
+      <NavBarChavron>
+        <ChevronDown color="grayLight" size="large" />
+      </NavBarChavron>
+    </NavBarStyled>
+  );
+};
 
 NavBarMenu.propTypes = {
   /** User Name and Email to be shown in the NavBar */

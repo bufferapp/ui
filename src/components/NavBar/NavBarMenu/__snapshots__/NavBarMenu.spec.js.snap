@@ -1,8 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<ForwardRef(styled.a)
+  isImpersonation={false}
   onClick={[MockFunction]}
+  user={
+    Object {
+      "email": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+    }
+  }
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.div)>
@@ -22,12 +29,19 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when boolean prop "is
       size="large"
     />
   </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+</ForwardRef(styled.a)>
 `;
 
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)
+<ForwardRef(styled.a)
+  isImpersonation={true}
   onClick={[MockFunction]}
+  user={
+    Object {
+      "email": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+    }
+  }
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.div)
@@ -58,12 +72,19 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed all props
       size="large"
     />
   </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+</ForwardRef(styled.a)>
 `;
 
 exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)
+<ForwardRef(styled.a)
+  isImpersonation={false}
   onClick={[MockFunction]}
+  user={
+    Object {
+      "email": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+    }
+  }
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.div)>
@@ -83,5 +104,5 @@ exports[`jest-auto-snapshots > NavBarMenu Matches snapshot when passed only requ
       size="large"
     />
   </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+</ForwardRef(styled.a)>
 `;

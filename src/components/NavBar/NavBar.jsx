@@ -1,16 +1,29 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon, ArrowLeft, Person as PersonIcon, Cross } from '../Icon';
-
-import { gray, blueDarker, grayLight, grayLighter, grayDark } from '../style/colors';
 import {
-  fontWeightMedium,
-  fontFamily
-} from '../style/fonts';
+  Cross,
+  Info as InfoIcon,
+  ArrowLeft,
+  Person as PersonIcon,
+  Instagram as InstagramIcon,
+  Twitter as TwitterIcon,
+  Facebook as FacebookIcon,
+  Pinterest as PinterestIcon,
+} from '../Icon';
 
-import Select from '../Select';
+import {
+  gray,
+  blueDarker,
+  grayLight,
+  grayLighter,
+  grayDark,
+} from '../style/colors';
+
+import { fontWeightMedium, fontFamily } from '../style/fonts';
+
 import Link from '../Link';
+import DropdownMenu from '../DropdownMenu';
 
 import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
@@ -43,6 +56,8 @@ export function getAccountUrl(baseUrl = '', user) {
   )}&username=${encodeURI(user.name)}`;
 }
 
+export const ORG_SWITCHER = 'org_switcher';
+
 export function getStopImpersonationUrl() {
   const { hostname } = window.location;
   if (!hostname.endsWith('buffer.com')) {
@@ -57,7 +72,7 @@ export function getStopImpersonationUrl() {
 const NavBarStyled = styled.nav`
   background: #fff;
   border-bottom: 1px solid ${gray};
-  box-shadow: 0 1px 10px -5px rgba(0,0,0,.15);
+  box-shadow: 0 1px 10px -5px rgba(0, 0, 0, 0.15);
   display: flex;
   height: 56px;
   justify-content: space-between;
@@ -68,7 +83,7 @@ const NavBarStyled = styled.nav`
 const NavBarLeft = styled.div`
   display: flex;
 `;
-const NavBarRight = styled.div`
+const NavBarRight = styled.nav`
   display: flex;
 `;
 
@@ -141,15 +156,54 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
   return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
 }
 
+function getNetworkIcon(item) {
+  if (!item.network) return null;
+
+  switch (item.network) {
+    case 'instagram':
+      return <InstagramIcon size="medium" />;
+    case 'twitter':
+      return <TwitterIcon size="medium" />;
+    case 'facebook':
+      return <FacebookIcon size="medium" />;
+    case 'pinterest':
+      return <PinterestIcon size="medium" />;
+    default:
+    break;
+  }
+}
+
+export function appendOrgSwitcher(orgSwitcher) {
+  if (!orgSwitcher || !orgSwitcher.menuItems) {
+    return [];
+  }
+  
+  return orgSwitcher.menuItems.map((item, index) => {
+    item.type = ORG_SWITCHER;
+    if (orgSwitcher.title && index === 0) {
+      item.hasDivider = true;
+      item.dividerTitle = orgSwitcher.title;
+    }
+    if (item.subItems) {
+      item.subItems.forEach(subItem => {
+        subItem.icon = getNetworkIcon(subItem);
+      });
+    }
+    return item;
+  });
+}
+
 /**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
 class NavBar extends React.Component {
   shouldComponentUpdate(nextProps) {
-    return nextProps.user.name !== this.props.user.name ||
+    return (
+      nextProps.user.name !== this.props.user.name ||
       nextProps.user.email !== this.props.user.email ||
       nextProps.isImpersonation !== this.props.isImpersonation ||
-      nextProps.products !== this.props.products;
+      nextProps.products !== this.props.products
+    );
   }
 
   render() {
@@ -159,53 +213,59 @@ class NavBar extends React.Component {
       user,
       helpMenuItems,
       onLogout,
+      displaySkipLink,
       isImpersonation,
-      displaySkipLink
+      orgSwitcher,
     } = this.props;
 
+    const orgSwitcherHasItems =
+      orgSwitcher &&
+      orgSwitcher.menuItems &&
+      orgSwitcher.menuItems.length > 0;
+
     return (
-      <NavBarStyled>
+      <NavBarStyled aria-label="Main menu">
         <NavBarLeft>
-          {displaySkipLink && <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>}
+          {displaySkipLink && (
+            <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>
+          )}
           <BufferLogo />
           <NavBarVerticalRule />
           <NavBarProducts products={products} activeProduct={activeProduct} />
         </NavBarLeft>
         <NavBarRight>
           {helpMenuItems && (
-            <Select
-              onSelectClick={selectedItem => selectedItem.onItemClick()}
-              hideSearch
-              capitalizeItemLabel={false}
-              customButton={handleClick => (
-                <NavBarHelp onClick={handleClick}>
+            <DropdownMenu
+              xPosition="right"
+              ariaLabel="Help Menu"
+              ariaLabelPopup="Help"
+              menubarItem={(
+                <NavBarHelp>
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
               )}
               items={helpMenuItems}
-              horizontalOffset="-16px"
-              xPosition="right"
             />
           )}
           <NavBarVerticalRule />
-          <Select
-            onSelectClick={selectedItem => selectedItem.onItemClick()}
-            hideSearch
-            capitalizeItemLabel={false}
+          <DropdownMenu
             xPosition="right"
+            ariaLabel="Account Menu"
+            ariaLabelPopup="Account"
+            horizontalOffset="-16px"
             isImpersonation={isImpersonation}
-            customButton={handleClick => (
-              <NavBarMenu user={user} onClick={handleClick} isImpersonation={isImpersonation} />
-            )}
+            menubarItem={<NavBarMenu user={user} isImpersonation={isImpersonation} />}
             items={[
+              ...appendOrgSwitcher(orgSwitcher),
               appendMenuItem(user.ignoreMenuItems, {
                 id: 'account',
                 title: 'Account',
                 icon: <PersonIcon color={gray} />,
+                hasDivider: orgSwitcherHasItems,
                 onItemClick: () => {
                   window.location.assign(
-                    getAccountUrl(window.location.href, this.props.user)
+                  getAccountUrl(window.location.href, this.props.user)
                   );
                 },
               }),
@@ -231,7 +291,6 @@ class NavBar extends React.Component {
                 },
               }),
             ].filter(e => e)}
-            horizontalOffset="-16px"
           />
         </NavBarRight>
       </NavBarStyled>
@@ -280,6 +339,19 @@ NavBar.propTypes = {
 
   onLogout: PropTypes.func,
   displaySkipLink: PropTypes.bool,
+
+  /** Optional menu for selecting the user's organization */
+  orgSwitcher: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        selected: PropTypes.bool.isRequired,
+        onItemClick: PropTypes.func,
+      })
+    ).isRequired,
+  }),
 };
 
 NavBar.defaultProps = {
@@ -288,7 +360,8 @@ NavBar.defaultProps = {
   helpMenuItems: null,
   isImpersonation: false,
   onLogout: undefined,
-  displaySkipLink: false
+  displaySkipLink: false,
+  orgSwitcher: undefined,
 };
 
 export default NavBar;

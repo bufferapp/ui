@@ -27,8 +27,9 @@ const AppShell = ({
   content,
   bannerOptions,
   onLogout,
+  displaySkipLink,
+  orgSwitcher,
   isImpersonation,
-  displaySkipLink
 }) => {
 
   const engageEnabled = enabledProducts.includes('engage');
@@ -67,6 +68,7 @@ const AppShell = ({
         helpMenuItems={helpMenuItems}
         onLogout={onLogout}
         displaySkipLink={displaySkipLink}
+        orgSwitcher={orgSwitcher}
         isImpersonation={isImpersonation}
       />
       {bannerOptions && (

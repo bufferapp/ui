@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import {
-  gray, grayDark, grayDarker, grayLight, grayLighter, white,
+  gray,
+  grayDark,
+  grayDarker,
+  grayLight,
+  grayLighter,
+  white,
 } from '../../style/colors';
 
-import {
-  fontSize,
-  fontWeightMedium,
-  fontFamily
-} from '../../style/fonts';
+import { fontSize, fontWeightMedium, fontFamily } from '../../style/fonts';
 
-export const NavBarStyled = styled.div`
+export const NavBarStyled = styled.a`
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -50,7 +51,7 @@ export const NavBarAvatar = styled.div`
   height: 40px;
   background: ${gray};
   background-size: cover;
-  background-image: url(${props => (props.avatar)});
+  background-image: url(${props => props.avatar});
 `;
 
 export const NavBarName = styled.div`
