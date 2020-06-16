@@ -67,8 +67,8 @@ SidebarListItem.propTypes = {
   icon: PropTypes.node,
   /** A function to perform when the item is clicked */
   onItemClick: PropTypes.func.isRequired,
-  /** A string to display at the far right side of the item */
-  badges: PropTypes.string,
+  /** A string or Node to display at the far right side of the item */
+  badges: PropTypes.oneOfType([PropTypes.string, PropTypes.string]),
   /** An icon either from this library or a node of your choice */
   badgeIcon: PropTypes.node,
   /** Whether the item is currently selected */
