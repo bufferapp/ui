@@ -202,7 +202,8 @@ class NavBar extends React.Component {
       nextProps.user.name !== this.props.user.name ||
       nextProps.user.email !== this.props.user.email ||
       nextProps.isImpersonation !== this.props.isImpersonation ||
-      nextProps.products !== this.props.products
+      nextProps.products !== this.props.products ||
+      nextProps.orgSwitcher !== this.props.orgSwitcher
     );
   }
 
