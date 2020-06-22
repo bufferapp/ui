@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.41.3] - 2020-06-22
+- Allow `PropType.node` for `SidebarListItem`'s' `badges`.
+
 ## [5.41.1] - 2020-06-16
 - Hotfix: ensure AppShell/NavBar updates when new `orgSwitcher` prop passed in.
 
