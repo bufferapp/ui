@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.41.4] - 2020-06-22
+- Remove unused `onClick` prop from `NavBarMenu`.
+
 ## [5.41.3] - 2020-06-22
 - Allow `PropType.node` for `SidebarListItem`'s' `badges`.
 
