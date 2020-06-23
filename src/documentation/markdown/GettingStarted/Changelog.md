@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.41.5] - 2020-06-22
+- Add icons: Add, Organic, PercentageDown, PercentageUp, Promoted
+
 ## [5.41.4] - 2020-06-22
 - Remove unused `onClick` prop from `NavBarMenu`.
 
