@@ -15,7 +15,7 @@
 
 [![npm package](https://img.shields.io/npm/v/@bufferapp/ui/latest.svg)](https://www.npmjs.com/package/@bufferapp/ui)
 [![Build Status](https://travis-ci.org/bufferapp/ui.svg?branch=master)](https://travis-ci.org/bufferapp/ui)
-[![codecov](https://codecov.io/gh/bufferapp/ui/branch/master/graph/badge.svg)](https://codecov.io/gh/bufferapp/ui)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/29ea645af66481f4b80b/test_coverage)](https://codeclimate.com/github/bufferapp/ui/test_coverage)
 
 </div>
 
