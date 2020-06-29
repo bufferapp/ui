@@ -68,12 +68,12 @@ const orgSwitcher = {
         {
           id: '5',
           title: 'Lunna Sneakers US',
-          network: 'facebook',
+          network: 'linkedin',
         },
         {
           id: '6',
-          title: '@lunnastwitter',
-          network: 'twitter',
+          title: 'lunnastwitter',
+          network: 'linkedin',
         },
       ],
     },
