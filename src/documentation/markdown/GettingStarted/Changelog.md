@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.41.6] - 2020-06-29
+- Fix: add support for `'linkedin'` network type in org switcher popout.
+
 ## [5.41.5] - 2020-06-22
 - Add icons: Add, Organic, PercentageDown, PercentageUp, Promoted
 
