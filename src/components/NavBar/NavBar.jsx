@@ -10,6 +10,7 @@ import {
   Twitter as TwitterIcon,
   Facebook as FacebookIcon,
   Pinterest as PinterestIcon,
+  LinkedIn as LinkedInIcon,
 } from '../Icon';
 
 import {
@@ -168,6 +169,8 @@ function getNetworkIcon(item) {
       return <FacebookIcon size="medium" />;
     case 'pinterest':
       return <PinterestIcon size="medium" />;
+    case 'linkedin':
+      return <LinkedInIcon size="medium" />;
     default:
     break;
   }
