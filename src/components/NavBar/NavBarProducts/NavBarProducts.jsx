@@ -12,7 +12,8 @@ import {
 
 import {
   fontWeightMedium,
-  fontFamily
+  fontFamily,
+  fontSizeSmall
 } from '../../style/fonts';
 
 const StyledNavBarProducts = styled.nav`
@@ -52,10 +53,11 @@ const NewLabel = styled.span`
   color: ${white};
   font-family: ${fontFamily};
   font-weight: ${fontWeightMedium};
+  font-size: ${fontSizeSmall};
   background: ${green};
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 2px 8px;
-  margin-left: 8px;
+  margin: 2px 8px 0px;
 `;
 
 // Notee: Custom SVGs to support multi-color product icons (instead of using icon component)
