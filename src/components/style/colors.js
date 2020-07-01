@@ -30,14 +30,14 @@ export const boxShadow = '#ABB7FF';
 export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16)';
 
 export const facebook = '#1877F2';
-export const facebookDark = '#4267B2';
+export const facebookDark = '#2B4373';
 export const googleplus = '#dd4b39';
 export const instagram = '#F00276';
-export const instagramDark = '#BD3381';
+export const instagramDark = '#782152';
 export const linkedin = '#2867B2';
-export const linkedinDark = '#0077B5';
+export const linkedinDark = '#003C5C';
 export const pinterest = '#E60023';
-export const pinterestDark = '#BD081C';
+export const pinterestDark = '#6C0510';
 export const twitter = '#1DA1F2';
 export const twitterDark = '#0A6FAE';
 
