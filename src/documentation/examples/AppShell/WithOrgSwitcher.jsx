@@ -95,6 +95,26 @@ const orgSwitcher = {
         },
       ],
     },
+    {
+      id: '3',
+      title: 'My Third Organization',
+      selected: false,
+      onItemClick: () => console.info('My Organization 3'),
+      subItems: [
+        {
+          id: '1',
+          title: '@bufferinsta',
+          network: 'instagram',
+        },
+      ],
+    },
+    {
+      id: '4',
+      title: 'Fourth Organization',
+      selected: false,
+      onItemClick: () => console.info('Fourth Organization'),
+      subItems: [],
+    },
   ],
 };
 

@@ -135,14 +135,11 @@ export default class PopupMenu extends React.Component {
       const hasSubItems = this.hasSubItems(item);
       const shouldFocus = index === focusedItem && !this.props.usingMouse;
       const type = index === 0 ? 'header' : '';
+      const { defaultTooltipMessage } = item;
 
       return [
         item.hasDivider && (
-          <ItemDivider
-            key={`${item.id}--divider`}
-            role="none"
-            type={type}
-          >
+          <ItemDivider key={`${item.id}--divider`} role="none" type={type}>
             {item.dividerTitle && (
               <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
             )}
@@ -150,10 +147,16 @@ export default class PopupMenu extends React.Component {
         ),
         <OptionalWrapper
           key={`item-wrapper-${index}`}
-          condition={hasSubItems}
+          condition={hasSubItems || defaultTooltipMessage}
           wrapper={children => (
             <Tooltip
-              customLabel={<TooltipLabel maxItems={5} items={item.subItems} />}
+              customLabel={(
+                <TooltipLabel
+                  maxItems={5}
+                  items={item.subItems}
+                  defaultMessage={defaultTooltipMessage}
+                />
+              )}
               position="left"
               verticalAlign="top"
             >
@@ -161,11 +164,7 @@ export default class PopupMenu extends React.Component {
             </Tooltip>
           )}
         >
-          <Item
-            key={`item-${index}`}
-            role="none"
-            type={item.type}
-          >
+          <Item key={`item-${index}`} role="none" type={item.type}>
             <ButtonItem
               index={index}
               item={item}
