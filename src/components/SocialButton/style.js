@@ -40,7 +40,7 @@ export const SocialButtonStyled = styled.button`
     line-height: normal;
   }
   &:hover {
-    background-color: ${props => calculateBgColor(props.channel, true)};
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   }
 `;
 
