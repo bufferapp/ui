@@ -35,7 +35,7 @@ export const SocialButtonStyled = styled.button`
   justify-content: space-between;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.1s ease;
 
   p {
     color: ${white};
@@ -45,7 +45,7 @@ export const SocialButtonStyled = styled.button`
 
   &:hover {
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.1s ease;
   }
 `;
 
