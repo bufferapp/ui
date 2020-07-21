@@ -9,22 +9,22 @@ import {
 } from '../style/colors';
 import { ButtonBase, large } from '../Button/style';
 
-function calculateBgColor(channel, hover = false) {
+function calculateBgColor(channel) {
   switch (channel) {
     case 'instagram':
-      return hover ? instagramDark : instagram;
+      return instagramDark;
     case 'twitter':
-      return hover ? twitterDark : twitter;
+      return twitterDark;
     case 'facebook':
-      return hover ? facebookDark : facebook;
+      return facebookDark;
     case 'pinterest':
-      return hover ? pinterestDark : pinterest;
+      return pinterestDark;
     case 'linkedin':
-      return hover ? linkedinDark : linkedin;
+      return linkedinDark;
     default:
       return 'gray';
   }
-};
+}
 
 export const SocialButtonStyled = styled.button`
   ${ButtonBase};
