@@ -37,7 +37,8 @@ export const instagramDark = '#782152';
 export const linkedin = '#2867B2';
 export const linkedinDark = '#003C5C';
 export const pinterest = '#E60023';
-export const pinterestDark = '#6C0510';
+export const shopify = '#95BF47';
+export const shopifyDark = '#5E8E3E';
 export const twitter = '#1DA1F2';
 export const twitterDark = '#0A6FAE';
 
