@@ -1,16 +1,11 @@
 import styled from 'styled-components';
-import { 
-  white,
-  facebook,
+import {
   facebookDark,
-  instagram,
   instagramDark,
-  linkedin,
   linkedinDark,
-  pinterest,
   pinterestDark,
-  twitter,
-  twitterDark, 
+  twitterDark,
+  white,
 } from '../style/colors';
 import { ButtonBase, large } from '../Button/style';
 
