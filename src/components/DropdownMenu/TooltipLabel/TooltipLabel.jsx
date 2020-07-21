@@ -39,27 +39,19 @@ const TooltipLabel = ({ items, maxItems, defaultMessage }) => {
 
   return (
     <>
-      {items.slice(0, maxItems).map((item, index) => {
-        const isFirstLabel = index === 0;
-        const isLastLabel = index === items.length - 1 && !exceedsTotal;
-        return (
-          <LabelWrapper
-            key={`tooltip-item-${index}`}
-            isFirstLabel={isFirstLabel}
-            isLastLabel={isLastLabel}
-          >
-            {item.icon}
-            <Label hasIcon>{item.title}</Label>
-          </LabelWrapper>
-        );
-      })}
+      {items.slice(0, maxItems).map((item, index) => (
+        <LabelWrapper key={`tooltip-item-${index}`}>
+          {item.icon}
+          <Label hasIcon>{item.title}</Label>
+        </LabelWrapper>
+      ))}
       {items.length === 0 && (
         <LabelWrapper>
           <EmptyLabel>{defaultMessage}</EmptyLabel>
         </LabelWrapper>
       )}
       {exceedsTotal && (
-        <LabelWrapper isLastLabel>
+        <LabelWrapper>
           <Label>{`Plus ${remainingItems} more...`}</Label>
         </LabelWrapper>
       )}
