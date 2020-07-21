@@ -30,17 +30,18 @@ export const boxShadow = '#ABB7FF';
 export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16)';
 
 export const facebook = '#1877F2';
-export const facebookDark = '#2B4373';
+export const facebookDark = '#0C51AB';
 export const googleplus = '#dd4b39';
 export const instagram = '#F00276';
-export const instagramDark = '#782152';
+export const instagramDark = '#A51D5F';
 export const linkedin = '#2867B2';
-export const linkedinDark = '#003C5C';
+export const linkedinDark = '#1A4476';
 export const pinterest = '#E60023';
+export const pinterestDark = '#BD081C';
 export const shopify = '#95BF47';
 export const shopifyDark = '#5E8E3E';
 export const twitter = '#1DA1F2';
-export const twitterDark = '#0A6FAE';
+export const twitterDark = '#1174B0';
 
 export const transparent = 'transparent';
 
