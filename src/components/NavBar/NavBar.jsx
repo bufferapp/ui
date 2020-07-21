@@ -65,8 +65,8 @@ export function getStopImpersonationUrl() {
     return null;
   }
 
-  return `https://admin${hostname.includes('local') ?
-    '-next.local' : ''
+  return `https://admin${
+    hostname.includes('local') ? '-next.local' : ''
   }.buffer.com/clearImpersonation`;
 }
 
@@ -172,7 +172,7 @@ function getNetworkIcon(item) {
     case 'linkedin':
       return <LinkedInIcon size="medium" />;
     default:
-    break;
+      break;
   }
 }
 
@@ -180,7 +180,7 @@ export function appendOrgSwitcher(orgSwitcher) {
   if (!orgSwitcher || !orgSwitcher.menuItems) {
     return [];
   }
-  
+
   return orgSwitcher.menuItems.map((item, index) => {
     item.type = ORG_SWITCHER;
     if (orgSwitcher.title && index === 0) {
@@ -192,6 +192,10 @@ export function appendOrgSwitcher(orgSwitcher) {
         subItem.icon = getNetworkIcon(subItem);
       });
     }
+    if (!item.subItems || item.subItems.length === 0) {
+      item.defaultTooltipMessage = 'No social accounts connected yet.';
+    }
+    
     return item;
   });
 }
@@ -223,9 +227,7 @@ class NavBar extends React.Component {
     } = this.props;
 
     const orgSwitcherHasItems =
-      orgSwitcher &&
-      orgSwitcher.menuItems &&
-      orgSwitcher.menuItems.length > 0;
+      orgSwitcher && orgSwitcher.menuItems && orgSwitcher.menuItems.length > 0;
 
     return (
       <NavBarStyled aria-label="Main menu">
@@ -259,7 +261,9 @@ class NavBar extends React.Component {
             ariaLabelPopup="Account"
             horizontalOffset="-16px"
             isImpersonation={isImpersonation}
-            menubarItem={<NavBarMenu user={user} isImpersonation={isImpersonation} />}
+            menubarItem={
+              <NavBarMenu user={user} isImpersonation={isImpersonation} />
+            }
             items={[
               ...appendOrgSwitcher(orgSwitcher),
               appendMenuItem(user.ignoreMenuItems, {
@@ -269,31 +273,36 @@ class NavBar extends React.Component {
                 hasDivider: orgSwitcherHasItems,
                 onItemClick: () => {
                   window.location.assign(
-                  getAccountUrl(window.location.href, this.props.user)
+                    getAccountUrl(window.location.href, this.props.user)
                   );
                 },
               }),
               ...user.menuItems,
-              appendMenuItem(user.ignoreMenuItems, isImpersonation ? {
-                id: 'Stop Impersonation',
-                title: 'Stop Impersonation',
-                icon: <Cross color={gray} />,
-                hasDivider: user.menuItems && user.menuItems.length > 0,
-                onItemClick: () => {
-                  window.location.assign(
-                    getStopImpersonationUrl()
-                  );
-                },
-              } : {
-                id: 'logout',
-                title: 'Logout',
-                icon: <ArrowLeft color={gray} />,
-                hasDivider: user.menuItems && user.menuItems.length > 0,
-                onItemClick: () => {
-                  if (typeof onLogout === 'function') onLogout();
-                  window.location.assign(getLogoutUrl(window.location.href));
-                },
-              }),
+              appendMenuItem(
+                user.ignoreMenuItems,
+                isImpersonation
+                  ? {
+                      id: 'Stop Impersonation',
+                      title: 'Stop Impersonation',
+                      icon: <Cross color={gray} />,
+                      hasDivider: user.menuItems && user.menuItems.length > 0,
+                      onItemClick: () => {
+                        window.location.assign(getStopImpersonationUrl());
+                      },
+                    }
+                  : {
+                      id: 'logout',
+                      title: 'Logout',
+                      icon: <ArrowLeft color={gray} />,
+                      hasDivider: user.menuItems && user.menuItems.length > 0,
+                      onItemClick: () => {
+                        if (typeof onLogout === 'function') onLogout();
+                        window.location.assign(
+                          getLogoutUrl(window.location.href)
+                        );
+                      },
+                    }
+              ),
             ].filter(e => e)}
           />
         </NavBarRight>
@@ -304,11 +313,13 @@ class NavBar extends React.Component {
 
 NavBar.propTypes = {
   /** The list of available products */
-  products: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.string,
-    isNew: PropTypes.bool,
-    href: PropTypes.string
-  })),
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      isNew: PropTypes.bool,
+      href: PropTypes.string,
+    })
+  ),
 
   /** The currently active (highlighted) product in the `NavBar`. */
   activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
