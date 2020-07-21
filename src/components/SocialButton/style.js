@@ -34,11 +34,13 @@ export const SocialButtonStyled = styled.button`
   width: 100%;
   justify-content: space-between;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+
   p {
     color: ${white};
     margin-left: 8px;
     line-height: normal;
   }
+
   &:hover {
     box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
   }
