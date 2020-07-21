@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.42.0] - 2020-07-21
+- Add default Tooltip message when no social network found for an organization in the orgSwitcher.
+- Fix styles when only one social network is displayed in the Tooltip in the orgSwitcher.
+
 ## [5.41.6] - 2020-06-29
 - Fix: add support for `'linkedin'` network type in org switcher popout.
 
