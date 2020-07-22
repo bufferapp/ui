@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.43.1] - 2020-07-22
+- Update styles for `New!` label.
+
 ## [5.43.0] - 2020-07-22
 - Updates light and dark social channel colors to match current designs.
 - Sets the `SocialButton` component background color to use dark variations to meet contrast standards for accessibility.
