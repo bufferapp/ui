@@ -55,7 +55,7 @@ const NewLabel = styled.span`
   font-weight: ${fontWeightMedium};
   font-size: ${fontSizeSmall};
   background: ${green};
-  border-radius: 8px;
+  border-radius: 12px;
   padding: 2px 8px;
   margin: 2px 8px 0px;
 `;
