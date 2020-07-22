@@ -5,6 +5,7 @@ export const Container = styled.div`
   display: flex;
 `;
 
+/** needs to be label for switch to work properly */
 export const Wrapper = styled.label`
   display: flex;
   margin-left: 8px;
@@ -12,7 +13,7 @@ export const Wrapper = styled.label`
   align-items: center;
 `;
 
-// toggle round button
+/** switch round button */
 export const Span = styled.span`
   position: relative;
   cursor: pointer;
@@ -35,7 +36,7 @@ export const Span = styled.span`
   }
 `;
 
-
+/** input with special states */
 export const Input = styled.input`
   position: absolute;
   pointer-events: none;

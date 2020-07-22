@@ -1,18 +1,18 @@
 import React, { useState } from 'react';
 import Switch from '@bufferapp/ui/Switch';
 
-/** Switch Disabled */
-export default function ExampleSwitchDisabled() {
+/** Switch Off */
+export default function ExampleSwitchOff() {
   const [value, setValue] = useState(false);
 
   return (
     <div style={{ position: 'relative' }}>
       <Switch
         isOn={value}
-        disabled
+        disabled={false}
         handleSwitch={() => setValue(!value)}
         label={value ? 'On' : 'Off'}
-        id="example-switch-disabled"
+        id="example-switch"
       />
     </div>
   );

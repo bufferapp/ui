@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import Switch from '@bufferapp/ui/Switch';
 
-/** Switch Basic */
-export default function ExampleSwitch() {
-  const [value, setValue] = useState(false);
+/** Switch On */
+export default function ExampleSwitchOn() {
+  const [value, setValue] = useState(true);
 
   return (
     <div style={{ position: 'relative' }}>
