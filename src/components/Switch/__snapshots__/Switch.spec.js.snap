@@ -15,7 +15,7 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "disabl
       aria-checked={true}
       aria-readonly={false}
       checked={true}
-      disabled={true}
+      disabled={false}
       id={true}
       onChange={[MockFunction]}
       role="switch"
@@ -23,7 +23,6 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "disabl
     />
     <ForwardRef(styled.span)
       aria-hidden="true"
-      data-checked={true}
     />
   </ForwardRef(styled.label)>
 </ForwardRef(styled.div)>
@@ -52,7 +51,6 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "id" is
     />
     <ForwardRef(styled.span)
       aria-hidden="true"
-      data-checked={true}
     />
   </ForwardRef(styled.label)>
 </ForwardRef(styled.div)>
@@ -81,7 +79,6 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "isOn" 
     />
     <ForwardRef(styled.span)
       aria-hidden="true"
-      data-checked={false}
     />
   </ForwardRef(styled.label)>
 </ForwardRef(styled.div)>
@@ -110,7 +107,6 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when passed all props 1`]
     />
     <ForwardRef(styled.span)
       aria-hidden="true"
-      data-checked={true}
     />
   </ForwardRef(styled.label)>
 </ForwardRef(styled.div)>
@@ -124,14 +120,14 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when passed only required
     htmlFor={true}
     type="label"
   >
-    On
+    jest-auto-snapshots String Fixture
   </Text>
   <ForwardRef(styled.label)>
     <ForwardRef(styled.input)
       aria-checked={false}
       aria-readonly={false}
       checked={false}
-      disabled={true}
+      disabled={false}
       id={true}
       onChange={[MockFunction]}
       role="switch"
@@ -139,7 +135,6 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when passed only required
     />
     <ForwardRef(styled.span)
       aria-hidden="true"
-      data-checked={false}
     />
   </ForwardRef(styled.label)>
 </ForwardRef(styled.div)>

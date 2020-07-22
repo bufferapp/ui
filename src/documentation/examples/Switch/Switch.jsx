@@ -10,8 +10,9 @@ export default function ExampleSwitch() {
       <Switch 
         isOn={value}
         disabled={false}
-        handleToggle={() => setValue(!value)}
+        handleSwitch={() => setValue(!value)}
         label={value ? 'On' : 'Off'} 
+        id="example-switch"
       />
     </div>
   );

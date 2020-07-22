@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Input, Span, Wrapper, Container } from './style';
 import Text from '../Text/Text';
 
-const Switch = ({ label = 'On', id, disabled = true, handleSwitch, isOn = false }) => (
+const Switch = ({ label, id, disabled, handleSwitch, isOn }) => (
   <Container>
     <Text htmlFor={id} type="label">
       {label}
@@ -17,16 +17,16 @@ const Switch = ({ label = 'On', id, disabled = true, handleSwitch, isOn = false 
         role="switch"
         aria-checked={isOn}
         aria-readonly={disabled}
-        disabled
+        disabled={disabled}
       />
-      <Span aria-hidden="true" data-checked={isOn} />
+      <Span aria-hidden="true" />
     </Wrapper>
   </Container>
 );
   
 Switch.propTypes = {
   label: PropTypes.string.isRequired,
-  isOn: PropTypes.bool.isRequired,
+  isOn: PropTypes.bool,
   id: PropTypes.bool.isRequired,
   disabled: PropTypes.bool,
   handleSwitch: PropTypes.func.isRequired,
@@ -34,6 +34,7 @@ Switch.propTypes = {
 
 Switch.defaultProps = {
   disabled: false,
+  isOn: false,
 };
 
 export default Switch;
