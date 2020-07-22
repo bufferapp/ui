@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.43.0] - 2020-07-22
+- Updates light and dark social channel colors to match current designs.
+- Sets the `SocialButton` component background color to use dark variations to meet contrast standards for accessibility.
+- Applies a drop shadow on hover for the `SocialButton` component.
+- Adds light and dark colors for Shopify.
+
 ## [5.42.0] - 2020-07-21
 - Add default Tooltip message when no social network found for an organization in the orgSwitcher.
 - Fix styles when only one social network is displayed in the Tooltip in the orgSwitcher.
