@@ -12,7 +12,7 @@ export default function ExampleSwitchOff() {
         disabled={false}
         handleSwitch={() => setValue(!value)}
         label={value ? 'On' : 'Off'}
-        id="example-switch"
+        id="switch-off"
       />
     </div>
   );
