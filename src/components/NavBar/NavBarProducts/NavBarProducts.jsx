@@ -57,7 +57,8 @@ const NewLabel = styled.span`
   background: ${green};
   border-radius: 12px;
   padding: 2px 8px;
-  margin: 2px 0px 2px 8px;
+  margin-left: 8px;
+  margin-top: 2px;
 `;
 
 // Notee: Custom SVGs to support multi-color product icons (instead of using icon component)
