@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.44.0] - 2020-07-27
+- Create new Switch component.
+
 ## [5.43.1] - 2020-07-22
 - Update styles for `New!` label.
 
