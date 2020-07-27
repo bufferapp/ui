@@ -11,7 +11,7 @@ export default function ExampleSwitchOff() {
         isOn={value}
         disabled={false}
         handleSwitch={() => setValue(!value)}
-        label={value ? 'On' : 'Off'}
+        label='Notifications'
         id="switch-off"
       />
     </div>

@@ -11,7 +11,7 @@ export default function ExampleSwitchDisabled() {
         isOn={value}
         disabled
         handleSwitch={() => setValue(!value)}
-        label={value ? 'On' : 'Off'}
+        label='Notifications'
         id="switch-disabled"
       />
     </div>
