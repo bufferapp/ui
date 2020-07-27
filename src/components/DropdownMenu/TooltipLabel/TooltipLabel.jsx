@@ -10,12 +10,9 @@ const LabelWrapper = styled.div`
   height: 14px;
   line-height: 14px;
   width: 100%;
-  margin: ${props => {
-    const { isFirstLabel, isLastLabel } = props;
-    if (isFirstLabel) return '5px 0px 10px 0px';
-    if (isLastLabel) return '10px 0px 5px 0px';
-    return '10px 0';
-  }};
+  max-width: 160px;
+  padding-top: 4px;
+  padding-bottom: 4px;
 `;
 
 export const Label = styled.div`
@@ -26,8 +23,15 @@ export const Label = styled.div`
   margin-left: ${props => (props.hasIcon ? '7px' : 0)};
 `;
 
-const TooltipLabel = ({ items, maxItems }) => {
-  if (!items) return null;
+export const EmptyLabel = styled.div`
+  white-space: break-spaces;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  height: auto;
+`;
+
+const TooltipLabel = ({ items, maxItems, defaultMessage }) => {
+  if (!items && !defaultMessage) return null;
 
   const totalItems = items.length;
   const exceedsTotal = totalItems > maxItems;
@@ -35,22 +39,19 @@ const TooltipLabel = ({ items, maxItems }) => {
 
   return (
     <>
-      {items.slice(0, maxItems).map((item, index) => {
-        const isFirstLabel = index === 0;
-        const isLastLabel = (index === items.length - 1) && !exceedsTotal;
-        return (
-          <LabelWrapper
-            key={`tooltip-item-${index}`}
-            isFirstLabel={isFirstLabel}
-            isLastLabel={isLastLabel}
-          >
-            {item.icon}
-            <Label hasIcon>{item.title}</Label>
-          </LabelWrapper>
-        )
-      })}
+      {items.slice(0, maxItems).map((item, index) => (
+        <LabelWrapper key={`tooltip-item-${index}`}>
+          {item.icon}
+          <Label hasIcon>{item.title}</Label>
+        </LabelWrapper>
+      ))}
+      {items.length === 0 && (
+        <LabelWrapper>
+          <EmptyLabel>{defaultMessage}</EmptyLabel>
+        </LabelWrapper>
+      )}
       {exceedsTotal && (
-        <LabelWrapper isLastLabel>
+        <LabelWrapper>
           <Label>{`Plus ${remainingItems} more...`}</Label>
         </LabelWrapper>
       )}
@@ -65,7 +66,13 @@ TooltipLabel.propTypes = {
       title: PropTypes.string,
       icon: PropTypes.node,
     })
-  ).isRequired,
+  ),
+  defaultMessage: PropTypes.string,
+};
+
+TooltipLabel.defaultProps = {
+  items: [],
+  defaultMessage: null,
 };
 
 export default TooltipLabel;

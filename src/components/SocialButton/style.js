@@ -1,35 +1,30 @@
 import styled from 'styled-components';
-import { 
-  white,
-  facebook,
+import {
   facebookDark,
-  instagram,
   instagramDark,
-  linkedin,
   linkedinDark,
-  pinterest,
   pinterestDark,
-  twitter,
-  twitterDark, 
+  twitterDark,
+  white,
 } from '../style/colors';
 import { ButtonBase, large } from '../Button/style';
 
-function calculateBgColor(channel, hover = false) {
+function calculateBgColor(channel) {
   switch (channel) {
     case 'instagram':
-      return hover ? instagramDark : instagram;
+      return instagramDark;
     case 'twitter':
-      return hover ? twitterDark : twitter;
+      return twitterDark;
     case 'facebook':
-      return hover ? facebookDark : facebook;
+      return facebookDark;
     case 'pinterest':
-      return hover ? pinterestDark : pinterest;
+      return pinterestDark;
     case 'linkedin':
-      return hover ? linkedinDark : linkedin;
+      return linkedinDark;
     default:
       return 'gray';
   }
-};
+}
 
 export const SocialButtonStyled = styled.button`
   ${ButtonBase};
@@ -39,13 +34,18 @@ export const SocialButtonStyled = styled.button`
   width: 100%;
   justify-content: space-between;
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
+  transition: box-shadow 0.1s ease;
+
   p {
     color: ${white};
     margin-left: 8px;
     line-height: normal;
   }
+
   &:hover {
-    background-color: ${props => calculateBgColor(props.channel, true)};
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.1s ease;
   }
 `;
 
