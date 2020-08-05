@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.44.1] - 2020-08-05
+### Fixed
+- Scroll in PopupMenu, when used inside the AppShell Navbar. 
+
 ## [5.44.0] - 2020-07-27
 - Create new Switch component.
 
