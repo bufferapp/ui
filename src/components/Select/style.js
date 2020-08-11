@@ -11,9 +11,9 @@ import {
 import { fontFamily } from '../style/fonts';
 
 export const Wrapper = styled.div`
-  outline: 0;
+  outline-style: none;
   :focus {
-    outline: 0;
+    outline-style: ${props => (props.isSplit ? 'auto' : '0')};
   }
   width: ${props => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
   height: ${props => (props.isSplit ? '100%' : 'auto')};

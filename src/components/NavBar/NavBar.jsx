@@ -1,15 +1,30 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Info as InfoIcon, ArrowLeft, Person as PersonIcon } from '../Icon';
-
-import { gray, blueDarker, grayLight, grayLighter, grayDark, } from '../style/colors';
 import {
-  fontWeightMedium,
-  fontFamily
-} from '../style/fonts';
+  Cross,
+  Info as InfoIcon,
+  ArrowLeft,
+  Person as PersonIcon,
+  Instagram as InstagramIcon,
+  Twitter as TwitterIcon,
+  Facebook as FacebookIcon,
+  Pinterest as PinterestIcon,
+  LinkedIn as LinkedInIcon,
+} from '../Icon';
 
-import Select from '../Select';
+import {
+  gray,
+  blueDarker,
+  grayLight,
+  grayLighter,
+  grayDark,
+} from '../style/colors';
+
+import { fontWeightMedium, fontFamily } from '../style/fonts';
+
+import Link from '../Link';
+import DropdownMenu from '../DropdownMenu';
 
 import BufferLogo from './BufferLogo';
 import NavBarMenu from './NavBarMenu/NavBarMenu';
@@ -42,10 +57,23 @@ export function getAccountUrl(baseUrl = '', user) {
   )}&username=${encodeURI(user.name)}`;
 }
 
+export const ORG_SWITCHER = 'org_switcher';
+
+export function getStopImpersonationUrl() {
+  const { hostname } = window.location;
+  if (!hostname.endsWith('buffer.com')) {
+    return null;
+  }
+
+  return `https://admin${
+    hostname.includes('local') ? '-next.local' : ''
+  }.buffer.com/clearImpersonation`;
+}
+
 const NavBarStyled = styled.nav`
   background: #fff;
   border-bottom: 1px solid ${gray};
-  box-shadow: 0 1px 10px -5px rgba(0,0,0,.15);
+  box-shadow: 0 1px 10px -5px rgba(0, 0, 0, 0.15);
   display: flex;
   height: 56px;
   justify-content: space-between;
@@ -56,7 +84,7 @@ const NavBarStyled = styled.nav`
 const NavBarLeft = styled.div`
   display: flex;
 `;
-const NavBarRight = styled.div`
+const NavBarRight = styled.nav`
   display: flex;
 `;
 
@@ -96,6 +124,31 @@ const NavBarVerticalRule = styled.div`
   z-index: 1;
 `;
 
+/**
+ * A11Y feature: A skip to main content link appears when a user is on a screen reader
+ * and the link is in focus. To work properly, each page will need to have an element with the id main
+ * example: <main id="main"></main> This feature is optional
+ */
+const SkipToMainLink = styled(Link)`
+  position: absolute;
+  top: -1000px;
+  left: -1000px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+
+  :focus {
+    left: auto;
+    top: auto;
+    position: relative;
+    height: auto;
+    width: auto;
+    overflow: visible;
+    margin: auto;
+    margin-left: 10px;
+  }
+`;
+
 export function appendMenuItem(ignoreMenuItems, menuItem) {
   if (!ignoreMenuItems) {
     return menuItem;
@@ -104,54 +157,120 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
   return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
 }
 
+function getNetworkIcon(item) {
+  if (!item.network) return null;
+
+  switch (item.network) {
+    case 'instagram':
+      return <InstagramIcon size="medium" />;
+    case 'twitter':
+      return <TwitterIcon size="medium" />;
+    case 'facebook':
+      return <FacebookIcon size="medium" />;
+    case 'pinterest':
+      return <PinterestIcon size="medium" />;
+    case 'linkedin':
+      return <LinkedInIcon size="medium" />;
+    default:
+      break;
+  }
+}
+
+export function appendOrgSwitcher(orgSwitcher) {
+  if (!orgSwitcher || !orgSwitcher.menuItems) {
+    return [];
+  }
+
+  return orgSwitcher.menuItems.map((item, index) => {
+    item.type = ORG_SWITCHER;
+    if (orgSwitcher.title && index === 0) {
+      item.hasDivider = true;
+      item.dividerTitle = orgSwitcher.title;
+    }
+    if (item.subItems) {
+      item.subItems.forEach(subItem => {
+        subItem.icon = getNetworkIcon(subItem);
+      });
+    }
+    if (!item.subItems || item.subItems.length === 0) {
+      item.defaultTooltipMessage = 'No social accounts connected yet.';
+    }
+    
+    return item;
+  });
+}
+
 /**
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
 class NavBar extends React.Component {
   shouldComponentUpdate(nextProps) {
-    return nextProps.user.name !== this.props.user.name ||
-      nextProps.user.email !== this.props.user.email;
+    return (
+      nextProps.user.name !== this.props.user.name ||
+      nextProps.user.email !== this.props.user.email ||
+      nextProps.isImpersonation !== this.props.isImpersonation ||
+      nextProps.products !== this.props.products ||
+      nextProps.orgSwitcher !== this.props.orgSwitcher
+    );
   }
 
   render() {
-    const { activeProduct, user, helpMenuItems, onLogout } = this.props;
+    const {
+      products,
+      activeProduct,
+      user,
+      helpMenuItems,
+      onLogout,
+      displaySkipLink,
+      isImpersonation,
+      orgSwitcher,
+    } = this.props;
+
+    const orgSwitcherHasItems =
+      orgSwitcher && orgSwitcher.menuItems && orgSwitcher.menuItems.length > 0;
+
     return (
-      <NavBarStyled>
+      <NavBarStyled aria-label="Main menu">
         <NavBarLeft>
+          {displaySkipLink && (
+            <SkipToMainLink href="#main">Skip to main content</SkipToMainLink>
+          )}
           <BufferLogo />
           <NavBarVerticalRule />
-          <NavBarProducts activeProduct={activeProduct} />
+          <NavBarProducts products={products} activeProduct={activeProduct} />
         </NavBarLeft>
         <NavBarRight>
           {helpMenuItems && (
-            <Select
-              hideSearch
-              capitalizeItemLabel={false}
-              customButton={handleClick => (
-                <NavBarHelp onClick={handleClick}>
+            <DropdownMenu
+              xPosition="right"
+              ariaLabel="Help Menu"
+              ariaLabelPopup="Help"
+              menubarItem={(
+                <NavBarHelp>
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
               )}
               items={helpMenuItems}
-              horizontalOffset="-16px"
-              xPosition="right"
             />
           )}
           <NavBarVerticalRule />
-          <Select
-            onSelectClick={selectedItem => selectedItem.onItemClick()}
-            hideSearch
-            capitalizeItemLabel={false}
+          <DropdownMenu
             xPosition="right"
-            customButton={handleClick => (
-              <NavBarMenu user={user} onClick={handleClick} />
-            )}
+            ariaLabel="Account Menu"
+            ariaLabelPopup="Account"
+            horizontalOffset="-16px"
+            isImpersonation={isImpersonation}
+            menubarItem={
+              <NavBarMenu user={user} isImpersonation={isImpersonation} />
+            }
             items={[
+              ...appendOrgSwitcher(orgSwitcher),
               appendMenuItem(user.ignoreMenuItems, {
                 id: 'account',
                 title: 'Account',
                 icon: <PersonIcon color={gray} />,
+                hasDivider: orgSwitcherHasItems,
                 onItemClick: () => {
                   window.location.assign(
                     getAccountUrl(window.location.href, this.props.user)
@@ -159,18 +278,32 @@ class NavBar extends React.Component {
                 },
               }),
               ...user.menuItems,
-              appendMenuItem(user.ignoreMenuItems, {
-                id: 'logout',
-                title: 'Logout',
-                icon: <ArrowLeft color={gray} />,
-                hasDivider: user.menuItems && user.menuItems.length > 0,
-                onItemClick: () => {
-                  if (typeof onLogout === 'function') onLogout();
-                  window.location.assign(getLogoutUrl(window.location.href));
-                },
-              }),
+              appendMenuItem(
+                user.ignoreMenuItems,
+                isImpersonation
+                  ? {
+                      id: 'Stop Impersonation',
+                      title: 'Stop Impersonation',
+                      icon: <Cross color={gray} />,
+                      hasDivider: user.menuItems && user.menuItems.length > 0,
+                      onItemClick: () => {
+                        window.location.assign(getStopImpersonationUrl());
+                      },
+                    }
+                  : {
+                      id: 'logout',
+                      title: 'Logout',
+                      icon: <ArrowLeft color={gray} />,
+                      hasDivider: user.menuItems && user.menuItems.length > 0,
+                      onItemClick: () => {
+                        if (typeof onLogout === 'function') onLogout();
+                        window.location.assign(
+                          getLogoutUrl(window.location.href)
+                        );
+                      },
+                    }
+              ),
             ].filter(e => e)}
-            horizontalOffset="-16px"
           />
         </NavBarRight>
       </NavBarStyled>
@@ -179,8 +312,17 @@ class NavBar extends React.Component {
 }
 
 NavBar.propTypes = {
-  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
-  activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
+  /** The list of available products */
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string,
+      isNew: PropTypes.bool,
+      href: PropTypes.string,
+    })
+  ),
+
+  /** The currently active (highlighted) product in the `NavBar`. */
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
 
   user: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -208,14 +350,33 @@ NavBar.propTypes = {
       onItemClick: PropTypes.func,
     })
   ),
+  isImpersonation: PropTypes.bool,
 
-  onLogout: PropTypes.func
+  onLogout: PropTypes.func,
+  displaySkipLink: PropTypes.bool,
+
+  /** Optional menu for selecting the user's organization */
+  orgSwitcher: PropTypes.shape({
+    title: PropTypes.string.isRequired,
+    menuItems: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        selected: PropTypes.bool.isRequired,
+        onItemClick: PropTypes.func,
+      })
+    ).isRequired,
+  }),
 };
 
 NavBar.defaultProps = {
+  products: [],
   activeProduct: undefined,
   helpMenuItems: null,
-  onLogout: undefined
+  isImpersonation: false,
+  onLogout: undefined,
+  displaySkipLink: false,
+  orgSwitcher: undefined,
 };
 
 export default NavBar;

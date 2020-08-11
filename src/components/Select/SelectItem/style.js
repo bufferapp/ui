@@ -42,9 +42,7 @@ export const SelectItemLabel = styled.div`
 export const SelectItemIcon = styled.div`
   display: flex;
   padding-right: 8px;
-  svg {
-    fill: ${props => (props.hovered ? grayDarker : gray)};
-  }
+  fill: ${props => (props.hovered ? grayDarker : gray)};
   ${SelectItemStyled}:hover & * {
     color: ${grayDarker};
     fill: ${grayDarker};
@@ -56,6 +54,7 @@ export const SelectItemTitle = styled.p`
   width: 100%;
   overflow: hidden;
   display: flex;
+  align-items: center;
 `;
 
 export const SelectItemCustom = styled.span`
@@ -63,14 +62,14 @@ export const SelectItemCustom = styled.span`
   align-items: center;
 `;
 
-export const CheckIconWrapper = styled.span`
+export const IconWrapper = styled.span`
   margin-right: 8px;
-  display: inline-block;
-  height: 16px;
-  width: 16px;
+  height: ${props => props.custom ? '' : '16px'};
+  width: ${props => props.custom ? '' : '16px'};
   display: flex;
   justify-content: center;
-}
+  flex-shrink: 0;
+  padding: ${props => props.custom ? '2px 0' : ''};
 `;
 
 export const HotKeyPrompt = styled.span`

@@ -1,15 +1,16 @@
 import styled from 'styled-components';
 import {
-  gray, grayDark, grayDarker, grayLight, grayLighter, white,
+  gray,
+  grayDark,
+  grayDarker,
+  grayLight,
+  grayLighter,
+  white,
 } from '../../style/colors';
 
-import {
-  fontSize,
-  fontWeightMedium,
-  fontFamily
-} from '../../style/fonts';
+import { fontSize, fontWeightMedium, fontFamily } from '../../style/fonts';
 
-export const NavBarStyled = styled.div`
+export const NavBarStyled = styled.a`
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -30,13 +31,27 @@ export const NavBarUser = styled.div`
   padding-right: 16px;
 `;
 
+export const NavBarImpersonating = styled.div`
+  font-family: ${fontFamily};
+  background: ${grayDarker};
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 8px;
+  color: ${white};
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-top: ${props => (props.user.name ? '-8px' : '-21px')};
+  margin-bottom: ${props => (props.user.name ? '0px' : '5px')};
+  text-transform: uppercase;
+`;
+
 export const NavBarAvatar = styled.div`
   border-radius: 100px;
   width: 40px;
   height: 40px;
   background: ${gray};
   background-size: cover;
-  background-image: url(${props => (props.avatar)});
+  background-image: url(${props => props.avatar});
 `;
 
 export const NavBarName = styled.div`

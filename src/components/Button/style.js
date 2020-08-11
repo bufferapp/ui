@@ -23,43 +23,110 @@ import {
 import { borderRadius } from '../style/borders';
 import { ButtonStyled } from './Button';
 
-/* styles common to all buttons */
-export const ButtonBase = css`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: ${fontSize};
-  line-height: ${lineHeight};
-  font-weight: ${fontWeightMedium};
-  border-radius: ${borderRadius};
-  cursor: pointer;
-  user-select: none;
-  border: 0;
+export const ButtonWrapperBase = css`
   -webkit-appearance: none;
+  align-items: center;
+  background-color: ${white};
+  border: 0;
+  border-radius: ${borderRadius};
+  box-sizing: border-box;
+  color: ${grayDefault};
+  cursor: pointer;
+  display: inline-block;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  font-family: ${fontFamily};
+  font-size: ${fontSize};
+  font-weight: ${fontWeightMedium};
+  line-height: ${lineHeight};
+  min-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
   position: relative;
   transition-property: background-color, border-color, color;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  min-width: 0;
-  flex: 0 0 auto;
-  font-family: ${fontFamily};
-  background-color: ${white};
-  color: ${grayDefault};
-  padding-top: 0;
-  padding-bottom: 0;
-  :hover {
-    transition-property: background-color, border-color, color;
-    transition-duration: 0.1s;
-    transition-timing-function: ease-in;
-  }
+  user-select: none;
+
   :active {
     top: 1px;
   }
   :focus {
     box-shadow: 0 0 0 3px ${boxShadow};
     outline: 0;
+  }
+  :hover {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
+  }
+`;
+
+
+export const ButtonContainerBase = css`
+  -webkit-appearance: none;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  user-select: none;
+  width: 100%;
+  height: 100%;
+`;
+
+export const ButtonNestedBase = css`
+  align-items: center;
+  background: none transparent;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  display: flex;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  justify-content: flex-start;
+  margin: -1px;
+  padding: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+`;
+
+/* styles common to all buttons */
+export const ButtonBase = css`
+  -webkit-appearance: none;
+  align-items: center;
+  background-color: ${white};
+  border: 0;
+  border-radius: ${borderRadius};
+  color: ${grayDefault};
+  cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  flex: 0 0 auto;
+  font-family: ${fontFamily};
+  font-size: ${fontSize};
+  font-weight: ${fontWeightMedium};
+  line-height: ${lineHeight};
+  min-width: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  position: relative;
+  transition-property: background-color, border-color, color;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in;
+  user-select: none;
+  :active {
+    top: 1px;
+  }
+  :focus {
+    box-shadow: 0 0 0 3px ${boxShadow};
+  }
+  :hover {
+    transition-property: background-color, border-color, color;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in;
   }
 `;
 
@@ -149,18 +216,22 @@ export const ButtonSelect = style.div`
     color: ${props => (props.disabled ? gray : blueLighter)};
     content: "";
     height: 24px;
+    left: 0;
     position: absolute;
-    right: 34px;
     top: 50%;
     transform: translateY(-50%);
     width: 1px;
   }
-  padding-left: 13px;
-  display: flex;
-  justify-content: center;
+
   align-items: center;
-  width: 100%;
+  display: flex;
   height: 38px;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 0 10px;
+  position: relative;
+  width: 100%;
+
   ${ButtonStyled}:hover & {
     background-color: ${blueDark};
     color: ${white};

@@ -1,25 +1,34 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
   <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Link))
+      href="#main"
+    >
+      Skip to main content
+    </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
+      products={
+        Array [
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
+        ]
+      }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -31,31 +40,36 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
       xPosition="right"
-      yPosition="bottom"
     />
     <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+      isImpersonation={true}
       items={
         Array [
           Object {
+            "defaultTooltipMessage": "No social accounts connected yet.",
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -72,77 +86,105 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           },
           Object {
             "hasDivider": true,
-            "icon": <ArrowLeftIcon
+            "icon": <CrossIcon
               color="#B8B8B8"
             />,
-            "id": "logout",
+            "id": "Stop Impersonation",
             "onItemClick": [Function],
-            "title": "Logout",
+            "title": "Stop Impersonation",
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={true}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
       xPosition="right"
-      yPosition="bottom"
     />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
   <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Link))
+      href="#main"
+    >
+      Skip to main content
+    </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
+      products={
+        Array [
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
+        ]
+      }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={Array []}
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
       xPosition="right"
-      yPosition="bottom"
     />
     <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+      isImpersonation={true}
       items={
         Array [
           Object {
+            "defaultTooltipMessage": "No social accounts connected yet.",
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -159,51 +201,74 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
           },
           Object {
             "hasDivider": true,
-            "icon": <ArrowLeftIcon
+            "icon": <CrossIcon
               color="#B8B8B8"
             />,
-            "id": "logout",
+            "id": "Stop Impersonation",
             "onItemClick": [Function],
-            "title": "Logout",
+            "title": "Stop Impersonation",
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={true}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
       xPosition="right"
-      yPosition="bottom"
     />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
-exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.nav)>
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "[object Object]" 1`] = `
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
   <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Link))
+      href="#main"
+    >
+      Skip to main content
+    </ForwardRef(Styled(Link))>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct
+    <NavBarProducts
       activeProduct="publish"
+      products={
+        Array [
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
+        ]
+      }
     />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
-      horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
       items={
         Array [
           Object {
@@ -215,31 +280,398 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
       xPosition="right"
-      yPosition="bottom"
     />
     <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+      isImpersonation={true}
       items={
         Array [
           Object {
+            "defaultTooltipMessage": "No social accounts connected yet.",
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <CrossIcon
+              color="#B8B8B8"
+            />,
+            "id": "Stop Impersonation",
+            "onItemClick": [Function],
+            "title": "Stop Impersonation",
+          },
+        ]
+      }
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={true}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
+      xPosition="right"
+    />
+  </ForwardRef(styled.nav)>
+</ForwardRef(styled.nav)>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" is an empty array: "[]" 1`] = `
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
+  <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Link))
+      href="#main"
+    >
+      Skip to main content
+    </ForwardRef(Styled(Link))>
+    <BufferLogo />
+    <ForwardRef(styled.div) />
+    <NavBarProducts
+      activeProduct="publish"
+      products={Array []}
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      xPosition="right"
+    />
+    <ForwardRef(styled.div) />
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
+      horizontalOffset="-16px"
+      isImpersonation={true}
+      items={
+        Array [
+          Object {
+            "defaultTooltipMessage": "No social accounts connected yet.",
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <CrossIcon
+              color="#B8B8B8"
+            />,
+            "id": "Stop Impersonation",
+            "onItemClick": [Function],
+            "title": "Stop Impersonation",
+          },
+        ]
+      }
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={true}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
+      xPosition="right"
+    />
+  </ForwardRef(styled.nav)>
+</ForwardRef(styled.nav)>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displaySkipLink" is set to: "false" 1`] = `
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
+  <ForwardRef(styled.div)>
+    <BufferLogo />
+    <ForwardRef(styled.div) />
+    <NavBarProducts
+      activeProduct="publish"
+      products={
+        Array [
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
+        ]
+      }
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      xPosition="right"
+    />
+    <ForwardRef(styled.div) />
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
+      horizontalOffset="-16px"
+      isImpersonation={true}
+      items={
+        Array [
+          Object {
+            "defaultTooltipMessage": "No social accounts connected yet.",
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <CrossIcon
+              color="#B8B8B8"
+            />,
+            "id": "Stop Impersonation",
+            "onItemClick": [Function],
+            "title": "Stop Impersonation",
+          },
+        ]
+      }
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={true}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
+      xPosition="right"
+    />
+  </ForwardRef(styled.nav)>
+</ForwardRef(styled.nav)>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
+  <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Link))
+      href="#main"
+    >
+      Skip to main content
+    </ForwardRef(Styled(Link))>
+    <BufferLogo />
+    <ForwardRef(styled.div) />
+    <NavBarProducts
+      activeProduct="publish"
+      products={
+        Array [
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
+        ]
+      }
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      xPosition="right"
+    />
+    <ForwardRef(styled.div) />
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
+      horizontalOffset="-16px"
+      isImpersonation={false}
+      items={
+        Array [
+          Object {
+            "defaultTooltipMessage": "No social accounts connected yet.",
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -265,44 +697,183 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={false}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
       xPosition="right"
-      yPosition="bottom"
+    />
+  </ForwardRef(styled.nav)>
+</ForwardRef(styled.nav)>
+`;
+
+exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
+  <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Link))
+      href="#main"
+    >
+      Skip to main content
+    </ForwardRef(Styled(Link))>
+    <BufferLogo />
+    <ForwardRef(styled.div) />
+    <NavBarProducts
+      activeProduct="publish"
+      products={
+        Array [
+          Object {
+            "href": "jest-auto-snapshots String Fixture",
+            "id": "jest-auto-snapshots String Fixture",
+            "isNew": true,
+          },
+        ]
+      }
     />
   </ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
+    <DropdownMenu
+      ariaLabel="Help Menu"
+      ariaLabelPopup="Help"
+      items={
+        Array [
+          Object {
+            "component": <NodeFixture />,
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      menubarItem={
+        <ForwardRef(styled.a)>
+          <InfoIcon />
+          <ForwardRef(styled.span)>
+            Help
+          </ForwardRef(styled.span)>
+        </ForwardRef(styled.a)>
+      }
+      xPosition="right"
+    />
+    <ForwardRef(styled.div) />
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
+      horizontalOffset="-16px"
+      isImpersonation={true}
+      items={
+        Array [
+          Object {
+            "defaultTooltipMessage": "No social accounts connected yet.",
+            "dividerTitle": "jest-auto-snapshots String Fixture",
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "selected": true,
+            "title": "jest-auto-snapshots String Fixture",
+            "type": "org_switcher",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <PersonIcon
+              color="#B8B8B8"
+            />,
+            "id": "account",
+            "onItemClick": [Function],
+            "title": "Account",
+          },
+          Object {
+            "component": [MockFunction],
+            "hasDivider": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "onItemClick": [MockFunction],
+            "title": "jest-auto-snapshots String Fixture",
+          },
+          Object {
+            "hasDivider": true,
+            "icon": <CrossIcon
+              color="#B8B8B8"
+            />,
+            "id": "Stop Impersonation",
+            "onItemClick": [Function],
+            "title": "Stop Impersonation",
+          },
+        ]
+      }
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={true}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
+      xPosition="right"
+    />
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.nav)>
+<ForwardRef(styled.nav)
+  aria-label="Main menu"
+>
   <ForwardRef(styled.div)>
     <BufferLogo />
     <ForwardRef(styled.div) />
-    <NavBarProduct />
+    <NavBarProducts
+      products={Array []}
+    />
   </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+  <ForwardRef(styled.nav)>
     <ForwardRef(styled.div) />
-    <Select
-      capitalizeItemLabel={false}
-      customButton={[Function]}
-      hasCustomAction={false}
-      hasIconOnly={false}
-      hideSearch={true}
+    <DropdownMenu
+      ariaLabel="Account Menu"
+      ariaLabelPopup="Account"
       horizontalOffset="-16px"
-      isInputSearch={false}
-      isOpen={false}
-      isSplit={false}
+      isImpersonation={false}
       items={
         Array [
           Object {
+            "hasDivider": undefined,
             "icon": <PersonIcon
               color="#B8B8B8"
             />,
@@ -328,18 +899,32 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
           },
         ]
       }
-      label=""
-      multiSelect={false}
-      noResultsCustomMessage="No matches found"
-      onSelectClick={[Function]}
-      searchPlaceholder="Search"
-      selectPopupVisible={false}
-      shortcutsEnabled={true}
-      size="medium"
-      type="secondary"
+      menubarItem={
+        <NavBarMenu
+          isImpersonation={false}
+          user={
+            Object {
+              "avatar": "jest-auto-snapshots String Fixture",
+              "email": "jest-auto-snapshots String Fixture",
+              "ignoreMenuItems": Array [
+                "jest-auto-snapshots String Fixture",
+              ],
+              "menuItems": Array [
+                Object {
+                  "component": [MockFunction],
+                  "hasDivider": true,
+                  "id": "jest-auto-snapshots String Fixture",
+                  "onItemClick": [MockFunction],
+                  "title": "jest-auto-snapshots String Fixture",
+                },
+              ],
+              "name": "jest-auto-snapshots String Fixture",
+            }
+          }
+        />
+      }
       xPosition="right"
-      yPosition="bottom"
     />
-  </ForwardRef(styled.div)>
+  </ForwardRef(styled.nav)>
 </ForwardRef(styled.nav)>
 `;

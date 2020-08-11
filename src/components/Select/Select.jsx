@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-expressions, react/no-unused-state */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { includes, some } from 'lodash';
 import helper from 'immutability-helper';
 import SearchIcon from '../Icon/Icons/Search';
 import {
@@ -129,7 +128,7 @@ export default class Select extends React.Component {
       this.setState(
         {
           isOpen: false,
-          hoveredItem: undefined,
+          hoveredItem: undefined
         },
       );
     }
@@ -180,14 +179,33 @@ export default class Select extends React.Component {
   onClick = e => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
+    if (this.props.isSplit && !this.props.disabled) {
+       this.onButtonClick(e);
+    }
+  };
+
+  onKeyUp = e => {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+    if (this.props.isSplit && !this.props.disabled) {
+      const altPlusUp = e.altKey && ['Up', 'ArrowUp'].indexOf(e.key) >= 0;
+      const altPlusDown = e.altKey && ['Down', 'ArrowDown'].indexOf(e.key) >= 0;
+      const space = ['Space', ' '].indexOf(e.key) >= 0;
+      const enter = ['Enter'].indexOf(e.key) >= 0;
+      if (altPlusUp || altPlusDown || space || enter) {
+        e.preventDefault();
+        this.onButtonClick(e);
+      }
+    }
   };
 
   onButtonClick = () => {
-    const { isOpen, items } = this.state;
-    const { isInputSearch } = this.props;
+    const { isOpen } = this.state;
+    const { isInputSearch, items } = this.props;
     this.setState(
       {
         isOpen: !isOpen,
+        items
       },
       () => {
         !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus();
@@ -327,7 +345,7 @@ export default class Select extends React.Component {
 
     const filteredItems = items.reduce((filtered, item) => {
       if (
-        includes(item[searchFiled].toLowerCase(), searchValue.toLowerCase())
+        item[searchFiled].toLowerCase().includes(searchValue.toLowerCase())
       ) {
         filtered.push({
           ...item,
@@ -490,6 +508,7 @@ export default class Select extends React.Component {
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
+              clearSearchOnBlur
             />
           </SearchBarWrapper>
         )}
@@ -524,7 +543,7 @@ export default class Select extends React.Component {
               item={item}
               capitalizeItemLabel={capitalizeItemLabel}
               keyMap={keyMap}
-              hasSelectedItems={some(items, { selected: true })}
+              hasSelectedItems={items.some(i => i.selected)}
               onClick={event => this.handleSelectOption(item, event)}
               onItemClick={() => this.handleSelectOption(item, item.onItemClick)}
               hideSearch={hideSearch}
@@ -542,13 +561,15 @@ export default class Select extends React.Component {
     return (
       <Wrapper
         role="button"
-        onClick={this.onClick}
-        onKeyUp={this.onClick}
+        onClick={(e) => this.onClick(e)}
+        onKeyUp={(e) => this.onKeyUp(e)}
         tabIndex={0}
         isSplit={isSplit}
         ref={selectNode => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}
+        aria-haspopup="true"
+        aria-expanded={this.state.isOpen}
       >
         {this.renderSelectButton()}
         {this.renderSelectPopup()}

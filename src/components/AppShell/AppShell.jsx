@@ -12,10 +12,14 @@ import {
   ContentWrapper,
 } from './style';
 
+const ENABLE_ENGAGE_URL = 'https://login.buffer.com/signup?product=engage';
+
 /**
  * The AppShell component is a general purpose wrapper for all of our applications. At the moment it's primarily a wrapper for the `NavBar` component. Check out the example below to see how to integrate it into your app.
  */
 const AppShell = ({
+  featureFlips,
+  enabledProducts,
   activeProduct,
   user,
   helpMenuItems,
@@ -23,30 +27,72 @@ const AppShell = ({
   content,
   bannerOptions,
   onLogout,
-}) => (
-  <AppShellStyled>
-    {/* <GlobalStyles /> */}
-    <NavBar
-      activeProduct={activeProduct}
-      user={user}
-      helpMenuItems={helpMenuItems}
-      onLogout={onLogout}
-    />
-    {bannerOptions && (
-      <Banner
-        {...bannerOptions}
+  displaySkipLink,
+  orgSwitcher,
+  isImpersonation,
+}) => {
+
+  const engageEnabled = enabledProducts.includes('engage');
+  const engageAccess = featureFlips.includes('engageRollOut');
+
+  let products = ['publish', 'analyze'];
+  if (engageEnabled || engageAccess) {
+    products.push('engage');
+  }
+
+  products = products.map(product => {
+    const productURL = `https://${product}.buffer.com`;
+
+    if (product === 'engage') {
+      return {
+        id: product,
+        isNew: true,
+        href: engageEnabled ? productURL : ENABLE_ENGAGE_URL
+      }
+    }
+
+    return {
+      id: product,
+      isNew: false,
+      href: productURL
+    }
+  });
+
+  return (
+    <AppShellStyled>
+      {/* <GlobalStyles /> */}
+      <NavBar
+        products={products}
+        activeProduct={activeProduct}
+        user={user}
+        helpMenuItems={helpMenuItems}
+        onLogout={onLogout}
+        displaySkipLink={displaySkipLink}
+        orgSwitcher={orgSwitcher}
+        isImpersonation={isImpersonation}
       />
-    )}
-    <Wrapper>
-      {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
-      <ContentWrapper>{content}</ContentWrapper>
-    </Wrapper>
-  </AppShellStyled>
-);
+      {bannerOptions && (
+        <Banner
+          {...bannerOptions}
+        />
+      )}
+      <Wrapper>
+        {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
+        <ContentWrapper>{content}</ContentWrapper>
+      </Wrapper>
+    </AppShellStyled>
+  );
+};
 
 AppShell.propTypes = {
-  /** The currently active (highlighted) product in the `NavBar`, one of `'publish', 'reply', 'analyze'` */
-  activeProduct: PropTypes.oneOf(['publish', 'reply', 'analyze']),
+  /** The list of features enabled for the user */
+  featureFlips: PropTypes.arrayOf(PropTypes.string),
+
+  /** The list of products that the user has enabled on their account. */
+  enabledProducts: PropTypes.arrayOf(PropTypes.string),
+
+  /** The currently active (highlighted) product in the `NavBar`. */
+  activeProduct: PropTypes.oneOf(['publish', 'analyze', 'engage']),
 
   /** The current user object */
   user: PropTypes.shape({
@@ -96,14 +142,23 @@ AppShell.propTypes = {
 
   /** (Optional) Callback to be called before logout */
   onLogout: PropTypes.func,
+
+  /** (Optional) Is the current session an impersonation session */
+  isImpersonation: PropTypes.bool,
+
+  displaySkipLink: PropTypes.bool
 };
 
 AppShell.defaultProps = {
+  featureFlips: [],
   sidebar: null,
+  enabledProducts: [],
   activeProduct: undefined,
   bannerOptions: null,
   onLogout: undefined,
   helpMenuItems: null,
+  isImpersonation: false,
+  displaySkipLink: false
 };
 
 export default AppShell;

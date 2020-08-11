@@ -1,5 +1,105 @@
 # Changelog
 
+## [5.44.1] - 2020-08-05
+### Fixed
+- Scroll in PopupMenu, when used inside the AppShell Navbar. 
+
+## [5.44.0] - 2020-07-27
+- Create new Switch component.
+
+## [5.43.1] - 2020-07-22
+- Update styles for `New!` label.
+
+## [5.43.0] - 2020-07-22
+- Updates light and dark social channel colors to match current designs.
+- Sets the `SocialButton` component background color to use dark variations to meet contrast standards for accessibility.
+- Applies a drop shadow on hover for the `SocialButton` component.
+- Adds light and dark colors for Shopify.
+
+## [5.42.0] - 2020-07-21
+- Add default Tooltip message when no social network found for an organization in the orgSwitcher.
+- Fix styles when only one social network is displayed in the Tooltip in the orgSwitcher.
+
+## [5.41.6] - 2020-06-29
+- Fix: add support for `'linkedin'` network type in org switcher popout.
+
+## [5.41.5] - 2020-06-22
+- Add icons: Add, Organic, PercentageDown, PercentageUp, Promoted
+
+## [5.41.4] - 2020-06-22
+- Remove unused `onClick` prop from `NavBarMenu`.
+
+## [5.41.3] - 2020-06-22
+- Allow `PropType.node` for `SidebarListItem`'s' `badges`.
+
+## [5.41.1] - 2020-06-16
+- Hotfix: ensure AppShell/NavBar updates when new `orgSwitcher` prop passed in.
+
+## [5.41.0] - 2020-06-15
+- Add org switcher support to AppShell / NavBar
+
+## [5.40.0] - 2020-06-15
+- Add support for impersonation
+
+## [5.38.0] - 2020-06-12
+- Add new icons
+- Remove Reply and add Engage
+- Remove lodash
+
+## [5.37.3] - 2020-06-01
+- Allow select to reset even if searching is interrupted
+
+## [5.37.2] - 2020-05-21
+- add flexibility for height and width in custom icons for Select
+
+## [5.37.1] - 2020-05-07
+- Improve accessibility of buttons, split buttons and select elements
+
+## [5.36.0] - 2020-05-04
+- add id and required props for Input component to match the htmlFor from label for a11y
+
+## [5.35.0] - 2020-05-04
+- add a hidden skip to main content link in the navbar
+
+## [5.34.6] - 2020-04-21
+- add flex-shrink in select for when text overflows
+
+## [5.34.5] - 2020-04-13
+- aligns items in select
+
+## [5.34.4] - 2020-04-13
+- adds modal and carousel animations
+
+## [5.34.3] - 2020-04-07
+- allow clicks on Links inside of modal
+
+## [5.34.2] - 2020-04-07
+- Allow NavBar to re-render if the contents of "products" prop changes.
+
+## [5.34.1] - 2020-04-06
+- Fix tests.
+
+## [5.34.0] - 2020-04-06
+- Adds 'featureFlips' parameter in AppShell.
+
+## [5.33.3] - 2020-04-06
+- moves the close button on the modal closer
+
+## [5.33.2] - 2020-04-03
+- darkens the modal overlay background
+
+## [5.33.1] - 2020-04-03
+### Fixed
+- moves close button closer to the modal content
+- focuses the modal after open so that ESC works right away
+- removes buttons and nav in the carousel if there's only 1 item
+- adds click anywhere outside the modal to close for modals with closeButton
+- adds opacity option to tooltip
+
+## [5.33.0] - 2020-03-30
+### Fixed
+- Fixed AppShell bug, not clicking on help items
+
 ## [5.32.0] - 2020-03-25
 ### Fixed
 - Extends Modal component with width, noBackground and closeButton props
