@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.45.0] - 2020-08-13
+- Create new Notice component.
+
 ## [5.44.1] - 2020-08-05
 ### Fixed
 - Scroll in PopupMenu, when used inside the AppShell Navbar. 
