@@ -74,7 +74,7 @@ function Notice({ children, dismiss, type }) {
 Notice.propTypes = {
   children: PropTypes.node.isRequired,
   dismiss: PropTypes.func,
-  /* can be warning, note */
+  /** can be warning, note */
   type: PropTypes.string.isRequired,
 };
 
