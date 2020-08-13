@@ -1,8 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(Styled(WarningIcon)) />
+<ForwardRef(styled.div)
+  type="jest-auto-snapshots String Fixture"
+>
   <Text
     color="grayDarker"
     hasError={false}
@@ -12,6 +13,7 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`]
   </Text>
   <ForwardRef(styled.button)
     onClick={[Function]}
+    type="jest-auto-snapshots String Fixture"
   >
     <CrossIcon />
   </ForwardRef(styled.button)>
@@ -19,8 +21,9 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`]
 `;
 
 exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(Styled(WarningIcon)) />
+<ForwardRef(styled.div)
+  type="jest-auto-snapshots String Fixture"
+>
   <Text
     color="grayDarker"
     hasError={false}
@@ -28,10 +31,5 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required
   >
     <NodeFixture />
   </Text>
-  <ForwardRef(styled.button)
-    onClick={[Function]}
-  >
-    <CrossIcon />
-  </ForwardRef(styled.button)>
 </ForwardRef(styled.div)>
 `;
