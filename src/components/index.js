@@ -18,3 +18,4 @@ export { default as Link } from './Link';
 export { default as Carousel } from './Carousel';
 export { default as DropdownMenu } from './DropdownMenu';
 export { default as Switch } from './Switch';
+export { default as Notice } from './Notice';

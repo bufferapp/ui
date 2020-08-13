@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.div)
+  type="jest-auto-snapshots String Fixture"
+>
+  <NodeFixture />
+  <ForwardRef(styled.button)
+    onClick={[Function]}
+    type="jest-auto-snapshots String Fixture"
+  >
+    <CrossIcon />
+  </ForwardRef(styled.button)>
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.div)
+  type="jest-auto-snapshots String Fixture"
+>
+  <NodeFixture />
+</ForwardRef(styled.div)>
+`;
