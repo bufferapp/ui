@@ -4,13 +4,7 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`]
 <ForwardRef(styled.div)
   type="jest-auto-snapshots String Fixture"
 >
-  <Text
-    color="grayDarker"
-    hasError={false}
-    type="span"
-  >
-    <NodeFixture />
-  </Text>
+  <NodeFixture />
   <ForwardRef(styled.button)
     onClick={[Function]}
     type="jest-auto-snapshots String Fixture"
@@ -24,12 +18,6 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required
 <ForwardRef(styled.div)
   type="jest-auto-snapshots String Fixture"
 >
-  <Text
-    color="grayDarker"
-    hasError={false}
-    type="span"
-  >
-    <NodeFixture />
-  </Text>
+  <NodeFixture />
 </ForwardRef(styled.div)>
 `;

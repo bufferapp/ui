@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Text from '../Text';
 import { borderRadius } from '../style/borders';
 import { fontSize } from '../style/fonts';
 import Warning from '../Icon/Icons/Warning';
@@ -61,7 +60,7 @@ function Notice({ children, dismiss, type }) {
   return (
     <NoticeWrapper type={type}>
       {type === 'warning' && <WarningIcon />}
-      <Text>{children}</Text>
+      {children}
       {dismiss && (
         <CloseButton type={type} onClick={() => dismiss()}>
           <Cross />
