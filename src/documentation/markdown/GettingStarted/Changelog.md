@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.46.0] - 2020-08-31
+- Upgraded to `styled-components@5` ✨
+
 ## [5.45.0] - 2020-08-13
 - Create new Notice component.
 
