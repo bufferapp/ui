@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.47.1] - 2020-09-09
+## [5.48.1] - 2020-09-09
 - Update SocialButton Instagram copy
 
 ## [5.47.0] - 2020-09-09
