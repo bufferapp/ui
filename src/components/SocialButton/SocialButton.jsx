@@ -14,7 +14,7 @@ const renderContent = channel => {
     case 'instagram':
       content.Icon = <Instagram />;
       content.name = "Instagram";
-      content.cta = "Connect an Instagram profile";
+      content.cta = "Connect an Instagram business account";
       break;
     case 'twitter':
       content.Icon = <Twitter />;
