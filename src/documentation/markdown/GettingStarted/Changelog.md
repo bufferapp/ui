@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.47.0] - 2020-09-09
+- Added new icons Home and Channels
+
 ## [5.46.0] - 2020-08-31
 - Upgraded to `styled-components@5` ✨
 
