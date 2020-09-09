@@ -5,8 +5,8 @@ object-assign
 */
 
 /*!
- * clipboard.js v2.0.6
- * https://clipboardjs.com/
+ * clipboard.js v2.0.4
+ * https://zenorocha.github.io/clipboard.js
  * 
  * Licensed MIT © Zeno Rocha
  */
@@ -20,8 +20,8 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
-/** @license React v16.8.6
- * react-dom.production.min.js
+/** @license React v16.6.1
+ * react-is.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
@@ -30,7 +30,7 @@ object-assign
  */
 
 /** @license React v16.8.6
- * react-is.production.min.js
+ * react-dom.production.min.js
  *
  * Copyright (c) Facebook, Inc. and its affiliates.
  *
