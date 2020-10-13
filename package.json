@@ -1,6 +1,7 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "5.48.2",
+  "version": "5.48.2-beta.28efde8",
+  "sideEffects": false,
   "engines": {
     "node": ">=4.0.0"
   },
@@ -148,9 +149,9 @@
     "predeploy:docs": "npm run gen:docs && npm run build:docs",
     "deploy:docs": "gh-pages -d build",
     "prebuild:lib": "rimraf lib",
-    "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
+    "build:lib": "npm-run-all --parallel build:esm build:copy-files",
     "build:copy-files": "node scripts/copyBuildFiles.js",
-    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
+    "build:esm": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
     "publish": "./scripts/publish.sh",
     "beta:publish": "node ./scripts/betaPublish.js",
     "component:new": "node ./scripts/newComponent.js",
@@ -186,13 +187,15 @@
     }
   },
   "babel": {
-    "plugins": [
-      "@babel/plugin-transform-modules-commonjs",
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-export-default-from"
-    ],
     "presets": [
-      "@babel/preset-env",
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "esmodules": true
+          }
+        }
+      ],
       "@babel/react"
     ]
   },
