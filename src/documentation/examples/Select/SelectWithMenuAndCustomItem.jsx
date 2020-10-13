@@ -1,6 +1,9 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
-import { Person, People, Gear, ArrowLeft } from '@bufferapp/ui/Icon';
+import Person from '@bufferapp/ui/Icon/Icons/Person'
+import People from '@bufferapp/ui/Icon/Icons/People'
+import Gear from '@bufferapp/ui/Icon/Icons/Gear'
+import ArrowLeft from '@bufferapp/ui/Icon/Icons/ArrowLeft'
 import { NavBarMenu } from '@bufferapp/ui/NavBar';
 
 /** With Custom Component and Custom Items */

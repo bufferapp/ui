@@ -1,8 +1,6 @@
 import React from 'react';
 import AppShell from '@bufferapp/ui/AppShell';
-import {
-  Gear,
-} from '@bufferapp/ui/Icon';
+import Gear from '@bufferapp/ui/Icon/Icons/Gear';
 
 import { gray } from '@bufferapp/ui/style/colors';
 

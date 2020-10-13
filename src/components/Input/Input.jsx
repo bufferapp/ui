@@ -2,7 +2,7 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import * as Styles from './style';
-import { Warning } from '../Icon';
+import Warning from '../Icon/Icons/Warning';
 import Text from '../Text';
 
 export default class Input extends React.Component {

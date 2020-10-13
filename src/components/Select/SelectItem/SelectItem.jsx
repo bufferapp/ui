@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Checkmark } from '../../Icon';
+import Checkmark from '../../Icon/Icons/Checkmark'
 import {
   SelectItemStyled,
   SelectItemLabel,

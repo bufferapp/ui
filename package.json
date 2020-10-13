@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "5.48.2-beta.28efde8",
+  "version": "5.48.2-beta.df91dcb",
   "sideEffects": false,
   "engines": {
     "node": ">=4.0.0"
@@ -187,6 +187,10 @@
     }
   },
   "babel": {
+    "plugins": [
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-export-default-from"
+    ],
     "presets": [
       [
         "@babel/preset-env",

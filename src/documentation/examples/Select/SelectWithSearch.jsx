@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
-import { Flag } from '@bufferapp/ui/Icon';
+import Flag from '@bufferapp/ui/Icon/Icons/Flag';
 
 /** With Search */
 export default function ExampleSelectWithSearch() {

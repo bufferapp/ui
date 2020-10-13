@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
 import Search from '@bufferapp/ui/Search';
-import { Search as SearchIcon } from '@bufferapp/ui/Icon';
+import SearchIcon from '@bufferapp/ui/Icon/Icons/Search';
 
 const searchBarWrapperStyle = {
   width: '100%',

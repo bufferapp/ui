@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonItemStyled, ButtonLabel } from '../style';
-import { Checkmark as CheckmarkIcon } from '../../Icon';
+import CheckmarkIcon from '../../Icon/Icons/Checkmark'
 import { green } from '../../style/colors';
 import { keyCode } from '../keyCode';
 

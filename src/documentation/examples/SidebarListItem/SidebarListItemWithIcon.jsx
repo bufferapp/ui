@@ -1,6 +1,6 @@
 import React from 'react';
 import SidebarListItem from '@bufferapp/ui/SidebarListItem';
-import { Warning } from '@bufferapp/ui/Icon';
+import Warning from '@bufferapp/ui/Icon/Icons/Warning'
 
 /** SidebarListItem With Badge Icon Example */
 export default function ExampleSidebarListItem() {

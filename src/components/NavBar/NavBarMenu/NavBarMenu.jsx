@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { ChevronDown } from '../../Icon';
+import ChevronDown from '../../Icon/Icons/ChevronDown';
 import {
   NavBarStyled,
   NavBarEmail,

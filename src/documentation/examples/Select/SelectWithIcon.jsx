@@ -1,7 +1,6 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
-import { Person } from '@bufferapp/ui/Icon';
-
+import Person from '@bufferapp/ui/Icon/Icons/Person';
 
 /** With Icon */
 export default function ExampleSelect() {

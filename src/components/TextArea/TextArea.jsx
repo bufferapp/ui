@@ -2,23 +2,23 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../Text';
 import {HelpTextWrapper, HelpText} from '../Input/style';
-import { Warning } from '../Icon';
+import Warning from '../Icon/Icons/Warning';
 import {Container, StyledTextArea} from './style';
 
 export default class TextArea extends React.Component {
   render() {
     const {
-      value, 
-      label, 
-      hasError, 
-      help, 
-      disabled, 
-      rows, 
-      onChange, 
-      id, 
+      value,
+      label,
+      hasError,
+      help,
+      disabled,
+      rows,
+      onChange,
+      id,
       fullHeight,
-      forwardRef, 
-      ...props 
+      forwardRef,
+      ...props
     } = this.props;
     return (
       <Container>
@@ -69,12 +69,12 @@ TextArea.propTypes = {
   id: PropTypes.string.isRequired,
   /** If the textarea should take the height of the parent div */
   fullHeight: PropTypes.bool,
-  /** 
+  /**
    * this consumed by the default export that is wrapping the component into a ForwardRef
    * @ignore
    */
   forwardRef: PropTypes.oneOfType([
-    PropTypes.func, 
+    PropTypes.func,
     PropTypes.shape({ current: PropTypes.instanceOf(Element) })
   ]),
 };

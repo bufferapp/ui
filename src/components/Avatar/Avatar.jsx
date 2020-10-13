@@ -6,7 +6,12 @@ import styled from 'styled-components';
 import * as Styles from './style';
 // import { socialNetworks } from '../constants';
 import { facebook, googleplus, instagram, linkedin, pinterest, twitter } from '../style/colors';
-import { Instagram, Facebook, Twitter, LinkedIn, Pinterest, GooglePlus } from '../Icon';
+import Instagram from '../Icon/Icons/Instagram'
+import Facebook from '../Icon/Icons/Facebook'
+import Twitter from '../Icon/Icons/Twitter'
+import LinkedIn from '../Icon/Icons/LinkedIn'
+import Pinterest from '../Icon/Icons/Pinterest'
+import GooglePlus from '../Icon/Icons/GooglePlus'
 
 const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}

@@ -1,17 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {
-  Cross,
-  Info as InfoIcon,
-  ArrowLeft,
-  Person as PersonIcon,
-  Instagram as InstagramIcon,
-  Twitter as TwitterIcon,
-  Facebook as FacebookIcon,
-  Pinterest as PinterestIcon,
-  LinkedIn as LinkedInIcon,
-} from '../Icon';
+import Cross from '../Icon/Icons/Cross'
+import InfoIcon from '../Icon/Icons/Info'
+import ArrowLeft from '../Icon/Icons/ArrowLeft'
+import PersonIcon from '../Icon/Icons/Person'
+import InstagramIcon from '../Icon/Icons/Instagram'
+import TwitterIcon from '../Icon/Icons/Twitter'
+import FacebookIcon from '../Icon/Icons/Facebook'
+import PinterestIcon from '../Icon/Icons/Pinterest'
+import LinkedInIcon from '../Icon/Icons/LinkedIn'
 
 import {
   gray,
@@ -195,7 +193,7 @@ export function appendOrgSwitcher(orgSwitcher) {
     if (!item.subItems || item.subItems.length === 0) {
       item.defaultTooltipMessage = 'No social accounts connected yet.';
     }
-    
+
     return item;
   });
 }

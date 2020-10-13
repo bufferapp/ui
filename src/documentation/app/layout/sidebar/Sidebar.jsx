@@ -3,7 +3,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronUp } from '@bufferapp/ui/Icon';
+import ChevronDown from '@bufferapp/ui/Icon/Icons/ChevronDown';
+import ChevronUp from '@bufferapp/ui/Icon/Icons/ChevronUp';
 import helper from 'immutability-helper';
 
 const SidebarWrapper = styled.div`
