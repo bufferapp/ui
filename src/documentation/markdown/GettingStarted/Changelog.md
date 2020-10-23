@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.48.2] - 2020-10-26
+- Accept minor versions of React 16
+
 ## [5.48.1] - 2020-09-09
 - Update SocialButton Instagram copy
 
