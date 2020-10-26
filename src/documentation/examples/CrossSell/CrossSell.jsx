@@ -9,21 +9,21 @@ export default function ExampleCrossSell() {
       'Respond to social conversations, resolve customer support requests, and create an outstanding experience.',
     cards: [
       {
-        image: './images/reply-cross-sell-01.png',
+        image: '/images/reply-cross-sell-01.png',
         alt: 'Alt text 1',
         title: 'Single Team Inbox',
         description:
           'Direct messages and comments on your posts and ads are gathered into one team inbox to streamline your processes.',
       },
       {
-        image: './images/reply-cross-sell-02.png',
+        image: '/images/reply-cross-sell-02.png',
         alt: 'Alt text 2',
         title: 'Tagging and Organization',
         description:
           'Conversations can be sorted into various categories to help you respond to the urgent and important ones first.',
       },
       {
-        image: './images/reply-cross-sell-03.png',
+        image: '/images/reply-cross-sell-03.png',
         alt: 'Alt text 3',
         title: 'Automated Workflows',
         description:

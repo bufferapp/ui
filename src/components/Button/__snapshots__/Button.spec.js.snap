@@ -24,7 +24,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -55,7 +55,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -87,7 +87,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -118,7 +118,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -152,7 +152,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -183,7 +183,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -214,7 +214,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEn
       </ForwardRef(styled.span)>
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -245,7 +245,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -276,7 +276,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>
@@ -334,7 +334,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
       <NodeFixture />
       <ForwardRef(styled.img)
         alt="loading"
-        src="./images/loading-gray.svg"
+        src="/images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
   </ForwardRef(styled.div)>

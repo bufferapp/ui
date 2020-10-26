@@ -18,7 +18,7 @@ export const ButtonWrapperStyled = styled.div`
 
 export const ButtonContainerStyled = styled.div`
   ${Styles.ButtonContainerBase};
-  
+
 `;
 
 export const ButtonStyled = styled.button`
@@ -119,7 +119,7 @@ const Button = ({
             </Styles.ButtonArrow>
           )}
 
-          {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
+          {loading && <Loading src="/images/loading-gray.svg" alt="loading" />}
         </ButtonStyled>
         {isSplit &&
           (type === 'primary' || type === 'secondary') &&
