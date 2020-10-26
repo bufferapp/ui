@@ -65,7 +65,6 @@ export const ButtonWrapperBase = css`
   }
 `;
 
-
 export const ButtonContainerBase = css`
   -webkit-appearance: none;
   align-items: center;
@@ -144,6 +143,7 @@ export const primary = css`
     color: ${white};
   }
 `;
+
 export const secondary = css`
   background-color: ${white};
   color: ${grayDark};
