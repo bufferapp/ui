@@ -18,7 +18,6 @@ export const ButtonWrapperStyled = styled.div`
 
 export const ButtonContainerStyled = styled.div`
   ${Styles.ButtonContainerBase};
-  
 `;
 
 export const ButtonStyled = styled.button`
