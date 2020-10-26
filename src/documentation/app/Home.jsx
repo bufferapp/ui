@@ -89,15 +89,15 @@ function Home() {
           here at Buffer
         </Header>
         <Places>
-          <Place href="/#/Guides/guides">
+          <Place href="/Guides/guides">
             <Title>Guides</Title>
             <Description>Not sure where to start? Check out our guides to implement these in your site</Description>
           </Place>
-          <Place href="/#/Patterns/patterns">
+          <Place href="/Patterns/patterns">
             <Title>Patterns</Title>
             <Description>Not a dark pattern in sight! Follow our comprehensive guides for great design</Description>
           </Place>
-          <Place href="/#/ui/ui">
+          <Place href="/ui/ui">
             <Title>Components</Title>
             <Description>Understand how to use our components or even to contribute your own</Description>
           </Place>
