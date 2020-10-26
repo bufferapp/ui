@@ -9,6 +9,7 @@ export const pinkLighter = '#F0A8DE';
 export const teal = '#00C8CF';
 export const red = '#E0364F';
 export const redDark = '#9D2637';
+export const redDarker = '#5A1620';
 export const redLight = '#E97284';
 export const redLighter = '#F3AFB9';
 export const orange = '#FF702C';
