@@ -5,6 +5,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -36,6 +37,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -67,6 +69,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   className="jest-auto-snapshots String Fixture"
   disabled={false}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -99,6 +102,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={false}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -130,6 +134,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -164,6 +169,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -195,6 +201,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEn
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -226,6 +233,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -257,6 +265,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -288,6 +297,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={false}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -315,6 +325,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
+  loading={true}
   type="link"
 >
   <ForwardRef(styled.div)>
@@ -345,6 +356,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
 <ForwardRef(styled.div)
   disabled={false}
   fullWidth={false}
+  loading={false}
   type="secondary"
 >
   <ForwardRef(styled.div)>
