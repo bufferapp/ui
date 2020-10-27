@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import textColors, { red, grayDarker } from '../style/colors';
+import textColors, { redDark, grayDarker } from '../style/colors';
 import {
   fontFamily,
   fontSize,
@@ -62,7 +62,7 @@ export const Label = styled.label`
 `;
 
 export const Help = styled.label`
-  color: ${({ hasError }) => (hasError ? red : grayDarker)};
+  color: ${({ hasError }) => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
   font-size: 14px;
   font-weight: ${fontWeightMedium};
