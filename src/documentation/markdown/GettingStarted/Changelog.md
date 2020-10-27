@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.48.3] - 2020-10-27
+## [5.49.0] - 2020-10-27
 ### Fixed
 - Fixed color contrast in Input and Text Area errors.
 
