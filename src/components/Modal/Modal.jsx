@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import * as Styles from './style';
 import Button from '../Button';
 import { Cross } from '../Icon';
-import useDeprecatedWarning from '../util/deprecated-warning';
+import { deprecatedWarning } from '../util/deprecated-warning';
 
 function setCookie(cookie, cookieKey, days, value) {
   const expiresInDays = days * 24 * 60 * 60;
@@ -29,6 +29,11 @@ class Modal extends React.Component {
   }
 
   componentDidMount() {
+    if (this.props.wide) {
+      deprecatedWarning(
+        'Obsolete Modal prop `wide`. Deprecated since version 5.32.0. Will be deleted in version 6.0.0. For similar behavior, use `width` prop.'
+      );
+    }
     if (this.ctaButton) {
       this.ctaButton.focus();
     }
@@ -101,12 +106,6 @@ class Modal extends React.Component {
 
     if (this.state && this.state.dismissed) {
       return null;
-    }
-
-    if (wide) {
-      useDeprecatedWarning(
-        'Obsolete Modal prop `wide`. Deprecated since version 5.32.0. Will be deleted in version 6.0.0. For similar behavior, use `width` prop.'
-      );
     }
 
     return (

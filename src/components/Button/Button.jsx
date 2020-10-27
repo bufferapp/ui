@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import * as Styles from './style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Select from '../Select/Select';
-import useDeprecatedWarning from '../util/deprecated-warning';
+import { useDeprecatedWarning } from '../util/deprecated-warning';
 
 /*
 Since buttons keep their own inline-block display type, we can only imitate this by using a wrapper (with

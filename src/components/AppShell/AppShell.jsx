@@ -11,7 +11,7 @@ import {
   SidebarWrapper,
   ContentWrapper,
 } from './style';
-import useDeprecatedWarning from '../util/deprecated-warning';
+import { useDeprecatedWarning } from '../util/deprecated-warning';
 
 const ENABLE_ENGAGE_URL = 'https://login.buffer.com/signup?product=engage';
 
