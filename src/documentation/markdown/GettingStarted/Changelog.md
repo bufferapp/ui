@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.51.0] - 2020-10-27
+- Added deprecation notice for `AppShell` (use https://github.com/bufferapp/app-shell instead).
+
 ## [5.49.1] - 2020-10-27
 - Accept minor versions of React 16
 
