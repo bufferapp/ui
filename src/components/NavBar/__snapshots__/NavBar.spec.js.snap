@@ -59,7 +59,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
-            "defaultTooltipMessage": "No social accounts connected yet.",
+            "defaultTooltipMessage": "No channels connected yet.",
             "dividerTitle": "jest-auto-snapshots String Fixture",
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -174,7 +174,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       items={
         Array [
           Object {
-            "defaultTooltipMessage": "No social accounts connected yet.",
+            "defaultTooltipMessage": "No channels connected yet.",
             "dividerTitle": "jest-auto-snapshots String Fixture",
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -299,7 +299,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       items={
         Array [
           Object {
-            "defaultTooltipMessage": "No social accounts connected yet.",
+            "defaultTooltipMessage": "No channels connected yet.",
             "dividerTitle": "jest-auto-snapshots String Fixture",
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -416,7 +416,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       items={
         Array [
           Object {
-            "defaultTooltipMessage": "No social accounts connected yet.",
+            "defaultTooltipMessage": "No channels connected yet.",
             "dividerTitle": "jest-auto-snapshots String Fixture",
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -536,7 +536,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       items={
         Array [
           Object {
-            "defaultTooltipMessage": "No social accounts connected yet.",
+            "defaultTooltipMessage": "No channels connected yet.",
             "dividerTitle": "jest-auto-snapshots String Fixture",
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -661,7 +661,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
       items={
         Array [
           Object {
-            "defaultTooltipMessage": "No social accounts connected yet.",
+            "defaultTooltipMessage": "No channels connected yet.",
             "dividerTitle": "jest-auto-snapshots String Fixture",
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
@@ -786,7 +786,7 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       items={
         Array [
           Object {
-            "defaultTooltipMessage": "No social accounts connected yet.",
+            "defaultTooltipMessage": "No channels connected yet.",
             "dividerTitle": "jest-auto-snapshots String Fixture",
             "hasDivider": true,
             "id": "jest-auto-snapshots String Fixture",
