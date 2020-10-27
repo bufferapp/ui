@@ -11,6 +11,7 @@ import {
   SidebarWrapper,
   ContentWrapper,
 } from './style';
+import useDeprecatedWarning from '../util/deprecated-warning';
 
 const ENABLE_ENGAGE_URL = 'https://login.buffer.com/signup?product=engage';
 
@@ -31,6 +32,9 @@ const AppShell = ({
   orgSwitcher,
   isImpersonation,
 }) => {
+  useDeprecatedWarning(
+    'AppShell is deprecated as of @bufferapp/ui v5.51.0 and will be deleted in v6.0.0. Please use @bufferapp/app-shell instead (see https://github.com/bufferapp/app-shell).'
+  );
 
   const engageEnabled = enabledProducts.includes('engage');
   const engageAccess = featureFlips.includes('engageRollOut');
@@ -47,15 +51,15 @@ const AppShell = ({
       return {
         id: product,
         isNew: true,
-        href: engageEnabled ? productURL : ENABLE_ENGAGE_URL
-      }
+        href: engageEnabled ? productURL : ENABLE_ENGAGE_URL,
+      };
     }
 
     return {
       id: product,
       isNew: false,
-      href: productURL
-    }
+      href: productURL,
+    };
   });
 
   return (
@@ -71,11 +75,7 @@ const AppShell = ({
         orgSwitcher={orgSwitcher}
         isImpersonation={isImpersonation}
       />
-      {bannerOptions && (
-        <Banner
-          {...bannerOptions}
-        />
-      )}
+      {bannerOptions && <Banner {...bannerOptions} />}
       <Wrapper>
         {sidebar && <SidebarWrapper>{sidebar}</SidebarWrapper>}
         <ContentWrapper>{content}</ContentWrapper>
@@ -146,7 +146,7 @@ AppShell.propTypes = {
   /** (Optional) Is the current session an impersonation session */
   isImpersonation: PropTypes.bool,
 
-  displaySkipLink: PropTypes.bool
+  displaySkipLink: PropTypes.bool,
 };
 
 AppShell.defaultProps = {
@@ -158,7 +158,7 @@ AppShell.defaultProps = {
   onLogout: undefined,
   helpMenuItems: null,
   isImpersonation: false,
-  displaySkipLink: false
+  displaySkipLink: false,
 };
 
 export default AppShell;

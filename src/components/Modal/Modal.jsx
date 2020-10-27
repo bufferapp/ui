@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import * as Styles from './style';
 import Button from '../Button';
 import { Cross } from '../Icon';
+import useDeprecatedWarning from '../util/deprecated-warning';
 
 function setCookie(cookie, cookieKey, days, value) {
   const expiresInDays = days * 24 * 60 * 60;
@@ -103,9 +104,8 @@ class Modal extends React.Component {
     }
 
     if (wide) {
-      // eslint-disable-next-line
-      console.warn(
-        'WARNING! Obsolete Modal prop `wide`. Deprecated since version 5.32.0. Will be deleted in version 6.0.0. For similar behavior, use `width` prop.'
+      useDeprecatedWarning(
+        'Obsolete Modal prop `wide`. Deprecated since version 5.32.0. Will be deleted in version 6.0.0. For similar behavior, use `width` prop.'
       );
     }
 
