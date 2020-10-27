@@ -1,15 +1,26 @@
 # Changelog
 
+## [5.48.3] - 2020-10-27
+### Fixed
+- Fixed color contrast in Input and Text Area errors.
+
+### Updated
+- Copy changes in org switcher.
+
 ## [5.48.1] - 2020-09-09
+### Updated
 - Update SocialButton Instagram copy
 
 ## [5.47.0] - 2020-09-09
+### Added
 - Added new icons Home and Channels
 
 ## [5.46.0] - 2020-08-31
+### Dependencies
 - Upgraded to `styled-components@5` ✨
 
 ## [5.45.0] - 2020-08-13
+### Added
 - Create new Notice component.
 
 ## [5.44.1] - 2020-08-05
@@ -17,19 +28,27 @@
 - Scroll in PopupMenu, when used inside the AppShell Navbar. 
 
 ## [5.44.0] - 2020-07-27
+### Added
 - Create new Switch component.
 
 ## [5.43.1] - 2020-07-22
+### Updated
 - Update styles for `New!` label.
 
 ## [5.43.0] - 2020-07-22
+### Updated
 - Updates light and dark social channel colors to match current designs.
 - Sets the `SocialButton` component background color to use dark variations to meet contrast standards for accessibility.
 - Applies a drop shadow on hover for the `SocialButton` component.
+
+### Added
 - Adds light and dark colors for Shopify.
 
 ## [5.42.0] - 2020-07-21
+### Added
 - Add default Tooltip message when no social network found for an organization in the orgSwitcher.
+
+### Fixed
 - Fix styles when only one social network is displayed in the Tooltip in the orgSwitcher.
 
 ## [5.41.6] - 2020-06-29
