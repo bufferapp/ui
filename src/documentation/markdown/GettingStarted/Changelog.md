@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.49.1] - 2020-10-27
+- Accept minor versions of React 16
+
 ## [5.49.0] - 2020-10-27
 ### Fixed
 - Fixed color contrast in Input and Text Area errors.
