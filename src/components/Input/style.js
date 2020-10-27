@@ -6,9 +6,9 @@ import {
   grayLight,
   grayDarker,
   grayDark,
-  red,
-  redLight,
+  redDark,
   redLighter,
+  redLightest,
   white,
 } from '../style/colors';
 import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
@@ -60,14 +60,14 @@ export const InputFieldWrapper = styled.div`
 export const InputStyled = styled.input`
   box-sizing: border-box;
   margin: 8px 0px;
-  background: ${({ hasError }) => (hasError ? redLight : white)};
+  background: ${({ hasError }) => (hasError ? redLightest : white)};
   border-radius: 4px;
-  border: 1px solid ${({ hasError }) => (hasError ? red : grayLight)};
+  border: 1px solid ${({ hasError }) => (hasError ? redDark : grayLight)};
   box-shadow: 2px 2px 0 2px transparent;
   transition-property: border-width, border-color, box-shadow;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
-  color: ${({ hasError }) => (hasError ? red : grayDarker)};
+  color: ${({ hasError }) => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
@@ -82,7 +82,7 @@ export const InputStyled = styled.input`
   }
 
   &:focus {
-    border: 1px solid ${({ hasError }) => (hasError ? red : blue)};
+    border: 1px solid ${({ hasError }) => (hasError ? redDark : blue)};
     box-shadow: 0px 0px 0px 3px
       ${({ hasError }) => (hasError ? redLighter : blueLighter)};
     outline: none;
@@ -108,7 +108,7 @@ export const HelpTextWrapper = styled.div`
   display: row;
   align-items: center;
   justify-content: flex-start;
-  color: ${red};
+  color: ${redDark};
 `;
 
 export const HelpText = styled(Text)`

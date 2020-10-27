@@ -193,7 +193,7 @@ export function appendOrgSwitcher(orgSwitcher) {
       });
     }
     if (!item.subItems || item.subItems.length === 0) {
-      item.defaultTooltipMessage = 'No social accounts connected yet.';
+      item.defaultTooltipMessage = 'No channels connected yet.';
     }
     
     return item;
