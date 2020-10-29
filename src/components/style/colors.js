@@ -11,6 +11,7 @@ export const red = '#E0364F';
 export const redDark = '#9D2637';
 export const redLight = '#E97284';
 export const redLighter = '#F3AFB9';
+export const redLightest = '#FDF2F4';
 export const orange = '#FF702C';
 export const orangeDark = '#662D12';
 export const orangeLight = '#FF9B6B';

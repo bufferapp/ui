@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "5.48.2",
+  "version": "5.51.0",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -41,9 +41,9 @@
   "dependencies": {
     "@reach/tooltip": "0.6.2",
     "immutability-helper": "^2.9.0",
-    "react": "16.8.6",
-    "react-dom": "16.8.6",
-    "react-is": "16.8.6",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-is": "^16.8.6",
     "styled-components": "^5.1.1"
   },
   "devDependencies": {

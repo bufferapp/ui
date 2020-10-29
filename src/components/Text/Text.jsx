@@ -33,6 +33,8 @@ Text.propTypes = {
   color: PropTypes.string,
   /** The type can be: `h1`, `h2`, `h3`, `p`, `label`, `help`. <br><i>If omitted will return a `span`</i> */
   type: PropTypes.string,
+  /** If you want to keep all the styling you've applied to a component but just switch out what's being ultimately rendered (be it a different HTML tag or a different custom component), you can use the "as" prop to do this at runtime. */
+  as: PropTypes.string
 };
 
 Text.defaultProps = {

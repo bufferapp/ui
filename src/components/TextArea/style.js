@@ -1,5 +1,15 @@
 import styled from 'styled-components';
-import {red, redLight, gray, white, blue, grayLight, grayDarker, redLighter, boxShadow} from '../style/colors';
+import {
+  redDark,
+  gray,
+  white,
+  blue,
+  grayLight,
+  grayDarker,
+  redLighter,
+  redLightest,
+  boxShadow,
+} from '../style/colors';
 import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
 
 export const Container = styled.div`
@@ -8,25 +18,25 @@ export const Container = styled.div`
   height: 100%;
 `;
 
-const backgroundCss = ({disabled, hasError}) => {
+const backgroundCss = ({ disabled, hasError }) => {
   if (disabled) {
-    return grayLight
-  } 
+    return grayLight;
+  }
   if (hasError) {
-    return redLight
+    return redLightest;
   }
   return white;
-}
+};
 
-const borderCss = ({disabled, hasError}) => {
+const borderCss = ({ disabled, hasError }) => {
   if (disabled) {
-    return 'none'
-  } 
+    return 'none';
+  }
   if (hasError) {
-    return `1px solid ${red}`
+    return `1px solid ${redDark}`;
   }
   return `1px solid ${gray}`;
-}
+};
 
 export const StyledTextArea = styled.textarea`
   border-radius: 4px;
@@ -34,7 +44,7 @@ export const StyledTextArea = styled.textarea`
   transition-property: border-width, border-color, box-shadow;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
-  background-color: ${backgroundCss}; 
+  background-color: ${backgroundCss};
   border: ${borderCss};
   box-sizing: border-box;
   margin-top: 8px;
@@ -42,14 +52,14 @@ export const StyledTextArea = styled.textarea`
   resize: none;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : '')};
   padding: 8px;
-  color: ${({ hasError }) => (hasError ? red : grayDarker)};
+  color: ${({ hasError }) => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
   line-height: ${lineHeight};
   height: ${({ fullHeight }) => (fullHeight ? '100%' : 'auto')};
   :focus {
-    border: 1px solid ${({ hasError }) => (hasError ? red : blue)};
+    border: 1px solid ${({ hasError }) => (hasError ? redDark : blue)};
     box-shadow: 0px 0px 0px 3px
       ${({ hasError }) => (hasError ? redLighter : boxShadow)};
     outline: none;
@@ -57,9 +67,9 @@ export const StyledTextArea = styled.textarea`
     transition-duration: 0.1s;
     transition-timing-function: ease-in;
   }
-`
+`;
 
 export const StyledLabel = styled.label`
   display: flex;
   flex-direction: column;
-`
+`;

@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import * as Styles from './style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Select from '../Select/Select';
+import { useDeprecatedWarning } from '../util/deprecated-warning';
 
 /*
 Since buttons keep their own inline-block display type, we can only imitate this by using a wrapper (with
@@ -75,10 +76,7 @@ const Button = ({
    Otherwise choose a different type of button.
    */
   if (type === 'link') {
-    // eslint-disable-next-line
-    console.warn(
-      'WARNING! Obsolete Link Button. Deprecated since version 5.27.0. Will be deleted in version 6.0.0. For similar behavior, use a Link component. Otherwise choose a different type of button.'
-    );
+    useDeprecatedWarning('Obsolete Link Button. Deprecated since version 5.27.0. Will be deleted in version 6.0.0. For similar behavior, use a Link component. Otherwise choose a different type of button.');
   }
   return (
     <ButtonWrapperStyled
