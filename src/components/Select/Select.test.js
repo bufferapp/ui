@@ -106,6 +106,34 @@ describe('SomeComponent component', () => {
     }]);
   });
 
+  it('onSearchChange: should re-order search in state based on matches with startsWith, then includes', () => {
+    const wrapper = shallow(<Select
+      onSelectClick={() => true}
+      items={[
+        {
+          id: '1', title: 'Open',
+        },
+        {
+          id: '2', title: 'Pending',
+        },
+        {
+          id: '3', title: 'Closed',
+        },
+      ]}
+      label="Select"
+    />);
+    const instance = wrapper.instance();
+    instance.onSearchChange('Pen');
+    expect(wrapper.state().items).toEqual([
+      {
+        id: '2', title: 'Pending',
+      },
+      {
+        id: '1', title: 'Open',
+      }
+    ]);
+  });
+
 
   it('updateHoveredItemPosition: should update hoveredItem in state', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
