@@ -12,6 +12,9 @@ import {
   boxShadow,
   grayLight,
   orangeDark,
+  redDark,
+  redDarker,
+  redLighter,
   orange as orangeColor,
 } from '../style/colors';
 import {
@@ -61,7 +64,6 @@ export const ButtonWrapperBase = css`
     transition-timing-function: ease-in;
   }
 `;
-
 
 export const ButtonContainerBase = css`
   -webkit-appearance: none;
@@ -141,6 +143,7 @@ export const primary = css`
     color: ${white};
   }
 `;
+
 export const secondary = css`
   background-color: ${white};
   color: ${grayDark};
@@ -156,6 +159,22 @@ export const secondary = css`
     color: ${grayDarker};
   }
 `;
+
+export const danger = css`
+  background-color: ${props => (props.loading ? redDarker : redDark)};
+  color: ${white};
+  border-color: ${redDarker};
+
+  :hover {
+    background-color: ${redDarker};
+  }
+
+  :focus {
+    box-shadow: 0 0 0 3px ${redLighter};
+    background-color: ${redDark};
+  }
+`;
+
 export const link = css`
   background-color: transparent;
   color: ${blue};

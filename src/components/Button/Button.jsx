@@ -19,7 +19,6 @@ export const ButtonWrapperStyled = styled.div`
 
 export const ButtonContainerStyled = styled.div`
   ${Styles.ButtonContainerBase};
-  
 `;
 
 export const ButtonStyled = styled.button`
@@ -84,6 +83,7 @@ const Button = ({
       disabled={disabled}
       type={type}
       fullWidth={fullWidth}
+      loading={loading}
     >
       <ButtonContainerStyled>
         <ButtonStyled
@@ -154,7 +154,14 @@ Button.propTypes = {
   label: PropTypes.string,
 
   /** Type of button */
-  type: PropTypes.oneOf(['link', 'primary', 'secondary', 'text', 'error']),
+  type: PropTypes.oneOf([
+    'link',
+    'primary',
+    'secondary',
+    'text',
+    'error',
+    'danger',
+  ]),
 
   /** Is the Button Split  */
   isSplit: PropTypes.bool,
