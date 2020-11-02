@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.52.0] - 2020-11-02
+- Adds a 'danger' style variation for the Button component to convey destructive actions.
+
 ## [5.51.0] - 2020-10-27
 - Added deprecation notice for `AppShell` (use https://github.com/bufferapp/app-shell instead).
 
@@ -31,7 +34,7 @@
 
 ## [5.44.1] - 2020-08-05
 ### Fixed
-- Scroll in PopupMenu, when used inside the AppShell Navbar. 
+- Scroll in PopupMenu, when used inside the AppShell Navbar.
 
 ## [5.44.0] - 2020-07-27
 ### Added
