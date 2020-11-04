@@ -130,7 +130,7 @@ class Modal extends React.Component {
           {children}
           <Styles.Footer background={background}>
             {footer}
-            {secondaryAction && (
+            {secondaryAction && secondaryAction.label && (
               <Button
                 type="text"
                 onClick={() => {
@@ -140,7 +140,7 @@ class Modal extends React.Component {
                 label={secondaryAction.label}
               />
             )}
-            {action && (
+            {action && action.label && (
               <Button
                 ref={ctaButton => (this.ctaButton = ctaButton)}
                 type="primary"
