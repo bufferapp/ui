@@ -100,15 +100,15 @@ class Modal extends React.Component {
 
   render() {
     const {
-      action,
-      background,
       children,
-      closeButton,
-      footer,
-      noBackground,
+      background,
+      action,
       secondaryAction,
+      footer,
       wide,
       width,
+      noBackground,
+      closeButton,
     } = this.props;
 
     if (this.state && this.state.dismissed) {
