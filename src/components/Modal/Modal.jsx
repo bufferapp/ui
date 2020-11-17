@@ -92,7 +92,7 @@ class Modal extends React.Component {
   }
 
   validateAction = action => {
-    if (action.label && action.callback) {
+    if (action && action.label && action.callback) {
       return true;
     }
     return false;
