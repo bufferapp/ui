@@ -91,17 +91,24 @@ class Modal extends React.Component {
     }
   }
 
+  validateAction = action => {
+    if (action.label && action.callback) {
+      return true;
+    }
+    return false;
+  };
+
   render() {
     const {
-      children,
-      background,
       action,
-      secondaryAction,
+      background,
+      children,
+      closeButton,
       footer,
+      noBackground,
+      secondaryAction,
       wide,
       width,
-      noBackground,
-      closeButton,
     } = this.props;
 
     if (this.state && this.state.dismissed) {
@@ -130,7 +137,7 @@ class Modal extends React.Component {
           {children}
           <Styles.Footer background={background}>
             {footer}
-            {secondaryAction && secondaryAction.label && (
+            {this.validateAction(secondaryAction) && (
               <Button
                 type="text"
                 onClick={() => {
@@ -140,7 +147,7 @@ class Modal extends React.Component {
                 label={secondaryAction.label}
               />
             )}
-            {action && action.label && (
+            {this.validateAction(action) && (
               <Button
                 ref={ctaButton => (this.ctaButton = ctaButton)}
                 type="primary"
