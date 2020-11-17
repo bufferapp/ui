@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.53.0] - 2020-11-17
+- Adds new icons - Audience, Day, Frequency and Post
+
 ## [5.52.0] - 2020-11-02
 - Adds a 'danger' style variation for the Button component to convey destructive actions.
 
