@@ -60,7 +60,7 @@ Want to contribute to this project? That's awesome 🙌! Please check out our [c
 ## Changelog
 
 Curious about the latest changes?
-Please read the [changelog](/src/documentation/markdown/GettingStarted/Changelog.md) and check the [latest releases](https://github.com/bufferapp/ui/releases).
+Please read the [changelog](/src/documentation/markdown/GettingStarted/CHANGELOG.md) and check the [latest releases](https://github.com/bufferapp/ui/releases).
 
 
 ## License

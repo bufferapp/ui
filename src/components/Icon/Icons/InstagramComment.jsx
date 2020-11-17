@@ -9,7 +9,7 @@ import createIconComponent from '../utils/createIconComponent';
 const InstagramCommentIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M11.477 12.992a6.5 6.5 0 1 1 2.015-2.015L14.5 14l-3.023-1.008z" />
+      <path d="M11.477 12.992a6.5 6.5 0 1 1 2.015-2.015L14.5 14l-3.023-1.008z" />
     </g>
   ),
 });
