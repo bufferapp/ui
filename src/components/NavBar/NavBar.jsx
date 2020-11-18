@@ -194,8 +194,8 @@ export function appendOrgSwitcher(orgSwitcher) {
     }
 
     if (item.hideTooltip) {
-      // Allows the ability to hide channels, for example: hiding channels
-      // until we have released shared channels
+      // Allows the ability to hide channels related tooltips, for example:
+      // hiding channels or message until we have released shared channels
       item.defaultTooltipMessage = '';
     } else if (!item.subItems || item.subItems.length === 0) {
       item.defaultTooltipMessage = 'No channels connected yet.';
