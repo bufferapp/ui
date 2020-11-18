@@ -250,12 +250,12 @@ class NavBar extends React.Component {
               xPosition="right"
               ariaLabel="Help Menu"
               ariaLabelPopup="Help"
-              menubarItem={
+              menubarItem={(
                 <NavBarHelp>
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
-              }
+              )}
               items={helpMenuItems}
             />
           )}
