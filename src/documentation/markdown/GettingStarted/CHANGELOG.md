@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.53.2] - 2020-11-18
+- Adds the ability to hide channels tooltip in the org switcher
+
 ## [5.53.0] - 2020-11-17
 - Adds new icons - Audience, Day, Frequency and Post
 
