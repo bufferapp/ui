@@ -192,10 +192,15 @@ export function appendOrgSwitcher(orgSwitcher) {
         subItem.icon = getNetworkIcon(subItem);
       });
     }
-    if (!item.subItems || item.subItems.length === 0) {
+
+    if (item.hideTooltip) {
+      // Allows the ability to hide channels, for example: hiding channels
+      // until we have released shared channels
+      item.defaultTooltipMessage = '';
+    } else if (!item.subItems || item.subItems.length === 0) {
       item.defaultTooltipMessage = 'No channels connected yet.';
     }
-    
+
     return item;
   });
 }
@@ -245,12 +250,12 @@ class NavBar extends React.Component {
               xPosition="right"
               ariaLabel="Help Menu"
               ariaLabelPopup="Help"
-              menubarItem={(
+              menubarItem={
                 <NavBarHelp>
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
-              )}
+              }
               items={helpMenuItems}
             />
           )}
