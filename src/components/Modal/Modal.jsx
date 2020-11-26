@@ -64,6 +64,13 @@ class Modal extends React.Component {
     }
   };
 
+  validateAction = action => {
+    if (action && action.label && action.callback) {
+      return true;
+    }
+    return false;
+  };
+
   clickToClose(e) {
     if (e.target !== this.container) return;
     this.props.closeButton.callback();
@@ -90,13 +97,6 @@ class Modal extends React.Component {
       this.dismiss();
     }
   }
-
-  validateAction = action => {
-    if (action && action.label && action.callback) {
-      return true;
-    }
-    return false;
-  };
 
   render() {
     const {
