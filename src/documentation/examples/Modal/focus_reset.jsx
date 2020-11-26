@@ -18,7 +18,7 @@ export default function ModalTest() {
       />
       { modalOpen && (
         <Modal
-          action={{ label: "Don’t Panic!" }}
+          action={{ label: "Don’t Panic!", callback: () => {} }}
           previousFocus={previousFocusRef}
         >
           <div>
