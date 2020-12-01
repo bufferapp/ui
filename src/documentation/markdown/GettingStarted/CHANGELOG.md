@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.54.0] - 2020-11-26
+- Adds fontWeight prop to Link: accepts fontWeightMedium (500) and fontWeightBold (700).
+
 ## [5.53.1] - 2020-11-17
 - Adds validation that Modal component actions and secondary actions have a label and callback present.
 

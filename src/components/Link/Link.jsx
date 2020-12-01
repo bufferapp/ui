@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { LinkStyled } from './style';
+import { fontWeightMedium } from '../style/fonts';
 
-const Link = ({ children, href, newTab, download, className, title }) => (
+const Link = ({ children, href, newTab, download, className, title, fontWeight }) => (
   <LinkStyled
     href={href}
     target={newTab ? '_blank' : '_self'}
@@ -11,6 +12,7 @@ const Link = ({ children, href, newTab, download, className, title }) => (
     download={download}
     className={className}
     title={title}
+    fontWeight={fontWeight}
   >
     {children}
   </LinkStyled>
@@ -29,6 +31,8 @@ Link.propTypes = {
   className: PropTypes.string,
   /** Title of the link. */
   title: PropTypes.string,
+  /** Font weight of the link. */
+  fontWeight: PropTypes.oneOf([500, 700]),
 };
 
 Link.defaultProps = {
@@ -36,6 +40,7 @@ Link.defaultProps = {
   download: false,
   className: undefined,
   title: '',
+  fontWeight: fontWeightMedium,
 };
 
 export default Link;
