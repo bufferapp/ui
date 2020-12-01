@@ -4,6 +4,7 @@ exports[`jest-auto-snapshots > Link Matches snapshot when boolean prop "download
 <ForwardRef(styled.a)
   className="jest-auto-snapshots String Fixture"
   download={false}
+  fontWeight="0"
   href="jest-auto-snapshots String Fixture"
   rel="noopener noreferrer"
   target="_blank"
@@ -17,6 +18,7 @@ exports[`jest-auto-snapshots > Link Matches snapshot when boolean prop "newTab" 
 <ForwardRef(styled.a)
   className="jest-auto-snapshots String Fixture"
   download={true}
+  fontWeight="0"
   href="jest-auto-snapshots String Fixture"
   target="_self"
   title="jest-auto-snapshots String Fixture"
@@ -29,6 +31,7 @@ exports[`jest-auto-snapshots > Link Matches snapshot when passed all props 1`] =
 <ForwardRef(styled.a)
   className="jest-auto-snapshots String Fixture"
   download={true}
+  fontWeight="0"
   href="jest-auto-snapshots String Fixture"
   rel="noopener noreferrer"
   target="_blank"
@@ -41,6 +44,7 @@ exports[`jest-auto-snapshots > Link Matches snapshot when passed all props 1`] =
 exports[`jest-auto-snapshots > Link Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.a)
   download={false}
+  fontWeight={500}
   href="jest-auto-snapshots String Fixture"
   target="_self"
   title=""
