@@ -150,7 +150,7 @@ class Modal extends React.Component {
             {this.validateAction(action) && (
               <Button
                 ref={ctaButton => (this.ctaButton = ctaButton)}
-                type="primary"
+                type={action.type || "primary"}
                 onClick={() => {
                   this.handleAction(action);
                 }}
