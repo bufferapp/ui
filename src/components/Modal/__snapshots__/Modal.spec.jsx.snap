@@ -45,7 +45,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
         onClick={[Function]}
         selectPosition="bottom"
         size="medium"
-        type="primary"
+        type="jest-auto-snapshots String Fixture"
       />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
@@ -97,7 +97,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "noBackg
         onClick={[Function]}
         selectPosition="bottom"
         size="medium"
-        type="primary"
+        type="jest-auto-snapshots String Fixture"
       />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
@@ -149,7 +149,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "wide" i
         onClick={[Function]}
         selectPosition="bottom"
         size="medium"
-        type="primary"
+        type="jest-auto-snapshots String Fixture"
       />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
@@ -201,7 +201,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         onClick={[Function]}
         selectPosition="bottom"
         size="medium"
-        type="primary"
+        type="jest-auto-snapshots String Fixture"
       />
     </ForwardRef(styled.div)>
   </ForwardRef(styled.section)>
