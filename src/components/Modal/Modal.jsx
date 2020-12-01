@@ -64,6 +64,22 @@ class Modal extends React.Component {
     }
   };
 
+  validateAction = action => {
+    if (action && action.label && action.callback) {
+      return true;
+    }
+    return false;
+  };
+
+  handleAction(action) {
+    if (action.callback) {
+      action.callback();
+    }
+    if (this.props.dismissible) {
+      this.dismiss();
+    }
+  }
+
   clickToClose(e) {
     if (e.target !== this.container) return;
     this.props.closeButton.callback();
@@ -81,22 +97,6 @@ class Modal extends React.Component {
       this.props.previousFocus.current.focus();
     }
   }
-
-  handleAction(action) {
-    if (action.callback) {
-      action.callback();
-    }
-    if (this.props.dismissible) {
-      this.dismiss();
-    }
-  }
-
-  validateAction = action => {
-    if (action && action.label && action.callback) {
-      return true;
-    }
-    return false;
-  };
 
   render() {
     const {
