@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.55.0] - 2020-12-01
+- Fixes Banner component bug in Publish.
+
 ## [5.54.1] - 2020-12-01
 - Adds shopify icon to Avatar component.
 - Adds optional type to the Modal action button.
@@ -324,4 +327,3 @@
 
 ### Removed
 - Possibility to add any color string to the *label*.
-
