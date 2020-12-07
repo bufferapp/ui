@@ -27,6 +27,7 @@ export const gray = '#B8B8B8';
 export const grayDark = '#636363';
 export const grayDarker = '#3D3D3D';
 export const grayDefault = '#77797a';
+export const black = '#000000';
 
 export const boxShadow = '#ABB7FF';
 export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16)';
