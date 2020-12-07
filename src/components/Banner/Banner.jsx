@@ -14,19 +14,25 @@ import {
 import { orangeDark } from '../style/colors';
 
 export default class Banner extends React.Component {
-  state = {
-    isOpen: true,
-  };
+  constructor(props) {
+    super(props);
 
-  closeBanner = () => {
+    this.state = {
+      isOpen: true,
+    };
+
+    this.closeBanner = this.closeBanner.bind(this);
+  }
+
+  closeBanner() {
     this.setState({ isOpen: false });
     const { onCloseBanner } = this.props;
     if (onCloseBanner) {
       onCloseBanner();
     }
-  };
+  }
 
-  renderBannerContent = (themeColor) => {
+  renderBannerContent(themeColor) {
     const { customHTML, text, actionButton } = this.props;
     if (customHTML) {
       return (
@@ -34,7 +40,7 @@ export default class Banner extends React.Component {
           {/* eslint-disable-next-line */}
           <div dangerouslySetInnerHTML={customHTML} />
         </Wrapper>
-      )
+      );
     }
     return (
       <Wrapper>
@@ -51,7 +57,7 @@ export default class Banner extends React.Component {
         </ButtonWrapper>
       </Wrapper>
     );
-  };
+  }
 
   render() {
     const { isOpen } = this.state;
@@ -64,7 +70,11 @@ export default class Banner extends React.Component {
           <BannerCloseButton>
             <Button
               type="text"
-              icon={<CrossIcon color={themeColor === 'blue' ? '#fff' : orangeDark} />}
+              icon={(
+                <CrossIcon
+                  color={themeColor === 'blue' ? '#fff' : orangeDark}
+                />
+              )}
               hasIconOnly
               onClick={this.closeBanner}
               label="Close"

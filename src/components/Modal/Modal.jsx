@@ -64,6 +64,22 @@ class Modal extends React.Component {
     }
   };
 
+  validateAction = action => {
+    if (action && action.label && action.callback) {
+      return true;
+    }
+    return false;
+  };
+
+  handleAction(action) {
+    if (action.callback) {
+      action.callback();
+    }
+    if (this.props.dismissible) {
+      this.dismiss();
+    }
+  }
+
   clickToClose(e) {
     if (e.target !== this.container) return;
     this.props.closeButton.callback();
@@ -81,22 +97,6 @@ class Modal extends React.Component {
       this.props.previousFocus.current.focus();
     }
   }
-
-  handleAction(action) {
-    if (action.callback) {
-      action.callback();
-    }
-    if (this.props.dismissible) {
-      this.dismiss();
-    }
-  }
-
-  validateAction = action => {
-    if (action && action.label && action.callback) {
-      return true;
-    }
-    return false;
-  };
 
   render() {
     const {
@@ -150,7 +150,7 @@ class Modal extends React.Component {
             {this.validateAction(action) && (
               <Button
                 ref={ctaButton => (this.ctaButton = ctaButton)}
-                type="primary"
+                type={action.type || "primary"}
                 onClick={() => {
                   this.handleAction(action);
                 }}
@@ -170,11 +170,12 @@ Modal.propTypes = {
   background: PropTypes.string,
   /** The content of the modal */
   children: PropTypes.node.isRequired,
-  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss */
+  /** The main action settings {**label**: the label of the button,  **disabled** to disable the button, **callback** a callback to invoke on action click, before dismiss, **type** to set the action button type (danger, primary)} */
   action: PropTypes.shape({
     label: PropTypes.string.isRequired,
     disabled: PropTypes.bool,
     callback: PropTypes.func,
+    type: PropTypes.string,
   }),
   /** Verifies if the modal should be dismissed right after the action is executed, in case we are doing a validation inside the modal before closing it */
   dismissible: PropTypes.bool,
