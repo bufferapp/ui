@@ -109,6 +109,11 @@ const medium = css`
   height: 40px;
 `;
 
+const disabled = css`
+  background-color: ${grayLight};
+  cursor: not-allowed;
+`;
+
 export const ButtonItemStyled = styled.button`
   ${buttonBase};
   ${medium};
@@ -134,6 +139,7 @@ export const ButtonItemStyled = styled.button`
       fill: ${grayDarker};
     }
   }
+  ${props => (props.disabled ? disabled : '')};
 `;
 
 export const ButtonLabel = styled.div`

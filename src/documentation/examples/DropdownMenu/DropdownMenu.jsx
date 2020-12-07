@@ -41,6 +41,7 @@ const menuItems = [
     id: '4',
     title: 'Wishlist',
     onItemClick: () => console.info('Wishlist'),
+    disabled: true,
   },
 ];
 

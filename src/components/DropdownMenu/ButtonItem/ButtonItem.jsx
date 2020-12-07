@@ -77,7 +77,7 @@ export default class ButtonItem extends React.Component {
 
   render() {
     const {
-      item: { type, title, onItemClick, icon, selected },
+      item: { type, title, onItemClick, icon, selected, disabled },
       ariaHaspopup,
     } = this.props;
     const hasIcon = !!icon || !!selected;
@@ -96,6 +96,7 @@ export default class ButtonItem extends React.Component {
         }}
         tabIndex={this.state.tabIndex}
         aria-haspopup={ariaHaspopup}
+        disabled={disabled}
       >
         {selected && <CheckmarkIcon color={green} />}
         {icon || null}
@@ -112,6 +113,7 @@ ButtonItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.string,
     title: PropTypes.string,
+    disabled: PropTypes.bool,
   }).isRequired,
 };
 
