@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.56.0] - 2020-12-07
+- Improves order of search results returned from select input.
+- Adds *black* to the list of colors.
+
 ## [5.55.0] - 2020-12-01
 - Fixes Banner component bug in Publish.
 
