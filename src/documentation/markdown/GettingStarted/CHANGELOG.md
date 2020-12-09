@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.56.1] - 2020-12-09
+- Adds a disabled menu option for the dropdown menu items.
+
 ## [5.56.0] - 2020-12-07
 - Improves order of search results returned from select input.
 - Adds *black* to the list of colors.
