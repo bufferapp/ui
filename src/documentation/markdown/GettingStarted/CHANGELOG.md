@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.57.0] - 2021-01-04
+- Adds [States component](https://www.notion.so/buffer/WIP-States-7508ca11ed5946f8b8c67f2947ade44a)
+
 ## [5.56.1] - 2020-12-09
 - Adds a disabled menu option for the dropdown menu items.
 
