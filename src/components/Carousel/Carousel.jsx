@@ -51,6 +51,7 @@ const Announcement = styled.div`
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   white-space: nowrap; /* added line */
+  margin: 0;
 `;
 
 const IndicatorList = styled.ol`
@@ -64,6 +65,7 @@ const IndicatorListItem = styled.li`
   list-style: none;
   padding: 0 4px;
   position: relative;
+  display: flex;
 `;
 
 const IndicatorButton = styled.button`
@@ -86,10 +88,11 @@ const IndicatorButton = styled.button`
     border-radius: 50%;
     background: ${white};
     position: absolute;
-    top: 4px;
+    top: 0;
     left: 4px;
-    transform: ${({ active }) => active ? 'scale(1)' : 'scale(0)'};
-    transition: transform ${({ active }) => active ? '250ms' : '150ms'} ease-out;
+    transform: ${({ active }) => (active ? 'scale(1)' : 'scale(0)')};
+    transition: transform ${({ active }) => (active ? '250ms' : '150ms')}
+      ease-out;
   }
 
   &:before {
@@ -100,11 +103,11 @@ const IndicatorButton = styled.button`
     border-radius: 50%;
     border: 1px solid ${white};
     position: absolute;
-    top: 2px;
+    top: 0;
     left: 2px;
     opacity: 0;
     transition: opacity 100ms ease-out;
-    transition-delay: ${({ active }) => active ? '0' : '150ms'}
+    transition-delay: ${({ active }) => (active ? '0' : '150ms')};
   }
 
   &:hover {
@@ -174,7 +177,7 @@ class Carousel extends React.Component {
 
   render() {
     const { left, currentSlideIndex } = this.state;
-    const { children, width } = this.props;
+    const { children, width, rightNavigation, withIndicators } = this.props;
 
     return (
       <CarouselStyled>
@@ -185,7 +188,7 @@ class Carousel extends React.Component {
           out of
           {children.length}
         </Announcement>
-        {React.Children.count(children) > 1 && (
+        {React.Children.count(children) > 1 && !rightNavigation && (
           <ButtonOverlapContainer left>
             <Button
               type="secondary"
@@ -206,7 +209,7 @@ class Carousel extends React.Component {
               </CarouselItems>
             </MainList>
           </Window>
-          {React.Children.count(children) > 1 && (
+          {React.Children.count(children) > 1 && withIndicators && (
             <IndicatorList>
               {React.Children.map(children, (child, index) => (
                 <IndicatorListItem key={index}>
@@ -245,12 +248,23 @@ class Carousel extends React.Component {
   }
 }
 
+Carousel.defaultProps = {
+  rightNavigation: false,
+  withIndicators: true,
+};
+
 Carousel.propTypes = {
   /** The content within the carousel */
   children: PropTypes.node.isRequired,
 
   /** The normalized width for each item */
   width: PropTypes.string.isRequired,
+
+  /** Option to only navigate towards the right */
+  rightNavigation: PropTypes.bool,
+
+  /** Show indicators at the bottom */
+  withIndicators: PropTypes.bool,
 };
 
 export default Carousel;

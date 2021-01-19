@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.58.0] - 2021-01-20
+- Extends Carousel to navigate to the right only and optionally hide indicator buttons
+
 ## [5.57.0] - 2021-01-04
 - Adds [States component](https://www.notion.so/buffer/WIP-States-7508ca11ed5946f8b8c67f2947ade44a)
 
