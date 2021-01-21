@@ -10,13 +10,13 @@ When in doubt, it's best to keep your pull requests small, by not bundling more 
 
 ### Branch Structure
 
-All stable releases are tagged ([view tags](https://github.com/bufferapp/ui/tags)), and the `master` branch represents the latest development version of the library.
+All stable releases are tagged ([view tags](https://github.com/bufferapp/ui/tags)), and the `main` branch represents the latest development version of the library.
 Patches or hotfix releases are prepared on an independent branch.
 
 
 ## Getting started
 
-Please create a new branch from an up to date master on your fork.
+Please create a new branch from an up to date main on your fork.
 
 1. Fork the repository on Github
 2. Clone your fork to your local machine `git clone git@github.com:<yourname>/bufferapp/ui.git`
@@ -28,8 +28,8 @@ If you have an existing local repository, please update it before you start, to 
 
 ```sh
 git remote add upstream git@github.com:bufferapp/ui.git
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 git checkout -b my-topic-branch
 yarn
 ```
