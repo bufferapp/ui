@@ -13,7 +13,7 @@ fi
 newVersion=$1
 echo -e $BLUE"Publishing a new" $newVersion "version"$NC
 
-git checkout master && \
+git checkout main && \
   npm version $newVersion && \
   npm run build:lib && \
   cd ./lib && \
