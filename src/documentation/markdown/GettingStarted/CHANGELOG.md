@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.58.1] - 2021-01-26
+- fixes the publish script reference from 'master' to 'main'
+
 ## [5.58.0] - 2021-01-20
 - Extends Carousel to navigate to the right only and optionally hide indicator buttons
 
