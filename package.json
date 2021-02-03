@@ -89,7 +89,7 @@
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
     "gh-pages": "2.0.1",
-    "highlight.js": "9.10.0",
+    "highlight.js": "10.4.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "indent-string": "3.2.0",
