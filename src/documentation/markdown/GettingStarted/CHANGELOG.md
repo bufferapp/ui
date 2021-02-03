@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.58.2] - 2021-01-26
+- Merges #271 (@hijuliancode) to fix border bug in disabled `Button`
+
 ## [5.58.1] - 2021-01-26
 - fixes the publish script reference from 'master' to 'main'
 
