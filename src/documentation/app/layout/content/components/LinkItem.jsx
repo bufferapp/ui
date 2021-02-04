@@ -51,6 +51,8 @@ const LinkTitle = styled.h3`
 
 
 const LinkItem = ({ children, href }) => {
+  // "Don't use <Link> for external URLs. Just use an <a>."
+  // Source: https://github.com/ReactTraining/react-router/issues/6344#issuecomment-423233981
   if (/^https?:\/\//.test(href)) {
     return (
       <ExternalLinkWrapper href={href}>
