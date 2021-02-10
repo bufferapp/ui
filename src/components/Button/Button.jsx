@@ -83,7 +83,7 @@ const Button = ({
       disabled={disabled}
       type={type}
       fullWidth={fullWidth}
-      loading={loading}
+      $loading={loading}
     >
       <ButtonContainerStyled>
         <ButtonStyled
