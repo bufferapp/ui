@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "5.56.1",
+  "version": "5.58.2",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -89,7 +89,7 @@
     "fork-ts-checker-webpack-plugin-alt": "0.4.14",
     "fs-extra": "7.0.0",
     "gh-pages": "2.0.1",
-    "highlight.js": "9.10.0",
+    "highlight.js": "10.4.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "indent-string": "3.2.0",
@@ -101,7 +101,7 @@
     "jest-styled-components": "7.0.2",
     "markdown-to-jsx": "^6.11.4",
     "mini-css-extract-plugin": "0.4.3",
-    "node-fetch": "2.3.0",
+    "node-fetch": "2.6.1",
     "npm-run-all": "4.0.2",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "ora": "3.0.0",

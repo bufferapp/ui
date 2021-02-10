@@ -81,6 +81,7 @@ export const ButtonNestedBase = css`
   align-items: center;
   background: none transparent;
   border: 0;
+  border-radius: ${borderRadius};
   color: inherit;
   cursor: pointer;
   display: flex;
