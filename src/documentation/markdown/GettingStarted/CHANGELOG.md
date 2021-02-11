@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.59.0] - 2021-02-11
+- Add new 'Giveaway' icon.
+
 ## [5.58.3] - 2021-02-10
 - Removes guides and pattern reference content. This has now been moved to our internal Design Wiki in Notion.
 
