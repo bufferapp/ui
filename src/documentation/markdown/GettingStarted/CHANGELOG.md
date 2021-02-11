@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.58.3] - 2021-02-10
+- Removes guides and pattern reference content. This has now been moved to our internal Design Wiki in Notion.
+
 ## [5.58.2] - 2021-01-26
 - Merges #271 (@hijuliancode) to fix border bug in disabled `Button`
 
