@@ -9,7 +9,12 @@ import createIconComponent from '../utils/createIconComponent';
 const InboxIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M12.26 2.606A1 1 0 0 0 11.34 2H4.66a1 1 0 0 0-.92.606L1 9v4a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9l-2.74-6.394zm.466 4.708A.5.5 0 0 1 12.26 8H9.732a2 2 0 1 1-3.465 0H3.74a.5.5 0 0 1-.465-.686l1.6-4A.5.5 0 0 1 5.34 3h5.322a.5.5 0 0 1 .465.314l1.6 4z" />
+      <path fillRule="evenodd" d="M12.26 2.606A1 1 0 0011.34 2H4.66a1 1 0 00-.92.606L1 9v4a1 1 0 001 1h12a1 1 0 001-1V9l-2.74-6.394zm.466 4.708A.5.5 0 0112.26 8H9.732a2 2 0 11-3.465 0H3.74a.5.5 0 01-.465-.686l1.6-4A.5.5 0 015.34 3h5.322a.5.5 0 01.465.314l1.6 4z" clipRule="evenodd" />
+
+    );
+    }
+
+    export default Icon;
     </g>
   ),
 });

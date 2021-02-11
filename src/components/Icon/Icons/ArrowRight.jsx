@@ -9,8 +9,13 @@ import createIconComponent from '../utils/createIconComponent';
 const ArrowRightIcon = createIconComponent({
   content: (
     <g>
-      <path d="M7 4.197a1 1 0 0 1 1.657-.755l4.483 3.904a1 1 0 0 1-.014 1.521l-4.484 3.757A1 1 0 0 1 7 11.857v-7.66z" />
-      <path d="M7 9V7H3a1 1 0 1 0 0 2h4z" />
+      <path d="M7 4.197a1 1 0 011.657-.755l4.483 3.904a1 1 0 01-.014 1.521l-4.484 3.757A1 1 0 017 11.857v-7.66z" />
+      <path d="M7 9V7H3a1 1 0 100 2h4z" />
+
+    );
+    }
+
+    export default Icon;
     </g>
   ),
 });

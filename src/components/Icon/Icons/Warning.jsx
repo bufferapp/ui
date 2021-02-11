@@ -9,7 +9,12 @@ import createIconComponent from '../utils/createIconComponent';
 const WarningIcon = createIconComponent({
   content: (
     <g>
-      <path fillRule="evenodd" clipRule="evenodd" d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zM7 4a1 1 0 0 1 2 0v5a1 1 0 1 1-2 0V4zm1 7a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+      <path fillRule="evenodd" d="M8 16A8 8 0 108 0a8 8 0 000 16zM7 4a1 1 0 012 0v5a1 1 0 11-2 0V4zm1 7a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd" />
+
+    );
+    }
+
+    export default Icon;
     </g>
   ),
 });

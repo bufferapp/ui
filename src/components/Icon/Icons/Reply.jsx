@@ -10,7 +10,12 @@ const ReplyIcon = createIconComponent({
   content: (
     <g>
       <path d="M16 9.038H8.927V16H16V9.038z" />
-      <path fillRule="evenodd" clipRule="evenodd" d="M0 0h13.806v6.949h-6.97v6.962L0 13.925V0z" />
+      <path fillRule="evenodd" d="M0 0h13.806v6.949h-6.97v6.962L0 13.925V0z" clipRule="evenodd" />
+
+    );
+    }
+
+    export default Icon;
     </g>
   ),
 });

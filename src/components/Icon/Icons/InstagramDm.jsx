@@ -9,7 +9,12 @@ import createIconComponent from '../utils/createIconComponent';
 const InstagramDmIcon = createIconComponent({
   content: (
     <g>
-      <path d="M7 6.5L15 2M1.6 2h13.082a.2.2 0 0 1 .18.287L8.774 14.93a.2.2 0 0 1-.378-.053L7.013 6.579a.2.2 0 0 0-.077-.127L1.48 2.36A.2.2 0 0 1 1.6 2z" />
+      <path d="M7 6.5L15 2M1.6 2h13.082a.2.2 0 01.18.287L8.774 14.93a.2.2 0 01-.378-.053L7.013 6.579a.2.2 0 00-.077-.127L1.48 2.36A.2.2 0 011.6 2z" />
+
+    );
+    }
+
+    export default Icon;
     </g>
   ),
 });

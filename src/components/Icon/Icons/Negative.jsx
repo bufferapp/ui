@@ -9,7 +9,12 @@ import createIconComponent from '../utils/createIconComponent';
 const NegativeIcon = createIconComponent({
   content: (
     <g>
-      <path d="M6.5 2a1.5 1.5 0 1 1 3 0v7.5a1.5 1.5 0 0 1-3 0V2zM6.5 14a1.5 1.5 0 1 1 3 0 1.5 1.5 0 0 1-3 0z" />
+      <path d="M6.5 2a1.5 1.5 0 113 0v7.5a1.5 1.5 0 01-3 0V2zm0 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
+
+    );
+    }
+
+    export default Icon;
     </g>
   ),
 });
