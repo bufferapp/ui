@@ -32,6 +32,7 @@ export Folder from './Icons/Folder';
 export Folders from './Icons/Folders';
 export Frequency from './Icons/Frequency';
 export Gear from './Icons/Gear';
+export Giveaway from './Icons/Giveaway';
 export Google from './Icons/Google';
 export GooglePlus from './Icons/GooglePlus';
 export Hashtag from './Icons/Hashtag';
