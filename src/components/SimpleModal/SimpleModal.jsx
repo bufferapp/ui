@@ -5,6 +5,9 @@ import { Cross } from '../Icon';
 import { white, red } from '../style/colors';
 import { easeOutQuart } from '../style/animations';
 
+const ESCAPE_KEY = 27;
+const TAB_KEY = 9;
+
 const fadeIn = keyframes`
   0% {
     opacity: 0;
@@ -109,8 +112,8 @@ const SimpleModal = ({ children, closeAction }) => {
   };
 
   const keyListenersMap = new Map([
-    [27, () => closeAction()],
-    [9, handleTabKey],
+    [ESCAPE_KEY, () => closeAction()],
+    [TAB_KEY, handleTabKey],
   ]);
 
   const clickToClose = e => {
@@ -127,7 +130,7 @@ const SimpleModal = ({ children, closeAction }) => {
     containerRef.current.addEventListener('click', e => clickToClose(e));
 
     return () => document.removeEventListener('keydown', keyListener);
-  });
+  }, []);
 
   return (
     <Container ref={containerRef} role="dialog" aria-modal="true">
