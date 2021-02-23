@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.div)
+  aria-modal="true"
+  role="dialog"
+>
+  <ForwardRef(styled.div)
+    tabIndex="0"
+  >
+    <ForwardRef(styled.button)
+      onClick={[Function]}
+    >
+      <CrossIcon />
+    </ForwardRef(styled.button)>
+    <NodeFixture />
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
