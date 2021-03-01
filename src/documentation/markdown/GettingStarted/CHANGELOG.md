@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.59.0] - 2021-03-01
+- Add new simple modal. The other modal will be updated to use this scaffolding in the future
+
 ## [5.58.4] - 2021-02-11
 - Add new 'Giveaway' icon.
 
