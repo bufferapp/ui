@@ -94,7 +94,7 @@ const SimpleModal = ({ children, closeAction }) => {
 
   const handleTabKey = e => {
     const focusableModalElements = modalRef.current.querySelectorAll(
-      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select'
+      'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, div[tabIndex="0"]'
     );
     const firstElement = focusableModalElements[0];
     const lastElement =
