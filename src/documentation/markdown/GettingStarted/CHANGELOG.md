@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.60.1] - 2021-03-04
+- fix icon script
+- generate new icons: Coupon, Card and Spam
+- remove padding in Simple Modal
+- fix Switch propType for id: change from bool to string
+
 ## [5.59.0] - 2021-03-01
 - Add new simple modal. The other modal will be updated to use this scaffolding in the future
 
