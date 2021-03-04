@@ -14,7 +14,7 @@ const WebsiteIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 WebsiteIcon.displayName = 'WebsiteIcon';
 

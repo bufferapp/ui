@@ -14,7 +14,7 @@ const CopyIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 CopyIcon.displayName = 'CopyIcon';
 

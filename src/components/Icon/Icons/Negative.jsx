@@ -10,7 +10,7 @@ const NegativeIcon = createIconComponent({
     <g>
       <path d="M6.5 2a1.5 1.5 0 113 0v7.5a1.5 1.5 0 01-3 0V2zm0 12a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
     </g>
-  ),
+  )
 });
 NegativeIcon.displayName = 'NegativeIcon';
 

@@ -14,7 +14,7 @@ const TagIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 TagIcon.displayName = 'TagIcon';
 

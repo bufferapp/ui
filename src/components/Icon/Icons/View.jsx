@@ -15,7 +15,7 @@ const ViewIcon = createIconComponent({
       />
       <path d="M10 8a2 2 0 11-4 0 2 2 0 014 0z" />
     </g>
-  ),
+  )
 });
 ViewIcon.displayName = 'ViewIcon';
 

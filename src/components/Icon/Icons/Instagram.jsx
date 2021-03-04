@@ -20,7 +20,7 @@ const InstagramIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 InstagramIcon.displayName = 'InstagramIcon';
 

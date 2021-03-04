@@ -14,7 +14,7 @@ const HashtagIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 HashtagIcon.displayName = 'HashtagIcon';
 

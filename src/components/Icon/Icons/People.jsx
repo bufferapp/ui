@@ -16,7 +16,7 @@ const PeopleIcon = createIconComponent({
       <path d="M6.548 14a3.931 3.931 0 013.931-3.909h.58c2.33 0 4.36 1.586 4.925 3.846a.05.05 0 01-.049.063H6.548z" />
       <path d="M.161 13.194A5.217 5.217 0 015.277 9h.217a5 5 0 015 5H.074a.061.061 0 01-.06-.073l.147-.733z" />
     </g>
-  ),
+  )
 });
 PeopleIcon.displayName = 'PeopleIcon';
 

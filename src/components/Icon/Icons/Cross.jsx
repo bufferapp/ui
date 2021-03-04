@@ -10,7 +10,7 @@ const CrossIcon = createIconComponent({
     <g>
       <path d="M10.828 12.243a1 1 0 001.415-1.415L9.414 8l2.829-2.828a1 1 0 00-1.415-1.415L8 6.586 5.172 3.757a1 1 0 00-1.415 1.415L6.586 8l-2.829 2.828a1 1 0 001.415 1.415L8 9.414l2.828 2.829z" />
     </g>
-  ),
+  )
 });
 CrossIcon.displayName = 'CrossIcon';
 

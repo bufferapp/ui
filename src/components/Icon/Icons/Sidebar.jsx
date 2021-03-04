@@ -10,7 +10,7 @@ const SidebarIcon = createIconComponent({
     <g>
       <path d="M2 2a1 1 0 00-1 1v10a1 1 0 001 1h2a1 1 0 001-1V3a1 1 0 00-1-1H2zm6 0a1 1 0 00-1 1v10a1 1 0 001 1h6a1 1 0 001-1V3a1 1 0 00-1-1H8z" />
     </g>
-  ),
+  )
 });
 SidebarIcon.displayName = 'SidebarIcon';
 

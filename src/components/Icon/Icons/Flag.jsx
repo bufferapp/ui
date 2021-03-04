@@ -10,7 +10,7 @@ const FlagIcon = createIconComponent({
     <g>
       <path d="M4 1H2v14h2V1zm1 9V2h9l-1.72 3.566a1 1 0 000 .868L14 10H5z" />
     </g>
-  ),
+  )
 });
 FlagIcon.displayName = 'FlagIcon';
 

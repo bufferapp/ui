@@ -14,7 +14,7 @@ const PauseIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 PauseIcon.displayName = 'PauseIcon';
 

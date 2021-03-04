@@ -14,7 +14,7 @@ const MessengerIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 MessengerIcon.displayName = 'MessengerIcon';
 

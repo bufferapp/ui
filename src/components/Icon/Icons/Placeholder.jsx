@@ -10,7 +10,7 @@ const PlaceholderIcon = createIconComponent({
     <g>
       <path d="M0 4a4 4 0 014-4h8a4 4 0 014 4v8a4 4 0 01-4 4H4a4 4 0 01-4-4V4z" />
     </g>
-  ),
+  )
 });
 PlaceholderIcon.displayName = 'PlaceholderIcon';
 

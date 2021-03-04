@@ -14,7 +14,7 @@ const PlusIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 PlusIcon.displayName = 'PlusIcon';
 

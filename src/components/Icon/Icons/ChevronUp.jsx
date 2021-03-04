@@ -14,7 +14,7 @@ const ChevronUpIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 ChevronUpIcon.displayName = 'ChevronUpIcon';
 

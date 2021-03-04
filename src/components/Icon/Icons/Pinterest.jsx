@@ -14,7 +14,7 @@ const PinterestIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 PinterestIcon.displayName = 'PinterestIcon';
 

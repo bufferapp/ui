@@ -15,7 +15,7 @@ const ReplyIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 ReplyIcon.displayName = 'ReplyIcon';
 

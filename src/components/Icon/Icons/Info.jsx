@@ -14,7 +14,7 @@ const InfoIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 InfoIcon.displayName = 'InfoIcon';
 

@@ -14,7 +14,7 @@ const SpamIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 SpamIcon.displayName = 'SpamIcon';
 

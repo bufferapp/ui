@@ -14,7 +14,7 @@ const DollarIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 DollarIcon.displayName = 'DollarIcon';
 

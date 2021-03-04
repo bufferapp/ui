@@ -15,7 +15,7 @@ const HotkeysIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  ),
+  )
 });
 HotkeysIcon.displayName = 'HotkeysIcon';
 
