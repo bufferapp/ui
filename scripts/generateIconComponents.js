@@ -229,7 +229,7 @@ function generateReactIconComponents(icons, spinner) {
         const componentName = getComponentName(icon.name);
         const svg = getSVGContent(icon.svgBodyOptimized);
         const reactSource = getReactSource({ componentName, svg });
-        const prettyReactSource = prettier.format(reactSource, { parser: 'babel' });
+        const prettyReactSource = prettier.format(reactSource, { parser: 'babel', singleQuote: true });
         const exampleSource = getExampleSource(componentName);
 
         const componentFilePath = path.join(
