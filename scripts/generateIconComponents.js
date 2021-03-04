@@ -13,14 +13,16 @@ const fetch = require('node-fetch');
 const { promisify } = require('util');
 const SVGO = require('svgo');
 const svg2jsx = require('@balajmarius/svg2jsx');
-const pretty = require('pretty');
-const indentString = require('indent-string');
+const prettier = require("prettier");
 
 const writeFileAsync = promisify(fs.writeFile);
 
 const iconCachePath = path.join(__dirname, '../config/cachedIconData.json');
 const pathToIconComponents = path.join(__dirname, '../src/components/Icon');
-const pathToIconExamples = path.join(__dirname, '../src/documentation/examples/Icon');
+const pathToIconExamples = path.join(
+  __dirname,
+  '../src/documentation/examples/Icon'
+);
 
 const figmaIconFileId = 'D9T6BuWxbTVKhlDU8faZSQ9G';
 const figmaIconFileUrl = `https://www.figma.com/file/${figmaIconFileId}/`;
@@ -90,7 +92,7 @@ function getFramesToChoose(figmaFile) {
  */
 function getIconsFromFrame(figmaFile, frameId) {
   const frame = figmaFile.document.children[0].children.find(
-    f => f.id === frameId,
+    f => f.id === frameId
   );
   if (frame) {
     return (
@@ -130,19 +132,19 @@ function downloadSvgs(icons) {
     eachLimit(
       icons,
       8, // max parallel downloads
-      async (icon) => {
+      async icon => {
         if (icon.svgUrl) {
           const res = await fetch(icon.svgUrl);
           const svgBody = await res.text();
           newIcons[icon.id].svgBody = svgBody;
         }
       },
-      (err) => {
+      err => {
         if (err) {
           reject(err);
         }
         resolve(newIcons);
-      },
+      }
     );
   });
 }
@@ -157,7 +159,8 @@ import createIconComponent from '../utils/createIconComponent';
 
 const ${componentName}Icon = createIconComponent({
   content: (
-    <g>${indentString(svg, 4)}
+    <g>
+      ${svg}
     </g>
   ),
 });
@@ -184,7 +187,7 @@ export default function ${componentName}IconExample() {
  *
  * @param {String} figmaObjectName
  */
-const getComponentName = (figmaObjectName) => {
+const getComponentName = figmaObjectName => {
   const formatted = figmaObjectName
     .replace(/ico(n)?-/, '')
     .replace(/( \w)/g, m => m[1].toUpperCase())
@@ -194,9 +197,21 @@ const getComponentName = (figmaObjectName) => {
   return formatted.charAt(0).toUpperCase() + formatted.slice(1);
 };
 
-// Get the contents of the optimized SVG
-// by trimming leading and tailing <svg> tags
-const getSVGContent = source => source.slice(source.indexOf('>') + 1).replace('</svg>', '');
+/**
+ * This method takes a string which somewhere contains <svg>...</svg>
+ * and extracts the contents. It's not super smart, but it works well enough.
+ *
+ * @param {String} source
+ * @returns {String} svg
+ */
+const getSVGContent = source =>
+  source
+    // grab everything after the first tag ends (assumed to be <svg ...>)
+    .slice(source.indexOf('>') + 1)
+    // now split the text on the closing </svg> tag, and take only the first part
+    .split('</svg>')[0]
+    // trim for good measure
+    .trim();
 
 /**
  * Generate and save React component files based on a set of icon data
@@ -205,48 +220,60 @@ const getSVGContent = source => source.slice(source.indexOf('>') + 1).replace('<
  * @param {Object} icons
  */
 function generateReactIconComponents(icons, spinner) {
-  return new Promise((resolve) => {
+  return new Promise(resolve => {
     const iconsCreated = [];
-    eachLimit(Object.values(icons), 10, async (icon) => {
-      const componentName = getComponentName(icon.name);
-      const svg = getSVGContent(icon.svgBodyOptimized);
-      const reactSource = getReactSource({ componentName, svg });
-      const exampleSource = getExampleSource(componentName);
+    eachLimit(
+      Object.values(icons),
+      10,
+      async icon => {
+        const componentName = getComponentName(icon.name);
+        const svg = getSVGContent(icon.svgBodyOptimized);
+        const reactSource = getReactSource({ componentName, svg });
+        const prettyReactSource = prettier.format(reactSource, { parser: 'babel' });
+        const exampleSource = getExampleSource(componentName);
 
-      const componentFilePath = path.join(pathToIconComponents, 'Icons', `${componentName}.jsx`);
-      const exampleFilePath = path.join(pathToIconExamples, `${componentName}.jsx`);
+        const componentFilePath = path.join(
+          pathToIconComponents,
+          'Icons',
+          `${componentName}.jsx`
+        );
+        const exampleFilePath = path.join(
+          pathToIconExamples,
+          `${componentName}.jsx`
+        );
 
-      await writeFileAsync(componentFilePath, reactSource);
-      await writeFileAsync(exampleFilePath, exampleSource);
 
-      spinner.info(chalk.gray(`Created ${componentFilePath}`));
+        await writeFileAsync(componentFilePath, prettyReactSource);
+        await writeFileAsync(exampleFilePath, exampleSource);
 
-      iconsCreated.push(componentName);
-    }, (err) => {
-      if (err) {
-        console.error('Error writing component file!', err);
+        spinner.info(chalk.gray(`Created ${componentFilePath}`));
+
+        iconsCreated.push(componentName);
+      },
+      err => {
+        if (err) {
+          console.error('Error writing component file!', err);
+        }
+        resolve(iconsCreated);
       }
-      resolve(iconsCreated);
-    });
+    );
   });
 }
 
 /**
  * For some reason the Figma API sometimes returns our icons wrapped in a <g clip-path='...'>
  * which causes them to render blank. This method strips out that clip path manually.
- * 
+ *
  * @todo Revisit this in the future in case we figure it out in the Figma source file or API
  * side, since it feels very hacky/brittle to use a RegEx here for this.
- * 
- * @param {String} svgBody 
+ *
+ * @param {String} svgBody
  */
-function removeClipPath(svgBody) {    
+function removeClipPath(svgBody) {
   const clipPathStartRegex = /<g clip-path="url\(#clip0\)">/ims;
   const clipPathEndRegex = /<\/g>\n<defs>\n<clipPath id="clip0">\n(.*?)\n<\/clipPath>\n<\/defs>/ims;
 
-  return svgBody
-    .replace(clipPathStartRegex, '')
-    .replace(clipPathEndRegex, '');
+  return svgBody.replace(clipPathStartRegex, '').replace(clipPathEndRegex, '');
 }
 
 /**
@@ -261,33 +288,42 @@ function optimizeSvgs(icons) {
     plugins: [{ removeAttrs: { attrs: '(stroke|fill)' } }],
   });
   const newIcons = Object.assign({}, icons);
-  return new Promise((resolve) => {
-    eachLimit(Object.values(icons), 10, async (icon) => {
-      const removedClipPath = removeClipPath(icon.svgBody);
-      let result;
-      try {
-        result = await svgo.optimize(removedClipPath);
-      } catch (e) {
-        console.error(`Failed to optimize icon ${icon.name} – it's possible the Figma API 
-          has changed their SVG output. Please ask for help in #proj-design-system.`, e);
-        console.log('Raw icon data:', icon);
-        process.exit();
+  return new Promise(resolve => {
+    eachLimit(
+      Object.values(icons),
+      10,
+      async icon => {
+        const removedClipPath = removeClipPath(icon.svgBody);
+        let result;
+        try {
+          result = await svgo.optimize(removedClipPath);
+        } catch (e) {
+          console.error(
+            `Failed to optimize icon ${icon.name} – it's possible the Figma API
+          has changed their SVG output. Please ask for help in #proj-design-system.`,
+            e
+          );
+          console.log('Raw icon data:', icon);
+          process.exit();
+        }
+        const transformed = await svg2jsx(result.data);
+        newIcons[icon.id].svgBodyOptimized = transformed;
+      },
+      err => {
+        if (err) {
+          console.error('Error optimizing SVG! ', err);
+        }
+        resolve(newIcons);
       }
-      const transformed = await svg2jsx(result.data);
-      const prettified = pretty(transformed);
-      newIcons[icon.id].svgBodyOptimized = prettified.trim();
-    }, (err) => {
-      if (err) {
-        console.error('Error optimizing SVG! ', err);
-      }
-      resolve(newIcons);
-    });
+    );
   });
 }
 
 function generateReactIconIndex(icons) {
   const sortedIcons = [...icons].sort();
-  const indexContent = sortedIcons.map(name => `export ${name} from './Icons/${name}';`).join('\n');
+  const indexContent = sortedIcons
+    .map(name => `export ${name} from './Icons/${name}';`)
+    .join('\n');
   const pathToIndex = path.join(pathToIconComponents, 'index.js');
   fs.writeFileSync(pathToIndex, `${indexContent}\n`);
 }
@@ -295,9 +331,7 @@ function generateReactIconIndex(icons) {
 async function main() {
   let spinner;
   try {
-    spinner = ora(
-      `Loading BDS Icons Figma file: ${figmaIconFileUrl}`,
-    ).start();
+    spinner = ora(`Loading BDS Icons Figma file: ${figmaIconFileUrl}`).start();
     const figmaFile = await getFigmaFile(figmaIconFileId);
     spinner.succeed();
 
@@ -317,9 +351,12 @@ async function main() {
     /**
      * If we don't have a cache OR the Figma has changed then we'll update from the API
      */
-    if (!cachedIconData || cachedIconData.lastModified !== figmaFile.lastModified) {
+    if (
+      !cachedIconData ||
+      cachedIconData.lastModified !== figmaFile.lastModified
+    ) {
       console.log(
-        chalk.gray('\nNo cache found or Figma file has been updated\n'),
+        chalk.gray('\nNo cache found or Figma file has been updated\n')
       );
       const pagesToChoose = getFramesToChoose(figmaFile);
       const answer = await inq.prompt([
@@ -372,7 +409,10 @@ async function main() {
 
     // Write component files
     spinner.start();
-    const iconsGenerated = await generateReactIconComponents(optimizedIcons, spinner);
+    const iconsGenerated = await generateReactIconComponents(
+      optimizedIcons,
+      spinner
+    );
     spinner.succeed('Generate React components and examples');
 
     // Write index.js file
