@@ -53,7 +53,6 @@ const Modal = styled.div`
   box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.16);
   box-sizing: border-box;
   margin: 0 0 1rem;
-  padding: 16px;
   width: fit-content;
   overflow: hidden;
   position: absolute;
