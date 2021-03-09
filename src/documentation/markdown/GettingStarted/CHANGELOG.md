@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.62.0] - 2021-03-09
+- Move some `dependencies` into `devDependencies` (https://github.com/bufferapp/ui/commit/df5d8e7c250a0533792452b3501dce0a77a61efe)
+
+## [5.61.0] - 2021-03-09
+- Add optional `color` prop to `items` passed into the `DropDownMenu` component.
+
 ## [5.60.1] - 2021-03-04
 - fix icon script
 - generate new icons: Coupon, Card and Spam
