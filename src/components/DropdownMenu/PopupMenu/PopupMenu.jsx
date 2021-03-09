@@ -232,6 +232,7 @@ PopupMenu.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
+      color: PropTypes.string,
     })
   ).isRequired,
 };

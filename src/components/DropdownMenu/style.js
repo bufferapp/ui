@@ -117,7 +117,7 @@ const disabled = css`
 export const ButtonItemStyled = styled.button`
   ${buttonBase};
   ${medium};
-  color: ${grayDarker};
+  color: ${props => (props.color ? props.color : grayDarker)};
   background: none transparent;
   border-radius: 0;
   justify-content: flex-start;
@@ -132,11 +132,11 @@ export const ButtonItemStyled = styled.button`
   :hover {
     background-color: ${grayLight};
     svg {
-      fill: ${grayDarker};
+      fill: ${props => (props.color ? props.color : grayDarker)};
     }
     & * {
-      color: ${grayDarker};
-      fill: ${grayDarker};
+      color: ${props => (props.color ? props.color : grayDarker)};
+      fill: ${props => (props.color ? props.color : grayDarker)};
     }
   }
   ${props => (props.disabled ? disabled : '')};

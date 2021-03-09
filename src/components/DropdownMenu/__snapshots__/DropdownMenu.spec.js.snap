@@ -27,6 +27,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
       items={
         Array [
           Object {
+            "color": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           },
@@ -68,6 +69,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
       items={
         Array [
           Object {
+            "color": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           },
@@ -109,6 +111,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
       items={
         Array [
           Object {
+            "color": "jest-auto-snapshots String Fixture",
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           },
