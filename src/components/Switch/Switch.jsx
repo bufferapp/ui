@@ -23,14 +23,14 @@ const Switch = ({ label, id, disabled, handleSwitch, isOn }) => (
     </Wrapper>
   </Container>
 );
-  
+
 Switch.propTypes = {
   /** It adds a label to the left of the switch. */
   label: PropTypes.string.isRequired,
   /** The value for whether the switch is on or off */
   isOn: PropTypes.bool,
   /** The id for the label and input */
-  id: PropTypes.bool.isRequired,
+  id: PropTypes.string.isRequired,
   /** It removes pointer and changes it to readonly */
   disabled: PropTypes.bool,
   /** It changes the checked value of the switch */

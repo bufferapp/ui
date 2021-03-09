@@ -1,5 +1,26 @@
 # Changelog
 
+## [5.62.0] - 2021-03-09
+- Move some `dependencies` into `devDependencies` (https://github.com/bufferapp/ui/commit/df5d8e7c250a0533792452b3501dce0a77a61efe)
+
+## [5.61.0] - 2021-03-09
+- Add optional `color` prop to `items` passed into the `DropDownMenu` component.
+
+## [5.60.1] - 2021-03-04
+- fix icon script
+- generate new icons: Coupon, Card and Spam
+- remove padding in Simple Modal
+- fix Switch propType for id: change from bool to string
+
+## [5.59.0] - 2021-03-01
+- Add new simple modal. The other modal will be updated to use this scaffolding in the future
+
+## [5.58.4] - 2021-02-11
+- Add new 'Giveaway' icon.
+
+## [5.58.3] - 2021-02-10
+- Removes guides and pattern reference content. This has now been moved to our internal Design Wiki in Notion.
+
 ## [5.58.2] - 2021-01-26
 - Merges #271 (@hijuliancode) to fix border bug in disabled `Button`
 
