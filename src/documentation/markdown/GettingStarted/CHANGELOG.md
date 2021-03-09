@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.62.1] - 2021-03-09
+- Make the `loading` prop for the `Button` transient ([#284](https://github.com/bufferapp/ui/pull/284))
+
 ## [5.62.0] - 2021-03-09
 - Move some `dependencies` into `devDependencies` (https://github.com/bufferapp/ui/commit/df5d8e7c250a0533792452b3501dce0a77a61efe)
 
