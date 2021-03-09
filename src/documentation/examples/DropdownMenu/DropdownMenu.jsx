@@ -2,6 +2,8 @@ import React from 'react';
 import DropdownMenu from '@bufferapp/ui/DropdownMenu';
 import styled from 'styled-components';
 
+import Flash from '@bufferapp/ui/Icon/Icons/Flash';
+
 import {
   white,
   grayDark,
@@ -42,6 +44,13 @@ const menuItems = [
     title: 'Wishlist',
     onItemClick: () => console.info('Wishlist'),
     disabled: true,
+  },
+  {
+    id: '5',
+    title: 'Highlighted',
+    color: 'purple',
+    icon: <Flash color="purple" />,
+    onItemClick: () => console.info('Highlighted'),
   },
 ];
 
