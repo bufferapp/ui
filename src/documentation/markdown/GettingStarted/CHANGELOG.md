@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.62.1] - 2021-03-09
+## [5.62.2] - 2021-03-09
 - Make the `loading` prop for the `Button` transient ([#284](https://github.com/bufferapp/ui/pull/284))
 
 ## [5.62.0] - 2021-03-09
