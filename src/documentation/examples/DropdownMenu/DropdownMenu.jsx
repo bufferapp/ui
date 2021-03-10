@@ -4,10 +4,7 @@ import styled from 'styled-components';
 
 import Flash from '@bufferapp/ui/Icon/Icons/Flash';
 
-import {
-  white,
-  grayDark,
-} from '@bufferapp/ui/style/colors';
+import { white, grayDark } from '@bufferapp/ui/style/colors';
 
 const MenuItem = styled.a`
   display: flex;
@@ -48,7 +45,7 @@ const menuItems = [
   {
     id: '5',
     title: 'Highlighted',
-    color: 'purple',
+    colors: { title: 'purple', iconHover: 'red' },
     icon: <Flash color="purple" />,
     onItemClick: () => console.info('Highlighted'),
   },
@@ -64,7 +61,6 @@ const Navigation = styled.nav`
 
 /** DropdownMenu Example */
 export default function ExampleDropdownMenu() {
-
   return (
     <Navigation>
       <DropdownMenu

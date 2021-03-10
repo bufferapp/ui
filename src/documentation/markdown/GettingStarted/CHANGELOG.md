@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.63.0] - 2021-03-10
+- Changed the `color` prop to a `colors` prop on `items` passed into the `DropDownMenu` component. (#292)
+
 ## [5.62.3] - 2021-03-10
 - add z-index to the simple modal close button
 

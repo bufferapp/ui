@@ -48,13 +48,13 @@ export default class PopupMenu extends React.Component {
 
   isPopupOpen = () => this.props.isOpen;
 
-  hasSubItems = item => item.subItems && item.subItems.length > 0;
+  hasSubItems = (item) => item.subItems && item.subItems.length > 0;
 
-  isFirstItem = index => index === this.firstItem;
+  isFirstItem = (index) => index === this.firstItem;
 
-  isLastItem = index => index === this.lastItem;
+  isLastItem = (index) => index === this.lastItem;
 
-  setFocusToItem = index => {
+  setFocusToItem = (index) => {
     this.setState({ focusedItem: index });
   };
 
@@ -78,7 +78,7 @@ export default class PopupMenu extends React.Component {
     this.setFocusToItem(newIndex);
   };
 
-  handleKeydown = event => {
+  handleKeydown = (event) => {
     let flag = false;
     switch (event.keyCode) {
       case this.keyCode.DOWN:
@@ -107,7 +107,7 @@ export default class PopupMenu extends React.Component {
     }
   };
 
-  focusPopupToItem = index => {
+  focusPopupToItem = (index) => {
     this.popup.focus();
     this.setFocusToItem(index);
   };
@@ -128,7 +128,7 @@ export default class PopupMenu extends React.Component {
     }
   }
 
-  renderItems = items => {
+  renderItems = (items) => {
     const { focusedItem } = this.state;
 
     return items.map((item, index) => {
@@ -148,15 +148,17 @@ export default class PopupMenu extends React.Component {
         <OptionalWrapper
           key={`item-wrapper-${index}`}
           condition={hasSubItems || defaultTooltipMessage}
-          wrapper={children => (
+          wrapper={(children) => (
             <Tooltip
-              customLabel={(
-                <TooltipLabel
-                  maxItems={5}
-                  items={item.subItems}
-                  defaultMessage={defaultTooltipMessage}
-                />
-              )}
+              customLabel={
+                (
+                  <TooltipLabel
+                    maxItems={5}
+                    items={item.subItems}
+                    defaultMessage={defaultTooltipMessage}
+                  />
+                )
+              }
               position="left"
               verticalAlign="top"
             >
@@ -189,7 +191,7 @@ export default class PopupMenu extends React.Component {
 
     return (
       <PopupMenuStyled
-        ref={popup => (this.popup = popup)}
+        ref={(popup) => (this.popup = popup)}
         role="menu"
         aria-label={ariaLabelPopup}
         isOpen={isOpen}
@@ -197,7 +199,7 @@ export default class PopupMenu extends React.Component {
         horizontalOffset={horizontalOffset}
         onBlur={onBlur}
         tabIndex={this.state.tabIndex}
-        onKeyDown={ev => this.handleKeydown(ev)}
+        onKeyDown={(ev) => this.handleKeydown(ev)}
       >
         {this.renderItems(items)}
       </PopupMenuStyled>
@@ -232,7 +234,10 @@ PopupMenu.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
-      color: PropTypes.string,
+      colors: PropTypes.shape({
+        title: PropTypes.string,
+        iconHover: PropTypes.string,
+      }),
     })
   ).isRequired,
 };
