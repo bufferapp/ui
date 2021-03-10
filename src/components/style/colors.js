@@ -5,6 +5,7 @@ export const blueLight = '#6B81FF';
 export const blueLighter = '#ABB7FF';
 export const purple = '#9C2BFF';
 export const purpleDarker = '#3E1166';
+export const purpleLighter = '#D7AAFF';
 export const pink = '#D925AC';
 export const pinkLighter = '#F0A8DE';
 export const teal = '#00C8CF';
