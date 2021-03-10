@@ -153,7 +153,10 @@ DropdownMenu.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
-      color: PropTypes.string,
+      colors: PropTypes.shape({
+        title: PropTypes.string,
+        iconHover: PropTypes.string,
+      }),
     })
   ).isRequired,
 };
