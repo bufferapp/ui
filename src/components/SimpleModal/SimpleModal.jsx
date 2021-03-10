@@ -73,6 +73,7 @@ const CloseButton = styled.button`
   right: 16px;
   cursor: pointer;
   padding: 0;
+  z-index: 1;
 
   transition: transform 0.15s ease-out;
   svg {

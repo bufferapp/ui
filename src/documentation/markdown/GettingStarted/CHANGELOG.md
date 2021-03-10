@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.62.3] - 2021-03-10
+- add z-index to the simple modal close button
+
 ## [5.62.2] - 2021-03-09
 - Make the `loading` prop for the `Button` transient ([#284](https://github.com/bufferapp/ui/pull/284))
 
