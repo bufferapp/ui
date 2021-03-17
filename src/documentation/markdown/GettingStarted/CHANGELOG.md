@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.63.1] - 2021-03-17
+- Adjust styles to improve acessibility and consistency in inputs and textareas.
+- Add *className* to SidebarListItem.
+
 ## [5.63.0] - 2021-03-10
 - Changed the `color` prop to a `colors` prop on `items` passed into the `DropDownMenu` component. (#292)
 

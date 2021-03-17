@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import {
   redDark,
   gray,
+  grayDark,
   white,
   blue,
   grayLight,
@@ -66,6 +67,9 @@ export const StyledTextArea = styled.textarea`
     transition-property: border-width, border-color, box-shadow;
     transition-duration: 0.1s;
     transition-timing-function: ease-in;
+  }
+  &::placeholder {
+    color: ${grayDark};
   }
 `;
 

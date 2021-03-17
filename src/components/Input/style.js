@@ -62,7 +62,7 @@ export const InputStyled = styled.input`
   margin: 8px 0px;
   background: ${({ hasError }) => (hasError ? redLightest : white)};
   border-radius: 4px;
-  border: 1px solid ${({ hasError }) => (hasError ? redDark : grayLight)};
+  border: 1px solid ${({ hasError }) => (hasError ? redDark : gray)};
   box-shadow: 2px 2px 0 2px transparent;
   transition-property: border-width, border-color, box-shadow;
   transition-duration: 0.1s;
@@ -78,7 +78,7 @@ export const InputStyled = styled.input`
   ${({ prefix }) => (prefix ? `padding-left: ${prefix.paddingLeft};` : '')}
 
   &::placeholder {
-    color: ${gray};
+    color: ${grayDark};
   }
 
   &:focus {
@@ -98,7 +98,7 @@ export const InputStyled = styled.input`
     cursor: not-allowed;
 
     &::placeholder {
-      color: ${gray};
+      color: ${grayDark};
     }
   }
 `;

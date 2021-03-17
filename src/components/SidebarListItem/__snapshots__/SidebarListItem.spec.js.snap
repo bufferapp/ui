@@ -2,6 +2,7 @@
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
 <ForwardRef(styled.li)
+  className="jest-auto-snapshots String Fixture"
   hasUser={
     Object {
       "fallbackUrl": "jest-auto-snapshots String Fixture",
@@ -58,6 +59,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.li)
+  className="jest-auto-snapshots String Fixture"
   hasUser={
     Object {
       "fallbackUrl": "jest-auto-snapshots String Fixture",
@@ -114,6 +116,7 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.li)
+  className={null}
   hasUser={null}
   onClick={[Function]}
   selected={null}
