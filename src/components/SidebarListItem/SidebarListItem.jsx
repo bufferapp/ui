@@ -21,8 +21,14 @@ const SidebarListItem = ({
   badgeIcon,
   selected,
   user,
+  className,
 }) => (
-  <ItemStyled onClick={() => onItemClick()} hasUser={user} selected={selected}>
+  <ItemStyled
+    onClick={() => onItemClick()}
+    hasUser={user}
+    selected={selected}
+    className={className}
+  >
     {icon && <IconContainer selected={selected}>{icon}</IconContainer>}
     <LabelContainer>
       {user ? (
@@ -54,13 +60,17 @@ const SidebarListItem = ({
     </LabelContainer>
 
     {!badgeIcon && badges && <Badge selected={selected}>{badges}</Badge>}
-    {badgeIcon && <BadgeIconContainer selected={selected}>{badgeIcon}</BadgeIconContainer>}
+    {badgeIcon && (
+      <BadgeIconContainer selected={selected}>{badgeIcon}</BadgeIconContainer>
+    )}
   </ItemStyled>
 );
 
 SidebarListItem.propTypes = {
   /** The id of the element */
   id: PropTypes.string,
+  /** The className of the element */
+  className: PropTypes.string,
   /** What the label will say */
   title: PropTypes.string.isRequired,
   /** An icon either from this library or a node of your choice */
@@ -80,7 +90,14 @@ SidebarListItem.propTypes = {
     handle: PropTypes.string,
     profileImageUrl: PropTypes.string,
     fallbackUrl: PropTypes.string,
-    network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest']),
+    network: PropTypes.oneOf([
+      'facebook',
+      'twitter',
+      'instagram',
+      'linkedin',
+      'google',
+      'pinterest',
+    ]),
   }),
 };
 
@@ -91,6 +108,7 @@ SidebarListItem.defaultProps = {
   badges: null,
   selected: null,
   user: null,
+  className: null,
 };
 
 export default SidebarListItem;
