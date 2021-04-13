@@ -35,8 +35,8 @@ const Container = styled.div`
   display: flex;
   height: 100%;
   align-items: center;
+  justify-content: center;
   position: fixed;
-  padding-top: 80px;
   box-sizing: border-box;
   width: 100%;
   z-index: 9999;
