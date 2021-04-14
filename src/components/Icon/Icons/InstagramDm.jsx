@@ -14,7 +14,7 @@ const InstagramDmIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 InstagramDmIcon.displayName = 'InstagramDmIcon';
 

@@ -14,7 +14,7 @@ const PostIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 PostIcon.displayName = 'PostIcon';
 

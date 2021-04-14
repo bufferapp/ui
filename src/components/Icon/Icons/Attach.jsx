@@ -14,7 +14,7 @@ const AttachIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 AttachIcon.displayName = 'AttachIcon';
 

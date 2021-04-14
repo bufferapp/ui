@@ -14,7 +14,7 @@ const PercentageUpIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 PercentageUpIcon.displayName = 'PercentageUpIcon';
 

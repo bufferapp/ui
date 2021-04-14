@@ -14,7 +14,7 @@ const LocationIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 LocationIcon.displayName = 'LocationIcon';
 

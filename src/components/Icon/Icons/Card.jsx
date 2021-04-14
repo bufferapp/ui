@@ -14,7 +14,7 @@ const CardIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 CardIcon.displayName = 'CardIcon';
 

@@ -14,7 +14,7 @@ const PercentageDownIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 PercentageDownIcon.displayName = 'PercentageDownIcon';
 

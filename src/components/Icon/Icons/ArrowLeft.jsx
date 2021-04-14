@@ -10,7 +10,7 @@ const ArrowLeftIcon = createIconComponent({
     <g>
       <path d="M9 4.174a1 1 0 00-1.65-.759L2.885 7.241a1 1 0 000 1.518l4.463 3.826A1 1 0 009 11.825V9h4a1 1 0 100-2H9V4.174z" />
     </g>
-  )
+  ),
 });
 ArrowLeftIcon.displayName = 'ArrowLeftIcon';
 

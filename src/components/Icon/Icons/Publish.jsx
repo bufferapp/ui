@@ -14,7 +14,7 @@ const PublishIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 PublishIcon.displayName = 'PublishIcon';
 

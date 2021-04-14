@@ -14,7 +14,7 @@ const WhatsappIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 WhatsappIcon.displayName = 'WhatsappIcon';
 

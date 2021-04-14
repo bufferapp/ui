@@ -14,7 +14,7 @@ const ChartLineIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 ChartLineIcon.displayName = 'ChartLineIcon';
 

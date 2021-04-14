@@ -14,7 +14,7 @@ const FrequencyIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 FrequencyIcon.displayName = 'FrequencyIcon';
 

@@ -14,7 +14,7 @@ const InstagramLikeIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 InstagramLikeIcon.displayName = 'InstagramLikeIcon';
 

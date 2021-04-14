@@ -15,7 +15,7 @@ const EmojiIcon = createIconComponent({
       />
       <path d="M12 8.015v-.03.03zM11.465 10h-6.93A3.998 3.998 0 008 12c1.48 0 2.773-.804 3.465-2zM6 7a1 1 0 11-2 0 1 1 0 012 0zm6 0a1 1 0 11-2 0 1 1 0 012 0z" />
     </g>
-  )
+  ),
 });
 EmojiIcon.displayName = 'EmojiIcon';
 
