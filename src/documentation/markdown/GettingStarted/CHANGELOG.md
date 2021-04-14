@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.64.0] - 2021-04-14
+- Add new 'Building' icon.
+
 ## [5.63.1] - 2021-03-17
 - Adjust styles to improve acessibility and consistency in inputs and textareas.
 - Add *className* to SidebarListItem.
