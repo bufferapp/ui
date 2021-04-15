@@ -8,6 +8,7 @@ export Attach from './Icons/Attach';
 export Audience from './Icons/Audience';
 export Bell from './Icons/Bell';
 export Buffer from './Icons/Buffer';
+export Building from './Icons/Building';
 export Calendar from './Icons/Calendar';
 export Camera from './Icons/Camera';
 export Card from './Icons/Card';

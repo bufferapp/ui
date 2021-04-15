@@ -15,7 +15,7 @@ const CameraIcon = createIconComponent({
       />
       <path d="M12 5H4a4 4 0 118 0z" />
     </g>
-  )
+  ),
 });
 CameraIcon.displayName = 'CameraIcon';
 

@@ -14,7 +14,7 @@ const LinkedInIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 LinkedInIcon.displayName = 'LinkedInIcon';
 

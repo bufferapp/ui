@@ -14,7 +14,7 @@ const CalendarIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 CalendarIcon.displayName = 'CalendarIcon';
 

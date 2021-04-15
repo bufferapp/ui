@@ -14,7 +14,7 @@ const GearIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 GearIcon.displayName = 'GearIcon';
 

@@ -19,7 +19,7 @@ const AnalyzeIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 AnalyzeIcon.displayName = 'AnalyzeIcon';
 

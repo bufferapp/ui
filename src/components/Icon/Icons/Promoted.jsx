@@ -19,7 +19,7 @@ const PromotedIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 PromotedIcon.displayName = 'PromotedIcon';
 

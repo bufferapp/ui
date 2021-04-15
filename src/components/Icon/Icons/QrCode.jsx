@@ -27,7 +27,7 @@ const QrCodeIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 QrCodeIcon.displayName = 'QrCodeIcon';
 

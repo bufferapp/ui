@@ -15,7 +15,7 @@ const ClockIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 ClockIcon.displayName = 'ClockIcon';
 

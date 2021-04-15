@@ -14,7 +14,7 @@ const YoutubeIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 YoutubeIcon.displayName = 'YoutubeIcon';
 

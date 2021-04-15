@@ -14,7 +14,7 @@ const InboxIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 InboxIcon.displayName = 'InboxIcon';
 

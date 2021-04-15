@@ -15,7 +15,7 @@ const GiveawayIcon = createIconComponent({
       />
       <path d="M2.5 4.714a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-3zm0 6a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-3zm7-7a1 1 0 00-1 1v3a1 1 0 001 1h3a1 1 0 001-1v-3a1 1 0 00-1-1h-3zm-1 7a1 1 0 011-1h3a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-3z" />
     </g>
-  )
+  ),
 });
 GiveawayIcon.displayName = 'GiveawayIcon';
 

@@ -14,7 +14,7 @@ const TwitterIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 TwitterIcon.displayName = 'TwitterIcon';
 

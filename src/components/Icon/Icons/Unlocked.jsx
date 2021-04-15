@@ -14,7 +14,7 @@ const UnlockedIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 UnlockedIcon.displayName = 'UnlockedIcon';
 

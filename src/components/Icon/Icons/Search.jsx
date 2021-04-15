@@ -15,7 +15,7 @@ const SearchIcon = createIconComponent({
       />
       <path d="M5.95 9l1.414 1.414-4.243 4.243a1 1 0 01-1.414-1.414L5.95 9z" />
     </g>
-  )
+  ),
 });
 SearchIcon.displayName = 'SearchIcon';
 

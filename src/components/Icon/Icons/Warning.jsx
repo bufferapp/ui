@@ -14,7 +14,7 @@ const WarningIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 WarningIcon.displayName = 'WarningIcon';
 

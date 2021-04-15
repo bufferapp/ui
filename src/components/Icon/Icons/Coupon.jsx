@@ -14,7 +14,7 @@ const CouponIcon = createIconComponent({
         clipRule="evenodd"
       />
     </g>
-  )
+  ),
 });
 CouponIcon.displayName = 'CouponIcon';
 

@@ -30,7 +30,7 @@ const LoadIcon = createIconComponent({
         </radialGradient>
       </defs>
     </g>
-  )
+  ),
 });
 LoadIcon.displayName = 'LoadIcon';
 

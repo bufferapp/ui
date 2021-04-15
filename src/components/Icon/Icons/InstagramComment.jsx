@@ -10,7 +10,7 @@ const InstagramCommentIcon = createIconComponent({
     <g>
       <path d="M11.477 12.992a6.5 6.5 0 112.015-2.015L14.5 14l-3.023-1.008z" />
     </g>
-  )
+  ),
 });
 InstagramCommentIcon.displayName = 'InstagramCommentIcon';
 
