@@ -6,13 +6,16 @@ import * as styles from './style';
 
 const StyledIcon = styled.svg`
   ${styles.base};
-  ${props => styles[props.size]};
-  vertical-align: ${props =>
+  ${(props) => styles[props.size]};
+  vertical-align: ${(props) =>
     props.verticalAlign ? props.verticalAlign : null};
 `;
 
 const Icon = ({ children, ...props }) => (
-  <StyledIcon {...props}>{children}</StyledIcon>
+  <StyledIcon {...props}>
+    <title>{props.title}</title>
+    {children}
+  </StyledIcon>
 );
 
 Icon.propTypes = {
@@ -21,11 +24,15 @@ Icon.propTypes = {
 
   /** The `vertical-align` CSS value */
   verticalAlign: PropTypes.string,
+
+  /** The title for better accessibility */
+  title: PropTypes.string,
 };
 
 Icon.defaultProps = {
   size: 'medium',
   verticalAlign: '',
+  title: '',
 };
 
 export default Icon;
