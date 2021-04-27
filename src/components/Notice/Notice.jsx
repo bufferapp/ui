@@ -28,7 +28,7 @@ const NoticeWrapper = styled.div`
   background: ${props => colorMap[props.type].background};
   border-radius: ${borderRadius};
   font-size: ${fontSize};
-  padding: 16px 16px;
+  padding: 16px ${({ dismiss }) => dismiss ? '36px' : '16px' } 16px 16px;
   display: flex;
   justify-content: flex-start;
   position: relative;
@@ -64,9 +64,9 @@ function Notice({ children, dismiss, type }) {
       justify="flex-end"
       stageInAnimation={stageInRight}
       stageOutAnimation={stageOutRight}
-      duration={250}
+      duration={300}
     >
-      <NoticeWrapper type={type}>
+      <NoticeWrapper type={type} dismiss={dismiss}>
         {type === 'warning' && <WarningIcon />}
         {children}
         {dismiss && (

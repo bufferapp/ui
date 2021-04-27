@@ -29,7 +29,7 @@ export const stageOutCenter = keyframes`
 export const stageInRight = keyframes`
   0% {
     transform: translateX(200px);
-    opacity: .5;
+    opacity: 0;
   }
 
   100% {
@@ -46,6 +46,6 @@ export const stageOutRight = keyframes`
 
   100% {
     transform: translateX(200px);
-    opacity: .5;
+    opacity: 0;
   }
 `;
