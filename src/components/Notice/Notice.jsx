@@ -6,6 +6,8 @@ import { fontSize } from '../style/fonts';
 import Warning from '../Icon/Icons/Warning';
 import Cross from '../Icon/Icons/Cross';
 import { grayDark, grayLighter, grayDarker } from '../style/colors';
+import AnimationWrapper from '../AnimationWrapper';
+import { stageInRight, stageOutRight } from '../style/animations';
 
 const colorMap = {
   warning: {
@@ -58,15 +60,22 @@ const CloseButton = styled.button`
 
 function Notice({ children, dismiss, type }) {
   return (
-    <NoticeWrapper type={type}>
-      {type === 'warning' && <WarningIcon />}
-      {children}
-      {dismiss && (
-        <CloseButton type={type} onClick={() => dismiss()}>
-          <Cross />
-        </CloseButton>
-      )}
-    </NoticeWrapper>
+    <AnimationWrapper
+      justify="flex-end"
+      stageInAnimation={stageInRight}
+      stageOutAnimation={stageOutRight}
+      duration={250}
+    >
+      <NoticeWrapper type={type}>
+        {type === 'warning' && <WarningIcon />}
+        {children}
+        {dismiss && (
+          <CloseButton type={type} onClick={() => dismiss()}>
+            <Cross />
+          </CloseButton>
+        )}
+      </NoticeWrapper>
+    </AnimationWrapper>
   );
 }
 

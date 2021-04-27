@@ -5,9 +5,10 @@ import { easeOutQuart } from '../style/animations';
 
 const AnimationContainer = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: ${({ align }) => align}}
+  justify-content: ${({ justify }) => justify}}
   outline: none;
+  width: 100%;
 
   &.fadeIn {
     animation: ${({ duration }) => `${duration}ms`} ${({ stageInAnimation }) => stageInAnimation} ${({ easing }) => easing};
@@ -19,9 +20,11 @@ const AnimationContainer = styled.div`
 `;
 
 const AnimationWrapper = ({
+  align,
   children,
   duration,
   easing,
+  justify,
   stageInAnimation,
   stageOutAnimation
 }) => {
@@ -40,8 +43,10 @@ const AnimationWrapper = ({
 
   return (
     <AnimationContainer
+      align={align}
       duration={duration}
       easing={easing}
+      justify={justify}
       stageInAnimation={stageInAnimation}
       stageOutAnimation={stageOutAnimation}
       className={hasChanged ? 'fadeOut' : 'fadeIn'}
@@ -52,15 +57,19 @@ const AnimationWrapper = ({
 };
 
 AnimationWrapper.propTypes = {
+  align: PropTypes.string,
   children: PropTypes.node.isRequired,
   duration: PropTypes.number,
+  justify: PropTypes.string,
   easing: PropTypes.func,
   stageInAnimation: PropTypes.func.isRequired,
   stageOutAnimation: PropTypes.func.isRequired,
 };
 
 AnimationWrapper.defaultProps = {
+  align: 'center',
   duration: 300,
+  justify: 'center',
   easing: easeOutQuart,
 };
 

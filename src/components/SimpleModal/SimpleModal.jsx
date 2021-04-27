@@ -2,9 +2,9 @@ import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { Cross } from '../Icon';
-import AnimationWrapper from '../AnimationWrapper';
 import { white, red } from '../style/colors';
-import { easeOutQuart, stageInAnimation, stageOutAnimation } from '../style/animations';
+import AnimationWrapper from '../AnimationWrapper';
+import { easeOutQuart, stageInCenter, stageOutCenter } from '../style/animations';
 
 const ESCAPE_KEY = 27;
 const TAB_KEY = 9;
@@ -121,7 +121,7 @@ const SimpleModal = ({ children, closeAction }) => {
 
   return (
     <Container ref={containerRef} role="dialog" aria-modal="true">
-      <AnimationWrapper stageInAnimation={stageInAnimation} stageOutAnimation={stageOutAnimation} duration={450}>
+      <AnimationWrapper stageInAnimation={stageInCenter} stageOutAnimation={stageOutCenter} duration={450}>
         <Modal
           ref={modalRef}
           tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
