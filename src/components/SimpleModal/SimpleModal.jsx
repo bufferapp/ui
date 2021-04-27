@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { Cross } from '../Icon';
@@ -18,7 +18,7 @@ const fadeIn = keyframes`
   }
 `;
 
-const stagingAnimation = keyframes`
+const stageInAnimation = keyframes`
   0% {
     transform: scale(.5);
     opacity: 0;
@@ -27,6 +27,18 @@ const stagingAnimation = keyframes`
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+`;
+
+const stageOutAnimation = keyframes`
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(.5);
+    opacity: 0;
   }
 `;
 
@@ -62,7 +74,13 @@ const Modal = styled.div`
   justify-content: center;
   outline: none;
 
-  animation: 300ms ${stagingAnimation} ${easeOutQuart};
+  &.fadeIn {
+    animation: 300ms ${stageInAnimation} ${easeOutQuart};
+  }
+
+  &.fadeOut {
+    animation: 300ms ${stageOutAnimation} ${easeOutQuart};
+  }
 `;
 
 const CloseButton = styled.button`
@@ -89,6 +107,9 @@ const CloseButton = styled.button`
 `;
 
 const SimpleModal = ({ children, closeAction }) => {
+  const [modalCotent, setModalCotent] = useState(children);
+  const [hasChanged, setHasChanged] = useState(false);
+
   const modalRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -132,11 +153,22 @@ const SimpleModal = ({ children, closeAction }) => {
     return () => document.removeEventListener('keydown', keyListener);
   }, []);
 
+  useEffect(() => {
+    if (children !== modalCotent) {
+      setHasChanged(true);
+    }
+    setTimeout(() => {
+      setModalCotent(children);
+      setHasChanged(false);
+    }, 300)
+  }, [children])
+
   return (
     <Container ref={containerRef} role="dialog" aria-modal="true">
       <Modal
         ref={modalRef}
         tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
+        className={hasChanged ? 'fadeOut' : 'fadeIn'}
       >
         <CloseButton
           onClick={() => {
@@ -145,7 +177,7 @@ const SimpleModal = ({ children, closeAction }) => {
         >
           <Cross />
         </CloseButton>
-        {children}
+        {modalCotent}
       </Modal>
     </Container>
   );
