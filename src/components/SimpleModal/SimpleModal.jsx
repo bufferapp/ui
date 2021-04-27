@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { Cross } from '../Icon';
@@ -78,6 +78,7 @@ const CloseButton = styled.button`
 const SimpleModal = ({ children, closeAction }) => {
   const modalRef = useRef(null);
   const containerRef = useRef(null);
+  const [dismissing, setDismissing] = useState(false);
 
   const handleTabKey = e => {
     const focusableModalElements = modalRef.current.querySelectorAll(
@@ -99,13 +100,13 @@ const SimpleModal = ({ children, closeAction }) => {
   };
 
   const keyListenersMap = new Map([
-    [ESCAPE_KEY, () => closeAction()],
+    [ESCAPE_KEY, () => setDismissing(true)],
     [TAB_KEY, handleTabKey],
   ]);
 
   const clickToClose = e => {
     if (e.target !== containerRef.current) return;
-    closeAction();
+    setDismissing(true);
   };
 
   useEffect(() => {
@@ -121,16 +122,18 @@ const SimpleModal = ({ children, closeAction }) => {
 
   return (
     <Container ref={containerRef} role="dialog" aria-modal="true">
-      <AnimationWrapper stageInAnimation={stageInCenter} stageOutAnimation={stageOutCenter} duration={450}>
+      <AnimationWrapper
+        stageInAnimation={stageInCenter}
+        stageOutAnimation={stageOutCenter}
+        duration={350}
+        dismissing={dismissing}
+        onDismiss={closeAction}
+      >
         <Modal
           ref={modalRef}
           tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
         >
-          <CloseButton
-            onClick={() => {
-              closeAction();
-            }}
-          >
+          <CloseButton onClick={() => setDismissing(true)}>
             <Cross />
           </CloseButton>
           {children}

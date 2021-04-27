@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { borderRadius } from '../style/borders';
@@ -59,18 +59,25 @@ const CloseButton = styled.button`
 `;
 
 function Notice({ children, dismiss, type }) {
+  const [dismissing, setDismissing] = useState(false);
+
   return (
     <AnimationWrapper
       justify="flex-end"
       stageInAnimation={stageInRight}
       stageOutAnimation={stageOutRight}
       duration={300}
+      dismissing={dismissing}
+      onDismiss={dismiss}
     >
       <NoticeWrapper type={type} dismiss={dismiss}>
         {type === 'warning' && <WarningIcon />}
         {children}
         {dismiss && (
-          <CloseButton type={type} onClick={() => dismiss()}>
+          <CloseButton
+            type={type}
+            onClick={() => setDismissing(true)}
+          >
             <Cross />
           </CloseButton>
         )}

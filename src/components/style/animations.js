@@ -5,7 +5,7 @@ export const easeOutQuart = 'cubic-bezier(0.25, 1, 0.5, 1)';
 export const stageInCenter = keyframes`
   0% {
     transform: scale(.5);
-    opacity: .5;
+    opacity: 0;
   }
 
   100% {
@@ -22,7 +22,7 @@ export const stageOutCenter = keyframes`
 
   100% {
     transform: scale(.5);
-    opacity: .5;
+    opacity: 0;
   }
 `;
 
