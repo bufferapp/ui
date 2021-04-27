@@ -5,15 +5,66 @@ exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only req
   aria-modal="true"
   role="dialog"
 >
-  <ForwardRef(styled.div)
-    tabIndex="0"
+  <AnimationWrapper
+    duration={450}
+    easing="cubic-bezier(0.25, 1, 0.5, 1)"
+    stageInAnimation={
+      Keyframes {
+        "id": "sc-keyframes-bQtjaF",
+        "inject": [Function],
+        "name": "bQtjaF",
+        "stringifyArgs": Array [
+          "
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+",
+          "bQtjaF",
+          "@keyframes",
+        ],
+        "toString": [Function],
+      }
+    }
+    stageOutAnimation={
+      Keyframes {
+        "id": "sc-keyframes-hsHpqF",
+        "inject": [Function],
+        "name": "hsHpqF",
+        "stringifyArgs": Array [
+          "
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+",
+          "hsHpqF",
+          "@keyframes",
+        ],
+        "toString": [Function],
+      }
+    }
   >
-    <ForwardRef(styled.button)
-      onClick={[Function]}
+    <ForwardRef(styled.div)
+      tabIndex="0"
     >
-      <CrossIcon />
-    </ForwardRef(styled.button)>
-    <NodeFixture />
-  </ForwardRef(styled.div)>
+      <ForwardRef(styled.button)
+        onClick={[Function]}
+      >
+        <CrossIcon />
+      </ForwardRef(styled.button)>
+      <NodeFixture />
+    </ForwardRef(styled.div)>
+  </AnimationWrapper>
 </ForwardRef(styled.div)>
 `;

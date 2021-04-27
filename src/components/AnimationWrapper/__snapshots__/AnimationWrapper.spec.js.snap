@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.div)
+  className="fadeIn"
+  duration={1}
+  easing={[MockFunction]}
+  stageInAnimation={[MockFunction]}
+  stageOutAnimation={[MockFunction]}
+>
+  <NodeFixture />
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.div)
+  className="fadeIn"
+  duration={300}
+  easing="cubic-bezier(0.25, 1, 0.5, 1)"
+  stageInAnimation={[MockFunction]}
+  stageOutAnimation={[MockFunction]}
+>
+  <NodeFixture />
+</ForwardRef(styled.div)>
+`;

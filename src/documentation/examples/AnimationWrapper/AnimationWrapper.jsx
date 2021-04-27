@@ -6,7 +6,7 @@ import { keyframes } from 'styled-components';
 const stageInAnimation = keyframes`
   0% {
     transform: scale(.5);
-    opacity: 0;
+    opacity: .5;
   }
 
   100% {
@@ -23,7 +23,7 @@ const stageOutAnimation = keyframes`
 
   100% {
     transform: scale(.5);
-    opacity: 0;
+    opacity: .5;
   }
 `;
 
