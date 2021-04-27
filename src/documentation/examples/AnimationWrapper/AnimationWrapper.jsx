@@ -1,32 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import AnimationWrapper from '@bufferapp/ui/AnimationWrapper';
 import Text from '@bufferapp/ui/Text';
-import { keyframes } from 'styled-components';
 
-const stageInAnimation = keyframes`
-  0% {
-    transform: scale(.5);
-    opacity: .5;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-`;
-
-const stageOutAnimation = keyframes`
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(.5);
-    opacity: .5;
-  }
-`;
-
+import { stageInAnimation, stageOutAnimation } from '@bufferapp/ui/style/animations';
 
 /** AnimationWrapper Example */
 export default function ExampleSimpleModal() {

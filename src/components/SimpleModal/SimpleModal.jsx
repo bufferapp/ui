@@ -4,7 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { Cross } from '../Icon';
 import AnimationWrapper from '../AnimationWrapper';
 import { white, red } from '../style/colors';
-import { easeOutQuart } from '../style/animations';
+import { easeOutQuart, stageInAnimation, stageOutAnimation } from '../style/animations';
 
 const ESCAPE_KEY = 27;
 const TAB_KEY = 9;
@@ -16,30 +16,6 @@ const fadeIn = keyframes`
 
   100% {
     opacity: 1;
-  }
-`;
-
-const stageInAnimation = keyframes`
-  0% {
-    transform: scale(.5);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-`;
-
-const stageOutAnimation = keyframes`
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-
-  100% {
-    transform: scale(.5);
-    opacity: 0;
   }
 `;
 
