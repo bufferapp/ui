@@ -1,7 +1,8 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { Cross } from '../Icon';
+import AnimationWrapper from '../AnimationWrapper';
 import { white, red } from '../style/colors';
 import { easeOutQuart } from '../style/animations';
 
@@ -73,14 +74,6 @@ const Modal = styled.div`
   align-items: center;
   justify-content: center;
   outline: none;
-
-  &.fadeIn {
-    animation: 300ms ${stageInAnimation} ${easeOutQuart};
-  }
-
-  &.fadeOut {
-    animation: 300ms ${stageOutAnimation} ${easeOutQuart};
-  }
 `;
 
 const CloseButton = styled.button`
@@ -107,9 +100,6 @@ const CloseButton = styled.button`
 `;
 
 const SimpleModal = ({ children, closeAction }) => {
-  const [modalCotent, setModalCotent] = useState(children);
-  const [hasChanged, setHasChanged] = useState(false);
-
   const modalRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -153,32 +143,23 @@ const SimpleModal = ({ children, closeAction }) => {
     return () => document.removeEventListener('keydown', keyListener);
   }, []);
 
-  useEffect(() => {
-    if (children !== modalCotent) {
-      setHasChanged(true);
-    }
-    setTimeout(() => {
-      setModalCotent(children);
-      setHasChanged(false);
-    }, 300)
-  }, [children])
-
   return (
     <Container ref={containerRef} role="dialog" aria-modal="true">
-      <Modal
-        ref={modalRef}
-        tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
-        className={hasChanged ? 'fadeOut' : 'fadeIn'}
-      >
-        <CloseButton
-          onClick={() => {
-            closeAction();
-          }}
+      <AnimationWrapper stageInAnimation={stageInAnimation} stageOutAnimation={stageOutAnimation} duration={450}>
+        <Modal
+          ref={modalRef}
+          tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
         >
-          <Cross />
-        </CloseButton>
-        {modalCotent}
-      </Modal>
+          <CloseButton
+            onClick={() => {
+              closeAction();
+            }}
+          >
+            <Cross />
+          </CloseButton>
+          {children}
+        </Modal>
+      </AnimationWrapper>
     </Container>
   );
 };

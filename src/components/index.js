@@ -21,3 +21,4 @@ export { default as Switch } from './Switch';
 export { default as Notice } from './Notice';
 export { default as States } from './States';
 export { default as SimpleModal } from './SimpleModal';
+export { default as AnimationWrapper } from './AnimationWrapper';
