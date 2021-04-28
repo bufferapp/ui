@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import AnimationWrapper from '@bufferapp/ui/AnimationWrapper';
+import { useAnimation } from '@bufferapp/ui/AnimationWrapper';
 import Text from '@bufferapp/ui/Text';
 
-import { stageInCenter, stageOutCenter } from '@bufferapp/ui/style/animations';
+import { stageInTop, stageOutRight } from '@bufferapp/ui/style/animations';
 
-/** AnimationWrapper Example */
+/** useAnimation hook example */
 export default function ExampleSimpleModal() {
   const [changed, setChanged] = useState(false);
 
@@ -14,9 +14,15 @@ export default function ExampleSimpleModal() {
     }, 2000)
   }, [changed]);
 
+  const { AnimationWrapper, animationProps } = useAnimation({
+    stageInAnimation: stageInTop,
+    stageOutAnimation: stageOutRight,
+    duration: 450,
+  })
+
   return (
     <div>
-      <AnimationWrapper stageInAnimation={stageInCenter} stageOutAnimation={stageOutCenter} duration={450}>
+      <AnimationWrapper {...animationProps}>
         {!changed && (
           <div style={{ width: '300px', padding: '30px', background: 'pink' }}>
             <Text type="p">
