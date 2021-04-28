@@ -1,10 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed all props 1`] = `
+exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when boolean prop "dismissing" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  align="jest-auto-snapshots String Fixture"
   className="fadeIn"
   duration={1}
   easing={[MockFunction]}
+  justify="jest-auto-snapshots String Fixture"
+  stageInAnimation={[MockFunction]}
+  stageOutAnimation={[MockFunction]}
+>
+  <NodeFixture />
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.div)
+  align="jest-auto-snapshots String Fixture"
+  className="fadeOut"
+  duration={1}
+  easing={[MockFunction]}
+  justify="jest-auto-snapshots String Fixture"
   stageInAnimation={[MockFunction]}
   stageOutAnimation={[MockFunction]}
 >
@@ -14,9 +30,11 @@ exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed all
 
 exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)
+  align="center"
   className="fadeIn"
   duration={300}
   easing="cubic-bezier(0.25, 1, 0.5, 1)"
+  justify="center"
   stageInAnimation={[MockFunction]}
   stageOutAnimation={[MockFunction]}
 >

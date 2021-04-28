@@ -6,8 +6,12 @@ exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only req
   role="dialog"
 >
   <AnimationWrapper
-    duration={450}
+    align="center"
+    dismissing={false}
+    duration={350}
     easing="cubic-bezier(0.25, 1, 0.5, 1)"
+    justify="center"
+    onDismiss={[MockFunction]}
     stageInAnimation={
       Keyframes {
         "id": "sc-keyframes-bQtjaF",
