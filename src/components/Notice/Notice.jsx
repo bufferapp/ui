@@ -7,7 +7,7 @@ import Warning from '../Icon/Icons/Warning';
 import Cross from '../Icon/Icons/Cross';
 import { grayDark, grayLighter, grayDarker } from '../style/colors';
 import AnimationWrapper from '../AnimationWrapper';
-import { stageInRight, stageOutRight } from '../style/animations';
+import { stageInRight, fadeOut } from '../style/animations';
 
 const colorMap = {
   warning: {
@@ -65,7 +65,7 @@ function Notice({ children, dismiss, type }) {
     <AnimationWrapper
       justify="flex-end"
       stageInAnimation={stageInRight}
-      stageOutAnimation={stageOutRight}
+      stageOutAnimation={fadeOut}
       duration={300}
       dismissing={dismissing}
       onDismiss={dismiss}

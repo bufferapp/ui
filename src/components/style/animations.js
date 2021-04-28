@@ -49,3 +49,27 @@ export const stageOutRight = keyframes`
     opacity: 0;
   }
 `;
+
+export const stageInTop = keyframes`
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+export const fadeOut = keyframes`
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.05) translateY(-10px);
+    opacity: 0;
+  }
+`;
