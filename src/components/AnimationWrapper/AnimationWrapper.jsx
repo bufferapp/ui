@@ -95,5 +95,4 @@ AnimationWrapper.defaultProps = {
   onDismiss: () => {},
 };
 
-
 export default AnimationWrapper;

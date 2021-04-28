@@ -8,7 +8,7 @@ exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only req
   <AnimationWrapper
     align="center"
     dismissing={false}
-    duration={350}
+    duration={400}
     easing="cubic-bezier(0.25, 1, 0.5, 1)"
     justify="center"
     onDismiss={[MockFunction]}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { borderRadius } from '../style/borders';
@@ -6,7 +6,7 @@ import { fontSize } from '../style/fonts';
 import Warning from '../Icon/Icons/Warning';
 import Cross from '../Icon/Icons/Cross';
 import { grayDark, grayLighter, grayDarker } from '../style/colors';
-import AnimationWrapper from '../AnimationWrapper';
+import { useAnimation } from '../AnimationWrapper';
 import { stageInRight, fadeOut } from '../style/animations';
 
 const colorMap = {
@@ -59,24 +59,22 @@ const CloseButton = styled.button`
 `;
 
 function Notice({ children, dismiss, type }) {
-  const [dismissing, setDismissing] = useState(false);
+  const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
+    justify: 'flex-end',
+    stageInAnimation: stageInRight,
+    stageOutAnimation: fadeOut,
+    onDismiss: dismiss,
+  })
 
   return (
-    <AnimationWrapper
-      justify="flex-end"
-      stageInAnimation={stageInRight}
-      stageOutAnimation={fadeOut}
-      duration={300}
-      dismissing={dismissing}
-      onDismiss={dismiss}
-    >
+    <AnimationWrapper {...animationProps}>
       <NoticeWrapper type={type} dismiss={dismiss}>
         {type === 'warning' && <WarningIcon />}
         {children}
         {dismiss && (
           <CloseButton
             type={type}
-            onClick={() => setDismissing(true)}
+            onClick={() => dismissAnimationWrapper()}
           >
             <Cross />
           </CloseButton>

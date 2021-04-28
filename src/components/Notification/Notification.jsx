@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import {
   Container,
@@ -8,7 +8,7 @@ import {
   ButtonsRow,
   ButtonStyled,
 } from './style';
-import AnimationWrapper from '../AnimationWrapper';
+import { useAnimation } from '../AnimationWrapper';
 import { stageInTop, fadeOut } from '../style/animations';
 
 function Notification({
@@ -18,21 +18,19 @@ function Notification({
   action,
   secondaryAction,
 }) {
-  const [dismissing, setDismissing] = useState(false);
+  const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
+    justify: 'flex-end',
+    stageInAnimation: stageInTop,
+    stageOutAnimation: fadeOut,
+    onDismiss: onClose,
+  })
 
   return (
-    <AnimationWrapper
-      justify="flex-end"
-      stageInAnimation={stageInTop}
-      stageOutAnimation={fadeOut}
-      duration={300}
-      dismissing={dismissing}
-      onDismiss={onClose}
-    >
+    <AnimationWrapper {...animationProps}>
       <Container>
         <TextRow>
           <Text>{text}</Text>
-          <Icon onClick={() => setDismissing(true)} />
+          <Icon onClick={() => dismissAnimationWrapper()} />
         </TextRow>
         {type === 'action' && (
           <ButtonsRow>
