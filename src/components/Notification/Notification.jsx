@@ -8,35 +8,47 @@ import {
   ButtonsRow,
   ButtonStyled,
 } from './style';
+import { useAnimation } from '../AnimationWrapper';
+import { stageInTop, fadeOut } from '../style/animations';
 
-const Notification = ({
+function Notification({
   text,
   onClose,
   type,
   action,
   secondaryAction,
-}) => (
-  <Container>
-    <TextRow>
-      <Text>{text}</Text>
-      <Icon onClick={onClose} />
-    </TextRow>
-    {type === 'action' && (
-      <ButtonsRow>
-        {action && (
-          <ButtonStyled onClick={action.callback} label={action.label} type="text" />
+}) {
+  const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
+    justify: 'flex-end',
+    stageInAnimation: stageInTop,
+    stageOutAnimation: fadeOut,
+    onDismiss: onClose,
+  })
+
+  return (
+    <AnimationWrapper {...animationProps}>
+      <Container>
+        <TextRow>
+          <Text>{text}</Text>
+          <Icon onClick={() => dismissAnimationWrapper()} />
+        </TextRow>
+        {type === 'action' && (
+          <ButtonsRow>
+            {action && (
+              <ButtonStyled onClick={action.callback} label={action.label} type="text" />
+            )}
+            {secondaryAction && (
+              <ButtonStyled
+                onClick={secondaryAction.callback}
+                label={secondaryAction.label}
+                type="text"
+              />)}
+          </ButtonsRow>
         )}
-        {secondaryAction && (
-          <ButtonStyled
-            onClick={secondaryAction.callback}
-            label={secondaryAction.label}
-            type="text"
-          />
-        )}
-      </ButtonsRow>
-    )}
-  </Container>
-);
+      </Container>
+    </AnimationWrapper>
+  );
+}
 
 Notification.propTypes = {
   /** Text of the notification */

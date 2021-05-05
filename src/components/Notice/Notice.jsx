@@ -6,6 +6,8 @@ import { fontSize } from '../style/fonts';
 import Warning from '../Icon/Icons/Warning';
 import Cross from '../Icon/Icons/Cross';
 import { grayDark, grayLighter, grayDarker } from '../style/colors';
+import { useAnimation } from '../AnimationWrapper';
+import { stageInRight, fadeOut } from '../style/animations';
 
 const colorMap = {
   warning: {
@@ -26,7 +28,7 @@ const NoticeWrapper = styled.div`
   background: ${props => colorMap[props.type].background};
   border-radius: ${borderRadius};
   font-size: ${fontSize};
-  padding: 16px 16px;
+  padding: 16px ${({ dismiss }) => dismiss ? '36px' : '16px' } 16px 16px;
   display: flex;
   justify-content: flex-start;
   position: relative;
@@ -57,16 +59,28 @@ const CloseButton = styled.button`
 `;
 
 function Notice({ children, dismiss, type }) {
+  const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
+    justify: 'flex-end',
+    stageInAnimation: stageInRight,
+    stageOutAnimation: fadeOut,
+    onDismiss: dismiss,
+  })
+
   return (
-    <NoticeWrapper type={type}>
-      {type === 'warning' && <WarningIcon />}
-      {children}
-      {dismiss && (
-        <CloseButton type={type} onClick={() => dismiss()}>
-          <Cross />
-        </CloseButton>
-      )}
-    </NoticeWrapper>
+    <AnimationWrapper {...animationProps}>
+      <NoticeWrapper type={type} dismiss={dismiss}>
+        {type === 'warning' && <WarningIcon />}
+        {children}
+        {dismiss && (
+          <CloseButton
+            type={type}
+            onClick={() => dismissAnimationWrapper()}
+          >
+            <Cross />
+          </CloseButton>
+        )}
+      </NoticeWrapper>
+    </AnimationWrapper>
   );
 }
 

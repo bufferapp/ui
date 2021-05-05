@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import styled, { keyframes } from 'styled-components';
 import { Cross } from '../Icon';
 import { white, red } from '../style/colors';
-import { easeOutQuart } from '../style/animations';
+import { useAnimation } from '../AnimationWrapper';
+import { easeOutQuart, stageInCenter, stageOutCenter } from '../style/animations';
 
 const ESCAPE_KEY = 27;
 const TAB_KEY = 9;
@@ -14,18 +15,6 @@ const fadeIn = keyframes`
   }
 
   100% {
-    opacity: 1;
-  }
-`;
-
-const stagingAnimation = keyframes`
-  0% {
-    transform: scale(.5);
-    opacity: 0;
-  }
-
-  100% {
-    transform: scale(1);
     opacity: 1;
   }
 `;
@@ -61,8 +50,6 @@ const Modal = styled.div`
   align-items: center;
   justify-content: center;
   outline: none;
-
-  animation: 300ms ${stagingAnimation} ${easeOutQuart};
 `;
 
 const CloseButton = styled.button`
@@ -91,6 +78,12 @@ const CloseButton = styled.button`
 const SimpleModal = ({ children, closeAction }) => {
   const modalRef = useRef(null);
   const containerRef = useRef(null);
+  const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
+    stageInAnimation: stageInCenter,
+    stageOutAnimation: stageOutCenter,
+    duration: 400,
+    onDismiss: closeAction,
+  })
 
   const handleTabKey = e => {
     const focusableModalElements = modalRef.current.querySelectorAll(
@@ -112,13 +105,13 @@ const SimpleModal = ({ children, closeAction }) => {
   };
 
   const keyListenersMap = new Map([
-    [ESCAPE_KEY, () => closeAction()],
+    [ESCAPE_KEY, () => dismissAnimationWrapper],
     [TAB_KEY, handleTabKey],
   ]);
 
   const clickToClose = e => {
     if (e.target !== containerRef.current) return;
-    closeAction();
+    dismissAnimationWrapper();
   };
 
   useEffect(() => {
@@ -134,19 +127,17 @@ const SimpleModal = ({ children, closeAction }) => {
 
   return (
     <Container ref={containerRef} role="dialog" aria-modal="true">
-      <Modal
-        ref={modalRef}
-        tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
-      >
-        <CloseButton
-          onClick={() => {
-            closeAction();
-          }}
+      <AnimationWrapper {...animationProps}>
+        <Modal
+          ref={modalRef}
+          tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
         >
-          <Cross />
-        </CloseButton>
-        {children}
-      </Modal>
+          <CloseButton onClick={() => dismissAnimationWrapper()}>
+            <Cross />
+          </CloseButton>
+          {children}
+        </Modal>
+      </AnimationWrapper>
     </Container>
   );
 };
