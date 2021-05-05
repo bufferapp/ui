@@ -1,5 +1,9 @@
 # Changelog
 
+
+## [5.65.0] - 2021-05-05
+- Add title to icons, for better accessibility.
+
 ## [5.64.0] - 2021-04-14
 - Add new 'Building' icon.
 
