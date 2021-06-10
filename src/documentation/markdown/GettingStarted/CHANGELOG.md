@@ -1,6 +1,9 @@
 # Changelog
 
 
+## [5.66.0] - 2021-06-10
+- add new colors
+
 ## [5.65.0] - 2021-05-05
 - Add title to icons, for better accessibility.
 
