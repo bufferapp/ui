@@ -11,7 +11,7 @@ import {
   ButtonWrapper,
 } from './style';
 
-import { orangeDark } from '../style/colors';
+import { orangeDarker } from '../style/colors';
 
 export default class Banner extends React.Component {
   constructor(props) {
@@ -72,7 +72,7 @@ export default class Banner extends React.Component {
               type="text"
               icon={(
                 <CrossIcon
-                  color={themeColor === 'blue' ? '#fff' : orangeDark}
+                  color={themeColor === 'blue' ? '#fff' : orangeDarker}
                 />
               )}
               hasIconOnly
