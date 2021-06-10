@@ -11,7 +11,7 @@ import {
   grayDefault,
   boxShadow,
   grayLight,
-  orangeDark,
+  orangeDarker,
   redDark,
   redDarker,
   redLighter,
@@ -191,9 +191,9 @@ export const text = css`
 `;
 
 export const orange = css`
-  background-color: ${orangeDark};
+  background-color: ${orangeDarker};
   color: ${white};
-  border: 1px solid ${orangeDark};
+  border: 1px solid ${orangeDarker};
   :hover {
     background-color: ${orangeColor};
     border-color: ${orangeColor};
