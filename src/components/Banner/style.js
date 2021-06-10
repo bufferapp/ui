@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { blueDarker, orangeLighter, orangeDark, white } from '../style/colors';
+import { blueDarker, orangeLighter, orangeDarker, white } from '../style/colors';
 
 import {
   fontSize,
@@ -10,7 +10,7 @@ export const BannerStyled = styled.div`
   align-items: center;
   background: ${props => props.themeColor === 'blue' ? blueDarker : orangeLighter};
   box-sizing: border-box;
-  color: ${props => props.themeColor === 'blue' ? white : orangeDark};
+  color: ${props => props.themeColor === 'blue' ? white : orangeDarker};
   display: flex;
   font-family: ${fontFamily};
   font-size: ${fontSize};
@@ -22,7 +22,7 @@ export const BannerStyled = styled.div`
 
   /** Style inline links */
   a {
-    color: ${props => props.themeColor === 'blue' ? white : orangeDark};
+    color: ${props => props.themeColor === 'blue' ? white : orangeDarker};
   }
 `;
 
