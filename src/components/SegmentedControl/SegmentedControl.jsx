@@ -11,10 +11,22 @@ import { Container } from './style';
  * If you need to present many options, consider using another component such as a Select.
  */
 const SegmentedControl = (props) => {
-  const { optionType, options, size } = props;
+  const {
+    optionType,
+    options,
+    size,
+  } = props;
   const [selected, setSelected] = useState(null)
 
   useEffect(() => {
+    // If one of the options has a default key,
+    // select that option by default.
+    const defaultOption = options.find(opt => opt.default)
+    if (defaultOption) {
+      setSelected(defaultOption.value)
+      return
+    }
+
     // Filter out all disabled options to find selected option
     const enabled = options.filter((opt) => !opt.disabled);
     if (enabled && enabled.length) {
@@ -55,8 +67,15 @@ SegmentedControl.propTypes = {
   /** Options to render and their properties. */
   options: PropTypes.arrayOf(
     PropTypes.shape({
+      /** Mark option as default option */
+      default: PropTypes.bool,
+      /** Mark option as disabled */
+      disabled: PropTypes.bool,
+      /** Icon node to render if optionType is icon or textAndIcon */
       icon: PropTypes.node,
+      /** Text label to render on option */
       label: PropTypes.string,
+      /** Value to be returned by selecting option */
       value: PropTypes.string.isRequired,
     })
   ).isRequired,
