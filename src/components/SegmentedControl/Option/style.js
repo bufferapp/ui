@@ -8,6 +8,7 @@ export const OptionStyled = styled.div`
   cursor: ${p => p.disabled ? 'not-allowed' : 'pointer'};
   border-radius: ${borderRadius};
   margin-right: 4px;
+  border: 1px solid transparent;
 
   color: ${p => {
     if (p.selected) return blue;
@@ -33,6 +34,10 @@ export const OptionStyled = styled.div`
   ${p => !p.disabled && css`
     :hover {
       color: ${blue};
+    }
+
+    :active {
+      background-color: ${blueLightest};
     }
 
     :focus {
