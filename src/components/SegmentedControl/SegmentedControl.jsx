@@ -16,11 +16,15 @@ const SegmentedControl = (props) => {
     options,
     size,
     value,
+    disabled,
     onChange,
   } = props;
   const controlled = typeof value !== 'undefined' && value !== null;
 
   const getDefaultValue = () => {
+    // If component is disabled, don't select any value
+    if (disabled) return;
+
     // If component is controlled, return the provided value
     if (controlled) return value;
 
@@ -53,11 +57,11 @@ const SegmentedControl = (props) => {
   };
 
   return (
-    <Container>
-      {options.map(({ disabled, icon, label, value: optionValue, tooltip }, index) => (
+    <Container disabled={disabled}>
+      {options.map(({ disabled: optionDisabled, icon, label, value: optionValue, tooltip }, index) => (
         <Option
           key={`${optionValue}-${index}`}
-          disabled={disabled}
+          disabled={disabled || optionDisabled} // If entire component is disabled, set all options to disabled
           icon={icon}
           label={label}
           value={optionValue}
@@ -84,6 +88,9 @@ SegmentedControl.propTypes = {
 
   /** Function called when the value changes. */
   onChange: PropTypes.func,
+
+  /** If `true`, the entire component is disabled. Defaults to `false`. */
+  disabled: PropTypes.bool,
 
   /**
    * Array of options with the following properties:
@@ -134,6 +141,7 @@ SegmentedControl.propTypes = {
 SegmentedControl.defaultProps = {
   size: 'normal',
   value: null,
+  disabled: false,
   onChange: () => null,
 };
 
