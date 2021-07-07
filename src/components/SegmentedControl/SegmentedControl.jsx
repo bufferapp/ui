@@ -17,8 +17,10 @@ const SegmentedControl = (props) => {
     size,
     value,
     disabled,
+    iconPosition,
     onChange,
   } = props;
+
   const controlled = typeof value !== 'undefined' && value !== null;
 
   const getDefaultValue = () => {
@@ -61,14 +63,15 @@ const SegmentedControl = (props) => {
       {options.map(({ disabled: optionDisabled, icon, label, value: optionValue, tooltip }, index) => (
         <Option
           key={`${optionValue}-${index}`}
-          disabled={disabled || optionDisabled} // If entire component is disabled, set all options to disabled
-          icon={icon}
-          label={label}
-          value={optionValue}
           optionType={optionType}
           size={size}
-          selected={optionValue === selected}
+          disabled={disabled || optionDisabled} // If entire component is disabled, set all options to disabled
+          icon={icon}
+          iconPosition={iconPosition}
+          label={label}
+          value={optionValue}
           tooltip={tooltip}
+          selected={optionValue === selected}
           onClick={handleChange}
         />
       ))}
@@ -77,20 +80,23 @@ const SegmentedControl = (props) => {
 };
 
 SegmentedControl.propTypes = {
-  /** Size of control. Can be `small`, `normal`, `large`. */
-  size: PropTypes.oneOf(['small', 'normal', 'large']),
-
   /** Type of options. Can be `text`, `icon`, `textAndIcon`. */
   optionType: PropTypes.oneOf(['text', 'icon', 'textAndIcon']).isRequired,
 
-  /** The current option selected when controlled */
+  /** Size of control. Can be `small`, `normal`, `large`. */
+  size: PropTypes.oneOf(['small', 'normal', 'large']),
+
+  /** If `true`, the entire component is disabled. */
+  disabled: PropTypes.bool,
+
+  /** The position of the icon relative to the label. Can be `top`, `right`, `bottom`, `left`. */
+  iconPosition: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+
+  /** The value of the currently selected option when the component is controlled. */
   value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]),
 
   /** Function called when the value changes. */
   onChange: PropTypes.func,
-
-  /** If `true`, the entire component is disabled. Defaults to `false`. */
-  disabled: PropTypes.bool,
 
   /**
    * Array of options with the following properties:
@@ -99,18 +105,22 @@ SegmentedControl.propTypes = {
    *   // Set as selected option by default.
    *   // Default is `false`.
    *   **default: _(bool, optional)_**,
-   *   // Option is disabled.
+   *   __
+   *   // If `true`, the option is disabled.
    *   // Default is `false`.
    *   **disabled: _(bool, optional)_**,
+   *   __
    *   // Icon to display
    *   **icon: _(node, optional)_**,
+   *   __
    *   // Programmatic value
    *   **value: _(string | number | bool, required)_**,
+   *   __
    *   // Display version of value
    *   **label: _(string, required)_**,
-   *   // If options are only 'icon', optionally
-   *   // pass a custom tooltip message.
-   *   // Defaults to  "View {label} only".
+   *   __
+   *   // Optional custom tooltip message to display on hover.
+   *   // If `optionType` is `icon`, defaults to `View {label} only`.
    *   **tooltip: _(string, optional)_**,
    * }
    * </pre>
@@ -142,6 +152,7 @@ SegmentedControl.defaultProps = {
   size: 'normal',
   value: null,
   disabled: false,
+  iconPosition: 'left',
   onChange: () => null,
 };
 

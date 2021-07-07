@@ -2,7 +2,7 @@ import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
 import { Tooltip } from '@bufferapp/ui';
 
-import { Label, OptionStyled, IconWrapper } from './style';
+import { OptionStyled, ContentWrapper, Label, IconWrapper } from './style';
 
 /**
  * Option component for Segmented Control component.
@@ -15,6 +15,7 @@ const Option = (props) => {
     label,
     value,
     optionType,
+    iconPosition,
     size,
     tooltip,
     onClick,
@@ -39,10 +40,15 @@ const Option = (props) => {
   };
 
   const renderContent = () => (
-    <>
+    <ContentWrapper iconPosition={iconPosition}>
       {icon && showIcon && (<IconWrapper>{icon}</IconWrapper>)}
-      {label && showLabel && (<Label optionType={optionType}>{label}</Label>)}
-    </>
+
+      {label && showLabel && (
+        <Label optionType={optionType} iconPosition={iconPosition}>
+          {label}
+        </Label>
+      )}
+    </ContentWrapper>
   );
 
   return (
@@ -65,30 +71,42 @@ const Option = (props) => {
 };
 
 Option.propTypes = {
-  /** Whether the option is the selected one */
-  selected: PropTypes.bool.isRequired,
-  /** The option label */
-  label: PropTypes.string.isRequired,
-  /** The option value */
-  value: PropTypes.string.isRequired,
   /** Type of options. Options: text, icon, textAndIcon. */
   optionType: PropTypes.oneOf(['text', 'icon', 'textAndIcon']).isRequired,
-  /** It disables the option. </i> */
-  disabled: PropTypes.bool,
-  /** The title of the icon to pass to the Icon component */
-  icon: PropTypes.node,
+
   /** Size of control. Options: small, normal, large. */
   size: PropTypes.oneOf(['small', 'normal', 'large']),
+
+  /** It disables the option. </i> */
+  disabled: PropTypes.bool,
+
+  /** The title of the icon to pass to the Icon component */
+  icon: PropTypes.node,
+
+  /** The position of the icon relative to the label. Can be `top`, `right`, `bottom`, `left`. */
+  iconPosition: PropTypes.oneOf(['top', 'right', 'bottom', 'left']),
+
+  /** The option label */
+  label: PropTypes.string.isRequired,
+
+  /** The option value */
+  value: PropTypes.string.isRequired,
+
   /** Optional custom tooltip message to display on hover */
   tooltip: PropTypes.string,
+
+  /** Whether the option is the selected one */
+  selected: PropTypes.bool.isRequired,
+
   /** onClick callback function */
   onClick: PropTypes.func,
 };
 
 Option.defaultProps = {
+  size: 'normal',
   disabled: false,
   icon: null,
-  size: 'normal',
+  iconPosition: 'left',
   tooltip: '',
   onClick: () => null,
 };
