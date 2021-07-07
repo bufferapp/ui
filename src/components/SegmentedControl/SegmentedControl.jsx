@@ -15,74 +15,126 @@ const SegmentedControl = (props) => {
     optionType,
     options,
     size,
+    value,
+    onChange,
   } = props;
-  const [selected, setSelected] = useState(null)
+  const controlled = typeof value !== 'undefined' && value !== null;
 
+  const getDefaultValue = () => {
+    // If component is controlled, return the provided value
+    if (controlled) return value;
+
+    // If any of the options have a default key,
+    // select the first one as the default.
+    const defaultOption = options.find(opt => opt.default);
+    if (defaultOption) return defaultOption.value;
+
+    // If no options have a default key,
+    // select first non-disabled option by default
+    const enabled = options.find((opt) => !opt.disabled);
+    if (enabled) return enabled.value;
+  };
+
+  const [selected, setSelected] = useState(getDefaultValue());
+
+  // If component is controlled, update selected option
+  // every time a new value prop is received
   useEffect(() => {
-    // If one of the options has a default key,
-    // select that option by default.
-    const defaultOption = options.find(opt => opt.default)
-    if (defaultOption) {
-      setSelected(defaultOption.value)
-      return
+    if (controlled && value !== selected) {
+      setSelected(value);
     }
+  }, [value]);
 
-    // Filter out all disabled options to find selected option
-    const enabled = options.filter((opt) => !opt.disabled);
-    if (enabled && enabled.length) {
-      setSelected(enabled[0].value)
-    }
-  }, []);
-
-  const handleClick = (val) => {
-    // Only set selected again if a new value is selected
-    // to avoid unnecessary re-renders
-    if (selected !== val) setSelected(val)
-  }
+  const handleChange = (val) => {
+    // If controlled, run provided onChange
+    if (controlled) onChange(val);
+    // Only update if value changes
+    else if (selected !== val) setSelected(val);
+  };
 
   return (
     <Container>
-      {options.map(({ disabled, icon, label, value }, index) => (
+      {options.map(({ disabled, icon, label, value: optionValue, tooltip }, index) => (
         <Option
-          key={`${value}-${index}`}
+          key={`${optionValue}-${index}`}
           disabled={disabled}
           icon={icon}
           label={label}
-          value={value}
+          value={optionValue}
           optionType={optionType}
           size={size}
-          selected={value === selected}
-          onClick={handleClick}
+          selected={optionValue === selected}
+          tooltip={tooltip}
+          onClick={handleChange}
         />
       ))}
     </Container>
-  )
+  );
 };
 
 SegmentedControl.propTypes = {
-  /** Size of control. Options: small, normal, large. */
+  /** Size of control. Can be `small`, `normal`, `large`. */
   size: PropTypes.oneOf(['small', 'normal', 'large']),
-  /** Type of options. Options: text, icon, textAndIcon. */
+
+  /** Type of options. Can be `text`, `icon`, `textAndIcon`. */
   optionType: PropTypes.oneOf(['text', 'icon', 'textAndIcon']).isRequired,
-  /** Options to render and their properties. */
+
+  /** The current option selected when controlled */
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]),
+
+  /** Function called when the value changes. */
+  onChange: PropTypes.func,
+
+  /**
+   * Array of options with the following properties:
+   * <pre>
+   * {
+   *   // Set as selected option by default.
+   *   // Default is `false`.
+   *   **default: _(bool, optional)_**,
+   *   // Option is disabled.
+   *   // Default is `false`.
+   *   **disabled: _(bool, optional)_**,
+   *   // Icon to display
+   *   **icon: _(node, optional)_**,
+   *   // Programmatic value
+   *   **value: _(string | number | bool, required)_**,
+   *   // Display version of value
+   *   **label: _(string, required)_**,
+   *   // If options are only 'icon', optionally
+   *   // pass a custom tooltip message.
+   *   // Defaults to  "View {label} only".
+   *   **tooltip: _(string, optional)_**,
+   * }
+   * </pre>
+   * */
   options: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       /** Mark option as default option */
       default: PropTypes.bool,
+
       /** Mark option as disabled */
       disabled: PropTypes.bool,
-      /** Icon node to render if optionType is icon or textAndIcon */
+
+      /** Icon node to render if optionType is 'icon' or 'textAndIcon' */
       icon: PropTypes.node,
-      /** Text label to render on option */
-      label: PropTypes.string,
+
       /** Value to be returned by selecting option */
-      value: PropTypes.string.isRequired,
-    })
+      value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]).isRequired,
+
+      /** Text label to render on option */
+      label: PropTypes.string.isRequired,
+
+      /** Tooltip message to display if `optionType` is set to `icon` only */
+      tooltip: PropTypes.string,
+    }),
   ).isRequired,
 };
 
 SegmentedControl.defaultProps = {
   size: 'normal',
+  value: null,
+  onChange: () => null,
 };
 
 export default SegmentedControl;

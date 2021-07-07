@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 import { blue, blueLightest, boxShadow, gray, grayDark, grayLight } from '../../style/colors';
 import { borderRadius } from '../../style/borders';
 
@@ -12,14 +12,14 @@ export const OptionStyled = styled.div`
   color: ${p => {
     if (p.selected) return blue;
     if (p.disabled) return gray;
-    return grayDark
+    return grayDark;
   }};
 
   background-color: ${p => {
     if (p.selected) return blueLightest;
     if (p.disabled) return grayLight;
   }};
-  
+
   padding: ${props => {
     if (props.size === 'large') return '12px';
     if (props.size === 'small') return '4px 8px';
@@ -29,10 +29,10 @@ export const OptionStyled = styled.div`
   &:last-child {
     margin-right: 0;
   }
-  
+
   ${p => !p.disabled && css`
     :hover {
-      color:  ${blue};
+      color: ${blue};
     }
 
     :focus {
@@ -40,10 +40,14 @@ export const OptionStyled = styled.div`
       box-shadow: 0 0 0 1px ${boxShadow};
     }
   `}
-`
+`;
+
+export const IconWrapper = styled.div`
+  display: flex;
+`;
 
 export const Label = styled.span`
   font-weight: 500;
   font-size: 14px;
   margin-left: ${p => p.optionType === 'textAndIcon' && '10px'};
-`
+`;
