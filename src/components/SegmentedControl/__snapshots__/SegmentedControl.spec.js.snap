@@ -3,6 +3,7 @@
 exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when array prop "options" has one item: "[object Object]" 1`] = `
 <ForwardRef(styled.div)
   disabled={true}
+  role="group"
 >
   <Option
     disabled={true}
@@ -22,6 +23,7 @@ exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when array prop
 exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
   disabled={false}
+  role="group"
 >
   <Option
     disabled={true}
@@ -41,6 +43,7 @@ exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when boolean pr
 exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)
   disabled={true}
+  role="group"
 >
   <Option
     disabled={true}
@@ -60,6 +63,7 @@ exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when passed all
 exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)
   disabled={false}
+  role="group"
 >
   <Option
     disabled={true}
