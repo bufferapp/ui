@@ -1,0 +1,77 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when array prop "options" has one item: "[object Object]" 1`] = `
+<ForwardRef(styled.div)
+  disabled={true}
+>
+  <Option
+    disabled={true}
+    icon={<NodeFixture />}
+    iconPosition="top"
+    label="jest-auto-snapshots String Fixture"
+    onClick={[Function]}
+    optionType="text"
+    selected={true}
+    size="small"
+    tooltip="jest-auto-snapshots String Fixture"
+    value={1}
+  />
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<ForwardRef(styled.div)
+  disabled={false}
+>
+  <Option
+    disabled={true}
+    icon={<NodeFixture />}
+    iconPosition="top"
+    label="jest-auto-snapshots String Fixture"
+    onClick={[Function]}
+    optionType="text"
+    selected={true}
+    size="small"
+    tooltip="jest-auto-snapshots String Fixture"
+    value={1}
+  />
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.div)
+  disabled={true}
+>
+  <Option
+    disabled={true}
+    icon={<NodeFixture />}
+    iconPosition="top"
+    label="jest-auto-snapshots String Fixture"
+    onClick={[Function]}
+    optionType="text"
+    selected={true}
+    size="small"
+    tooltip="jest-auto-snapshots String Fixture"
+    value={1}
+  />
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > SegmentedControl Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.div)
+  disabled={false}
+>
+  <Option
+    disabled={true}
+    icon={<NodeFixture />}
+    iconPosition="left"
+    label="jest-auto-snapshots String Fixture"
+    onClick={[Function]}
+    optionType="text"
+    selected={true}
+    size="normal"
+    tooltip="jest-auto-snapshots String Fixture"
+    value={1}
+  />
+</ForwardRef(styled.div)>
+`;

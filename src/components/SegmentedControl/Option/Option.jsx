@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import PropTypes from 'prop-types';
-import { Tooltip } from '@bufferapp/ui';
 
+import Tooltip from '../../Tooltip';
 import { OptionStyled, ContentWrapper, Label, IconWrapper } from './style';
 
 /**
@@ -90,7 +90,7 @@ Option.propTypes = {
   label: PropTypes.string.isRequired,
 
   /** The option value */
-  value: PropTypes.string.isRequired,
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string, PropTypes.bool]).isRequired,
 
   /** Optional custom tooltip message to display on hover */
   tooltip: PropTypes.string,

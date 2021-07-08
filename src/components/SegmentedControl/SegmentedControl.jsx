@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import Option from './Option';
@@ -32,24 +32,17 @@ const SegmentedControl = (props) => {
 
     // If any of the options have a default key,
     // select the first one as the default.
-    const defaultOption = options.find(opt => opt.default);
+    const defaultOption = options.find(opt => opt && opt.default);
     if (defaultOption) return defaultOption.value;
 
     // If no options have a default key,
     // select first non-disabled option by default
-    const enabled = options.find((opt) => !opt.disabled);
+    const enabled = options.find(opt => opt && !opt.disabled);
     if (enabled) return enabled.value;
   };
 
+  // State value only used when component is not controlled
   const [selected, setSelected] = useState(getDefaultValue());
-
-  // If component is controlled, update selected option
-  // every time a new value prop is received
-  useEffect(() => {
-    if (controlled && value !== selected) {
-      setSelected(value);
-    }
-  }, [value]);
 
   const handleChange = (val) => {
     // If controlled, run provided onChange
@@ -71,7 +64,7 @@ const SegmentedControl = (props) => {
           label={label}
           value={optionValue}
           tooltip={tooltip}
-          selected={optionValue === selected}
+          selected={controlled ? optionValue === value : optionValue === selected}
           onClick={handleChange}
         />
       ))}
@@ -126,7 +119,7 @@ SegmentedControl.propTypes = {
    * </pre>
    * */
   options: PropTypes.arrayOf(
-    PropTypes.exact({
+    PropTypes.shape({
       /** Mark option as default option */
       default: PropTypes.bool,
 
@@ -144,7 +137,7 @@ SegmentedControl.propTypes = {
 
       /** Tooltip message to display if `optionType` is set to `icon` only */
       tooltip: PropTypes.string,
-    }),
+    }).isRequired,
   ).isRequired,
 };
 
