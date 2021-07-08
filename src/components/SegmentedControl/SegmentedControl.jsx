@@ -52,7 +52,7 @@ const SegmentedControl = (props) => {
   };
 
   return (
-    <Container disabled={disabled}>
+    <Container disabled={disabled} role='group'>
       {options.map(({ disabled: optionDisabled, icon, label, value: optionValue, tooltip }, index) => (
         <Option
           key={`${optionValue}-${index}`}

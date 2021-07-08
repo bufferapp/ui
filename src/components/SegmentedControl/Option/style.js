@@ -64,6 +64,7 @@ export const OptionStyled = styled.div`
     }
 
     :focus {
+      outline: none;
       border: 1px solid ${blue};
       box-shadow: 0 0 0 1px ${boxShadow};
     }

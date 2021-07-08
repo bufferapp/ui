@@ -58,6 +58,7 @@ const Option = (props) => {
       size={size}
       onClick={handleClick}
       tabIndex='0'
+      role='button'
     >
       {tooltipMessage ? (
         <Tooltip label={tooltipMessage}>
