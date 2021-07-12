@@ -67,7 +67,7 @@ exports[`jest-auto-snapshots > Option Matches snapshot when passed all props 1`]
   disabled={true}
   onClick={[Function]}
   role="button"
-  selected={true}
+  selected={false}
   size="small"
   tabIndex="0"
 >

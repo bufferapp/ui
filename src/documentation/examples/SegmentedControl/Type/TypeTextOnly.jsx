@@ -1,31 +1,45 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SegmentedControl from '@bufferapp/ui/SegmentedControl';
 import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon';
 
+const options = [
+  {
+    label: 'Facebook',
+    icon: <Facebook />,
+    value: 'facebook',
+  },
+  {
+    label: 'Pinterest',
+    icon: <Pinterest />,
+    value: 'pinterest',
+  }, {
+    label: 'Twitter',
+    icon: <Twitter />,
+    value: 'twitter',
+  },
+]
+
 /** Text only */
 export default function ExampleTypeTextOnly() {
+  const [selected, setSelected] = useState('facebook');
+
   return (
     <div style={{ display: 'inline-block' }}>
-      <SegmentedControl
-        optionType='text'
-        options={[
-          {
-            label: 'Facebook',
-            icon: <Facebook />,
-            value: 'facebook',
-          },
-          {
-            label: 'Pinterest',
-            icon: <Pinterest />,
-            value: 'pinterest',
-          }, {
-            label: 'Twitter',
-            icon: <Twitter />,
-            value: 'twitter',
-          },
-        ]}
-        onClick={() => null}
-      />
+      <SegmentedControl>
+        {options.map(({ disabled, icon, label, value, tooltip }, index) => (
+          <SegmentedControl.Option
+            key={`${value}-${index}`}
+            optionType='text'
+            disabled={disabled}
+            icon={icon}
+            label={label}
+            value={value}
+            tooltip={tooltip}
+            selected={value === selected}
+            onClick={setSelected}
+          />
+        ))}
+      </SegmentedControl>
     </div>
   );
 }
