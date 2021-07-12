@@ -2,6 +2,7 @@
 
 exports[`jest-auto-snapshots > Option Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-pressed={true}
   disabled={false}
   onClick={[Function]}
   role="button"
@@ -33,6 +34,7 @@ exports[`jest-auto-snapshots > Option Matches snapshot when boolean prop "disabl
 
 exports[`jest-auto-snapshots > Option Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
+  aria-pressed={false}
   disabled={true}
   onClick={[Function]}
   role="button"
@@ -64,6 +66,7 @@ exports[`jest-auto-snapshots > Option Matches snapshot when boolean prop "select
 
 exports[`jest-auto-snapshots > Option Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)
+  aria-pressed={false}
   disabled={true}
   onClick={[Function]}
   role="button"
@@ -95,6 +98,7 @@ exports[`jest-auto-snapshots > Option Matches snapshot when passed all props 1`]
 
 exports[`jest-auto-snapshots > Option Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)
+  aria-pressed={true}
   disabled={false}
   onClick={[Function]}
   role="button"

@@ -1,6 +1,7 @@
 import styled, { css } from 'styled-components';
-import { blue, blueLightest, boxShadow, gray, grayDark, grayLight } from '../../style/colors';
+import { blue, blueLightest, boxShadow, gray, grayDark, grayLight, transparent } from '../../style/colors';
 import { borderRadius } from '../../style/borders';
+import { fontSize, fontWeightMedium } from '../../style/fonts';
 
 const getGridTemplateAreas = (iconPosition) => {
   switch (iconPosition) {
@@ -28,20 +29,21 @@ const getGridTemplateAreas = (iconPosition) => {
 export const OptionStyled = styled.div`
   display: flex;
   align-items: center;
-  cursor: ${p => p.disabled ? 'not-allowed' : 'pointer'};
+  cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   border-radius: ${borderRadius};
   margin-right: 4px;
-  border: 1px solid transparent;
+  border: 1px solid ${transparent};
+  transition: all 0.1s ease-out;
 
-  color: ${p => {
-    if (p.selected) return blue;
-    if (p.disabled) return gray;
+  color: ${props => {
+    if (props.selected) return blue;
+    if (props.disabled) return gray;
     return grayDark;
   }};
 
-  background-color: ${p => {
-    if (p.selected) return blueLightest;
-    if (p.disabled) return grayLight;
+  background-color: ${props => {
+    if (props.selected) return blueLightest;
+    if (props.disabled) return grayLight;
   }};
 
   padding: ${props => {
@@ -54,7 +56,7 @@ export const OptionStyled = styled.div`
     margin-right: 0;
   }
 
-  ${p => !p.disabled && css`
+  ${props => !props.disabled && css`
     :hover {
       color: ${blue};
     }
@@ -75,11 +77,11 @@ export const ContentWrapper = styled.div`
   display: grid;
   place-items: center;
   // Calculate grid-template-rows value based on provided iconPosition
-  grid-template-areas: ${p => getGridTemplateAreas(p.iconPosition)};
+  grid-template-areas: ${props => getGridTemplateAreas(props.iconPosition)};
   // if horizontal icon position, two columns one row
-  grid-template-columns: ${p => ['left', 'right'].includes(p.iconPosition) ? 'auto auto' : 'auto'};
+  grid-template-columns: ${props => ['left', 'right'].includes(props.iconPosition) ? 'auto auto' : 'auto'};
   // if vertical icon position, one column two rows
-  grid-template-rows: ${p => ['top', 'bottom'].includes(p.iconPosition) ? 'auto' : 'auto auto'};
+  grid-template-rows: ${props => ['top', 'bottom'].includes(props.iconPosition) ? 'auto' : 'auto auto'};
 `;
 
 export const IconWrapper = styled.div`
@@ -88,8 +90,8 @@ export const IconWrapper = styled.div`
 `;
 
 export const Label = styled.span`
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: ${fontWeightMedium};
+  font-size: ${fontSize};
   grid-area: label;
-  ${p => p.optionType === 'textAndIcon' && `margin-${p.iconPosition}: 10px`};
+  ${props => props.optionType === 'textAndIcon' && `margin-${props.iconPosition}: 10px`};
 `;
