@@ -53,7 +53,7 @@ const Option = (props) => {
 
   return (
     <OptionStyled
-      selected={selected}
+      selected={!disabled && selected}
       disabled={disabled}
       size={size}
       onClick={handleClick}
