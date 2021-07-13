@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.67.0] - 2021-07-13
+## [5.68.0] - 2021-07-13
 - Create new Segment control component
 
 ## [5.66.0] - 2021-06-10
