@@ -1,5 +1,7 @@
 # Changelog
 
+## [5.67.0] - 2021-07-08
+- Create new Segment control component
 
 ## [5.66.0] - 2021-06-10
 - add new colors
