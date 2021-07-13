@@ -67,6 +67,7 @@ const Button = ({
   hideSearch,
   className,
   children,
+  ...props
 }) => {
   /**
    Deprecated since version 5.27.0
@@ -97,6 +98,7 @@ const Button = ({
           aria-haspopup="false"
           size={size}
           fullWidth={fullWidth}
+          {...props}
         >
           {!iconEnd && icon}
           {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}

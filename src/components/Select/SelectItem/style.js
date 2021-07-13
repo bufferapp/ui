@@ -43,10 +43,6 @@ export const SelectItemIcon = styled.div`
   display: flex;
   padding-right: 8px;
   fill: ${props => (props.hovered ? grayDarker : gray)};
-  ${SelectItemStyled}:hover & * {
-    color: ${grayDarker};
-    fill: ${grayDarker};
-  }
 `;
 
 export const SelectItemTitle = styled.p`
