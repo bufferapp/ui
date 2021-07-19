@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.68.1] - 2021-07-19
+## [5.68.2] - 2021-07-19
 - Fix Segmented Control component padding
 
 ## [5.68.0] - 2021-07-13
