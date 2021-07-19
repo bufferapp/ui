@@ -32,8 +32,13 @@ export const OptionStyled = styled.div`
   cursor: ${props => props.disabled ? 'not-allowed' : 'pointer'};
   border-radius: ${borderRadius};
   margin-right: 4px;
-  border: 1px solid ${transparent};
   transition: all 0.1s ease-out;
+
+  border: ${props => {
+    if (props.selected) return `1px solid ${blueLightest}`;
+    if (props.selected) return `1px solid ${gray}`;
+    return `1px solid ${transparent}`;
+  }};
 
   color: ${props => {
     if (props.selected) return blue;
@@ -47,9 +52,9 @@ export const OptionStyled = styled.div`
   }};
 
   padding: ${props => {
-    if (props.size === 'large') return '12px';
-    if (props.size === 'small') return '4px 8px';
-    return '8px';
+    if (props.size === 'large') return '11px';
+    if (props.size === 'small') return '3px 7px';
+    return '7px';
   }};
 
   &:last-child {
