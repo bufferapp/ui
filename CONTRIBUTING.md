@@ -207,7 +207,7 @@ There are a few important things to keep in mind when adding or changing new Ico
 3. Ensure the icon layer is `16x16` in size.
 4. **tl:dr;** Honestly, most of the issues we see are fixed if you outline strokes. :wink:
 
-When you're done adding or changing icons be sure to let an engineer in the **#prod-design-system** channel know, so we can run the command to regenerate them next chance we get.
+When you're done adding or changing icons be sure to let an engineer in the **[#proj-design-system](https://app.slack.com/client/T0258KQ7G/CE4NLGLR5)** channel know, so we can run the command to regenerate them next chance we get.
 
 ## License
 
