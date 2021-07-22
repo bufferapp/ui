@@ -4,7 +4,7 @@ import textColors, * as Colors from '../style/colors';
 
 export const Tag = styled.span`
   display: inline-block;
-  padding: 2px 8px;
+  padding: 4px 8px;
   font-weight: ${fontWeightMedium};
   font-size: ${fontSizeSmall};
   margin-left: 8px;
