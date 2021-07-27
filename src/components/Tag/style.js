@@ -1,12 +1,13 @@
 import styled from 'styled-components';
-import { fontSizeSmall, fontWeightMedium } from '../style/fonts';
+import { fontSize, fontWeightMedium, lineHeight } from '../style/fonts';
 import textColors, * as Colors from '../style/colors';
 
 export const Tag = styled.span`
   display: inline-block;
   padding: 4px 8px;
   font-weight: ${fontWeightMedium};
-  font-size: ${fontSizeSmall};
+  font-size: ${fontSize};
+  line-height: ${lineHeight};
   margin-left: 8px;
   border-radius: 100px;
   color: ${(props) => textColors[props.textColor]};
