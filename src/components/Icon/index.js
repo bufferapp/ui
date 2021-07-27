@@ -85,6 +85,7 @@ export Search from './Icons/Search';
 export Shopify from './Icons/Shopify';
 export Sidebar from './Icons/Sidebar';
 export Spam from './Icons/Spam';
+export Star from './Icons/Star';
 export Swap from './Icons/Swap';
 export Tag from './Icons/Tag';
 export Title from './Icons/Title';
