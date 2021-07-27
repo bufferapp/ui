@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.69.1] - 2021-07-27
+- Fix :hover text color for Tag component
+
+## [5.69.0] - 2021-07-27
+- Add new Tag component
+
+## [5.68.3] - 2021-07-27
+- Added Canva, Pin and Title Icon
+- Added Add Icon example
+
 ## [5.68.2] - 2021-07-19
 - Fix Segmented Control component padding
 
