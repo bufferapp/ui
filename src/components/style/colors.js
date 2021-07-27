@@ -72,6 +72,8 @@ export const shopify = '#95BF47';
 export const shopifyDark = '#5E8E3E';
 export const twitter = '#1DA1F2';
 export const twitterDark = '#1174B0';
+export const canva = '#00c4cc';
+export const canvaLight = '#00d9e1';
 
 export const transparent = 'transparent';
 
