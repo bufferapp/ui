@@ -12,4 +12,8 @@ export const Tag = styled.span`
   border-radius: 100px;
   color: ${(props) => textColors[props.textColor]};
   background-color: ${(props) => Colors[props.color]};
+
+  &:hover {
+    color: ${(props) => textColors[props.textColor]};
+  }
 `;
