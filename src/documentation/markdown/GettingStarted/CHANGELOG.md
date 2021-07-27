@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.69.2] - 2021-07-27
+- Add icon: Star
+
 ## [5.69.1] - 2021-07-27
 - Fix :hover text color for Tag component
 
