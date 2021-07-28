@@ -120,6 +120,7 @@ const SimpleModal = ({ children, closeAction }) => {
       return listener && listener(e);
     }
     document.addEventListener('keydown', keyListener);
+    modalRef.current.focus()
     containerRef.current.addEventListener('click', e => clickToClose(e));
 
     return () => document.removeEventListener('keydown', keyListener);
