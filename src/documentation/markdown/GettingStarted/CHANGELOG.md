@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.69.3] - 2021-07-28
+- Fix SimpleModal focus on mount
+
 ## [5.69.2] - 2021-07-27
 - Add icon: Star
 
