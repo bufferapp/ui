@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.69.4] - 2021-07-29
+
+- Fix DropDownMenu Menu hover for Tag
+
 ## [5.69.3] - 2021-07-28
 - Fix SimpleModal focus on mount
 
