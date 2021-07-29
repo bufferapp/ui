@@ -141,10 +141,6 @@ export const ButtonItemStyled = styled.button`
     svg {
       fill: ${(props) => getColor(props, 'iconHover', grayDarker)};
     }
-    & * {
-      color: ${(props) => getColor(props, 'title', grayDarker)};
-      fill: ${(props) => getColor(props, 'iconHover', grayDarker)};
-    }
   }
   ${(props) => (props.disabled ? disabled : '')};
 `;

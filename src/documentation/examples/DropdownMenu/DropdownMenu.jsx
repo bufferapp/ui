@@ -1,10 +1,12 @@
 import React from 'react';
 import DropdownMenu from '@bufferapp/ui/DropdownMenu';
+import Tag from '@bufferapp/ui/Tag';
 import styled from 'styled-components';
 
 import Flash from '@bufferapp/ui/Icon/Icons/Flash';
+import Canva from '@bufferapp/ui/Icon/Icons/Canva';
 
-import { white, grayDark } from '@bufferapp/ui/style/colors';
+import { white, grayDark, canva, canvaLight } from '@bufferapp/ui/style/colors';
 
 const MenuItem = styled.a`
   display: flex;
@@ -48,6 +50,18 @@ const menuItems = [
     colors: { title: 'purple', iconHover: 'red' },
     icon: <Flash color="purple" />,
     onItemClick: () => console.info('Highlighted'),
+  },
+  {
+    id: '6',
+    title: (
+      <span>
+        Canva
+        <Tag>New</Tag>
+      </span>
+    ),
+    colors: { iconHover: canvaLight },
+    icon: <Canva color={canva} />,
+    onItemClick: () => console.info('Canva'),
   },
 ];
 
