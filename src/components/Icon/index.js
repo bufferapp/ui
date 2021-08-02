@@ -52,7 +52,6 @@ export Instagram from './Icons/Instagram';
 export InstagramComment from './Icons/InstagramComment';
 export InstagramDm from './Icons/InstagramDm';
 export InstagramLike from './Icons/InstagramLike';
-export Layout from './Icons/Layout';
 export Link from './Icons/Link';
 export LinkedIn from './Icons/LinkedIn';
 export List from './Icons/List';

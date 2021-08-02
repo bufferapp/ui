@@ -5,7 +5,6 @@
 - Add icon: AddMedia
 - Add icon: ButtonLink
 - Add icon: Heading
-- Add icon: Layout
 - Add icon: Subheading
 
 ## [5.69.4] - 2021-07-29
