@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.70.0] - 2021-08-02
+
+- Add icon: AddMedia
+- Add icon: ButtonLink
+- Add icon: Heading
+- Add icon: Subheading
+
 ## [5.69.4] - 2021-07-29
 
 - Fix DropDownMenu Menu hover for Tag
