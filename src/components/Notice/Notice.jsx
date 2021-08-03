@@ -32,6 +32,7 @@ const NoticeWrapper = styled.div`
   display: flex;
   justify-content: flex-start;
   position: relative;
+  width: 100%;
 `;
 
 const WarningIcon = styled(Warning)`
@@ -58,7 +59,7 @@ const CloseButton = styled.button`
   }
 `;
 
-function Notice({ children, dismiss, type }) {
+function Notice({ children, dismiss, type, className }) {
   const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
     justify: 'flex-end',
     stageInAnimation: stageInRight,
@@ -68,7 +69,7 @@ function Notice({ children, dismiss, type }) {
 
   return (
     <AnimationWrapper {...animationProps}>
-      <NoticeWrapper type={type} dismiss={dismiss}>
+      <NoticeWrapper type={type} dismiss={dismiss} className={className}>
         {type === 'warning' && <WarningIcon />}
         {children}
         {dismiss && (
