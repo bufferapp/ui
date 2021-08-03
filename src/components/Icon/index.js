@@ -1,6 +1,7 @@
 export Add from './Icons/Add';
 export AddMedia from './Icons/AddMedia';
 export Analyze from './Icons/Analyze';
+export Appearance from './Icons/Appearance';
 export ArrowDown from './Icons/ArrowDown';
 export ArrowLeft from './Icons/ArrowLeft';
 export ArrowRight from './Icons/ArrowRight';
@@ -52,6 +53,7 @@ export Instagram from './Icons/Instagram';
 export InstagramComment from './Icons/InstagramComment';
 export InstagramDm from './Icons/InstagramDm';
 export InstagramLike from './Icons/InstagramLike';
+export Layout from './Icons/Layout';
 export Link from './Icons/Link';
 export LinkedIn from './Icons/LinkedIn';
 export List from './Icons/List';
