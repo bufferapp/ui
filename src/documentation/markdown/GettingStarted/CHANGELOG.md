@@ -5,6 +5,12 @@
 - Add icon: Appearance
 - Add icon: Layout
 
+## [5.70.1] - 2021-08-03
+
+### Fixed
+
+- Adjust Notice width.
+
 ## [5.70.0] - 2021-08-02
 
 - Add icon: AddMedia
