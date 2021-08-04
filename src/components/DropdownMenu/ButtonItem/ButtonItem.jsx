@@ -49,10 +49,10 @@ export default class ButtonItem extends React.Component {
       case this.keyCode.SPACE:
       case this.keyCode.RETURN: {
         const { item: { onItemClick } } = this.props;
-        if (onItemClick) {
-          onItemClick();
-          flag = true;
-        }
+          if (onItemClick) {
+            onItemClick();
+            flag = true;
+          }
         }
         break;
       default:
@@ -77,7 +77,7 @@ export default class ButtonItem extends React.Component {
 
   render() {
     const {
-      item: { type, title, onItemClick, icon, selected, disabled, colors },
+      item: { type, title, onItemClick, icon, selected, disabled, colors, tag },
       ariaHaspopup,
     } = this.props;
     const hasIcon = !!icon || !!selected;
@@ -102,6 +102,7 @@ export default class ButtonItem extends React.Component {
         {selected && <CheckmarkIcon color={green} />}
         {icon || null}
         <ButtonLabel hasIcon={hasIcon} type={type}>{title}</ButtonLabel>
+        {tag || null}
       </ButtonItemStyled>
     );
   }

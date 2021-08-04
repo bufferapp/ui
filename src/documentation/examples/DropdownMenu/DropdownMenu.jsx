@@ -53,14 +53,10 @@ const menuItems = [
   },
   {
     id: '6',
-    title: (
-      <span>
-        Canva
-        <Tag>New</Tag>
-      </span>
-    ),
+    title: 'Canva',
     colors: { iconHover: canvaLight },
     icon: <Canva color={canva} />,
+    tag: <Tag>New</Tag>,
     onItemClick: () => console.info('Canva'),
   },
 ];
