@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.72.0] - 2021-08-16
+
+- New tag property for MenuItem in DropDownMenu component
+
 ## [5.71.0] - 2021-08-03
 
 - Add icon: Appearance
