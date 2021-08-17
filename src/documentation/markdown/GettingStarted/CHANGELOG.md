@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.73.0] - 2021-08-17
+- displays Icons in grid for easier scrolling ✨
+
 ## [5.72.0] - 2021-08-16
 
 - New tag property for MenuItem in DropDownMenu component

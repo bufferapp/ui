@@ -1,76 +1,95 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import Example from './components/Example';
 import Props from './components/Props';
 import Heading from './components/Heading';
 
 const Wrapper = styled.div`
-    margin: 0px;
-    padding: 0px;
-    flex: 1 1 auto;
-    min-width: 0px;
-    display: flex;
-    flex-direction: column;
-    background: #fff;
-    max-width: 100%;
-    padding-bottom: 64px;
+  margin: 0px;
+  padding: 0px;
+  flex: 1 1 auto;
+  min-width: 0px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  max-width: 100%;
+  padding-bottom: 64px;
 `;
 
 const Container = styled.div`
-    flex: 1 1 auto;
-    min-width: 0px;
-    display: flex;
-    position: relative;
+  flex: 1 1 auto;
+  min-width: 0px;
+  display: flex;
+  position: relative;
 `;
 
 const Body = styled.div`
-    display: block;
-    padding: 0px;
-    flex: 1 1 auto;
+  display: block;
+  padding: 0px;
+  flex: 1 1 auto;
 `;
 
 const Description = styled.p`
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  margin-bottom: 40px;
 `;
 
 const PropTitle = styled.h3`
-    margin-top: 50px;
-    font-size: 24px;
+  margin-top: 50px;
+  font-size: 24px;
 `;
 
 const ExampleWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    align-items: end;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
 `;
 
-const ComponentExample = ({
-  fullscreen, name, folder, id,
-}) => (
+const IconComponentWrapper = styled.div`
+  ${(props) =>
+    props.isIcon &&
+    css`
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    `}
+`;
+
+const ComponentExample = ({ fullscreen, name, folder, id }) => (
   <Fragment>
-    {!fullscreen && (
-      <h4 key="heading">
-        {folder[0] ? `${name} ${folder[0].title}s` : ''}
-      </h4>)}
+    {!fullscreen && folder[0] && (
+      <h4 key="heading">{`${name} ${folder[0].title}s`}</h4>
+    )}
     <ExampleWrapper key="example">
-      {folder[0]
+      {folder[0] ? (
         // if this component example contains subfolders, then get example from each subfolder
-        ? folder.map((example, idx) => <Example key={name + idx} example={example} componentName={name} id={id} />)
+        folder.map((example, idx) => (
+          <Example
+            key={name + idx}
+            example={example}
+            componentName={name}
+            id={id}
+          />
+        ))
+      ) : (
         // otherwise just render the example
-        : <Example example={folder} componentName={name} id={id} key={name} fullscreen={fullscreen} />
-      }
+        <Example
+          example={folder}
+          componentName={name}
+          id={id}
+          key={name}
+          fullscreen={fullscreen}
+          merp="merp"
+        />
+      )}
     </ExampleWrapper>
   </Fragment>
 );
 
 /** Page to display the shared component info taken from .jsx components */
 const Component = ({ component, fullscreen }) => {
-  const {
-    name, description, props, examples, id,
-  } = component;
+  const { name, description, props, examples, id } = component;
   if (fullscreen) {
     return examples.map((folder, idx) => (
       <ComponentExample
@@ -79,7 +98,8 @@ const Component = ({ component, fullscreen }) => {
         name={name}
         id={id}
         key={idx}
-      />));
+      />
+    ));
   }
   return (
     <Wrapper>
@@ -91,12 +111,13 @@ const Component = ({ component, fullscreen }) => {
             Example
             {examples.length > 1 && 's'}
           </PropTitle>
-          {examples.map((folder, idx) => <ComponentExample folder={folder} name={name} id={id} key={idx} />)}
+          <IconComponentWrapper isIcon={name === 'Icon'}>
+            {examples.map((folder, idx) => (
+              <ComponentExample folder={folder} name={name} id={id} key={idx} />
+            ))}
+          </IconComponentWrapper>
           <PropTitle>Props</PropTitle>
-          {
-          props ? <Props props={props} />
-            : 'This component accepts no props.'
-        }
+          {props ? <Props props={props} /> : 'This component accepts no props.'}
         </Body>
       </Container>
     </Wrapper>
