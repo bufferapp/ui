@@ -93,7 +93,7 @@ export Search from './Icons/Search';
 export Shopify from './Icons/Shopify';
 export Sidebar from './Icons/Sidebar';
 export Sms from './Icons/Sms';
-export Snap from './Icons/Snap';
+export Snapchat from './Icons/Snapchat';
 export Spam from './Icons/Spam';
 export Spotify from './Icons/Spotify';
 export Star from './Icons/Star';
