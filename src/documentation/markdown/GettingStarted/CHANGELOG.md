@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.74.0] - 2021-08-25
+- Add icon: Apple Music
+- Add icon: Hamburger
+- Add icon: Patreon
+- Add icon: SMS
+- Add icon: Snapchat
+- Add icon: Spotify
+- Add icon: TikTok
+- Add icon: Twitch
+
 ## [5.73.0] - 2021-08-17
 - displays Icons in grid for easier scrolling ✨
 
