@@ -89,6 +89,7 @@ export Question from './Icons/Question';
 export Refresh from './Icons/Refresh';
 export Reply from './Icons/Reply';
 export Return from './Icons/Return';
+export Save from './Icons/Save';
 export Search from './Icons/Search';
 export Shopify from './Icons/Shopify';
 export Sidebar from './Icons/Sidebar';
