@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.75.0] - 2021-08-31
+- Add icon: Save
+
 ## [5.74.0] - 2021-08-25
 - Add icon: Apple Music
 - Add icon: Hamburger
