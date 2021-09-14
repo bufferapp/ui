@@ -52,7 +52,7 @@ export default class Select extends React.Component {
       !Select.sameItems(props.items, state.items) &&
       !state.isFiltering
     ) {
-      return { items: props.items };
+      return { items: props.items, selectedItems: props.items };
     }
     return null;
   }
@@ -333,7 +333,7 @@ export default class Select extends React.Component {
 
   onSearchChange = searchValue => {
     const { items, keyMap } = this.props;
-    const searchFiled = keyMap ? keyMap.title : 'title';
+    const searchField = keyMap ? keyMap.title : 'title';
 
     // first, filter the items in the props that we get from the parent
 
@@ -344,17 +344,17 @@ export default class Select extends React.Component {
     // and we need to check there to see, for each item, if its selected
 
     const { startingWith, including } = items.reduce((filtered, item) => {
-      if (item[searchFiled].toLowerCase().startsWith(searchValue.toLowerCase())) {
-        return {...filtered, startingWith: [...filtered.startingWith, {...item, selected: 
+      if (item[searchField].toLowerCase().startsWith(searchValue.toLowerCase())) {
+        return {...filtered, startingWith: [...filtered.startingWith, {...item, selected:
           this.findItemInState(item) && this.findItemInState(item).selected,
         }]}
-      } 
-      if (item[searchFiled].toLowerCase().includes(searchValue.toLowerCase())) {
-        return {...filtered, including: [...filtered.including, {...item, selected: 
+      }
+      if (item[searchField].toLowerCase().includes(searchValue.toLowerCase())) {
+        return {...filtered, including: [...filtered.including, {...item, selected:
           this.findItemInState(item) && this.findItemInState(item).selected,
         }]}
-      } 
-      
+      }
+
       return {...filtered};
     }, { startingWith: [], including: []});
 
@@ -362,7 +362,7 @@ export default class Select extends React.Component {
 
     this.setState({
       items: arrayFinal,
-      isFiltering: true,
+      isFiltering: !!searchValue,
       searchValue,
     });
   };

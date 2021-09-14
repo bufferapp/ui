@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.75.1] - 2021-09-14
+
+### Fixed
+- Select Component: Search field onBlur prevents getDerivedStateFromProps from running
+- Select Component: Set selectedItems to items prop in getDerivedStateFromProps
+
+### Added
+- Select example with a Select All option
+
 ## [5.75.0] - 2021-08-31
 - Add icon: Save
 
