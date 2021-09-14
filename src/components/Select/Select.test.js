@@ -106,6 +106,30 @@ describe('SomeComponent component', () => {
     }]);
   });
 
+  it('onSearchChange: should only set isFiltering state to true if search value is provided', () => {
+    const wrapper = shallow(<Select
+      onSelectClick={() => true}
+      items={[
+        {
+          id: '1', title: 'Testing',
+        },
+        {
+          id: '2', title: '123',
+        },
+      ]}
+      label="Select"
+    />);
+    const instance = wrapper.instance();
+
+    // Set isFiltering to true because searchValue has a value
+    instance.onSearchChange('Test');
+    expect(wrapper.state().isFiltering).toEqual(true);
+
+    // Set isFiltering to false because searchValue has no value
+    instance.onSearchChange('');
+    expect(wrapper.state().isFiltering).toEqual(false);
+  });
+
   it('onSearchChange: should re-order search in state based on matches with startsWith, then includes', () => {
     const wrapper = shallow(<Select
       onSelectClick={() => true}
