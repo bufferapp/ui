@@ -333,7 +333,7 @@ export default class Select extends React.Component {
 
   onSearchChange = searchValue => {
     const { items, keyMap } = this.props;
-    const searchFiled = keyMap ? keyMap.title : 'title';
+    const searchField = keyMap ? keyMap.title : 'title';
 
     // first, filter the items in the props that we get from the parent
 
@@ -344,12 +344,12 @@ export default class Select extends React.Component {
     // and we need to check there to see, for each item, if its selected
 
     const { startingWith, including } = items.reduce((filtered, item) => {
-      if (item[searchFiled].toLowerCase().startsWith(searchValue.toLowerCase())) {
+      if (item[searchField].toLowerCase().startsWith(searchValue.toLowerCase())) {
         return {...filtered, startingWith: [...filtered.startingWith, {...item, selected:
           this.findItemInState(item) && this.findItemInState(item).selected,
         }]}
       }
-      if (item[searchFiled].toLowerCase().includes(searchValue.toLowerCase())) {
+      if (item[searchField].toLowerCase().includes(searchValue.toLowerCase())) {
         return {...filtered, including: [...filtered.including, {...item, selected:
           this.findItemInState(item) && this.findItemInState(item).selected,
         }]}
