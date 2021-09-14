@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Select from '@bufferapp/ui/Select';
-import { Flag } from '@bufferapp/ui/Icon';
 
 const data = [
   { _id: '1', name: 'First', selected: true },
@@ -37,9 +36,7 @@ export default function ExampleSelectWithSelectAll() {
     <Select
       onSelectClick={item => handleClick(item)}
       label='Try Select All'
-      icon={<Flag color='white' />}
       type='primary'
-      // hideSearch
       multiSelect
       keyMap={{
         id: '_id',
