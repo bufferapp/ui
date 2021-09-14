@@ -52,7 +52,7 @@ export default class Select extends React.Component {
       !Select.sameItems(props.items, state.items) &&
       !state.isFiltering
     ) {
-      return { items: props.items };
+      return { items: props.items, selectedItems: props.items };
     }
     return null;
   }
