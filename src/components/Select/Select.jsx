@@ -345,16 +345,16 @@ export default class Select extends React.Component {
 
     const { startingWith, including } = items.reduce((filtered, item) => {
       if (item[searchFiled].toLowerCase().startsWith(searchValue.toLowerCase())) {
-        return {...filtered, startingWith: [...filtered.startingWith, {...item, selected: 
+        return {...filtered, startingWith: [...filtered.startingWith, {...item, selected:
           this.findItemInState(item) && this.findItemInState(item).selected,
         }]}
-      } 
+      }
       if (item[searchFiled].toLowerCase().includes(searchValue.toLowerCase())) {
-        return {...filtered, including: [...filtered.including, {...item, selected: 
+        return {...filtered, including: [...filtered.including, {...item, selected:
           this.findItemInState(item) && this.findItemInState(item).selected,
         }]}
-      } 
-      
+      }
+
       return {...filtered};
     }, { startingWith: [], including: []});
 
@@ -362,7 +362,7 @@ export default class Select extends React.Component {
 
     this.setState({
       items: arrayFinal,
-      isFiltering: true,
+      isFiltering: !!searchValue,
       searchValue,
     });
   };
