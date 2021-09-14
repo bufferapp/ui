@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [5.75.1] - 2021-09-14
 
 ### Fixed
 - Select Component: Search field onBlur prevents getDerivedStateFromProps from running
