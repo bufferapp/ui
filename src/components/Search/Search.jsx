@@ -26,7 +26,7 @@ export default class Search extends React.Component {
     });
   }
 
-  onBlur = () => {
+  clearSearch = () => {
     const { onChange } = this.props;
 
     onChange('');
@@ -41,6 +41,7 @@ export default class Search extends React.Component {
       onClick,
       height,
       clearSearchOnBlur,
+      clearSearchOnFocus,
     } = this.props;
 
     const { search } = this.state;
@@ -55,7 +56,8 @@ export default class Search extends React.Component {
           onChange={event => this.onChange(event)}
           onClick={onClick}
           clearSearchOnBlur={clearSearchOnBlur}
-          onBlur={clearSearchOnBlur ? this.onBlur : undefined}
+          onBlur={clearSearchOnBlur ? this.clearSearch : undefined}
+          onFocus={clearSearchOnFocus ? this.clearSearch : undefined}
           height={height}
         />
       </SearchWrapper>
@@ -63,7 +65,7 @@ export default class Search extends React.Component {
   }
 }
 
-Search.propTypes = {
+export const searchPropTypes = {
   /** Search placeholder */
   placeholder: PropTypes.string,
 
@@ -82,15 +84,21 @@ Search.propTypes = {
   /** Should the search clear on blur */
   clearSearchOnBlur: PropTypes.bool,
 
+  /** Should the search clear on focus */
+  clearSearchOnFocus: PropTypes.bool,
+
   /** Is onBlur event */
   onBlur: PropTypes.func
 };
+
+Search.propTypes = searchPropTypes;
 
 Search.defaultProps = {
   placeholder: '',
   height: 'tall',
   isOpen: false,
   clearSearchOnBlur: false,
+  clearSearchOnFocus: false,
   onClick: () => {},
   onBlur: () => {}
 }
