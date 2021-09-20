@@ -17,7 +17,7 @@ import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
 import { ButtonSelect } from '../Button/style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
-import Search from '../Search/Search';
+import Search, { searchPropTypes } from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
@@ -68,10 +68,24 @@ export default class Select extends React.Component {
       this.selectNode.addEventListener('keydown', this.keyDownPressed);
   }
 
-  componentDidUpdate(prevProps) {
-    if (prevProps.isOpen !== this.props.isOpen) {
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps.isOpen !== this.props.isOpen || prevState.isOpen !== this.state.isOpen) {
       // focus the Select component in order to be able to catch the keyboard events
       this.props.isOpen && this.onButtonClick();
+    }
+
+    // Check whether menu is opening or closing
+    const opening = !prevState.isOpen && !!this.state.isOpen;
+    const closing = !!prevState.isOpen && !this.state.isOpen;
+
+    // If menu is opening and 'clearSearchOnBlur' is false, run search change
+    if (opening && !this.props.clearSearchOnBlur && !!this.state.searchValue) {
+      this.onSearchChange(this.state.searchValue);
+    }
+
+    // If menu is closing and 'clearSearchOnBlur' is true, clear search value
+    if (closing && this.props.clearSearchOnBlur) {
+      this.onSearchChange('');
     }
   }
 
@@ -489,8 +503,9 @@ export default class Select extends React.Component {
       isInputSearch,
       selectPopupVisible,
       noResultsCustomMessage,
+      searchInputProps,
     } = this.props;
-    const { isOpen, hoveredItem, items, isFiltering } = this.state;
+    const { isOpen, hoveredItem, items, isFiltering, searchValue } = this.state;
 
     return (
       <SelectStyled
@@ -504,7 +519,7 @@ export default class Select extends React.Component {
       >
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
-            id="searchInput"
+            id='searchInput'
             ref={node => (this.searchInputNode = node)}
           >
             <SearchIcon />
@@ -512,7 +527,8 @@ export default class Select extends React.Component {
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
-              clearSearchOnBlur
+              value={searchValue}
+              {...searchInputProps}
             />
           </SearchBarWrapper>
         )}
@@ -688,6 +704,12 @@ Select.propTypes = {
 
   /** Custom message to display when no results were found */
   noResultsCustomMessage: PropTypes.string,
+
+  /** Should clear the search field's value when the main input is blurred  */
+  clearSearchOnBlur: PropTypes.bool,
+
+  /** Prop */
+  searchInputProps: searchPropTypes,
 };
 
 Select.defaultProps = {
@@ -721,4 +743,8 @@ Select.defaultProps = {
   isInputSearch: false,
   selectPopupVisible: false,
   noResultsCustomMessage: 'No matches found',
+  clearSearchOnBlur: false,
+  searchInputProps: {
+    clearSearchOnFocus: true,
+  },
 };
