@@ -5,9 +5,21 @@ import { SearchInput, SearchWrapper } from './style';
 /** Search input that filters the Select items and adds keyboard navigation */
 export default class Search extends React.Component {
   state = {
+    controlled: false,
     search: '',
   };
 
+  static getDerivedStateFromProps = (props, state) => {
+    // Allows controlling input. If value is not passed,
+    // state will be managed internally.
+    if (props.value && props.value !== state.value) {
+      return {
+        ...state,
+        controlled: true,
+        search: props.value
+      }
+    }
+  }
 
   componentDidUpdate(prevProps) {
     if(prevProps.isOpen !== this.props.isOpen){
@@ -18,21 +30,30 @@ export default class Search extends React.Component {
 
   onChange = (event) => {
     const { onChange } = this.props;
+    const { controlled } = this.state;
+
     const search = event.target.value;
 
     onChange(search);
-    this.setState({
-      search,
-    });
+    // Only update state if not controlled to save re-renders
+    if (!controlled) {
+      this.setState({
+        search,
+      });
+    }
   }
 
   clearSearch = () => {
     const { onChange } = this.props;
+    const { controlled } = this.state;
 
     onChange('');
-    this.setState({
-      search: '',
-    });
+    // Only update state if not controlled to save re-renders
+    if (!controlled) {
+      this.setState({
+        search: '',
+      });
+    }
   }
 
   render() {
@@ -69,6 +90,9 @@ export const searchPropTypes = {
   /** Search placeholder */
   placeholder: PropTypes.string,
 
+  /** The value of the input. Should only be provided if input is controlled. */
+  value: PropTypes.string,
+
   /** Function to call on search input change */
   onChange: PropTypes.func.isRequired,
 
@@ -95,6 +119,7 @@ Search.propTypes = searchPropTypes;
 
 Search.defaultProps = {
   placeholder: '',
+  value: undefined,
   height: 'tall',
   isOpen: false,
   clearSearchOnBlur: false,
