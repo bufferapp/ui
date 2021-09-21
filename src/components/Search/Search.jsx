@@ -12,7 +12,7 @@ export default class Search extends React.Component {
   static getDerivedStateFromProps = (props, state) => {
     // Allows controlling input. If value is not passed,
     // state will be managed internally.
-    if (props.value && props.value !== state.value) {
+    if (props.value !== state.value) {
       return {
         ...state,
         controlled: true,
