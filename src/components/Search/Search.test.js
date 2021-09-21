@@ -7,33 +7,18 @@ import Search from './Search';
 Enzyme.configure({ adapter: new Adapter() });
 
 describe('SearchComponent component', () => {
-  it('onChange: should not update state if controlled', () => {
+  it('onChange: should update state', () => {
     const wrapper = shallow(
       <Search
-        placeholder="Search"
-        value="Controlled"
         onChange={() => true}
+        onMoveUp={() => true}
+        onMoveDown={() => true}
+        onAddItem={() => true}
+        onClose={() => true}
+        placeholder="Search"
       />
     );
     const instance = wrapper.instance();
-    const event = {
-      target: {
-        value: 'Uncontrolled',
-      },
-    };
-    instance.onChange(event);
-    expect(wrapper.state().search).toBe('Controlled');
-  });
-
-  it('onChange: should update state if uncontrolled', () => {
-    const wrapper = shallow(
-      <Search
-        placeholder="Search"
-        onChange={() => true}
-      />
-    );
-    const instance = wrapper.instance();
-    expect(wrapper.state().search).toBe('');
     const event = {
       target: {
         value: 'Test',
@@ -41,5 +26,5 @@ describe('SearchComponent component', () => {
     };
     instance.onChange(event);
     expect(wrapper.state().search).toBe('Test');
-  })
+  });
 });
