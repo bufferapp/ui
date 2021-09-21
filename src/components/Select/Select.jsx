@@ -74,27 +74,28 @@ export default class Select extends React.Component {
       this.props.isOpen && this.onButtonClick();
     }
 
-    // Check whether menu is opening or closing
-    const opening = !prevState.isOpen && !!this.state.isOpen;
-    const closing = !!prevState.isOpen && !this.state.isOpen;
+    const menuIsOpening = !prevState.isOpen && !!this.state.isOpen;
+    const shouldFilterOnMenuOpen = !this.props.clearSearchOnBlur && !!this.state.searchValue;
+    if (menuIsOpening && shouldFilterOnMenuOpen) this.filterOnMenuOpen();
 
-    // If menu is opening and 'clearSearchOnBlur' is false, run search change
-    if (opening && !this.props.clearSearchOnBlur && !!this.state.searchValue) {
-      if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue);
-      this.onSearchChange(this.state.searchValue);
-    }
-
-    // If menu is closing and 'clearSearchOnBlur' is true, clear search value
-    if (closing && this.props.clearSearchOnBlur) {
-      if (this.searchInput) this.searchInput.updateSearch('');
-      this.onSearchChange('');
-    }
+    const menuIsClosing = !!prevState.isOpen && !this.state.isOpen ;
+    if (menuIsClosing && this.props.clearSearchOnBlur) this.clearSearchOnMenuClose()
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true);
     this.selectNode &&
       this.selectNode.removeEventListener('keydown', this.keyDownPressed);
+  }
+
+  filterOnMenuOpen = () => {
+    if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue);
+    this.onSearchChange(this.state.searchValue);
+  }
+
+  clearSearchOnMenuClose = () => {
+    if (this.searchInput) this.searchInput.updateSearch('');
+    this.onSearchChange('');
   }
 
   keyDownPressed = e => {
