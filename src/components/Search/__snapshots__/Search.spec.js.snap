@@ -1,39 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearSearchOnBlur" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.input)
-    clearSearchOnBlur={false}
-    height="jest-auto-snapshots String Fixture"
-    onChange={[Function]}
-    onClick={[MockFunction]}
-    onFocus={[Function]}
-    placeholder="jest-auto-snapshots String Fixture"
-    type="text"
-    value="jest-auto-snapshots String Fixture"
-  />
-</ForwardRef(styled.div)>
-`;
-
-exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearSearchOnFocus" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.input)
-    clearSearchOnBlur={true}
-    height="jest-auto-snapshots String Fixture"
-    onBlur={[Function]}
-    onChange={[Function]}
-    onClick={[MockFunction]}
-    placeholder="jest-auto-snapshots String Fixture"
-    type="text"
-    value="jest-auto-snapshots String Fixture"
-  />
-</ForwardRef(styled.div)>
-`;
-
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.input)
-    clearSearchOnBlur={true}
     height="jest-auto-snapshots String Fixture"
     onBlur={[Function]}
     onChange={[Function]}
@@ -41,7 +10,35 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen
     onFocus={[Function]}
     placeholder="jest-auto-snapshots String Fixture"
     type="text"
-    value="jest-auto-snapshots String Fixture"
+    value=""
+  />
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "resetOnBlur" is set to: "false" 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.input)
+    height="jest-auto-snapshots String Fixture"
+    onChange={[Function]}
+    onClick={[MockFunction]}
+    onFocus={[Function]}
+    placeholder="jest-auto-snapshots String Fixture"
+    type="text"
+    value=""
+  />
+</ForwardRef(styled.div)>
+`;
+
+exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "resetOnFocus" is set to: "false" 1`] = `
+<ForwardRef(styled.div)>
+  <ForwardRef(styled.input)
+    height="jest-auto-snapshots String Fixture"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onClick={[MockFunction]}
+    placeholder="jest-auto-snapshots String Fixture"
+    type="text"
+    value=""
   />
 </ForwardRef(styled.div)>
 `;
@@ -49,7 +46,6 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen
 exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.input)
-    clearSearchOnBlur={true}
     height="jest-auto-snapshots String Fixture"
     onBlur={[Function]}
     onChange={[Function]}
@@ -57,7 +53,7 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`]
     onFocus={[Function]}
     placeholder="jest-auto-snapshots String Fixture"
     type="text"
-    value="jest-auto-snapshots String Fixture"
+    value=""
   />
 </ForwardRef(styled.div)>
 `;
@@ -65,7 +61,6 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`]
 exports[`jest-auto-snapshots > Search Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.input)
-    clearSearchOnBlur={false}
     height="tall"
     onChange={[Function]}
     onClick={[Function]}
