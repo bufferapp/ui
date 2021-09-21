@@ -80,11 +80,13 @@ export default class Select extends React.Component {
 
     // If menu is opening and 'clearSearchOnBlur' is false, run search change
     if (opening && !this.props.clearSearchOnBlur && !!this.state.searchValue) {
+      if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue);
       this.onSearchChange(this.state.searchValue);
     }
 
     // If menu is closing and 'clearSearchOnBlur' is true, clear search value
     if (closing && this.props.clearSearchOnBlur) {
+      if (this.searchInput) this.searchInput.updateSearch('');
       this.onSearchChange('');
     }
   }
@@ -505,7 +507,7 @@ export default class Select extends React.Component {
       noResultsCustomMessage,
       searchInputProps,
     } = this.props;
-    const { isOpen, hoveredItem, items, isFiltering, searchValue } = this.state;
+    const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
     return (
       <SelectStyled
@@ -524,10 +526,10 @@ export default class Select extends React.Component {
           >
             <SearchIcon />
             <Search
+              ref={node => (this.searchInput = node)}
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
-              value={searchValue}
               {...searchInputProps}
             />
           </SearchBarWrapper>
@@ -745,6 +747,6 @@ Select.defaultProps = {
   noResultsCustomMessage: 'No matches found',
   clearSearchOnBlur: false,
   searchInputProps: {
-    clearSearchOnFocus: true,
+    resetOnBlur: true,
   },
 };
