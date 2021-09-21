@@ -176,12 +176,35 @@ describe('SomeComponent component', () => {
     expect(wrapper.state().hoveredItem).toBe(1);
   });
 
-  it('onAddItem: should call onSelectClick', () => {
-    const onSelectClick = jest.fn();
-    const wrapper = shallow(<Select onSelectClick={onSelectClick} items={[]} label="Select" />);
+  it('onAddItem: should not call handleSelectOption if hoveredItem is not set in state', () => {
+    const wrapper = shallow(<Select items={[]} label="Select" />);
     const instance = wrapper.instance();
+
+    instance.handleSelectOption = jest.fn();
     instance.onAddItem();
-    expect(onSelectClick).toBeCalled();
+    expect(instance.handleSelectOption).toHaveBeenCalledTimes(0);
+  });
+
+  it('onAddItem: should call handleSelectOption if hoveredItem is set in state', () => {
+    const items = [
+      {
+        id: '1', title: 'Testing',
+      },
+      {
+        id: '2', title: '123',
+      },
+    ];
+
+    const wrapper = shallow(<Select items={items} label="Select" />);
+    const instance = wrapper.instance();
+    instance.handleSelectOption = jest.fn();
+
+    const hoveredItem = 0;
+    const itemsLength = 2;
+    instance.updateHoveredItemPosition(hoveredItem, itemsLength, items);
+
+    instance.onAddItem();
+    expect(instance.handleSelectOption).toBeCalled();
   });
 
   it('onMoveDown: should set the hoveredItem in state if there is none', () => {

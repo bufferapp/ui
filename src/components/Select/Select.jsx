@@ -17,7 +17,7 @@ import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
 import { ButtonSelect } from '../Button/style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
-import Search, { searchPropTypes } from '../Search/Search';
+import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
@@ -713,7 +713,7 @@ Select.propTypes = {
   clearSearchOnBlur: PropTypes.bool,
 
   /** Prop */
-  searchInputProps: searchPropTypes,
+  searchInputProps: PropTypes.shape({}),
 };
 
 Select.defaultProps = {

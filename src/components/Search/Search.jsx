@@ -64,7 +64,7 @@ export default class Search extends React.Component {
   }
 }
 
-export const searchPropTypes = {
+Search.propTypes = {
   /** Search placeholder */
   placeholder: PropTypes.string,
 
@@ -89,8 +89,6 @@ export const searchPropTypes = {
   /** Is onBlur event */
   onBlur: PropTypes.func
 };
-
-Search.propTypes = searchPropTypes;
 
 Search.defaultProps = {
   placeholder: '',
