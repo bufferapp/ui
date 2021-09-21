@@ -13,11 +13,12 @@ exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only req
     justify="center"
     onDismiss={[MockFunction]}
     stageInAnimation={
-      e {
+      Keyframes {
         "id": "sc-keyframes-bQtjaF",
         "inject": [Function],
         "name": "bQtjaF",
-        "rules": "
+        "stringifyArgs": Array [
+          "
   0% {
     transform: scale(.5);
     opacity: 0;
@@ -28,15 +29,19 @@ exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only req
     opacity: 1;
   }
 ",
+          "bQtjaF",
+          "@keyframes",
+        ],
         "toString": [Function],
       }
     }
     stageOutAnimation={
-      e {
+      Keyframes {
         "id": "sc-keyframes-hsHpqF",
         "inject": [Function],
         "name": "hsHpqF",
-        "rules": "
+        "stringifyArgs": Array [
+          "
   0% {
     transform: scale(1);
     opacity: 1;
@@ -47,6 +52,9 @@ exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only req
     opacity: 0;
   }
 ",
+          "hsHpqF",
+          "@keyframes",
+        ],
         "toString": [Function],
       }
     }
