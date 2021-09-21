@@ -126,7 +126,7 @@ export default class Select extends React.Component {
   handleKeyPress = (event, keyHandler) => {
     event.preventDefault();
     event.stopPropagation();
-    keyHandler();
+    keyHandler(event);
   };
 
   // Close the popover
@@ -277,8 +277,8 @@ export default class Select extends React.Component {
     }
   };
 
-  onAddItem = () => {
-    const { onSelectClick, multiSelect } = this.props;
+  onAddItem = (event) => {
+    const { multiSelect } = this.props;
     const { items, hoveredItem, isCustomItemFocused, searchValue } = this.state;
     const selectedItem = items[hoveredItem];
 
@@ -287,9 +287,11 @@ export default class Select extends React.Component {
       this.setState({ isCustomItemFocused: false, isOpen: multiSelect });
     }
 
-    selectedItem && selectedItem.onItemClick
-      ? selectedItem.onItemClick(selectedItem)
-      : onSelectClick(items[hoveredItem]);
+    if (selectedItem) {
+      selectedItem.onItemClick
+        ? this.handleSelectOption(selectedItem, selectedItem.onItemClick)
+        : this.handleSelectOption(selectedItem, event);
+    }
   };
 
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
