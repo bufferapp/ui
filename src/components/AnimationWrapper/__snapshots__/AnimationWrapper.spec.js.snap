@@ -3,7 +3,7 @@
 exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when boolean prop "dismissing" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
   align="jest-auto-snapshots String Fixture"
-  className="fadeIn"
+  className="stageIn"
   duration={1}
   easing={[MockFunction]}
   justify="jest-auto-snapshots String Fixture"
@@ -17,7 +17,7 @@ exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when boolean pr
 exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed all props 1`] = `
 <ForwardRef(styled.div)
   align="jest-auto-snapshots String Fixture"
-  className="fadeOut"
+  className="stageOut"
   duration={1}
   easing={[MockFunction]}
   justify="jest-auto-snapshots String Fixture"
@@ -31,7 +31,7 @@ exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed all
 exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)
   align="center"
-  className="fadeIn"
+  className="stageIn"
   duration={300}
   easing="cubic-bezier(0.25, 1, 0.5, 1)"
   justify="center"

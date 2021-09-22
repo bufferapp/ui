@@ -11,11 +11,11 @@ const AnimationContainer = styled.div`
   outline: none;
   width: 100%;
 
-  &.fadeIn {
+  &.stageIn {
     animation: ${({ duration }) => `${duration}ms`} ${({ stageInAnimation }) => stageInAnimation} ${({ easing }) => easing};
   }
 
-  &.fadeOut {
+  &.stageOut {
     animation: ${({ duration }) => `${duration}ms`} ${({ stageOutAnimation }) => stageOutAnimation} ${({ easing }) => easing};
   }
 `;
@@ -34,13 +34,32 @@ const AnimationWrapper = ({
   const [content, setContent] = useState(children);
   const [hasChanged, setHasChanged] = useState(false);
   const [dismissed, setDismissed] = useState(false);
+  const [animationLocked, setAnimationLocked] = useState(false);
+  const [className, setClassName] = useState('stageIn');
+  const shouldUpdate = children !== content && !dismissing
+
+  function lockAnimationDuringStaging() {
+    setAnimationLocked(true)
+    setTimeout(() => {
+      setAnimationLocked(false)
+    }, duration * 2)
+  }
+
+  function stageIn() {
+    setClassName('stageIn')
+  }
+
+  function stageOut() {
+    setClassName('stageOut')
+  }
 
   useEffect(() => {
-    if (children !== content && !dismissing) {
+    if (shouldUpdate) {
       setHasChanged(true);
       setTimeout(() => {
-        setContent(children);
-        setHasChanged(false);
+        stageIn()
+        setContent(children)
+        setHasChanged(false)
       }, duration)
     }
   }, [children])
@@ -52,11 +71,16 @@ const AnimationWrapper = ({
         setDismissed(true);
         onDismiss();
       }, duration - 10)
-    } }, [dismissing])
+    }
+  }, [dismissing])
 
-  let className = 'fadeIn';
-  if (hasChanged || dismissing) {
-    className = 'fadeOut'
+  useEffect(() => {
+    lockAnimationDuringStaging()
+  }, [])
+
+  if (!animationLocked && (hasChanged || dismissing)) {
+    stageOut()
+    lockAnimationDuringStaging()
   }
 
   return (
