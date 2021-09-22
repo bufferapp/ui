@@ -69,7 +69,8 @@ export default class Select extends React.Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
-    if (prevProps.isOpen !== this.props.isOpen || prevState.isOpen !== this.state.isOpen) {
+    // Simulate button click if isOpen is being controlled
+    if (prevProps.isOpen !== this.props.isOpen) {
       // focus the Select component in order to be able to catch the keyboard events
       this.props.isOpen && this.onButtonClick();
     }
