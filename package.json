@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "5.75.2-beta.806e71a",
+  "version": "5.75.2",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -143,8 +143,8 @@
     "build:docs": "node scripts/build.js",
     "lint": "./node_modules/eslint/bin/eslint.js .",
     "test": "jest && npm run lint",
-    "test-update": "NODE_ENV=production jest --no-coverage -u",
-    "test-watch": "NODE_ENV=production jest --no-coverage --watch",
+    "test-update": "jest --no-coverage -u",
+    "test-watch": "jest --no-coverage --watch",
     "predeploy:docs": "npm run gen:docs && npm run build:docs",
     "deploy:docs": "gh-pages -d build",
     "prebuild:lib": "rimraf lib",
@@ -189,15 +189,19 @@
     "plugins": [
       "@babel/plugin-transform-modules-commonjs",
       "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-export-default-from",
-      [
-        "babel-plugin-styled-components",
-        {
-          "displayName": true,
-          "pure": true
-        }
-      ]
+      "@babel/plugin-proposal-export-default-from"
     ],
+    "env": {
+      "production": {
+        "plugins": [
+          ["babel-plugin-styled-components",
+          {
+            "displayName": true,
+            "pure": true
+          }
+        ]]
+      }
+    },
     "presets": [
       "@babel/preset-env",
       "@babel/react"
