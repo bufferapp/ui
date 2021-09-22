@@ -104,9 +104,9 @@ AnimationWrapper.propTypes = {
   dismissing: PropTypes.bool,
   duration: PropTypes.number,
   justify: PropTypes.string,
-  easing: PropTypes.func,
-  stageInAnimation: PropTypes.func.isRequired,
-  stageOutAnimation: PropTypes.func.isRequired,
+  easing: PropTypes.string,
+  stageInAnimation: PropTypes.shape({}).isRequired,
+  stageOutAnimation: PropTypes.shape({}).isRequired,
   onDismiss: PropTypes.func,
 };
 

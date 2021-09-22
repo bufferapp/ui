@@ -5,10 +5,10 @@ exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when boolean pr
   align="jest-auto-snapshots String Fixture"
   className="stageIn"
   duration={1}
-  easing={[MockFunction]}
+  easing="jest-auto-snapshots String Fixture"
   justify="jest-auto-snapshots String Fixture"
-  stageInAnimation={[MockFunction]}
-  stageOutAnimation={[MockFunction]}
+  stageInAnimation={Object {}}
+  stageOutAnimation={Object {}}
 >
   <NodeFixture />
 </ForwardRef(styled.div)>
@@ -19,10 +19,10 @@ exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed all
   align="jest-auto-snapshots String Fixture"
   className="stageOut"
   duration={1}
-  easing={[MockFunction]}
+  easing="jest-auto-snapshots String Fixture"
   justify="jest-auto-snapshots String Fixture"
-  stageInAnimation={[MockFunction]}
-  stageOutAnimation={[MockFunction]}
+  stageInAnimation={Object {}}
+  stageOutAnimation={Object {}}
 >
   <NodeFixture />
 </ForwardRef(styled.div)>
@@ -35,8 +35,8 @@ exports[`jest-auto-snapshots > AnimationWrapper Matches snapshot when passed onl
   duration={300}
   easing="cubic-bezier(0.25, 1, 0.5, 1)"
   justify="center"
-  stageInAnimation={[MockFunction]}
-  stageOutAnimation={[MockFunction]}
+  stageInAnimation={Object {}}
+  stageOutAnimation={Object {}}
 >
   <NodeFixture />
 </ForwardRef(styled.div)>
