@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased]
+## [5.75.2] - 2021-09-22
 
 ### Fixed
 - Select: Bug that doesn't allow clicking on filtered options because Search will always clear on blur
