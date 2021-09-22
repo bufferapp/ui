@@ -194,12 +194,14 @@
     "env": {
       "production": {
         "plugins": [
-          ["babel-plugin-styled-components",
-          {
-            "displayName": true,
-            "pure": true
-          }
-        ]]
+          [
+            "babel-plugin-styled-components",
+            {
+              "displayName": true,
+              "pure": true
+            }
+          ]
+        ]
       }
     },
     "presets": [
