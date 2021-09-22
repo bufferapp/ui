@@ -6,7 +6,7 @@ import Select from './Select';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-describe('SomeComponent component', () => {
+describe('Select component', () => {
   it('openPopup: should open the closed popup', () => {
     const wrapper = mount(<Select onSelectClick={() => true} items={[]} label="Select" />);
     const instance = wrapper.instance();
@@ -31,6 +31,53 @@ describe('SomeComponent component', () => {
     expect(wrapper.state().isOpen).toBe(true);
     instance.onClose();
     expect(wrapper.state().isOpen).toBe(false);
+  });
+
+  it('componentDidUpdate: run onButtonClick when isOpen prop changes', () => {
+    const wrapper = shallow(<Select onSelectClick={() => true} isOpen={false} items={[]} label="Select" />);
+    const instance = wrapper.instance();
+
+    const onButtonClickMock = jest.spyOn(instance, 'onButtonClick');
+    expect(onButtonClickMock).toHaveBeenCalledTimes(0)
+
+    wrapper.setProps({ isOpen: true })
+    expect(onButtonClickMock).toHaveBeenCalledTimes(1)
+  });
+
+  it('componentDidUpdate: should run filterOnMenuOpen on open if clearSearchOnBlur is false and search value exists in state', () => {
+    const wrapper = mount(<Select onSelectClick={() => true} items={[]} label="Select" clearSearchOnBlur={false} />);
+    const instance = wrapper.instance();
+    wrapper.setState({ isOpen: false, searchValue: 'Test search value' })
+
+    const onSearchChangeMock = jest.spyOn(instance, 'onSearchChange');
+    const filterOnMenuOpenMock = jest.spyOn(instance, 'filterOnMenuOpen');
+    const updateSearchMock = jest.fn()
+    instance.searchInput = { updateSearch: updateSearchMock }
+
+    wrapper.setState({ isOpen: true })
+
+    expect(filterOnMenuOpenMock).toHaveBeenCalled()
+    expect(updateSearchMock).toHaveBeenCalledWith('Test search value')
+    expect(onSearchChangeMock).toHaveBeenCalledWith('Test search value')
+  });
+
+  it('componentDidUpdate: should clear search value on close if clearSearchOnBlur is true', () => {
+    const wrapper = mount(<Select onSelectClick={() => true} items={[]} label="Select" clearSearchOnBlur />);
+    const instance = wrapper.instance();
+    wrapper.setState({ isOpen: true, searchValue: 'Test search value' })
+
+    const onSearchChangeMock = jest.spyOn(instance, 'onSearchChange');
+    const clearSearchOnMenuCloseMock = jest.spyOn(instance, 'clearSearchOnMenuClose');
+    const updateSearchMock = jest.fn()
+    instance.searchInput = { updateSearch: updateSearchMock }
+
+    wrapper.setState({ isOpen: false })
+
+    expect(clearSearchOnMenuCloseMock).toHaveBeenCalled()
+    expect(updateSearchMock).toHaveBeenCalledWith('')
+    expect(onSearchChangeMock).toHaveBeenCalledWith('')
+
+    expect(wrapper.state().searchValue).toBe('');
   });
 
   it('handleSelectOption: should call onSelectClick', () => {
@@ -180,9 +227,9 @@ describe('SomeComponent component', () => {
     const wrapper = shallow(<Select items={[]} label="Select" />);
     const instance = wrapper.instance();
 
-    instance.handleSelectOption = jest.fn();
+    const handleSelectOptionMock = jest.spyOn(instance, 'handleSelectOption');
     instance.onAddItem();
-    expect(instance.handleSelectOption).toHaveBeenCalledTimes(0);
+    expect(handleSelectOptionMock).toHaveBeenCalledTimes(0);
   });
 
   it('onAddItem: should call handleSelectOption if hoveredItem is set in state', () => {
