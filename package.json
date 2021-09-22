@@ -189,7 +189,11 @@
     "plugins": [
       "@babel/plugin-transform-modules-commonjs",
       "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-export-default-from"
+      "@babel/plugin-proposal-export-default-from",
+      ["babel-plugin-styled-components", {
+        "displayName": true,
+        "pure": true
+      }]
     ],
     "presets": [
       "@babel/preset-env",
