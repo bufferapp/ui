@@ -3,6 +3,11 @@
 ## [5.75.2] - 2021-09-22
 
 ### Fixed
+- Styled-Components: Added displayName on the Babel build process to prevent style collisions on micro frontends setups.
+
+## [5.75.2] - 2021-09-22
+
+### Fixed
 - Select: Bug that doesn't allow clicking on filtered options because Search will always clear on blur
 - Select: Does not filter menu options when 'clearSearchOnBlur' is false and menu is re-opened with saved search value
 
