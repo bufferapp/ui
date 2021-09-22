@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased]
+
+### Fixed
+- Select: Bug that doesn't allow clicking on filtered options because Search will always clear on blur
+- Select: Does not filter menu options when 'clearSearchOnBlur' is false and menu is re-opened with saved search value
+
+### Added
+- Select: Clear Search input value on blur using 'clearSearchOnBlur' prop ie when the Select menu is closed
+- Search: Reset search value on focus with 'resetOnFocus' prop 
+
 ## [5.75.1] - 2021-09-14
 
 ### Fixed

@@ -68,17 +68,35 @@ export default class Select extends React.Component {
       this.selectNode.addEventListener('keydown', this.keyDownPressed);
   }
 
-  componentDidUpdate(prevProps) {
+  componentDidUpdate(prevProps, prevState) {
+    // Simulate button click if isOpen is being controlled
     if (prevProps.isOpen !== this.props.isOpen) {
       // focus the Select component in order to be able to catch the keyboard events
       this.props.isOpen && this.onButtonClick();
     }
+
+    const menuIsOpening = !prevState.isOpen && !!this.state.isOpen;
+    const shouldFilterOnMenuOpen = !this.props.clearSearchOnBlur && !!this.state.searchValue;
+    if (menuIsOpening && shouldFilterOnMenuOpen) this.filterOnMenuOpen();
+
+    const menuIsClosing = !!prevState.isOpen && !this.state.isOpen ;
+    if (menuIsClosing && this.props.clearSearchOnBlur) this.clearSearchOnMenuClose()
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true);
     this.selectNode &&
       this.selectNode.removeEventListener('keydown', this.keyDownPressed);
+  }
+
+  filterOnMenuOpen = () => {
+    if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue);
+    this.onSearchChange(this.state.searchValue);
+  }
+
+  clearSearchOnMenuClose = () => {
+    if (this.searchInput) this.searchInput.updateSearch('');
+    this.onSearchChange('');
   }
 
   keyDownPressed = e => {
@@ -110,7 +128,7 @@ export default class Select extends React.Component {
   handleKeyPress = (event, keyHandler) => {
     event.preventDefault();
     event.stopPropagation();
-    keyHandler();
+    keyHandler(event);
   };
 
   // Close the popover
@@ -261,8 +279,8 @@ export default class Select extends React.Component {
     }
   };
 
-  onAddItem = () => {
-    const { onSelectClick, multiSelect } = this.props;
+  onAddItem = (event) => {
+    const { multiSelect } = this.props;
     const { items, hoveredItem, isCustomItemFocused, searchValue } = this.state;
     const selectedItem = items[hoveredItem];
 
@@ -271,9 +289,11 @@ export default class Select extends React.Component {
       this.setState({ isCustomItemFocused: false, isOpen: multiSelect });
     }
 
-    selectedItem && selectedItem.onItemClick
-      ? selectedItem.onItemClick(selectedItem)
-      : onSelectClick(items[hoveredItem]);
+    if (selectedItem) {
+      selectedItem.onItemClick
+        ? this.handleSelectOption(selectedItem, selectedItem.onItemClick)
+        : this.handleSelectOption(selectedItem, event);
+    }
   };
 
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
@@ -489,6 +509,7 @@ export default class Select extends React.Component {
       isInputSearch,
       selectPopupVisible,
       noResultsCustomMessage,
+      searchInputProps,
     } = this.props;
     const { isOpen, hoveredItem, items, isFiltering } = this.state;
 
@@ -504,15 +525,16 @@ export default class Select extends React.Component {
       >
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
-            id="searchInput"
+            id='searchInput'
             ref={node => (this.searchInputNode = node)}
           >
             <SearchIcon />
             <Search
+              ref={node => (this.searchInput = node)}
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
-              clearSearchOnBlur
+              {...searchInputProps}
             />
           </SearchBarWrapper>
         )}
@@ -688,6 +710,12 @@ Select.propTypes = {
 
   /** Custom message to display when no results were found */
   noResultsCustomMessage: PropTypes.string,
+
+  /** Should clear the search field's value when the main input is blurred  */
+  clearSearchOnBlur: PropTypes.bool,
+
+  /** Prop */
+  searchInputProps: PropTypes.shape({}),
 };
 
 Select.defaultProps = {
@@ -721,4 +749,8 @@ Select.defaultProps = {
   isInputSearch: false,
   selectPopupVisible: false,
   noResultsCustomMessage: 'No matches found',
+  clearSearchOnBlur: false,
+  searchInputProps: {
+    resetOnBlur: true,
+  },
 };

@@ -228,6 +228,63 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
 </ForwardRef(styled.div)>
 `;
 
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearSearchOnBlur" is set to: "false" 1`] = `
+<ForwardRef(styled.div)
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <ForwardRef(styled.div)
+    disabled={true}
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </ForwardRef(styled.div)>
+  <ForwardRef(styled.div)
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <ForwardRef(styled.ul)>
+      <SelectItem
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </ForwardRef(styled.ul)>
+  </ForwardRef(styled.div)>
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
 <ForwardRef(styled.div)
   aria-expanded={true}

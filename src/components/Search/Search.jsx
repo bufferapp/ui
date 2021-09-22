@@ -8,31 +8,31 @@ export default class Search extends React.Component {
     search: '',
   };
 
-
   componentDidUpdate(prevProps) {
     if(prevProps.isOpen !== this.props.isOpen){
       setTimeout(()=> this.inputRef.focus(), 50)
     }
   }
 
+  updateSearch = (search) => {
+    this.setState({
+      search,
+    });
+  }
 
   onChange = (event) => {
     const { onChange } = this.props;
     const search = event.target.value;
 
     onChange(search);
-    this.setState({
-      search,
-    });
+    this.updateSearch(search);
   }
 
-  onBlur = () => {
+  clearSearch = () => {
     const { onChange } = this.props;
 
     onChange('');
-    this.setState({
-      search: '',
-    });
+    this.updateSearch('');
   }
 
   render() {
@@ -40,7 +40,8 @@ export default class Search extends React.Component {
       placeholder,
       onClick,
       height,
-      clearSearchOnBlur,
+      resetOnBlur,
+      resetOnFocus,
     } = this.props;
 
     const { search } = this.state;
@@ -54,8 +55,8 @@ export default class Search extends React.Component {
           ref={inputRef => this.inputRef = inputRef}
           onChange={event => this.onChange(event)}
           onClick={onClick}
-          clearSearchOnBlur={clearSearchOnBlur}
-          onBlur={clearSearchOnBlur ? this.onBlur : undefined}
+          onBlur={resetOnBlur ? this.clearSearch : undefined}
+          onFocus={resetOnFocus ? this.clearSearch : undefined}
           height={height}
         />
       </SearchWrapper>
@@ -80,7 +81,10 @@ Search.propTypes = {
   height: PropTypes.string,
 
   /** Should the search clear on blur */
-  clearSearchOnBlur: PropTypes.bool,
+  resetOnBlur: PropTypes.bool,
+
+  /** Should the search clear on focus */
+  resetOnFocus: PropTypes.bool,
 
   /** Is onBlur event */
   onBlur: PropTypes.func
@@ -90,7 +94,8 @@ Search.defaultProps = {
   placeholder: '',
   height: 'tall',
   isOpen: false,
-  clearSearchOnBlur: false,
+  resetOnBlur: false,
+  resetOnFocus: false,
   onClick: () => {},
   onBlur: () => {}
 }

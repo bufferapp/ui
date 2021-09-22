@@ -43,6 +43,10 @@ export default function ExampleSelectWithSelectAll() {
         title: 'name',
       }}
       items={[ allItemsOption, ...items ]}
+      clearSearchOnBlur
+      searchInputProps={{
+        clearSearchOnBlur: false,
+      }}
     />
   );
 }
