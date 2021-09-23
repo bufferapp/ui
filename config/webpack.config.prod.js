@@ -447,6 +447,11 @@ module.exports = {
                 minifyURLs: true,
             },
         }),
+        new webpack.DefinePlugin({
+            'process.env': {
+              SC_ATTR: JSON.stringify('bufferapp/ui-styles'),
+            },
+        }),
         // Inlines the webpack runtime script. This script is too small to warrant
         // a network request.
         shouldInlineRuntimeChunk &&

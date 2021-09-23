@@ -9,12 +9,11 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed all pro
   justify="flex-end"
   onDismiss={[MockFunction]}
   stageInAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-ciDIsA",
       "inject": [Function],
       "name": "ciDIsA",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: translateY(-200px);
     opacity: 0;
@@ -25,19 +24,15 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed all pro
     opacity: 1;
   }
 ",
-        "ciDIsA",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }
   stageOutAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-bjhQjg",
       "inject": [Function],
       "name": "bjhQjg",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -48,9 +43,6 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed all pro
     opacity: 0;
   }
 ",
-        "bjhQjg",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }
@@ -89,12 +81,11 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed only re
   justify="flex-end"
   onDismiss={[MockFunction]}
   stageInAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-ciDIsA",
       "inject": [Function],
       "name": "ciDIsA",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: translateY(-200px);
     opacity: 0;
@@ -105,19 +96,15 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed only re
     opacity: 1;
   }
 ",
-        "ciDIsA",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }
   stageOutAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-bjhQjg",
       "inject": [Function],
       "name": "bjhQjg",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -128,9 +115,6 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed only re
     opacity: 0;
   }
 ",
-        "bjhQjg",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }

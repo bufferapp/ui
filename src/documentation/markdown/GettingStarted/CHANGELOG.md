@@ -1,6 +1,13 @@
 # Changelog
 
-## [5.75.2] - 2021-09-22
+## [5.75.6] - 2021-09-22
+
+### Fixed
+- Styled-Components: Added namespacing on the Babel build process to prevent style collisions on micro frontends setups.
+- Styled-Components: Added SC_ATTR in the production build process to prevent style collisions on micro frontends setups.
+- Styled-Components: moved styled-components from devDependencies to dependencies in package.json
+
+## [5.75.5] - 2021-09-22
 
 ### Fixed
 - Styled-Components: Added displayName on the Babel build process to prevent style collisions on micro frontends setups.

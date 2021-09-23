@@ -9,12 +9,11 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`]
   justify="flex-end"
   onDismiss={[MockFunction]}
   stageInAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-jALQVJ",
       "inject": [Function],
       "name": "jALQVJ",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: translateX(200px);
     opacity: 0;
@@ -25,19 +24,15 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`]
     opacity: 1;
   }
 ",
-        "jALQVJ",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }
   stageOutAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-bjhQjg",
       "inject": [Function],
       "name": "bjhQjg",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -48,9 +43,6 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`]
     opacity: 0;
   }
 ",
-        "bjhQjg",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }
@@ -79,12 +71,11 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required
   justify="flex-end"
   onDismiss={null}
   stageInAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-jALQVJ",
       "inject": [Function],
       "name": "jALQVJ",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: translateX(200px);
     opacity: 0;
@@ -95,19 +86,15 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required
     opacity: 1;
   }
 ",
-        "jALQVJ",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }
   stageOutAnimation={
-    Keyframes {
+    e {
       "id": "sc-keyframes-bjhQjg",
       "inject": [Function],
       "name": "bjhQjg",
-      "stringifyArgs": Array [
-        "
+      "rules": "
   0% {
     transform: scale(1) translateY(0);
     opacity: 1;
@@ -118,9 +105,6 @@ exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required
     opacity: 0;
   }
 ",
-        "bjhQjg",
-        "@keyframes",
-      ],
       "toString": [Function],
     }
   }
