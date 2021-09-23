@@ -36,7 +36,7 @@
   "peerDependencies": {
     "react": ">= 16.8.0",
     "react-dom": ">= 16.8.0",
-    "styled-components": "^5.0.1"
+    "styled-components": "^5.3.0"
   },
   "dependencies": {
     "@reach/tooltip": "0.6.2",
