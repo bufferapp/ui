@@ -751,6 +751,6 @@ Select.defaultProps = {
   noResultsCustomMessage: 'No matches found',
   clearSearchOnBlur: false,
   searchInputProps: {
-    resetOnBlur: true,
+    clearSearchOnBlur: true,
   },
 };
