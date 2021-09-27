@@ -1,5 +1,8 @@
 # Changelog
 
+## [Unreleased]
+- Remove npm in favour of yarn
+
 ## [5.75.7] - 2021-09-27
 
 ### Fixed
