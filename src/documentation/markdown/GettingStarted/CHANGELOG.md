@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.75.7] - 2021-09-27
+
+### Fixed
+- Search: Revert `resetOnBlur` prop to `clearSearchOnBlur` as renaming an existing prop is technically a breaking change
+
 ## [5.75.6] - 2021-09-22
 
 ### Fixed
