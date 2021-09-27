@@ -6,11 +6,11 @@ NC='\033[0m' # No Color
 
 if [ -z $1 ]
   then
-    echo -e $RED"Sync error:" $NC "plesase provide a destination folder"
+    echo -e $RED"Sync error:" $NC "please provide a destination folder"
     exit 1
 fi
 
-npm run build:lib &&\
+yarn build:lib &&\
   # remove spec and test files
   rm ./lib/*/*.test.* &&\
   rm ./lib/*/*.spec.* &&\
