@@ -205,6 +205,61 @@ describe('Select component', () => {
     ]);
   });
 
+  it('onSearchChange: should exclude items from search if "hideOnSearch" property is true', () => {
+    const wrapper = shallow(<Select
+      onSelectClick={() => true}
+      items={[
+        {
+          id: '1', title: 'Open', hideOnSearch: true,
+        },
+        {
+          id: '2', title: 'Pending',
+        },
+        {
+          id: '3', title: 'Closed',
+        },
+      ]}
+      label="Select"
+    />);
+    const instance = wrapper.instance();
+    instance.onSearchChange('Pen');
+    expect(wrapper.state().items).toEqual([
+      {
+        id: '2', title: 'Pending',
+      }
+    ]);
+  });
+
+  it('onSearchChange: "hideOnSearch" property should only hide item if search value is provided', () => {
+    const wrapper = shallow(<Select
+      onSelectClick={() => true}
+      items={[
+        {
+          id: '1', title: 'Open', hideOnSearch: true,
+        },
+        {
+          id: '2', title: 'Pending',
+        },
+        {
+          id: '3', title: 'Closed',
+        },
+      ]}
+      label="Select"
+    />);
+    const instance = wrapper.instance();
+    instance.onSearchChange('');
+    expect(wrapper.state().items).toEqual([
+      {
+        id: '1', title: 'Open', hideOnSearch: true,
+      },
+      {
+        id: '2', title: 'Pending',
+      },
+      {
+        id: '3', title: 'Closed',
+      },
+    ]);
+  });
 
   it('updateHoveredItemPosition: should update hoveredItem in state', () => {
     const wrapper = shallow(<Select onSelectClick={() => true} items={[]} label="Select" />);
