@@ -1,5 +1,8 @@
 # Changelog
 
+## [Unreleased]
+- Select: Set `hideOnSearch` property to true on items to hide them during search
+
 ## [5.75.7] - 2021-09-27
 
 ### Fixed
