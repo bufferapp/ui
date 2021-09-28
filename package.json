@@ -95,7 +95,6 @@
     "inquirer": "6.2.1",
     "jest": "^24.7.1",
     "jest-auto-snapshots": "=3.0.1",
-    "jest-pnp-resolver": "=1.0.1",
     "jest-resolve": "=23.6.0",
     "jest-styled-components": "^7.0.5",
     "markdown-to-jsx": "^6.11.4",
@@ -170,7 +169,6 @@
     ],
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
-    "resolver": "jest-pnp-resolver",
     "setupFiles": [
       "react-app-polyfill/jsdom"
     ],
