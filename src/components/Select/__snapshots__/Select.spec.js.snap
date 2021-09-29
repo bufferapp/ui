@@ -38,6 +38,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -95,6 +96,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -152,6 +154,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -209,6 +212,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -266,6 +270,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearS
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -324,6 +329,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -381,6 +387,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -438,6 +445,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -495,6 +503,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -552,6 +561,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -609,6 +619,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -666,6 +677,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -715,6 +727,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -772,6 +785,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -829,6 +843,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -886,6 +901,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -943,6 +959,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }
@@ -982,6 +999,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     items={
       Array [
         Object {
+          "hideOnSearch": true,
           "id": "jest-auto-snapshots String Fixture",
           "title": "jest-auto-snapshots String Fixture",
         },
@@ -1009,6 +1027,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
         hovered={false}
         item={
           Object {
+            "hideOnSearch": true,
             "id": "jest-auto-snapshots String Fixture",
             "title": "jest-auto-snapshots String Fixture",
           }

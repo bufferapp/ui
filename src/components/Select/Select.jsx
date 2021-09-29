@@ -354,6 +354,7 @@ export default class Select extends React.Component {
   onSearchChange = searchValue => {
     const { items, keyMap } = this.props;
     const searchField = keyMap ? keyMap.title : 'title';
+    const isFiltering = !!searchValue;
 
     // first, filter the items in the props that we get from the parent
 
@@ -364,6 +365,9 @@ export default class Select extends React.Component {
     // and we need to check there to see, for each item, if its selected
 
     const { startingWith, including } = items.reduce((filtered, item) => {
+      const hideItemWhileSearching = isFiltering && !!item.hideOnSearch;
+      if (hideItemWhileSearching) return filtered;
+
       if (item[searchField].toLowerCase().startsWith(searchValue.toLowerCase())) {
         return {...filtered, startingWith: [...filtered.startingWith, {...item, selected:
           this.findItemInState(item) && this.findItemInState(item).selected,
@@ -382,7 +386,7 @@ export default class Select extends React.Component {
 
     this.setState({
       items: arrayFinal,
-      isFiltering: !!searchValue,
+      isFiltering,
       searchValue,
     });
   };
@@ -619,6 +623,8 @@ Select.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
+      /** If true, item will be hidden while searching */
+      hideOnSearch: PropTypes.bool,
     })
   ).isRequired,
 
