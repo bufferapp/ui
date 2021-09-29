@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.75.9] - 2021-09-29
+
+### Fixed
+- Styled-Components: Fixed SC_ATTR to have the docs site working again
+
 ## [5.75.8]
 - Select: Set `hideOnSearch` property to true on items to hide them during search
 
