@@ -449,7 +449,7 @@ module.exports = {
         }),
         new webpack.DefinePlugin({
             'process.env': {
-              SC_ATTR: JSON.stringify('bufferapp/ui-styles'),
+              SC_ATTR: JSON.stringify('buffer-ui-styles'),
             },
         }),
         // Inlines the webpack runtime script. This script is too small to warrant
