@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.75.10] - 2021-10-04
+
+### Fixed
+- remove displayNames from babel config
+
 ## [5.75.9] - 2021-09-29
 
 ### Fixed
