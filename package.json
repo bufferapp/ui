@@ -197,9 +197,9 @@
           [
             "babel-plugin-styled-components",
             {
-              "displayName": true,
               "pure": true,
-              "namespace": "bufferapp/ui"
+              "namespace": "bufferapp/ui",
+              "minify": true
             }
           ]
         ]
