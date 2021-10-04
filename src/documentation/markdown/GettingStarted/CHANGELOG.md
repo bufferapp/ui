@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.75.11] - 2021-10-04
+
+### Fixed
+- use hyphen instead of a forward slash in namespacing
+
 ## [5.75.10] - 2021-10-04
 
 ### Fixed
