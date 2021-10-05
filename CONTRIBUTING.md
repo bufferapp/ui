@@ -40,7 +40,7 @@ The documentation site is built with Shared-Components and contains examples of 
 To get started:
 
 ```sh
-npm run start
+yarn start
 ```
 
 You can now access the documentation site [locally](http://localhost:3000). This script generates the documentation site and watches any changes in the app in order to hot reload the documentation.
@@ -59,28 +59,28 @@ snap(MyComponent, '../MyComponent.jsx');
 
 This will generate snapshot tests for all the different possible rendering state of that component by detecting the different prop types that component uses.
 
-Tests can be run with `npm run test`.
+Tests can be run with `yarn test`.
 
 
 ### Building locally
 
 To build the package locally, run:
 ```sh
-npm run build:lib
+yarn build:lib
 ```
 
 ### Publishing your code
 
 To publish your code changes, you can run the following command from the root of the package:
 ```sh
-npm run publish {major|minor|patch}
+yarn publish {major|minor|patch}
 ```
 this will automatically tag the release, generate a build, and deploy to npm and github with your changes.
 Under the hood, this runs the script `scripts/publish.sh`
 
 ### Coding style
 
-Please follow the coding style of the project. We use eslint, so if possible, enable linting in your editor to get real-time feedback. The linting rules can be run manually with the following command `npm run lint`.
+Please follow the coding style of the project. We use eslint, so if possible, enable linting in your editor to get real-time feedback. The linting rules can be run manually with the following command `yarn lint`.
 
 
 ## Adding a new Component
@@ -181,7 +181,7 @@ FIGMA_ACCESS_TOKEN=<your-token>
 Now that you have your token, you can run the script to create / update the Icon components!  **You only need to do this if icons have been added or changed in the Figma file.**
 
 ```bash
-$ npm run gen:icons
+$ yarn gen:icons
 ```
 
 To help you out the script will automatically check the `lastModified` time on the Figma file and compare it what's in the [local icon cache](/config/cachedIconData.json). If the Figma file is newer, it'll pull down the new data, otherwise it'll build the icons based on the cache.

@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.75.12] - 2021-10-05
+- Remove npm in favour of yarn
+
 ## [5.75.11] - 2021-10-04
 
 ### Fixed

@@ -5,7 +5,7 @@ This directory is used by the the `new-component` package.json script to bootstr
 ## Usage
 
 ```bash
-$ npm run component:new
+$ yarn component:new
 ```
 
 ## Changing the template
