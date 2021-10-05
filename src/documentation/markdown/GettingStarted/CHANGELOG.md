@@ -3,6 +3,21 @@
 ## [Unreleased]
 - Remove npm in favour of yarn
 
+## [5.75.11] - 2021-10-04
+
+### Fixed
+- use hyphen instead of a forward slash in namespacing
+
+## [5.75.10] - 2021-10-04
+
+### Fixed
+- remove displayNames from babel config
+
+## [5.75.9] - 2021-09-29
+
+### Fixed
+- Styled-Components: Fixed SC_ATTR to have the docs site working again
+
 ## [5.75.8]
 - Select: Set `hideOnSearch` property to true on items to hide them during search
 

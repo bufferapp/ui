@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "5.75.8",
+  "version": "5.75.11",
   "engines": {
     "node": ">=4.0.0"
   },
@@ -195,9 +195,9 @@
           [
             "babel-plugin-styled-components",
             {
-              "displayName": true,
               "pure": true,
-              "namespace": "bufferapp/ui"
+              "namespace": "bufferapp-ui",
+              "minify": true
             }
           ]
         ]
