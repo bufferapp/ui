@@ -5,18 +5,17 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const ViewIcon = createIconComponent({
+const GoogleDriveIcon = createIconComponent({
   content: (
     <g>
       <path
         fillRule="evenodd"
-        d="M8 13.5c4.418 0 8-5.5 8-5.5s-3.582-6-8-6-8 6-8 6 3.582 5.5 8 5.5zM8 11a3 3 0 100-6 3 3 0 000 6z"
+        d="M10.913 1H5.611l5.087 8.626H16L10.913 1zM16 10.231H5.894L3.27 14.753h10.106L16 10.23zM5.098 1.354l2.691 4.535-5.098 8.635L0 9.989l5.098-8.635z"
         clipRule="evenodd"
       ></path>
-      <path d="M10 8a2 2 0 11-4 0 2 2 0 014 0z"></path>
     </g>
   ),
 });
-ViewIcon.displayName = 'ViewIcon';
+GoogleDriveIcon.displayName = 'GoogleDriveIcon';
 
-export default ViewIcon;
+export default GoogleDriveIcon;

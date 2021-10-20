@@ -5,13 +5,13 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const MessageIcon = createIconComponent({
+const UnsplashIcon = createIconComponent({
   content: (
     <g>
-      <path d="M1 3a1 1 0 011-1h12a1 1 0 011 1v7a1 1 0 01-1 1H6c-.746 0-2.886 1.672-4.13 2.52-.457.31-.87.032-.87-.52V3z"></path>
+      <path d="M5.219 4.797V1h5.062v3.797H5.22zm5.062 2.11H14.5V14.5H1V6.906h4.219v3.797h5.062V6.906z"></path>
     </g>
   ),
 });
-MessageIcon.displayName = 'MessageIcon';
+UnsplashIcon.displayName = 'UnsplashIcon';
 
-export default MessageIcon;
+export default UnsplashIcon;
