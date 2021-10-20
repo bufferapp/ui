@@ -5,13 +5,13 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const MessageIcon = createIconComponent({
+const OnedriveIcon = createIconComponent({
   content: (
     <g>
-      <path d="M1 3a1 1 0 011-1h12a1 1 0 011 1v7a1 1 0 01-1 1H6c-.746 0-2.886 1.672-4.13 2.52-.457.31-.87.032-.87-.52V3z"></path>
+      <path d="M.719 11.537a3.998 3.998 0 013.23-6.285 5 5 0 019.02 1.507 3.25 3.25 0 01-.22 6.492H4a3.994 3.994 0 01-3.28-1.714z"></path>
     </g>
   ),
 });
-MessageIcon.displayName = 'MessageIcon';
+OnedriveIcon.displayName = 'OnedriveIcon';
 
-export default MessageIcon;
+export default OnedriveIcon;
