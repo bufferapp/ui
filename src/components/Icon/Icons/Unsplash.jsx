@@ -5,13 +5,13 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const FlagIcon = createIconComponent({
+const UnsplashIcon = createIconComponent({
   content: (
     <g>
-      <path d="M4 1H2v14h2V1zm1 9V2h9l-1.72 3.566a1 1 0 000 .868L14 10H5z" />
+      <path d="M5.219 4.797V1h5.062v3.797H5.22zm5.062 2.11H14.5V14.5H1V6.906h4.219v3.797h5.062V6.906z" />
     </g>
   ),
 });
-FlagIcon.displayName = 'FlagIcon';
+UnsplashIcon.displayName = 'UnsplashIcon';
 
-export default FlagIcon;
+export default UnsplashIcon;

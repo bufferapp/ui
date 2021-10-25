@@ -5,17 +5,17 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const ButtonLinkIcon = createIconComponent({
+const GoogleDriveIcon = createIconComponent({
   content: (
     <g>
       <path
         fillRule="evenodd"
-        d="M2 5C.895 5 0 5.672 0 6.5v3c0 .828.895 1.5 2 1.5h12c1.105 0 2-.672 2-1.5v-3c0-.828-.895-1.5-2-1.5H2zm1 2.25c-.552 0-1 .336-1 .75s.448.75 1 .75h10c.552 0 1-.336 1-.75s-.448-.75-1-.75H3z"
+        d="M10.913 1H5.611l5.087 8.626H16L10.913 1zM16 10.231H5.894L3.27 14.753h10.106L16 10.23zM5.098 1.354l2.691 4.535-5.098 8.635L0 9.989l5.098-8.635z"
         clipRule="evenodd"
       />
     </g>
   ),
 });
-ButtonLinkIcon.displayName = 'ButtonLinkIcon';
+GoogleDriveIcon.displayName = 'GoogleDriveIcon';
 
-export default ButtonLinkIcon;
+export default GoogleDriveIcon;
