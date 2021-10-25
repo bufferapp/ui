@@ -184,6 +184,8 @@ Now that you have your token, you can run the script to create / update the Icon
 $ yarn gen:icons
 ```
 
+**Note**: with the recent migration from NPM to Yarn, you need to run ESLint manually to fix errors (or fix the script). The issue behind it is Yarn which doesn't generate self-closing tags. Possible resolution to it is to run ESLint programmatically in the script.
+
 To help you out the script will automatically check the `lastModified` time on the Figma file and compare it what's in the [local icon cache](/config/cachedIconData.json). If the Figma file is newer, it'll pull down the new data, otherwise it'll build the icons based on the cache.
 
 Once the icons are generated you can commit and push them as you would any other code changes.

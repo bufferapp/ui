@@ -1,5 +1,11 @@
 # Changelog
 
+## [5.75.13] - 2021-10-25
+- Add icon: Google Drive
+- Add icon: OneDrive
+- Add icon: Dropbox
+- Add icon: Unsplash
+
 ## [5.75.12] - 2021-10-05
 - Remove npm in favour of yarn
 
