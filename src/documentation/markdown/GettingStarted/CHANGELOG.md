@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.76.3] - 2021-11-1
+- Update icon's index
+
 ## [5.76.2] - 2021-11-1
 - Code linting
 
