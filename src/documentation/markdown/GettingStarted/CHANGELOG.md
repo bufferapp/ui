@@ -1,5 +1,14 @@
 # Changelog
 
+## [5.76.0] - 2021-11-1
+- Add icon: Bandcamp
+- Add icon: Discord
+- Add icon: Dribbble
+- Add icon: Github
+- Add icon: Paypal
+- Add icon: Soundcloud
+- Add icon: Telegram
+
 ## [5.75.13] - 2021-10-25
 - Add icon: Google Drive
 - Add icon: OneDrive
@@ -52,7 +61,7 @@
 
 ### Added
 - Select: Clear Search input value on blur using 'clearSearchOnBlur' prop ie when the Select menu is closed
-- Search: Reset search value on focus with 'resetOnFocus' prop 
+- Search: Reset search value on focus with 'resetOnFocus' prop
 
 ## [5.75.1] - 2021-09-14
 
