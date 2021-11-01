@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.76.1] - 2021-11-1
+- Code linting
+
 ## [5.76.0] - 2021-11-1
 - Add icon: Bandcamp
 - Add icon: Discord
