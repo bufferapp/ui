@@ -1,5 +1,15 @@
 # Changelog
 
+## [5.76.4] - 2021-11-17
+- Add icon: Caret Down
+- Add icon: Caret Left
+- Add icon: Caret Right
+- Add icon: Caret Up
+- Add icon: Giphy
+- Add icon: Image
+- Add icon: Mail
+- Add icon: Stats
+
 ## [5.76.3] - 2021-11-1
 - Update icon's index
 
