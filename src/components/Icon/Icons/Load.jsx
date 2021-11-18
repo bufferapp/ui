@@ -15,7 +15,7 @@ const LoadIcon = createIconComponent({
       />
       <defs>
         <radialGradient
-          id="paint0_angular_349:892"
+          id="paint0_angular_349_892"
           cx="0"
           cy="0"
           r="1"
