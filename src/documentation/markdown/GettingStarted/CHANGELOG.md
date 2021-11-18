@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.76.4] - 2021-11-17
+## [5.77.0] - 2021-11-18
 - Add icon: Caret Down
 - Add icon: Caret Left
 - Add icon: Caret Right
