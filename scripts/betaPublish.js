@@ -14,10 +14,10 @@ const betaVersion = `${baseVersion}-beta.${revision}`;
 
 childProcess
   .execSync(`
-    npm version ${betaVersion} --git-tag-version=false && \
-    npm run build:lib && \
+    yarn version --new-version ${betaVersion} --no-git-tag-version && \
+    yarn run build:lib && \
     cd ./lib && \
-    npm publish --tag=beta
+    yarn publish --tag=beta
   `);
 
 console.log('\n');

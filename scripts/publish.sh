@@ -14,10 +14,10 @@ newVersion=$1
 echo -e $BLUE"Publishing a new" $newVersion "version"$NC
 
 git checkout main && \
-  npm version $newVersion && \
-  npm run build:lib && \
-  cd ./lib && \
-  npm publish && \
-  cd ../ &&\
-  git push --follow-tags &&\
-  npm run deploy:docs
+yarn version --$newVersion && \
+yarn build:lib && \
+cd ./lib && \
+yarn publish && \
+cd ../ &&\
+git push --follow-tags &&\
+yarn deploy:docs
