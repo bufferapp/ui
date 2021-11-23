@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.77.1] - 2021-11-23
+- fix publishing script
+- fix beta publishing script
+
 ## [5.77.0] - 2021-11-18
 - Add icon: Caret Down
 - Add icon: Caret Left
