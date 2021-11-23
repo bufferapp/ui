@@ -73,7 +73,7 @@ yarn build:lib
 
 To publish your code changes, you can run the following command from the root of the package:
 ```sh
-yarn publish {major|minor|patch}
+yarn run publish {major|minor|patch}
 ```
 this will automatically tag the release, generate a build, and deploy to npm and github with your changes.
 Under the hood, this runs the script `scripts/publish.sh`
