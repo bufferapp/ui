@@ -14,7 +14,7 @@ newVersion=$1
 echo -e $BLUE"Publishing a new" $newVersion "version"$NC
 
 git checkout main && \
-yarn version --minor/major/patch && \
+yarn version --$newVersion && \
 yarn build:lib && \
 cd ./lib && \
 yarn publish && \
