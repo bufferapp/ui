@@ -1,5 +1,10 @@
 # Changelog
 
+## [5.77.2] - 2022-02-14
+- Add icon: Import
+- Add icon: Social Icons
+- Add icon: Video
+
 ## [5.77.1] - 2021-11-23
 - fix publishing script
 - fix beta publishing script
