@@ -8,6 +8,7 @@ export const ContainerStyled = styled.div`
   background-color: ${grayLight};
   border-radius: ${borderRadius};
   margin: 16px 0px;
+  overflow: hidden;
 `;
 
 export const ProgressStyled = styled.div`
