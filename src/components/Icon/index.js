@@ -84,6 +84,7 @@ export Negative from './Icons/Negative';
 export Onedrive from './Icons/Onedrive';
 export OpenNew from './Icons/OpenNew';
 export Order from './Icons/Order';
+export Order from './Icons/Order';
 export Organic from './Icons/Organic';
 export Patreon from './Icons/Patreon';
 export Pause from './Icons/Pause';
