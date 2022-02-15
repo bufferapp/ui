@@ -8,8 +8,9 @@ import {
 
 const ProgressBar = ({
   progress,
+  className,
 }) => (
-  <ContainerStyled>
+  <ContainerStyled className={className}>
     <ProgressStyled progress={progress} />
   </ContainerStyled>
 );
@@ -17,6 +18,12 @@ const ProgressBar = ({
 ProgressBar.propTypes = {
   /** Percentage of progress. */
   progress: PropTypes.string.isRequired,
+  /** Class passed by the DOM element. */
+  className: PropTypes.string,
+};
+
+ProgressBar.defaultProps = {
+  className: undefined,
 };
 
 export default ProgressBar;

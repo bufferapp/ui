@@ -1,5 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > ProgressBar Matches snapshot when passed all props 1`] = `
+<ForwardRef(styled.div)
+  className="jest-auto-snapshots String Fixture"
+>
+  <ForwardRef(styled.div)
+    progress="jest-auto-snapshots String Fixture"
+  />
+</ForwardRef(styled.div)>
+`;
+
 exports[`jest-auto-snapshots > ProgressBar Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)>
   <ForwardRef(styled.div)
