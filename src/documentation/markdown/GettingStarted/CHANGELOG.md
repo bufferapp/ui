@@ -1,6 +1,6 @@
 # Changelog
 
-## [5.77.3] - 2022-02-14
+## [5.77.3] - 2022-02-15
 - ProgressBar: add className prop
 - ProgressBar: improve styling
 
