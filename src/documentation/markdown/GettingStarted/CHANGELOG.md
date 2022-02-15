@@ -1,5 +1,9 @@
 # Changelog
 
+## [5.77.3] - 2022-02-14
+- ProgressBar: add className prop
+- ProgressBar: improve styling
+
 ## [5.77.2] - 2022-02-14
 - Add icon: Import
 - Add icon: Social Icons
