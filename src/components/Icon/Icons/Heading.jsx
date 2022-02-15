@@ -8,7 +8,7 @@ import createIconComponent from '../utils/createIconComponent';
 const HeadingIcon = createIconComponent({
   content: (
     <g>
-      <path d="M12.796 14.086h-2.092v-5.37H5.3v5.37H3.2V2h2.1v5.03h5.404V2h2.092v12.086z" />
+      <path d="M10.146 8.989H5.893V14H3V2h2.893v4.764h4.253V2h2.884v12h-2.884V8.989z" />
     </g>
   ),
 });
