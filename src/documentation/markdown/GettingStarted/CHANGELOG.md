@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.77.4] - 2022-02-15
+- Update icon: Add Media
+- Update icon: Button Link
+- Update icon: Heading
+- Update icon: Image
+- Update icon: Subheading
+
 ## [5.77.3] - 2022-02-15
 - ProgressBar: add className prop
 - ProgressBar: improve styling
