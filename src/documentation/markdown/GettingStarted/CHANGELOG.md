@@ -1,5 +1,8 @@
 # Changelog
 
+## [5.77.5] - 2022-02-22
+- Add icon: Drag Indicator
+
 ## [5.77.4] - 2022-02-15
 - Update icon: Add Media
 - Update icon: Button Link

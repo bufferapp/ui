@@ -37,6 +37,7 @@ export Day from './Icons/Day';
 export Direct from './Icons/Direct';
 export Discord from './Icons/Discord';
 export Dollar from './Icons/Dollar';
+export DragIndicator from './Icons/DragIndicator';
 export Dribbble from './Icons/Dribbble';
 export Dropbox from './Icons/Dropbox';
 export Email from './Icons/Email';
