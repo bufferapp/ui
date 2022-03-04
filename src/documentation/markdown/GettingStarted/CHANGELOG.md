@@ -1,4 +1,6 @@
 # Changelog
+## [5.78] - 2022-03-03
+- Add NonDismissibleModal
 
 ## [5.77.5] - 2022-02-22
 - Add icon: Drag Indicator
