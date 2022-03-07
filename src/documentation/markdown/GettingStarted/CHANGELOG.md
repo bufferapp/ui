@@ -1,5 +1,12 @@
 # Changelog
-## [5.78] - 2022-03-03
+
+## [5.78.1] - 2022-03-07
+- Add icon: Calendar Add
+- Add icon: Instagram Grid
+- Add icon: Sparkles
+- Add icon: Substract
+
+## [5.78.0] - 2022-03-03
 - Add NonDismissibleModal
 
 ## [5.77.5] - 2022-02-22
