@@ -4,7 +4,7 @@
 - Add icon: Calendar Add
 - Add icon: Instagram Grid
 - Add icon: Sparkles
-- Add icon: Substract
+- Add icon: Subtract
 
 ## [5.78.0] - 2022-03-03
 - Add NonDismissibleModal
