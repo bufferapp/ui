@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import * as Styles from './style';
 import Button from '../Button';
 import { Cross } from '../Icon';
-import { deprecatedWarning } from '../util/deprecated-warning';
 
 function setCookie(cookie, cookieKey, days, value) {
   const expiresInDays = days * 24 * 60 * 60;
@@ -29,11 +28,6 @@ class Modal extends React.Component {
   }
 
   componentDidMount() {
-    if (this.props.wide) {
-      deprecatedWarning(
-        'Obsolete Modal prop `wide`. Deprecated since version 5.32.0. Will be deleted in version 6.0.0. For similar behavior, use `width` prop.'
-      );
-    }
     if (this.ctaButton) {
       this.ctaButton.focus();
     }
@@ -105,7 +99,6 @@ class Modal extends React.Component {
       action,
       secondaryAction,
       footer,
-      wide,
       width,
       noBackground,
       closeButton,
@@ -120,7 +113,6 @@ class Modal extends React.Component {
         <Styles.Modal
           background={background}
           ref={modal => (this.modal = modal)}
-          wide={wide}
           width={width}
           tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
           noBackground={noBackground}
@@ -192,8 +184,6 @@ Modal.propTypes = {
     key: PropTypes.string.isRequired,
   }),
   footer: PropTypes.node,
-  /** set modal width to 730px, this will be deprecated in a future version, use width instead */
-  wide: PropTypes.bool,
   /** this element will regain focus on modal close */
   previousFocus: PropTypes.node,
   /** set a custom modal width, accepts 'wide' as a preset for 730px */
@@ -212,7 +202,6 @@ Modal.defaultProps = {
   action: null,
   secondaryAction: null,
   footer: null,
-  wide: false,
   previousFocus: null,
   dismissible: true,
   width: null,

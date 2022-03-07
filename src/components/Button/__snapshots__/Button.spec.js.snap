@@ -6,7 +6,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -23,11 +23,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -38,7 +46,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -55,11 +63,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -70,7 +86,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
   className="jest-auto-snapshots String Fixture"
   disabled={false}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -88,11 +104,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -103,7 +127,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={false}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -120,11 +144,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -135,7 +167,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -155,11 +187,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.div)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -170,7 +210,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -187,11 +227,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -202,7 +250,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEn
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -219,11 +267,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEn
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -234,7 +290,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -256,6 +312,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -266,7 +323,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -283,6 +340,13 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
@@ -298,7 +362,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -315,7 +379,15 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;
@@ -326,7 +398,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
-  type="link"
+  type="primary"
 >
   <ForwardRef(styled.div)>
     <ForwardRef(styled.button)
@@ -343,11 +415,19 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
         jest-auto-snapshots String Fixture
       </ForwardRef(styled.span)>
       <NodeFixture />
+      <ForwardRef(styled.div)>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </ForwardRef(styled.div)>
       <ForwardRef(styled.img)
         alt="loading"
         src="./images/loading-gray.svg"
       />
     </ForwardRef(styled.button)>
+    <NodeFixture />
   </ForwardRef(styled.div)>
 </ForwardRef(styled.div)>
 `;

@@ -1,5 +1,16 @@
 # Changelog
 
+## [6.0.0] - 2022-03-08
+⚠️ Breaking changes ⚠️
+- Deprecated: AppShell (no longer used from here, see bufferapp/appshell)
+- Deprecated: type="link" on Buttons (use Link component instead)
+- Deprecated: 'wide' prop on Modal (use 'width' instead)
+
+Other changes:
+- fixed: added all components to `documentation/markdown/UI.md`
+- updated tests
+- updated `CONTRIBUTING.md`
+
 ## [5.78.1] - 2022-03-07
 - Add icon: Calendar Add
 - Add icon: Instagram Grid
