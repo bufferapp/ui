@@ -32,7 +32,7 @@ export const Container = styled.div`
 `;
 
 const getWidth = props => {
-  if (props.wide || props.width === 'wide') {
+  if (props.width === 'wide') {
     return '730px';
   }
   if (props.width) {

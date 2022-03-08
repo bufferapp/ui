@@ -71,6 +71,8 @@ yarn build:lib
 
 ### Publishing your code
 
+Before you publish your code, make sure to update the changelog in `documentation/markdown/GettingStarted/CHANGELOG.md` with the version your code will take and the changes included.
+
 To publish your code changes, you can run the following command from the root of the package:
 ```sh
 yarn run publish {major|minor|patch}
@@ -81,6 +83,7 @@ Under the hood, this runs the script `scripts/publish.sh`
 ### Coding style
 
 Please follow the coding style of the project. We use eslint, so if possible, enable linting in your editor to get real-time feedback. The linting rules can be run manually with the following command `yarn lint`.
+Our latest coding style is compositional as opposed to inheritance based. For an example see the latest added components in the changelog and try to steer away from prop-heavy components, please :)
 
 
 ## Adding a new Component
@@ -111,6 +114,7 @@ Here are the basic steps:
 - The documentation site should be automatically refreshed and you should see your new component there
 - In the examples folder create a new folder named after your component
     - add a new file for each version of your component, named `ExampleVersion.jsx`
+- Make sure you add your new component to the list in `documentation/markdown/UI.md`
 
 
 ### Styling the Component

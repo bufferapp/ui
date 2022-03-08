@@ -4,7 +4,6 @@ import styled from 'styled-components';
 import * as Styles from './style';
 import ChevronDown from '../Icon/Icons/ChevronDown';
 import Select from '../Select/Select';
-import { useDeprecatedWarning } from '../util/deprecated-warning';
 
 /*
 Since buttons keep their own inline-block display type, we can only imitate this by using a wrapper (with
@@ -44,7 +43,7 @@ const VisuallyHiddenLabel = styled.span`
   border: 0;
 `;
 
-/** All buttons, including text, link and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
+/** All buttons, including text and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
 const Button = ({
   disabled,
@@ -68,79 +67,68 @@ const Button = ({
   className,
   children,
   ...props
-}) => {
-  /**
-   Deprecated since version 5.27.0
-   Will be deleted in version 6.0.0
-   For similar behavior, use a Link component.
-   Otherwise choose a different type of button.
-   */
-  if (type === 'link') {
-    useDeprecatedWarning('Obsolete Link Button. Deprecated since version 5.27.0. Will be deleted in version 6.0.0. For similar behavior, use a Link component. Otherwise choose a different type of button.');
-  }
-  return (
-    <ButtonWrapperStyled
-      className={className}
-      disabled={disabled}
-      type={type}
-      fullWidth={fullWidth}
-      $loading={loading}
-    >
-      <ButtonContainerStyled>
-        <ButtonStyled
-          onClick={!disabled ? onClick : undefined}
-          disabled={disabled}
-          isSplit={isSplit}
-          icon={icon}
-          hasIconOnly={hasIconOnly}
-          data-tip={tooltip}
-          ref={ref}
-          aria-haspopup="false"
-          size={size}
-          fullWidth={fullWidth}
-          {...props}
-        >
-          {!iconEnd && icon}
-          {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
-          {!hasIconOnly && (
-            <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>
-              {label}
-            </Styles.ButtonLabel>
-          )}
-          {iconEnd && icon}
+}) =>  (
+  <ButtonWrapperStyled
+    className={className}
+    disabled={disabled}
+    type={type}
+    fullWidth={fullWidth}
+    $loading={loading}
+  >
+    <ButtonContainerStyled>
+      <ButtonStyled
+        onClick={!disabled ? onClick : undefined}
+        disabled={disabled}
+        isSplit={isSplit}
+        icon={icon}
+        hasIconOnly={hasIconOnly}
+        data-tip={tooltip}
+        ref={ref}
+        aria-haspopup="false"
+        size={size}
+        fullWidth={fullWidth}
+        {...props}
+      >
+        {!iconEnd && icon}
+        {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
+        {!hasIconOnly && (
+          <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>
+            {label}
+          </Styles.ButtonLabel>
+        )}
+        {iconEnd && icon}
 
-          {isSelect && (type === 'primary' || type === 'secondary') && (
-            <Styles.ButtonArrow>
-              <ChevronDown
-                color={type === 'primary' ? 'white' : 'grayDark'}
-                size={size}
-                isChevron
-              />
-            </Styles.ButtonArrow>
-          )}
-
-          {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
-        </ButtonStyled>
-        {isSplit &&
-          (type === 'primary' || type === 'secondary') &&
-          (children ? (
-            React.Children.map(children, child => React.cloneElement(child, {}))
-          ) : (
-            <Select
-              onSelectClick={onSelectClick}
-              items={items}
-              type={type}
-              isSplit
-              yPosition={selectPosition}
-              xPosition="right"
-              disabled={disabled}
-              hideSearch={hideSearch}
+        {isSelect && (type === 'primary' || type === 'secondary') && (
+          <Styles.ButtonArrow>
+            <ChevronDown
+              color={type === 'primary' ? 'white' : 'grayDark'}
+              size={size}
+              isChevron
             />
-          ))}
-      </ButtonContainerStyled>
-    </ButtonWrapperStyled>
+          </Styles.ButtonArrow>
+        )}
+
+        {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
+      </ButtonStyled>
+      {isSplit &&
+        (type === 'primary' || type === 'secondary') &&
+        (children ? (
+          React.Children.map(children, child => React.cloneElement(child, {}))
+        ) : (
+          <Select
+            onSelectClick={onSelectClick}
+            items={items}
+            type={type}
+            isSplit
+            yPosition={selectPosition}
+            xPosition="right"
+            disabled={disabled}
+            hideSearch={hideSearch}
+          />
+        ))}
+    </ButtonContainerStyled>
+  </ButtonWrapperStyled>
   );
-};
 
 Button.propTypes = {
   /** Is the button disabled */
@@ -157,7 +145,6 @@ Button.propTypes = {
 
   /** Type of button */
   type: PropTypes.oneOf([
-    'link',
     'primary',
     'secondary',
     'text',
