@@ -1,5 +1,8 @@
 # Changelog
 
+## [6.0.1] - 2022-03-15
+- fixed: SimpleModal is dismissed on ESC keypress
+
 ## [6.0.0] - 2022-03-08
 ⚠️ Breaking changes ⚠️
 - Deprecated: AppShell (no longer used from here, see bufferapp/appshell)
