@@ -59,7 +59,7 @@ const CloseButton = styled.button`
   }
 `;
 
-function Notice({ children, dismiss, type, className }) {
+function Notice({ children, dismiss, type, className, disableAnimation }) {
   const {
     AnimationWrapper,
     dismiss: dismissAnimationWrapper,
@@ -72,7 +72,7 @@ function Notice({ children, dismiss, type, className }) {
   });
 
   return (
-    <AnimationWrapper {...animationProps}>
+    <AnimationWrapper {...animationProps} disableAnimation={disableAnimation}>
       <NoticeWrapper type={type} dismiss={dismiss} className={className}>
         {type === 'warning' && <WarningIcon />}
         {children}
@@ -89,12 +89,14 @@ function Notice({ children, dismiss, type, className }) {
 Notice.propTypes = {
   children: PropTypes.node.isRequired,
   dismiss: PropTypes.func,
+  disableAnimation: PropTypes.bool,
   /** can be warning, note */
   type: PropTypes.string.isRequired,
 };
 
 Notice.defaultProps = {
   dismiss: null,
+  disableAnimation: false,
 };
 
 export default Notice;
