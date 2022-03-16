@@ -37,7 +37,7 @@ const SimpleModal = ({ children, closeAction }) => {
   };
 
   const keyListenersMap = new Map([
-    [ESCAPE_KEY, () => dismissAnimationWrapper],
+    [ESCAPE_KEY, dismissAnimationWrapper],
     [TAB_KEY, handleTabKey],
   ]);
 
