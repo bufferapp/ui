@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { easeOutQuart } from '../style/animations';
 
 const AnimationContainer = styled.div`
@@ -11,21 +11,15 @@ const AnimationContainer = styled.div`
   outline: none;
   width: 100%;
 
-  ${({ disableAnimation }) =>
-    !disableAnimation &&
-    css`
-      &.stageIn {
-        animation: ${({ duration }) => `${duration}ms`}
-          ${({ stageInAnimation }) => stageInAnimation}
-          ${({ easing }) => easing};
-      }
+  &.stageIn {
+    animation: ${({ duration }) => `${duration}ms`}
+      ${({ stageInAnimation }) => stageInAnimation} ${({ easing }) => easing};
+  }
 
-      &.stageOut {
-        animation: ${({ duration }) => `${duration}ms`}
-          ${({ stageOutAnimation }) => stageOutAnimation}
-          ${({ easing }) => easing};
-      }
-    `}
+  &.stageOut {
+    animation: ${({ duration }) => `${duration}ms`}
+      ${({ stageOutAnimation }) => stageOutAnimation} ${({ easing }) => easing};
+  }
 
   @media (prefers-reduced-motion) {
     &.stageIn,
@@ -45,7 +39,6 @@ const AnimationWrapper = ({
   stageInAnimation,
   stageOutAnimation,
   onDismiss,
-  disableAnimation,
 }) => {
   const [content, setContent] = useState(children);
   const [hasChanged, setHasChanged] = useState(false);
@@ -108,7 +101,6 @@ const AnimationWrapper = ({
       stageInAnimation={stageInAnimation}
       stageOutAnimation={stageOutAnimation}
       className={className}
-      disableAnimation={disableAnimation}
     >
       {!dismissed && content}
     </AnimationContainer>
@@ -125,7 +117,6 @@ AnimationWrapper.propTypes = {
   stageInAnimation: PropTypes.shape({}).isRequired,
   stageOutAnimation: PropTypes.shape({}).isRequired,
   onDismiss: PropTypes.func,
-  disableAnimation: PropTypes.bool,
 };
 
 AnimationWrapper.defaultProps = {
@@ -134,7 +125,6 @@ AnimationWrapper.defaultProps = {
   duration: 300,
   justify: 'center',
   easing: easeOutQuart,
-  disableAnimation: true,
   onDismiss: () => {},
 };
 
