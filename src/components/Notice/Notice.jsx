@@ -83,7 +83,7 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
     return <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>;
   }
 
-  return <>{noticeContent}</>;
+  return <div>{noticeContent}</div>;
 }
 
 Notice.propTypes = {
