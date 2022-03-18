@@ -6,19 +6,17 @@ import { easeOutQuart } from '../style/animations';
 const AnimationContainer = styled.div`
   animation-fill-mode: forwards;
   display: flex;
-  align-items: ${({ align }) => align};
-  justify-content: ${({ justify }) => justify};
+  align-items: ${({ align }) => align}}
+  justify-content: ${({ justify }) => justify}}
   outline: none;
   width: 100%;
 
   &.stageIn {
-    animation: ${({ duration }) => `${duration}ms`}
-      ${({ stageInAnimation }) => stageInAnimation} ${({ easing }) => easing};
+    animation: ${({ duration }) => `${duration}ms`} ${({ stageInAnimation }) => stageInAnimation} ${({ easing }) => easing};
   }
 
   &.stageOut {
-    animation: ${({ duration }) => `${duration}ms`}
-      ${({ stageOutAnimation }) => stageOutAnimation} ${({ easing }) => easing};
+    animation: ${({ duration }) => `${duration}ms`} ${({ stageOutAnimation }) => stageOutAnimation} ${({ easing }) => easing};
   }
 
   @media (prefers-reduced-motion) {
@@ -45,33 +43,33 @@ const AnimationWrapper = ({
   const [dismissed, setDismissed] = useState(false);
   const [animationLocked, setAnimationLocked] = useState(false);
   const [className, setClassName] = useState('stageIn');
-  const shouldUpdate = children !== content && !dismissing;
+  const shouldUpdate = children !== content && !dismissing
 
   function lockAnimationDuringStaging() {
-    setAnimationLocked(true);
+    setAnimationLocked(true)
     setTimeout(() => {
-      setAnimationLocked(false);
-    }, duration * 2);
+      setAnimationLocked(false)
+    }, duration * 2)
   }
 
   function stageIn() {
-    setClassName('stageIn');
+    setClassName('stageIn')
   }
 
   function stageOut() {
-    setClassName('stageOut');
+    setClassName('stageOut')
   }
 
   useEffect(() => {
     if (shouldUpdate) {
       setHasChanged(true);
       setTimeout(() => {
-        stageIn();
-        setContent(children);
-        setHasChanged(false);
-      }, duration);
+        stageIn()
+        setContent(children)
+        setHasChanged(false)
+      }, duration)
     }
-  }, [children]);
+  }, [children])
 
   useEffect(() => {
     if (dismissing) {
@@ -79,17 +77,17 @@ const AnimationWrapper = ({
       setTimeout(() => {
         setDismissed(true);
         onDismiss();
-      }, duration - 10);
+      }, duration - 10)
     }
-  }, [dismissing]);
+  }, [dismissing])
 
   useEffect(() => {
-    lockAnimationDuringStaging();
-  }, []);
+    lockAnimationDuringStaging()
+  }, [])
 
   if (!animationLocked && (hasChanged || dismissing)) {
-    stageOut();
-    lockAnimationDuringStaging();
+    stageOut()
+    lockAnimationDuringStaging()
   }
 
   return (

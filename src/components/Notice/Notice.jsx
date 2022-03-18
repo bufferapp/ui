@@ -97,7 +97,6 @@ Notice.propTypes = {
 
 Notice.defaultProps = {
   dismiss: null,
-  disableAnimation: false
 };
 
 export default Notice;
