@@ -1,5 +1,67 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`jest-auto-snapshots > Notice Matches snapshot when boolean prop "disableAnimation" is set to: "false" 1`] = `
+<AnimationWrapper
+  align="center"
+  dismissing={false}
+  duration={300}
+  easing="cubic-bezier(0.25, 1, 0.5, 1)"
+  justify="flex-end"
+  onDismiss={[MockFunction]}
+  stageInAnimation={
+    e {
+      "id": "sc-keyframes-jALQVJ",
+      "inject": [Function],
+      "name": "jALQVJ",
+      "rules": "
+  0% {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+",
+      "toString": [Function],
+    }
+  }
+  stageOutAnimation={
+    e {
+      "id": "sc-keyframes-bjhQjg",
+      "inject": [Function],
+      "name": "bjhQjg",
+      "rules": "
+  0% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.05) translateY(-10px);
+    opacity: 0;
+  }
+",
+      "toString": [Function],
+    }
+  }
+>
+  <ForwardRef(styled.div)
+    dismiss={[MockFunction]}
+    type="jest-auto-snapshots String Fixture"
+  >
+    <NodeFixture />
+    <ForwardRef(styled.button)
+      onClick={[Function]}
+      type="jest-auto-snapshots String Fixture"
+    >
+      <CrossIcon />
+    </ForwardRef(styled.button)>
+  </ForwardRef(styled.div)>
+</AnimationWrapper>
+`;
+
 exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`] = `
 <AnimationWrapper
   align="center"
