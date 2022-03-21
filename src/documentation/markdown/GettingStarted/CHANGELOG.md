@@ -1,5 +1,9 @@
 # Changelog
 
+## [6.1.0] - 2022-03-21
+- Notice component: add new `disableAnimation` prop
+- fix: updated AnimationWrapper component to use `prefers-reduced-motion`
+
 ## [6.0.1] - 2022-03-15
 - fixed: SimpleModal is dismissed on ESC keypress
 
