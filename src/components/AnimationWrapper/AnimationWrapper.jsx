@@ -18,6 +18,13 @@ const AnimationContainer = styled.div`
   &.stageOut {
     animation: ${({ duration }) => `${duration}ms`} ${({ stageOutAnimation }) => stageOutAnimation} ${({ easing }) => easing};
   }
+
+  @media (prefers-reduced-motion) {
+    &.stageIn,
+    &.stageOut {
+      animation-name: dissolve;
+    }
+  }
 `;
 
 const AnimationWrapper = ({

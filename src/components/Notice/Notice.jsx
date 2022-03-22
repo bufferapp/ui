@@ -59,7 +59,7 @@ const CloseButton = styled.button`
   }
 `;
 
-function Notice({ children, dismiss, type, className }) {
+function Notice({ children, dismiss, type, className, disableAnimation }) {
   const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
     justify: 'flex-end',
     stageInAnimation: stageInRight,
@@ -67,33 +67,37 @@ function Notice({ children, dismiss, type, className }) {
     onDismiss: dismiss,
   })
 
-  return (
-    <AnimationWrapper {...animationProps}>
-      <NoticeWrapper type={type} dismiss={dismiss} className={className}>
-        {type === 'warning' && <WarningIcon />}
-        {children}
-        {dismiss && (
-          <CloseButton
-            type={type}
-            onClick={() => dismissAnimationWrapper()}
-          >
-            <Cross />
-          </CloseButton>
-        )}
-      </NoticeWrapper>
-    </AnimationWrapper>
+  const noticeContent = (
+    <NoticeWrapper type={type} dismiss={dismiss} className={className}>
+      {type === 'warning' && <WarningIcon />}
+      {children}
+      {dismiss && (
+        <CloseButton type={type} onClick={() => dismissAnimationWrapper()}>
+          <Cross />
+        </CloseButton>
+      )}
+    </NoticeWrapper>
   );
+
+  if (!disableAnimation) {
+    return <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>;
+  }
+
+  return <div>{noticeContent}</div>;
 }
 
 Notice.propTypes = {
   children: PropTypes.node.isRequired,
   dismiss: PropTypes.func,
+  /** doesn't use animation wrapper if true */
+  disableAnimation: PropTypes.bool,
   /** can be warning, note */
   type: PropTypes.string.isRequired,
 };
 
 Notice.defaultProps = {
   dismiss: null,
+  disableAnimation: false
 };
 
 export default Notice;
