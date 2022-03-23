@@ -9,9 +9,8 @@ export default function ExampleSelect() {
       label="Click me"
       type="primary"
       items={[
-        { id: '1', title: 'Open' },
-        { id: '2', title: 'Pending', tooltip: 'Pending item tooltip' },
-        { id: '3', title: 'Closed' },
+        { id: '1', title: 'With tooltip', tooltip: 'Item with tooltip' },
+        { id: '2', title: 'Without tooltip' },
       ]}
       position="right"
       hideSearch
