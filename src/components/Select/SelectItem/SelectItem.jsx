@@ -66,30 +66,30 @@ const SelectItem = ({
         hasComponent={item.component}
       >
         {item.selected && (
-        <IconWrapper>
-          <Checkmark color="grayDarker" />
-        </IconWrapper>
-      )}
+          <IconWrapper>
+            <Checkmark color="grayDarker" />
+          </IconWrapper>
+        )}
         {item.icon && (
-        <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
-      )}
+          <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
+        )}
 
         <SelectItemTitle
           moveRight={shouldItemMoveRight(item, hasSelectedItems, hideSearch)}
           title={title}
         >
           {item.component && (
-          <IconWrapper custom>
-            <SelectItemCustom
-              dangerouslySetInnerHTML={{ __html: item.component(item) }}
-            />
-          </IconWrapper>
-        )}
+            <IconWrapper custom>
+              <SelectItemCustom
+                dangerouslySetInnerHTML={{ __html: item.component(item) }}
+              />
+            </IconWrapper>
+          )}
           <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
         </SelectItemTitle>
         {item.hotKeyPrompt && (
-        <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
-      )}
+          <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
+        )}
       </SelectItemLabel>
     </SelectItemStyled>
   )
