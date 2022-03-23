@@ -1,5 +1,8 @@
 # Changelog
 
+## Unreleased
+- Add the ability to pass a tooltip as part of a Select item. It will display a tooltip instead of a title on hover.
+
 ## [6.1.0] - 2022-03-21
 - Notice component: add new `disableAnimation` prop
 - fix: updated AnimationWrapper component to use `prefers-reduced-motion`
