@@ -30,7 +30,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -88,7 +88,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -146,7 +146,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -204,7 +204,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={false}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -262,7 +262,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearS
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -321,7 +321,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -379,7 +379,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -437,7 +437,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -495,7 +495,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -553,7 +553,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -611,7 +611,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -669,7 +669,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -719,7 +719,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -777,7 +777,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -835,7 +835,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -893,7 +893,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -951,7 +951,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     yPosition="top"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
@@ -1019,7 +1019,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     yPosition="bottom"
   >
     <ForwardRef(styled.ul)>
-      <SelectItem
+      <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
         hasSelectedItems={false}
