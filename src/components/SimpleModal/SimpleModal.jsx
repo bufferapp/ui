@@ -78,6 +78,7 @@ const SimpleModal = ({ children, closeAction, alwaysOnTop }) => {
 SimpleModal.propTypes = {
   children: PropTypes.node.isRequired,
   closeAction: PropTypes.func.isRequired,
+  /**  bumps the z-index so the modal stays on top */
   alwaysOnTop: PropTypes.bool,
 };
 
