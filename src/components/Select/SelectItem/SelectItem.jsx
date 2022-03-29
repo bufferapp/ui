@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Checkmark } from '../../Icon';
+import Tooltip from '../../Tooltip';
 import {
   SelectItemStyled,
   SelectItemLabel,
@@ -19,6 +20,23 @@ const shouldItemMoveRight = (item, hasSelectedItems, hideSearch) =>
   // if it's not selected and it has a custom component, we shouldn't move the item
   !(item.component && !hasSelectedItems);
 
+const SelectItemTooltipWrapper = (props) => {
+  const { item, keyMap } = props;
+  const tooltip = item[keyMap ? keyMap.tooltip : 'tooltip']
+
+  return (
+    <>
+      {tooltip ? (
+        <Tooltip label={tooltip} position="bottom">
+          <SelectItem {...props} />
+        </Tooltip>
+      ) : (
+        <SelectItem {...props} />
+      )}
+    </>
+  )
+};
+
 const SelectItem = ({
   item,
   onClick,
@@ -29,47 +47,53 @@ const SelectItem = ({
   hideSearch,
   capitalizeItemLabel,
   onItemClick,
-}) => (
-  <SelectItemStyled
-    onClick={onItemClick || onClick}
-    hovered={hovered}
-    id={getItemId(item)}
-    disabled={item.disabled}
-  >
-    <SelectItemLabel
-      capitalizeItemLabel={capitalizeItemLabel}
-      hideSearch={hideSearch}
-      hasSelectedItems={hasSelectedItems}
-      hasComponent={item.component}
-    >
-      {item.selected && (
-        <IconWrapper>
-          <Checkmark color="grayDarker" />
-        </IconWrapper>
-      )}
-      {item.icon && (
-        <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
-      )}
+}) => {
+  const tooltip = item[keyMap ? keyMap.tooltip : 'tooltip']
+  let title = item[keyMap ? keyMap.title : 'title'];;
+  if (tooltip) title = null;
 
-      <SelectItemTitle
-        moveRight={shouldItemMoveRight(item, hasSelectedItems, hideSearch)}
-        title={item[keyMap ? keyMap.title : 'title']}
+  return (
+    <SelectItemStyled
+      onClick={onItemClick || onClick}
+      hovered={hovered}
+      id={getItemId(item)}
+      disabled={item.disabled}
+    >
+      <SelectItemLabel
+        capitalizeItemLabel={capitalizeItemLabel}
+        hideSearch={hideSearch}
+        hasSelectedItems={hasSelectedItems}
+        hasComponent={item.component}
       >
-        {item.component && (
-          <IconWrapper custom>
-            <SelectItemCustom
-              dangerouslySetInnerHTML={{ __html: item.component(item) }}
-            />
+        {item.selected && (
+          <IconWrapper>
+            <Checkmark color="grayDarker" />
           </IconWrapper>
         )}
-        <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
-      </SelectItemTitle>
-      {item.hotKeyPrompt && (
-        <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
-      )}
-    </SelectItemLabel>
-  </SelectItemStyled>
-);
+        {item.icon && (
+          <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
+        )}
+
+        <SelectItemTitle
+          moveRight={shouldItemMoveRight(item, hasSelectedItems, hideSearch)}
+          title={title}
+        >
+          {item.component && (
+            <IconWrapper custom>
+              <SelectItemCustom
+                dangerouslySetInnerHTML={{ __html: item.component(item) }}
+              />
+            </IconWrapper>
+          )}
+          <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
+        </SelectItemTitle>
+        {item.hotKeyPrompt && (
+          <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
+        )}
+      </SelectItemLabel>
+    </SelectItemStyled>
+  )
+};
 
 SelectItem.propTypes = {
   /** Item to render */
@@ -80,6 +104,7 @@ SelectItem.propTypes = {
     selected: PropTypes.bool,
     icon: PropTypes.node,
     component: PropTypes.func,
+    tooltip: PropTypes.string,
   }).isRequired,
 
   /** On click function */
@@ -122,4 +147,4 @@ SelectItem.defaultProps = {
   capitalizeItemLabel: true,
 };
 
-export default SelectItem;
+export default SelectItemTooltipWrapper;
