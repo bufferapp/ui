@@ -21,7 +21,7 @@ export const Container = styled.div`
   position: fixed;
   box-sizing: border-box;
   width: 100%;
-  z-index: ${({alwaysOnTop}) => alwaysOnTop? '9999' : 1 };
+  z-index: ${({alwaysOnTop}) => alwaysOnTop? '9999' : '1' };
   flex-direction: column;
   top: 0px;
   left: 0px;
