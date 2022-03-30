@@ -1,5 +1,8 @@
 # Changelog
 
+## [6.3.1] - 2022-03-30
+- NonDismissibleModal has different z-index than SimpleModal 
+
 ## [6.3.0] - 2022-03-30
 - SidebarListItem: Added TikTok
 

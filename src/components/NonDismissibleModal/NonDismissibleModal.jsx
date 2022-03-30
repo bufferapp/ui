@@ -17,7 +17,7 @@ const NonDismissibleModal = ({ children }) => {
   }, []);
 
   return (
-    <Container role="dialog" aria-modal="true">
+    <Container role="dialog" aria-modal="true" NonDismissibleModal>
       <AnimationWrapper {...animationProps}>
         <Modal ref={modalRef}>
           {children}

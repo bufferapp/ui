@@ -21,7 +21,7 @@ export const Container = styled.div`
   position: fixed;
   box-sizing: border-box;
   width: 100%;
-  z-index: 9999;
+  z-index: ${({NonDismissibleModal}) => NonDismissibleModal? '1' : '9999' };
   flex-direction: column;
   top: 0px;
   left: 0px;
