@@ -4,8 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import * as Styles from './style';
-import { facebook, googleplus, instagram, linkedin, pinterest, twitter, shopify } from '../style/colors';
-import { Instagram, Facebook, Twitter, LinkedIn, Pinterest, GooglePlus, Shopify } from '../Icon';
+import {facebook, googleplus, instagram, linkedin, pinterest, shopify, tiktok, twitter} from '../style/colors';
+import {Facebook, GooglePlus, Instagram, LinkedIn, Pinterest, Shopify, Tiktok, Twitter} from '../Icon';
 
 const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}
@@ -51,6 +51,11 @@ const socialIconMap = new Map([
       <Shopify size="small" color="white" />
     </Styles.SocialIconWrapper>
   )],
+  ['tiktok', ({ size }) => (
+    <Styles.SocialIconWrapper size={size} bgColor={tiktok}>
+      <Tiktok size="small" color="white" />
+    </Styles.SocialIconWrapper>
+  )],
 ]);
 
 const Avatar = ({
@@ -85,7 +90,7 @@ Avatar.propTypes = {
   /** Makes the status indictor green when `true`. Only applicable when `{ type: 'status' }` */
   isOnline: PropTypes.bool,
   /** Name of social network icon to overlay. (E.g., `'instagram'`). Only applicable when `{ type: 'social' }` */
-  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest', 'shopify']),
+  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest', 'shopify', 'tiktok']),
 };
 
 Avatar.defaultProps = {
