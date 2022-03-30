@@ -1,5 +1,8 @@
 # Changelog
 
+## [6.2.0] - 2022-03-30
+- SidebarListItem: Added TikTok
+
 ## [6.1.0] - 2022-03-24
 - Add the ability to pass a tooltip as part of a Select item. It will display a tooltip instead of a title on hover.
 
