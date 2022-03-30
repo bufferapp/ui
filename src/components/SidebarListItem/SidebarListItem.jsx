@@ -2,13 +2,13 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 import {
-  ItemStyled,
   Badge,
-  NameHandleWrapper,
-  Handle,
-  LabelContainer,
-  IconContainer,
   BadgeIconContainer,
+  Handle,
+  IconContainer,
+  ItemStyled,
+  LabelContainer,
+  NameHandleWrapper,
 } from './style';
 import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
@@ -97,6 +97,7 @@ SidebarListItem.propTypes = {
       'linkedin',
       'google',
       'pinterest',
+      'tiktok',
     ]),
   }),
 };
