@@ -2,6 +2,7 @@
 
 exports[`jest-auto-snapshots > NonDismissibleModal Matches snapshot when passed only required props 1`] = `
 <ForwardRef(styled.div)
+  NonDismissibleModal={true}
   aria-modal="true"
   role="dialog"
 >

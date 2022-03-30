@@ -7,7 +7,7 @@ import { stageInCenter, stageOutCenter } from '../style/animations';
 
 const ESCAPE_KEY = 27;
 const TAB_KEY = 9;
-const SimpleModal = ({ children, closeAction, alwaysOnTop }) => {
+const SimpleModal = ({ children, closeAction }) => {
   const modalRef = useRef(null);
   const containerRef = useRef(null);
   const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
@@ -59,7 +59,7 @@ const SimpleModal = ({ children, closeAction, alwaysOnTop }) => {
   }, []);
 
   return (
-    <Container ref={containerRef} role="dialog" aria-modal="true" alwaysOnTop={alwaysOnTop}>
+    <Container ref={containerRef} role="dialog" aria-modal="true">
       <AnimationWrapper {...animationProps}>
         <Modal
           ref={modalRef}
@@ -78,12 +78,6 @@ const SimpleModal = ({ children, closeAction, alwaysOnTop }) => {
 SimpleModal.propTypes = {
   children: PropTypes.node.isRequired,
   closeAction: PropTypes.func.isRequired,
-  /**  bumps the z-index so the modal stays on top */
-  alwaysOnTop: PropTypes.bool,
-};
-
-SimpleModal.defaultProps = {
-  alwaysOnTop: false,
 };
 
 export default SimpleModal;
