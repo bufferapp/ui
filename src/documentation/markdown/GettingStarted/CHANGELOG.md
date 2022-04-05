@@ -1,5 +1,8 @@
 # Changelog
 
+## [Unreleased]
+- Changed tooltip component to only render if `label` or `customLabel` prop is provided
+
 ## [6.3.1] - 2022-03-30
 - NonDismissibleModal has different z-index than SimpleModal 
 
