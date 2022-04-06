@@ -1,77 +1,55 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(Styled(Tooltip))
-    label={
-      <ForwardRef(styled.div)>
-        <ForwardRef(styled.label)
-          color="#FFFFFF"
-        >
-          <ForwardRef(styled.div)>
-            jest-auto-snapshots String Fixture
-            <ForwardRef(styled.label)
-              color="#B8B8B8"
-              isHotkey={true}
-            >
+<div>
+  <ForwardRef(styled.div)>
+    <ForwardRef(Styled(Tooltip))
+      label={
+        <ForwardRef(styled.div)>
+          <ForwardRef(styled.label)
+            color="#FFFFFF"
+          >
+            <ForwardRef(styled.div)>
               jest-auto-snapshots String Fixture
-            </ForwardRef(styled.label)>
-          </ForwardRef(styled.div)>
-        </ForwardRef(styled.label)>
-        <NodeFixture />
-      </ForwardRef(styled.div)>
-    }
-    opacity={1}
-    position={[Function]}
-    style={
-      Object {
-        "background": "#3D3D3D",
-        "border": "none",
-        "borderRadius": "4px",
-        "color": "#FFFFFF",
-        "maxWidth": "200px",
-        "padding": "8px",
-        "position": "absolute",
-        "whiteSpace": "normal",
-        "zIndex": 9999,
+              <ForwardRef(styled.label)
+                color="#B8B8B8"
+                isHotkey={true}
+              >
+                jest-auto-snapshots String Fixture
+              </ForwardRef(styled.label)>
+            </ForwardRef(styled.div)>
+          </ForwardRef(styled.label)>
+          <NodeFixture />
+        </ForwardRef(styled.div)>
       }
-    }
-  >
-    <div>
-      <NodeFixture />
-    </div>
-  </ForwardRef(Styled(Tooltip))>
-</ForwardRef(styled.div)>
+      opacity={1}
+      position={[Function]}
+      style={
+        Object {
+          "background": "#3D3D3D",
+          "border": "none",
+          "borderRadius": "4px",
+          "color": "#FFFFFF",
+          "maxWidth": "200px",
+          "padding": "8px",
+          "position": "absolute",
+          "whiteSpace": "normal",
+          "zIndex": 9999,
+        }
+      }
+    >
+      <div>
+        <NodeFixture />
+      </div>
+    </ForwardRef(Styled(Tooltip))>
+  </ForwardRef(styled.div)>
+</div>
 `;
 
 exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(Styled(Tooltip))
-    label={
-      <ForwardRef(styled.div)>
-        
-        
-      </ForwardRef(styled.div)>
-    }
-    opacity={1}
-    position={[Function]}
-    style={
-      Object {
-        "background": "#3D3D3D",
-        "border": "none",
-        "borderRadius": "4px",
-        "color": "#FFFFFF",
-        "maxWidth": "200px",
-        "padding": "8px",
-        "position": "absolute",
-        "whiteSpace": "normal",
-        "zIndex": 9999,
-      }
-    }
-  >
-    <div>
-      <NodeFixture />
-    </div>
-  </ForwardRef(Styled(Tooltip))>
-</ForwardRef(styled.div)>
+<div>
+  <div>
+    <NodeFixture />
+  </div>
+</div>
 `;
