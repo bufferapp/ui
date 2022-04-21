@@ -70,7 +70,7 @@ const SelectItem = ({
             <Checkmark color="grayDarker" />
           </IconWrapper>
         )}
-        {item.icon && (
+        {!item.iconEnd && item.icon && (
           <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
         )}
 
@@ -87,6 +87,9 @@ const SelectItem = ({
           )}
           <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
         </SelectItemTitle>
+        {item.iconEnd && item.icon && (
+          <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
+        )}
         {item.hotKeyPrompt && (
           <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
         )}
@@ -103,6 +106,7 @@ SelectItem.propTypes = {
     onItemClick: PropTypes.func,
     selected: PropTypes.bool,
     icon: PropTypes.node,
+    iconEnd: PropTypes.bool,
     component: PropTypes.func,
     tooltip: PropTypes.string,
   }).isRequired,
