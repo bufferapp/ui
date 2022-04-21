@@ -1,5 +1,9 @@
 # Changelog
 
+## [6.5.0] - 2022-04-21
+- Added iconEnd option to Select item to align icon to the end
+- Added PaywallTag icon
+
 ## [6.4.0] - 2022-04-21
 - Added Drafts Icon
 - Added Phone Icon
