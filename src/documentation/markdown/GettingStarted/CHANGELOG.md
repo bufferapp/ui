@@ -1,6 +1,11 @@
 # Changelog
 
-## [Unreleased]
+## [6.3.3]
+- Added Drafts Icon
+- Added Phone Icon
+- Modified Tiktok Icon
+
+## [6.3.2]
 - Changed tooltip component to only render if `label` or `customLabel` prop is provided
 
 ## [6.3.1] - 2022-03-30
