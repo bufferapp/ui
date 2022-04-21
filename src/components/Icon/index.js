@@ -91,6 +91,7 @@ export Organic from './Icons/Organic';
 export Patreon from './Icons/Patreon';
 export Pause from './Icons/Pause';
 export Paypal from './Icons/Paypal';
+export PaywallTag from './Icons/PaywallTag';
 export Pencil from './Icons/Pencil';
 export People from './Icons/People';
 export PercentageDown from './Icons/PercentageDown';
