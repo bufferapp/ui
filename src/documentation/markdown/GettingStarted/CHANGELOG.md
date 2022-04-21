@@ -1,6 +1,6 @@
 # Changelog
 
-## [6.3.3] - 2022-04-21
+## [6.4.0] - 2022-04-21
 - Added Drafts Icon
 - Added Phone Icon
 - Modified Tiktok Icon
