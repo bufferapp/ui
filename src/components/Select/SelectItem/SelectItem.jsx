@@ -106,6 +106,7 @@ SelectItem.propTypes = {
     onItemClick: PropTypes.func,
     selected: PropTypes.bool,
     icon: PropTypes.node,
+    iconEnd: PropTypes.bool,
     component: PropTypes.func,
     tooltip: PropTypes.string,
   }).isRequired,
