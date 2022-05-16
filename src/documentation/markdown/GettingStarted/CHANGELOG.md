@@ -1,5 +1,8 @@
 # Changelog
 
+## [6.5.1] - 2022-05-17
+- Changed background color of primary button in loading state to `blueDarker`
+
 ## [6.5.0] - 2022-04-21
 - Added iconEnd option to Select item to align icon to the end
 - Added PaywallTag icon
