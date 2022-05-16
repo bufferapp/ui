@@ -4,6 +4,7 @@ import {
   grayDarker,
   blue,
   blueDark,
+  blueDarker,
   blueLighter,
   white,
   grayDark,
@@ -228,6 +229,12 @@ export const disabled = css`
 export const fullWidth = css`
   width: 100%;
   justify-content: center;
+`;
+
+export const primaryLoading = css`
+  background-color: ${blueDarker};
+  cursor: not-allowed;
+  border: 1px solid ${blueDarker};
 `;
 
 export const ButtonSelect = style.div`

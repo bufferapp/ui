@@ -25,6 +25,7 @@ export const ButtonStyled = styled.button`
   ${props => Styles[props.size]};
   ${props => (props.disabled ? Styles.disabled : '')};
   ${props => (props.fullWidth ? Styles.fullWidth : '')};
+  ${props => (props.loading && props.type === 'primary' ? Styles.primaryLoading : '')};
 `;
 
 const Loading = styled.img`
@@ -87,6 +88,8 @@ const Button = ({
         aria-haspopup="false"
         size={size}
         fullWidth={fullWidth}
+        loading={loading}
+        type={type}
         {...props}
       >
         {!iconEnd && icon}
@@ -107,7 +110,6 @@ const Button = ({
             />
           </Styles.ButtonArrow>
         )}
-
         {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
       </ButtonStyled>
       {isSplit &&
