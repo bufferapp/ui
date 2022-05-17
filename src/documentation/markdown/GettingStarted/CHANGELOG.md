@@ -1,4 +1,6 @@
 # Changelog
+## [6.5.1] - 2022-05-17
+- remove extra div wrapping Tooltip
 
 ## [6.5.0] - 2022-04-21
 - Added iconEnd option to Select item to align icon to the end
