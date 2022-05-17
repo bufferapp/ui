@@ -119,6 +119,7 @@ const Button = ({
             onSelectClick={onSelectClick}
             items={items}
             type={type}
+            size={size}
             isSplit
             yPosition={selectPosition}
             xPosition="right"
