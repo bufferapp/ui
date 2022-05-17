@@ -18,3 +18,8 @@ test('Disabled button is disabled', () => {
   expect(tree).toHaveStyleRule('background-color', '#E0E0E0');
   expect(tree).toHaveStyleRule('cursor', 'not-allowed');
 });
+
+test('Primary default loading button has a darker blue background', () => {
+  const tree = renderer.create(<Button type="primary" onClick={() => {}} label="Primary" loading />).toJSON();
+  expect(tree).toHaveStyleRule('background-color', '#121E66');
+});

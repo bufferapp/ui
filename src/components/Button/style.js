@@ -136,7 +136,7 @@ export const ButtonBase = css`
 
 /* theme variants */
 export const primary = css`
-  background-color: ${blue};
+  background-color: ${props => (props.$loading ? blueDarker : blue)};
   color: ${white};
   border: 1px solid ${blue};
   :hover {
@@ -163,7 +163,7 @@ export const secondary = css`
 `;
 
 export const danger = css`
-  background-color: ${props => (props.loading ? redDarker : redDark)};
+  background-color: ${props => (props.$loading ? redDarker : redDark)};
   color: ${white};
   border-color: ${redDarker};
 
@@ -229,11 +229,6 @@ export const disabled = css`
 export const fullWidth = css`
   width: 100%;
   justify-content: center;
-`;
-
-export const primaryLoading = css`
-  background-color: ${blueDarker};
-  border: 1px solid ${blueDarker};
 `;
 
 export const ButtonSelect = style.div`
