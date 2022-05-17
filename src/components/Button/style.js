@@ -138,7 +138,7 @@ export const ButtonBase = css`
 export const primary = css`
   background-color: ${props => (props.$loading ? blueDarker : blue)};
   color: ${white};
-  border: 1px solid ${blue};
+  border: 1px solid ${props => (props.$loading ? blueDarker : blue)};
   :hover {
     background-color: ${blueDark};
     border-color: ${blueDark};
