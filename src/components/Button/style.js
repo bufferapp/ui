@@ -233,7 +233,6 @@ export const fullWidth = css`
 
 export const primaryLoading = css`
   background-color: ${blueDarker};
-  cursor: not-allowed;
   border: 1px solid ${blueDarker};
 `;
 
