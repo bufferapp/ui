@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
-<div>
+<React.Fragment>
   <ForwardRef(styled.div)>
     <ForwardRef(Styled(Tooltip))
       label={
@@ -43,13 +43,13 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
       </div>
     </ForwardRef(Styled(Tooltip))>
   </ForwardRef(styled.div)>
-</div>
+</React.Fragment>
 `;
 
 exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only required props 1`] = `
-<div>
+<React.Fragment>
   <div>
     <NodeFixture />
   </div>
-</div>
+</React.Fragment>
 `;
