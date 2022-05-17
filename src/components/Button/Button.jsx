@@ -107,6 +107,7 @@ const Button = ({
             />
           </Styles.ButtonArrow>
         )}
+
         {loading && <Loading src="./images/loading-gray.svg" alt="loading" />}
       </ButtonStyled>
       {isSplit &&
