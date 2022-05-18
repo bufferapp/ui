@@ -4,6 +4,7 @@ import {
   grayDarker,
   blue,
   blueDark,
+  blueDarker,
   blueLighter,
   white,
   grayDark,
@@ -135,9 +136,9 @@ export const ButtonBase = css`
 
 /* theme variants */
 export const primary = css`
-  background-color: ${blue};
+  background-color: ${props => (props.$loading ? blueDarker : blue)};
   color: ${white};
-  border: 1px solid ${blue};
+  border: 1px solid ${props => (props.$loading ? blueDarker : blue)};
   :hover {
     background-color: ${blueDark};
     border-color: ${blueDark};
@@ -162,7 +163,7 @@ export const secondary = css`
 `;
 
 export const danger = css`
-  background-color: ${props => (props.loading ? redDarker : redDark)};
+  background-color: ${props => (props.$loading ? redDarker : redDark)};
   color: ${white};
   border-color: ${redDarker};
 

@@ -1,7 +1,7 @@
 # Changelog
 
-## Unreleased
-- 
+## [6.5.4] - 2022-05-18
+- Changed background color of primary default button in loading state to `blueDarker`
 
 ## [6.5.3] - 2022-05-18
 - respec size argument on split Button
