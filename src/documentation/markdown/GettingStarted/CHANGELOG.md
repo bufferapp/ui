@@ -1,4 +1,11 @@
 # Changelog
+
+## Unreleased
+- 
+
+## [6.5.2] - 2022-05-18
+- respec size argument on split Button
+
 ## [6.5.1] - 2022-05-17
 - remove extra div wrapping Tooltip
 
