@@ -428,6 +428,7 @@ export default class Select extends React.Component {
       return (
         <ButtonSelect
           type={type}
+          size={size}
           disabled={disabled}
           onClick={!disabled ? this.onButtonClick : undefined}
         >

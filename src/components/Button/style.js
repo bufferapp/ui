@@ -218,6 +218,10 @@ export const large = css`
   height: 48px;
 `;
 
+const Sizes = {
+  small, medium, large
+}
+
 /* state variants */
 export const disabled = css`
   background-color: ${grayLight};
@@ -243,12 +247,12 @@ export const ButtonSelect = style.div`
     width: 1px;
   }
 
+  ${props => Sizes[props.size] || Sizes.medium};
   align-items: center;
   display: flex;
-  height: 38px;
   justify-content: center;
   box-sizing: border-box;
-  padding: 0 10px;
+  ${props => props.size === 'small' ? 'padding: 0 6px'  : 'padding 0 10px'};
   position: relative;
   width: 100%;
 
