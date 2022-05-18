@@ -1,7 +1,15 @@
 # Changelog
 
-## [6.5.1] - 2022-05-17
+## [6.5.4] - 2022-05-18
 - Changed background color of primary default button in loading state to `blueDarker`
+
+## [6.5.3] - 2022-05-18
+- respec size argument on split Button
+
+## [6.5.2] - 2022-05-17
+- remove extra div wrapping Tooltip
+
+## [6.5.1] - skipped
 
 ## [6.5.0] - 2022-04-21
 - Added iconEnd option to Select item to align icon to the end

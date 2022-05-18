@@ -14,6 +14,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -72,6 +73,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -130,6 +132,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -188,6 +191,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -246,6 +250,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearS
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -305,6 +310,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   <ForwardRef(styled.div)
     disabled={false}
     onClick={[Function]}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -363,6 +369,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -421,6 +428,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -479,6 +487,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -537,6 +546,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -595,6 +605,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -653,6 +664,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -761,6 +773,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -819,6 +832,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -877,6 +891,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon
@@ -935,6 +950,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
 >
   <ForwardRef(styled.div)
     disabled={true}
+    size="small"
     type="primary"
   >
     <ChevronDownIcon

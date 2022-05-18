@@ -112,7 +112,7 @@ class Tooltip extends React.Component {
     // because we still need to figure out a way to load the css file
     // properly, and being able to use our customs styles.
     return (
-      <div>
+      <React.Fragment>
         {renderTooltip ? (
           <Styles.TooltipWrapper ref={node => this.tooltipWrapper = node}>
             <Styles.TooltipStyled
@@ -131,7 +131,7 @@ class Tooltip extends React.Component {
             {children}
           </div>
         )}
-      </div>
+      </React.Fragment>
     )
   }
 }
