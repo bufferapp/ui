@@ -1,7 +1,7 @@
 # Changelog
 
-## [Unreleased] - 2022-05-23
-- Added customStyles prop to Modal close button
+## [Unreleased] - 2022-05-24
+- Updated styles for close icon in Modal
 
 ## [6.5.4] - 2022-05-18
 - Changed background color of primary default button in loading state to `blueDarker`
