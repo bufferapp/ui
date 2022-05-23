@@ -1,5 +1,5 @@
 /* eslint-disable no-confusing-arrow */
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes,css } from 'styled-components';
 import { white, red } from '../style/colors';
 import { borderRadius } from '../style/borders';
 import { easeOutQuart } from '../style/animations';
@@ -76,7 +76,7 @@ export const Modal = styled.section`
   animation: 300ms ${stagingAnimation} ${easeOutQuart};
 `;
 
-export const IconContainer = styled.button`
+const IconContainerStyles = css`
   background: none;
   border: none;
   position: absolute;
@@ -96,6 +96,10 @@ export const IconContainer = styled.button`
       fill: ${red};
     }
   }
+`
+
+export const IconContainer = styled.button`
+  ${props => props.customStyles || IconContainerStyles}
 `;
 
 export const Footer = styled.div`

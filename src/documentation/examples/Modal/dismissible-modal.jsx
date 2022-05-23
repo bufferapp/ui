@@ -1,11 +1,34 @@
 import React, { useState } from 'react';
+import { css } from 'styled-components';
+import { grayDarker } from '@bufferapp/ui/style/colors';
 import Modal from '@bufferapp/ui/Modal';
 import Text from '@bufferapp/ui/Text';
 import Button from '@bufferapp/ui/Button';
 
+const customStyles = css`
+  background: none;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
 
-/** Modal */
-export default function ModalTest() {
+  transition: transform 0.15s ease-out;
+  svg {
+    fill: ${grayDarker};
+    transition: fill 0.15s ease-out;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    svg {
+      fill: #f00;
+    }
+  }
+`;
+
+/** Dismissible Modal */
+export default function DismissibleModalTest() {
   const [modalOpen, openModal] = useState(false)
   return (
     <div style={{ width: '100%', height: '400px', position: 'relative' }}>
@@ -19,6 +42,7 @@ export default function ModalTest() {
           action={{ label: "It has already happened", disabled: true, }}
           secondaryAction={{ label: "Close" }}
           footer={(<Text type="p">Optional footer text!</Text>)}
+          closeButton={{ callback: () => openModal(false), customStyles }}
         >
           <div>
             <div style={{ padding: '0 16px' }}><Text type="h2">Forty-two</Text></div>
