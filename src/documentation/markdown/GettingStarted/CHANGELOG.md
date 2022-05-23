@@ -1,6 +1,6 @@
 # Changelog
 
-## [6.5.5] - 2022-05-23
+## [Unreleased] - 2022-05-23
 - Added customStyles prop to Modal close button
 
 ## [6.5.4] - 2022-05-18
