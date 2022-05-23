@@ -19,6 +19,7 @@ export default function ModalTest() {
           action={{ label: "It has already happened", disabled: true, }}
           secondaryAction={{ label: "Close" }}
           footer={(<Text type="p">Optional footer text!</Text>)}
+          closeButton={{ callback: () => openModal(false)}}
         >
           <div>
             <div style={{ padding: '0 16px' }}><Text type="h2">Forty-two</Text></div>

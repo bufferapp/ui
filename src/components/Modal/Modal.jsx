@@ -122,7 +122,7 @@ class Modal extends React.Component {
               onClick={() => {
                 this.handleAction(closeButton);
               }}
-              customStyles={closeButton.customStyles}
+              noBackground={noBackground}
             >
               <Cross size="large" />
             </Styles.IconContainer>
