@@ -9,6 +9,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
     width="jest-auto-snapshots String Fixture"
   >
     <ForwardRef(styled.button)
+      noBackground={true}
       onClick={[Function]}
     >
       <CrossIcon
@@ -60,6 +61,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "noBackg
     width="jest-auto-snapshots String Fixture"
   >
     <ForwardRef(styled.button)
+      noBackground={false}
       onClick={[Function]}
     >
       <CrossIcon
@@ -111,6 +113,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
     width="jest-auto-snapshots String Fixture"
   >
     <ForwardRef(styled.button)
+      noBackground={true}
       onClick={[Function]}
     >
       <CrossIcon
