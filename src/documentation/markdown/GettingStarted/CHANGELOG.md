@@ -1,5 +1,8 @@
 # Changelog
 
+## [Unreleased] - 2022-05-24
+- Updated styles for close icon in Modal
+
 ## [6.6.0] - 2022-05-24
 - Changed divider line color in split button to `gray` for secondary button and `blueLighter` for primary.
 

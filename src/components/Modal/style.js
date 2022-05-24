@@ -1,6 +1,6 @@
 /* eslint-disable no-confusing-arrow */
 import styled, { keyframes } from 'styled-components';
-import { white, red } from '../style/colors';
+import { white, red, gray } from '../style/colors';
 import { borderRadius } from '../style/borders';
 import { easeOutQuart } from '../style/animations';
 
@@ -80,13 +80,14 @@ export const IconContainer = styled.button`
   background: none;
   border: none;
   position: absolute;
-  top: -4px;
-  right: 47px;
+  top: ${props => props.noBackground ? '-4px' : '16px'};
+  right: ${props => props.noBackground ? '47px' : '16px'};
   cursor: pointer;
 
   transition: transform 0.15s ease-out;
   svg {
-    fill: ${white};
+    fill: ${gray};
+    width: ${props => props.noBackground ? '' : '16px'};
     transition: fill 0.15s ease-out;
   }
 
