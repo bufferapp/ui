@@ -239,7 +239,7 @@ const getBackgroundColor = (isDisabled, type) => {
   if (isDisabled) {
     return gray;
   }
-  return type === 'primary' ? blueLighter: grayDark;
+  return type === 'primary' ? blueLighter: gray;
 }
 
 export const ButtonSelect = style.div`
