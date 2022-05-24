@@ -235,9 +235,16 @@ export const fullWidth = css`
   justify-content: center;
 `;
 
+const getBackgroundColor = (isDisabled, type) => {
+  if (isDisabled) {
+    return gray;
+  }
+  return type === 'primary' ? blueLighter: grayDark;
+}
+
 export const ButtonSelect = style.div`
   :before {
-    background-color: ${props => (props.disabled ? gray : blueLighter)};
+    background-color: ${props => getBackgroundColor(props.disabled, props.type)};
     color: ${props => (props.disabled ? gray : blueLighter)};
     content: "";
     height: 24px;
