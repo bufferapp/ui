@@ -1,5 +1,8 @@
 # Changelog
 
+## [6.6.0] - 2022-05-24
+- Changed divider line color in split button to `gray` for secondary button and `blueLighter` for primary.
+
 ## [6.5.4] - 2022-05-18
 - Changed background color of primary default button in loading state to `blueDarker`
 
