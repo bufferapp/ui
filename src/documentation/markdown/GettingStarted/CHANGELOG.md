@@ -1,6 +1,6 @@
 # Changelog
 
-## [Unreleased] - 2022-05-24
+## [6.6.2] - 2022-05-24
 - Updated styles for close icon in Modal
 
 ## [6.6.0] - 2022-05-24
