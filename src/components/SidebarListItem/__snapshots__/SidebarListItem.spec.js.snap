@@ -26,7 +26,6 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
       <Avatar
         alt="jest-auto-snapshots String Fixture"
         fallbackUrl="jest-auto-snapshots String Fixture"
-        isOnline={false}
         network="facebook"
         size="small"
         src="jest-auto-snapshots String Fixture"
@@ -83,7 +82,6 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
       <Avatar
         alt="jest-auto-snapshots String Fixture"
         fallbackUrl="jest-auto-snapshots String Fixture"
-        isOnline={false}
         network="facebook"
         size="small"
         src="jest-auto-snapshots String Fixture"
