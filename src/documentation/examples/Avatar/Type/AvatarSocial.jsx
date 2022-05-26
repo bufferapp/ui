@@ -9,7 +9,7 @@ export default function ExampleAvatar() {
       alt="Hamish"
       size="large"
       type="social"
-      network="shopify"
+      network="startPage"
     />
   );
 }

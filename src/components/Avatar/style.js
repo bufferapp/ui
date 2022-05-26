@@ -1,4 +1,6 @@
 import styled, { css } from 'styled-components';
+import { yellowDarker } from '../style/colors';
+import { fontWeightBold, fontFamily } from '../style/fonts';
 
 const getImageCss = ({ size, type = 'default' }) => (
   css`
@@ -66,4 +68,13 @@ export const SocialIconWrapper = styled.div`
   align-items: center;
 
   transform: translateX(8px) translateY(${props => (props.size === 'small' ? '0' : '-2')}px);
+`;
+
+export const StartPageIcon = styled.span`
+  color: ${yellowDarker};
+  font-size: 9px;
+  font-weight: ${fontWeightBold};
+  text-align: center;
+  width: 16px;
+  font-family: ${fontFamily};
 `;

@@ -1,5 +1,8 @@
 # Changelog
 
+## [6.7.0] - 2022-05-26
+- Adds startPage as network option in Avatar
+
 ## [6.6.2] - 2022-05-24
 - Updated styles for close icon in Modal
 
