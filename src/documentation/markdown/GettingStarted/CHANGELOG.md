@@ -1,6 +1,6 @@
 # Changelog
 
-## [6.8.0] - 2022-05-30
+## [6.8.1] - 2022-05-30
 - Adds Gmb (GoogleBusinessProfile) icon
 
 ## [6.7.0] - 2022-05-26
