@@ -4,8 +4,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import * as Styles from './style';
-import {facebook, googleplus, instagram, linkedin, pinterest, shopify, tiktok, twitter, yellow} from '../style/colors';
-import {Facebook, GooglePlus, Instagram, LinkedIn, Pinterest, Shopify, Tiktok, Twitter} from '../Icon';
+import {facebook, googlebusiness, instagram, linkedin, pinterest, shopify, tiktok, twitter, yellow} from '../style/colors';
+import {Facebook, Gmb, Instagram, LinkedIn, Pinterest, Shopify, Tiktok, Twitter} from '../Icon';
 
 const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}
@@ -41,9 +41,9 @@ const socialIconMap = new Map([
       <Pinterest size="small" color="white" />
     </Styles.SocialIconWrapper>
   )],
-  ['googleplus', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={googleplus}>
-      <GooglePlus size="small" color="white" />
+  ['googlebusiness', ({ size }) => (
+    <Styles.SocialIconWrapper size={size} bgColor={googlebusiness}>
+      <Gmb size="small" color="white" />
     </Styles.SocialIconWrapper>
   )],
   ['shopify', ({ size }) => (

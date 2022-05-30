@@ -1,5 +1,8 @@
 # Changelog
 
+## [6.8.2] - 2022-05-30
+- Adds GBP support for SidebarListItem
+
 ## [6.8.1] - 2022-05-30
 - Adds Gmb (GoogleBusinessProfile) icon
 
