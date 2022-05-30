@@ -60,6 +60,7 @@ export const boxShadow = '#ABB7FF';
 export const grayShadow = '0px 1px 4px rgba(0, 0, 0, 0.16)';
 
 export const facebook = '#1877F2';
+export const googlebusiness = '#478af5';
 export const facebookDark = '#0C51AB';
 export const googleplus = '#dd4b39';
 export const instagram = '#F00276';
