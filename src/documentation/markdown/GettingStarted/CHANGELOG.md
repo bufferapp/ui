@@ -1,5 +1,9 @@
 # Changelog
 
+## [7.0.0] - 2022-05-31
+- Breaking: Gmb icon was renamed to Gbp
+- Bringing back PaywallTag icon
+
 ## [6.9.0] - 2022-05-30
 - Adds GBP support for SidebarListItem
 
