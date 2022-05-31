@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import * as Styles from './style';
 import {facebook, googlebusiness, instagram, linkedin, pinterest, shopify, tiktok, twitter, yellow} from '../style/colors';
-import {Facebook, Gmb, Instagram, LinkedIn, Pinterest, Shopify, Tiktok, Twitter} from '../Icon';
+import {Facebook, Gbp, Instagram, LinkedIn, Pinterest, Shopify, Tiktok, Twitter} from '../Icon';
 
 const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}
@@ -43,7 +43,7 @@ const socialIconMap = new Map([
   )],
   ['googlebusiness', ({ size }) => (
     <Styles.SocialIconWrapper size={size} bgColor={googlebusiness}>
-      <Gmb size="small" color="white" />
+      <Gbp size="small" color="white" />
     </Styles.SocialIconWrapper>
   )],
   ['shopify', ({ size }) => (
