@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.1.1] - 2022-06-08
+- Fix: Adding googlebusiness to propTypes.network in Avatar.jsx
+
 ## [7.1.0] - 2022-05-31
 - Fix: Gmb icon to Gbp change in Avatar.jsx
 
