@@ -4,7 +4,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import * as Styles from './style';
-import {facebook, googlebusiness, instagram, linkedin, pinterest, shopify, tiktok, twitter, yellow} from '../style/colors';
+import {
+  facebook,
+  googlebusiness,
+  instagram,
+  linkedin,
+  pinterest,
+  shopify,
+  tiktok,
+  twitter,
+  yellow
+} from '../style/colors';
 import {Facebook, Gbp, Instagram, LinkedIn, Pinterest, Shopify, Tiktok, Twitter} from '../Icon';
 
 const Wrapper = styled.div`
@@ -92,7 +102,7 @@ Avatar.propTypes = {
   /** Can be `'small'`, `'medium'` or `'large'` (`32px`, `40px` and `48px` respectively). */
   size: PropTypes.oneOf(['large', 'medium', 'small']),
   /** Name of social network icon to overlay. (E.g., `'instagram'`). Only applicable when `{ type: 'social' }` */
-  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest', 'shopify', 'tiktok', 'startPage']),
+  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest', 'shopify', 'tiktok', 'startPage', 'googlebusiness']),
 };
 
 Avatar.defaultProps = {
