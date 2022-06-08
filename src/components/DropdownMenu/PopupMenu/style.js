@@ -9,6 +9,7 @@ export const PopupMenuStyled = styled.ul`
   box-shadow: ${grayShadow};
   border-radius: 4px;
   max-height: calc(100vh - 64px); /* 56px navbar + 8px margin-top. If someone needs to adjust this again, we might consider creating a prop and set this as the default value */
+  scroll: auto;
   display: ${props => (props.isOpen ? 'initial' : 'none')};
   min-width: 200px;
   max-width: 200px;
