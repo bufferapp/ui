@@ -123,6 +123,7 @@ export Spam from './Icons/Spam';
 export Sparkles from './Icons/Sparkles';
 export Spotify from './Icons/Spotify';
 export Star from './Icons/Star';
+export StartPage from './Icons/StartPage';
 export Stats from './Icons/Stats';
 export Subheading from './Icons/Subheading';
 export Subtract from './Icons/Subtract';

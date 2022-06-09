@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.2.0] - 2022-06-09
+- Fix: Change to Gbp Icon and adding StartPage icon
+
 ## [7.1.4] - 2022-06-09
 - Fix: DropDownMenu scrollbar always shown incorrectly
 
