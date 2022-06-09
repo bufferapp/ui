@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.1.2] - 2022-06-09
+- Fix: DropDownMenu scrollbar always shown incorrectly
+
 ## [7.1.1] - 2022-06-08
 - Fix: Adding googlebusiness to propTypes.network in Avatar.jsx
 
