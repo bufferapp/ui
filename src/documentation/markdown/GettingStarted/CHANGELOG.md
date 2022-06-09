@@ -1,7 +1,10 @@
 # Changelog
 
-## [7.1.3] - 2022-06-09
+## [7.1.4] - 2022-06-09
 - Fix: DropDownMenu scrollbar always shown incorrectly
+
+## [7.1.3] - 2022-06-09
+- No changes
 
 ## [7.1.2] - 2022-06-09
 - No changes
