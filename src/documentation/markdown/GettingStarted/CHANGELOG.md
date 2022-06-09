@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.1.1] - 2022-06-09
+- Fix: DropDownMenu scrollbar always shown
+
 ## [7.1.0] - 2022-05-31
 - Fix: Gmb icon to Gbp change in Avatar.jsx
 
