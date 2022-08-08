@@ -1,5 +1,9 @@
 # Changelog
 
+## [7.2.2] - 2022-08-08
+- Fix: Remove PaywallTag Icon
+- Fix: Remove references to old icons
+
 ## [7.2.0] - 2022-06-09
 - Fix: Change to Gbp Icon and adding StartPage icon
 
