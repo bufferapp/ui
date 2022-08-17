@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.2.3] - 2022-08-08
+- Fix: add flex-shrink to Icon style
+
 ## [7.2.2] - 2022-08-08
 - Fix: Remove PaywallTag Icon
 - Fix: Remove references to old icons
