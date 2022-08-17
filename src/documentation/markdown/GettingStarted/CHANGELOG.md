@@ -1,6 +1,6 @@
 # Changelog
 
-## [7.2.3] - 2022-08-08
+## [7.2.3] - 2022-08-17
 - Fix: add flex-shrink to Icon style
 
 ## [7.2.2] - 2022-08-08
