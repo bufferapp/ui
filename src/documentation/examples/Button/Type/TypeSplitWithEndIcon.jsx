@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
-import { PaywallTag } from '@bufferapp/ui/Icon';
+import Tag from '@bufferapp/ui/Tag';
+import { Flash } from '@bufferapp/ui/Icon';
 
 /** Split Button With End Icon */
 export default function ExampleSplitButton() {
@@ -12,7 +13,7 @@ export default function ExampleSplitButton() {
       isSplit
       items={[
         { id: '1', title: 'Save as Draft' },
-        { id: '2', title: 'Request Approval', icon: <PaywallTag />, iconEnd: true },
+        { id: '2', title: 'Request Approval', icon: <Tag color="purpleLighter"><Flash color="purple" /></Tag>, iconEnd: true },
       ]}
       label="Click Me"
     />

@@ -41,7 +41,7 @@ export const SelectItemLabel = styled.div`
 
 export const SelectItemIcon = styled.div`
   display: flex;
-  padding-right: 8px;
+  padding-right: ${props => (props.iconEnd ? '0px' : '8px')};
   fill: ${props => (props.hovered ? grayDarker : gray)};
 `;
 

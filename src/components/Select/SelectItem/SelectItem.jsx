@@ -71,7 +71,7 @@ const SelectItem = ({
           </IconWrapper>
         )}
         {!item.iconEnd && item.icon && (
-          <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
+          <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>{item.icon}</SelectItemIcon>
         )}
 
         <SelectItemTitle
@@ -88,7 +88,7 @@ const SelectItem = ({
           <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
         </SelectItemTitle>
         {item.iconEnd && item.icon && (
-          <SelectItemIcon hovered={hovered}>{item.icon}</SelectItemIcon>
+          <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>{item.icon}</SelectItemIcon>
         )}
         {item.hotKeyPrompt && (
           <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
