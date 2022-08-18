@@ -8,9 +8,9 @@ import {
   IconContainer,
   ItemStyled,
   LabelContainer,
+  LabelStyled,
   NameHandleWrapper,
 } from './style';
-import Text from '../Text/Text';
 import Avatar from '../Avatar/Avatar';
 
 const SidebarListItem = ({
@@ -42,20 +42,25 @@ const SidebarListItem = ({
             network={user.network}
           />
           <NameHandleWrapper>
-            <Text
+            <LabelStyled
               type="label"
               title={title}
+              hasUser={user}
               color={selected ? 'white' : undefined}
             >
               {user.name}
-            </Text>
+            </LabelStyled>
             <Handle selected={selected}>{user.handle}</Handle>
           </NameHandleWrapper>
         </React.Fragment>
       ) : (
-        <Text type="label" title={title} color={selected ? 'white' : undefined}>
+        <LabelStyled
+          type="label"
+          title={title}
+          color={selected ? 'white' : undefined}
+        >
           {title}
-        </Text>
+        </LabelStyled>
       )}
     </LabelContainer>
 
