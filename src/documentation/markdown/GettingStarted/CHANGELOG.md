@@ -1,5 +1,11 @@
 # Changelog
 
+## [7.3.0] - 2022-08-19
+- Add icon: Behance
+- Add icon: Substack
+- Add icon: Medium
+- Add icon: Pinning
+
 ## [7.2.6] - 2022-08-17
 - Fix: add flex-shrink to Icon style
 
