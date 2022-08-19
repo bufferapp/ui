@@ -4,7 +4,7 @@
 - Add icon: Behance
 - Add icon: Substack
 - Add icon: Medium
-- Add icon: Pinning
+- Add icon: Pinned
 
 ## [7.2.6] - 2022-08-17
 - Fix: add flex-shrink to Icon style
