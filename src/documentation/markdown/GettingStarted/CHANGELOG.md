@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.4.0] - 2022-08-22
+- Support icon for Input
+
 ## [7.3.0] - 2022-08-19
 - Add icon: Behance
 - Add icon: Substack
