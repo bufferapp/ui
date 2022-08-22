@@ -46,7 +46,7 @@ const SidebarListItem = ({
               type="label"
               title={title}
               hasUser={user}
-              color={selected ? 'white' : undefined}
+              selected={selected}
             >
               {user.name}
             </LabelStyled>
@@ -54,11 +54,7 @@ const SidebarListItem = ({
           </NameHandleWrapper>
         </React.Fragment>
       ) : (
-        <LabelStyled
-          type="label"
-          title={title}
-          color={selected ? 'white' : undefined}
-        >
+        <LabelStyled type="label" title={title} selected={selected}>
           {title}
         </LabelStyled>
       )}

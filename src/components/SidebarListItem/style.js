@@ -4,7 +4,6 @@ import {
   grayDarker,
   grayLight50,
   gray,
-  white,
   grayDark,
   blue,
 } from '../style/colors';
@@ -19,7 +18,7 @@ export const Badge = styled.span`
   line-height: 14px;
   text-align: right;
   margin-right: 8px;
-  color: ${grayDarker};
+  color: ${(props) => (props.selected ? blue : grayDarker)};
 `;
 
 export const NameHandleWrapper = styled.div`
@@ -65,7 +64,7 @@ export const IconContainer = styled.span`
   display: flex;
   justify-content: center;
   svg {
-    fill: ${gray};
+    fill: ${(props) => (props.selected ? blue : gray)};
   }
 `;
 
@@ -77,18 +76,18 @@ export const ItemStyled = styled.li`
   border-radius: 4px;
   padding: 8px 0 8px 8px;
   background-color: ${(props) =>
-    props.selected ? grayLight50 : 'transparent'};
+    props.selected ? blueLightest50 : 'transparent'};
 
   &:hover {
     background-color: ${(props) =>
-      props.selected ? '#EDEDED' : blueLightest50};
+      props.selected ? blueLightest50 : grayLight50};
 
     ${Badge}, ${LabelStyled} {
-      color: ${(props) => (props.selected ? grayDarker : blue)};
+      color: ${(props) => (props.selected ? blue : grayDarker)};
     }
 
     ${IconContainer} svg {
-      fill: ${(props) => (props.selected ? gray : blue)};
+      fill: ${(props) => (props.selected ? blue : gray)};
     }
   }
 `;
