@@ -76,6 +76,7 @@ export const InputStyled = styled.input`
   width: 100%;
 
   ${({ prefix }) => (prefix ? `padding-left: ${prefix.paddingLeft};` : '')}
+  ${({ icon }) => (icon ? `padding-left: 32px;` : '')}
 
   &::placeholder {
     color: ${grayDark};
@@ -112,5 +113,13 @@ export const HelpTextWrapper = styled.div`
 `;
 
 export const HelpText = styled(Text)`
-  margin-left: ${props => (props.hasError ? '8px' : '0px')};
+  margin-left: ${(props) => (props.hasError ? '8px' : '0px')};
+`;
+
+export const StyledIcon = styled.div`
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translate(0, -50%);
+  display: flex;
 `;
