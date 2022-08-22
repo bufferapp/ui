@@ -23,6 +23,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disable
       aria-required={true}
       disabled={false}
       hasError={true}
+      icon={<NodeFixture />}
       id="jest-auto-snapshots String Fixture"
       maxLength="jest-auto-snapshots String Fixture"
       name="jest-auto-snapshots String Fixture"
@@ -80,6 +81,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasErro
       aria-required={true}
       disabled={true}
       hasError={false}
+      icon={<NodeFixture />}
       id="jest-auto-snapshots String Fixture"
       maxLength="jest-auto-snapshots String Fixture"
       name="jest-auto-snapshots String Fixture"
@@ -133,6 +135,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "require
     <ForwardRef(styled.input)
       disabled={true}
       hasError={true}
+      icon={<NodeFixture />}
       id="jest-auto-snapshots String Fixture"
       maxLength="jest-auto-snapshots String Fixture"
       name="jest-auto-snapshots String Fixture"
@@ -190,6 +193,7 @@ exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] 
       aria-required={true}
       disabled={true}
       hasError={true}
+      icon={<NodeFixture />}
       id="jest-auto-snapshots String Fixture"
       maxLength="jest-auto-snapshots String Fixture"
       name="jest-auto-snapshots String Fixture"
