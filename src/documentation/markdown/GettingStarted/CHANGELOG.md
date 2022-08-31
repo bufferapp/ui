@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.5.0] - 2022-08-31
+- Add icon: GooglePhotos
+
 ## [7.4.0] - 2022-08-22
 - Support icon for Input
 
