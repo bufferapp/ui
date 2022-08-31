@@ -59,6 +59,7 @@ export Github from './Icons/Github';
 export Giveaway from './Icons/Giveaway';
 export Google from './Icons/Google';
 export GoogleDrive from './Icons/GoogleDrive';
+export GooglePhotos from './Icons/GooglePhotos';
 export GooglePlus from './Icons/GooglePlus';
 export Hamburger from './Icons/Hamburger';
 export Hashtag from './Icons/Hashtag';
