@@ -98,7 +98,8 @@ SidebarListItem.propTypes = {
       'google',
       'pinterest',
       'tiktok',
-      'googlebusiness'
+      'googlebusiness',
+      'startPage'
     ]),
   }),
 };
