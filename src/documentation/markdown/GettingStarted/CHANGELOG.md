@@ -1,5 +1,9 @@
 # Changelog
 
+## [7.5.1] - 2022-09-05
+- updates SP Avatar
+- updates proptypes for SidebarListItem
+
 ## [7.5.0] - 2022-08-31
 - Add icon: GooglePhotos
 
