@@ -1,6 +1,7 @@
 # Changelog
 
-## [7.5.1] - 2022-09-05
+## [7.6.1] - 2022-09-05
+* sorry i published a minor version by mistake! *
 - updates SP Avatar
 - updates proptypes for SidebarListItem
 
