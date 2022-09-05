@@ -13,46 +13,47 @@ import { fontFamily } from '../style/fonts';
 export const Wrapper = styled.div`
   outline-style: none;
   :focus {
-    outline-style: ${props => (props.isSplit ? 'auto' : '0')};
+    outline-style: ${(props) => (props.isSplit ? 'auto' : '0')};
   }
-  width: ${props => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
-  height: ${props => (props.isSplit ? '100%' : 'auto')};
-  max-height: ${props => (props.isSplit ? '100%' : '')};
-  position: ${props => (props.isSplit ? 'initial' : 'relative')};
+  width: ${(props) => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
+  height: ${(props) => (props.isSplit ? '100%' : 'auto')};
+  max-height: ${(props) => (props.isSplit ? '100%' : '')};
+  position: ${(props) => (props.isSplit ? 'initial' : 'relative')};
   display: inline-block;
 `;
 
 export const SelectStyled = styled.div`
-  right: ${props => (props.hasIconOnly ? '6px' : '0')};
+  right: ${(props) => (props.hasIconOnly ? '6px' : '0')};
   position: absolute;
   z-index: 1000;
   border: 1px solid ${gray};
   box-sizing: border-box;
   box-shadow: ${grayShadow};
   border-radius: 4px;
-  display: ${props => (props.isOpen ? 'initial' : 'none')};
+  display: ${(props) => (props.isOpen ? 'initial' : 'none')};
   min-width: 200px;
-  max-width: ${props => (props.fullWidth ? '' : '200px')};
-  width: ${props => (props.fullWidth ? '100%' : '200px')};
+  max-width: ${(props) => (props.fullWidth ? '' : '200px')};
+  width: ${(props) => (props.fullWidth ? '100%' : '200px')};
   background-color: ${white};
-  bottom: ${props => (props.yPosition === 'top' ? '100%' : 'initial')};
-  top: ${props => (props.yPosition === 'bottom' ? '100%' : 'initial')};
-  margin-bottom: ${props => (props.yPosition === 'top' ? '8px' : '0')};
-  margin-top: ${props =>
+  bottom: ${(props) => (props.yPosition === 'top' ? '100%' : 'initial')};
+  top: ${(props) => (props.yPosition === 'bottom' ? '100%' : 'initial')};
+  margin-bottom: ${(props) => (props.yPosition === 'top' ? '8px' : '0')};
+  margin-top: ${(props) =>
     props.marginTop
       ? props.marginTop
       : props.yPosition === 'bottom' || props.xPosition === 'right'
       ? '8px'
       : '0'};
   transform: translateX(
-    ${props => (props.horizontalOffset ? props.horizontalOffset : '0')}
+    ${(props) => (props.horizontalOffset ? props.horizontalOffset : '0')}
   );
-  left: ${props => (props.xPosition === 'left' ? 0 : '')};
+  left: ${(props) => (props.xPosition === 'left' ? 0 : '')};
 `;
 
 export const SelectItems = styled.ul`
   max-height: 195px;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   position: relative;
   z-index: -1;
   background: ${white};
@@ -124,6 +125,6 @@ export const CustomItemContainer = styled.li`
   &:hover {
     background-color: ${grayLight};
   }
-  background-color: ${props =>
+  background-color: ${(props) =>
     props.isCustomItemFocused ? `${grayLight}` : ''};
 `;
