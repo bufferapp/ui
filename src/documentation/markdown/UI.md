@@ -9,7 +9,7 @@ Here are the articles in this section:
 [Carousel](ui/carousel)
 [CrossSell](ui/crossSell)
 [DropdownMenu](ui/dropdownmenu)
-[Icon](ui/icon)
+[Icons](ui/icons)
 [Input](ui/input)
 [Link](ui/link)
 [Loader](ui/loader)

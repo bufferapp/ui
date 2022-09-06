@@ -1,17 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import {
-  Cross,
-  Info as InfoIcon,
-  ArrowLeft,
-  Person as PersonIcon,
-  Instagram as InstagramIcon,
-  Twitter as TwitterIcon,
-  Facebook as FacebookIcon,
-  Pinterest as PinterestIcon,
-  LinkedIn as LinkedInIcon,
-} from '../Icon';
+
+import Cross from "../Icons/Cross"
+import InfoIcon from "../Icons/Info"
+import ArrowLeft from "../Icons/ArrowLeft"
+import PersonIcon from "../Icons/Person"
+import InstagramIcon from "../Icons/Instagram"
+import TwitterIcon from "../Icons/Twitter"
+import FacebookIcon from "../Icons/Facebook"
+import PinterestIcon from "../Icons/Pinterest"
+import LinkedInIcon from "../Icons/LinkedIn"
 
 import {
   gray,

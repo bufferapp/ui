@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Text from '../Text';
 import {HelpTextWrapper, HelpText} from '../Input/style';
-import { Warning } from '../Icon';
+import  Warning  from '../Icons/Warning';
 import {Container, StyledTextArea} from './style';
 
 export default class TextArea extends React.Component {

@@ -1,6 +1,6 @@
 import React from 'react';
 import Select from '@bufferapp/ui/Select';
-import { Person } from '@bufferapp/ui/Icon';
+import  Person  from '@bufferapp/ui/Icons/Person';
 
 
 /** With Icon */

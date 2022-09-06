@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import SegmentedControl from '@bufferapp/ui/SegmentedControl';
-import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon';
+import Facebook from '@bufferapp/ui/Icons/Facebook'
+import Pinterest from '@bufferapp/ui/Icons/Pinterest'
+import Twitter from '@bufferapp/ui/Icons/Twitter'
 
 const options = [
   {

@@ -1,6 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Twitter, Instagram, Facebook, Pinterest, LinkedIn } from '../Icon';
+import Twitter from "../Icons/Twitter"
+import Instagram from "../Icons/Instagram"
+import Facebook from "../Icons/Facebook"
+import Pinterest from "../Icons/Pinterest"
+import LinkedIn from "../Icons/LinkedIn"
 import Text from '../Text/Text';
 
 import {

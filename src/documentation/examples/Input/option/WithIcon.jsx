@@ -1,6 +1,6 @@
 import React from 'react';
 import Input from '@bufferapp/ui/Input';
-import SearchIcon from '@bufferapp/ui/Icon/Icons/Search';
+import SearchIcon from '@bufferapp/ui/Icons/Search';
 
 /** Input with icon */
 export default function ExampleInput() {

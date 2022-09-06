@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
 import Tag from '@bufferapp/ui/Tag';
-import { Flash } from '@bufferapp/ui/Icon';
+import  Flash  from '@bufferapp/ui/Icons/Flash';
 
 /** Split Button With End Icon */
 export default function ExampleSplitButton() {

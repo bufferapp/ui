@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Cross from '../Icon/Icons/Cross';
+import Cross from '../Icons/Cross';
 import Button from '../Button/Button';
 import { white, grayLight, grayDarker, grayDark } from '../style/colors';
 

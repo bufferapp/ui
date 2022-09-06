@@ -16,17 +16,16 @@ import {
   yellow,
   startpage,
 } from '../style/colors';
-import {
-  Facebook,
-  Gbp,
-  Instagram,
-  LinkedIn,
-  Pinterest,
-  Shopify,
-  Tiktok,
-  Twitter,
-  StartPage
-} from '../Icon';
+
+import Facebook from "../Icons/Facebook"
+import Gbp from "../Icons/Gbp"
+import Instagram from "../Icons/Instagram"
+import LinkedIn from "../Icons/LinkedIn"
+import Pinterest from "../Icons/Pinterest"
+import Shopify from "../Icons/Shopify"
+import Tiktok from "../Icons/Tiktok"
+import Twitter from "../Icons/Twitter"
+import StartPage from "../Icons/StartPage"
 
 const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}

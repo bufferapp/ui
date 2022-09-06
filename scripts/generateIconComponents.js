@@ -13,15 +13,15 @@ const fetch = require('node-fetch');
 const { promisify } = require('util');
 const SVGO = require('svgo');
 const svg2jsx = require('@balajmarius/svg2jsx');
-const prettier = require("prettier");
+const prettier = require('prettier');
 
 const writeFileAsync = promisify(fs.writeFile);
 
 const iconCachePath = path.join(__dirname, '../config/cachedIconData.json');
-const pathToIconComponents = path.join(__dirname, '../src/components/Icon');
+const pathToIconComponents = path.join(__dirname, '../src/components/Icons');
 const pathToIconExamples = path.join(
   __dirname,
-  '../src/documentation/examples/Icon'
+  '../src/documentation/examples/Icons'
 );
 
 const figmaIconFileId = 'D9T6BuWxbTVKhlDU8faZSQ9G';
@@ -76,7 +76,7 @@ async function getFigmaFile(fileId) {
  */
 function getFramesToChoose(figmaFile) {
   const frames = figmaFile.document.children[0].children;
-  const framesFormatted = frames.map(f => ({
+  const framesFormatted = frames.map((f) => ({
     name: `${f.name} (${f.children.length} children)`,
     value: f.id,
     short: f.name,
@@ -92,15 +92,15 @@ function getFramesToChoose(figmaFile) {
  */
 function getIconsFromFrame(figmaFile, frameId) {
   const frame = figmaFile.document.children[0].children.find(
-    f => f.id === frameId
+    (f) => f.id === frameId
   );
   if (frame) {
     return (
       frame.children
         // Filter out any ignored icons
-        .filter(icon => !iconsToIgnore.includes(icon.name))
+        .filter((icon) => !iconsToIgnore.includes(icon.name))
         // Simplify the data structure, just grab what we need
-        .map(icon => ({
+        .map((icon) => ({
           id: icon.id,
           name: icon.name,
         }))
@@ -132,14 +132,14 @@ function downloadSvgs(icons) {
     eachLimit(
       icons,
       8, // max parallel downloads
-      async icon => {
+      async (icon) => {
         if (icon.svgUrl) {
           const res = await fetch(icon.svgUrl);
           const svgBody = await res.text();
           newIcons[icon.id].svgBody = svgBody;
         }
       },
-      err => {
+      (err) => {
         if (err) {
           reject(err);
         }
@@ -169,7 +169,7 @@ ${componentName}Icon.displayName = '${componentName}Icon';
 export default ${componentName}Icon;
 `;
 
-const getExampleSource = componentName => `
+const getExampleSource = (componentName) => `
 import React from 'react';
 import ${componentName}Icon from '@bufferapp/ui/Icon/Icons/${componentName}';
 
@@ -187,12 +187,12 @@ export default function ${componentName}IconExample() {
  *
  * @param {String} figmaObjectName
  */
-const getComponentName = figmaObjectName => {
+const getComponentName = (figmaObjectName) => {
   const formatted = figmaObjectName
     .replace(/ico(n)?-/, '')
-    .replace(/( \w)/g, m => m[1].toUpperCase())
+    .replace(/( \w)/g, (m) => m[1].toUpperCase())
     .replace(/ /g, '')
-    .replace(/(-\w)/g, m => m[1].toUpperCase());
+    .replace(/(-\w)/g, (m) => m[1].toUpperCase());
   // Capitalize first char
   return formatted.charAt(0).toUpperCase() + formatted.slice(1);
 };
@@ -204,7 +204,7 @@ const getComponentName = figmaObjectName => {
  * @param {String} source
  * @returns {String} svg
  */
-const getSVGContent = source =>
+const getSVGContent = (source) =>
   source
     // grab everything after the first tag ends (assumed to be <svg ...>)
     .slice(source.indexOf('>') + 1)
@@ -220,16 +220,19 @@ const getSVGContent = source =>
  * @param {Object} icons
  */
 function generateReactIconComponents(icons, spinner) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     const iconsCreated = [];
     eachLimit(
       Object.values(icons),
       10,
-      async icon => {
+      async (icon) => {
         const componentName = getComponentName(icon.name);
         const svg = getSVGContent(icon.svgBodyOptimized);
         const reactSource = getReactSource({ componentName, svg });
-        const prettyReactSource = prettier.format(reactSource, { parser: 'babel', singleQuote: true });
+        const prettyReactSource = prettier.format(reactSource, {
+          parser: 'babel',
+          singleQuote: true,
+        });
         const exampleSource = getExampleSource(componentName);
 
         const componentFilePath = path.join(
@@ -242,7 +245,6 @@ function generateReactIconComponents(icons, spinner) {
           `${componentName}.jsx`
         );
 
-
         await writeFileAsync(componentFilePath, prettyReactSource);
         await writeFileAsync(exampleFilePath, exampleSource);
 
@@ -250,7 +252,7 @@ function generateReactIconComponents(icons, spinner) {
 
         iconsCreated.push(componentName);
       },
-      err => {
+      (err) => {
         if (err) {
           console.error('Error writing component file!', err);
         }
@@ -288,11 +290,11 @@ function optimizeSvgs(icons) {
     plugins: [{ removeAttrs: { attrs: '(stroke|fill)' } }],
   });
   const newIcons = Object.assign({}, icons);
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     eachLimit(
       Object.values(icons),
       10,
-      async icon => {
+      async (icon) => {
         const removedClipPath = removeClipPath(icon.svgBody);
         let result;
         try {
@@ -309,7 +311,7 @@ function optimizeSvgs(icons) {
         const transformed = await svg2jsx(result.data);
         newIcons[icon.id].svgBodyOptimized = transformed;
       },
-      err => {
+      (err) => {
         if (err) {
           console.error('Error optimizing SVG! ', err);
         }
@@ -322,7 +324,7 @@ function optimizeSvgs(icons) {
 function generateReactIconIndex(icons) {
   const sortedIcons = [...icons].sort();
   const indexContent = sortedIcons
-    .map(name => `export ${name} from './Icons/${name}';`)
+    .map((name) => `export ${name} from './Icons/${name}';`)
     .join('\n');
   const pathToIndex = path.join(pathToIconComponents, 'index.js');
   fs.writeFileSync(pathToIndex, `${indexContent}\n`);

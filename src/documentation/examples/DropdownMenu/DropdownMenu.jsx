@@ -3,8 +3,8 @@ import DropdownMenu from '@bufferapp/ui/DropdownMenu';
 import Tag from '@bufferapp/ui/Tag';
 import styled from 'styled-components';
 
-import Flash from '@bufferapp/ui/Icon/Icons/Flash';
-import Canva from '@bufferapp/ui/Icon/Icons/Canva';
+import Flash from '@bufferapp/ui/Icons/Flash';
+import Canva from '@bufferapp/ui/Icons/Canva';
 
 import { white, grayDark, canva, canvaLight } from '@bufferapp/ui/style/colors';
 

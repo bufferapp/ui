@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import * as Styles from './style';
-import ChevronDown from '../Icon/Icons/ChevronDown';
+import ChevronDown from '../Icons/ChevronDown';
 import Select from '../Select/Select';
 
 /*

@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
-import { Folder } from '@bufferapp/ui/Icon';
+import  Folder  from '@bufferapp/ui/Icons/Folder';
 
 /** Secondary with Icon */
 export default function ExampleButton() {

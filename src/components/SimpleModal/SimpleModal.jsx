@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { Cross } from '../Icon';
+import  Cross  from '../Icons/Cross';
 import { Container, Modal, CloseButton } from './style';
 import { useAnimation } from '../AnimationWrapper';
 import { stageInCenter, stageOutCenter } from '../style/animations';

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import * as Styles from './style';
 import Button from '../Button';
-import { Cross } from '../Icon';
+import  Cross  from '../Icons/Cross';
 
 function setCookie(cookie, cookieKey, days, value) {
   const expiresInDays = days * 24 * 60 * 60;

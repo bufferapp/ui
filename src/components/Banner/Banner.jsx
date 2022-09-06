@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from '../Button';
 import Text from '../Text';
-import CrossIcon from '../Icon/Icons/Cross';
+import CrossIcon from '../Icons/Cross';
 
 import {
   BannerStyled,

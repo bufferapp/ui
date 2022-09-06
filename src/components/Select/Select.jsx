@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import helper from 'immutability-helper';
-import SearchIcon from '../Icon/Icons/Search';
+import SearchIcon from '../Icons/Search';
 import {
   Wrapper,
   SelectStyled,
@@ -16,7 +16,7 @@ import {
 import SelectItem from './SelectItem/SelectItem';
 import Button from '../Button/Button';
 import { ButtonSelect } from '../Button/style';
-import ChevronDown from '../Icon/Icons/ChevronDown';
+import ChevronDown from '../Icons/ChevronDown';
 import Search from '../Search/Search';
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
