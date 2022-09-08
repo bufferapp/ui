@@ -162,6 +162,7 @@
     "not op_mini all"
   ],
   "jest": {
+    "clearMocks": true,
     "collectCoverageFrom": [
       "src/components/**/*.{js,jsx}",
       "!src/components/**/style.js",
@@ -173,15 +174,18 @@
       "react-app-polyfill/jsdom"
     ],
     "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+      "**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "**/?(*.)+(spec|test).{js,jsx,ts,tsx}"
     ],
+    "testPathIgnorePatterns": ["\\\\node_modules\\\\"],
+    "transformIgnorePatterns": ["<rootDir>/node_modules/"],
     "testEnvironment": "jsdom",
     "testURL": "http://localhost",
     "moduleNameMapper": {
       "./src(.*)$": "<rootDir>/src/$1",
       "\\/tooltip/styles.(css|scss)$": "identity-obj-proxy"
-    }
+    },
+    "verbose": false
   },
   "babel": {
     "plugins": [
