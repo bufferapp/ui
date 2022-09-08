@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > ComponentNamePlaceholder Matches snapshot when passed only required props 1`] = `
+<ForwardRef(styled.div)>
+  <NodeFixture />
+</ForwardRef(styled.div)>
+`;
