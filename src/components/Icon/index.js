@@ -70,7 +70,6 @@ export Hotkeys from './Icons/Hotkeys';
 export Image from './Icons/Image';
 export Inbox from './Icons/Inbox';
 export Info from './Icons/Info';
-export Info from './Icons/Info';
 export Instagram from './Icons/Instagram';
 export InstagramComment from './Icons/InstagramComment';
 export InstagramDm from './Icons/InstagramDm';
