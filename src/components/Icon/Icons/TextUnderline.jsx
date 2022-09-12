@@ -5,17 +5,17 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const InfoIcon = createIconComponent({
+const TextUnderlineIcon = createIconComponent({
   content: (
     <g>
       <path
         fillRule="evenodd"
-        d="M8 0a8 8 0 110 16A8 8 0 018 0zM7 11.5a1 1 0 102 0v-4a1 1 0 10-2 0v4zm1-6a1 1 0 110-2 1 1 0 010 2z"
+        d="M1.5 13.5a1 1 0 011-1h11a1 1 0 110 2h-11a1 1 0 01-1-1zM4 2a1 1 0 011 1v3.75a3 3 0 106 0V3a1 1 0 112 0v3.75a5 5 0 11-10 0V3a1 1 0 011-1z"
         clipRule="evenodd"
       />
     </g>
   ),
 });
-InfoIcon.displayName = 'InfoIcon';
+TextUnderlineIcon.displayName = 'TextUnderlineIcon';
 
-export default InfoIcon;
+export default TextUnderlineIcon;
