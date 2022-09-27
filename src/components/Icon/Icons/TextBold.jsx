@@ -5,17 +5,17 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const InfoIcon = createIconComponent({
+const TextBoldIcon = createIconComponent({
   content: (
     <g>
       <path
         fillRule="evenodd"
-        d="M8 0a8 8 0 110 16A8 8 0 018 0zM7 11.5a1 1 0 102 0v-4a1 1 0 10-2 0v4zm1-6a1 1 0 110-2 1 1 0 010 2z"
+        d="M3 3a1 1 0 011-1h4.75a3.25 3.25 0 012.684 5.083A3.502 3.502 0 0113 10a3.5 3.5 0 01-3.5 3.5H4a1 1 0 01-1-1V3zm2 5.5v3h4.5a1.5 1.5 0 100-3H5zm3.75-2H5V4h3.75a1.25 1.25 0 010 2.5z"
         clipRule="evenodd"
       />
     </g>
   ),
 });
-InfoIcon.displayName = 'InfoIcon';
+TextBoldIcon.displayName = 'TextBoldIcon';
 
-export default InfoIcon;
+export default TextBoldIcon;

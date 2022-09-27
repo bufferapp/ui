@@ -13,9 +13,20 @@ import {
   shopify,
   tiktok,
   twitter,
-  yellow
+  yellow,
+  startpage,
 } from '../style/colors';
-import {Facebook, Gbp, Instagram, LinkedIn, Pinterest, Shopify, Tiktok, Twitter} from '../Icon';
+import {
+  Facebook,
+  Gbp,
+  Instagram,
+  LinkedIn,
+  Pinterest,
+  Shopify,
+  Tiktok,
+  Twitter,
+  StartPage
+} from '../Icon';
 
 const Wrapper = styled.div`
   ${props => Styles.wrapper[props.size]}
@@ -65,12 +76,18 @@ const socialIconMap = new Map([
     <Styles.SocialIconWrapper size={size} bgColor={tiktok}>
       <Tiktok size="small" color="white" />
     </Styles.SocialIconWrapper>
-  )],
-  ['startPage', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={yellow}>
-       <Styles.StartPageIcon>SP</Styles.StartPageIcon>
-    </Styles.SocialIconWrapper>
-  )],
+    ),
+  ],
+  [
+    'startPage',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={startpage}>
+        <Styles.StartPageIcon>
+          <StartPage size="small" color="white" />{' '}
+        </Styles.StartPageIcon>
+      </Styles.SocialIconWrapper>
+    ),
+  ],
 ]);
 
 const Avatar = ({

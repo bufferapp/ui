@@ -1,4 +1,33 @@
 # Changelog
+## [7.8.0] - 2022-09-27
+- Add type 'alert' for Notice
+- Add type 'tip' for Notice
+- Fixed paddings for Notice
+
+# Changelog
+## [7.7.0] - 2022-09-05
+- Add icon: Text Align Left
+- Add icon: Text Align Center
+- Add icon: Text Bold
+- Add icon: Text Italic
+- Add icon: Text Underline
+
+## [7.6.1] - 2022-09-05
+* sorry i published a minor version by mistake! *
+- updates SP Avatar
+- updates proptypes for SidebarListItem
+
+## [7.5.0] - 2022-08-31
+- Add icon: GooglePhotos
+
+## [7.4.0] - 2022-08-22
+- Support icon for Input
+
+## [7.3.0] - 2022-08-19
+- Add icon: Behance
+- Add icon: Substack
+- Add icon: Medium
+- Add icon: Pinned
 
 ## [7.2.6] - 2022-08-17
 - Fix: add flex-shrink to Icon style

@@ -25,6 +25,7 @@ export default class Input extends React.Component {
       value,
       forwardedRef,
       required,
+      icon,
     } = this.props;
     return (
       <Styles.InputWrapper>
@@ -34,6 +35,7 @@ export default class Input extends React.Component {
           </Text>
         )}
         <Styles.InputFieldWrapper prefix={prefix} size={size}>
+          {icon && !prefix && <Styles.StyledIcon>{icon}</Styles.StyledIcon>}
           <Styles.InputStyled
             disabled={disabled}
             hasError={hasError}
@@ -50,7 +52,8 @@ export default class Input extends React.Component {
             value={value}
             ref={forwardedRef}
             required={required}
-            aria-required={required ? true: undefined}
+            aria-required={required ? true : undefined}
+            icon={icon}
           />
         </Styles.InputFieldWrapper>
         {help.length > 0 && (
@@ -102,6 +105,8 @@ Input.propTypes = {
   type: PropTypes.string,
   /** The value of the input */
   value: PropTypes.string,
+  /** The value of the icon */
+  icon: PropTypes.node,
   /**
    * this consumed by the default export that is wrapping the component into a ForwardRef
    * @ignore
@@ -125,4 +130,5 @@ Input.defaultProps = {
   forwardedRef: undefined,
   prefix: null,
   maxLength: undefined,
+  icon: undefined,
 };
