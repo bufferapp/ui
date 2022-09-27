@@ -8,8 +8,8 @@ export default function ExampleNotice() {
     // eslint-disable-next-line
     <Notice type="tip">
       <Text>
-        We&apos;re aware of an issue and we&apos;re actively working to resolve
-        the situation
+        There&apos;s a huge upturn in Followers over the last week, try to
+        recreate some of that magic!
       </Text>
     </Notice>
   );
