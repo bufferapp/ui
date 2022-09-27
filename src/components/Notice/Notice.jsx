@@ -5,32 +5,57 @@ import { borderRadius } from '../style/borders';
 import { fontSize } from '../style/fonts';
 import Warning from '../Icon/Icons/Warning';
 import Cross from '../Icon/Icons/Cross';
-import { grayDark, grayLighter, grayDarker } from '../style/colors';
+import Buffer from '../Icon/Icons/Buffer';
+import {
+  grayDark,
+  grayLighter,
+  grayDarker,
+  redLightest,
+  redDark,
+  redDarker,
+  purpleDark,
+  purpleLightest,
+  purpleDarker,
+  yellowLightest,
+  yellowDark,
+  yellowDarker,
+} from '../style/colors';
 import { useAnimation } from '../AnimationWrapper';
 import { stageInRight, fadeOut } from '../style/animations';
 
 const colorMap = {
+  alert: {
+    border: redDark,
+    background: redLightest,
+    color: redDarker,
+  },
   warning: {
-    border: '#a59638',
-    background: '#fdf8d8',
-    color: '#625920',
+    border: yellowDark,
+    background: yellowLightest,
+    color: yellowDarker,
   },
   note: {
     border: grayDark,
     background: grayLighter,
     color: grayDarker,
   },
+  tip: {
+    border: purpleDark,
+    background: purpleLightest,
+    color: purpleDarker,
+  },
 };
 
 const NoticeWrapper = styled.div`
-  border: ${props => `1px solid ${colorMap[props.type].border}`};
-  color: ${props => colorMap[props.type].color};
-  background: ${props => colorMap[props.type].background};
+  border: ${(props) => `1px solid ${colorMap[props.type].border}`};
+  color: ${(props) => colorMap[props.type].color};
+  background: ${(props) => colorMap[props.type].background};
   border-radius: ${borderRadius};
   font-size: ${fontSize};
-  padding: 16px ${({ dismiss }) => dismiss ? '36px' : '16px' } 16px 16px;
+  padding: 8px ${({ dismiss }) => (dismiss ? '28px' : '8px')} 8px 8px;
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   position: relative;
   width: 100%;
 `;
@@ -42,8 +67,15 @@ const WarningIcon = styled(Warning)`
   max-width: 16px;
 `;
 
+const BufferIcon = styled(Buffer)`
+  display: block;
+  margin-right: 12px;
+  flex: 1 0 auto;
+  max-width: 16px;
+`;
+
 const CloseButton = styled.button`
-  color: ${props => colorMap[props.type].color};
+  color: ${(props) => colorMap[props.type].color};
   border: 0;
   background: 0;
   padding: 0;
@@ -53,23 +85,29 @@ const CloseButton = styled.button`
   position: absolute;
   right: 16px;
   &:hover {
-    color: ${props => colorMap[props.type].color};
+    color: ${(props) => colorMap[props.type].color};
     opacity: 1;
     cursor: pointer;
   }
 `;
 
 function Notice({ children, dismiss, type, className, disableAnimation }) {
-  const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
+  const {
+    AnimationWrapper,
+    dismiss: dismissAnimationWrapper,
+    animationProps,
+  } = useAnimation({
     justify: 'flex-end',
     stageInAnimation: stageInRight,
     stageOutAnimation: fadeOut,
     onDismiss: dismiss,
-  })
+  });
 
   const noticeContent = (
     <NoticeWrapper type={type} dismiss={dismiss} className={className}>
       {type === 'warning' && <WarningIcon />}
+      {type === 'alert' && <WarningIcon />}
+      {type === 'tip' && <BufferIcon />}
       {children}
       {dismiss && (
         <CloseButton type={type} onClick={() => dismissAnimationWrapper()}>
@@ -80,7 +118,9 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
   );
 
   if (!disableAnimation) {
-    return <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>;
+    return (
+      <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>
+    );
   }
 
   return <div>{noticeContent}</div>;
@@ -91,7 +131,7 @@ Notice.propTypes = {
   dismiss: PropTypes.func,
   /** doesn't use animation wrapper if true */
   disableAnimation: PropTypes.bool,
-  /** can be warning, note */
+  /** can be warning, note, alert, tip */
   type: PropTypes.string.isRequired,
 };
 

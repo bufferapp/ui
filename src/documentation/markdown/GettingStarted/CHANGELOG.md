@@ -1,4 +1,10 @@
 # Changelog
+## [7.8.0] - 2022-09-27
+- Add type 'alert' for Notice
+- Add type 'tip' for Notice
+- Fixed paddings for Notice
+
+# Changelog
 ## [7.7.0] - 2022-09-05
 - Add icon: Text Align Left
 - Add icon: Text Align Center
