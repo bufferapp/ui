@@ -1,4 +1,7 @@
 # Changelog
+## [7.9.0] - 2022-09-28
+- Add new styles for SidebarListItem
+
 ## [7.8.0] - 2022-09-27
 - Add type 'alert' for Notice
 - Add type 'tip' for Notice

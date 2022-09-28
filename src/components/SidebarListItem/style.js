@@ -1,20 +1,13 @@
 import styled from 'styled-components';
-import { grayDarker, gray, white, grayDark, blue } from '../style/colors';
-
-export const ItemStyled = styled.li`
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  &:hover {
-    background-color: ${props =>
-      props.selected ? blue : 'rgba(0, 0, 0, 0.15)'};
-  }
-  cursor: pointer;
-  height: ${props => (props.hasUser ? '48px' : '32px')};
-  border-radius: 4px;
-  padding-left: 8px;
-  background-color: ${props => (props.selected ? blue : 'transparent')};
-`;
+import {
+  blueLightest50,
+  grayDarker,
+  grayLight50,
+  gray,
+  grayDark,
+  blue,
+} from '../style/colors';
+import Text from '../Text/Text';
 
 export const Badge = styled.span`
   margin-left: auto;
@@ -24,8 +17,8 @@ export const Badge = styled.span`
   font-size: 12px;
   line-height: 14px;
   text-align: right;
-  color: ${props => (props.selected ? white : grayDarker)};
   margin-right: 8px;
+  color: ${(props) => (props.selected ? blue : grayDarker)};
 `;
 
 export const NameHandleWrapper = styled.div`
@@ -44,7 +37,7 @@ export const Handle = styled.span`
   font-size: 12px;
   line-height: 14px;
   letter-spacing: -0.2px;
-  color: ${props => (props.selected ? white : grayDark)};
+  color: ${grayDark};
 `;
 
 export const LabelContainer = styled.div`
@@ -56,6 +49,13 @@ export const LabelContainer = styled.div`
   margin-right: 8px;
 `;
 
+export const LabelStyled = styled(Text)`
+  font-size: ${(props) => (props.hasUser ? '13px' : '15px')};
+  font-weight: ${(props) => (props.hasUser ? '500' : '700')};
+  line-height: ${(props) => (props.hasUser ? '20px' : '24px')};
+  color: ${(props) => (props.selected ? blue : grayDarker)};
+`;
+
 export const IconContainer = styled.span`
   margin-right: 8px;
   display: inline-block;
@@ -64,17 +64,37 @@ export const IconContainer = styled.span`
   display: flex;
   justify-content: center;
   svg {
-    fill: ${props => (props.selected ? white : gray)};
+    fill: ${(props) => (props.selected ? blue : gray)};
   }
-  ${ItemStyled}:hover & * {
-    color: ${props => (props.selected ? white : grayDarker)};
-    fill: ${props => (props.selected ? white : grayDarker)};
+`;
+
+export const ItemStyled = styled.li`
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 8px 0 8px 8px;
+  background-color: ${(props) =>
+    props.selected ? blueLightest50 : 'transparent'};
+
+  &:hover {
+    background-color: ${(props) =>
+      props.selected ? blueLightest50 : grayLight50};
+
+    ${Badge}, ${LabelStyled} {
+      color: ${(props) => (props.selected ? blue : grayDarker)};
+    }
+
+    ${IconContainer} svg {
+      fill: ${(props) => (props.selected ? blue : gray)};
+    }
   }
 `;
 
 export const BadgeIconContainer = styled(IconContainer)`
   margin-left: auto;
   svg {
-    fill: ${props => (props.selected ? white : 'currentColor')};
+    fill: ${(props) => (props.selected ? gray : 'currentColor')};
   }
 `;
