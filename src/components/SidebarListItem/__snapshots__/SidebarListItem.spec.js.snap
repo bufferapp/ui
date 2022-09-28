@@ -32,14 +32,23 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
         type="social"
       />
       <ForwardRef(styled.div)>
-        <Text
-          color="grayDarker"
-          hasError={false}
+        <ForwardRef(Styled(Text))
+          hasUser={
+            Object {
+              "fallbackUrl": "jest-auto-snapshots String Fixture",
+              "handle": "jest-auto-snapshots String Fixture",
+              "id": "jest-auto-snapshots String Fixture",
+              "name": "jest-auto-snapshots String Fixture",
+              "network": "facebook",
+              "profileImageUrl": "jest-auto-snapshots String Fixture",
+            }
+          }
+          selected={false}
           title="jest-auto-snapshots String Fixture"
           type="label"
         >
           jest-auto-snapshots String Fixture
-        </Text>
+        </ForwardRef(Styled(Text))>
         <ForwardRef(styled.span)
           selected={false}
         >
@@ -88,14 +97,23 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
         type="social"
       />
       <ForwardRef(styled.div)>
-        <Text
-          color="white"
-          hasError={false}
+        <ForwardRef(Styled(Text))
+          hasUser={
+            Object {
+              "fallbackUrl": "jest-auto-snapshots String Fixture",
+              "handle": "jest-auto-snapshots String Fixture",
+              "id": "jest-auto-snapshots String Fixture",
+              "name": "jest-auto-snapshots String Fixture",
+              "network": "facebook",
+              "profileImageUrl": "jest-auto-snapshots String Fixture",
+            }
+          }
+          selected={true}
           title="jest-auto-snapshots String Fixture"
           type="label"
         >
           jest-auto-snapshots String Fixture
-        </Text>
+        </ForwardRef(Styled(Text))>
         <ForwardRef(styled.span)
           selected={true}
         >
@@ -120,14 +138,13 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only
   selected={null}
 >
   <ForwardRef(styled.div)>
-    <Text
-      color="grayDarker"
-      hasError={false}
+    <ForwardRef(Styled(Text))
+      selected={null}
       title="jest-auto-snapshots String Fixture"
       type="label"
     >
       jest-auto-snapshots String Fixture
-    </Text>
+    </ForwardRef(Styled(Text))>
   </ForwardRef(styled.div)>
 </ForwardRef(styled.li)>
 `;
