@@ -1,14 +1,18 @@
 import React from 'react';
 import Button from '@bufferapp/ui/Button';
+import styled from 'styled-components';
+
+const Wrapper = styled.div`
+  display: flex;
+  column-gap: 16px;
+`;
 
 /** Disabled */
 export default function ExampleDisabled() {
   return (
-    <Button
-      type="primary"
-      disabled
-      onClick={() => {}}
-      label="Click Me"
-    />
+    <Wrapper>
+      <Button type="primary" disabled onClick={() => {}} label="Click Me" />
+      <Button type="secondary" disabled onClick={() => {}} label="Click Me" />
+    </Wrapper>
   );
 }
