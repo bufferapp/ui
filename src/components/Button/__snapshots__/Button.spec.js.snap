@@ -18,6 +18,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -58,6 +59,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -99,6 +101,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
       isSplit={true}
       onClick={[MockFunction]}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -139,6 +142,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -179,6 +183,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.div)
         hasIcon={true}
@@ -222,6 +227,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -262,6 +268,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEn
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <NodeFixture />
       <ForwardRef(styled.span)>
@@ -302,6 +309,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -335,6 +343,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
       icon={<NodeFixture />}
       isSplit={false}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -374,6 +383,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -410,6 +420,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
       icon={<NodeFixture />}
       isSplit={true}
       size="small"
+      type="primary"
     >
       <ForwardRef(styled.span)>
         jest-auto-snapshots String Fixture
@@ -447,6 +458,7 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
       hasIconOnly={false}
       onClick={[MockFunction]}
       size="medium"
+      type="secondary"
     >
       <ForwardRef(styled.div)
         hasIcon={false}
