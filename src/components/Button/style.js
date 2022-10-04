@@ -17,6 +17,7 @@ import {
   redDarker,
   redLighter,
   orange as orangeColor,
+  blueLight,
 } from '../style/colors';
 import {
   fontFamily,
@@ -136,9 +137,9 @@ export const ButtonBase = css`
 
 /* theme variants */
 export const primary = css`
-  background-color: ${props => (props.$loading ? blueDarker : blue)};
+  background-color: ${(props) => (props.$loading ? blueDarker : blue)};
   color: ${white};
-  border: 1px solid ${props => (props.$loading ? blueDarker : blue)};
+  border: 1px solid ${(props) => (props.$loading ? blueDarker : blue)};
   :hover {
     background-color: ${blueDark};
     border-color: ${blueDark};
@@ -163,7 +164,7 @@ export const secondary = css`
 `;
 
 export const danger = css`
-  background-color: ${props => (props.$loading ? redDarker : redDark)};
+  background-color: ${(props) => (props.$loading ? redDarker : redDark)};
   color: ${white};
   border-color: ${redDarker};
 
@@ -220,14 +221,23 @@ export const large = css`
 `;
 
 const Sizes = {
-  small, medium, large
-}
+  small,
+  medium,
+  large,
+};
 
 /* state variants */
-export const disabled = css`
+export const secondaryDisabled = css`
   background-color: ${grayLight};
   cursor: not-allowed;
   border: 1px solid ${grayLight};
+`;
+
+export const primaryDisabled = css`
+  background-color: ${blueLight};
+  cursor: not-allowed;
+  border: 1px solid ${blueLight};
+  color: ${white};
 `;
 
 export const fullWidth = css`

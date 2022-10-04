@@ -10,10 +10,11 @@ Since buttons keep their own inline-block display type, we can only imitate this
  `display: inline-block`) an internal container (with `display: flex`), and then the actual contents (including real
   buttons
  */
+
 export const ButtonWrapperStyled = styled.div`
   ${Styles.ButtonWrapperBase};
-  ${props => Styles[props.disabled ? 'disabled' : props.type]};
-  ${props => (props.fullWidth ? Styles.fullWidth : '')};
+  ${(props) => Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
+  ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
 `;
 
 export const ButtonContainerStyled = styled.div`
@@ -22,9 +23,9 @@ export const ButtonContainerStyled = styled.div`
 
 export const ButtonStyled = styled.button`
   ${Styles.ButtonNestedBase};
-  ${props => Styles[props.size]};
-  ${props => (props.disabled ? Styles.disabled : '')};
-  ${props => (props.fullWidth ? Styles.fullWidth : '')};
+  ${(props) => Styles[props.size]};
+  ${(props) => Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
+  ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
 `;
 
 const Loading = styled.img`
@@ -67,7 +68,7 @@ const Button = ({
   className,
   children,
   ...props
-}) =>  (
+}) => (
   <ButtonWrapperStyled
     className={className}
     disabled={disabled}
@@ -87,6 +88,7 @@ const Button = ({
         aria-haspopup="false"
         size={size}
         fullWidth={fullWidth}
+        type={type}
         {...props}
       >
         {!iconEnd && icon}
@@ -113,7 +115,7 @@ const Button = ({
       {isSplit &&
         (type === 'primary' || type === 'secondary') &&
         (children ? (
-          React.Children.map(children, child => React.cloneElement(child, {}))
+          React.Children.map(children, (child) => React.cloneElement(child, {}))
         ) : (
           <Select
             onSelectClick={onSelectClick}
@@ -129,7 +131,7 @@ const Button = ({
         ))}
     </ButtonContainerStyled>
   </ButtonWrapperStyled>
-  );
+);
 
 Button.propTypes = {
   /** Is the button disabled */
