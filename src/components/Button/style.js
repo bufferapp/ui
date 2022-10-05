@@ -226,9 +226,9 @@ const Sizes = {
 
 /* state variants */
 export const secondaryDisabled = css`
-  background-color: ${grayLight};
   cursor: not-allowed;
   border: 1px solid ${grayLight};
+  color: ${gray};
 `;
 export const Disabled = secondaryDisabled;
 
@@ -252,13 +252,14 @@ const getBackgroundColor = (isDisabled, type) => {
   if (isDisabled) {
     return gray;
   }
-  return type === 'primary' ? blueLighter: gray;
-}
+  return type === 'primary' ? blueLighter : gray;
+};
 
 export const ButtonSelect = style.div`
   :before {
-    background-color: ${props => getBackgroundColor(props.disabled, props.type)};
-    color: ${props => (props.disabled ? gray : blueLighter)};
+    background-color: ${(props) =>
+      getBackgroundColor(props.disabled, props.type)};
+    color: ${(props) => (props.disabled ? gray : blueLighter)};
     content: "";
     height: 24px;
     left: 0;
@@ -268,12 +269,13 @@ export const ButtonSelect = style.div`
     width: 1px;
   }
 
-  ${props => Sizes[props.size] || Sizes.medium};
+  ${(props) => Sizes[props.size] || Sizes.medium};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'inherit')};
   align-items: center;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  ${props => props.size === 'small' ? 'padding: 0 6px'  : 'padding 0 10px'};
+  ${(props) => (props.size === 'small' ? 'padding: 0 6px' : 'padding 0 10px')};
   position: relative;
   width: 100%;
 

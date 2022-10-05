@@ -13,6 +13,18 @@ export default function ExampleDisabled() {
     <Wrapper>
       <Button type="primary" disabled onClick={() => {}} label="Click Me" />
       <Button type="secondary" disabled onClick={() => {}} label="Click Me" />
+      <Button
+        onSelectClick={() => true}
+        onClick={() => true}
+        type="secondary"
+        disabled
+        isSplit
+        items={[
+          { id: '1', title: 'Save as Draft' },
+          { id: '2', title: 'Save as Post' },
+        ]}
+        label="Click Me"
+      />
     </Wrapper>
   );
 }
