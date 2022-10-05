@@ -1,4 +1,7 @@
 # Changelog
+## [7.10.0] - 2022-10-05
+- Fixed disabled styles for Buttons
+
 ## [7.9.0] - 2022-09-28
 - Add new styles for SidebarListItem
 
