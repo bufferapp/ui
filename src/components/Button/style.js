@@ -250,7 +250,7 @@ export const fullWidth = css`
 
 const getBackgroundColor = (isDisabled, type) => {
   if (isDisabled) {
-    return gray;
+    return grayLight;
   }
   return type === 'primary' ? blueLighter : gray;
 };
