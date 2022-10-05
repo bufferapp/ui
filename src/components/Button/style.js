@@ -17,7 +17,6 @@ import {
   redDarker,
   redLighter,
   orange as orangeColor,
-  blueLight,
 } from '../style/colors';
 import {
   fontFamily,
@@ -91,7 +90,6 @@ export const ButtonNestedBase = css`
   font-size: inherit;
   font-weight: inherit;
   justify-content: flex-start;
-  margin: -1px;
   padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -232,12 +230,17 @@ export const secondaryDisabled = css`
   cursor: not-allowed;
   border: 1px solid ${grayLight};
 `;
+export const Disabled = secondaryDisabled;
 
 export const primaryDisabled = css`
-  background-color: ${blueLight};
+  background-color: ${blueLighter};
   cursor: not-allowed;
-  border: 1px solid ${blueLight};
+  border: 1px solid ${blueLighter};
   color: ${white};
+`;
+
+export const disabled = css`
+  cursor: not-allowed;
 `;
 
 export const fullWidth = css`

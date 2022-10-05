@@ -24,7 +24,7 @@ export const ButtonContainerStyled = styled.div`
 export const ButtonStyled = styled.button`
   ${Styles.ButtonNestedBase};
   ${(props) => Styles[props.size]};
-  ${(props) => Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
+  ${(props) => Styles[props.disabled ? 'disabled' : '']};
   ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
 `;
 
