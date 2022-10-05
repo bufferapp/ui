@@ -15,7 +15,7 @@ test('Button renders styles properly', () => {
 
 test('Disabled button is disabled', () => {
   const tree = renderer.create(<Button type="primary" onClick={() => {}} label="Primary" disabled />).toJSON();
-  expect(tree).toHaveStyleRule('background-color', '#6B81FF');
+  expect(tree).toHaveStyleRule('background-color', '#ABB7FF');
   expect(tree).toHaveStyleRule('cursor', 'not-allowed');
 });
 
