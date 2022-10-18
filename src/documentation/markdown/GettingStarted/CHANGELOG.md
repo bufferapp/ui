@@ -1,6 +1,6 @@
 # Changelog
 
-## [7.9.1] - 2022-10-18
+## [7.9.2] - 2022-10-18
 - Add icon: AltText
 - Add icon: Retweet
 - Add icon: Feed
