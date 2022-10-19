@@ -53,7 +53,7 @@ export const ButtonWrapperBase = css`
   user-select: none;
 
   :active {
-    top: 1px;
+    top: ${(props) => (props.disabled ? '0px' : '1px')};
   }
   :focus {
     box-shadow: 0 0 0 3px ${boxShadow};
@@ -90,7 +90,6 @@ export const ButtonNestedBase = css`
   font-size: inherit;
   font-weight: inherit;
   justify-content: flex-start;
-  margin: -1px;
   padding: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -122,7 +121,7 @@ export const ButtonBase = css`
   transition-timing-function: ease-in;
   user-select: none;
   :active {
-    top: 1px;
+    top: ${(props) => (props.disabled ? '0px' : '1px')};
   }
   :focus {
     box-shadow: 0 0 0 3px ${boxShadow};
@@ -136,9 +135,9 @@ export const ButtonBase = css`
 
 /* theme variants */
 export const primary = css`
-  background-color: ${props => (props.$loading ? blueDarker : blue)};
+  background-color: ${(props) => (props.$loading ? blueDarker : blue)};
   color: ${white};
-  border: 1px solid ${props => (props.$loading ? blueDarker : blue)};
+  border: 1px solid ${(props) => (props.$loading ? blueDarker : blue)};
   :hover {
     background-color: ${blueDark};
     border-color: ${blueDark};
@@ -163,7 +162,7 @@ export const secondary = css`
 `;
 
 export const danger = css`
-  background-color: ${props => (props.$loading ? redDarker : redDark)};
+  background-color: ${(props) => (props.$loading ? redDarker : redDark)};
   color: ${white};
   border-color: ${redDarker};
 
@@ -220,14 +219,28 @@ export const large = css`
 `;
 
 const Sizes = {
-  small, medium, large
-}
+  small,
+  medium,
+  large,
+};
 
 /* state variants */
-export const disabled = css`
-  background-color: ${grayLight};
+export const secondaryDisabled = css`
   cursor: not-allowed;
   border: 1px solid ${grayLight};
+  color: ${gray};
+`;
+export const Disabled = secondaryDisabled;
+
+export const primaryDisabled = css`
+  background-color: #c6cbe4;
+  cursor: not-allowed;
+  border: 1px solid #c6cbe4;
+  color: ${white};
+`;
+
+export const disabled = css`
+  cursor: not-allowed;
 `;
 
 export const fullWidth = css`
@@ -237,15 +250,16 @@ export const fullWidth = css`
 
 const getBackgroundColor = (isDisabled, type) => {
   if (isDisabled) {
-    return gray;
+    return grayLight;
   }
-  return type === 'primary' ? blueLighter: gray;
-}
+  return type === 'primary' ? blueLighter : gray;
+};
 
 export const ButtonSelect = style.div`
   :before {
-    background-color: ${props => getBackgroundColor(props.disabled, props.type)};
-    color: ${props => (props.disabled ? gray : blueLighter)};
+    background-color: ${(props) =>
+      getBackgroundColor(props.disabled, props.type)};
+    color: ${(props) => (props.disabled ? gray : blueLighter)};
     content: "";
     height: 24px;
     left: 0;
@@ -255,12 +269,13 @@ export const ButtonSelect = style.div`
     width: 1px;
   }
 
-  ${props => Sizes[props.size] || Sizes.medium};
+  ${(props) => Sizes[props.size] || Sizes.medium};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'inherit')};
   align-items: center;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  ${props => props.size === 'small' ? 'padding: 0 6px'  : 'padding 0 10px'};
+  ${(props) => (props.size === 'small' ? 'padding: 0 6px' : 'padding 0 10px')};
   position: relative;
   width: 100%;
 

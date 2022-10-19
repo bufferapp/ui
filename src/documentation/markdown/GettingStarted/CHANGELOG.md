@@ -1,4 +1,6 @@
 # Changelog
+## [7.10.0] - 2022-10-05
+- Fixed disabled styles for Buttons
 
 ## [7.9.3] - 2022-10-19
 - Add icon: Thread

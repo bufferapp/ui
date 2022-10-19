@@ -13,12 +13,12 @@ import { fontFamily } from '../style/fonts';
 export const Wrapper = styled.div`
   outline-style: none;
   :focus {
-    outline-style: ${props => (props.isSplit ? 'auto' : '0')};
+    outline-style: 0;
   }
-  width: ${props => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
-  height: ${props => (props.isSplit ? '100%' : 'auto')};
-  max-height: ${props => (props.isSplit ? '100%' : '')};
-  position: ${props => (props.isSplit ? 'initial' : 'relative')};
+  width: ${(props) => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
+  height: ${(props) => (props.isSplit ? '100%' : 'auto')};
+  max-height: ${(props) => (props.isSplit ? '100%' : '')};
+  position: ${(props) => (props.isSplit ? 'initial' : 'relative')};
   display: inline-block;
 `;
 
