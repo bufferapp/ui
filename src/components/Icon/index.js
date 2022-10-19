@@ -142,6 +142,7 @@ export TextAlignLeft from './Icons/TextAlignLeft';
 export TextBold from './Icons/TextBold';
 export TextItalic from './Icons/TextItalic';
 export TextUnderline from './Icons/TextUnderline';
+export Thread from './Icons/Thread';
 export Tiktok from './Icons/Tiktok';
 export Trash from './Icons/Trash';
 export Twitch from './Icons/Twitch';

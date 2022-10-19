@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.9.3] - 2022-10-19
+- Add icon: Thread
+
 ## [7.9.2] - 2022-10-18
 - Add icon: AltText
 - Add icon: Retweet
