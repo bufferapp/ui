@@ -2,6 +2,14 @@
 ## [7.10.0] - 2022-10-05
 - Fixed disabled styles for Buttons
 
+## [7.9.3] - 2022-10-19
+- Add icon: Thread
+
+## [7.9.2] - 2022-10-18
+- Add icon: AltText
+- Add icon: Retweet
+- Add icon: Feed
+
 ## [7.9.0] - 2022-09-28
 - Add new styles for SidebarListItem
 
@@ -103,7 +111,7 @@
 - Changed tooltip component to only render if `label` or `customLabel` prop is provided
 
 ## [6.3.1] - 2022-03-30
-- NonDismissibleModal has different z-index than SimpleModal 
+- NonDismissibleModal has different z-index than SimpleModal
 
 ## [6.3.0] - 2022-03-30
 - SidebarListItem: Added TikTok
