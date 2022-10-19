@@ -233,9 +233,9 @@ export const secondaryDisabled = css`
 export const Disabled = secondaryDisabled;
 
 export const primaryDisabled = css`
-  background-color: ${blueLighter};
+  background-color: #c6cbe4;
   cursor: not-allowed;
-  border: 1px solid ${blueLighter};
+  border: 1px solid #c6cbe4;
   color: ${white};
 `;
 
