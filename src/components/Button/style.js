@@ -53,7 +53,7 @@ export const ButtonWrapperBase = css`
   user-select: none;
 
   :active {
-    top: 1px;
+    top: ${(props) => (props.disabled ? '0px' : '1px')};
   }
   :focus {
     box-shadow: 0 0 0 3px ${boxShadow};
@@ -121,7 +121,7 @@ export const ButtonBase = css`
   transition-timing-function: ease-in;
   user-select: none;
   :active {
-    top: 1px;
+    top: ${(props) => (props.disabled ? '0px' : '1px')};
   }
   :focus {
     box-shadow: 0 0 0 3px ${boxShadow};
