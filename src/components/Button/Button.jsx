@@ -65,6 +65,7 @@ const Button = ({
   tooltip,
   ref,
   hideSearch,
+  textToLeft,
   className,
   children,
   ...props
@@ -101,7 +102,7 @@ const Button = ({
         {iconEnd && icon}
 
         {isSelect && (type === 'primary' || type === 'secondary') && (
-          <Styles.ButtonArrow>
+          <Styles.ButtonArrow textToLeft={textToLeft}>
             <ChevronDown
               color={type === 'primary' ? 'white' : 'grayDark'}
               size={size}

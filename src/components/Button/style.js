@@ -293,6 +293,7 @@ export const ButtonArrow = style.div`
   padding-left: 5px;
   display: flex;
   margin-right: -4px;
+  ${props => props.textToLeft && 'margin-left: auto;'}
 `;
 
 export const ButtonLabel = style.div`
