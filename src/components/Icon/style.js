@@ -11,6 +11,11 @@ export const small = css`
   height: 8px;
 `;
 
+export const smedium = css`
+  width: 12px;
+  height: 12px;
+`;
+
 export const medium = css`
   width: 16px;
   height: 16px;

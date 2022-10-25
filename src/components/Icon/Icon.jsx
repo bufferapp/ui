@@ -19,8 +19,8 @@ const Icon = ({ children, ...props }) => (
 );
 
 Icon.propTypes = {
-  /** The size of the icon. Can be 'small', 'medium', 'large', or 'extraLarge' */
-  size: PropTypes.oneOf(['small', 'medium', 'large', 'extraLarge']),
+  /** The size of the icon. Can be 'small', 'smedium, 'medium', 'large', or 'extraLarge' */
+  size: PropTypes.oneOf(['small', 'smedium', 'medium', 'large', 'extraLarge']),
 
   /** The `vertical-align` CSS value */
   verticalAlign: PropTypes.string,
