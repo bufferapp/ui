@@ -1,5 +1,5 @@
 # Changelog
-## [7.12.0] - 2022-10-25
+## [7.13.0] - 2022-10-25
 - Add 'smedium' as a size option for the Icons
 
 # Changelog
