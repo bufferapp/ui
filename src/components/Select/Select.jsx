@@ -421,6 +421,7 @@ export default class Select extends React.Component {
       hasIconOnly,
       fullWidth,
       isInputSearch,
+      textToLeft,
     } = this.props;
     const { items } = this.state;
 
@@ -467,6 +468,7 @@ export default class Select extends React.Component {
         onClick={this.onButtonClick}
         isSelect
         fullWidth={fullWidth}
+        textToLeft={textToLeft}
       />
     );
   };
@@ -723,6 +725,9 @@ Select.propTypes = {
 
   /** Prop */
   searchInputProps: PropTypes.shape({}),
+
+  /** Aligns text in Select to the left  */
+  textToLeft: PropTypes.bool,
 };
 
 Select.defaultProps = {
@@ -760,4 +765,5 @@ Select.defaultProps = {
   searchInputProps: {
     clearSearchOnBlur: true,
   },
+  textToLeft: false,
 };

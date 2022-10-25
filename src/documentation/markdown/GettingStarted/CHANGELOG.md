@@ -1,4 +1,8 @@
 # Changelog
+## [7.11.0] - 2022-10-25
+- Add 'textToLeft' prop to Select component to align text to the left
+
+# Changelog
 ## [7.10.0] - 2022-10-05
 - Fixed disabled styles for Buttons
 
