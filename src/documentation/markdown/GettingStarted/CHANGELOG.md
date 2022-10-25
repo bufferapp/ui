@@ -1,4 +1,8 @@
 # Changelog
+## [7.12.0] - 2022-10-25
+- Add 'smedium' as a size option for the Icons
+
+# Changelog
 ## [7.11.0] - 2022-10-25
 - Add 'textToLeft' prop to Select component to align text to the left
 
