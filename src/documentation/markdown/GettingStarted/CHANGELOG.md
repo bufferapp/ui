@@ -1,5 +1,9 @@
 # Changelog
 ## [7.13.0] - 2022-10-25
+- Add max-width: 100% to Banner component
+
+# Changelog
+## [7.13.0] - 2022-10-25
 - Add 'smedium' as a size option for the Icons
 
 # Changelog
