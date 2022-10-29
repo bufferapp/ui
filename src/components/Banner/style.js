@@ -15,6 +15,7 @@ export const BannerStyled = styled.div`
   font-family: ${fontFamily};
   font-size: ${fontSize};
   height: 48px;
+  max-width: 100%;
   padding-left: 8px;
   padding-right: 32px;
   position: relative;
