@@ -88,4 +88,5 @@ export const NavBarChavron = styled.div`
   position: absolute;
   right: 8px;
   width: 16px;
+  justify-content: center;
 `;
