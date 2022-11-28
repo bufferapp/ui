@@ -1,4 +1,7 @@
 # Changelog
+## [7.13.2] - 2022-11-28
+- Fix custom width on Modal
+
 ## [7.13.1] - 2022-11-19
 - Fix NavBarChavron alignment
 
