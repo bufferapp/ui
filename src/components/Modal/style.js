@@ -36,7 +36,7 @@ const getWidth = props => {
     return '730px';
   }
   if (props.width) {
-    return props.customWidth;
+    return props.width;
   }
   return '512px';
 };
