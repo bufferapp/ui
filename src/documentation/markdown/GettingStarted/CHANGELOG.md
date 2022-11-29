@@ -1,4 +1,7 @@
 # Changelog
+## [7.13.5] - 2022-11-29
+- Add icon: Mastodon
+
 ## [7.13.2] - 2022-11-28
 - Fix custom width on Modal
 
