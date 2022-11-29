@@ -107,10 +107,12 @@ const Component = ({ component, fullscreen }) => {
         <Body>
           <Heading text={name} />
           <Description>{description}</Description>
-          <PropTitle>
-            Example
-            {examples.length > 1 && 's'}
-          </PropTitle>
+          {examples.length > 0 && (
+            <PropTitle>
+              Example
+              {examples.length > 1 && 's'}
+            </PropTitle>
+          )}
           <IconComponentWrapper isIcon={name === 'Icon'}>
             {examples.map((folder, idx) => (
               <ComponentExample folder={folder} name={name} id={id} key={idx} />
