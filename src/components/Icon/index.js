@@ -141,6 +141,7 @@ export Tag from './Icons/Tag';
 export Telegram from './Icons/Telegram';
 export TextAlignCenter from './Icons/TextAlignCenter';
 export TextAlignLeft from './Icons/TextAlignLeft';
+export TextAlignRight from './Icons/TextAlignRight';
 export TextBold from './Icons/TextBold';
 export TextItalic from './Icons/TextItalic';
 export TextUnderline from './Icons/TextUnderline';

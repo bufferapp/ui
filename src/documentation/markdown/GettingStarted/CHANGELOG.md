@@ -1,4 +1,7 @@
 # Changelog
+## [7.14.0] - 2022-12-06
+- Add icon: Text Align Right
+
 ## [7.13.5] - 2022-11-29
 - Add icon: Mastodon
 
