@@ -1,4 +1,7 @@
 # Changelog
+## [7.15.0] - 2022-12-19
+- Add Youtube Color
+
 ## [7.14.0] - 2022-12-06
 - Add icon: Text Align Right
 
