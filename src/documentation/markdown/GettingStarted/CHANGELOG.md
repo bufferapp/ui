@@ -1,4 +1,8 @@
 # Changelog
+
+## [7.16.0] - 2022-12-21
+- Add new icons
+
 ## [7.15.0] - 2022-12-19
 - Add Youtube Color
 
