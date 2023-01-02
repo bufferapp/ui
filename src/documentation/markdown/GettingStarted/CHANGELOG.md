@@ -1,5 +1,9 @@
 # Changelog
 
+## [7.16.2] - 2023-01-03
+- Add Mastodon Color
+- Add mastodon in Avatar
+
 ## [7.16.0] - 2022-12-21
 - Add new icons
 
