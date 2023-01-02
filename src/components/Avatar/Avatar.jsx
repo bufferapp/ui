@@ -15,6 +15,7 @@ import {
   twitter,
   yellow,
   startpage,
+  mastodon,
 } from '../style/colors';
 import {
   Facebook,
@@ -25,57 +26,81 @@ import {
   Shopify,
   Tiktok,
   Twitter,
-  StartPage
+  StartPage,
+  Mastodon,
 } from '../Icon';
 
 const Wrapper = styled.div`
-  ${props => Styles.wrapper[props.size]}
+  ${(props) => Styles.wrapper[props.size]}
 `;
 
 const Image = styled.div`
-  ${props => Styles.image[props.type][props.size]}
+  ${(props) => Styles.image[props.type][props.size]}
 `;
 
 const socialIconMap = new Map([
-  ['instagram', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={instagram}>
-      <Instagram size="small" color="white" />
-    </Styles.SocialIconWrapper>
-  )],
-  ['facebook', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={facebook}>
-      <Facebook size="small" color="white" />
-    </Styles.SocialIconWrapper>
-  )],
-  ['twitter', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={twitter}>
-      <Twitter size="small" color="white" />
-    </Styles.SocialIconWrapper>
-  )],
-  ['linkedin', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={linkedin}>
-      <LinkedIn size="small" color="white" />
-    </Styles.SocialIconWrapper>
-  )],
-  ['pinterest', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={pinterest}>
-      <Pinterest size="small" color="white" />
-    </Styles.SocialIconWrapper>
-  )],
-  ['googlebusiness', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={googlebusiness}>
-      <Gbp size="small" color="white" />
-    </Styles.SocialIconWrapper>
-  )],
-  ['shopify', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={shopify}>
-      <Shopify size="small" color="white" />
-    </Styles.SocialIconWrapper>
-  )],
-  ['tiktok', ({ size }) => (
-    <Styles.SocialIconWrapper size={size} bgColor={tiktok}>
-      <Tiktok size="small" color="white" />
-    </Styles.SocialIconWrapper>
+  [
+    'instagram',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={instagram}>
+        <Instagram size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'facebook',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={facebook}>
+        <Facebook size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'twitter',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={twitter}>
+        <Twitter size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'linkedin',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={linkedin}>
+        <LinkedIn size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'pinterest',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={pinterest}>
+        <Pinterest size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'googlebusiness',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={googlebusiness}>
+        <Gbp size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'shopify',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={shopify}>
+        <Shopify size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'tiktok',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={tiktok}>
+        <Tiktok size="small" color="white" />
+      </Styles.SocialIconWrapper>
     ),
   ],
   [
@@ -85,6 +110,14 @@ const socialIconMap = new Map([
         <Styles.StartPageIcon>
           <StartPage size="small" color="white" />{' '}
         </Styles.StartPageIcon>
+      </Styles.SocialIconWrapper>
+    ),
+  ],
+  [
+    'mastodon',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={mastodon}>
+        <Mastodon size="small" color="white" />
       </Styles.SocialIconWrapper>
     ),
   ],
