@@ -81,7 +81,7 @@ export const canva = '#00c4cc';
 export const canvaLight = '#00d9e1';
 export const youtube = '#FF0000';
 export const youtubeDark = '#C40000';
-export const mastodon = '#595AFF';
+export const mastodon = '#6364FF';
 
 export const transparent = 'transparent';
 
