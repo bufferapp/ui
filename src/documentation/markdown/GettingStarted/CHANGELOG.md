@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.16.3] - 2023-01-03
+- Update Mastodon color
+
 ## [7.16.2] - 2023-01-03
 - Add Mastodon Color
 - Add mastodon in Avatar
