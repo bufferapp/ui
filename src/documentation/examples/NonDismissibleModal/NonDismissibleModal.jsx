@@ -10,7 +10,7 @@ export default function ExampleSimpleModal() {
   useEffect(() => {
     const selfDestroy = setTimeout(() => {
       openModal(false);
-    }, 5000);
+    }, 3000);
 
     return () => {
       clearInterval(selfDestroy);

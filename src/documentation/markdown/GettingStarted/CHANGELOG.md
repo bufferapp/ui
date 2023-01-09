@@ -1,10 +1,37 @@
 # Changelog
+
+## [7.16.3] - 2023-01-03
+- Update Mastodon color
+
+## [7.16.2] - 2023-01-03
+- Add Mastodon Color
+- Add mastodon in Avatar
+
+## [7.16.0] - 2022-12-21
+- Add new icons
+
+## [7.15.0] - 2022-12-19
+- Add Youtube Color
+
+## [7.14.0] - 2022-12-06
+- Add icon: Text Align Right
+
+## [7.13.5] - 2022-11-29
+- Add icon: Mastodon
+
+## [7.13.2] - 2022-11-28
+- Fix custom width on Modal
+
+## [7.13.1] - 2022-11-19
+- Fix NavBarChavron alignment
+
 ## [7.13.0] - 2022-10-25
 - Add max-width: 100% to Banner component
 
 # Changelog
 ## [7.13.0] - 2022-10-25
 - Add 'smedium' as a size option for the Icons
+- Add 'medium' as a size option for the Icons
 
 # Changelog
 ## [7.11.0] - 2022-10-25
