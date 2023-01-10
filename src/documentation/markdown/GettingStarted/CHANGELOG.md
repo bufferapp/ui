@@ -1,6 +1,6 @@
 # Changelog
 
-## [7.16.4] - 2023-01-10
+## [7.17.0] - 2023-01-10
 - Add icon: Caption
 - Add icon: Music
 - Add icon: Play
