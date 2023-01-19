@@ -1,9 +1,11 @@
 # Changelog
 
-## [7.18.0] - 2023-01-19
+## [7.22.0] - 2023-01-19
+
 - Add default type definitions for `@bufferapp/ui` package
 
 ## [7.17.0] - 2023-01-10
+
 - Add icon: Caption
 - Add icon: Music
 - Add icon: Play
@@ -13,59 +15,78 @@
 - Add icon: Volume On
 
 ## [7.16.3] - 2023-01-03
+
 - Update Mastodon color
 
 ## [7.16.2] - 2023-01-03
+
 - Add Mastodon Color
 - Add mastodon in Avatar
 
 ## [7.16.0] - 2022-12-21
+
 - Add new icons
 
 ## [7.15.0] - 2022-12-19
+
 - Add Youtube Color
 
 ## [7.14.0] - 2022-12-06
+
 - Add icon: Text Align Right
 
 ## [7.13.5] - 2022-11-29
+
 - Add icon: Mastodon
 
 ## [7.13.2] - 2022-11-28
+
 - Fix custom width on Modal
 
 ## [7.13.1] - 2022-11-19
+
 - Fix NavBarChavron alignment
 
 ## [7.13.0] - 2022-10-25
+
 - Add 'medium' as a size option for the Icons
 
 # Changelog
+
 ## [7.11.0] - 2022-10-25
+
 - Add 'textToLeft' prop to Select component to align text to the left
 
 # Changelog
+
 ## [7.10.0] - 2022-10-05
+
 - Fixed disabled styles for Buttons
 
 ## [7.9.3] - 2022-10-19
+
 - Add icon: Thread
 
 ## [7.9.2] - 2022-10-18
+
 - Add icon: AltText
 - Add icon: Retweet
 - Add icon: Feed
 
 ## [7.9.0] - 2022-09-28
+
 - Add new styles for SidebarListItem
 
 ## [7.8.0] - 2022-09-27
+
 - Add type 'alert' for Notice
 - Add type 'tip' for Notice
 - Fixed paddings for Notice
 
 # Changelog
+
 ## [7.7.0] - 2022-09-05
+
 - Add icon: Text Align Left
 - Add icon: Text Align Center
 - Add icon: Text Bold
@@ -73,129 +94,166 @@
 - Add icon: Text Underline
 
 ## [7.6.1] - 2022-09-05
-* sorry i published a minor version by mistake! *
-- updates SP Avatar
-- updates proptypes for SidebarListItem
+
+- sorry i published a minor version by mistake! \*
+
+* updates SP Avatar
+* updates proptypes for SidebarListItem
 
 ## [7.5.0] - 2022-08-31
+
 - Add icon: GooglePhotos
 
 ## [7.4.0] - 2022-08-22
+
 - Support icon for Input
 
 ## [7.3.0] - 2022-08-19
+
 - Add icon: Behance
 - Add icon: Substack
 - Add icon: Medium
 - Add icon: Pinned
 
 ## [7.2.6] - 2022-08-17
+
 - Fix: add flex-shrink to Icon style
 
 ## [7.2.2] - 2022-08-08
+
 - Fix: Remove PaywallTag Icon
 - Fix: Remove references to old icons
 
 ## [7.2.0] - 2022-06-09
+
 - Fix: Change to Gbp Icon and adding StartPage icon
 
 ## [7.1.4] - 2022-06-09
+
 - Fix: DropDownMenu scrollbar always shown incorrectly
 
 ## [7.1.3] - 2022-06-09
+
 - No changes
 
 ## [7.1.2] - 2022-06-09
+
 - No changes
 
 ## [7.1.1] - 2022-06-08
+
 - Fix: Adding googlebusiness to propTypes.network in Avatar.jsx
 
 ## [7.1.0] - 2022-05-31
+
 - Fix: Gmb icon to Gbp change in Avatar.jsx
 
 ## [7.0.0] - 2022-05-31
+
 - Breaking: Gmb icon was renamed to Gbp
 - Bringing back PaywallTag icon
 
 ## [6.9.0] - 2022-05-30
+
 - Adds GBP support for SidebarListItem
 
 ## [6.8.1] - 2022-05-30
+
 - Adds Gmb (GoogleBusinessProfile) icon
 
 ## [6.7.0] - 2022-05-26
+
 - Adds startPage as network option in Avatar
 
 ## [6.6.2] - 2022-05-24
+
 - Updated styles for close icon in Modal
 
 ## [6.6.0] - 2022-05-24
+
 - Changed divider line color in split button to `gray` for secondary button and `blueLighter` for primary.
 
 ## [6.5.4] - 2022-05-18
+
 - Changed background color of primary default button in loading state to `blueDarker`
 
 ## [6.5.3] - 2022-05-18
+
 - respec size argument on split Button
 
 ## [6.5.2] - 2022-05-17
+
 - remove extra div wrapping Tooltip
 
 ## [6.5.1] - skipped
 
 ## [6.5.0] - 2022-04-21
+
 - Added iconEnd option to Select item to align icon to the end
 - Added PaywallTag icon
 
 ## [6.4.0] - 2022-04-21
+
 - Added Drafts Icon
 - Added Phone Icon
 - Modified Tiktok Icon
 
 ## [6.3.2] - 2022-04-21
+
 - Changed tooltip component to only render if `label` or `customLabel` prop is provided
 
 ## [6.3.1] - 2022-03-30
+
 - NonDismissibleModal has different z-index than SimpleModal
 
 ## [6.3.0] - 2022-03-30
+
 - SidebarListItem: Added TikTok
 
 ## [6.1.0] - 2022-03-24
+
 - Add the ability to pass a tooltip as part of a Select item. It will display a tooltip instead of a title on hover.
 
 ## [6.1.0] - 2022-03-21
+
 - Notice component: add new `disableAnimation` prop
 - fix: updated AnimationWrapper component to use `prefers-reduced-motion`
 
 ## [6.0.1] - 2022-03-15
+
 - fixed: SimpleModal is dismissed on ESC keypress
 
 ## [6.0.0] - 2022-03-08
+
 ⚠️ Breaking changes ⚠️
+
 - Deprecated: AppShell (no longer used from here, see bufferapp/appshell)
 - Deprecated: type="link" on Buttons (use Link component instead)
 - Deprecated: 'wide' prop on Modal (use 'width' instead)
 
 Other changes:
+
 - fixed: added all components to `documentation/markdown/UI.md`
 - updated tests
 - updated `CONTRIBUTING.md`
 
 ## [5.78.1] - 2022-03-07
+
 - Add icon: Calendar Add
 - Add icon: Instagram Grid
 - Add icon: Sparkles
 - Add icon: Subtract
 
 ## [5.78.0] - 2022-03-03
+
 - Add NonDismissibleModal
 
 ## [5.77.5] - 2022-02-22
+
 - Add icon: Drag Indicator
 
 ## [5.77.4] - 2022-02-15
+
 - Update icon: Add Media
 - Update icon: Button Link
 - Update icon: Heading
@@ -203,19 +261,23 @@ Other changes:
 - Update icon: Subheading
 
 ## [5.77.3] - 2022-02-15
+
 - ProgressBar: add className prop
 - ProgressBar: improve styling
 
 ## [5.77.2] - 2022-02-14
+
 - Add icon: Import
 - Add icon: Social Icons
 - Add icon: Video
 
 ## [5.77.1] - 2021-11-23
+
 - fix publishing script
 - fix beta publishing script
 
 ## [5.77.0] - 2021-11-18
+
 - Add icon: Caret Down
 - Add icon: Caret Left
 - Add icon: Caret Right
@@ -226,15 +288,19 @@ Other changes:
 - Add icon: Stats
 
 ## [5.76.3] - 2021-11-1
+
 - Update icon's index
 
 ## [5.76.2] - 2021-11-1
+
 - Code linting
 
 ## [5.76.1] - 2021-11-1
+
 - Code linting
 
 ## [5.76.0] - 2021-11-1
+
 - Add icon: Bandcamp
 - Add icon: Discord
 - Add icon: Dribbble
@@ -244,40 +310,48 @@ Other changes:
 - Add icon: Telegram
 
 ## [5.75.13] - 2021-10-25
+
 - Add icon: Google Drive
 - Add icon: OneDrive
 - Add icon: Dropbox
 - Add icon: Unsplash
 
 ## [5.75.12] - 2021-10-05
+
 - Remove npm in favour of yarn
 
 ## [5.75.11] - 2021-10-04
 
 ### Fixed
+
 - use hyphen instead of a forward slash in namespacing
 
 ## [5.75.10] - 2021-10-04
 
 ### Fixed
+
 - remove displayNames from babel config
 
 ## [5.75.9] - 2021-09-29
 
 ### Fixed
+
 - Styled-Components: Fixed SC_ATTR to have the docs site working again
 
 ## [5.75.8]
+
 - Select: Set `hideOnSearch` property to true on items to hide them during search
 
 ## [5.75.7] - 2021-09-27
 
 ### Fixed
+
 - Search: Revert `resetOnBlur` prop to `clearSearchOnBlur` as renaming an existing prop is technically a breaking change
 
 ## [5.75.6] - 2021-09-22
 
 ### Fixed
+
 - Styled-Components: Added namespacing on the Babel build process to prevent style collisions on micro frontends setups.
 - Styled-Components: Added SC_ATTR in the production build process to prevent style collisions on micro frontends setups.
 - Styled-Components: moved styled-components from devDependencies to dependencies in package.json
@@ -285,31 +359,38 @@ Other changes:
 ## [5.75.5] - 2021-09-22
 
 ### Fixed
+
 - Styled-Components: Added displayName on the Babel build process to prevent style collisions on micro frontends setups.
 
 ## [5.75.2] - 2021-09-22
 
 ### Fixed
+
 - Select: Bug that doesn't allow clicking on filtered options because Search will always clear on blur
 - Select: Does not filter menu options when 'clearSearchOnBlur' is false and menu is re-opened with saved search value
 
 ### Added
+
 - Select: Clear Search input value on blur using 'clearSearchOnBlur' prop ie when the Select menu is closed
 - Search: Reset search value on focus with 'resetOnFocus' prop
 
 ## [5.75.1] - 2021-09-14
 
 ### Fixed
+
 - Select Component: Search field onBlur prevents getDerivedStateFromProps from running
 - Select Component: Set selectedItems to items prop in getDerivedStateFromProps
 
 ### Added
+
 - Select example with a Select All option
 
 ## [5.75.0] - 2021-08-31
+
 - Add icon: Save
 
 ## [5.74.0] - 2021-08-25
+
 - Add icon: Apple Music
 - Add icon: Hamburger
 - Add icon: Patreon
@@ -320,6 +401,7 @@ Other changes:
 - Add icon: Twitch
 
 ## [5.73.0] - 2021-08-17
+
 - displays Icons in grid for easier scrolling ✨
 
 ## [5.72.0] - 2021-08-16
