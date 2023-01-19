@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.18.0] - 2023-01-19
+- Add default type definitions for `@bufferapp/ui` package
+
 ## [7.17.0] - 2023-01-10
 - Add icon: Caption
 - Add icon: Music
