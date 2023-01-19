@@ -4,6 +4,7 @@ const fse = require('fs-extra');
 const files = [
   'README.md',
   'LICENSE',
+  'types',
 ];
 
 
@@ -52,6 +53,7 @@ function createPackageFile() {
         peerDependencies,
         dependencies,
         publishConfig,
+        types,
       } = packageData;
 
 
@@ -61,6 +63,7 @@ function createPackageFile() {
         version,
         description,
         main: './index.js',
+        types,
         keywords,
         repository,
         license,
