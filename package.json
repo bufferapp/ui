@@ -5,6 +5,7 @@
     "node": ">=4.0.0"
   },
   "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
   "private": true,
   "description": "Shared UI components for buffer apps",
   "repository": {
@@ -23,7 +24,8 @@
     "UI"
   ],
   "files": [
-    "lib"
+    "lib",
+    "types"
   ],
   "publishConfig": {
     "access": "public"
