@@ -1,4 +1,30 @@
 # Changelog
+
+## [7.18.0] - 2023-01-19
+- Add default type definitions for `@bufferapp/ui` package
+
+## [7.17.0] - 2023-01-10
+- Add icon: Caption
+- Add icon: Music
+- Add icon: Play
+- Add icon: Share Arrow
+- Add icon: Star Outline
+- Add icon: Volume Off
+- Add icon: Volume On
+
+## [7.16.3] - 2023-01-03
+- Update Mastodon color
+
+## [7.16.2] - 2023-01-03
+- Add Mastodon Color
+- Add mastodon in Avatar
+
+## [7.16.0] - 2022-12-21
+- Add new icons
+
+## [7.15.0] - 2022-12-19
+- Add Youtube Color
+
 ## [7.14.0] - 2022-12-06
 - Add icon: Text Align Right
 
