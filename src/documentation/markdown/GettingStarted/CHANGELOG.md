@@ -1,6 +1,6 @@
 # Changelog
 
-## [7.22.0] - 2023-01-19
+## [7.32.0] - 2023-01-19
 
 - Add default type definitions for `@bufferapp/ui` package
 
