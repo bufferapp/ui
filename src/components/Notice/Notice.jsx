@@ -103,6 +103,11 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
     onDismiss: dismiss,
   });
 
+  if (disableAnimation) {
+    delete animationProps.stageInAnimation;
+    delete animationProps.stageOutAnimation;
+  }
+
   const noticeContent = (
     <NoticeWrapper type={type} dismiss={dismiss} className={className}>
       {type === 'warning' && <WarningIcon />}
@@ -117,13 +122,9 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
     </NoticeWrapper>
   );
 
-  if (!disableAnimation) {
-    return (
-      <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>
-    );
-  }
-
-  return <div>{noticeContent}</div>;
+  return (
+    <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>
+  );
 }
 
 Notice.propTypes = {
