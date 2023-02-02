@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.32.1] - 2023-02-01
+- Fix: Notice not dismissable if disabling animation
+
 ## [7.32.0] - 2023-01-19
 
 - Add default type definitions for `@bufferapp/ui` package

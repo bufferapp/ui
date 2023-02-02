@@ -92,14 +92,17 @@ const CloseButton = styled.button`
 `;
 
 function Notice({ children, dismiss, type, className, disableAnimation }) {
+  // We always need to wrap the Notice with AnimationWrapper because the dismiss function
+  // shows the Notice based on the dismissed property. If the animation is disabled the properties
+  // that control the animation are removed from animationProps.
   const {
     AnimationWrapper,
     dismiss: dismissAnimationWrapper,
     animationProps,
   } = useAnimation({
     justify: 'flex-end',
-    stageInAnimation: stageInRight,
-    stageOutAnimation: fadeOut,
+    stageInAnimation: disableAnimation ? undefined : stageInRight,
+    stageOutAnimation: disableAnimation ? undefined : fadeOut,
     onDismiss: dismiss,
   });
 
@@ -117,13 +120,9 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
     </NoticeWrapper>
   );
 
-  if (!disableAnimation) {
-    return (
-      <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>
-    );
-  }
-
-  return <div>{noticeContent}</div>;
+  return (
+    <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>
+  );
 }
 
 Notice.propTypes = {
