@@ -17,3 +17,4 @@ declare module '@bufferapp/ui/Select'
 declare module '@bufferapp/ui/Loader'
 declare module '@bufferapp/ui/Tooltip'
 declare module '@bufferapp/ui/Link'
+declare module '@bufferapp/ui';
