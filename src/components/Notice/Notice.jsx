@@ -103,6 +103,9 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
     onDismiss: dismiss,
   });
 
+  // We always need to wrap the Notice with AnimationWrapper because the dismiss function
+  // shows the Notice based on the dismissed property. If the animation is disabled the properties
+  // that control the animation are removed from animationProps.
   if (disableAnimation) {
     delete animationProps.stageInAnimation;
     delete animationProps.stageOutAnimation;
