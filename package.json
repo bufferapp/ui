@@ -101,7 +101,7 @@
     "jest-styled-components": "^7.0.5",
     "markdown-to-jsx": "^6.11.4",
     "mini-css-extract-plugin": "0.4.3",
-    "node-fetch": "2.6.1",
+    "node-fetch": "2.6.7",
     "npm-run-all": "4.0.2",
     "optimize-css-assets-webpack-plugin": "5.0.1",
     "ora": "3.0.0",
