@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.32.2] - 2023-02-14
+- Fix: Warning for SidebarListItem
+
 ## [7.32.1] - 2023-02-01
 - Fix: Notice not dismissable if disabling animation
 
