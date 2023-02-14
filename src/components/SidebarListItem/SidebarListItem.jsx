@@ -100,7 +100,9 @@ SidebarListItem.propTypes = {
       'pinterest',
       'tiktok',
       'googlebusiness',
-      'startPage'
+      'startPage',
+      'mastodon',
+      'youtube',
     ]),
   }),
 };
