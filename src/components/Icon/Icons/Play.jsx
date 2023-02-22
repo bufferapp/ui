@@ -8,7 +8,7 @@ import createIconComponent from '../utils/createIconComponent';
 const PlayIcon = createIconComponent({
   content: (
     <g>
-      <path d="M11.461 8.962c.719-.427.719-1.497 0-1.924L6.615 4.15C5.897 3.723 5 4.257 5 5.113v5.774c0 .855.897 1.39 1.615.963l4.846-2.888z" />
+      <path d="M13.654 9.444a1.654 1.654 0 000-2.888l-7.616-4.33C4.91 1.584 3.5 2.386 3.5 3.669v8.662c0 1.283 1.41 2.085 2.538 1.443l7.616-4.33z" />
     </g>
   ),
 });

@@ -10,7 +10,7 @@ const ShareArrowIcon = createIconComponent({
     <g>
       <path
         fillRule="evenodd"
-        d="M0 13V6.5h2V13a1 1 0 001 1h10a1 1 0 001-1V6.5h2V13a3 3 0 01-3 3H3a3 3 0 01-3-3z"
+        d="M0 13V7.5a1 1 0 012 0V13a1 1 0 001 1h10a1 1 0 001-1V7.5a1 1 0 112 0V13a3 3 0 01-3 3H3a3 3 0 01-3-3z"
         clipRule="evenodd"
       />
       <path
