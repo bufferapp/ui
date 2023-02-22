@@ -5,17 +5,17 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const CommentRoundOutlineIcon = createIconComponent({
+const PlayRoundIcon = createIconComponent({
   content: (
     <g>
       <path
         fillRule="evenodd"
-        d="M11 12l1.205.226L12 11l.226-.326a5 5 0 10-1.552 1.552L11 12zm3.184 1.551a.5.5 0 01-.633.633l-2.074-.691a6.5 6.5 0 112.015-2.015l.692 2.073z"
+        d="M8 16A8 8 0 108 0a8 8 0 000 16zm2.872-8.727a.902.902 0 010 1.575L6.718 11.21c-.615.35-1.385-.087-1.385-.787V5.698c0-.7.77-1.137 1.385-.787l4.154 2.362z"
         clipRule="evenodd"
       />
     </g>
   ),
 });
-CommentRoundOutlineIcon.displayName = 'CommentRoundOutlineIcon';
+PlayRoundIcon.displayName = 'PlayRoundIcon';
 
-export default CommentRoundOutlineIcon;
+export default PlayRoundIcon;
