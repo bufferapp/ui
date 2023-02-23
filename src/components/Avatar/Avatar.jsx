@@ -152,7 +152,19 @@ Avatar.propTypes = {
   /** Can be `'small'`, `'medium'` or `'large'` (`32px`, `40px` and `48px` respectively). */
   size: PropTypes.oneOf(['large', 'medium', 'small']),
   /** Name of social network icon to overlay. (E.g., `'instagram'`). Only applicable when `{ type: 'social' }` */
-  network: PropTypes.oneOf(['facebook', 'twitter', 'instagram', 'linkedin', 'google', 'pinterest', 'shopify', 'tiktok', 'startPage', 'googlebusiness']),
+  network: PropTypes.oneOf([
+    'facebook',
+    'twitter',
+    'instagram',
+    'linkedin',
+    'google',
+    'pinterest',
+    'shopify',
+    'tiktok',
+    'startPage',
+    'googlebusiness',
+    'mastodon',
+  ]),
 };
 
 Avatar.defaultProps = {
