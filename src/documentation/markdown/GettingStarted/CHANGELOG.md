@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.32.6] - 2023-02-27
+- Update BDS icons
+
 ## [7.32.5] - 2023-02-23
 - Fix warning for mastodon in Avatar
 
