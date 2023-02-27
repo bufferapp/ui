@@ -5,17 +5,17 @@
 import React from 'react';
 import createIconComponent from '../utils/createIconComponent';
 
-const BookmarkFilledIcon = createIconComponent({
+const MessageRoundOutlineIcon = createIconComponent({
   content: (
     <g>
       <path
         fillRule="evenodd"
-        d="M1 .8c0-.442.348-.8.777-.8h12.446c.429 0 .777.358.777.8v14.4a.8.8 0 01-.47.735.76.76 0 01-.841-.154l-5.694-5.535-5.683 5.535a.761.761 0 01-.842.154A.8.8 0 011 15.2V.8z"
+        d="M11.23 12.308l1.298.243-.22-1.32.243-.351a5.385 5.385 0 10-1.671 1.671l.35-.243zm3.43 1.67a.538.538 0 01-.682.681l-2.233-.744a7 7 0 112.17-2.17l.744 2.233z"
         clipRule="evenodd"
       />
     </g>
   ),
 });
-BookmarkFilledIcon.displayName = 'BookmarkFilledIcon';
+MessageRoundOutlineIcon.displayName = 'MessageRoundOutlineIcon';
 
-export default BookmarkFilledIcon;
+export default MessageRoundOutlineIcon;

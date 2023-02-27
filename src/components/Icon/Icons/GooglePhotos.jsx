@@ -8,7 +8,7 @@ import createIconComponent from '../utils/createIconComponent';
 const GooglePhotosIcon = createIconComponent({
   content: (
     <g>
-      <path d="M9.475 5.975A3.5 3.5 0 007 0v7a3.5 3.5 0 10-7 0h7a3.5 3.5 0 100 7V7a3.5 3.5 0 107 0H7a3.5 3.5 0 002.475-1.025z" />
+      <path d="M10.828 6.828A4 4 0 008 0v8a4 4 0 00-8 0h8a4 4 0 000 8V8a4 4 0 108 0H8a4 4 0 002.828-1.172z" />
     </g>
   ),
 });
