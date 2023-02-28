@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Tooltip from '@reach/tooltip';
+import { Tooltip } from '@reach/tooltip';
 import {
   fontFamily,
   fontSizeSmall,
