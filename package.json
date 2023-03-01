@@ -41,7 +41,7 @@
     "styled-components": "^5.3.0"
   },
   "dependencies": {
-    "@reach/tooltip": "0.18.0",
+    "@reach/tooltip": "0.17.0",
     "immutability-helper": "^2.9.0",
     "react-is": "^16.8.6",
     "styled-components": "^5.3.0"
