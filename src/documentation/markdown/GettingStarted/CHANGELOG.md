@@ -1,6 +1,6 @@
 # Changelog
 
-## [7.32.7] - 2023-02-27
+## [7.38.1] - 2023-03-02
 - Update Avatar component to include Youtube icon
 
 ## [7.32.6] - 2023-02-27
