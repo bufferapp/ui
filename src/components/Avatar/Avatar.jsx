@@ -13,9 +13,9 @@ import {
   shopify,
   tiktok,
   twitter,
-  yellow,
   startpage,
   mastodon,
+  youtube,
 } from '../style/colors';
 import {
   Facebook,
@@ -28,6 +28,7 @@ import {
   Twitter,
   StartPage,
   Mastodon,
+  Youtube
 } from '../Icon';
 
 const Wrapper = styled.div`
@@ -121,6 +122,14 @@ const socialIconMap = new Map([
       </Styles.SocialIconWrapper>
     ),
   ],
+  [
+    'youtube',
+    ({ size }) => (
+      <Styles.SocialIconWrapper size={size} bgColor={youtube}>
+        <Youtube size="small" color="white" />
+      </Styles.SocialIconWrapper>
+    ),
+  ],
 ]);
 
 const Avatar = ({
@@ -164,6 +173,7 @@ Avatar.propTypes = {
     'startPage',
     'googlebusiness',
     'mastodon',
+    'youtube',
   ]),
 };
 
