@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.38.2] - 2023-03-06
+- Update BDS icons
+
 ## [7.38.1] - 2023-03-02
 - Update Avatar component to include Youtube icon
 
