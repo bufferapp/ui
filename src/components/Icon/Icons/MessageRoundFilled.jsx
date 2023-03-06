@@ -8,12 +8,7 @@ import createIconComponent from '../utils/createIconComponent';
 const MessageRoundFilledIcon = createIconComponent({
   content: (
     <g>
-      <path d="M11.59 13.53a.255.255 0 00-.213.025 6.5 6.5 0 112.179-2.179.255.255 0 00-.026.214l.812 2.436a.25.25 0 01-.316.316l-2.436-.812z" />
-      <path
-        fillRule="evenodd"
-        d="M8 2a6 6 0 103.117 11.128.756.756 0 01.631-.072l1.961.653-.653-1.96a.756.756 0 01.072-.633A6 6 0 008 2zM1 8a7 7 0 1113.04 3.54l.776 2.328a.75.75 0 01-.949.948l-2.327-.776A7 7 0 011 8z"
-        clipRule="evenodd"
-      />
+      <path d="M8 .5a7.5 7.5 0 103.793 13.972l2.494.831a.804.804 0 001.016-1.016l-.831-2.495A7.5 7.5 0 008 .5z" />
     </g>
   ),
 });
