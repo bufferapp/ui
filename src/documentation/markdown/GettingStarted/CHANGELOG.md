@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.38.4] - 2023-03-06
+- Update cached icon data
+
 ## [7.38.3] - 2023-03-06
 - Update BDS icons: MessageRoundFilled, MessageRoundOutline, Retweet, and ShareArrow
 
