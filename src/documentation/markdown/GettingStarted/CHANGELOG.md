@@ -1,5 +1,8 @@
 # Changelog
 
+## [7.38.5] - 2023-03-09
+- fix: button documentation uses new MessageFilled icon
+
 ## [7.38.4] - 2023-03-06
 - Update cached icon data
 
