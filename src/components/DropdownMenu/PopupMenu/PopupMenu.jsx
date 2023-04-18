@@ -113,13 +113,16 @@ export default class PopupMenu extends React.Component {
   };
 
   updateIfNeeded(prevProps) {
-    const { isOpen, usingMouse } = this.props;
+    const { isOpen, usingMouse, onOpen } = this.props;
     let newTabIndex = '-1';
 
     if (prevProps.isOpen !== isOpen) {
       if (isOpen) {
         if (usingMouse) newTabIndex = '0';
         this.focusPopupToItem(0);
+        if (onOpen) {
+          onOpen();
+        }
       } else {
         this.setFocusToItem(-1);
       }
@@ -148,23 +151,24 @@ export default class PopupMenu extends React.Component {
         <OptionalWrapper
           key={`item-wrapper-${index}`}
           condition={hasSubItems || defaultTooltipMessage}
-          wrapper={(children) => (
-            <Tooltip
-              customLabel={
-                (
-                  <TooltipLabel
-                    maxItems={5}
-                    items={item.subItems}
-                    defaultMessage={defaultTooltipMessage}
-                  />
-                )
-              }
-              position="left"
-              verticalAlign="top"
-            >
-              {children}
-            </Tooltip>
-          )}
+          wrapper={(children) => {
+            const tooltip = (
+              <TooltipLabel
+                maxItems={5}
+                items={item.subItems}
+                defaultMessage={defaultTooltipMessage}
+              />
+            );
+            return (
+              <Tooltip
+                customLabel={tooltip}
+                position="left"
+                verticalAlign="top"
+              >
+                {children}
+              </Tooltip>
+            );
+          }}
         >
           <Item key={`item-${index}`} role="none" type={item.type}>
             <ButtonItem
@@ -240,6 +244,9 @@ PopupMenu.propTypes = {
       }),
     })
   ).isRequired,
+
+  /** onOpen function to fire when the Dropdown menu is open */
+  onOpen: PropTypes.func,
 };
 
 PopupMenu.defaultProps = {
@@ -247,4 +254,5 @@ PopupMenu.defaultProps = {
   horizontalOffset: null,
   xPosition: 'left',
   usingMouse: false,
+  onOpen: null,
 };
