@@ -68,6 +68,7 @@ const Button = ({
   textToLeft,
   className,
   children,
+  onOpen,
   ...props
 }) => (
   <ButtonWrapperStyled
@@ -128,6 +129,7 @@ const Button = ({
             xPosition="right"
             disabled={disabled}
             hideSearch={hideSearch}
+            onOpen={onOpen}
           />
         ))}
     </ButtonContainerStyled>
@@ -154,6 +156,7 @@ Button.propTypes = {
     'text',
     'error',
     'danger',
+    'orange',
   ]),
 
   /** Is the Button Split  */
@@ -205,6 +208,9 @@ Button.propTypes = {
 
   /** class passed by the dom element */
   className: PropTypes.string,
+
+  /** onOpen function to fire when the Dropdown menu is open */
+  onOpen: PropTypes.func,
 };
 
 Button.defaultProps = {
@@ -227,6 +233,7 @@ Button.defaultProps = {
   hideSearch: true,
   className: undefined,
   children: undefined,
+  onOpen: null,
 };
 
 export default Button;

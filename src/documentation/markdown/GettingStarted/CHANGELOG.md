@@ -1,33 +1,49 @@
 # Changelog
 
+## [7.38.6] - 2023-04-19
+
+- Add: Ability to fire function onOpen for DropdownMenu
+- Add: Ability to fire function onOpen for Select
+- Add: Ability to fire function onOpen for Button with isSplit
+
 ## [7.38.5] - 2023-03-09
+
 - fix: button documentation uses new MessageFilled icon
 
 ## [7.38.4] - 2023-03-06
+
 - Update cached icon data
 
 ## [7.38.3] - 2023-03-06
+
 - Update BDS icons: MessageRoundFilled, MessageRoundOutline, Retweet, and ShareArrow
 
 ## [7.38.2] - 2023-03-06
+
 - Update BDS icons
 
 ## [7.38.1] - 2023-03-02
+
 - Update Avatar component to include Youtube icon
 
 ## [7.32.6] - 2023-02-27
+
 - Update BDS icons
 
 ## [7.32.5] - 2023-02-23
+
 - Fix warning for mastodon in Avatar
 
 ## [7.32.4] - 2023-02-22
+
 - Update BDS icons
 
 ## [7.32.2] - 2023-02-14
+
 - Fix: Warning for SidebarListItem
 
 ## [7.32.1] - 2023-02-01
+
 - Fix: Notice not dismissable if disabling animation
 
 ## [7.32.0] - 2023-01-19
