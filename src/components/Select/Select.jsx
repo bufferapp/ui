@@ -75,12 +75,22 @@ export default class Select extends React.Component {
       this.props.isOpen && this.onButtonClick();
     }
 
+    if (
+      prevState.isOpen !== this.state.isOpen &&
+      this.state.isOpen &&
+      this.props.onOpen
+    ) {
+      this.props.onOpen();
+    }
+
     const menuIsOpening = !prevState.isOpen && !!this.state.isOpen;
-    const shouldFilterOnMenuOpen = !this.props.clearSearchOnBlur && !!this.state.searchValue;
+    const shouldFilterOnMenuOpen =
+      !this.props.clearSearchOnBlur && !!this.state.searchValue;
     if (menuIsOpening && shouldFilterOnMenuOpen) this.filterOnMenuOpen();
 
-    const menuIsClosing = !!prevState.isOpen && !this.state.isOpen ;
-    if (menuIsClosing && this.props.clearSearchOnBlur) this.clearSearchOnMenuClose()
+    const menuIsClosing = !!prevState.isOpen && !this.state.isOpen;
+    if (menuIsClosing && this.props.clearSearchOnBlur)
+      this.clearSearchOnMenuClose();
   }
 
   componentWillUnmount() {
@@ -92,19 +102,19 @@ export default class Select extends React.Component {
   filterOnMenuOpen = () => {
     if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue);
     this.onSearchChange(this.state.searchValue);
-  }
+  };
 
   clearSearchOnMenuClose = () => {
     if (this.searchInput) this.searchInput.updateSearch('');
     this.onSearchChange('');
-  }
+  };
 
-  keyDownPressed = e => {
+  keyDownPressed = (e) => {
     const { shortcutsEnabled, hotKeys } = this.props;
     if (!shortcutsEnabled) return;
 
     if (hotKeys) {
-      hotKeys.forEach(item => {
+      hotKeys.forEach((item) => {
         if (e.which === item.hotKey) {
           item.onKeyPress();
         }
@@ -132,23 +142,18 @@ export default class Select extends React.Component {
   };
 
   // Close the popover
-  closePopover = e => {
-    if (
-      this.selectNode &&
-      this.selectNode.contains(e.target)
-    ) {
+  closePopover = (e) => {
+    if (this.selectNode && this.selectNode.contains(e.target)) {
       return;
     }
 
     const { isOpen } = this.state;
 
     if (isOpen) {
-      this.setState(
-        {
-          isOpen: false,
-          hoveredItem: undefined
-        },
-      );
+      this.setState({
+        isOpen: false,
+        hoveredItem: undefined,
+      });
     }
   };
 
@@ -166,7 +171,7 @@ export default class Select extends React.Component {
     const { items } = this.state;
     onSelectClick && onSelectClick(option, event);
 
-    const selectedIndex = items.findIndex(x => x.selected === true);
+    const selectedIndex = items.findIndex((x) => x.selected === true);
 
     const deselectItems =
       !multiSelect && selectedIndex > -1
@@ -178,7 +183,7 @@ export default class Select extends React.Component {
         : items;
 
     const optionIndex = deselectItems.findIndex(
-      x => this.getItemId(x) === this.getItemId(option)
+      (x) => this.getItemId(x) === this.getItemId(option)
     );
 
     this.setState({
@@ -194,15 +199,15 @@ export default class Select extends React.Component {
     });
   };
 
-  onClick = e => {
+  onClick = (e) => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
     if (this.props.isSplit && !this.props.disabled) {
-       this.onButtonClick(e);
+      this.onButtonClick(e);
     }
   };
 
-  onKeyUp = e => {
+  onKeyUp = (e) => {
     e.stopPropagation();
     e.nativeEvent.stopImmediatePropagation();
     if (this.props.isSplit && !this.props.disabled) {
@@ -223,7 +228,7 @@ export default class Select extends React.Component {
     this.setState(
       {
         isOpen: !isOpen,
-        items
+        items,
       },
       () => {
         !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus();
@@ -346,12 +351,14 @@ export default class Select extends React.Component {
     }
   };
 
-  findItemInState = item => {
+  findItemInState = (item) => {
     const { selectedItems } = this.state;
-    return selectedItems.find(x => this.getItemId(x) === this.getItemId(item));
+    return selectedItems.find(
+      (x) => this.getItemId(x) === this.getItemId(item)
+    );
   };
 
-  onSearchChange = searchValue => {
+  onSearchChange = (searchValue) => {
     const { items, keyMap } = this.props;
     const searchField = keyMap ? keyMap.title : 'title';
     const isFiltering = !!searchValue;
@@ -364,23 +371,48 @@ export default class Select extends React.Component {
     // that's why we made the selectedItems array in the state, to store that information
     // and we need to check there to see, for each item, if its selected
 
-    const { startingWith, including } = items.reduce((filtered, item) => {
-      const hideItemWhileSearching = isFiltering && !!item.hideOnSearch;
-      if (hideItemWhileSearching) return filtered;
+    const { startingWith, including } = items.reduce(
+      (filtered, item) => {
+        const hideItemWhileSearching = isFiltering && !!item.hideOnSearch;
+        if (hideItemWhileSearching) return filtered;
 
-      if (item[searchField].toLowerCase().startsWith(searchValue.toLowerCase())) {
-        return {...filtered, startingWith: [...filtered.startingWith, {...item, selected:
-          this.findItemInState(item) && this.findItemInState(item).selected,
-        }]}
-      }
-      if (item[searchField].toLowerCase().includes(searchValue.toLowerCase())) {
-        return {...filtered, including: [...filtered.including, {...item, selected:
-          this.findItemInState(item) && this.findItemInState(item).selected,
-        }]}
-      }
+        if (
+          item[searchField].toLowerCase().startsWith(searchValue.toLowerCase())
+        ) {
+          return {
+            ...filtered,
+            startingWith: [
+              ...filtered.startingWith,
+              {
+                ...item,
+                selected:
+                  this.findItemInState(item) &&
+                  this.findItemInState(item).selected,
+              },
+            ],
+          };
+        }
+        if (
+          item[searchField].toLowerCase().includes(searchValue.toLowerCase())
+        ) {
+          return {
+            ...filtered,
+            including: [
+              ...filtered.including,
+              {
+                ...item,
+                selected:
+                  this.findItemInState(item) &&
+                  this.findItemInState(item).selected,
+              },
+            ],
+          };
+        }
 
-      return {...filtered};
-    }, { startingWith: [], including: []});
+        return { ...filtered };
+      },
+      { startingWith: [], including: [] }
+    );
 
     const arrayFinal = [...startingWith, ...including];
 
@@ -403,7 +435,7 @@ export default class Select extends React.Component {
     );
   };
 
-  getItemId = item => {
+  getItemId = (item) => {
     if (!item) return;
     const { keyMap } = this.props;
     return item[keyMap && keyMap.id ? keyMap.id : 'id'];
@@ -532,12 +564,12 @@ export default class Select extends React.Component {
       >
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
-            id='searchInput'
-            ref={node => (this.searchInputNode = node)}
+            id="searchInput"
+            ref={(node) => (this.searchInputNode = node)}
           >
             <SearchIcon />
             <Search
-              ref={node => (this.searchInput = node)}
+              ref={(node) => (this.searchInput = node)}
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
               isOpen={isOpen}
@@ -545,7 +577,7 @@ export default class Select extends React.Component {
             />
           </SearchBarWrapper>
         )}
-        <SelectItems ref={itemsNode => (this.itemsNode = itemsNode)}>
+        <SelectItems ref={(itemsNode) => (this.itemsNode = itemsNode)}>
           {hasCustomAction
             ? this.renderCustomActionItem(
                 items.length,
@@ -576,9 +608,11 @@ export default class Select extends React.Component {
               item={item}
               capitalizeItemLabel={capitalizeItemLabel}
               keyMap={keyMap}
-              hasSelectedItems={items.some(i => i.selected)}
-              onClick={event => this.handleSelectOption(item, event)}
-              onItemClick={() => this.handleSelectOption(item, item.onItemClick)}
+              hasSelectedItems={items.some((i) => i.selected)}
+              onClick={(event) => this.handleSelectOption(item, event)}
+              onItemClick={() =>
+                this.handleSelectOption(item, item.onItemClick)
+              }
               hideSearch={hideSearch}
               multiSelect={multiSelect}
             />,
@@ -598,7 +632,7 @@ export default class Select extends React.Component {
         onKeyUp={(e) => this.onKeyUp(e)}
         tabIndex={0}
         isSplit={isSplit}
-        ref={selectNode => (this.selectNode = selectNode)}
+        ref={(selectNode) => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}
         aria-haspopup="true"
@@ -728,6 +762,9 @@ Select.propTypes = {
 
   /** Aligns text in Select to the left  */
   textToLeft: PropTypes.bool,
+
+  /** onOpen function to fire when the Select menu is open */
+  onOpen: PropTypes.func,
 };
 
 Select.defaultProps = {
@@ -766,4 +803,5 @@ Select.defaultProps = {
     clearSearchOnBlur: true,
   },
   textToLeft: false,
+  onOpen: null,
 };

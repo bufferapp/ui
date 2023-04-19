@@ -33,7 +33,7 @@ export default class DropdownMenu extends React.Component {
 
   handleMousedown = () => {
     this.setState({ usingMouse: true });
-  }
+  };
 
   togglePopup = () => {
     const { isOpen } = this.state;
@@ -50,7 +50,7 @@ export default class DropdownMenu extends React.Component {
     this.setState({ isOpen: false });
   };
 
-  handleKeydown = event => {
+  handleKeydown = (event) => {
     let flag = false;
     switch (event.keyCode) {
       case this.keyCode.SPACE:
@@ -77,7 +77,7 @@ export default class DropdownMenu extends React.Component {
     }
   };
 
-  handlePopupBlur = event => {
+  handlePopupBlur = (event) => {
     const outsideOfPopup = !event.currentTarget.contains(event.relatedTarget);
     setTimeout(() => {
       if (this.isPopupOpen() && outsideOfPopup) {
@@ -94,13 +94,14 @@ export default class DropdownMenu extends React.Component {
       ariaLabelPopup,
       horizontalOffset,
       xPosition,
+      onOpen,
     } = this.props;
 
     const MenubarItem = React.cloneElement(menubarItem);
 
     return (
       <DropdownItems
-        ref={itemsNode => (this.itemsNode = itemsNode)}
+        ref={(itemsNode) => (this.itemsNode = itemsNode)}
         role="menubar"
         aria-label={ariaLabel}
         usingMouse={this.state.usingMouse}
@@ -112,8 +113,8 @@ export default class DropdownMenu extends React.Component {
             tabIndex="0"
             aria-haspopup="true"
             aria-expanded={this.state.isOpen}
-            onKeyDown={ev => this.handleKeydown(ev)}
-            onClick={ev => {
+            onKeyDown={(ev) => this.handleKeydown(ev)}
+            onClick={(ev) => {
               this.togglePopup();
               ev.preventDefault();
             }}
@@ -127,7 +128,8 @@ export default class DropdownMenu extends React.Component {
             isOpen={this.state.isOpen}
             usingMouse={this.state.usingMouse}
             closePopup={this.closePopup}
-            onBlur={event => this.handlePopupBlur(event)}
+            onBlur={(event) => this.handlePopupBlur(event)}
+            onOpen={onOpen}
           />
         </Item>
       </DropdownItems>
@@ -159,9 +161,13 @@ DropdownMenu.propTypes = {
       }),
     })
   ).isRequired,
+
+  /** onOpen function to fire when the Dropdown menu is open */
+  onOpen: PropTypes.func,
 };
 
 DropdownMenu.defaultProps = {
   ariaLabelPopup: null,
-  xPosition: "right",
+  xPosition: 'right',
+  onOpen: null,
 };
