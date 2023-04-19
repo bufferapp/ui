@@ -30,6 +30,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
+        onOpen={null}
         selectPosition="bottom"
         size="medium"
         type="text"
@@ -43,6 +44,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismiss
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
+        onOpen={null}
         selectPosition="bottom"
         size="medium"
         type="jest-auto-snapshots String Fixture"
@@ -82,6 +84,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "noBackg
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
+        onOpen={null}
         selectPosition="bottom"
         size="medium"
         type="text"
@@ -95,6 +98,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "noBackg
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
+        onOpen={null}
         selectPosition="bottom"
         size="medium"
         type="jest-auto-snapshots String Fixture"
@@ -134,6 +138,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
+        onOpen={null}
         selectPosition="bottom"
         size="medium"
         type="text"
@@ -147,6 +152,7 @@ exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] 
         label="jest-auto-snapshots String Fixture"
         loading={false}
         onClick={[Function]}
+        onOpen={null}
         selectPosition="bottom"
         size="medium"
         type="jest-auto-snapshots String Fixture"

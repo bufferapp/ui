@@ -28,6 +28,7 @@ exports[`jest-auto-snapshots > Banner Matches snapshot when passed all props 1`]
       label="Close"
       loading={false}
       onClick={[Function]}
+      onOpen={null}
       selectPosition="bottom"
       size="small"
       type="text"

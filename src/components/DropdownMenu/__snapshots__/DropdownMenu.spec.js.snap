@@ -37,6 +37,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
         ]
       }
       onBlur={[Function]}
+      onOpen={[MockFunction]}
       role="menu"
       usingMouse={false}
       xPosition="jest-auto-snapshots String Fixture"
@@ -82,6 +83,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
         ]
       }
       onBlur={[Function]}
+      onOpen={[MockFunction]}
       role="menu"
       usingMouse={false}
       xPosition="jest-auto-snapshots String Fixture"
@@ -127,6 +129,7 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
         ]
       }
       onBlur={[Function]}
+      onOpen={null}
       role="menu"
       usingMouse={false}
       xPosition="right"

@@ -1083,6 +1083,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     label=""
     loading={false}
     onClick={[Function]}
+    onOpen={null}
     selectPosition="bottom"
     size="medium"
     textToLeft={false}
