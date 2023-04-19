@@ -11,8 +11,6 @@ const Wrapper = styled.div`
 export default function ExampleIsOpen() {
   return (
     <Wrapper>
-      <Button type="primary" disabled onClick={() => {}} label="Click Me" />
-      <Button type="secondary" disabled onClick={() => {}} label="Click Me" />
       <Button
         onSelectClick={() => true}
         onClick={() => true}
