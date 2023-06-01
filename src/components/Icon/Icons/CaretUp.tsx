@@ -16,6 +16,7 @@ const CaretUpIcon = createIconComponent({
     </g>
   ),
 })
+// @ts-expect-error TS(2339) FIXME: Property 'displayName' does not exist on type '(pr... Remove this comment to see the full error message
 CaretUpIcon.displayName = 'CaretUpIcon'
 
 export default CaretUpIcon

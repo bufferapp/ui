@@ -19,6 +19,7 @@ export const Container = styled.div`
   height: 100%;
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'disabled' implicitly has an 'any'... Remove this comment to see the full error message
 const backgroundCss = ({ disabled, hasError }) => {
   if (disabled) {
     return grayLight
@@ -29,6 +30,7 @@ const backgroundCss = ({ disabled, hasError }) => {
   return white
 }
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'disabled' implicitly has an 'any'... Remove this comment to see the full error message
 const borderCss = ({ disabled, hasError }) => {
   if (disabled) {
     return 'none'

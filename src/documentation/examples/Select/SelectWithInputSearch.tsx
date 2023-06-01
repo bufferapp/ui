@@ -1,6 +1,9 @@
 import React from 'react'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Select' or its c... Remove this comment to see the full error message
 import Select from '@bufferapp/ui/Select'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Search' or its c... Remove this comment to see the full error message
 import Search from '@bufferapp/ui/Search'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Icon' or its cor... Remove this comment to see the full error message
 import { Search as SearchIcon } from '@bufferapp/ui/Icon'
 
 const searchBarWrapperStyle = {
@@ -24,7 +27,9 @@ export default function ExampleSelectWithInputSearch() {
   return (
     <Select
       onSelectClick={() => true}
+      // @ts-expect-error TS(7006) FIXME: Parameter 'onButtonClick' implicitly has an 'any' ... Remove this comment to see the full error message
       customButton={(onButtonClick, onSearchChange) => (
+        // @ts-expect-error TS(2322) FIXME: Type '{ width: string; display: string; alignItems... Remove this comment to see the full error message
         <div style={searchBarWrapperStyle}>
           <SearchIcon />
           <Search

@@ -56,6 +56,7 @@ const IconComponentWrapper = styled.div`
     `}
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'fullscreen' implicitly has an 'an... Remove this comment to see the full error message
 const ComponentExample = ({ fullscreen, name, folder, id }) => (
   <Fragment>
     {!fullscreen && folder[0] && (
@@ -64,9 +65,11 @@ const ComponentExample = ({ fullscreen, name, folder, id }) => (
     <ExampleWrapper key="example">
       {folder[0] ? (
         // if this component example contains subfolders, then get example from each subfolder
+        // @ts-expect-error TS(7006) FIXME: Parameter 'example' implicitly has an 'any' type.
         folder.map((example, idx) => (
           <Example
             key={name + idx}
+            // @ts-expect-error TS(2322) FIXME: Type '{ key: any; example: any; componentName: any... Remove this comment to see the full error message
             example={example}
             componentName={name}
             id={id}
@@ -75,6 +78,7 @@ const ComponentExample = ({ fullscreen, name, folder, id }) => (
       ) : (
         // otherwise just render the example
         <Example
+          // @ts-expect-error TS(2322) FIXME: Type '{ example: any; componentName: any; id: any;... Remove this comment to see the full error message
           example={folder}
           componentName={name}
           id={id}
@@ -88,9 +92,11 @@ const ComponentExample = ({ fullscreen, name, folder, id }) => (
 )
 
 /** Page to display the shared component info taken from .jsx components */
+// @ts-expect-error TS(7031) FIXME: Binding element 'component' implicitly has an 'any... Remove this comment to see the full error message
 const Component = ({ component, fullscreen }) => {
   const { name, description, props, examples, id } = component
   if (fullscreen) {
+    // @ts-expect-error TS(7006) FIXME: Parameter 'folder' implicitly has an 'any' type.
     return examples.map((folder, idx) => (
       <ComponentExample
         fullscreen
@@ -114,6 +120,7 @@ const Component = ({ component, fullscreen }) => {
             </PropTitle>
           )}
           <IconComponentWrapper isIcon={name === 'Icon'}>
+            {/* @ts-expect-error TS(7006) FIXME: Parameter 'folder' implicitly has an 'any' type. */}
             {examples.map((folder, idx) => (
               <ComponentExample folder={folder} name={name} id={id} key={idx} />
             ))}

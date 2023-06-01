@@ -13,6 +13,7 @@ const App = () => (
     <Route
       exact
       path="/:location/:route/:view?"
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       component={DocumentationPages}
     />
   </Switch>

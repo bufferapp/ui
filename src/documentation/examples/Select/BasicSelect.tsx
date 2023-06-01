@@ -1,4 +1,5 @@
 import React from 'react'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Select' or its c... Remove this comment to see the full error message
 import Select from '@bufferapp/ui/Select'
 
 /** Basic */
@@ -50,6 +51,7 @@ export default function ExampleSelect() {
         },
       ]}
       hasCustomAction
+      // @ts-expect-error TS(7006) FIXME: Parameter 'string' implicitly has an 'any' type.
       onCustomItemClick={(string) => console.info(string)}
       customItemLabel="Create Tag"
     />

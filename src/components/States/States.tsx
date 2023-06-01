@@ -56,6 +56,7 @@ const ButtonWrapper = styled.div`
   }
 `
 
+// @ts-expect-error TS(2554) FIXME: Expected 1 arguments, but got 0.
 const StatesContext = React.createContext()
 
 const useStatesContext = () => {
@@ -68,6 +69,7 @@ const useStatesContext = () => {
   return context
 }
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const States = ({ children, size }) => (
   <StatesContext.Provider value={size}>
     <Wrapper>{children}</Wrapper>
@@ -83,6 +85,7 @@ States.defaultProps = {
   size: 'large',
 }
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'src' implicitly has an 'any' type... Remove this comment to see the full error message
 const Image = ({ src, alt }) => {
   const size = useStatesContext()
   const height = size === 'large' ? 280 : 200
@@ -101,6 +104,7 @@ Image.propTypes = {
 
 Image.defaultProps = {}
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const Media = ({ children }) => {
   const size = useStatesContext()
   return <MediaWrapper size={size}>{children}</MediaWrapper>
@@ -112,6 +116,7 @@ Media.propTypes = {
 
 Media.defaultProps = {}
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const Header = ({ children }) => {
   const size = useStatesContext()
   return (
@@ -128,6 +133,7 @@ Header.propTypes = {
 
 Header.defaultProps = {}
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const Description = ({ children }) => {
   const size = useStatesContext()
   return (
@@ -143,6 +149,7 @@ Description.propTypes = {
 
 Description.defaultProps = {}
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const Buttons = ({ children }) => <ButtonWrapper>{children}</ButtonWrapper>
 
 Buttons.propTypes = {

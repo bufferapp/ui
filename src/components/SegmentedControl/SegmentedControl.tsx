@@ -10,6 +10,7 @@ import { Container } from './style'
  * Segmented controls are useful for scenarios where there are only a few options.
  * If you need to present many options, consider using another component such as a Select.
  */
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const SegmentedControl = ({ children }) => (
   <Container role="group">{children}</Container>
 )

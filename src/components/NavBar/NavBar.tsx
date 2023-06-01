@@ -30,6 +30,7 @@ import BufferLogo from './BufferLogo'
 import NavBarMenu from './NavBarMenu/NavBarMenu'
 import NavBarProducts from './NavBarProducts/NavBarProducts'
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'baseUrl' implicitly has an 'any' type.
 export function getProductPath(baseUrl) {
   const result = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/)
   let productPath = baseUrl
@@ -39,6 +40,7 @@ export function getProductPath(baseUrl) {
   return productPath
 }
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'baseUrl' implicitly has an 'any' type.
 function getRedirectUrl(baseUrl) {
   const productPath = getProductPath(baseUrl)
   return `https://${productPath}.buffer.com`
@@ -51,6 +53,7 @@ export function getLogoutUrl(baseUrl = '') {
   }.buffer.com/logout?redirect=${getRedirectUrl(baseUrl)}`
 }
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'user' implicitly has an 'any' type.
 export function getAccountUrl(baseUrl = '', user) {
   return `https://account.buffer.com?redirect=${getRedirectUrl(
     baseUrl,
@@ -149,6 +152,7 @@ const SkipToMainLink = styled(Link)`
   }
 `
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'ignoreMenuItems' implicitly has an 'any... Remove this comment to see the full error message
 export function appendMenuItem(ignoreMenuItems, menuItem) {
   if (!ignoreMenuItems) {
     return menuItem
@@ -157,6 +161,7 @@ export function appendMenuItem(ignoreMenuItems, menuItem) {
   return ignoreMenuItems.includes(menuItem.id) ? null : menuItem
 }
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
 function getNetworkIcon(item) {
   if (!item.network) return null
 
@@ -176,11 +181,13 @@ function getNetworkIcon(item) {
   }
 }
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'orgSwitcher' implicitly has an 'any' ty... Remove this comment to see the full error message
 export function appendOrgSwitcher(orgSwitcher) {
   if (!orgSwitcher || !orgSwitcher.menuItems) {
     return []
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
   return orgSwitcher.menuItems.map((item, index) => {
     item.type = ORG_SWITCHER
     if (orgSwitcher.title && index === 0) {
@@ -188,6 +195,7 @@ export function appendOrgSwitcher(orgSwitcher) {
       item.dividerTitle = orgSwitcher.title
     }
     if (item.subItems) {
+      // @ts-expect-error TS(7006) FIXME: Parameter 'subItem' implicitly has an 'any' type.
       item.subItems.forEach((subItem) => {
         subItem.icon = getNetworkIcon(subItem)
       })
@@ -204,25 +212,39 @@ export function appendOrgSwitcher(orgSwitcher) {
  * The NavBar is not consumed alone, but instead is used by the AppShell component. Go check out the AppShell component to learn more.
  */
 class NavBar extends React.Component {
+  // @ts-expect-error TS(7006) FIXME: Parameter 'nextProps' implicitly has an 'any' type... Remove this comment to see the full error message
   shouldComponentUpdate(nextProps) {
     return (
+      // @ts-expect-error TS(2339) FIXME: Property 'user' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       nextProps.user.name !== this.props.user.name ||
+      // @ts-expect-error TS(2339) FIXME: Property 'user' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       nextProps.user.email !== this.props.user.email ||
+      // @ts-expect-error TS(2339) FIXME: Property 'isImpersonation' does not exist on type ... Remove this comment to see the full error message
       nextProps.isImpersonation !== this.props.isImpersonation ||
+      // @ts-expect-error TS(2339) FIXME: Property 'products' does not exist on type 'Readon... Remove this comment to see the full error message
       nextProps.products !== this.props.products ||
+      // @ts-expect-error TS(2339) FIXME: Property 'orgSwitcher' does not exist on type 'Rea... Remove this comment to see the full error message
       nextProps.orgSwitcher !== this.props.orgSwitcher
     )
   }
 
   render() {
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'products' does not exist on type 'Readon... Remove this comment to see the full error message
       products,
+      // @ts-expect-error TS(2339) FIXME: Property 'activeProduct' does not exist on type 'R... Remove this comment to see the full error message
       activeProduct,
+      // @ts-expect-error TS(2339) FIXME: Property 'user' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       user,
+      // @ts-expect-error TS(2339) FIXME: Property 'helpMenuItems' does not exist on type 'R... Remove this comment to see the full error message
       helpMenuItems,
+      // @ts-expect-error TS(2339) FIXME: Property 'onLogout' does not exist on type 'Readon... Remove this comment to see the full error message
       onLogout,
+      // @ts-expect-error TS(2339) FIXME: Property 'displaySkipLink' does not exist on type ... Remove this comment to see the full error message
       displaySkipLink,
+      // @ts-expect-error TS(2339) FIXME: Property 'isImpersonation' does not exist on type ... Remove this comment to see the full error message
       isImpersonation,
+      // @ts-expect-error TS(2339) FIXME: Property 'orgSwitcher' does not exist on type 'Rea... Remove this comment to see the full error message
       orgSwitcher,
     } = this.props
 
@@ -242,20 +264,22 @@ class NavBar extends React.Component {
         <NavBarRight>
           {helpMenuItems && (
             <DropdownMenu
+              // @ts-expect-error TS(2322) FIXME: Type '{ xPosition: string; ariaLabel: string; aria... Remove this comment to see the full error message
               xPosition="right"
               ariaLabel="Help Menu"
               ariaLabelPopup="Help"
-              menubarItem={(
+              menubarItem={
                 <NavBarHelp>
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
-)}
+              }
               items={helpMenuItems}
             />
           )}
           <NavBarVerticalRule />
           <DropdownMenu
+            // @ts-expect-error TS(2322) FIXME: Type '{ xPosition: string; ariaLabel: string; aria... Remove this comment to see the full error message
             xPosition="right"
             ariaLabel="Account Menu"
             ariaLabelPopup="Account"
@@ -273,6 +297,7 @@ class NavBar extends React.Component {
                 hasDivider: orgSwitcherHasItems,
                 onItemClick: () => {
                   window.location.assign(
+                    // @ts-expect-error TS(2339) FIXME: Property 'user' does not exist on type 'Readonly<{... Remove this comment to see the full error message
                     getAccountUrl(window.location.href, this.props.user),
                   )
                 },
@@ -287,6 +312,7 @@ class NavBar extends React.Component {
                       icon: <Cross color={gray} />,
                       hasDivider: user.menuItems && user.menuItems.length > 0,
                       onItemClick: () => {
+                        // @ts-expect-error TS(2345) FIXME: Argument of type 'string | null' is not assignable... Remove this comment to see the full error message
                         window.location.assign(getStopImpersonationUrl())
                       },
                     }
@@ -311,6 +337,7 @@ class NavBar extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 NavBar.propTypes = {
   /** The list of available products */
   products: PropTypes.arrayOf(
@@ -369,6 +396,7 @@ NavBar.propTypes = {
   }),
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 NavBar.defaultProps = {
   products: [],
   activeProduct: undefined,

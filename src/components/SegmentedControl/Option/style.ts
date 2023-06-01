@@ -11,6 +11,7 @@ import {
 import { borderRadius } from '../../style/borders'
 import { fontSize, fontWeightMedium } from '../../style/fonts'
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'iconPosition' implicitly has an 'any' t... Remove this comment to see the full error message
 const getGridTemplateAreas = (iconPosition) => {
   switch (iconPosition) {
     case 'top':

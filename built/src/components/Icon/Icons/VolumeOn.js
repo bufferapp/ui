@@ -1,0 +1,9 @@
+import React from 'react';
+import createIconComponent from '../utils/createIconComponent';
+const VolumeOnIcon = createIconComponent({
+    content: (React.createElement("g", null,
+        React.createElement("path", { d: "M13 1.7a.69.69 0 00-.374-.605.797.797 0 00-.748-.003L6.8 3.8H3.25c-.414 0-.75.313-.75.7v7c0 .387.336.7.75.7H6.8l5.078 2.708a.797.797 0 00.748-.002A.693.693 0 0013 14.3V1.7z" }))),
+});
+VolumeOnIcon.displayName = 'VolumeOnIcon';
+export default VolumeOnIcon;
+//# sourceMappingURL=VolumeOn.js.map

@@ -9,10 +9,16 @@ export const Tag = styled.span`
   font-size: ${fontSizeSmall};
   line-height: ${lineHeight};
   border-radius: 100px;
-  color: ${(props) => textColors[props.textColor]};
-  background-color: ${(props) => Colors[props.color]};
+  color: ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    textColors[props.textColor]};
+  background-color: ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    Colors[props.color]};
 
   &:hover {
-    color: ${(props) => textColors[props.textColor]};
+    color: ${(props) =>
+      // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+      textColors[props.textColor]};
   }
 `

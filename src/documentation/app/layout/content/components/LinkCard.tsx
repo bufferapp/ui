@@ -41,6 +41,7 @@ const CardTitle = styled.h3`
   font-weight: 500;
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'name' implicitly has an 'any' typ... Remove this comment to see the full error message
 const LinkCard = ({ name, id }) => (
   <CardWrapper to={`/${id}`}>
     <CardBody>

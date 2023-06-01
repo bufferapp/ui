@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'jest... Remove this comment to see the full error message
 import snap from 'jest-auto-snapshots'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import renderer from 'react-test-renderer'
 import 'jest-styled-components'
 

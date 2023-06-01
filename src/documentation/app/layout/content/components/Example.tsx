@@ -39,6 +39,7 @@ const Title = styled.div`
 
 /** Displays components example information */
 export default class Example extends React.Component {
+  // @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
   constructor(props) {
     super(props)
     this.state = {
@@ -46,14 +47,18 @@ export default class Example extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
   toggleCode = (event) => {
     event.preventDefault()
+    // @ts-expect-error TS(2339) FIXME: Property 'showCode' does not exist on type 'Readon... Remove this comment to see the full error message
     const { showCode } = this.state
     this.setState({ showCode: !showCode })
   }
 
   render() {
+    // @ts-expect-error TS(2339) FIXME: Property 'showCode' does not exist on type 'Readon... Remove this comment to see the full error message
     const { showCode } = this.state
+    // @ts-expect-error TS(2339) FIXME: Property 'example' does not exist on type 'Readonl... Remove this comment to see the full error message
     const { example, componentName, fullscreen } = this.props
     const { code, description, title, name } = example
     const fileName = componentName.replace(/ /g, '') // makes sure to replace all whitespaces
@@ -85,6 +90,7 @@ export default class Example extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Example.propTypes = {
   fullscreen: PropTypes.bool,
   example: PropTypes.shape({
@@ -95,6 +101,7 @@ Example.propTypes = {
   componentName: PropTypes.string.isRequired,
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 Example.defaultProps = {
   fullscreen: false,
 }

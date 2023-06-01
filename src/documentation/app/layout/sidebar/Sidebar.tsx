@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Icon' or its cor... Remove this comment to see the full error message
 import { ChevronDown, ChevronUp } from '@bufferapp/ui/Icon'
 import helper from 'immutability-helper'
 
@@ -91,6 +92,7 @@ const IconUp = styled(ChevronUp)`
 
 /** The left sidebar that displays the navigation links */
 class Sidebar extends React.Component {
+  // @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
   constructor(props) {
     super(props)
     this.state = {
@@ -98,11 +100,14 @@ class Sidebar extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'link' implicitly has an 'any' type.
   toggleNavigationLink = (link) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'navigationLinks' does not exist on type ... Remove this comment to see the full error message
     const { navigationLinks } = this.state
 
     this.setState({
       navigationLinks: helper(navigationLinks, {
+        // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
         [navigationLinks.findIndex((x) => x.id === link.id)]: {
           isExpanded: { $set: !link.isExpanded },
         },
@@ -111,12 +116,15 @@ class Sidebar extends React.Component {
   }
 
   render() {
+    // @ts-expect-error TS(2339) FIXME: Property 'navigationLinks' does not exist on type ... Remove this comment to see the full error message
     const { navigationLinks } = this.state
+    // @ts-expect-error TS(2339) FIXME: Property 'route' does not exist on type 'Readonly<... Remove this comment to see the full error message
     const { route } = this.props
 
     return (
       <SidebarWrapper>
         <SidebarList>
+          {/* @ts-expect-error TS(7006) FIXME: Parameter 'link' implicitly has an 'any' type. */}
           {navigationLinks.map((link) => [
             <SidebarListItem
               isSelected={link.id === route}
@@ -143,7 +151,8 @@ class Sidebar extends React.Component {
             // we want to exclude children with the same name as the parent
             // no need to show those as those can be accesses by clicking on the parent
             link.children && link.isExpanded
-              ? link.children.map((child) =>
+              ? // @ts-expect-error TS(7006) FIXME: Parameter 'child' implicitly has an 'any' type.
+                link.children.map((child) =>
                   child.fileName !== child.parentName ? (
                     <SidebarListItem
                       isChild
@@ -169,6 +178,7 @@ class Sidebar extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Sidebar.propTypes = {
   /** Navigation links to display in the sidebar */
   navigationLinks: PropTypes.arrayOf(

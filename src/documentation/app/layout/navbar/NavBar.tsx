@@ -34,6 +34,7 @@ const Version = styled.div`
 `
 
 /** Top Navigation */
+// @ts-expect-error TS(7031) FIXME: Binding element 'title' implicitly has an 'any' ty... Remove this comment to see the full error message
 const NavBar = ({ title, version }) => (
   <Container>
     <Logo>{title}</Logo>

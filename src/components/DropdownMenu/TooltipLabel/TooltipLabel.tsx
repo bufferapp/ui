@@ -30,6 +30,7 @@ export const EmptyLabel = styled.div`
   height: auto;
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'items' implicitly has an 'any' ty... Remove this comment to see the full error message
 const TooltipLabel = ({ items, maxItems, defaultMessage }) => {
   if (!items && !defaultMessage) return null
 
@@ -39,6 +40,7 @@ const TooltipLabel = ({ items, maxItems, defaultMessage }) => {
 
   return (
     <>
+      {/* @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type. */}
       {items.slice(0, maxItems).map((item, index) => (
         <LabelWrapper key={`tooltip-item-${index}`}>
           {item.icon}

@@ -8,23 +8,41 @@ import Text from '../Text'
 export default class Input extends React.Component {
   render() {
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'Readon... Remove this comment to see the full error message
       disabled,
+      // @ts-expect-error TS(2339) FIXME: Property 'hasError' does not exist on type 'Readon... Remove this comment to see the full error message
       hasError,
+      // @ts-expect-error TS(2339) FIXME: Property 'help' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       help,
+      // @ts-expect-error TS(2339) FIXME: Property 'label' does not exist on type 'Readonly<... Remove this comment to see the full error message
       label,
+      // @ts-expect-error TS(2339) FIXME: Property 'maxLength' does not exist on type 'Reado... Remove this comment to see the full error message
       maxLength,
+      // @ts-expect-error TS(2339) FIXME: Property 'id' does not exist on type 'Readonly<{}>... Remove this comment to see the full error message
       id,
+      // @ts-expect-error TS(2339) FIXME: Property 'name' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       name,
+      // @ts-expect-error TS(2339) FIXME: Property 'onChange' does not exist on type 'Readon... Remove this comment to see the full error message
       onChange,
+      // @ts-expect-error TS(2339) FIXME: Property 'onBlur' does not exist on type 'Readonly... Remove this comment to see the full error message
       onBlur,
+      // @ts-expect-error TS(2339) FIXME: Property 'onKeyUp' does not exist on type 'Readonl... Remove this comment to see the full error message
       onKeyUp,
+      // @ts-expect-error TS(2339) FIXME: Property 'prefix' does not exist on type 'Readonly... Remove this comment to see the full error message
       prefix,
+      // @ts-expect-error TS(2339) FIXME: Property 'placeholder' does not exist on type 'Rea... Remove this comment to see the full error message
       placeholder,
+      // @ts-expect-error TS(2339) FIXME: Property 'size' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       size,
+      // @ts-expect-error TS(2339) FIXME: Property 'type' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       type,
+      // @ts-expect-error TS(2339) FIXME: Property 'value' does not exist on type 'Readonly<... Remove this comment to see the full error message
       value,
+      // @ts-expect-error TS(2339) FIXME: Property 'forwardedRef' does not exist on type 'Re... Remove this comment to see the full error message
       forwardedRef,
+      // @ts-expect-error TS(2339) FIXME: Property 'required' does not exist on type 'Readon... Remove this comment to see the full error message
       required,
+      // @ts-expect-error TS(2339) FIXME: Property 'icon' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       icon,
     } = this.props
     return (
@@ -69,6 +87,7 @@ export default class Input extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Input.propTypes = {
   /** It disables the input field. </i> */
   disabled: PropTypes.bool,
@@ -114,6 +133,7 @@ Input.propTypes = {
   forwardedRef: PropTypes.shape({ current: PropTypes.any }),
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 Input.defaultProps = {
   disabled: false,
   hasError: false,

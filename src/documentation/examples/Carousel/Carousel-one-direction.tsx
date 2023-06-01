@@ -1,4 +1,5 @@
 import React from 'react'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Carousel' or its... Remove this comment to see the full error message
 import Carousel from '@bufferapp/ui/Carousel'
 
 /** Carousel One Direction Example */

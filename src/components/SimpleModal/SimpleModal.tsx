@@ -7,6 +7,7 @@ import { stageInCenter, stageOutCenter } from '../style/animations'
 
 const ESCAPE_KEY = 27
 const TAB_KEY = 9
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const SimpleModal = ({ children, closeAction }) => {
   const modalRef = useRef(null)
   const containerRef = useRef(null)
@@ -21,7 +22,9 @@ const SimpleModal = ({ children, closeAction }) => {
     onDismiss: closeAction,
   })
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
   const handleTabKey = (e) => {
+    // @ts-expect-error TS(2531) FIXME: Object is possibly 'null'.
     const focusableModalElements = modalRef.current.querySelectorAll(
       'a[href], button, textarea, input[type="text"], input[type="radio"], input[type="checkbox"], select, div[tabIndex="0"]',
     )
@@ -45,18 +48,22 @@ const SimpleModal = ({ children, closeAction }) => {
     [TAB_KEY, handleTabKey],
   ])
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
   const clickToClose = (e) => {
     if (e.target !== containerRef.current) return
     dismissAnimationWrapper()
   }
 
   useEffect(() => {
+    // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
     function keyListener(e) {
       const listener = keyListenersMap.get(e.keyCode)
       return listener && listener(e)
     }
     document.addEventListener('keydown', keyListener)
+    // @ts-expect-error TS(2531) FIXME: Object is possibly 'null'.
     modalRef.current.focus()
+    // @ts-expect-error TS(2531) FIXME: Object is possibly 'null'.
     containerRef.current.addEventListener('click', (e) => clickToClose(e))
 
     return () => document.removeEventListener('keydown', keyListener)

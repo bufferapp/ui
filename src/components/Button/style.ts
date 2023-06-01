@@ -53,7 +53,11 @@ export const ButtonWrapperBase = css`
   user-select: none;
 
   :active {
-    top: ${(props) => (props.disabled ? '0px' : '1px')};
+    top: ${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'ThemeP... Remove this comment to see the full error message
+      props.disabled
+        ? '0px'
+        : '1px'};
   }
   :focus {
     box-shadow: 0 0 0 3px ${boxShadow};
@@ -121,7 +125,11 @@ export const ButtonBase = css`
   transition-timing-function: ease-in;
   user-select: none;
   :active {
-    top: ${(props) => (props.disabled ? '0px' : '1px')};
+    top: ${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'ThemeP... Remove this comment to see the full error message
+      props.disabled
+        ? '0px'
+        : '1px'};
   }
   :focus {
     box-shadow: 0 0 0 3px ${boxShadow};
@@ -135,9 +143,18 @@ export const ButtonBase = css`
 
 /* theme variants */
 export const primary = css`
-  background-color: ${(props) => (props.$loading ? blueDarker : blue)};
+  background-color: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property '$loading' does not exist on type 'ThemeP... Remove this comment to see the full error message
+    props.$loading
+      ? blueDarker
+      : blue};
   color: ${white};
-  border: 1px solid ${(props) => (props.$loading ? blueDarker : blue)};
+  border: 1px solid
+    ${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property '$loading' does not exist on type 'ThemeP... Remove this comment to see the full error message
+      props.$loading
+        ? blueDarker
+        : blue};
   :hover {
     background-color: ${blueDark};
     border-color: ${blueDark};
@@ -162,7 +179,11 @@ export const secondary = css`
 `
 
 export const danger = css`
-  background-color: ${(props) => (props.$loading ? redDarker : redDark)};
+  background-color: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property '$loading' does not exist on type 'ThemeP... Remove this comment to see the full error message
+    props.$loading
+      ? redDarker
+      : redDark};
   color: ${white};
   border-color: ${redDarker};
 
@@ -248,6 +269,7 @@ export const fullWidth = css`
   justify-content: center;
 `
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'isDisabled' implicitly has an 'any' typ... Remove this comment to see the full error message
 const getBackgroundColor = (isDisabled, type) => {
   if (isDisabled) {
     return grayLight
@@ -269,7 +291,9 @@ export const ButtonSelect = style.div`
     width: 1px;
   }
 
-  ${(props) => Sizes[props.size] || Sizes.medium};
+  ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    Sizes[props.size] || Sizes.medium};
   cursor: ${(props) => (props.disabled ? 'not-allowed' : 'inherit')};
   align-items: center;
   display: flex;

@@ -11,6 +11,7 @@ import {
 import { useAnimation } from '../AnimationWrapper'
 import { stageInTop, fadeOut } from '../style/animations'
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'text' implicitly has an 'any' typ... Remove this comment to see the full error message
 function Notification({ text, onClose, type, action, secondaryAction }) {
   const {
     AnimationWrapper,

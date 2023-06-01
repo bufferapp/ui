@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'mark... Remove this comment to see the full error message
 import MarkdownToJsx from 'markdown-to-jsx'
 
 const Table = styled.table`
@@ -58,6 +59,7 @@ const PropNameItem = styled(Item)`
 `
 
 /** Component props table */
+// @ts-expect-error TS(7031) FIXME: Binding element 'props' implicitly has an 'any' ty... Remove this comment to see the full error message
 const Props = ({ props }) => (
   <Table cellPadding="0" cellSpacing="0">
     <TableHeader>

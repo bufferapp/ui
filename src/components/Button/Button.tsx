@@ -13,7 +13,9 @@ Since buttons keep their own inline-block display type, we can only imitate this
 
 export const ButtonWrapperStyled = styled.div`
   ${Styles.ButtonWrapperBase};
-  ${(props) => Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
+  ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
   ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
 `
 
@@ -23,8 +25,12 @@ export const ButtonContainerStyled = styled.div`
 
 export const ButtonStyled = styled.button`
   ${Styles.ButtonNestedBase};
-  ${(props) => Styles[props.size]};
-  ${(props) => Styles[props.disabled ? 'disabled' : '']};
+  ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    Styles[props.size]};
+  ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    Styles[props.disabled ? 'disabled' : '']};
   ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
 `
 
@@ -47,27 +53,49 @@ const VisuallyHiddenLabel = styled.span`
 /** All buttons, including text and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
 const Button = ({
+  // @ts-expect-error TS(7031) FIXME: Binding element 'disabled' implicitly has an 'any'... Remove this comment to see the full error message
   disabled,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'onClick' implicitly has an 'any' ... Remove this comment to see the full error message
   onClick,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'type' implicitly has an 'any' typ... Remove this comment to see the full error message
   type,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
   size,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'label' implicitly has an 'any' ty... Remove this comment to see the full error message
   label,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'isSplit' implicitly has an 'any' ... Remove this comment to see the full error message
   isSplit,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'loading' implicitly has an 'any' ... Remove this comment to see the full error message
   loading,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'icon' implicitly has an 'any' typ... Remove this comment to see the full error message
   icon,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'iconEnd' implicitly has an 'any' ... Remove this comment to see the full error message
   iconEnd,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'hasIconOnly' implicitly has an 'a... Remove this comment to see the full error message
   hasIconOnly,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'isSelect' implicitly has an 'any'... Remove this comment to see the full error message
   isSelect,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'items' implicitly has an 'any' ty... Remove this comment to see the full error message
   items,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'selectPosition' implicitly has an... Remove this comment to see the full error message
   selectPosition,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'onSelectClick' implicitly has an ... Remove this comment to see the full error message
   onSelectClick,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'fullWidth' implicitly has an 'any... Remove this comment to see the full error message
   fullWidth,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'tooltip' implicitly has an 'any' ... Remove this comment to see the full error message
   tooltip,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'ref' implicitly has an 'any' type... Remove this comment to see the full error message
   ref,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'hideSearch' implicitly has an 'an... Remove this comment to see the full error message
   hideSearch,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'textToLeft' implicitly has an 'an... Remove this comment to see the full error message
   textToLeft,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'className' implicitly has an 'any... Remove this comment to see the full error message
   className,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
   children,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'onOpen' implicitly has an 'any' t... Remove this comment to see the full error message
   onOpen,
   ...props
 }) => (
@@ -120,6 +148,7 @@ const Button = ({
           React.Children.map(children, (child) => React.cloneElement(child, {}))
         ) : (
           <Select
+            // @ts-expect-error TS(2769) FIXME: No overload matches this call.
             onSelectClick={onSelectClick}
             items={items}
             type={type}

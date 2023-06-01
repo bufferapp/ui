@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'enzy... Remove this comment to see the full error message
 import Enzyme, { shallow, mount } from 'enzyme'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'enzy... Remove this comment to see the full error message
 import Adapter from 'enzyme-adapter-react-16'
 import Select from './Select'
 
@@ -9,6 +11,7 @@ Enzyme.configure({ adapter: new Adapter() })
 describe('Select component', () => {
   it('openPopup: should open the closed popup', () => {
     const wrapper = mount(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -19,6 +22,7 @@ describe('Select component', () => {
 
   it('closePopup: should close the open popup', () => {
     const wrapper = mount(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -30,6 +34,7 @@ describe('Select component', () => {
 
   it('onClose: should close the open popup', () => {
     const wrapper = mount(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -42,6 +47,7 @@ describe('Select component', () => {
   it('componentDidUpdate: run onButtonClick when isOpen prop changes', () => {
     const wrapper = shallow(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         isOpen={false}
         items={[]}
@@ -60,6 +66,7 @@ describe('Select component', () => {
   it('componentDidUpdate: should run filterOnMenuOpen on open if clearSearchOnBlur is false and search value exists in state', () => {
     const wrapper = mount(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         items={[]}
         label="Select"
@@ -84,6 +91,7 @@ describe('Select component', () => {
   it('componentDidUpdate: should clear search value on close if clearSearchOnBlur is true', () => {
     const wrapper = mount(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         items={[]}
         label="Select"
@@ -113,6 +121,7 @@ describe('Select component', () => {
   it('handleSelectOption: should call onSelectClick', () => {
     const onSelectClickSply = jest.fn()
     const wrapper = shallow(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={onSelectClickSply} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -140,7 +149,9 @@ describe('Select component', () => {
     ]
     const SelectComponent = (
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         label="Select"
+        // @ts-expect-error TS(7006) FIXME: Parameter 'selectedItem' implicitly has an 'any' t... Remove this comment to see the full error message
         onSelectClick={(selectedItem) => selectedItem.selectedItemClick()}
         items={items}
       />
@@ -159,6 +170,7 @@ describe('Select component', () => {
       },
     }
     const wrapper = shallow(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -170,6 +182,7 @@ describe('Select component', () => {
   it('onSearchChange: should update search in state', () => {
     const wrapper = shallow(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         items={[
           {
@@ -197,6 +210,7 @@ describe('Select component', () => {
   it('onSearchChange: should only set isFiltering state to true if search value is provided', () => {
     const wrapper = shallow(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         items={[
           {
@@ -225,6 +239,7 @@ describe('Select component', () => {
   it('onSearchChange: should re-order search in state based on matches with startsWith, then includes', () => {
     const wrapper = shallow(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         items={[
           {
@@ -260,6 +275,7 @@ describe('Select component', () => {
   it('onSearchChange: should exclude items from search if "hideOnSearch" property is true', () => {
     const wrapper = shallow(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         items={[
           {
@@ -292,6 +308,7 @@ describe('Select component', () => {
   it('onSearchChange: "hideOnSearch" property should only hide item if search value is provided', () => {
     const wrapper = shallow(
       <Select
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onSelectClick={() => true}
         items={[
           {
@@ -332,6 +349,7 @@ describe('Select component', () => {
 
   it('updateHoveredItemPosition: should update hoveredItem in state', () => {
     const wrapper = shallow(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -352,6 +370,7 @@ describe('Select component', () => {
   })
 
   it('onAddItem: should not call handleSelectOption if hoveredItem is not set in state', () => {
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     const wrapper = shallow(<Select items={[]} label="Select" />)
     const instance = wrapper.instance()
 
@@ -372,6 +391,7 @@ describe('Select component', () => {
       },
     ]
 
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     const wrapper = shallow(<Select items={items} label="Select" />)
     const instance = wrapper.instance()
     instance.handleSelectOption = jest.fn()
@@ -386,6 +406,7 @@ describe('Select component', () => {
 
   it('onMoveDown: should set the hoveredItem in state if there is none', () => {
     const wrapper = shallow(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -397,6 +418,7 @@ describe('Select component', () => {
 
   it('onMoveDown: should increase hoveredItem in state by +1', () => {
     const wrapper = shallow(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -420,6 +442,7 @@ describe('Select component', () => {
 
   it('onMoveUp: should decrease hoveredItem in state by -1', () => {
     const wrapper = shallow(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
     const instance = wrapper.instance()
@@ -445,6 +468,7 @@ describe('Select component', () => {
     document.removeEventListener = jest.fn()
 
     const wrapper = shallow(
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Select onSelectClick={() => true} items={[]} label="Select" />,
     )
 

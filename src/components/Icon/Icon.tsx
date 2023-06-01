@@ -6,11 +6,14 @@ import * as styles from './style'
 
 const StyledIcon = styled.svg`
   ${styles.base};
-  ${(props) => styles[props.size]};
+  ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    styles[props.size]};
   vertical-align: ${(props) =>
     props.verticalAlign ? props.verticalAlign : null};
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const Icon = ({ children, ...props }) => (
   <StyledIcon {...props}>
     <title>{props.title}</title>

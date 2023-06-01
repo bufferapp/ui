@@ -1,0 +1,3 @@
+import React from 'react';
+export default function ExampleInput(): React.JSX.Element;
+//# sourceMappingURL=Disabled.d.ts.map

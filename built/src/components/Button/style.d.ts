@@ -1,0 +1,22 @@
+export declare const ButtonWrapperBase: import("styled-components").FlattenInterpolation<import("styled-components").ThemeProps<any>>;
+export declare const ButtonContainerBase: import("styled-components").FlattenSimpleInterpolation;
+export declare const ButtonNestedBase: import("styled-components").FlattenSimpleInterpolation;
+export declare const ButtonBase: import("styled-components").FlattenInterpolation<import("styled-components").ThemeProps<any>>;
+export declare const primary: import("styled-components").FlattenInterpolation<import("styled-components").ThemeProps<any>>;
+export declare const secondary: import("styled-components").FlattenSimpleInterpolation;
+export declare const danger: import("styled-components").FlattenInterpolation<import("styled-components").ThemeProps<any>>;
+export declare const link: import("styled-components").FlattenSimpleInterpolation;
+export declare const text: import("styled-components").FlattenSimpleInterpolation;
+export declare const orange: import("styled-components").FlattenSimpleInterpolation;
+export declare const small: import("styled-components").FlattenSimpleInterpolation;
+export declare const medium: import("styled-components").FlattenSimpleInterpolation;
+export declare const large: import("styled-components").FlattenSimpleInterpolation;
+export declare const secondaryDisabled: import("styled-components").FlattenSimpleInterpolation;
+export declare const Disabled: import("styled-components").FlattenSimpleInterpolation;
+export declare const primaryDisabled: import("styled-components").FlattenSimpleInterpolation;
+export declare const disabled: import("styled-components").FlattenSimpleInterpolation;
+export declare const fullWidth: import("styled-components").FlattenSimpleInterpolation;
+export declare const ButtonSelect: any;
+export declare const ButtonArrow: any;
+export declare const ButtonLabel: any;
+//# sourceMappingURL=style.d.ts.map

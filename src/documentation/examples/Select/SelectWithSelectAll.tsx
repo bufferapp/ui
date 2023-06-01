@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Select' or its c... Remove this comment to see the full error message
 import Select from '@bufferapp/ui/Select'
 
 const data = [
@@ -13,6 +14,7 @@ const data = [
 export default function ExampleSelectWithSelectAll() {
   const [items, setItems] = useState(data)
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'option' implicitly has an 'any' type.
   const handleClick = (option) => {
     // If 'All' item is clicked, either select or deselect all items
     if (option.name === 'All') {
@@ -39,6 +41,7 @@ export default function ExampleSelectWithSelectAll() {
 
   return (
     <Select
+      // @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
       onSelectClick={(item) => handleClick(item)}
       label="Try Select All"
       type="primary"

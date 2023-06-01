@@ -9,6 +9,7 @@ import {
 } from '../style/colors'
 import { ButtonBase, large } from '../Button/style'
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'channel' implicitly has an 'any' type.
 function calculateBgColor(channel) {
   switch (channel) {
     case 'instagram':

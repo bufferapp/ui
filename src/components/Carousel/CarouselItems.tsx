@@ -6,6 +6,7 @@ const MainListItem = styled.li`
   list-style: none;
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const CarouselItems = ({ children, currentSlideIndex }) => {
   const items = React.Children.map(children, (child, index) => (
     <MainListItem key={index} aria-hidden={currentSlideIndex !== index}>

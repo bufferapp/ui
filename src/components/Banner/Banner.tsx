@@ -14,6 +14,7 @@ import {
 import { orangeDarker } from '../style/colors'
 
 export default class Banner extends React.Component {
+  // @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
   constructor(props) {
     super(props)
 
@@ -26,13 +27,16 @@ export default class Banner extends React.Component {
 
   closeBanner() {
     this.setState({ isOpen: false })
+    // @ts-expect-error TS(2339) FIXME: Property 'onCloseBanner' does not exist on type 'R... Remove this comment to see the full error message
     const { onCloseBanner } = this.props
     if (onCloseBanner) {
       onCloseBanner()
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'themeColor' implicitly has an 'any' typ... Remove this comment to see the full error message
   renderBannerContent(themeColor) {
+    // @ts-expect-error TS(2339) FIXME: Property 'customHTML' does not exist on type 'Read... Remove this comment to see the full error message
     const { customHTML, text, actionButton } = this.props
     if (customHTML) {
       return (
@@ -48,6 +52,7 @@ export default class Banner extends React.Component {
           {text}
         </Text>
         <ButtonWrapper>
+          {/* @ts-expect-error TS(2740) FIXME: Type '{ type: string; onClick: any; label: any; si... Remove this comment to see the full error message */}
           <Button
             type={themeColor === 'orange' ? 'orange' : 'primary'}
             onClick={actionButton.action}
@@ -60,7 +65,9 @@ export default class Banner extends React.Component {
   }
 
   render() {
+    // @ts-expect-error TS(2339) FIXME: Property 'isOpen' does not exist on type 'Readonly... Remove this comment to see the full error message
     const { isOpen } = this.state
+    // @ts-expect-error TS(2339) FIXME: Property 'themeColor' does not exist on type 'Read... Remove this comment to see the full error message
     const { themeColor } = this.props
 
     if (isOpen) {
@@ -68,13 +75,14 @@ export default class Banner extends React.Component {
         <BannerStyled themeColor={themeColor}>
           {this.renderBannerContent(themeColor)}
           <BannerCloseButton>
+            {/* @ts-expect-error TS(2740) FIXME: Type '{ type: string; icon: Element; hasIconOnly: ... Remove this comment to see the full error message */}
             <Button
               type="text"
-              icon={(
+              icon={
                 <CrossIcon
                   color={themeColor === 'blue' ? '#fff' : orangeDarker}
                 />
-)}
+              }
               hasIconOnly
               onClick={this.closeBanner}
               label="Close"
@@ -88,6 +96,7 @@ export default class Banner extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Banner.propTypes = {
   /** The main text of the banner */
   text: PropTypes.string,
@@ -108,6 +117,7 @@ Banner.propTypes = {
   onCloseBanner: PropTypes.func,
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 Banner.defaultProps = {
   text: '',
   actionButton: {},

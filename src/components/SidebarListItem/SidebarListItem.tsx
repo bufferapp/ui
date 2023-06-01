@@ -14,13 +14,21 @@ import {
 import Avatar from '../Avatar/Avatar'
 
 const SidebarListItem = ({
+  // @ts-expect-error TS(7031) FIXME: Binding element 'title' implicitly has an 'any' ty... Remove this comment to see the full error message
   title,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'icon' implicitly has an 'any' typ... Remove this comment to see the full error message
   icon,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'onItemClick' implicitly has an 'a... Remove this comment to see the full error message
   onItemClick,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'badges' implicitly has an 'any' t... Remove this comment to see the full error message
   badges,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'badgeIcon' implicitly has an 'any... Remove this comment to see the full error message
   badgeIcon,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'selected' implicitly has an 'any'... Remove this comment to see the full error message
   selected,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'user' implicitly has an 'any' typ... Remove this comment to see the full error message
   user,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'className' implicitly has an 'any... Remove this comment to see the full error message
   className,
 }) => (
   <ItemStyled

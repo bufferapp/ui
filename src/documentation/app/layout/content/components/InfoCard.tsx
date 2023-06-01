@@ -42,6 +42,7 @@ const CardDescription = styled.p`
 `
 
 /** Info blocks in red, green or orange colors */
+// @ts-expect-error TS(7031) FIXME: Binding element 'color' implicitly has an 'any' ty... Remove this comment to see the full error message
 const InfoCard = ({ color, title, children }) => (
   <CardWrapper color={color}>
     <CardIcon color={color} />

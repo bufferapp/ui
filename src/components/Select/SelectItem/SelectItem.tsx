@@ -13,6 +13,7 @@ import {
   Title,
 } from './style'
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
 const shouldItemMoveRight = (item, hasSelectedItems, hideSearch) =>
   // if the item isn't selected, we need to check if other items are selected in the dropdown or if it has a search bar
   !item.selected &&
@@ -20,6 +21,7 @@ const shouldItemMoveRight = (item, hasSelectedItems, hideSearch) =>
   // if it's not selected and it has a custom component, we shouldn't move the item
   !(item.component && !hasSelectedItems)
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
 const SelectItemTooltipWrapper = (props) => {
   const { item, keyMap } = props
   const tooltip = item[keyMap ? keyMap.tooltip : 'tooltip']
@@ -27,6 +29,7 @@ const SelectItemTooltipWrapper = (props) => {
   return (
     <>
       {tooltip ? (
+        // @ts-expect-error TS(2322) FIXME: Type '{ children: Element; label: any; position: s... Remove this comment to see the full error message
         <Tooltip label={tooltip} position="bottom">
           <SelectItem {...props} />
         </Tooltip>
@@ -38,14 +41,23 @@ const SelectItemTooltipWrapper = (props) => {
 }
 
 const SelectItem = ({
+  // @ts-expect-error TS(7031) FIXME: Binding element 'item' implicitly has an 'any' typ... Remove this comment to see the full error message
   item,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'onClick' implicitly has an 'any' ... Remove this comment to see the full error message
   onClick,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'hovered' implicitly has an 'any' ... Remove this comment to see the full error message
   hovered,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'keyMap' implicitly has an 'any' t... Remove this comment to see the full error message
   keyMap,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'hasSelectedItems' implicitly has ... Remove this comment to see the full error message
   hasSelectedItems,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'getItemId' implicitly has an 'any... Remove this comment to see the full error message
   getItemId,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'hideSearch' implicitly has an 'an... Remove this comment to see the full error message
   hideSearch,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'capitalizeItemLabel' implicitly h... Remove this comment to see the full error message
   capitalizeItemLabel,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'onItemClick' implicitly has an 'a... Remove this comment to see the full error message
   onItemClick,
 }) => {
   const tooltip = item[keyMap ? keyMap.tooltip : 'tooltip']

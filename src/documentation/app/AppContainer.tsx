@@ -5,10 +5,13 @@ import styled from 'styled-components'
 import Markdown from './layout/content/Markdown'
 import Sidebar from './layout/sidebar/Sidebar'
 import Component from './layout/content/Component'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module '../.... Remove this comment to see the full error message
 import componentData from '../../../config/componentData'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module '../.... Remove this comment to see the full error message
 import documentationData from '../../../config/documentsData'
 import NavBar from './layout/navbar/NavBar'
 import Home from './Home'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '../markdown/UI.md' or its corr... Remove this comment to see the full error message
 import UIComponent from '../markdown/UI.md'
 import pckage from '../../../package.json'
 
@@ -53,6 +56,7 @@ const PageContainer = styled.div`
 
 /** The main Documentation app container that renders other components */
 export default class AppContainer extends React.Component {
+  // @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
   constructor(props) {
     super(props)
 
@@ -72,10 +76,13 @@ export default class AppContainer extends React.Component {
    *
    * @param {Event} event
    */
+  // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
   onKeyDown(event) {
     // eslint-disable-line
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'history' does not exist on type 'Readonl... Remove this comment to see the full error message
       history,
+      // @ts-expect-error TS(2339) FIXME: Property 'location' does not exist on type 'Readon... Remove this comment to see the full error message
       location: { pathname },
     } = this.props
     // Ignore non-component paths (i.e., markdown docs)
@@ -101,11 +108,13 @@ export default class AppContainer extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'pageParents' implicitly has an 'any' ty... Remove this comment to see the full error message
   getFooterLinks = (pageParents, route) => {
     if (!pageParents) return
     // get the index of the navigation link of the current page
     // in order to show the next and previous links at the bottom of each page
     const linkIndex = pageParents.children.findIndex(
+      // @ts-expect-error TS(7006) FIXME: Parameter 'link' implicitly has an 'any' type.
       (link) => link.id === route,
     )
     const previousLink = pageParents.children[linkIndex - 1]
@@ -118,11 +127,13 @@ export default class AppContainer extends React.Component {
   }
 
   renderMarkdownComponent = () => (
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     <Markdown page={{ name: 'UI' }} component={UIComponent} links={[]} />
   )
 
   render() {
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'match' does not exist on type 'Readonly<... Remove this comment to see the full error message
       match: {
         params: { route, location, view },
       },
@@ -135,7 +146,8 @@ export default class AppContainer extends React.Component {
     // if there's no component specified, just show the first component in the list
     const component =
       location === 'ui'
-        ? componentData.children.filter((x) => x.id === route)[0]
+        ? // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
+          componentData.children.filter((x) => x.id === route)[0]
         : null
 
     // concatenate the documentation data and the components data
@@ -145,11 +157,13 @@ export default class AppContainer extends React.Component {
     // from the documentation data, find the current page parent
     // in order to be able to identify the child we need to show on the page
     const pageParents = documentationData.filter(
+      // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
       (x) => x.fileName === location,
     )[0]
 
     // find the child page we need to show
     const page =
+      // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
       pageParents && pageParents.children.filter((x) => x.id === route)[0]
 
     // dynamically import the documentation component
@@ -165,6 +179,7 @@ export default class AppContainer extends React.Component {
       <Container>
         <NavBar title="Buffer UI" version={pckage.version} />
         <Wrapper>
+          {/* @ts-expect-error TS(2322) FIXME: Type '{ navigationLinks: any[]; route: any; }' is ... Remove this comment to see the full error message */}
           <Sidebar navigationLinks={navigationLinks} route={route} />
           <PageLayout>
             <PageContainer>
@@ -176,6 +191,7 @@ export default class AppContainer extends React.Component {
                 <Component component={component} />
               ) : (
                 <Markdown
+                  // @ts-expect-error TS(2769) FIXME: No overload matches this call.
                   component={PageComponent}
                   page={page}
                   links={() => this.getFooterLinks(pageParents, route)}
@@ -189,6 +205,7 @@ export default class AppContainer extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 AppContainer.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func,

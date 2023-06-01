@@ -31,6 +31,7 @@ export const Container = styled.div`
   animation: 200ms ${fadeIn} ${easeOutQuart};
 `
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
 const getWidth = (props) => {
   if (props.width === 'wide') {
     return '730px'

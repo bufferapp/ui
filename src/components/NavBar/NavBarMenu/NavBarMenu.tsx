@@ -11,6 +11,7 @@ import {
   NavBarImpersonating,
 } from './style'
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'user' implicitly has an 'any' type.
 export function getUserAvatar(user) {
   if (user.avatar) {
     return user.avatar
@@ -21,6 +22,7 @@ export function getUserAvatar(user) {
 
 /** NavBar Menu component used by the Select component to show a custom User name and avatar
  *  button */
+// @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
 const NavBarMenu = (props) => {
   const { user, isImpersonation } = props
 

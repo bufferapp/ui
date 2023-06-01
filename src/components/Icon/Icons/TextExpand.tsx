@@ -16,6 +16,7 @@ const TextExpandIcon = createIconComponent({
     </g>
   ),
 })
+// @ts-expect-error TS(2339) FIXME: Property 'displayName' does not exist on type '(pr... Remove this comment to see the full error message
 TextExpandIcon.displayName = 'TextExpandIcon'
 
 export default TextExpandIcon

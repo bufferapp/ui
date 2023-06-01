@@ -12,6 +12,7 @@ const GooglePhotosIcon = createIconComponent({
     </g>
   ),
 })
+// @ts-expect-error TS(2339) FIXME: Property 'displayName' does not exist on type '(pr... Remove this comment to see the full error message
 GooglePhotosIcon.displayName = 'GooglePhotosIcon'
 
 export default GooglePhotosIcon

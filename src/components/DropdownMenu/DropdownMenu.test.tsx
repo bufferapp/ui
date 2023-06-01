@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'enzy... Remove this comment to see the full error message
 import Enzyme, { mount } from 'enzyme'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'enzy... Remove this comment to see the full error message
 import Adapter from 'enzyme-adapter-react-16'
 import DropdownMenu from './DropdownMenu'
 import { keyCode } from './keyCode'
@@ -34,6 +36,7 @@ describe('DropdownMenu component', () => {
   it('should open the closed popup and select an option', () => {
     const wrapper = mount(
       <DropdownMenu
+        // @ts-expect-error TS(2322) FIXME: Type '{ ariaLabel: string; ariaLabelPopup: string;... Remove this comment to see the full error message
         ariaLabel="Help Menu"
         ariaLabelPopup="Help"
         menubarItem={<a href="/#">Help</a>}
@@ -63,6 +66,7 @@ describe('DropdownMenu component', () => {
   it('should navigate menu with with keyboard and select an option', () => {
     const wrapper = mount(
       <DropdownMenu
+        // @ts-expect-error TS(2322) FIXME: Type '{ ariaLabel: string; ariaLabelPopup: string;... Remove this comment to see the full error message
         ariaLabel="Help Menu"
         ariaLabelPopup="Help"
         menubarItem={<a href="/#">Help Menu</a>}

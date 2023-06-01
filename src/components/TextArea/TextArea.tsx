@@ -8,15 +8,25 @@ import { Container, StyledTextArea } from './style'
 export default class TextArea extends React.Component {
   render() {
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'value' does not exist on type 'Readonly<... Remove this comment to see the full error message
       value,
+      // @ts-expect-error TS(2339) FIXME: Property 'label' does not exist on type 'Readonly<... Remove this comment to see the full error message
       label,
+      // @ts-expect-error TS(2339) FIXME: Property 'hasError' does not exist on type 'Readon... Remove this comment to see the full error message
       hasError,
+      // @ts-expect-error TS(2339) FIXME: Property 'help' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       help,
+      // @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'Readon... Remove this comment to see the full error message
       disabled,
+      // @ts-expect-error TS(2339) FIXME: Property 'rows' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       rows,
+      // @ts-expect-error TS(2339) FIXME: Property 'onChange' does not exist on type 'Readon... Remove this comment to see the full error message
       onChange,
+      // @ts-expect-error TS(2339) FIXME: Property 'id' does not exist on type 'Readonly<{}>... Remove this comment to see the full error message
       id,
+      // @ts-expect-error TS(2339) FIXME: Property 'fullHeight' does not exist on type 'Read... Remove this comment to see the full error message
       fullHeight,
+      // @ts-expect-error TS(2339) FIXME: Property 'forwardRef' does not exist on type 'Read... Remove this comment to see the full error message
       forwardRef,
       ...props
     } = this.props
@@ -49,6 +59,7 @@ export default class TextArea extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 TextArea.propTypes = {
   /** It adds a label on top of the textarea box. */
   label: PropTypes.string.isRequired,
@@ -76,6 +87,7 @@ TextArea.propTypes = {
   ]),
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 TextArea.defaultProps = {
   placeholder: undefined,
   hasError: false,

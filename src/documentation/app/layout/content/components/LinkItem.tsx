@@ -41,6 +41,7 @@ const LinkTitle = styled.h3`
   color: blue;
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const LinkItem = ({ children, href }) => (
   <LinkWrapper to={`/${href}`}>
     <LinkBody>

@@ -5,12 +5,19 @@ import { LinkStyled } from './style'
 import { fontWeightMedium } from '../style/fonts'
 
 const Link = ({
+  // @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
   children,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'href' implicitly has an 'any' typ... Remove this comment to see the full error message
   href,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'newTab' implicitly has an 'any' t... Remove this comment to see the full error message
   newTab,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'download' implicitly has an 'any'... Remove this comment to see the full error message
   download,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'className' implicitly has an 'any... Remove this comment to see the full error message
   className,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'title' implicitly has an 'any' ty... Remove this comment to see the full error message
   title,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'fontWeight' implicitly has an 'an... Remove this comment to see the full error message
   fontWeight,
 }) => (
   <LinkStyled

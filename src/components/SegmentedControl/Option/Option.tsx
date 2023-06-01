@@ -7,6 +7,7 @@ import { OptionStyled, ContentWrapper, Label, IconWrapper } from './style'
 /**
  * Option component for Segmented Control component.
  */
+// @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
 const Option = (props) => {
   const {
     selected,
@@ -62,6 +63,7 @@ const Option = (props) => {
       role="button"
     >
       {tooltipMessage ? (
+        // @ts-expect-error TS(2322) FIXME: Type '{ children: Element; label: any; }' is not a... Remove this comment to see the full error message
         <Tooltip label={tooltipMessage}>{renderContent()}</Tooltip>
       ) : (
         renderContent()

@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/AnimationWrapper... Remove this comment to see the full error message
 import AnimationWrapper from '@bufferapp/ui/AnimationWrapper'
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/Text' or its cor... Remove this comment to see the full error message
 import Text from '@bufferapp/ui/Text'
 
+// @ts-expect-error TS(2307) FIXME: Cannot find module '@bufferapp/ui/style/animations... Remove this comment to see the full error message
 import { stageInCenter, stageOutCenter } from '@bufferapp/ui/style/animations'
 
 /** AnimationWrapper Example */

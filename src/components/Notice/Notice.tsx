@@ -47,9 +47,17 @@ const colorMap = {
 }
 
 const NoticeWrapper = styled.div`
-  border: ${(props) => `1px solid ${colorMap[props.type].border}`};
-  color: ${(props) => colorMap[props.type].color};
-  background: ${(props) => colorMap[props.type].background};
+  border: ${(props) =>
+    `1px solid ${
+      // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+      colorMap[props.type].border
+    }`};
+  color: ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    colorMap[props.type].color};
+  background: ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    colorMap[props.type].background};
   border-radius: ${borderRadius};
   font-size: ${fontSize};
   padding: 8px ${({ dismiss }) => (dismiss ? '28px' : '8px')} 8px 8px;
@@ -75,7 +83,9 @@ const BufferIcon = styled(Buffer)`
 `
 
 const CloseButton = styled.button`
-  color: ${(props) => colorMap[props.type].color};
+  color: ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    colorMap[props.type].color};
   border: 0;
   background: 0;
   padding: 0;
@@ -85,12 +95,15 @@ const CloseButton = styled.button`
   position: absolute;
   right: 16px;
   &:hover {
-    color: ${(props) => colorMap[props.type].color};
+    color: ${(props) =>
+      // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+      colorMap[props.type].color};
     opacity: 1;
     cursor: pointer;
   }
 `
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 function Notice({ children, dismiss, type, className, disableAnimation }) {
   // We always need to wrap the Notice with AnimationWrapper because the dismiss function
   // shows the Notice based on the dismissed property. If the animation is disabled the properties

@@ -21,9 +21,11 @@ import Search from '../Search/Search'
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
+  // @ts-expect-error TS(7006) FIXME: Parameter 'itemsA' implicitly has an 'any' type.
   static sameItems = (itemsA, itemsB) =>
     itemsA.length === itemsB.length &&
     itemsA.every(
+      // @ts-expect-error TS(7006) FIXME: Parameter 'el' implicitly has an 'any' type.
       (el, ix) =>
         el &&
         itemsB[ix] &&
@@ -34,8 +36,11 @@ export default class Select extends React.Component {
     )
 
   state = {
+    // @ts-expect-error TS(2339) FIXME: Property 'isOpen' does not exist on type 'Readonly... Remove this comment to see the full error message
     isOpen: this.props.isOpen,
+    // @ts-expect-error TS(2339) FIXME: Property 'items' does not exist on type 'Readonly<... Remove this comment to see the full error message
     items: this.props.items || [],
+    // @ts-expect-error TS(2339) FIXME: Property 'items' does not exist on type 'Readonly<... Remove this comment to see the full error message
     selectedItems: this.props.items || [],
     isFiltering: false,
     searchValue: '',
@@ -46,6 +51,7 @@ export default class Select extends React.Component {
     isCustomItemFocused: false,
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
   static getDerivedStateFromProps(props, state) {
     if (
       props.items &&
@@ -64,56 +70,72 @@ export default class Select extends React.Component {
     document.addEventListener('click', this.closePopover, true)
 
     // catch the keypress to move the selected items up or down
+    // @ts-expect-error TS(2339) FIXME: Property 'selectNode' does not exist on type 'Sele... Remove this comment to see the full error message
     this.selectNode &&
+      // @ts-expect-error TS(2339) FIXME: Property 'selectNode' does not exist on type 'Sele... Remove this comment to see the full error message
       this.selectNode.addEventListener('keydown', this.keyDownPressed)
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'prevProps' implicitly has an 'any' type... Remove this comment to see the full error message
   componentDidUpdate(prevProps, prevState) {
     // Simulate button click if isOpen is being controlled
+    // @ts-expect-error TS(2339) FIXME: Property 'isOpen' does not exist on type 'Readonly... Remove this comment to see the full error message
     if (prevProps.isOpen !== this.props.isOpen) {
       // focus the Select component in order to be able to catch the keyboard events
+      // @ts-expect-error TS(2339) FIXME: Property 'isOpen' does not exist on type 'Readonly... Remove this comment to see the full error message
       this.props.isOpen && this.onButtonClick()
     }
 
     if (
       prevState.isOpen !== this.state.isOpen &&
       this.state.isOpen &&
+      // @ts-expect-error TS(2339) FIXME: Property 'onOpen' does not exist on type 'Readonly... Remove this comment to see the full error message
       this.props.onOpen
     ) {
+      // @ts-expect-error TS(2339) FIXME: Property 'onOpen' does not exist on type 'Readonly... Remove this comment to see the full error message
       this.props.onOpen()
     }
 
     const menuIsOpening = !prevState.isOpen && !!this.state.isOpen
     const shouldFilterOnMenuOpen =
+      // @ts-expect-error TS(2339) FIXME: Property 'clearSearchOnBlur' does not exist on typ... Remove this comment to see the full error message
       !this.props.clearSearchOnBlur && !!this.state.searchValue
     if (menuIsOpening && shouldFilterOnMenuOpen) this.filterOnMenuOpen()
 
     const menuIsClosing = !!prevState.isOpen && !this.state.isOpen
+    // @ts-expect-error TS(2339) FIXME: Property 'clearSearchOnBlur' does not exist on typ... Remove this comment to see the full error message
     if (menuIsClosing && this.props.clearSearchOnBlur)
       this.clearSearchOnMenuClose()
   }
 
   componentWillUnmount() {
     document.removeEventListener('click', this.closePopover, true)
+    // @ts-expect-error TS(2339) FIXME: Property 'selectNode' does not exist on type 'Sele... Remove this comment to see the full error message
     this.selectNode &&
+      // @ts-expect-error TS(2339) FIXME: Property 'selectNode' does not exist on type 'Sele... Remove this comment to see the full error message
       this.selectNode.removeEventListener('keydown', this.keyDownPressed)
   }
 
   filterOnMenuOpen = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'searchInput' does not exist on type 'Sel... Remove this comment to see the full error message
     if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue)
     this.onSearchChange(this.state.searchValue)
   }
 
   clearSearchOnMenuClose = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'searchInput' does not exist on type 'Sel... Remove this comment to see the full error message
     if (this.searchInput) this.searchInput.updateSearch('')
     this.onSearchChange('')
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
   keyDownPressed = (e) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'shortcutsEnabled' does not exist on type... Remove this comment to see the full error message
     const { shortcutsEnabled, hotKeys } = this.props
     if (!shortcutsEnabled) return
 
     if (hotKeys) {
+      // @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
       hotKeys.forEach((item) => {
         if (e.which === item.hotKey) {
           item.onKeyPress()
@@ -135,6 +157,7 @@ export default class Select extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
   handleKeyPress = (event, keyHandler) => {
     event.preventDefault()
     event.stopPropagation()
@@ -142,7 +165,9 @@ export default class Select extends React.Component {
   }
 
   // Close the popover
+  // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
   closePopover = (e) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'selectNode' does not exist on type 'Sele... Remove this comment to see the full error message
     if (this.selectNode && this.selectNode.contains(e.target)) {
       return
     }
@@ -157,6 +182,7 @@ export default class Select extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'items' implicitly has an 'any' type.
   updateItemsInState = (items, option, index) =>
     index > -1
       ? helper(items, {
@@ -166,11 +192,14 @@ export default class Select extends React.Component {
         })
       : items
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'option' implicitly has an 'any' type.
   handleSelectOption = (option, event) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'onSelectClick' does not exist on type 'R... Remove this comment to see the full error message
     const { onSelectClick, multiSelect } = this.props
     const { items } = this.state
     onSelectClick && onSelectClick(option, event)
 
+    // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
     const selectedIndex = items.findIndex((x) => x.selected === true)
 
     const deselectItems =
@@ -183,6 +212,7 @@ export default class Select extends React.Component {
         : items
 
     const optionIndex = deselectItems.findIndex(
+      // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
       (x) => this.getItemId(x) === this.getItemId(option),
     )
 
@@ -199,17 +229,22 @@ export default class Select extends React.Component {
     })
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
   onClick = (e) => {
     e.stopPropagation()
     e.nativeEvent.stopImmediatePropagation()
+    // @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'Readonl... Remove this comment to see the full error message
     if (this.props.isSplit && !this.props.disabled) {
+      // @ts-expect-error TS(2554) FIXME: Expected 0 arguments, but got 1.
       this.onButtonClick(e)
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
   onKeyUp = (e) => {
     e.stopPropagation()
     e.nativeEvent.stopImmediatePropagation()
+    // @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'Readonl... Remove this comment to see the full error message
     if (this.props.isSplit && !this.props.disabled) {
       const altPlusUp = e.altKey && ['Up', 'ArrowUp'].indexOf(e.key) >= 0
       const altPlusDown = e.altKey && ['Down', 'ArrowDown'].indexOf(e.key) >= 0
@@ -217,6 +252,7 @@ export default class Select extends React.Component {
       const enter = ['Enter'].indexOf(e.key) >= 0
       if (altPlusUp || altPlusDown || space || enter) {
         e.preventDefault()
+        // @ts-expect-error TS(2554) FIXME: Expected 0 arguments, but got 1.
         this.onButtonClick(e)
       }
     }
@@ -224,6 +260,7 @@ export default class Select extends React.Component {
 
   onButtonClick = () => {
     const { isOpen } = this.state
+    // @ts-expect-error TS(2339) FIXME: Property 'isInputSearch' does not exist on type 'R... Remove this comment to see the full error message
     const { isInputSearch, items } = this.props
     this.setState(
       {
@@ -231,8 +268,10 @@ export default class Select extends React.Component {
         items,
       },
       () => {
+        // @ts-expect-error TS(2339) FIXME: Property 'selectNode' does not exist on type 'Sele... Remove this comment to see the full error message
         !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus()
         this.scrollToItem(
+          // @ts-expect-error TS(2339) FIXME: Property 'itemsNode' does not exist on type 'Selec... Remove this comment to see the full error message
           this.itemsNode,
           document.getElementById(this.getItemId(items[0])),
         )
@@ -241,6 +280,7 @@ export default class Select extends React.Component {
   }
 
   onMoveUp = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'hoveredItem' does not exist on type '{ i... Remove this comment to see the full error message
     const { items, isCustomItemFocused, hoveredItem } = this.state
     const itemsLength = items.length
 
@@ -252,6 +292,7 @@ export default class Select extends React.Component {
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength })
         this.scrollToItem(
+          // @ts-expect-error TS(2339) FIXME: Property 'itemsNode' does not exist on type 'Selec... Remove this comment to see the full error message
           this.itemsNode,
           document.getElementById(this.getItemId(items[i])),
         )
@@ -265,7 +306,9 @@ export default class Select extends React.Component {
   }
 
   onMoveDown = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'hoveredItem' does not exist on type '{ i... Remove this comment to see the full error message
     const { items, hoveredItem } = this.state
+    // @ts-expect-error TS(2339) FIXME: Property 'hasCustomAction' does not exist on type ... Remove this comment to see the full error message
     const { hasCustomAction } = this.props
     const itemsLength = items.length
 
@@ -284,12 +327,16 @@ export default class Select extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
   onAddItem = (event) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'multiSelect' does not exist on type 'Rea... Remove this comment to see the full error message
     const { multiSelect } = this.props
+    // @ts-expect-error TS(2339) FIXME: Property 'hoveredItem' does not exist on type '{ i... Remove this comment to see the full error message
     const { items, hoveredItem, isCustomItemFocused, searchValue } = this.state
     const selectedItem = items[hoveredItem]
 
     if (isCustomItemFocused) {
+      // @ts-expect-error TS(2339) FIXME: Property 'onCustomItemClick' does not exist on typ... Remove this comment to see the full error message
       this.props.onCustomItemClick(searchValue)
       this.setState({ isCustomItemFocused: false, isOpen: multiSelect })
     }
@@ -301,6 +348,7 @@ export default class Select extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'hoveredItem' implicitly has an 'any' ty... Remove this comment to see the full error message
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
     for (
       let i = hoveredItem + 1;
@@ -310,6 +358,7 @@ export default class Select extends React.Component {
       if (i === itemsLength) {
         this.setState({ hoveredItem: 0 })
         this.scrollToItem(
+          // @ts-expect-error TS(2339) FIXME: Property 'itemsNode' does not exist on type 'Selec... Remove this comment to see the full error message
           this.itemsNode,
           document.getElementById(this.getItemId(items[i])),
         )
@@ -318,6 +367,7 @@ export default class Select extends React.Component {
       if (items[i]) {
         this.setState({ hoveredItem: i % itemsLength })
         this.scrollToItem(
+          // @ts-expect-error TS(2339) FIXME: Property 'itemsNode' does not exist on type 'Selec... Remove this comment to see the full error message
           this.itemsNode,
           document.getElementById(this.getItemId(items[i])),
         )
@@ -326,6 +376,7 @@ export default class Select extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'parent' implicitly has an 'any' type.
   scrollToItem = (parent, child) => {
     if (!parent || !child) return
 
@@ -351,12 +402,16 @@ export default class Select extends React.Component {
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
   findItemInState = (item) => {
     const { selectedItems } = this.state
+    // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
     return selectedItems.find((x) => this.getItemId(x) === this.getItemId(item))
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'searchValue' implicitly has an 'any' ty... Remove this comment to see the full error message
   onSearchChange = (searchValue) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'items' does not exist on type 'Readonly<... Remove this comment to see the full error message
     const { items, keyMap } = this.props
     const searchField = keyMap ? keyMap.title : 'title'
     const isFiltering = !!searchValue
@@ -370,6 +425,7 @@ export default class Select extends React.Component {
     // and we need to check there to see, for each item, if its selected
 
     const { startingWith, including } = items.reduce(
+      // @ts-expect-error TS(7006) FIXME: Parameter 'filtered' implicitly has an 'any' type.
       (filtered, item) => {
         const hideItemWhileSearching = isFiltering && !!item.hideOnSearch
         if (hideItemWhileSearching) return filtered
@@ -422,6 +478,7 @@ export default class Select extends React.Component {
   }
 
   onClose = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'onClose' does not exist on type 'Readonl... Remove this comment to see the full error message
     const { onClose } = this.props
     this.setState(
       {
@@ -433,24 +490,37 @@ export default class Select extends React.Component {
     )
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
   getItemId = (item) => {
     if (!item) return
+    // @ts-expect-error TS(2339) FIXME: Property 'keyMap' does not exist on type 'Readonly... Remove this comment to see the full error message
     const { keyMap } = this.props
     return item[keyMap && keyMap.id ? keyMap.id : 'id']
   }
 
   renderSelectButton = () => {
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'Readonl... Remove this comment to see the full error message
       isSplit,
+      // @ts-expect-error TS(2339) FIXME: Property 'customButton' does not exist on type 'Re... Remove this comment to see the full error message
       customButton,
+      // @ts-expect-error TS(2339) FIXME: Property 'type' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       type,
+      // @ts-expect-error TS(2339) FIXME: Property 'size' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       size,
+      // @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'Readon... Remove this comment to see the full error message
       disabled,
+      // @ts-expect-error TS(2339) FIXME: Property 'icon' does not exist on type 'Readonly<{... Remove this comment to see the full error message
       icon,
+      // @ts-expect-error TS(2339) FIXME: Property 'label' does not exist on type 'Readonly<... Remove this comment to see the full error message
       label,
+      // @ts-expect-error TS(2339) FIXME: Property 'hasIconOnly' does not exist on type 'Rea... Remove this comment to see the full error message
       hasIconOnly,
+      // @ts-expect-error TS(2339) FIXME: Property 'fullWidth' does not exist on type 'Reado... Remove this comment to see the full error message
       fullWidth,
+      // @ts-expect-error TS(2339) FIXME: Property 'isInputSearch' does not exist on type 'R... Remove this comment to see the full error message
       isInputSearch,
+      // @ts-expect-error TS(2339) FIXME: Property 'textToLeft' does not exist on type 'Read... Remove this comment to see the full error message
       textToLeft,
     } = this.props
     const { items } = this.state
@@ -477,6 +547,7 @@ export default class Select extends React.Component {
     }
     if (hasIconOnly) {
       return (
+        // @ts-expect-error TS(2740) FIXME: Type '{ type: string; icon: any; hasIconOnly: true... Remove this comment to see the full error message
         <Button
           type="text"
           icon={icon}
@@ -488,6 +559,7 @@ export default class Select extends React.Component {
     }
 
     return (
+      // @ts-expect-error TS(2740) FIXME: Type '{ size: any; items: any; disabled: any; type... Remove this comment to see the full error message
       <Button
         size={size}
         items={items}
@@ -503,6 +575,7 @@ export default class Select extends React.Component {
     )
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'length' implicitly has an 'any' type.
   renderCustomActionItem = (length, onCustomItemClick, customItemLabel) => {
     if (length === 0) {
       return (
@@ -517,9 +590,13 @@ export default class Select extends React.Component {
   }
 
   renderNoItems = (
+    // @ts-expect-error TS(7006) FIXME: Parameter 'hideSearch' implicitly has an 'any' typ... Remove this comment to see the full error message
     hideSearch,
+    // @ts-expect-error TS(7006) FIXME: Parameter 'length' implicitly has an 'any' type.
     length,
+    // @ts-expect-error TS(7006) FIXME: Parameter 'isInputSearch' implicitly has an 'any' ... Remove this comment to see the full error message
     isInputSearch,
+    // @ts-expect-error TS(7006) FIXME: Parameter 'noResultsCustomMessage' implicitly has ... Remove this comment to see the full error message
     noResultsCustomMessage,
   ) => {
     if (length === 0 && (!hideSearch || isInputSearch)) {
@@ -529,25 +606,44 @@ export default class Select extends React.Component {
 
   renderSelectPopup = () => {
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'xPosition' does not exist on type 'Reado... Remove this comment to see the full error message
       xPosition,
+      // @ts-expect-error TS(2339) FIXME: Property 'yPosition' does not exist on type 'Reado... Remove this comment to see the full error message
       yPosition,
+      // @ts-expect-error TS(2339) FIXME: Property 'horizontalOffset' does not exist on type... Remove this comment to see the full error message
       horizontalOffset,
+      // @ts-expect-error TS(2339) FIXME: Property 'hideSearch' does not exist on type 'Read... Remove this comment to see the full error message
       hideSearch,
+      // @ts-expect-error TS(2339) FIXME: Property 'keyMap' does not exist on type 'Readonly... Remove this comment to see the full error message
       keyMap,
+      // @ts-expect-error TS(2339) FIXME: Property 'searchPlaceholder' does not exist on typ... Remove this comment to see the full error message
       searchPlaceholder,
+      // @ts-expect-error TS(2339) FIXME: Property 'hasIconOnly' does not exist on type 'Rea... Remove this comment to see the full error message
       hasIconOnly,
+      // @ts-expect-error TS(2339) FIXME: Property 'marginTop' does not exist on type 'Reado... Remove this comment to see the full error message
       marginTop,
+      // @ts-expect-error TS(2339) FIXME: Property 'multiSelect' does not exist on type 'Rea... Remove this comment to see the full error message
       multiSelect,
+      // @ts-expect-error TS(2339) FIXME: Property 'hasCustomAction' does not exist on type ... Remove this comment to see the full error message
       hasCustomAction,
+      // @ts-expect-error TS(2339) FIXME: Property 'onCustomItemClick' does not exist on typ... Remove this comment to see the full error message
       onCustomItemClick,
+      // @ts-expect-error TS(2339) FIXME: Property 'customItemLabel' does not exist on type ... Remove this comment to see the full error message
       customItemLabel,
+      // @ts-expect-error TS(2339) FIXME: Property 'fullWidth' does not exist on type 'Reado... Remove this comment to see the full error message
       fullWidth,
+      // @ts-expect-error TS(2339) FIXME: Property 'capitalizeItemLabel' does not exist on t... Remove this comment to see the full error message
       capitalizeItemLabel,
+      // @ts-expect-error TS(2339) FIXME: Property 'isInputSearch' does not exist on type 'R... Remove this comment to see the full error message
       isInputSearch,
+      // @ts-expect-error TS(2339) FIXME: Property 'selectPopupVisible' does not exist on ty... Remove this comment to see the full error message
       selectPopupVisible,
+      // @ts-expect-error TS(2339) FIXME: Property 'noResultsCustomMessage' does not exist o... Remove this comment to see the full error message
       noResultsCustomMessage,
+      // @ts-expect-error TS(2339) FIXME: Property 'searchInputProps' does not exist on type... Remove this comment to see the full error message
       searchInputProps,
     } = this.props
+    // @ts-expect-error TS(2339) FIXME: Property 'hoveredItem' does not exist on type '{ i... Remove this comment to see the full error message
     const { isOpen, hoveredItem, items, isFiltering } = this.state
 
     return (
@@ -563,10 +659,12 @@ export default class Select extends React.Component {
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
             id="searchInput"
+            // @ts-expect-error TS(7006) FIXME: Parameter 'node' implicitly has an 'any' type.
             ref={(node) => (this.searchInputNode = node)}
           >
             <SearchIcon />
             <Search
+              // @ts-expect-error TS(2339) FIXME: Property 'searchInput' does not exist on type 'Sel... Remove this comment to see the full error message
               ref={(node) => (this.searchInput = node)}
               onChange={this.onSearchChange}
               placeholder={searchPlaceholder}
@@ -575,6 +673,7 @@ export default class Select extends React.Component {
             />
           </SearchBarWrapper>
         )}
+        {/* @ts-expect-error TS(7006) FIXME: Parameter 'itemsNode' implicitly has an 'any' type... Remove this comment to see the full error message */}
         <SelectItems ref={(itemsNode) => (this.itemsNode = itemsNode)}>
           {hasCustomAction
             ? this.renderCustomActionItem(
@@ -589,6 +688,7 @@ export default class Select extends React.Component {
                 noResultsCustomMessage,
               )}
           {}
+          {/* @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type. */}
           {items.map((item, idx) => [
             item.hasDivider && (
               <SelectItemDivider key={`${this.getItemId(item)}--divider`}>
@@ -606,7 +706,9 @@ export default class Select extends React.Component {
               item={item}
               capitalizeItemLabel={capitalizeItemLabel}
               keyMap={keyMap}
+              // @ts-expect-error TS(7006) FIXME: Parameter 'i' implicitly has an 'any' type.
               hasSelectedItems={items.some((i) => i.selected)}
+              // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
               onClick={(event) => this.handleSelectOption(item, event)}
               onItemClick={() =>
                 this.handleSelectOption(item, item.onItemClick)
@@ -621,15 +723,19 @@ export default class Select extends React.Component {
   }
 
   render() {
+    // @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'Readonl... Remove this comment to see the full error message
     const { isSplit, tooltip, disabled, fullWidth } = this.props
 
     return (
       <Wrapper
         role="button"
+        // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
         onClick={(e) => this.onClick(e)}
+        // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
         onKeyUp={(e) => this.onKeyUp(e)}
         tabIndex={0}
         isSplit={isSplit}
+        // @ts-expect-error TS(7006) FIXME: Parameter 'selectNode' implicitly has an 'any' typ... Remove this comment to see the full error message
         ref={(selectNode) => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}
@@ -643,6 +749,7 @@ export default class Select extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Select.propTypes = {
   /** Is the button disabled */
   disabled: PropTypes.bool,
@@ -765,6 +872,7 @@ Select.propTypes = {
   onOpen: PropTypes.func,
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 Select.defaultProps = {
   label: '',
   isSplit: false,

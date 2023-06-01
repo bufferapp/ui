@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Input, Span, Wrapper, Container } from './style'
 import Text from '../Text/Text'
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'label' implicitly has an 'any' ty... Remove this comment to see the full error message
 const Switch = ({ label, id, disabled, handleSwitch, isOn }) => (
   <Container>
     <Text htmlFor={id} type="label">

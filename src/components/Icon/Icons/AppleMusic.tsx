@@ -13,6 +13,7 @@ const AppleMusicIcon = createIconComponent({
     </g>
   ),
 })
+// @ts-expect-error TS(2339) FIXME: Property 'displayName' does not exist on type '(pr... Remove this comment to see the full error message
 AppleMusicIcon.displayName = 'AppleMusicIcon'
 
 export default AppleMusicIcon

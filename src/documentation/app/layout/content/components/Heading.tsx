@@ -27,6 +27,7 @@ const Header = styled.div`
 `
 
 /** Page H1 Heading */
+// @ts-expect-error TS(7031) FIXME: Binding element 'text' implicitly has an 'any' typ... Remove this comment to see the full error message
 const Heading = ({ text }) => (
   <Header>
     <Title>

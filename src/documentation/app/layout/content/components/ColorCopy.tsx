@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import Clipboard from 'react-clipboard.js'
 
 const ColorWrapper = styled(Clipboard)`
@@ -36,6 +37,7 @@ const ColorValue = styled.span`
 `
 
 /** Displays color and copies the color to clipboard on click */
+// @ts-expect-error TS(7031) FIXME: Binding element 'color' implicitly has an 'any' ty... Remove this comment to see the full error message
 const ColorCopy = ({ color, name, width, height }) => (
   <ColorWrapper
     color={color}

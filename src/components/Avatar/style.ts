@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components'
 import { yellowDarker } from '../style/colors'
 import { fontWeightBold, fontFamily } from '../style/fonts'
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
 const getImageCss = ({ size, type = 'default' }) =>
   css`
     width: ${size}px;
@@ -10,7 +11,10 @@ const getImageCss = ({ size, type = 'default' }) =>
     -webkit-mask-size: cover;
     ${type === 'social' &&
     `-webkit-mask-image: url(https://static.buffer.com/ui/avatar-mask-${size}.svg);`}
-    background: url(${(props) => props.src}) center no-repeat, url(${(props) =>
+    background: url(${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property 'src' does not exist on type 'ThemeProps<... Remove this comment to see the full error message
+      props.src}) center no-repeat, url(${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property 'fallbackUrl' does not exist on type 'The... Remove this comment to see the full error message
       props.fallbackUrl}) center no-repeat;
     background-size: ${size}px;
   `
@@ -28,6 +32,7 @@ export const image = {
   },
 }
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
 const getWrapperCss = ({ size }) =>
   css`
     position: relative;
@@ -41,6 +46,7 @@ export const wrapper = {
   large: getWrapperCss({ size: 48 }),
 }
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
 const getObjectCss = ({ size }) =>
   css`
     border-radius: 100%;

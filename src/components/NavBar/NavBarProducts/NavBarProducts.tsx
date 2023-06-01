@@ -123,6 +123,7 @@ const EngageLogo = () => (
   </svg>
 )
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'product' implicitly has an 'any' type.
 const getLogo = (product) => {
   switch (product) {
     case 'analyze':
@@ -136,8 +137,10 @@ const getLogo = (product) => {
   }
 }
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'products' implicitly has an 'any'... Remove this comment to see the full error message
 const NavBarProducts = ({ products, activeProduct }) => (
   <StyledNavBarProducts>
+    {/* @ts-expect-error TS(7031) FIXME: Binding element 'id' implicitly has an 'any' type. */}
     {products.map(({ id, href, isNew }) => (
       <ProductLink
         active={activeProduct === id}

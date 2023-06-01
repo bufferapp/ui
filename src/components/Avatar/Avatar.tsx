@@ -32,16 +32,21 @@ import {
 } from '../Icon'
 
 const Wrapper = styled.div`
-  ${(props) => Styles.wrapper[props.size]}
+  ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    Styles.wrapper[props.size]}
 `
 
 const Image = styled.div`
-  ${(props) => Styles.image[props.type][props.size]}
+  ${(props) =>
+    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    Styles.image[props.type][props.size]}
 `
 
 const socialIconMap = new Map([
   [
     'instagram',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={instagram}>
         <Instagram size="small" color="white" />
@@ -50,6 +55,7 @@ const socialIconMap = new Map([
   ],
   [
     'facebook',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={facebook}>
         <Facebook size="small" color="white" />
@@ -58,6 +64,7 @@ const socialIconMap = new Map([
   ],
   [
     'twitter',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={twitter}>
         <Twitter size="small" color="white" />
@@ -66,6 +73,7 @@ const socialIconMap = new Map([
   ],
   [
     'linkedin',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={linkedin}>
         <LinkedIn size="small" color="white" />
@@ -74,6 +82,7 @@ const socialIconMap = new Map([
   ],
   [
     'pinterest',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={pinterest}>
         <Pinterest size="small" color="white" />
@@ -82,6 +91,7 @@ const socialIconMap = new Map([
   ],
   [
     'googlebusiness',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={googlebusiness}>
         <Gbp size="small" color="white" />
@@ -90,6 +100,7 @@ const socialIconMap = new Map([
   ],
   [
     'shopify',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={shopify}>
         <Shopify size="small" color="white" />
@@ -98,6 +109,7 @@ const socialIconMap = new Map([
   ],
   [
     'tiktok',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={tiktok}>
         <Tiktok size="small" color="white" />
@@ -106,6 +118,7 @@ const socialIconMap = new Map([
   ],
   [
     'startPage',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={startpage}>
         <Styles.StartPageIcon>
@@ -116,6 +129,7 @@ const socialIconMap = new Map([
   ],
   [
     'mastodon',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={mastodon}>
         <Mastodon size="small" color="white" />
@@ -124,6 +138,7 @@ const socialIconMap = new Map([
   ],
   [
     'youtube',
+    // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
       <Styles.SocialIconWrapper size={size} bgColor={youtube}>
         <Youtube size="small" color="white" />
@@ -132,6 +147,7 @@ const socialIconMap = new Map([
   ],
 ])
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'src' implicitly has an 'any' type... Remove this comment to see the full error message
 const Avatar = ({ src, alt, type, size, network, fallbackUrl }) => {
   const SocialIcon = network && socialIconMap.get(network)
   return (

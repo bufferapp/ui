@@ -15,7 +15,10 @@ import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts'
 import Text from '../Text'
 
 const inputPadding = css`
-  padding: ${({ size }) => {
+  padding: ${({
+    // @ts-expect-error TS(2339) FIXME: Property 'size' does not exist on type 'ThemeProps... Remove this comment to see the full error message
+    size,
+  }) => {
     switch (size) {
       case 'small':
         return '5px 8px 4px 8px'
@@ -29,12 +32,18 @@ const inputPadding = css`
 
 const inputPrefix = css`
   &:before {
-    content: '${({ prefix }) => prefix.text}';
+    content: '${({
+      // @ts-expect-error TS(2339) FIXME: Property 'prefix' does not exist on type 'ThemePro... Remove this comment to see the full error message
+      prefix,
+    }) => prefix.text}';
     position: absolute;
     top: 0;
     left: 0;
     color: ${gray};
-    width: ${({ prefix }) => prefix.paddingLeft};
+    width: ${({
+      // @ts-expect-error TS(2339) FIXME: Property 'prefix' does not exist on type 'ThemePro... Remove this comment to see the full error message
+      prefix,
+    }) => prefix.paddingLeft};
     z-index: 10;
     font-family: ${fontFamily};
     font-size: ${fontSize};

@@ -30,14 +30,23 @@ const AnimationContainer = styled.div`
 `
 
 const AnimationWrapper = ({
+  // @ts-expect-error TS(7031) FIXME: Binding element 'align' implicitly has an 'any' ty... Remove this comment to see the full error message
   align,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
   children,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'dismissing' implicitly has an 'an... Remove this comment to see the full error message
   dismissing,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'duration' implicitly has an 'any'... Remove this comment to see the full error message
   duration,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'easing' implicitly has an 'any' t... Remove this comment to see the full error message
   easing,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'justify' implicitly has an 'any' ... Remove this comment to see the full error message
   justify,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'stageInAnimation' implicitly has ... Remove this comment to see the full error message
   stageInAnimation,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'stageOutAnimation' implicitly has... Remove this comment to see the full error message
   stageOutAnimation,
+  // @ts-expect-error TS(7031) FIXME: Binding element 'onDismiss' implicitly has an 'any... Remove this comment to see the full error message
   onDismiss,
 }) => {
   const [content, setContent] = useState(children)

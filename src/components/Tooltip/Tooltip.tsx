@@ -5,6 +5,7 @@ import * as Styles from './style'
 import { gray, white } from '../style/colors'
 
 class Tooltip extends React.Component {
+  // @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
   constructor(props) {
     super(props)
 
@@ -25,7 +26,9 @@ class Tooltip extends React.Component {
 
   setTooltipPosition() {
     // Getting the first child width to calculate Tooltip position
+    // @ts-expect-error TS(2339) FIXME: Property 'tooltipWrapper' does not exist on type '... Remove this comment to see the full error message
     if (this.tooltipWrapper) {
+      // @ts-expect-error TS(2339) FIXME: Property 'tooltipWrapper' does not exist on type '... Remove this comment to see the full error message
       const childWidth = this.tooltipWrapper.children[0].children[0].getBoundingClientRect()
         .width
       this.setState({
@@ -38,7 +41,9 @@ class Tooltip extends React.Component {
    * Adjusting the styles according to the desired position
    * The tooltip should be vertically or horizontally centered
    */
+  // @ts-expect-error TS(7006) FIXME: Parameter 'triggerRect' implicitly has an 'any' ty... Remove this comment to see the full error message
   getTooltipPosition(triggerRect, tooltipRect, position, verticalAlign) {
+    // @ts-expect-error TS(2339) FIXME: Property 'childWidth' does not exist on type 'Read... Remove this comment to see the full error message
     const { childWidth } = this.state
     const gap = 8
     const triggerCenter = triggerRect.left + childWidth / 2
@@ -83,6 +88,7 @@ class Tooltip extends React.Component {
   /**
    * Rendering label with hotkey option if available
    */
+  // @ts-expect-error TS(7006) FIXME: Parameter 'label' implicitly has an 'any' type.
   renderLabel = (label, hotkey, customLabel = null) => (
     <Styles.LabelWrapper>
       {label && (
@@ -104,11 +110,17 @@ class Tooltip extends React.Component {
   render() {
     const {
       children,
+      // @ts-expect-error TS(2339) FIXME: Property 'label' does not exist on type 'Readonly<... Remove this comment to see the full error message
       label,
+      // @ts-expect-error TS(2339) FIXME: Property 'position' does not exist on type 'Readon... Remove this comment to see the full error message
       position,
+      // @ts-expect-error TS(2339) FIXME: Property 'verticalAlign' does not exist on type 'R... Remove this comment to see the full error message
       verticalAlign,
+      // @ts-expect-error TS(2339) FIXME: Property 'hotkey' does not exist on type 'Readonly... Remove this comment to see the full error message
       hotkey,
+      // @ts-expect-error TS(2339) FIXME: Property 'customLabel' does not exist on type 'Rea... Remove this comment to see the full error message
       customLabel,
+      // @ts-expect-error TS(2339) FIXME: Property 'opacity' does not exist on type 'Readonl... Remove this comment to see the full error message
       opacity,
     } = this.props
 
@@ -122,9 +134,11 @@ class Tooltip extends React.Component {
     return (
       <React.Fragment>
         {renderTooltip ? (
+          // @ts-expect-error TS(7006) FIXME: Parameter 'node' implicitly has an 'any' type.
           <Styles.TooltipWrapper ref={(node) => (this.tooltipWrapper = node)}>
             <Styles.TooltipStyled
               label={this.renderLabel(label, hotkey, customLabel)}
+              // @ts-expect-error TS(7006) FIXME: Parameter 'triggerRect' implicitly has an 'any' ty... Remove this comment to see the full error message
               position={(triggerRect, tooltipRect) =>
                 this.getTooltipPosition(
                   triggerRect,
@@ -147,6 +161,7 @@ class Tooltip extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Tooltip.propTypes = {
   /** The component being wrapped */
   children: PropTypes.node.isRequired,
@@ -170,6 +185,7 @@ Tooltip.propTypes = {
   opacity: PropTypes.number,
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 Tooltip.defaultProps = {
   label: '',
   position: 'bottom',

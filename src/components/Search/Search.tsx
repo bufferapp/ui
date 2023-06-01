@@ -8,19 +8,25 @@ export default class Search extends React.Component {
     search: '',
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'prevProps' implicitly has an 'any' type... Remove this comment to see the full error message
   componentDidUpdate(prevProps) {
+    // @ts-expect-error TS(2339) FIXME: Property 'isOpen' does not exist on type 'Readonly... Remove this comment to see the full error message
     if (prevProps.isOpen !== this.props.isOpen) {
+      // @ts-expect-error TS(2339) FIXME: Property 'inputRef' does not exist on type 'Search... Remove this comment to see the full error message
       setTimeout(() => this.inputRef.focus(), 50)
     }
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'search' implicitly has an 'any' type.
   updateSearch = (search) => {
     this.setState({
       search,
     })
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
   onChange = (event) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'onChange' does not exist on type 'Readon... Remove this comment to see the full error message
     const { onChange } = this.props
     const search = event.target.value
 
@@ -29,6 +35,7 @@ export default class Search extends React.Component {
   }
 
   clearSearch = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'onChange' does not exist on type 'Readon... Remove this comment to see the full error message
     const { onChange } = this.props
 
     onChange('')
@@ -37,10 +44,15 @@ export default class Search extends React.Component {
 
   render() {
     const {
+      // @ts-expect-error TS(2339) FIXME: Property 'placeholder' does not exist on type 'Rea... Remove this comment to see the full error message
       placeholder,
+      // @ts-expect-error TS(2339) FIXME: Property 'onClick' does not exist on type 'Readonl... Remove this comment to see the full error message
       onClick,
+      // @ts-expect-error TS(2339) FIXME: Property 'height' does not exist on type 'Readonly... Remove this comment to see the full error message
       height,
+      // @ts-expect-error TS(2339) FIXME: Property 'clearSearchOnBlur' does not exist on typ... Remove this comment to see the full error message
       clearSearchOnBlur,
+      // @ts-expect-error TS(2339) FIXME: Property 'clearSearchOnFocus' does not exist on ty... Remove this comment to see the full error message
       clearSearchOnFocus,
     } = this.props
 
@@ -52,7 +64,9 @@ export default class Search extends React.Component {
           placeholder={placeholder}
           type="text"
           value={search}
+          // @ts-expect-error TS(7006) FIXME: Parameter 'inputRef' implicitly has an 'any' type.
           ref={(inputRef) => (this.inputRef = inputRef)}
+          // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
           onChange={(event) => this.onChange(event)}
           onClick={onClick}
           onBlur={clearSearchOnBlur ? this.clearSearch : undefined}
@@ -64,6 +78,7 @@ export default class Search extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Search.propTypes = {
   /** Search placeholder */
   placeholder: PropTypes.string,
@@ -90,6 +105,7 @@ Search.propTypes = {
   onBlur: PropTypes.func,
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 Search.defaultProps = {
   placeholder: '',
   height: 'tall',

@@ -1,6 +1,8 @@
 /* eslint-disable react/jsx-filename-extension */
 import React from 'react'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'enzy... Remove this comment to see the full error message
 import Enzyme, { shallow } from 'enzyme'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'enzy... Remove this comment to see the full error message
 import Adapter from 'enzyme-adapter-react-16'
 import Search from './Search'
 
@@ -10,6 +12,7 @@ describe('SearchComponent component', () => {
   it('onChange: should update state', () => {
     const wrapper = shallow(
       <Search
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         onChange={() => true}
         onMoveUp={() => true}
         onMoveDown={() => true}

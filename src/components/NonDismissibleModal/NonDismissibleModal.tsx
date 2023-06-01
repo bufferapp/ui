@@ -4,6 +4,7 @@ import { Container, Modal } from '../SimpleModal/style'
 import { useAnimation } from '../AnimationWrapper'
 import { stageInCenter, stageOutCenter } from '../style/animations'
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const NonDismissibleModal = ({ children }) => {
   const modalRef = useRef(null)
   const { AnimationWrapper, animationProps } = useAnimation({
@@ -13,6 +14,7 @@ const NonDismissibleModal = ({ children }) => {
   })
 
   useEffect(() => {
+    // @ts-expect-error TS(2531) FIXME: Object is possibly 'null'.
     modalRef.current.focus()
   }, [])
 

@@ -131,6 +131,7 @@ class Carousel extends React.Component {
     currentSlideIndex: 0,
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'lengthOfChildren' implicitly has an 'an... Remove this comment to see the full error message
   verifyLastItem = (lengthOfChildren, widthOfEachItem) => {
     const { left } = this.state
     const finalLength = (lengthOfChildren - 1) * parseInt(widthOfEachItem, 10)
@@ -138,7 +139,9 @@ class Carousel extends React.Component {
     return left === -finalLength
   }
 
+  // @ts-expect-error TS(7006) FIXME: Parameter 'index' implicitly has an 'any' type.
   goToSlide = (index) => {
+    // @ts-expect-error TS(2339) FIXME: Property 'width' does not exist on type 'Readonly<... Remove this comment to see the full error message
     const { width, children } = this.props
     const { currentSlideIndex, left } = this.state
 
@@ -177,6 +180,7 @@ class Carousel extends React.Component {
 
   render() {
     const { left, currentSlideIndex } = this.state
+    // @ts-expect-error TS(2339) FIXME: Property 'width' does not exist on type 'Readonly<... Remove this comment to see the full error message
     const { children, width, rightNavigation, withIndicators } = this.props
 
     return (
@@ -186,10 +190,12 @@ class Carousel extends React.Component {
           Slide
           {currentSlideIndex + 1}
           out of
+          {/* @ts-expect-error TS(2533) FIXME: Object is possibly 'null' or 'undefined'. */}
           {children.length}
         </Announcement>
         {React.Children.count(children) > 1 && !rightNavigation && (
           <ButtonOverlapContainer left>
+            {/* @ts-expect-error TS(2740) FIXME: Type '{ type: string; icon: Element; hasIconOnly: ... Remove this comment to see the full error message */}
             <Button
               type="secondary"
               icon={<ArrowLeft />}
@@ -205,6 +211,7 @@ class Carousel extends React.Component {
           <Window width={width}>
             <MainList left={left}>
               <CarouselItems currentSlideIndex={currentSlideIndex}>
+                {/* @ts-expect-error TS(2322) FIXME: Type 'ReactNode' is not assignable to type 'string... Remove this comment to see the full error message */}
                 {children}
               </CarouselItems>
             </MainList>
@@ -232,6 +239,7 @@ class Carousel extends React.Component {
         </Content>
         {React.Children.count(children) > 1 && (
           <ButtonOverlapContainer>
+            {/* @ts-expect-error TS(2740) FIXME: Type '{ type: string; icon: Element; hasIconOnly: ... Remove this comment to see the full error message */}
             <Button
               type="secondary"
               icon={<ArrowRight />}
@@ -248,11 +256,13 @@ class Carousel extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'defaultProps' does not exist on type 'ty... Remove this comment to see the full error message
 Carousel.defaultProps = {
   rightNavigation: false,
   withIndicators: true,
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Carousel.propTypes = {
   /** The content within the carousel */
   children: PropTypes.node.isRequired,

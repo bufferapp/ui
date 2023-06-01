@@ -18,6 +18,7 @@ import Button from '../Button/Button'
 
 export default class CrossSell extends React.Component {
   renderHeader = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'texts' does not exist on type 'Readonly<... Remove this comment to see the full error message
     const { texts } = this.props
 
     return (
@@ -31,10 +32,12 @@ export default class CrossSell extends React.Component {
   }
 
   renderBody = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'texts' does not exist on type 'Readonly<... Remove this comment to see the full error message
     const { texts } = this.props
 
     return (
       <CardsContainer>
+        {/* @ts-expect-error TS(7006) FIXME: Parameter 'card' implicitly has an 'any' type. */}
         {texts.cards.map((card, idx) => (
           <Card key={idx}>
             <CardImage src={card.image} alt={card.alt} />
@@ -49,12 +52,14 @@ export default class CrossSell extends React.Component {
   }
 
   renderFooter = () => {
+    // @ts-expect-error TS(2339) FIXME: Property 'texts' does not exist on type 'Readonly<... Remove this comment to see the full error message
     const { button, priceTagline } = this.props.texts
 
     return (
       <Footer>
         <ButtonsContainer>
           <ButtonWrapper>
+            {/* @ts-expect-error TS(2740) FIXME: Type '{ type: string; size: string; onClick: () =>... Remove this comment to see the full error message */}
             <Button
               type="primary"
               size="large"
@@ -80,6 +85,7 @@ export default class CrossSell extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 CrossSell.propTypes = {
   texts: PropTypes.shape({
     title: PropTypes.string,

@@ -3,6 +3,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import * as Styles from './style'
 
+// @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const Text = ({ children, type, ...props }) => {
   switch (type) {
     case 'h1':

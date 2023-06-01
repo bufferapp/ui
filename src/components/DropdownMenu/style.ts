@@ -114,6 +114,7 @@ const disabled = css`
   cursor: not-allowed;
 `
 
+// @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
 const getColor = (props, type, defaultColor) => {
   if (props.colors && props.colors[type]) {
     return props.colors[type]

@@ -13,6 +13,7 @@ const ArrowUpIcon = createIconComponent({
     </g>
   ),
 })
+// @ts-expect-error TS(2339) FIXME: Property 'displayName' does not exist on type '(pr... Remove this comment to see the full error message
 ArrowUpIcon.displayName = 'ArrowUpIcon'
 
 export default ArrowUpIcon

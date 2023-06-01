@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
+// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'mark... Remove this comment to see the full error message
 import MarkdownToJsx from 'markdown-to-jsx'
 import LinkCard from './components/LinkCard'
 import Heading from './components/Heading'
@@ -69,7 +70,9 @@ const Img = styled.img`
 /** Component Used to show the Markdown file content and replace elements with our own custom shared component */
 export default class Markdown extends React.Component {
   render() {
+    // @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
     const DocHeading = ({ children, ...props }) => <Heading {...props} />
+    // @ts-expect-error TS(2339) FIXME: Property 'page' does not exist on type 'Readonly<{... Remove this comment to see the full error message
     const { page, component, links } = this.props
 
     return [
@@ -105,6 +108,7 @@ export default class Markdown extends React.Component {
       </MarkdownToJsx>,
       <LinkWrapper>
         {links[0] &&
+          // @ts-expect-error TS(7006) FIXME: Parameter 'link' implicitly has an 'any' type.
           links.map((link) => (
             <LinkCard name={link.name} id={link.id} key={link.id} />
           ))}
@@ -113,6 +117,7 @@ export default class Markdown extends React.Component {
   }
 }
 
+// @ts-expect-error TS(2339) FIXME: Property 'propTypes' does not exist on type 'typeo... Remove this comment to see the full error message
 Markdown.propTypes = {
   /** Markdown page to display */
   page: PropTypes.shape({
