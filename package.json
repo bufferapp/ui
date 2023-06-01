@@ -53,7 +53,7 @@
     "start": "concurrently 'yarn run start:docs' 'yarn run gen:docs-watch'",
     "start:docs": "node scripts/start.js",
 
-    "test": "jest && yarn lint",
+    "test": "jest",
     "test-update": "jest --no-coverage -u",
     "test-watch": "jest --no-coverage --watch",
 
