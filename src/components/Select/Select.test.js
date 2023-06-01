@@ -117,7 +117,7 @@ describe('Select component', () => {
     )
     const instance = wrapper.instance()
     instance.handleSelectOption()
-    expect(onSelectClickSply).toBeCalled()
+    expect(onSelectClickSply).toHaveBeenCalled()
   })
 
   it('handleSelectOption: should call onSelectClick for custom items', () => {
@@ -148,7 +148,7 @@ describe('Select component', () => {
     const wrapper = shallow(SelectComponent)
     const instance = wrapper.instance()
     instance.handleSelectOption(items[0])
-    expect(onCustomItemClick).toBeCalled()
+    expect(onCustomItemClick).toHaveBeenCalled()
   })
 
   it('onClick: should call stopImmediatePropagation', () => {
@@ -163,8 +163,8 @@ describe('Select component', () => {
     )
     const instance = wrapper.instance()
     instance.onClick(event)
-    expect(event.stopPropagation).toBeCalled()
-    expect(event.nativeEvent.stopImmediatePropagation).toBeCalled()
+    expect(event.stopPropagation).toHaveBeenCalled()
+    expect(event.nativeEvent.stopImmediatePropagation).toHaveBeenCalled()
   })
 
   it('onSearchChange: should update search in state', () => {
@@ -381,7 +381,7 @@ describe('Select component', () => {
     instance.updateHoveredItemPosition(hoveredItem, itemsLength, items)
 
     instance.onAddItem()
-    expect(instance.handleSelectOption).toBeCalled()
+    expect(instance.handleSelectOption).toHaveBeenCalled()
   })
 
   it('onMoveDown: should set the hoveredItem in state if there is none', () => {
