@@ -34,29 +34,23 @@
     "prebuild:lib": "rimraf lib",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
     "build:copy-files": "node scripts/copyBuildFiles.js",
-
     "deploy:docs": "gh-pages -d build",
     "predeploy:docs": "yarn gen:docs && yarn build:docs",
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "yarn gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
-
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "pkg:clean": "rushx pkg:sort && rushx pkg:depcheck",
     "pkg:depcheck": "depcheck",
     "pkg:sort": "sort-package-json",
-
     "publish": "./scripts/publish.sh",
     "publish:beta": "node ./scripts/betaPublish.js",
-
     "prestart": "yarn gen:docs",
     "start": "concurrently 'yarn run start:docs' 'yarn run gen:docs-watch'",
     "start:docs": "node scripts/start.js",
-
     "test": "jest",
     "test-update": "jest --no-coverage -u",
     "test-watch": "jest --no-coverage --watch",
-
     "component:new": "node ./scripts/newComponent.js",
     "gen:icons": "node ./scripts/generateIconComponents.js && eslint src/components/Icon/Icons/** --fix"
   },
@@ -106,6 +100,9 @@
     "@babel/preset-env": "7.1.6",
     "@babel/preset-react": "^7.14.5",
     "@balajmarius/svg2jsx": "^2.0.0",
+    "@types/jest": "27.5.2",
+    "@types/node": "18.15.11",
+    "@types/webpack-env": "1.18.0",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
     "async": "2.6.4",
@@ -181,7 +178,9 @@
     "style-loader": "0.23.0",
     "svgo": "1.1.1",
     "terser-webpack-plugin": "^4.1.0",
-    "typescript": "4.9.5",
+    "ts-loader": "8.4.0",
+    "ts-migrate": "^0.1.35",
+    "typescript": "4.7.2",
     "url-loader": "1.1.1",
     "webpack": "^4.41.5",
     "webpack-bundle-analyzer": "^3.8.0",
