@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Select from '@bufferapp/ui/Select';
-import SegmentedControl from '@bufferapp/ui/SegmentedControl';
-import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon';
+import React, { useState } from 'react'
+import Select from '@bufferapp/ui/Select'
+import SegmentedControl from '@bufferapp/ui/SegmentedControl'
+import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon'
 
 const options = [
   {
@@ -13,7 +13,8 @@ const options = [
     label: 'Pinterest',
     icon: <Pinterest />,
     value: 'pinterest',
-  }, {
+  },
+  {
     label: 'Twitter',
     icon: <Twitter />,
     value: 'twitter',
@@ -24,12 +25,12 @@ const options = [
  * Select Icon Position
  */
 export default function ExampleIconPosition() {
-  const [selected, setSelected] = useState('facebook');
-  const [iconPosition, setIconPosition] = useState('left');
+  const [selected, setSelected] = useState('facebook')
+  const [iconPosition, setIconPosition] = useState('left')
 
   const handleSelect = (item) => {
-    setIconPosition(item.title);
-  };
+    setIconPosition(item.title)
+  }
 
   return (
     <div style={{ display: 'inline-block' }}>
@@ -37,7 +38,7 @@ export default function ExampleIconPosition() {
         {options.map(({ disabled, icon, label, value, tooltip }, index) => (
           <SegmentedControl.Option
             key={`${value}-${index}`}
-            optionType='textAndIcon'
+            optionType="textAndIcon"
             disabled={disabled}
             icon={icon}
             label={label}
@@ -52,7 +53,7 @@ export default function ExampleIconPosition() {
       <div style={{ padding: '10px' }} />
       <Select
         onSelectClick={handleSelect}
-        label='Icon position'
+        label="Icon position"
         items={[
           { id: '1', title: 'left' },
           { id: '2', title: 'right' },
@@ -62,5 +63,5 @@ export default function ExampleIconPosition() {
         hideSearch
       />
     </div>
-  );
+  )
 }

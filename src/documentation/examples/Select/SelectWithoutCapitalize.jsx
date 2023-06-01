@@ -1,5 +1,5 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
 
 /** Without Capitalize */
 export default function ExampleWithoutCapitalize() {
@@ -17,5 +17,5 @@ export default function ExampleWithoutCapitalize() {
       hideSearch
       capitalizeItemLabel={false}
     />
-  );
+  )
 }

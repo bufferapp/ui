@@ -1,10 +1,7 @@
-
-import React from 'react';
-import MovieIcon from '@bufferapp/ui/Icon/Icons/Movie';
+import React from 'react'
+import MovieIcon from '@bufferapp/ui/Icon/Icons/Movie'
 
 /** Movie */
 export default function MovieIconExample() {
-  return (
-    <MovieIcon size="large" />
-  );
+  return <MovieIcon size="large" />
 }

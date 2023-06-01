@@ -1,5 +1,5 @@
-import React from 'react';
-import CrossSell from '@bufferapp/ui/CrossSell';
+import React from 'react'
+import CrossSell from '@bufferapp/ui/CrossSell'
 
 /** CrossSell Example */
 export default function ExampleCrossSell() {
@@ -32,9 +32,9 @@ export default function ExampleCrossSell() {
     ],
     button: {
       label: 'Start a Free 14-Day Trial',
-      url: ''
+      url: '',
     },
     priceTagline: 'NO CREDIT CARD REQUIRED',
   }
-  return <CrossSell texts={replyMock} />;
+  return <CrossSell texts={replyMock} />
 }

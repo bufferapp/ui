@@ -1,5 +1,5 @@
-import React from 'react';
-import Avatar from '@bufferapp/ui/Avatar';
+import React from 'react'
+import Avatar from '@bufferapp/ui/Avatar'
 
 /** With Social Network Icon */
 export default function ExampleAvatar() {
@@ -11,5 +11,5 @@ export default function ExampleAvatar() {
       type="social"
       network="startPage"
     />
-  );
+  )
 }

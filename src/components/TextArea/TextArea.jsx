@@ -1,31 +1,28 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Text from '../Text';
-import {HelpTextWrapper, HelpText} from '../Input/style';
-import { Warning } from '../Icon';
-import {Container, StyledTextArea} from './style';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Text from '../Text'
+import { HelpTextWrapper, HelpText } from '../Input/style'
+import { Warning } from '../Icon'
+import { Container, StyledTextArea } from './style'
 
 export default class TextArea extends React.Component {
   render() {
     const {
-      value, 
-      label, 
-      hasError, 
-      help, 
-      disabled, 
-      rows, 
-      onChange, 
-      id, 
+      value,
+      label,
+      hasError,
+      help,
+      disabled,
+      rows,
+      onChange,
+      id,
       fullHeight,
-      forwardRef, 
-      ...props 
-    } = this.props;
+      forwardRef,
+      ...props
+    } = this.props
     return (
       <Container>
-        <Text
-          htmlFor={id}
-          type='label'
-        >
+        <Text htmlFor={id} type="label">
           {label}
         </Text>
         <StyledTextArea
@@ -40,15 +37,15 @@ export default class TextArea extends React.Component {
           ref={forwardRef}
         />
         {hasError && (
-        <HelpTextWrapper>
-          <Warning size="medium" />
-          <HelpText type="help" htmlFor={id} hasError={hasError}>
-            {help}
-          </HelpText>
-        </HelpTextWrapper>
-      )}
+          <HelpTextWrapper>
+            <Warning size="medium" />
+            <HelpText type="help" htmlFor={id} hasError={hasError}>
+              {help}
+            </HelpText>
+          </HelpTextWrapper>
+        )}
       </Container>
-)
+    )
   }
 }
 
@@ -69,15 +66,15 @@ TextArea.propTypes = {
   id: PropTypes.string.isRequired,
   /** If the textarea should take the height of the parent div */
   fullHeight: PropTypes.bool,
-  /** 
+  /**
    * this consumed by the default export that is wrapping the component into a ForwardRef
    * @ignore
    */
   forwardRef: PropTypes.oneOfType([
-    PropTypes.func, 
-    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) }),
   ]),
-};
+}
 
 TextArea.defaultProps = {
   placeholder: undefined,

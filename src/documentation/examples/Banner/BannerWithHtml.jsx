@@ -1,5 +1,5 @@
-import React from 'react';
-import Banner from '@bufferapp/ui/Banner';
+import React from 'react'
+import Banner from '@bufferapp/ui/Banner'
 
 /** Orange banner with customHTML */
 export default function ExampleBanner() {
@@ -13,5 +13,5 @@ export default function ExampleBanner() {
       /* eslint-disable-next-line */
       onCloseBanner={() => console.log('Banner closed!')}
     />
-  );
+  )
 }

@@ -1,10 +1,10 @@
 /* eslint-disable no-nested-ternary */
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { ChevronDown, ChevronUp } from '@bufferapp/ui/Icon';
-import helper from 'immutability-helper';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { Link } from 'react-router-dom'
+import { ChevronDown, ChevronUp } from '@bufferapp/ui/Icon'
+import helper from 'immutability-helper'
 
 const SidebarWrapper = styled.div`
   z-index: 15;
@@ -18,7 +18,7 @@ const SidebarWrapper = styled.div`
   padding: 0 0 0 1rem;
   border-right: 1px solid #e6ecf1;
   overflow-y: auto;
-`;
+`
 
 const SidebarList = styled.ul`
   list-style: none;
@@ -32,7 +32,7 @@ const SidebarList = styled.ul`
   font-size: 15px;
   margin-top: 32px;
   transform: translateX(1px);
-`;
+`
 
 const SidebarListItem = styled.li`
   text-decoration: none;
@@ -44,13 +44,13 @@ const SidebarListItem = styled.li`
   padding: 0px;
   position: relative;
   cursor: pointer;
-  padding-left: ${props => (props.level === 1 ? '20px' : '12px')};
+  padding-left: ${(props) => (props.level === 1 ? '20px' : '12px')};
   &:hover {
     background: #ffffff77;
     border-radius: 4px 0 0 4px;
   }
-  background: ${props => (props.isSelected ? '#fff' : 'none')};
-`;
+  background: ${(props) => (props.isSelected ? '#fff' : 'none')};
+`
 
 const SidebarListItemLink = styled(Link)`
   text-decoration: none;
@@ -58,66 +58,66 @@ const SidebarListItemLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  font-weight: ${props =>
+  font-weight: ${(props) =>
     props['data-is-child'] && !props['data-is-selected'] ? '500' : '600'};
   cursor: pointer;
   font-size: 16px;
-  color: ${props =>
+  color: ${(props) =>
     props['data-is-selected']
       ? '#2c4bff'
       : props['data-is-child']
       ? '#9daab6'
       : 'inherit'};
-  padding: ${props =>
+  padding: ${(props) =>
     props['data-is-child'] ? '10px 24px 10px 15px' : '5px 24px 5px 15px'};
   width: 100%;
   padding: 8px 0;
   transition: all 0.1s ease-out;
-`;
+`
 
 const IconDown = styled(ChevronDown)`
   margin-left: auto;
   cursor: pointer;
   padding-right: 16px;
   opacity: 0.35;
-`;
+`
 
 const IconUp = styled(ChevronUp)`
   margin-left: auto;
   cursor: pointer;
   padding-right: 16px;
   opacity: 0.35;
-`;
+`
 
 /** The left sidebar that displays the navigation links */
 class Sidebar extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       navigationLinks: props.navigationLinks,
-    };
+    }
   }
 
-  toggleNavigationLink = link => {
-    const { navigationLinks } = this.state;
+  toggleNavigationLink = (link) => {
+    const { navigationLinks } = this.state
 
     this.setState({
       navigationLinks: helper(navigationLinks, {
-        [navigationLinks.findIndex(x => x.id === link.id)]: {
+        [navigationLinks.findIndex((x) => x.id === link.id)]: {
           isExpanded: { $set: !link.isExpanded },
         },
       }),
-    });
-  };
+    })
+  }
 
   render() {
-    const { navigationLinks } = this.state;
-    const { route } = this.props;
+    const { navigationLinks } = this.state
+    const { route } = this.props
 
     return (
       <SidebarWrapper>
         <SidebarList>
-          {navigationLinks.map(link => [
+          {navigationLinks.map((link) => [
             <SidebarListItem
               isSelected={link.id === route}
               key={link.name}
@@ -143,7 +143,7 @@ class Sidebar extends React.Component {
             // we want to exclude children with the same name as the parent
             // no need to show those as those can be accesses by clicking on the parent
             link.children && link.isExpanded
-              ? link.children.map(child =>
+              ? link.children.map((child) =>
                   child.fileName !== child.parentName ? (
                     <SidebarListItem
                       isChild
@@ -159,13 +159,13 @@ class Sidebar extends React.Component {
                         {child.name}
                       </SidebarListItemLink>
                     </SidebarListItem>
-                  ) : null
+                  ) : null,
                 )
               : null,
           ])}
         </SidebarList>
       </SidebarWrapper>
-    );
+    )
   }
 }
 
@@ -174,9 +174,9 @@ Sidebar.propTypes = {
   navigationLinks: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string,
-    })
+    }),
   ).isRequired,
   route: PropTypes.string.isRequired,
-};
+}
 
-export default Sidebar;
+export default Sidebar

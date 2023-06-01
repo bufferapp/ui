@@ -1,5 +1,5 @@
-import React from 'react';
-import Avatar from '@bufferapp/ui/Avatar';
+import React from 'react'
+import Avatar from '@bufferapp/ui/Avatar'
 
 /** Small */
 export default function ExampleAvatar() {
@@ -9,5 +9,5 @@ export default function ExampleAvatar() {
       alt="@joelgascoigne"
       size="small"
     />
-  );
+  )
 }

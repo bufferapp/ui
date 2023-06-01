@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
-import Modal from '@bufferapp/ui/Modal';
-import Button from '@bufferapp/ui/Button';
-import Carousel from '@bufferapp/ui/Carousel';
+import React, { useState } from 'react'
+import Modal from '@bufferapp/ui/Modal'
+import Button from '@bufferapp/ui/Button'
+import Carousel from '@bufferapp/ui/Carousel'
 
 /** With Carousel Modal */
 export default function ModalTest() {
-  const [modalOpen, openModal] = useState(false);
+  const [modalOpen, openModal] = useState(false)
   return (
     <div style={{ width: '100%', height: '400px', position: 'relative' }}>
       <Button
         type="primary"
         onClick={() => {
-          openModal(true);
+          openModal(true)
         }}
         label="Bring the modal!"
       />
       {modalOpen && (
         <Modal
           width="1100px"
-          closeButton={{callback: () => openModal(false)}}
+          closeButton={{ callback: () => openModal(false) }}
           noBackground
           dismissible
         >
@@ -28,7 +28,8 @@ export default function ModalTest() {
                 style={{
                   height: '500px',
                   width: '1000px',
-                  background: '#cecece url("https://picsum.photos/id/1002/1000/500")',
+                  background:
+                    '#cecece url("https://picsum.photos/id/1002/1000/500")',
                   display: 'flex',
                   color: 'white',
                   justifyContent: 'center',
@@ -43,7 +44,8 @@ export default function ModalTest() {
                 style={{
                   height: '500px',
                   width: '1000px',
-                  background: '#cecece url("https://picsum.photos/id/1052/1000/500")',
+                  background:
+                    '#cecece url("https://picsum.photos/id/1052/1000/500")',
                   display: 'flex',
                   color: 'white',
                   justifyContent: 'center',
@@ -58,7 +60,8 @@ export default function ModalTest() {
                 style={{
                   height: '500px',
                   width: '1000px',
-                  background: '#cecece url("https://picsum.photos/id/1032/1000/500")',
+                  background:
+                    '#cecece url("https://picsum.photos/id/1032/1000/500")',
                   display: 'flex',
                   color: 'white',
                   justifyContent: 'center',
@@ -74,5 +77,5 @@ export default function ModalTest() {
         </Modal>
       )}
     </div>
-  );
+  )
 }

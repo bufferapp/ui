@@ -1,7 +1,7 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
-import Search from '@bufferapp/ui/Search';
-import { Search as SearchIcon } from '@bufferapp/ui/Icon';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
+import Search from '@bufferapp/ui/Search'
+import { Search as SearchIcon } from '@bufferapp/ui/Icon'
 
 const searchBarWrapperStyle = {
   width: '100%',
@@ -17,7 +17,7 @@ const searchBarWrapperStyle = {
   transitionProperty: 'border-width, border-color, box-shadow',
   transitionDuration: '0.1s',
   transitionTimingFunction: 'ease-in',
-};
+}
 
 /** With Input search */
 export default function ExampleSelectWithInputSearch() {
@@ -47,5 +47,5 @@ export default function ExampleSelectWithInputSearch() {
         { id: '3', title: 'joel' },
       ]}
     />
-  );
+  )
 }

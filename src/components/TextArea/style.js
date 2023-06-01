@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import {
   redDark,
   gray,
@@ -10,34 +10,34 @@ import {
   redLighter,
   redLightest,
   boxShadow,
-} from '../style/colors';
-import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
+} from '../style/colors'
+import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts'
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 100%;
-`;
+`
 
 const backgroundCss = ({ disabled, hasError }) => {
   if (disabled) {
-    return grayLight;
+    return grayLight
   }
   if (hasError) {
-    return redLightest;
+    return redLightest
   }
-  return white;
-};
+  return white
+}
 
 const borderCss = ({ disabled, hasError }) => {
   if (disabled) {
-    return 'none';
+    return 'none'
   }
   if (hasError) {
-    return `1px solid ${redDark}`;
+    return `1px solid ${redDark}`
   }
-  return `1px solid ${gray}`;
-};
+  return `1px solid ${gray}`
+}
 
 export const StyledTextArea = styled.textarea`
   border-radius: 4px;
@@ -71,9 +71,9 @@ export const StyledTextArea = styled.textarea`
   &::placeholder {
     color: ${grayDark};
   }
-`;
+`
 
 export const StyledLabel = styled.label`
   display: flex;
   flex-direction: column;
-`;
+`

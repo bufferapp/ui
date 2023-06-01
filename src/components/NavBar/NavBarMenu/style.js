@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import {
   gray,
   grayDark,
@@ -6,9 +6,9 @@ import {
   grayLight,
   grayLighter,
   white,
-} from '../../style/colors';
+} from '../../style/colors'
 
-import { fontSize, fontWeightMedium, fontFamily } from '../../style/fonts';
+import { fontSize, fontWeightMedium, fontFamily } from '../../style/fonts'
 
 export const NavBarStyled = styled.a`
   align-items: center;
@@ -22,14 +22,14 @@ export const NavBarStyled = styled.a`
   &:hover {
     background-color: ${grayLighter};
   }
-`;
+`
 
 export const NavBarUser = styled.div`
   display: flex;
   align-items: end;
   flex-direction: column;
   padding-right: 16px;
-`;
+`
 
 export const NavBarImpersonating = styled.div`
   font-family: ${fontFamily};
@@ -40,10 +40,10 @@ export const NavBarImpersonating = styled.div`
   color: ${white};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin-top: ${props => (props.user.name ? '-8px' : '-21px')};
-  margin-bottom: ${props => (props.user.name ? '0px' : '5px')};
+  margin-top: ${(props) => (props.user.name ? '-8px' : '-21px')};
+  margin-bottom: ${(props) => (props.user.name ? '0px' : '5px')};
   text-transform: uppercase;
-`;
+`
 
 export const NavBarAvatar = styled.div`
   border-radius: 100px;
@@ -51,8 +51,8 @@ export const NavBarAvatar = styled.div`
   height: 40px;
   background: ${gray};
   background-size: cover;
-  background-image: url(${props => props.avatar});
-`;
+  background-image: url(${(props) => props.avatar});
+`
 
 export const NavBarName = styled.div`
   color: ${grayDark};
@@ -63,7 +63,7 @@ export const NavBarName = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-`;
+`
 
 export const NavBarEmail = styled.div`
   color: ${gray};
@@ -73,7 +73,7 @@ export const NavBarEmail = styled.div`
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-`;
+`
 
 export const NavBarChavron = styled.div`
   align-items: center;
@@ -89,4 +89,4 @@ export const NavBarChavron = styled.div`
   right: 8px;
   width: 16px;
   justify-content: center;
-`;
+`

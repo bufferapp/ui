@@ -1,5 +1,5 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
 
 /** With Item Align to the left */
 export default function ExampleSelect() {
@@ -18,5 +18,5 @@ export default function ExampleSelect() {
         ]}
       />
     </div>
-  );
+  )
 }

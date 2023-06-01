@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { useAnimation } from '@bufferapp/ui/AnimationWrapper';
-import Text from '@bufferapp/ui/Text';
+import React, { useState, useEffect } from 'react'
+import { useAnimation } from '@bufferapp/ui/AnimationWrapper'
+import Text from '@bufferapp/ui/Text'
 
-import { stageInTop, stageOutRight } from '@bufferapp/ui/style/animations';
+import { stageInTop, stageOutRight } from '@bufferapp/ui/style/animations'
 
 /** useAnimation hook example */
 export default function ExampleSimpleModal() {
-  const [changed, setChanged] = useState(false);
+  const [changed, setChanged] = useState(false)
 
-  useEffect(()=> {
-    setTimeout(()=> {
-      setChanged(!changed);
+  useEffect(() => {
+    setTimeout(() => {
+      setChanged(!changed)
     }, 2000)
-  }, [changed]);
+  }, [changed])
 
   const { AnimationWrapper, animationProps } = useAnimation({
     stageInAnimation: stageInTop,
@@ -34,7 +34,13 @@ export default function ExampleSimpleModal() {
           </div>
         )}
         {changed && (
-          <div style={{ width: '200px', padding: '30px', background: 'paleturquoise' }}>
+          <div
+            style={{
+              width: '200px',
+              padding: '30px',
+              background: 'paleturquoise',
+            }}
+          >
             <Text type="p">
               Ah-ah, ah!
               <br />
@@ -57,5 +63,5 @@ export default function ExampleSimpleModal() {
         )}
       </AnimationWrapper>
     </div>
-  );
+  )
 }

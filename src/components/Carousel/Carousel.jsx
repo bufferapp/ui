@@ -1,30 +1,30 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import Button from '../Button/index';
-import ArrowRight from '../Icon/Icons/ArrowRight';
-import ArrowLeft from '../Icon/Icons/ArrowLeft';
-import CarouselItems from './CarouselItems';
-import { gray, white } from '../style/colors';
-import { easeOutQuart } from '../style/animations';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
+import Button from '../Button/index'
+import ArrowRight from '../Icon/Icons/ArrowRight'
+import ArrowLeft from '../Icon/Icons/ArrowLeft'
+import CarouselItems from './CarouselItems'
+import { gray, white } from '../style/colors'
+import { easeOutQuart } from '../style/animations'
 
 const CarouselStyled = styled.div`
   align-items: center;
   display: flex;
-`;
+`
 
 const Window = styled.div`
   overflow: hidden;
-  width: ${props => props.width};
+  width: ${(props) => props.width};
   margin: 8px;
   display: flex;
-`;
+`
 
 const ButtonOverlapContainer = styled.div`
   position: relative;
   z-index: 3;
 
-  ${props =>
+  ${(props) =>
     props.left
       ? css`
           left: 20px;
@@ -32,16 +32,16 @@ const ButtonOverlapContainer = styled.div`
       : css`
           right: 20px;
         `}
-`;
+`
 
 const MainList = styled.ul`
   display: flex;
   padding: 0;
   margin: 0;
   position: relative;
-  left: ${props => `${props.left}px`};
+  left: ${(props) => `${props.left}px`};
   transition: left 0.4s ${easeOutQuart};
-`;
+`
 
 // grabbed these styles from https://a11yproject.com/posts/how-to-hide-content/
 const Announcement = styled.div`
@@ -52,21 +52,21 @@ const Announcement = styled.div`
   clip-path: inset(1px 1px 1px 1px);
   white-space: nowrap; /* added line */
   margin: 0;
-`;
+`
 
 const IndicatorList = styled.ol`
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
-`;
+`
 
 const IndicatorListItem = styled.li`
   list-style: none;
   padding: 0 4px;
   position: relative;
   display: flex;
-`;
+`
 
 const IndicatorButton = styled.button`
   width: 11px;
@@ -118,41 +118,41 @@ const IndicatorButton = styled.button`
       opacity: 1;
     }
   }
-`;
+`
 
 const Content = styled.div`
   display: flex;
   flex-direction: column;
-`;
+`
 
 class Carousel extends React.Component {
   state = {
     left: 0,
     currentSlideIndex: 0,
-  };
+  }
 
   verifyLastItem = (lengthOfChildren, widthOfEachItem) => {
-    const { left } = this.state;
-    const finalLength = (lengthOfChildren - 1) * parseInt(widthOfEachItem, 10);
+    const { left } = this.state
+    const finalLength = (lengthOfChildren - 1) * parseInt(widthOfEachItem, 10)
 
-    return left === -finalLength;
-  };
+    return left === -finalLength
+  }
 
-  goToSlide = index => {
-    const { width, children } = this.props;
-    const { currentSlideIndex, left } = this.state;
+  goToSlide = (index) => {
+    const { width, children } = this.props
+    const { currentSlideIndex, left } = this.state
 
     // going backwards
     if (currentSlideIndex > index) {
       // if it's the first slide, loop back to the last one
       if (left === 0) {
         const finalLength =
-          (React.Children.count(children) - 1) * parseInt(width, 10);
+          (React.Children.count(children) - 1) * parseInt(width, 10)
         this.setState({
           left: -finalLength,
           currentSlideIndex: React.Children.count(children) - 1,
-        });
-        return;
+        })
+        return
       }
     }
 
@@ -163,21 +163,21 @@ class Carousel extends React.Component {
         this.setState({
           left: 0,
           currentSlideIndex: 0,
-        });
-        return;
+        })
+        return
       }
     }
 
-    const newLeft = parseInt(width, 10) * index;
+    const newLeft = parseInt(width, 10) * index
     this.setState({
       left: -newLeft,
       currentSlideIndex: index,
-    });
-  };
+    })
+  }
 
   render() {
-    const { left, currentSlideIndex } = this.state;
-    const { children, width, rightNavigation, withIndicators } = this.props;
+    const { left, currentSlideIndex } = this.state
+    const { children, width, rightNavigation, withIndicators } = this.props
 
     return (
       <CarouselStyled>
@@ -195,7 +195,7 @@ class Carousel extends React.Component {
               icon={<ArrowLeft />}
               hasIconOnly
               onClick={() => {
-                this.goToSlide(currentSlideIndex - 1);
+                this.goToSlide(currentSlideIndex - 1)
               }}
               label="Backwards"
             />
@@ -237,21 +237,21 @@ class Carousel extends React.Component {
               icon={<ArrowRight />}
               hasIconOnly
               onClick={() => {
-                this.goToSlide(currentSlideIndex + 1);
+                this.goToSlide(currentSlideIndex + 1)
               }}
               label="Forwards"
             />
           </ButtonOverlapContainer>
         )}
       </CarouselStyled>
-    );
+    )
   }
 }
 
 Carousel.defaultProps = {
   rightNavigation: false,
   withIndicators: true,
-};
+}
 
 Carousel.propTypes = {
   /** The content within the carousel */
@@ -265,6 +265,6 @@ Carousel.propTypes = {
 
   /** Show indicators at the bottom */
   withIndicators: PropTypes.bool,
-};
+}
 
-export default Carousel;
+export default Carousel

@@ -1,6 +1,6 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
-import { MessageFilled } from '@bufferapp/ui/Icon';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
+import { MessageFilled } from '@bufferapp/ui/Icon'
 
 /** Primary with Icon */
 export default function ExampleButton() {
@@ -11,5 +11,5 @@ export default function ExampleButton() {
       onClick={() => {}}
       label="Click Me"
     />
-  );
+  )
 }

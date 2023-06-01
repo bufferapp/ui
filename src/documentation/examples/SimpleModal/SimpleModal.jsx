@@ -1,13 +1,13 @@
-import React, { useState } from 'react';
-import SimpleModal from '@bufferapp/ui/SimpleModal';
-import Text from '@bufferapp/ui/Text';
-import Button from '@bufferapp/ui/Button';
+import React, { useState } from 'react'
+import SimpleModal from '@bufferapp/ui/SimpleModal'
+import Text from '@bufferapp/ui/Text'
+import Button from '@bufferapp/ui/Button'
 
 /** SimpleModal Example */
 export default function ExampleSimpleModal() {
-  const [modalOpen, openModal] = useState(false);
-  const [changed, setChanged] = useState(false);
-  const [showingModal, setShowingModal] = useState(false);
+  const [modalOpen, openModal] = useState(false)
+  const [changed, setChanged] = useState(false)
+  const [showingModal, setShowingModal] = useState(false)
 
   return (
     <div>
@@ -15,7 +15,7 @@ export default function ExampleSimpleModal() {
         disabled={showingModal}
         type="primary"
         onClick={() => {
-          openModal(true);
+          openModal(true)
           setTimeout(() => {
             setShowingModal(true)
           }, 200)
@@ -35,10 +35,12 @@ export default function ExampleSimpleModal() {
               <Text type="p">
                 There is a theory which states that if ever anyone discovers
                 exactly what the Universe is for and why it is here, it will
-                instantly disappear and be replaced by something even more bizarre
-                and inexplicable.
+                instantly disappear and be replaced by something even more
+                bizarre and inexplicable.
               </Text>
-              <button type="button" onClick={() => setChanged(true)}>change content</button>
+              <button type="button" onClick={() => setChanged(true)}>
+                change content
+              </button>
             </div>
           )}
           {changed && (
@@ -61,10 +63,13 @@ export default function ExampleSimpleModal() {
                 <br />
                 Valhalla, I am coming
               </Text>
-              <button type="button" onClick={() => setChanged(false)}>back</button>
+              <button type="button" onClick={() => setChanged(false)}>
+                back
+              </button>
             </div>
           )}
-        </SimpleModal>)}
+        </SimpleModal>
+      )}
     </div>
-  );
+  )
 }

@@ -1,10 +1,7 @@
-
-import React from 'react';
-import ShareArrowIcon from '@bufferapp/ui/Icon/Icons/ShareArrow';
+import React from 'react'
+import ShareArrowIcon from '@bufferapp/ui/Icon/Icons/ShareArrow'
 
 /** ShareArrow */
 export default function ShareArrowIconExample() {
-  return (
-    <ShareArrowIcon size="large" />
-  );
+  return <ShareArrowIcon size="large" />
 }

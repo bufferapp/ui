@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
-import snap from 'jest-auto-snapshots';
-import 'jest-styled-components';
+import snap from 'jest-auto-snapshots'
+import 'jest-styled-components'
 
-import SidebarListItem from './SidebarListItem';
+import SidebarListItem from './SidebarListItem'
 
-snap(SidebarListItem, './SidebarListItem.jsx');
+snap(SidebarListItem, './SidebarListItem.jsx')

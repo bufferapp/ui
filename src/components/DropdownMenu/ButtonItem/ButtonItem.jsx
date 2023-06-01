@@ -1,77 +1,80 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ButtonItemStyled, ButtonLabel } from '../style';
-import { Checkmark as CheckmarkIcon } from '../../Icon';
-import { green } from '../../style/colors';
-import { keyCode } from '../keyCode';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { ButtonItemStyled, ButtonLabel } from '../style'
+import { Checkmark as CheckmarkIcon } from '../../Icon'
+import { green } from '../../style/colors'
+import { keyCode } from '../keyCode'
 
 export default class ButtonItem extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       tabIndex: '-1',
-    };
+    }
 
-    this.keyCode = keyCode;
-    this.handleKeydown = this.handleKeydown.bind(this);
+    this.keyCode = keyCode
+    this.handleKeydown = this.handleKeydown.bind(this)
   }
 
   componentDidMount() {
-    this.item.addEventListener('click', this.handleClick);
-    this.item.addEventListener('keydown', this.handleKeydown);
+    this.item.addEventListener('click', this.handleClick)
+    this.item.addEventListener('keydown', this.handleKeydown)
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.shouldFocus) {
-      this.updateTabIndexIfNeeded(prevProps);
+      this.updateTabIndexIfNeeded(prevProps)
     }
   }
 
   componentWillUnmount() {
-    this.item.removeEventListener('click', this.handleClick);
-    this.item.removeEventListener('keydown', this.handleKeydown);
+    this.item.removeEventListener('click', this.handleClick)
+    this.item.removeEventListener('keydown', this.handleKeydown)
   }
 
   setFocusToItem() {
-    const { shouldFocus } = this.props;
-    const newTabIndex = shouldFocus ? '0' : '-1';
+    const { shouldFocus } = this.props
+    const newTabIndex = shouldFocus ? '0' : '-1'
 
     if (shouldFocus) {
-      this.item.focus();
+      this.item.focus()
     }
-    this.setState({ tabIndex: newTabIndex });
+    this.setState({ tabIndex: newTabIndex })
   }
 
-  handleKeydown = event => {
-    let flag = false;
+  handleKeydown = (event) => {
+    let flag = false
     switch (event.keyCode) {
       case this.keyCode.SPACE:
-      case this.keyCode.RETURN: {
-        const { item: { onItemClick } } = this.props;
+      case this.keyCode.RETURN:
+        {
+          const {
+            item: { onItemClick },
+          } = this.props
           if (onItemClick) {
-            onItemClick();
-            flag = true;
+            onItemClick()
+            flag = true
           }
         }
-        break;
+        break
       default:
-        break;
+        break
     }
 
     if (flag) {
-      event.stopPropagation();
-      event.preventDefault();
+      event.stopPropagation()
+      event.preventDefault()
     }
-  };
+  }
 
   handleClick = () => {
-    this.item.focus();
-  };
+    this.item.focus()
+  }
 
   updateTabIndexIfNeeded(prevProps) {
     if (prevProps.shouldFocus !== this.props.shouldFocus) {
-      this.setFocusToItem();
+      this.setFocusToItem()
     }
   }
 
@@ -79,20 +82,20 @@ export default class ButtonItem extends React.Component {
     const {
       item: { type, title, onItemClick, icon, selected, disabled, colors, tag },
       ariaHaspopup,
-    } = this.props;
-    const hasIcon = !!icon || !!selected;
+    } = this.props
+    const hasIcon = !!icon || !!selected
 
     return (
       <ButtonItemStyled
-        ref={item => (this.item = item)}
+        ref={(item) => (this.item = item)}
         type="button"
         role="menuitem"
         fullWidth
-        onKeyDown={ev => this.handleKeydown(ev)}
-        onClick={event => {
-          if (onItemClick) onItemClick();
-          event.stopPropagation();
-          event.preventDefault();
+        onKeyDown={(ev) => this.handleKeydown(ev)}
+        onClick={(event) => {
+          if (onItemClick) onItemClick()
+          event.stopPropagation()
+          event.preventDefault()
         }}
         tabIndex={this.state.tabIndex}
         aria-haspopup={ariaHaspopup}
@@ -101,10 +104,12 @@ export default class ButtonItem extends React.Component {
       >
         {selected && <CheckmarkIcon color={green} />}
         {icon || null}
-        <ButtonLabel hasIcon={hasIcon} type={type}>{title}</ButtonLabel>
+        <ButtonLabel hasIcon={hasIcon} type={type}>
+          {title}
+        </ButtonLabel>
         {tag || null}
       </ButtonItemStyled>
-    );
+    )
   }
 }
 
@@ -121,9 +126,9 @@ ButtonItem.propTypes = {
       iconHover: PropTypes.string,
     }),
   }).isRequired,
-};
+}
 
 ButtonItem.defaultProps = {
   shouldFocus: false,
   ariaHaspopup: false,
-};
+}

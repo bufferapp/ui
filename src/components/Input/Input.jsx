@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
-import * as Styles from './style';
-import { Warning } from '../Icon';
-import Text from '../Text';
+import PropTypes from 'prop-types'
+import * as Styles from './style'
+import { Warning } from '../Icon'
+import Text from '../Text'
 
 export default class Input extends React.Component {
   render() {
@@ -26,7 +26,7 @@ export default class Input extends React.Component {
       forwardedRef,
       required,
       icon,
-    } = this.props;
+    } = this.props
     return (
       <Styles.InputWrapper>
         {label.length > 0 && (
@@ -65,7 +65,7 @@ export default class Input extends React.Component {
           </Styles.HelpTextWrapper>
         )}
       </Styles.InputWrapper>
-    );
+    )
   }
 }
 
@@ -112,7 +112,7 @@ Input.propTypes = {
    * @ignore
    */
   forwardedRef: PropTypes.shape({ current: PropTypes.any }),
-};
+}
 
 Input.defaultProps = {
   disabled: false,
@@ -131,4 +131,4 @@ Input.defaultProps = {
   prefix: null,
   maxLength: undefined,
   icon: undefined,
-};
+}

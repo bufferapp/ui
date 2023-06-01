@@ -1,9 +1,9 @@
-import styled from 'styled-components';
-import { blue, white, gray, blueLighter } from '../style/colors';
+import styled from 'styled-components'
+import { blue, white, gray, blueLighter } from '../style/colors'
 
 export const Container = styled.div`
   display: flex;
-`;
+`
 
 /** needs to be label for switch to work properly */
 export const Wrapper = styled.label`
@@ -11,7 +11,7 @@ export const Wrapper = styled.label`
   margin-left: 8px;
   justify-content: center;
   align-items: center;
-`;
+`
 
 /** switch round button */
 export const Span = styled.span`
@@ -34,7 +34,7 @@ export const Span = styled.span`
     left: 1px;
     transition: all 0.3s;
   }
-`;
+`
 
 /** input with special states */
 export const Input = styled.input`
@@ -65,7 +65,6 @@ export const Input = styled.input`
     transition-timing-function: ease-in;
   }
 
-
   &:disabled + ${Span} {
     cursor: not-allowed;
     filter: grayscale(100%);
@@ -75,4 +74,4 @@ export const Input = styled.input`
       box-shadow: none;
     }
   }
-`;
+`

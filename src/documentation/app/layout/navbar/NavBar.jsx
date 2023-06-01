@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const Container = styled.div`
   flex: 0;
@@ -13,7 +13,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`;
+`
 
 const Logo = styled.h1`
   width: 167px;
@@ -24,31 +24,29 @@ const Logo = styled.h1`
   background-size: 100%;
   text-indent: -9999em;
   overflow: hidden;
-`;
+`
 
 const Version = styled.div`
   font-size: 14px;
   font-weight: 700;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 0 1rem 0 0;
-`;
+`
 
 /** Top Navigation */
 const NavBar = ({ title, version }) => (
   <Container>
-    <Logo>
-      {title}
-    </Logo>
+    <Logo>{title}</Logo>
     <Version>
       v.
       {version}
     </Version>
   </Container>
-);
+)
 
 NavBar.propTypes = {
   title: PropTypes.string.isRequired,
   version: PropTypes.string.isRequired,
-};
+}
 
-export default NavBar;
+export default NavBar

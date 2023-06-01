@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 import {
   blue,
   white,
@@ -7,15 +7,15 @@ import {
   boxShadow,
   grayLight,
   grayDarker,
-} from '../style/colors';
+} from '../style/colors'
 import {
   fontFamily,
   fontSize,
   lineHeight,
   fontWeightMedium,
-} from '../style/fonts';
-import { borderRadius } from '../style/borders';
-import { ORG_SWITCHER } from '../NavBar/NavBar';
+} from '../style/fonts'
+import { borderRadius } from '../style/borders'
+import { ORG_SWITCHER } from '../NavBar/NavBar'
 
 export const DropdownItems = styled.ul`
   padding: 0;
@@ -32,7 +32,7 @@ export const DropdownItems = styled.ul`
       outline-offset: -1px;
     }
   }
-`;
+`
 
 export const Item = styled.li`
   font-family: ${fontFamily};
@@ -51,10 +51,10 @@ export const Item = styled.li`
   background-color: transparent;
   padding: ${(props) => (props.menuOption ? 0 : '0 8px')};
   margin: ${(props) => {
-    const { type } = props;
-    return type === 'header' ? '0 0 5px 5px' : '';
+    const { type } = props
+    return type === 'header' ? '0 0 5px 5px' : ''
   }};
-`;
+`
 
 export const ItemDividerTitle = styled.span`
   position: relative;
@@ -65,7 +65,7 @@ export const ItemDividerTitle = styled.span`
   font-size: 12px;
   font-family: ${fontFamily};
   color: ${gray};
-`;
+`
 
 const buttonBase = css`
   -webkit-appearance: none;
@@ -101,24 +101,24 @@ const buttonBase = css`
     transition-duration: 0.1s;
     transition-timing-function: ease-in;
   }
-`;
+`
 
 const medium = css`
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;
-`;
+`
 
 const disabled = css`
   background-color: ${grayLight};
   cursor: not-allowed;
-`;
+`
 
 const getColor = (props, type, defaultColor) => {
   if (props.colors && props.colors[type]) {
-    return props.colors[type];
+    return props.colors[type]
   }
-  return defaultColor;
+  return defaultColor
 }
 
 export const ButtonItemStyled = styled.button`
@@ -143,18 +143,18 @@ export const ButtonItemStyled = styled.button`
     }
   }
   ${(props) => (props.disabled ? disabled : '')};
-`;
+`
 
 export const ButtonLabel = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   margin-left: ${(props) => {
-    const { hasIcon, type } = props;
+    const { hasIcon, type } = props
     if (type === ORG_SWITCHER) {
-      return hasIcon ? '5px' : '21px';
+      return hasIcon ? '5px' : '21px'
     }
-    return hasIcon ? '5px' : '0px';
+    return hasIcon ? '5px' : '0px'
   }};
   margin-right: ${(props) => (props.hasIcon ? '5px' : '0px')};
-`;
+`

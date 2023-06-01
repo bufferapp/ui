@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
 
 /** Split Button with Select on Bottom */
 export default function ExampleSplitButtonBottom() {
@@ -16,5 +16,5 @@ export default function ExampleSplitButtonBottom() {
       ]}
       hideSearch
     />
-  );
+  )
 }

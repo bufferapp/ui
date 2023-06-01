@@ -1,10 +1,7 @@
-
-import React from 'react';
-import RetweetIcon from '@bufferapp/ui/Icon/Icons/Retweet';
+import React from 'react'
+import RetweetIcon from '@bufferapp/ui/Icon/Icons/Retweet'
 
 /** Retweet */
 export default function RetweetIconExample() {
-  return (
-    <RetweetIcon size="large" />
-  );
+  return <RetweetIcon size="large" />
 }

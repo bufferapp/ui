@@ -1,1 +1,1 @@
-export { default } from './InputWithRef';
+export { default } from './InputWithRef'

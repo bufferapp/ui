@@ -1,5 +1,5 @@
-import React from 'react';
-import Avatar from '@bufferapp/ui/Avatar';
+import React from 'react'
+import Avatar from '@bufferapp/ui/Avatar'
 
 /** With Fallback Icon */
 export default function ExampleAvatar() {
@@ -12,5 +12,5 @@ export default function ExampleAvatar() {
       type="social"
       network="instagram"
     />
-  );
+  )
 }

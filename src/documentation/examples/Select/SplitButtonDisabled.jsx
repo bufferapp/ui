@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
 
 /** Split Button Disabled */
 export default function ExampleSplitButtonDisabled() {
@@ -16,5 +16,5 @@ export default function ExampleSplitButtonDisabled() {
         { id: '2', title: 'Reply + Close + Assign To Me' },
       ]}
     />
-  );
+  )
 }

@@ -1,5 +1,5 @@
-import React from 'react';
-import SidebarListItem from '@bufferapp/ui/SidebarListItem';
+import React from 'react'
+import SidebarListItem from '@bufferapp/ui/SidebarListItem'
 
 /** SidebarListItem With Custom Component Example */
 export default function ExampleSidebarListItem() {
@@ -7,7 +7,7 @@ export default function ExampleSidebarListItem() {
     <SidebarListItem
       id="1a"
       title="Label Default"
-      icon={(
+      icon={
         <div
           style={{
             background: 'red',
@@ -16,9 +16,9 @@ export default function ExampleSidebarListItem() {
             borderRadius: '4px',
           }}
         />
-)}
+      }
       onItemClick={() => console.info('hey')}
       badges={123}
     />
-  );
+  )
 }

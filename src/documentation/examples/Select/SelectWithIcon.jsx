@@ -1,7 +1,6 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
-import { Person } from '@bufferapp/ui/Icon';
-
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
+import { Person } from '@bufferapp/ui/Icon'
 
 /** With Icon */
 export default function ExampleSelect() {
@@ -17,5 +16,5 @@ export default function ExampleSelect() {
         { id: '3', title: 'Closed' },
       ]}
     />
-  );
+  )
 }

@@ -1,12 +1,12 @@
-import React from 'react';
-import DropdownMenu from '@bufferapp/ui/DropdownMenu';
-import Tag from '@bufferapp/ui/Tag';
-import styled from 'styled-components';
+import React from 'react'
+import DropdownMenu from '@bufferapp/ui/DropdownMenu'
+import Tag from '@bufferapp/ui/Tag'
+import styled from 'styled-components'
 
-import Flash from '@bufferapp/ui/Icon/Icons/Flash';
-import Canva from '@bufferapp/ui/Icon/Icons/Canva';
+import Flash from '@bufferapp/ui/Icon/Icons/Flash'
+import Canva from '@bufferapp/ui/Icon/Icons/Canva'
 
-import { white, grayDark, canva, canvaLight } from '@bufferapp/ui/style/colors';
+import { white, grayDark, canva, canvaLight } from '@bufferapp/ui/style/colors'
 
 const MenuItem = styled.a`
   display: flex;
@@ -20,7 +20,7 @@ const MenuItem = styled.a`
   background-color: ${white};
   border: 1px solid ${grayDark};
   border-radius: 4px;
-`;
+`
 
 const menuItems = [
   {
@@ -59,7 +59,7 @@ const menuItems = [
     tag: <Tag>New</Tag>,
     onItemClick: () => console.info('Canva'),
   },
-];
+]
 
 const Navigation = styled.nav`
   display: flex;
@@ -67,7 +67,7 @@ const Navigation = styled.nav`
   width: 100px;
   padding: 10px 0px;
   margin: 0;
-`;
+`
 
 /** DropdownMenu with on open event Example */
 export default function ExampleDropdownMenu() {
@@ -82,5 +82,5 @@ export default function ExampleDropdownMenu() {
         onOpen={() => console.log('----- onOpen Event')}
       />
     </Navigation>
-  );
+  )
 }

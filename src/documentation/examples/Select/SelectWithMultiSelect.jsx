@@ -1,5 +1,5 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
 
 /** Multi-Select */
 export default function ExampleSelect() {
@@ -15,5 +15,5 @@ export default function ExampleSelect() {
       ]}
       hideSearch
     />
-  );
+  )
 }

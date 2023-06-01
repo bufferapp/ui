@@ -1,10 +1,7 @@
-
-import React from 'react';
-import CouponIcon from '@bufferapp/ui/Icon/Icons/Coupon';
+import React from 'react'
+import CouponIcon from '@bufferapp/ui/Icon/Icons/Coupon'
 
 /** Coupon */
 export default function CouponIconExample() {
-  return (
-    <CouponIcon size="large" />
-  );
+  return <CouponIcon size="large" />
 }

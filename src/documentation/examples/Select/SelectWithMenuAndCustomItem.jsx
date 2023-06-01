@@ -1,14 +1,14 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
-import { Person, People, Gear, ArrowLeft } from '@bufferapp/ui/Icon';
-import { NavBarMenu } from '@bufferapp/ui/NavBar';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
+import { Person, People, Gear, ArrowLeft } from '@bufferapp/ui/Icon'
+import { NavBarMenu } from '@bufferapp/ui/NavBar'
 
 /** With Custom Component and Custom Items */
 export default function ExampleSelectMenu() {
   return (
     <Select
-      onSelectClick={selectedItem => selectedItem.selectedItemClick()}
-      customButton={onButtonClick => (
+      onSelectClick={(selectedItem) => selectedItem.selectedItemClick()}
+      customButton={(onButtonClick) => (
         <NavBarMenu
           user={{
             name: 'Courtney Seiter',
@@ -55,5 +55,5 @@ export default function ExampleSelectMenu() {
       marginTop="32px"
       hideSearch
     />
-  );
+  )
 }

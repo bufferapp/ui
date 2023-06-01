@@ -1,10 +1,7 @@
-
-import React from 'react';
-import GoogleIcon from '@bufferapp/ui/Icon/Icons/Google';
+import React from 'react'
+import GoogleIcon from '@bufferapp/ui/Icon/Icons/Google'
 
 /** Google */
 export default function GoogleIconExample() {
-  return (
-    <GoogleIcon size="large" />
-  );
+  return <GoogleIcon size="large" />
 }

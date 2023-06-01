@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import * as Styles from './style';
-import ChevronDown from '../Icon/Icons/ChevronDown';
-import Select from '../Select/Select';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import * as Styles from './style'
+import ChevronDown from '../Icon/Icons/ChevronDown'
+import Select from '../Select/Select'
 
 /*
 Since buttons keep their own inline-block display type, we can only imitate this by using a wrapper (with
@@ -15,23 +15,23 @@ export const ButtonWrapperStyled = styled.div`
   ${Styles.ButtonWrapperBase};
   ${(props) => Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
   ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
-`;
+`
 
 export const ButtonContainerStyled = styled.div`
   ${Styles.ButtonContainerBase};
-`;
+`
 
 export const ButtonStyled = styled.button`
   ${Styles.ButtonNestedBase};
   ${(props) => Styles[props.size]};
   ${(props) => Styles[props.disabled ? 'disabled' : '']};
   ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
-`;
+`
 
 const Loading = styled.img`
   width: 24px;
   margin-left: 10px;
-`;
+`
 
 const VisuallyHiddenLabel = styled.span`
   position: absolute;
@@ -42,7 +42,7 @@ const VisuallyHiddenLabel = styled.span`
   margin: -1px;
   padding: 0;
   border: 0;
-`;
+`
 
 /** All buttons, including text and split-buttons, follow the same core principles in dimensions, padding, and font sizes.
  * Combined with simple modifiers, they can be changed in size and appearance.  */
@@ -134,7 +134,7 @@ const Button = ({
         ))}
     </ButtonContainerStyled>
   </ButtonWrapperStyled>
-);
+)
 
 Button.propTypes = {
   /** Is the button disabled */
@@ -182,7 +182,7 @@ Button.propTypes = {
     PropTypes.shape({
       id: PropTypes.string,
       title: PropTypes.string,
-    })
+    }),
   ),
 
   /** Child element(s) to use for custom Split Button child content */
@@ -211,7 +211,7 @@ Button.propTypes = {
 
   /** onOpen function to fire when the Dropdown menu is open */
   onOpen: PropTypes.func,
-};
+}
 
 Button.defaultProps = {
   disabled: false,
@@ -234,6 +234,6 @@ Button.defaultProps = {
   className: undefined,
   children: undefined,
   onOpen: null,
-};
+}
 
-export default Button;
+export default Button

@@ -1,12 +1,12 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
-import { Flag } from '@bufferapp/ui/Icon';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
+import { Flag } from '@bufferapp/ui/Icon'
 
 /** With Search */
 export default function ExampleSelectWithSearch() {
   return (
     <Select
-      onSelectClick={item => console.info(item)}
+      onSelectClick={(item) => console.info(item)}
       label="Search Me"
       icon={<Flag color="white" />}
       onSearchChange={() => true}
@@ -25,5 +25,5 @@ export default function ExampleSelectWithSearch() {
         { _id: '6', name: 'Closed' },
       ]}
     />
-  );
+  )
 }

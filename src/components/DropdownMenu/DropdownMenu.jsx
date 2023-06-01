@@ -1,90 +1,90 @@
 /* eslint-disable jsx-a11y/role-supports-aria-props */
-import React from 'react';
-import PropTypes from 'prop-types';
-import { DropdownItems, Item } from './style';
-import PopupMenu from './PopupMenu/PopupMenu';
-import { keyCode } from './keyCode';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { DropdownItems, Item } from './style'
+import PopupMenu from './PopupMenu/PopupMenu'
+import { keyCode } from './keyCode'
 
 export default class DropdownMenu extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       isOpen: false,
       usingMouse: false,
-    };
+    }
 
-    this.keyCode = keyCode;
+    this.keyCode = keyCode
 
-    this.handleKeydown = this.handleKeydown.bind(this);
-    this.handlePopupBlur = this.handlePopupBlur.bind(this);
-    this.handleMousedown = this.handleMousedown.bind(this);
+    this.handleKeydown = this.handleKeydown.bind(this)
+    this.handlePopupBlur = this.handlePopupBlur.bind(this)
+    this.handleMousedown = this.handleMousedown.bind(this)
   }
 
   componentDidMount() {
-    this.itemsNode.addEventListener('keydown', this.handleKeydown);
-    this.itemsNode.addEventListener('mousedown', this.handleMousedown);
+    this.itemsNode.addEventListener('keydown', this.handleKeydown)
+    this.itemsNode.addEventListener('mousedown', this.handleMousedown)
   }
 
   componentWillUnmount() {
-    this.itemsNode.removeEventListener('keydown', this.handleKeydown);
-    this.itemsNode.removeEventListener('mousedown', this.handleMousedown);
+    this.itemsNode.removeEventListener('keydown', this.handleKeydown)
+    this.itemsNode.removeEventListener('mousedown', this.handleMousedown)
   }
 
   handleMousedown = () => {
-    this.setState({ usingMouse: true });
-  };
+    this.setState({ usingMouse: true })
+  }
 
   togglePopup = () => {
-    const { isOpen } = this.state;
-    this.setState({ isOpen: !isOpen });
-  };
+    const { isOpen } = this.state
+    this.setState({ isOpen: !isOpen })
+  }
 
-  isPopupOpen = () => this.state.isOpen;
+  isPopupOpen = () => this.state.isOpen
 
   openPopup = () => {
-    this.setState({ isOpen: true });
-  };
+    this.setState({ isOpen: true })
+  }
 
   closePopup = () => {
-    this.setState({ isOpen: false });
-  };
+    this.setState({ isOpen: false })
+  }
 
   handleKeydown = (event) => {
-    let flag = false;
+    let flag = false
     switch (event.keyCode) {
       case this.keyCode.SPACE:
       case this.keyCode.RETURN:
       case this.keyCode.DOWN:
         if (!this.isPopupOpen()) {
-          this.openPopup();
-          flag = true;
+          this.openPopup()
+          flag = true
         }
-        break;
+        break
       case this.keyCode.ESC:
       case this.keyCode.TAB:
-        this.closePopup();
-        break;
+        this.closePopup()
+        break
       default:
-        break;
+        break
     }
 
-    this.setState({ usingMouse: false });
+    this.setState({ usingMouse: false })
 
     if (flag) {
-      event.stopPropagation();
-      event.preventDefault();
+      event.stopPropagation()
+      event.preventDefault()
     }
-  };
+  }
 
   handlePopupBlur = (event) => {
-    const outsideOfPopup = !event.currentTarget.contains(event.relatedTarget);
+    const outsideOfPopup = !event.currentTarget.contains(event.relatedTarget)
     setTimeout(() => {
       if (this.isPopupOpen() && outsideOfPopup) {
-        this.closePopup();
+        this.closePopup()
       }
-    }, 300);
-  };
+    }, 300)
+  }
 
   render() {
     const {
@@ -95,9 +95,9 @@ export default class DropdownMenu extends React.Component {
       horizontalOffset,
       xPosition,
       onOpen,
-    } = this.props;
+    } = this.props
 
-    const MenubarItem = React.cloneElement(menubarItem);
+    const MenubarItem = React.cloneElement(menubarItem)
 
     return (
       <DropdownItems
@@ -115,8 +115,8 @@ export default class DropdownMenu extends React.Component {
             aria-expanded={this.state.isOpen}
             onKeyDown={(ev) => this.handleKeydown(ev)}
             onClick={(ev) => {
-              this.togglePopup();
-              ev.preventDefault();
+              this.togglePopup()
+              ev.preventDefault()
             }}
           />
           <PopupMenu
@@ -133,7 +133,7 @@ export default class DropdownMenu extends React.Component {
           />
         </Item>
       </DropdownItems>
-    );
+    )
   }
 }
 
@@ -159,15 +159,15 @@ DropdownMenu.propTypes = {
         title: PropTypes.string,
         iconHover: PropTypes.string,
       }),
-    })
+    }),
   ).isRequired,
 
   /** onOpen function to fire when the Dropdown menu is open */
   onOpen: PropTypes.func,
-};
+}
 
 DropdownMenu.defaultProps = {
   ariaLabelPopup: null,
   xPosition: 'right',
   onOpen: null,
-};
+}

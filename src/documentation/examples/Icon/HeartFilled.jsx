@@ -1,10 +1,7 @@
-
-import React from 'react';
-import HeartFilledIcon from '@bufferapp/ui/Icon/Icons/HeartFilled';
+import React from 'react'
+import HeartFilledIcon from '@bufferapp/ui/Icon/Icons/HeartFilled'
 
 /** HeartFilled */
 export default function HeartFilledIconExample() {
-  return (
-    <HeartFilledIcon size="large" />
-  );
+  return <HeartFilledIcon size="large" />
 }

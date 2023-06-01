@@ -1,10 +1,7 @@
-
-import React from 'react';
-import CommentSquareOutlineIcon from '@bufferapp/ui/Icon/Icons/CommentSquareOutline';
+import React from 'react'
+import CommentSquareOutlineIcon from '@bufferapp/ui/Icon/Icons/CommentSquareOutline'
 
 /** CommentSquareOutline */
 export default function CommentSquareOutlineIconExample() {
-  return (
-    <CommentSquareOutlineIcon size="large" />
-  );
+  return <CommentSquareOutlineIcon size="large" />
 }

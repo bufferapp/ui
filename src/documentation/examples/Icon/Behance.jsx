@@ -1,10 +1,7 @@
-
-import React from 'react';
-import BehanceIcon from '@bufferapp/ui/Icon/Icons/Behance';
+import React from 'react'
+import BehanceIcon from '@bufferapp/ui/Icon/Icons/Behance'
 
 /** Behance */
 export default function BehanceIconExample() {
-  return (
-    <BehanceIcon size="large" />
-  );
+  return <BehanceIcon size="large" />
 }

@@ -1,10 +1,7 @@
-
-import React from 'react';
-import TextAlignRightIcon from '@bufferapp/ui/Icon/Icons/TextAlignRight';
+import React from 'react'
+import TextAlignRightIcon from '@bufferapp/ui/Icon/Icons/TextAlignRight'
 
 /** TextAlignRight */
 export default function TextAlignRightIconExample() {
-  return (
-    <TextAlignRightIcon size="large" />
-  );
+  return <TextAlignRightIcon size="large" />
 }

@@ -1,10 +1,7 @@
-
-import React from 'react';
-import UnknownIcon from '@bufferapp/ui/Icon/Icons/Unknown';
+import React from 'react'
+import UnknownIcon from '@bufferapp/ui/Icon/Icons/Unknown'
 
 /** Unknown */
 export default function UnknownIconExample() {
-  return (
-    <UnknownIcon size="large" />
-  );
+  return <UnknownIcon size="large" />
 }

@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { ChevronDown } from '../../Icon';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { ChevronDown } from '../../Icon'
 import {
   NavBarStyled,
   NavBarEmail,
@@ -9,20 +9,20 @@ import {
   NavBarAvatar,
   NavBarChavron,
   NavBarImpersonating,
-} from './style';
+} from './style'
 
 export function getUserAvatar(user) {
   if (user.avatar) {
-    return user.avatar;
+    return user.avatar
   }
 
-  return 'https://s3.amazonaws.com/buffer-ui/Default+Avatar.png';
+  return 'https://s3.amazonaws.com/buffer-ui/Default+Avatar.png'
 }
 
 /** NavBar Menu component used by the Select component to show a custom User name and avatar
  *  button */
-const NavBarMenu = props => {
-  const { user, isImpersonation } = props;
+const NavBarMenu = (props) => {
+  const { user, isImpersonation } = props
 
   return (
     <NavBarStyled {...props}>
@@ -43,8 +43,8 @@ const NavBarMenu = props => {
         <ChevronDown color="grayLight" size="large" />
       </NavBarChavron>
     </NavBarStyled>
-  );
-};
+  )
+}
 
 NavBarMenu.propTypes = {
   /** User Name and Email to be shown in the NavBar */
@@ -53,10 +53,10 @@ NavBarMenu.propTypes = {
     email: PropTypes.string.isRequired,
   }).isRequired,
   isImpersonation: PropTypes.bool,
-};
+}
 
 NavBarMenu.defaultProps = {
-  isImpersonation: false
-};
+  isImpersonation: false,
+}
 
-export default NavBarMenu;
+export default NavBarMenu

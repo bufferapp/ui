@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { fontSizeSmall, fontWeightMedium, lineHeight } from '../style/fonts';
-import textColors, * as Colors from '../style/colors';
+import styled from 'styled-components'
+import { fontSizeSmall, fontWeightMedium, lineHeight } from '../style/fonts'
+import textColors, * as Colors from '../style/colors'
 
 export const Tag = styled.span`
   display: flex;
@@ -15,4 +15,4 @@ export const Tag = styled.span`
   &:hover {
     color: ${(props) => textColors[props.textColor]};
   }
-`;
+`

@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { grayLight } from '../style/colors';
+import styled from 'styled-components'
+import { grayLight } from '../style/colors'
 
 export const TitleContainer = styled.div`
   display: flex;
@@ -8,4 +8,4 @@ export const TitleContainer = styled.div`
   padding-right: 8px;
   padding-bottom: 8px;
   border-bottom: 1px solid ${grayLight};
-`;
+`

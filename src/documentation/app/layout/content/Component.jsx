@@ -1,9 +1,9 @@
-import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
-import Example from './components/Example';
-import Props from './components/Props';
-import Heading from './components/Heading';
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+import styled, { css } from 'styled-components'
+import Example from './components/Example'
+import Props from './components/Props'
+import Heading from './components/Heading'
 
 const Wrapper = styled.div`
   margin: 0px;
@@ -15,37 +15,37 @@ const Wrapper = styled.div`
   background: #fff;
   max-width: 100%;
   padding-bottom: 64px;
-`;
+`
 
 const Container = styled.div`
   flex: 1 1 auto;
   min-width: 0px;
   display: flex;
   position: relative;
-`;
+`
 
 const Body = styled.div`
   display: block;
   padding: 0px;
   flex: 1 1 auto;
-`;
+`
 
 const Description = styled.p`
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 40px;
-`;
+`
 
 const PropTitle = styled.h3`
   margin-top: 50px;
   font-size: 24px;
-`;
+`
 
 const ExampleWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: end;
-`;
+`
 
 const IconComponentWrapper = styled.div`
   ${(props) =>
@@ -54,7 +54,7 @@ const IconComponentWrapper = styled.div`
       display: grid;
       grid-template-columns: 1fr 1fr;
     `}
-`;
+`
 
 const ComponentExample = ({ fullscreen, name, folder, id }) => (
   <Fragment>
@@ -85,11 +85,11 @@ const ComponentExample = ({ fullscreen, name, folder, id }) => (
       )}
     </ExampleWrapper>
   </Fragment>
-);
+)
 
 /** Page to display the shared component info taken from .jsx components */
 const Component = ({ component, fullscreen }) => {
-  const { name, description, props, examples, id } = component;
+  const { name, description, props, examples, id } = component
   if (fullscreen) {
     return examples.map((folder, idx) => (
       <ComponentExample
@@ -99,7 +99,7 @@ const Component = ({ component, fullscreen }) => {
         id={id}
         key={idx}
       />
-    ));
+    ))
   }
   return (
     <Wrapper>
@@ -123,8 +123,8 @@ const Component = ({ component, fullscreen }) => {
         </Body>
       </Container>
     </Wrapper>
-  );
-};
+  )
+}
 
 ComponentExample.propTypes = {
   fullscreen: PropTypes.bool,
@@ -136,11 +136,11 @@ ComponentExample.propTypes = {
     name: PropTypes.string.isRequired,
   }).isRequired,
   id: PropTypes.string.isRequired,
-};
+}
 
 ComponentExample.defaultProps = {
   fullscreen: false,
-};
+}
 
 Component.propTypes = {
   /** Whether to show only the component (view: fullscreen) */
@@ -153,10 +153,10 @@ Component.propTypes = {
     code: PropTypes.string.isRequired,
     level: PropTypes.number.isRequired,
   }).isRequired,
-};
+}
 
 Component.defaultProps = {
   fullscreen: false,
-};
+}
 
-export default Component;
+export default Component

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import {
   facebookDark,
   instagramDark,
@@ -6,34 +6,34 @@ import {
   pinterestDark,
   twitterDark,
   white,
-} from '../style/colors';
-import { ButtonBase, large } from '../Button/style';
+} from '../style/colors'
+import { ButtonBase, large } from '../Button/style'
 
 function calculateBgColor(channel) {
   switch (channel) {
     case 'instagram':
-      return instagramDark;
+      return instagramDark
     case 'twitter':
-      return twitterDark;
+      return twitterDark
     case 'facebook':
-      return facebookDark;
+      return facebookDark
     case 'pinterest':
-      return pinterestDark;
+      return pinterestDark
     case 'linkedin':
-      return linkedinDark;
+      return linkedinDark
     default:
-      return 'gray';
+      return 'gray'
   }
 }
 
 export const SocialButtonStyled = styled.button`
   ${ButtonBase};
   ${large};
-  background-color: ${props => calculateBgColor(props.channel)};
+  background-color: ${(props) => calculateBgColor(props.channel)};
   color: ${white};
   width: 100%;
   justify-content: space-between;
-  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
   transition: box-shadow 0.1s ease;
 
@@ -47,9 +47,9 @@ export const SocialButtonStyled = styled.button`
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
     transition: box-shadow 0.1s ease;
   }
-`;
+`
 
 export const ChannelIconContainerStyled = styled.span`
   display: flex;
   align-items: center;
-`;
+`

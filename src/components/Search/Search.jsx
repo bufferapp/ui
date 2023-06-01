@@ -1,38 +1,38 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { SearchInput, SearchWrapper } from './style';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { SearchInput, SearchWrapper } from './style'
 
 /** Search input that filters the Select items and adds keyboard navigation */
 export default class Search extends React.Component {
   state = {
     search: '',
-  };
+  }
 
   componentDidUpdate(prevProps) {
-    if(prevProps.isOpen !== this.props.isOpen){
-      setTimeout(()=> this.inputRef.focus(), 50)
+    if (prevProps.isOpen !== this.props.isOpen) {
+      setTimeout(() => this.inputRef.focus(), 50)
     }
   }
 
   updateSearch = (search) => {
     this.setState({
       search,
-    });
+    })
   }
 
   onChange = (event) => {
-    const { onChange } = this.props;
-    const search = event.target.value;
+    const { onChange } = this.props
+    const search = event.target.value
 
-    onChange(search);
-    this.updateSearch(search);
+    onChange(search)
+    this.updateSearch(search)
   }
 
   clearSearch = () => {
-    const { onChange } = this.props;
+    const { onChange } = this.props
 
-    onChange('');
-    this.updateSearch('');
+    onChange('')
+    this.updateSearch('')
   }
 
   render() {
@@ -42,9 +42,9 @@ export default class Search extends React.Component {
       height,
       clearSearchOnBlur,
       clearSearchOnFocus,
-    } = this.props;
+    } = this.props
 
-    const { search } = this.state;
+    const { search } = this.state
 
     return (
       <SearchWrapper>
@@ -52,15 +52,15 @@ export default class Search extends React.Component {
           placeholder={placeholder}
           type="text"
           value={search}
-          ref={inputRef => this.inputRef = inputRef}
-          onChange={event => this.onChange(event)}
+          ref={(inputRef) => (this.inputRef = inputRef)}
+          onChange={(event) => this.onChange(event)}
           onClick={onClick}
           onBlur={clearSearchOnBlur ? this.clearSearch : undefined}
           onFocus={clearSearchOnFocus ? this.clearSearch : undefined}
           height={height}
         />
       </SearchWrapper>
-    );
+    )
   }
 }
 
@@ -87,8 +87,8 @@ Search.propTypes = {
   clearSearchOnFocus: PropTypes.bool,
 
   /** Is onBlur event */
-  onBlur: PropTypes.func
-};
+  onBlur: PropTypes.func,
+}
 
 Search.defaultProps = {
   placeholder: '',
@@ -97,5 +97,5 @@ Search.defaultProps = {
   clearSearchOnBlur: false,
   clearSearchOnFocus: false,
   onClick: () => {},
-  onBlur: () => {}
+  onBlur: () => {},
 }

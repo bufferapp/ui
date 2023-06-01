@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Checkmark } from '../../Icon';
-import Tooltip from '../../Tooltip';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Checkmark } from '../../Icon'
+import Tooltip from '../../Tooltip'
 import {
   SelectItemStyled,
   SelectItemLabel,
@@ -11,17 +11,17 @@ import {
   IconWrapper,
   HotKeyPrompt,
   Title,
-} from './style';
+} from './style'
 
 const shouldItemMoveRight = (item, hasSelectedItems, hideSearch) =>
   // if the item isn't selected, we need to check if other items are selected in the dropdown or if it has a search bar
   !item.selected &&
   (hasSelectedItems || !hideSearch) &&
   // if it's not selected and it has a custom component, we shouldn't move the item
-  !(item.component && !hasSelectedItems);
+  !(item.component && !hasSelectedItems)
 
 const SelectItemTooltipWrapper = (props) => {
-  const { item, keyMap } = props;
+  const { item, keyMap } = props
   const tooltip = item[keyMap ? keyMap.tooltip : 'tooltip']
 
   return (
@@ -35,7 +35,7 @@ const SelectItemTooltipWrapper = (props) => {
       )}
     </>
   )
-};
+}
 
 const SelectItem = ({
   item,
@@ -49,8 +49,8 @@ const SelectItem = ({
   onItemClick,
 }) => {
   const tooltip = item[keyMap ? keyMap.tooltip : 'tooltip']
-  let title = item[keyMap ? keyMap.title : 'title'];;
-  if (tooltip) title = null;
+  let title = item[keyMap ? keyMap.title : 'title']
+  if (tooltip) title = null
 
   return (
     <SelectItemStyled
@@ -71,7 +71,9 @@ const SelectItem = ({
           </IconWrapper>
         )}
         {!item.iconEnd && item.icon && (
-          <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>{item.icon}</SelectItemIcon>
+          <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>
+            {item.icon}
+          </SelectItemIcon>
         )}
 
         <SelectItemTitle
@@ -88,7 +90,9 @@ const SelectItem = ({
           <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
         </SelectItemTitle>
         {item.iconEnd && item.icon && (
-          <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>{item.icon}</SelectItemIcon>
+          <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>
+            {item.icon}
+          </SelectItemIcon>
         )}
         {item.hotKeyPrompt && (
           <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
@@ -96,7 +100,7 @@ const SelectItem = ({
       </SelectItemLabel>
     </SelectItemStyled>
   )
-};
+}
 
 SelectItem.propTypes = {
   /** Item to render */
@@ -140,7 +144,7 @@ SelectItem.propTypes = {
 
   /** Is it a multi select */
   multiSelect: PropTypes.bool,
-};
+}
 
 SelectItem.defaultProps = {
   hovered: undefined,
@@ -149,6 +153,6 @@ SelectItem.defaultProps = {
   hideSearch: undefined,
   multiSelect: undefined,
   capitalizeItemLabel: true,
-};
+}
 
-export default SelectItemTooltipWrapper;
+export default SelectItemTooltipWrapper

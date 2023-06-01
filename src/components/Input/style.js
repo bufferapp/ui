@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from 'styled-components'
 import {
   blue,
   blueLighter,
@@ -10,22 +10,22 @@ import {
   redLighter,
   redLightest,
   white,
-} from '../style/colors';
-import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts';
-import Text from '../Text';
+} from '../style/colors'
+import { fontFamily, fontSize, fontWeight, lineHeight } from '../style/fonts'
+import Text from '../Text'
 
 const inputPadding = css`
   padding: ${({ size }) => {
     switch (size) {
       case 'small':
-        return '5px 8px 4px 8px';
+        return '5px 8px 4px 8px'
       case 'tall':
-        return '13px 16px 12px 16px';
+        return '13px 16px 12px 16px'
       default:
-        return '9px 8px 8px 8px';
+        return '9px 8px 8px 8px'
     }
   }};
-`;
+`
 
 const inputPrefix = css`
   &:before {
@@ -46,16 +46,16 @@ const inputPrefix = css`
     user-select: none;
     pointer-events: none;
   }
-`;
+`
 
 export const InputWrapper = styled.div`
   width: 100%;
-`;
+`
 
 export const InputFieldWrapper = styled.div`
   position: relative;
   ${({ prefix }) => (prefix ? inputPrefix : '')};
-`;
+`
 
 export const InputStyled = styled.input`
   box-sizing: border-box;
@@ -102,7 +102,7 @@ export const InputStyled = styled.input`
       color: ${grayDark};
     }
   }
-`;
+`
 
 export const HelpTextWrapper = styled.div`
   display: flex;
@@ -110,11 +110,11 @@ export const HelpTextWrapper = styled.div`
   align-items: center;
   justify-content: flex-start;
   color: ${redDark};
-`;
+`
 
 export const HelpText = styled(Text)`
   margin-left: ${(props) => (props.hasError ? '8px' : '0px')};
-`;
+`
 
 export const StyledIcon = styled.div`
   position: absolute;
@@ -122,4 +122,4 @@ export const StyledIcon = styled.div`
   top: 50%;
   transform: translate(0, -50%);
   display: flex;
-`;
+`

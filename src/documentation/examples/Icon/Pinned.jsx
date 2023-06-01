@@ -1,10 +1,7 @@
-
-import React from 'react';
-import PinnedIcon from '@bufferapp/ui/Icon/Icons/Pinned';
+import React from 'react'
+import PinnedIcon from '@bufferapp/ui/Icon/Icons/Pinned'
 
 /** Pinned */
 export default function PinnedIconExample() {
-  return (
-    <PinnedIcon size="large" />
-  );
+  return <PinnedIcon size="large" />
 }

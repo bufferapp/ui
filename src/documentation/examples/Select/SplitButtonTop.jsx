@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
 
 /** Split Button with Select on Top */
 export default function ExampleSplitButtonTop() {
@@ -16,5 +16,5 @@ export default function ExampleSplitButtonTop() {
         { id: '2', title: 'Reply + Close + Assign To Me' },
       ]}
     />
-  );
+  )
 }
