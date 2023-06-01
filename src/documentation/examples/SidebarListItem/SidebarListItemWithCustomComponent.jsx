@@ -7,7 +7,7 @@ export default function ExampleSidebarListItem() {
     <SidebarListItem
       id="1a"
       title="Label Default"
-      icon={
+      icon={(
         <div
           style={{
             background: 'red',
@@ -16,7 +16,7 @@ export default function ExampleSidebarListItem() {
             borderRadius: '4px',
           }}
         />
-      }
+)}
       onItemClick={() => console.info('hey')}
       badges={123}
     />

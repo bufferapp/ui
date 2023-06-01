@@ -70,11 +70,11 @@ export default class Banner extends React.Component {
           <BannerCloseButton>
             <Button
               type="text"
-              icon={
+              icon={(
                 <CrossIcon
                   color={themeColor === 'blue' ? '#fff' : orangeDarker}
                 />
-              }
+)}
               hasIconOnly
               onClick={this.closeBanner}
               label="Close"

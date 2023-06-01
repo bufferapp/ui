@@ -31,7 +31,10 @@ export default function ExampleSimpleModal() {
           <div key="modal1" style={{ width: '300px', padding: '30px' }}>
             <Text type="p">
               This Modal will self destroy in
-              <b>{` `}3 seconds</b>
+              <b>
+                {` `}
+3 seconds
+              </b>
             </Text>
           </div>
         </NonDismissibleModal>
