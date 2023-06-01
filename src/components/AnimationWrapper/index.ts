@@ -1,2 +1,2 @@
 export { default } from './AnimationWrapper'
-export useAnimation from './hook'
+export { default as useAnimation } from './hook'
