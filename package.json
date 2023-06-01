@@ -30,7 +30,7 @@
     "types"
   ],
   "scripts": {
-    "build:lib": "concurrently 'build:commonjs' 'build:copy-files'",
+    "build:lib": "concurrently 'yarn run build:commonjs' 'yarn run build:copy-files'",
     "prebuild:lib": "rimraf lib",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
     "build:copy-files": "node scripts/copyBuildFiles.js",
@@ -50,7 +50,7 @@
     "publish:beta": "node ./scripts/betaPublish.js",
 
     "prestart": "yarn gen:docs",
-    "start": "concurrently 'start:docs' 'gen:docs-watch'",
+    "start": "concurrently 'yarn run start:docs' 'yarn run gen:docs-watch'",
     "start:docs": "node scripts/start.js",
 
     "test": "jest && yarn lint",
