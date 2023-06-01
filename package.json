@@ -1,44 +1,115 @@
 {
   "name": "@bufferapp/ui-template",
   "version": "7.38.6",
-  "engines": {
-    "node": ">=4.0.0"
-  },
-  "main": "./lib/index.js",
-  "types": "./types/index.d.ts",
   "private": true,
   "description": "Shared UI components for buffer apps",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/bufferapp/ui.git"
-  },
-  "author": {
-    "name": "Ivana Zuber",
-    "email": "ivanas.zuber@gmail.com",
-    "url": "https://github.com/ivanaszuber"
-  },
   "keywords": [
     "components",
     "react",
     "react-component",
     "UI"
   ],
+  "homepage": "https://bufferapp.github.io/ui",
+  "bugs": {
+    "url": "https://github.com/bufferapp/ui/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bufferapp/ui.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Ivana Zuber",
+    "email": "ivanas.zuber@gmail.com",
+    "url": "https://github.com/ivanaszuber"
+  },
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
   "files": [
     "lib",
     "types"
   ],
-  "publishConfig": {
-    "access": "public"
+  "scripts": {
+    "prebuild:lib": "rimraf lib",
+    "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
+    "build:copy-files": "node scripts/copyBuildFiles.js",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
+    "build:docs": "node scripts/build.js",
+    "gen:docs": "node scripts/generateComponentData.js",
+    "gen:docs-watch": "yarn gen:docs -- --watch",
+    "predeploy:docs": "yarn gen:docs && yarn build:docs",
+    "deploy:docs": "gh-pages -d build",
+    "lint": "./node_modules/eslint/bin/eslint.js .",
+    "pkg:clean": "rushx pkg:sort && rushx pkg:depcheck",
+    "pkg:depcheck": "depcheck",
+    "pkg:sort": "sort-package-json",
+    "publish": "./scripts/publish.sh",
+    "publish:beta": "node ./scripts/betaPublish.js",
+    "prestart": "yarn gen:docs",
+    "start": "npm-run-all --parallel start:docs gen:docs-watch",
+    "start:docs": "node scripts/start.js",
+    "test": "jest && yarn lint",
+    "test-update": "jest --no-coverage -u",
+    "test-watch": "jest --no-coverage --watch",
+    "component:new": "node ./scripts/newComponent.js",
+    "gen:icons": "node ./scripts/generateIconComponents.js && eslint src/components/Icon/Icons/** --fix"
   },
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/bufferapp/ui/issues"
+  "babel": {
+    "env": {
+      "production": {
+        "plugins": [
+          [
+            "babel-plugin-styled-components",
+            {
+              "pure": true,
+              "namespace": "bufferapp-ui",
+              "minify": true
+            }
+          ]
+        ]
+      }
+    },
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-export-default-from"
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "@babel/react"
+    ]
   },
-  "homepage": "https://bufferapp.github.io/ui",
-  "peerDependencies": {
-    "react": ">= 16.8.0",
-    "react-dom": ">= 16.8.0",
-    "styled-components": "^5.3.0"
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/components/**/*.{js,jsx}",
+      "!src/components/**/style.js",
+      "!src/components/**/index.js"
+    ],
+    "coverageDirectory": "./coverage/",
+    "moduleNameMapper": {
+      "./src(.*)$": "<rootDir>/src/$1",
+      "\\/tooltip/styles.(css|scss)$": "identity-obj-proxy"
+    },
+    "setupFiles": [
+      "react-app-polyfill/jsdom"
+    ],
+    "testEnvironment": "jsdom",
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
+    ],
+    "testURL": "http://localhost"
   },
   "dependencies": {
     "@reach/tooltip": "0.13.0",
@@ -68,9 +139,9 @@
     "case-sensitive-paths-webpack-plugin": "2.1.2",
     "chalk": "2.4.1",
     "chokidar": "2.0.4",
-    "cpx": "1.5.0",
     "cross-env": "5.2.0",
     "css-loader": "1.0.0",
+    "depcheck": "~1.4.3",
     "dotenv": "6.0.0",
     "dotenv-expand": "4.2.0",
     "enzyme": "3.7.0",
@@ -78,9 +149,7 @@
     "eslint": "5.6.0",
     "eslint-config-airbnb": "17.1.0",
     "eslint-config-prettier": "3.6.0",
-    "eslint-config-react-app": "3.0.5",
     "eslint-loader": "2.1.1",
-    "eslint-plugin-flowtype": "2.50.1",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.2",
     "eslint-plugin-prettier": "3.0.1",
@@ -93,11 +162,9 @@
     "highlight.js": "10.4.1",
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
-    "indent-string": "3.2.0",
     "inquirer": "6.2.1",
     "jest": "^24.7.1",
     "jest-auto-snapshots": "=3.0.1",
-    "jest-resolve": "=23.6.0",
     "jest-styled-components": "^7.0.5",
     "markdown-to-jsx": "^6.11.4",
     "mini-css-extract-plugin": "0.4.3",
@@ -125,6 +192,7 @@
     "resolve": "1.8.1",
     "rimraf": "2.6.2",
     "sass-loader": "7.1.0",
+    "sort-package-json": "~2.4.1",
     "style-loader": "0.23.0",
     "svgo": "1.1.1",
     "terser-webpack-plugin": "^4.1.0",
@@ -135,83 +203,15 @@
     "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.3"
   },
-  "scripts": {
-    "prestart": "yarn gen:docs",
-    "start": "npm-run-all --parallel start:docs gen:docs-watch",
-    "start:docs": "node scripts/start.js",
-    "gen:docs": "node scripts/generateComponentData.js",
-    "gen:docs-watch": "yarn gen:docs -- --watch",
-    "build:docs": "node scripts/build.js",
-    "lint": "./node_modules/eslint/bin/eslint.js .",
-    "test": "jest && yarn lint",
-    "test-update": "jest --no-coverage -u",
-    "test-watch": "jest --no-coverage --watch",
-    "predeploy:docs": "yarn gen:docs && yarn build:docs",
-    "deploy:docs": "gh-pages -d build",
-    "prebuild:lib": "rimraf lib",
-    "build:lib": "npm-run-all --parallel build:commonjs build:copy-files",
-    "build:copy-files": "node scripts/copyBuildFiles.js",
-    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
-    "publish": "./scripts/publish.sh",
-    "beta:publish": "node ./scripts/betaPublish.js",
-    "component:new": "node ./scripts/newComponent.js",
-    "gen:icons": "node ./scripts/generateIconComponents.js && eslint src/components/Icon/Icons/** --fix"
+  "peerDependencies": {
+    "react": ">= 16.8.0",
+    "react-dom": ">= 16.8.0",
+    "styled-components": "^5.3.0"
   },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ],
-  "jest": {
-    "collectCoverageFrom": [
-      "src/components/**/*.{js,jsx}",
-      "!src/components/**/style.js",
-      "!src/components/**/index.js"
-    ],
-    "coverageDirectory": "./coverage/",
-    "collectCoverage": true,
-    "setupFiles": [
-      "react-app-polyfill/jsdom"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
-    ],
-    "testEnvironment": "jsdom",
-    "testURL": "http://localhost",
-    "moduleNameMapper": {
-      "./src(.*)$": "<rootDir>/src/$1",
-      "\\/tooltip/styles.(css|scss)$": "identity-obj-proxy"
-    }
+  "engines": {
+    "node": ">=14.0.0"
   },
-  "babel": {
-    "plugins": [
-      "@babel/plugin-transform-modules-commonjs",
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-export-default-from"
-    ],
-    "env": {
-      "production": {
-        "plugins": [
-          [
-            "babel-plugin-styled-components",
-            {
-              "pure": true,
-              "namespace": "bufferapp-ui",
-              "minify": true
-            }
-          ]
-        ]
-      }
-    },
-    "presets": [
-      "@babel/preset-env",
-      "@babel/react"
-    ]
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
+  "publishConfig": {
+    "access": "public"
   }
 }
