@@ -49,7 +49,7 @@ describe('DropdownMenu component', () => {
     expect(wrapper.state().isOpen).toBe(true)
 
     const menuItems = wrapper.find('button')
-    expect(menuItems.length).toBe(4)
+    expect(menuItems).toHaveLength(4)
 
     const firstButton = menuItems.at(0)
     firstButton.simulate('click')
