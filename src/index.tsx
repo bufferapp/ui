@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import '../node_modules/highlight.js/styles/ocean.css'
+import 'highlight.js/styles/ocean.css'
 import { HashRouter as Router } from 'react-router-dom'
 import App from './documentation/App'
 

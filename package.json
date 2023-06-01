@@ -30,6 +30,7 @@
     "types"
   ],
   "scripts": {
+    "build:typescript": "rm -Rf built && tsc -p ./tsconfig.json",
     "build:lib": "concurrently 'yarn run build:commonjs' 'yarn run build:copy-files'",
     "prebuild:lib": "rimraf lib",
     "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",

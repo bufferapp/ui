@@ -29,8 +29,8 @@ yarn-error.log*
 /docs
 
 # Generated component data
-/config/componentData.js
-/config/documentsData.js
+/src/documentation/config/componentData.json
+/src/documentation/config/documentsData.json
 
 # Webstorm
 .idea

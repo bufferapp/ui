@@ -5,15 +5,13 @@ import styled from 'styled-components'
 import Markdown from './layout/content/Markdown'
 import Sidebar from './layout/sidebar/Sidebar'
 import Component from './layout/content/Component'
-// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module '../.... Remove this comment to see the full error message
-import componentData from '../../../config/componentData'
-// @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module '../.... Remove this comment to see the full error message
-import documentationData from '../../../config/documentsData'
+import componentData from '../config/componentData.json'
+import documentationData from '../config/documentsData.json'
 import NavBar from './layout/navbar/NavBar'
 import Home from './Home'
 // @ts-expect-error TS(2307) FIXME: Cannot find module '../markdown/UI.md' or its corr... Remove this comment to see the full error message
 import UIComponent from '../markdown/UI.md'
-import pckage from '../../../package.json'
+// import pckage from '../../../package.json'
 
 const Container = styled.div`
   width: 100%;
@@ -146,8 +144,7 @@ export default class AppContainer extends React.Component {
     // if there's no component specified, just show the first component in the list
     const component =
       location === 'ui'
-        ? // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
-          componentData.children.filter((x) => x.id === route)[0]
+        ? componentData.children.filter((x) => x.id === route)[0]
         : null
 
     // concatenate the documentation data and the components data
@@ -157,13 +154,11 @@ export default class AppContainer extends React.Component {
     // from the documentation data, find the current page parent
     // in order to be able to identify the child we need to show on the page
     const pageParents = documentationData.filter(
-      // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
       (x) => x.fileName === location,
     )[0]
 
     // find the child page we need to show
     const page =
-      // @ts-expect-error TS(7006) FIXME: Parameter 'x' implicitly has an 'any' type.
       pageParents && pageParents.children.filter((x) => x.id === route)[0]
 
     // dynamically import the documentation component
@@ -172,12 +167,13 @@ export default class AppContainer extends React.Component {
       page && require(`../markdown/${location}/${page.fileName}.md`)
 
     if (view === 'fullscreen') {
+      // @ts-ignore
       return <Component component={component} fullscreen />
     }
 
     return (
       <Container>
-        <NavBar title="Buffer UI" version={pckage.version} />
+        <NavBar title="Buffer UI" version={'pckage.version'} />
         <Wrapper>
           {/* @ts-expect-error TS(2322) FIXME: Type '{ navigationLinks: any[]; route: any; }' is ... Remove this comment to see the full error message */}
           <Sidebar navigationLinks={navigationLinks} route={route} />

@@ -9,8 +9,16 @@ const paths = {
   examples: path.join(__dirname, '../src', 'documentation', 'examples'),
   documents: path.join(__dirname, '../src', 'documentation', 'markdown'),
   components: path.join(__dirname, '../src', 'components'),
-  output: path.join(__dirname, '../config', 'componentData.js'),
-  documentsOutput: path.join(__dirname, '../config', 'documentsData.js'),
+  output: path.join(
+    __dirname,
+    '../src/documentation/config',
+    'componentData.json',
+  ),
+  documentsOutput: path.join(
+    __dirname,
+    '../src/documentation/config',
+    'documentsData.json',
+  ),
 }
 
 // some of the folders in components are not actual components, so ignore them
@@ -205,9 +213,7 @@ function generate(componentPaths) {
   // write the array of data to our output file
   writeFile(
     componentPaths.output,
-    `module.exports = ${JSON.stringify(
-      errors.length ? errors : componentData,
-    )}`,
+    `${JSON.stringify(errors.length ? errors : componentData)}`,
   )
 }
 
@@ -220,9 +226,7 @@ function generateDocumentation(documentPaths) {
   // write the array of data to our output file
   writeFile(
     documentPaths.documentsOutput,
-    `module.exports = ${JSON.stringify(
-      errors.length ? errors : documentsData,
-    )}`,
+    `${JSON.stringify(errors.length ? errors : documentsData)}`,
   )
 }
 
