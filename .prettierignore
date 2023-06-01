@@ -30,6 +30,7 @@ yarn-error.log*
 
 # Generated component data
 /config/componentData.js
+/config/documentsData.js
 
 # Webstorm
 .idea

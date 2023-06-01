@@ -94,7 +94,6 @@ checkBrowsers(paths.appPath, isInteractive)
       console.info(chalk.cyan('Starting the development server...\n'))
       openBrowser(urls.localUrlForBrowser)
     })
-
     ;['SIGINT', 'SIGTERM'].forEach((sig) => {
       process.on(sig, () => {
         devServer.close()

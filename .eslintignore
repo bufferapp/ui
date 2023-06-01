@@ -4,3 +4,5 @@ config/
 coverage/
 lib/
 types/
+/config/componentData.js
+/config/documentsData.js
