@@ -1,5 +1,0 @@
-import snap from 'jest-auto-snapshots';
-import 'jest-styled-components';
-import SidebarHeader from './SidebarHeader';
-snap(SidebarHeader, './SidebarHeader.jsx');
-//# sourceMappingURL=SidebarHeader.spec.js.map

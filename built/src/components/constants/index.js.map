@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../../src/components/constants/index.ts"],"names":[],"mappings":"AAAA,MAAM,CAAC,MAAM,cAAc,GAAG;IAC5B,UAAU;IACV,SAAS;IACT,WAAW;IACX,UAAU;IACV,QAAQ;CACT,CAAA","sourcesContent":["export const socialNetworks = [\n  'facebook',\n  'twitter',\n  'instagram',\n  'linkedin',\n  'google',\n]\n"]}
