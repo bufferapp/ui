@@ -1,5 +1,5 @@
-import React from 'react';
-import SidebarListItem from '@bufferapp/ui/SidebarListItem';
+import React from 'react'
+import SidebarListItem from '@bufferapp/ui/SidebarListItem'
 
 /** SidebarListItem With Custom Component Example */
 export default function ExampleSidebarListItem() {
@@ -20,5 +20,5 @@ export default function ExampleSidebarListItem() {
       onItemClick={() => console.info('hey')}
       badges={123}
     />
-  );
+  )
 }

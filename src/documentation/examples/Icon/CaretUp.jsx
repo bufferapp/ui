@@ -1,10 +1,7 @@
-
-import React from 'react';
-import CaretUpIcon from '@bufferapp/ui/Icon/Icons/CaretUp';
+import React from 'react'
+import CaretUpIcon from '@bufferapp/ui/Icon/Icons/CaretUp'
 
 /** CaretUp */
 export default function CaretUpIconExample() {
-  return (
-    <CaretUpIcon size="large" />
-  );
+  return <CaretUpIcon size="large" />
 }

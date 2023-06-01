@@ -1,12 +1,12 @@
-import React from 'react';
-import States from '@bufferapp/ui/States';
-import styled from 'styled-components';
+import React from 'react'
+import States from '@bufferapp/ui/States'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   height: 426px;
   width: 480px;
   border: 1px solid black;
-`;
+`
 
 /** States Small without Buttons Example */
 export default function ExampleStates() {
@@ -24,5 +24,5 @@ export default function ExampleStates() {
         </States.Description>
       </States>
     </Wrapper>
-  );
+  )
 }

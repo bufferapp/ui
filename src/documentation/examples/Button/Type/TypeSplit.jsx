@@ -1,5 +1,5 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
 
 /** Split Button */
 export default function ExampleSplitButton() {
@@ -15,5 +15,5 @@ export default function ExampleSplitButton() {
       ]}
       label="Click Me"
     />
-  );
+  )
 }

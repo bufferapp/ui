@@ -1,1 +1,1 @@
-export { default } from './ComponentNamePlaceholder';
+export { default } from './ComponentNamePlaceholder'

@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 import {
   Container,
   Text,
@@ -7,18 +7,16 @@ import {
   TextRow,
   ButtonsRow,
   ButtonStyled,
-} from './style';
-import { useAnimation } from '../AnimationWrapper';
-import { stageInTop, fadeOut } from '../style/animations';
+} from './style'
+import { useAnimation } from '../AnimationWrapper'
+import { stageInTop, fadeOut } from '../style/animations'
 
-function Notification({
-  text,
-  onClose,
-  type,
-  action,
-  secondaryAction,
-}) {
-  const { AnimationWrapper, dismiss:dismissAnimationWrapper, animationProps } = useAnimation({
+function Notification({ text, onClose, type, action, secondaryAction }) {
+  const {
+    AnimationWrapper,
+    dismiss: dismissAnimationWrapper,
+    animationProps,
+  } = useAnimation({
     justify: 'flex-end',
     stageInAnimation: stageInTop,
     stageOutAnimation: fadeOut,
@@ -35,19 +33,24 @@ function Notification({
         {type === 'action' && (
           <ButtonsRow>
             {action && (
-              <ButtonStyled onClick={action.callback} label={action.label} type="text" />
+              <ButtonStyled
+                onClick={action.callback}
+                label={action.label}
+                type="text"
+              />
             )}
             {secondaryAction && (
               <ButtonStyled
                 onClick={secondaryAction.callback}
                 label={secondaryAction.label}
                 type="text"
-              />)}
+              />
+            )}
           </ButtonsRow>
         )}
       </Container>
     </AnimationWrapper>
-  );
+  )
 }
 
 Notification.propTypes = {
@@ -72,12 +75,12 @@ Notification.propTypes = {
     disabled: PropTypes.bool,
     callback: PropTypes.func,
   }),
-};
+}
 
 Notification.defaultProps = {
   type: 'text',
   action: undefined,
   secondaryAction: undefined,
-};
+}
 
-export default Notification;
+export default Notification

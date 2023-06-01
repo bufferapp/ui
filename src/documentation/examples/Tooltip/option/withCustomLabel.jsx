@@ -1,13 +1,13 @@
-import React from 'react';
-import Tooltip from '@bufferapp/ui/Tooltip';
-import Avatar from '@bufferapp/ui/Avatar'; // eslint-disable-line
+import React from 'react'
+import Tooltip from '@bufferapp/ui/Tooltip'
+import Avatar from '@bufferapp/ui/Avatar' // eslint-disable-line
 
 const customLabel = (
   <div>
-    <span style={{ color: '#21F32A'}}>0.4%</span>
+    <span style={{ color: '#21F32A' }}>0.4%</span>
     <p style={{ display: 'inline' }}> potential reach</p>
   </div>
-);
+)
 
 /** With CustomLabel */
 export default function ExampleTooltip() {
@@ -19,5 +19,5 @@ export default function ExampleTooltip() {
         size="medium"
       />
     </Tooltip>
-  );
+  )
 }

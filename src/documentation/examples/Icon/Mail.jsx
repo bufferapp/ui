@@ -1,10 +1,7 @@
-
-import React from 'react';
-import MailIcon from '@bufferapp/ui/Icon/Icons/Mail';
+import React from 'react'
+import MailIcon from '@bufferapp/ui/Icon/Icons/Mail'
 
 /** Mail */
 export default function MailIconExample() {
-  return (
-    <MailIcon size="large" />
-  );
+  return <MailIcon size="large" />
 }

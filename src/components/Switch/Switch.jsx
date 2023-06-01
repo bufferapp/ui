@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Input, Span, Wrapper, Container } from './style';
-import Text from '../Text/Text';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Input, Span, Wrapper, Container } from './style'
+import Text from '../Text/Text'
 
 const Switch = ({ label, id, disabled, handleSwitch, isOn }) => (
   <Container>
@@ -22,7 +22,7 @@ const Switch = ({ label, id, disabled, handleSwitch, isOn }) => (
       <Span aria-hidden="true" />
     </Wrapper>
   </Container>
-);
+)
 
 Switch.propTypes = {
   /** It adds a label to the left of the switch. */
@@ -35,11 +35,11 @@ Switch.propTypes = {
   disabled: PropTypes.bool,
   /** It changes the checked value of the switch */
   handleSwitch: PropTypes.func.isRequired,
-};
+}
 
 Switch.defaultProps = {
   disabled: false,
   isOn: false,
-};
+}
 
-export default Switch;
+export default Switch

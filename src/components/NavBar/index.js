@@ -1,2 +1,2 @@
-export { default } from './NavBar';
-export NavBarMenu from './NavBarMenu/NavBarMenu';
+export { default } from './NavBar'
+export NavBarMenu from './NavBarMenu/NavBarMenu'

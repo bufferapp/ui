@@ -1,5 +1,5 @@
-import React from 'react';
-import SidebarListItem from '@bufferapp/ui/SidebarListItem';
+import React from 'react'
+import SidebarListItem from '@bufferapp/ui/SidebarListItem'
 
 /** SidebarListItem With Custom Badge Example */
 export default function SidebarListItemWithCustomBadge() {
@@ -16,13 +16,13 @@ export default function SidebarListItemWithCustomBadge() {
             borderRadius: '4px',
           }}
         />
-      )}
+)}
       onItemClick={() => console.info('hey')}
       badges={(
         <span>
           <b style={{ color: 'rebeccapurple' }}>NEW</b>
         </span>
-      )}
+)}
     />
-  );
+  )
 }

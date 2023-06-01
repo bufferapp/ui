@@ -1,12 +1,12 @@
-import React from 'react';
-import styled from 'styled-components';
-import PropTypes from 'prop-types';
-import MarkdownToJsx from 'markdown-to-jsx';
-import LinkCard from './components/LinkCard';
-import Heading from './components/Heading';
-import InfoCard from './components/InfoCard';
-import LinkItem from './components/LinkItem';
-import ColorCopy from './components/ColorCopy';
+import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
+import MarkdownToJsx from 'markdown-to-jsx'
+import LinkCard from './components/LinkCard'
+import Heading from './components/Heading'
+import InfoCard from './components/InfoCard'
+import LinkItem from './components/LinkItem'
+import ColorCopy from './components/ColorCopy'
 
 const LinkWrapper = styled.div`
   width: 100%;
@@ -19,13 +19,13 @@ const LinkWrapper = styled.div`
   grid-column-gap: 24px;
   grid-row-gap: 24px;
   background: #ffffff;
-`;
+`
 
 const Paragraph = styled.p`
   font-size: 16px;
   line-height: 1.625;
   font-weight: 400;
-`;
+`
 
 const ColorRow = styled.div`
   display: flex;
@@ -33,7 +33,7 @@ const ColorRow = styled.div`
   flex-wrap: wrap;
   flex-direction: row;
   margin-bottom: 20px;
-`;
+`
 
 const ColorColumn = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ const ColorColumn = styled.div`
   flex-direction: column;
   margin-right: 10px;
   flex-grow: 1;
-`;
+`
 
 const CodeBlock = styled.pre`
   counter-reset: line 0;
@@ -55,7 +55,7 @@ const CodeBlock = styled.pre`
   padding: 15px 20px;
   border-radius: 3px;
   margin: 15px 0;
-`;
+`
 
 /**
  * The images in the Markdown docs are retina (@2x) size
@@ -64,13 +64,13 @@ const CodeBlock = styled.pre`
 const Img = styled.img`
   zoom: 0.5;
   max-width: 100%;
-`;
+`
 
 /** Component Used to show the Markdown file content and replace elements with our own custom shared component */
 export default class Markdown extends React.Component {
   render() {
-    const DocHeading = ({ children, ...props }) => <Heading {...props} />;
-    const { page, component, links } = this.props;
+    const DocHeading = ({ children, ...props }) => <Heading {...props} />
+    const { page, component, links } = this.props
 
     return [
       <MarkdownToJsx
@@ -105,11 +105,11 @@ export default class Markdown extends React.Component {
       </MarkdownToJsx>,
       <LinkWrapper>
         {links[0] &&
-          links.map(link => (
+          links.map((link) => (
             <LinkCard name={link.name} id={link.id} key={link.id} />
           ))}
       </LinkWrapper>,
-    ];
+    ]
   }
 }
 
@@ -118,4 +118,4 @@ Markdown.propTypes = {
   page: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
-};
+}

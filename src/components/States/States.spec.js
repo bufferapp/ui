@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-filename-extension */
-import snap from 'jest-auto-snapshots';
-import 'jest-styled-components';
+import snap from 'jest-auto-snapshots'
+import 'jest-styled-components'
 
-import States from './States';
+import States from './States'
 
-snap(States, './States.jsx');
+snap(States, './States.jsx')

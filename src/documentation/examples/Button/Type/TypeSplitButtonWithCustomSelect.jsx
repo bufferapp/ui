@@ -1,6 +1,6 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
-import UISelect from '@bufferapp/ui/Select';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
+import UISelect from '@bufferapp/ui/Select'
 
 class Select extends UISelect {
   handleSelectOption = (option, event) => {
@@ -14,12 +14,7 @@ class Select extends UISelect {
 /** Split Button With Custom Select */
 export default function ExampleSplitButtonWithCustomSelect() {
   return (
-    <Button
-      onClick={() => true}
-      type="primary"
-      isSplit
-      label="Click Me"
-    >
+    <Button onClick={() => true} type="primary" isSplit label="Click Me">
       <Select
         onSelectClick={() => true}
         items={[
@@ -32,5 +27,5 @@ export default function ExampleSplitButtonWithCustomSelect() {
         hideSearch
       />
     </Button>
-  );
+  )
 }

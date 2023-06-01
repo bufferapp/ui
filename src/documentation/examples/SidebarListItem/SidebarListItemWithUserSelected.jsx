@@ -1,5 +1,5 @@
-import React from 'react';
-import SidebarListItem from '@bufferapp/ui/SidebarListItem';
+import React from 'react'
+import SidebarListItem from '@bufferapp/ui/SidebarListItem'
 
 /** SidebarListItem With User Selected Example */
 export default function ExampleSidebarListItem() {
@@ -9,7 +9,7 @@ export default function ExampleSidebarListItem() {
     handle: '@joelgascogine',
     profileImageUrl: 'http://i.pravatar.cc/64?img=60',
     network: 'instagram',
-  };
+  }
 
   return (
     <SidebarListItem
@@ -20,5 +20,5 @@ export default function ExampleSidebarListItem() {
       user={userMock}
       selected
     />
-  );
+  )
 }

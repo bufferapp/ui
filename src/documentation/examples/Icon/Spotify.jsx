@@ -1,10 +1,7 @@
-
-import React from 'react';
-import SpotifyIcon from '@bufferapp/ui/Icon/Icons/Spotify';
+import React from 'react'
+import SpotifyIcon from '@bufferapp/ui/Icon/Icons/Spotify'
 
 /** Spotify */
 export default function SpotifyIconExample() {
-  return (
-    <SpotifyIcon size="large" />
-  );
+  return <SpotifyIcon size="large" />
 }

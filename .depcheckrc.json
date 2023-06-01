@@ -1,0 +1,14 @@
+{
+  "ignores": [
+    "babel-core",
+    "babel-jest",
+    "babel-plugin-module-resolver",
+    "identity-obj-proxy",
+    "raw-loader",
+    "sass-loader",
+    "sort-package-json",
+    "webpack-bundle-analyzer",
+    "@bufferapp/ui"
+  ],
+  "ignore-patterns": ["dist", "built", "temp", "coverage", "lib-commonjs", "lib"]
+}

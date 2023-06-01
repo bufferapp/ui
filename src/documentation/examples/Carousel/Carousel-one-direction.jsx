@@ -1,5 +1,5 @@
-import React from 'react';
-import Carousel from '@bufferapp/ui/Carousel';
+import React from 'react'
+import Carousel from '@bufferapp/ui/Carousel'
 
 /** Carousel One Direction Example */
 export default function ExampleCarousel() {
@@ -21,5 +21,5 @@ export default function ExampleCarousel() {
         width="400"
       />
     </Carousel>
-  );
+  )
 }

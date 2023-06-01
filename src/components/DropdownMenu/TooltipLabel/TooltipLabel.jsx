@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 const LabelWrapper = styled.div`
   display: flex;
@@ -13,29 +13,29 @@ const LabelWrapper = styled.div`
   max-width: 160px;
   padding-top: 4px;
   padding-bottom: 4px;
-`;
+`
 
 export const Label = styled.div`
   width: 127px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: ${props => (props.hasIcon ? '7px' : 0)};
-`;
+  margin-left: ${(props) => (props.hasIcon ? '7px' : 0)};
+`
 
 export const EmptyLabel = styled.div`
   white-space: break-spaces;
   padding-top: 50px;
   padding-bottom: 50px;
   height: auto;
-`;
+`
 
 const TooltipLabel = ({ items, maxItems, defaultMessage }) => {
-  if (!items && !defaultMessage) return null;
+  if (!items && !defaultMessage) return null
 
-  const totalItems = items.length;
-  const exceedsTotal = totalItems > maxItems;
-  const remainingItems = totalItems - maxItems;
+  const totalItems = items.length
+  const exceedsTotal = totalItems > maxItems
+  const remainingItems = totalItems - maxItems
 
   return (
     <>
@@ -56,8 +56,8 @@ const TooltipLabel = ({ items, maxItems, defaultMessage }) => {
         </LabelWrapper>
       )}
     </>
-  );
-};
+  )
+}
 
 TooltipLabel.propTypes = {
   /** Items list to display in the tooltip */
@@ -65,14 +65,14 @@ TooltipLabel.propTypes = {
     PropTypes.shape({
       title: PropTypes.string,
       icon: PropTypes.node,
-    })
+    }),
   ),
   defaultMessage: PropTypes.string,
-};
+}
 
 TooltipLabel.defaultProps = {
   items: [],
   defaultMessage: null,
-};
+}
 
-export default TooltipLabel;
+export default TooltipLabel

@@ -1,6 +1,5 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
-
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
 
 /** Basic Disabled */
 export default function ExampleSelectDisabled() {
@@ -19,5 +18,5 @@ export default function ExampleSelectDisabled() {
         { _id: '3', name: 'Closed' },
       ]}
     />
-  );
+  )
 }

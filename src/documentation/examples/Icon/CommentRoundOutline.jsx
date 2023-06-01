@@ -1,10 +1,7 @@
-
-import React from 'react';
-import CommentRoundOutlineIcon from '@bufferapp/ui/Icon/Icons/CommentRoundOutline';
+import React from 'react'
+import CommentRoundOutlineIcon from '@bufferapp/ui/Icon/Icons/CommentRoundOutline'
 
 /** CommentRoundOutline */
 export default function CommentRoundOutlineIconExample() {
-  return (
-    <CommentRoundOutlineIcon size="large" />
-  );
+  return <CommentRoundOutlineIcon size="large" />
 }

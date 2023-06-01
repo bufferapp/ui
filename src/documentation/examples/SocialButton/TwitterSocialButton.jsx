@@ -1,5 +1,5 @@
-import React from 'react';
-import SocialButton from '@bufferapp/ui/SocialButton';
+import React from 'react'
+import SocialButton from '@bufferapp/ui/SocialButton'
 
 /** Twitter Social Button */
 export default function ExampleSocialButton() {
@@ -7,5 +7,5 @@ export default function ExampleSocialButton() {
     <div style={{ position: 'relative' }}>
       <SocialButton channel="twitter" onClick={() => {}} />
     </div>
-  );
+  )
 }

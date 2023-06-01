@@ -1,13 +1,13 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
-import { NavBarMenu } from '@bufferapp/ui/NavBar';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
+import { NavBarMenu } from '@bufferapp/ui/NavBar'
 
 /** With Custom Component */
 export default function ExampleSelectMenu() {
   return (
     <Select
       onSelectClick={() => console.info('Selected')}
-      customButton={onButtonClick => (
+      customButton={(onButtonClick) => (
         <NavBarMenu
           user={{
             name: 'Courtney Seiter',
@@ -24,5 +24,5 @@ export default function ExampleSelectMenu() {
       marginTop="32px"
       hideSearch
     />
-  );
+  )
 }

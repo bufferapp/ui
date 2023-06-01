@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import {
   Badge,
   BadgeIconContainer,
@@ -10,8 +10,8 @@ import {
   LabelContainer,
   LabelStyled,
   NameHandleWrapper,
-} from './style';
-import Avatar from '../Avatar/Avatar';
+} from './style'
+import Avatar from '../Avatar/Avatar'
 
 const SidebarListItem = ({
   title,
@@ -65,7 +65,7 @@ const SidebarListItem = ({
       <BadgeIconContainer selected={selected}>{badgeIcon}</BadgeIconContainer>
     )}
   </ItemStyled>
-);
+)
 
 SidebarListItem.propTypes = {
   /** The id of the element */
@@ -105,7 +105,7 @@ SidebarListItem.propTypes = {
       'youtube',
     ]),
   }),
-};
+}
 
 SidebarListItem.defaultProps = {
   id: '',
@@ -115,6 +115,6 @@ SidebarListItem.defaultProps = {
   selected: null,
   user: null,
   className: null,
-};
+}
 
-export default SidebarListItem;
+export default SidebarListItem

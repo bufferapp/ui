@@ -1,10 +1,7 @@
-
-import React from 'react';
-import TitleIcon from '@bufferapp/ui/Icon/Icons/Title';
+import React from 'react'
+import TitleIcon from '@bufferapp/ui/Icon/Icons/Title'
 
 /** Title */
 export default function TitleIconExample() {
-  return (
-    <TitleIcon size="large" />
-  );
+  return <TitleIcon size="large" />
 }

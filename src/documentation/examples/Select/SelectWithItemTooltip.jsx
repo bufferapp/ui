@@ -1,5 +1,5 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
 
 /** With Item Tooltip */
 export default function ExampleSelect() {
@@ -15,5 +15,5 @@ export default function ExampleSelect() {
       position="right"
       hideSearch
     />
-  );
+  )
 }

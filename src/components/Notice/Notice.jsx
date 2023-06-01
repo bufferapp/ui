@@ -1,11 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { borderRadius } from '../style/borders';
-import { fontSize } from '../style/fonts';
-import Warning from '../Icon/Icons/Warning';
-import Cross from '../Icon/Icons/Cross';
-import Buffer from '../Icon/Icons/Buffer';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { borderRadius } from '../style/borders'
+import { fontSize } from '../style/fonts'
+import Warning from '../Icon/Icons/Warning'
+import Cross from '../Icon/Icons/Cross'
+import Buffer from '../Icon/Icons/Buffer'
 import {
   grayDark,
   grayLighter,
@@ -19,9 +19,9 @@ import {
   yellowLightest,
   yellowDark,
   yellowDarker,
-} from '../style/colors';
-import { useAnimation } from '../AnimationWrapper';
-import { stageInRight, fadeOut } from '../style/animations';
+} from '../style/colors'
+import { useAnimation } from '../AnimationWrapper'
+import { stageInRight, fadeOut } from '../style/animations'
 
 const colorMap = {
   alert: {
@@ -44,7 +44,7 @@ const colorMap = {
     background: purpleLightest,
     color: purpleDarker,
   },
-};
+}
 
 const NoticeWrapper = styled.div`
   border: ${(props) => `1px solid ${colorMap[props.type].border}`};
@@ -58,21 +58,21 @@ const NoticeWrapper = styled.div`
   align-items: center;
   position: relative;
   width: 100%;
-`;
+`
 
 const WarningIcon = styled(Warning)`
   display: block;
   margin-right: 12px;
   flex: 1 0 auto;
   max-width: 16px;
-`;
+`
 
 const BufferIcon = styled(Buffer)`
   display: block;
   margin-right: 12px;
   flex: 1 0 auto;
   max-width: 16px;
-`;
+`
 
 const CloseButton = styled.button`
   color: ${(props) => colorMap[props.type].color};
@@ -89,7 +89,7 @@ const CloseButton = styled.button`
     opacity: 1;
     cursor: pointer;
   }
-`;
+`
 
 function Notice({ children, dismiss, type, className, disableAnimation }) {
   // We always need to wrap the Notice with AnimationWrapper because the dismiss function
@@ -104,7 +104,7 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
     stageInAnimation: disableAnimation ? undefined : stageInRight,
     stageOutAnimation: disableAnimation ? undefined : fadeOut,
     onDismiss: dismiss,
-  });
+  })
 
   const noticeContent = (
     <NoticeWrapper type={type} dismiss={dismiss} className={className}>
@@ -118,11 +118,11 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
         </CloseButton>
       )}
     </NoticeWrapper>
-  );
+  )
 
   return (
     <AnimationWrapper {...animationProps}>{noticeContent}</AnimationWrapper>
-  );
+  )
 }
 
 Notice.propTypes = {
@@ -132,11 +132,11 @@ Notice.propTypes = {
   disableAnimation: PropTypes.bool,
   /** can be warning, note, alert, tip */
   type: PropTypes.string.isRequired,
-};
+}
 
 Notice.defaultProps = {
   dismiss: null,
-  disableAnimation: false
-};
+  disableAnimation: false,
+}
 
-export default Notice;
+export default Notice

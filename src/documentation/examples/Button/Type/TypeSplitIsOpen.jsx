@@ -1,11 +1,11 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
-import styled from 'styled-components';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: flex;
   column-gap: 16px;
-`;
+`
 
 /** Split Button With On Open functionality */
 export default function ExampleIsOpen() {
@@ -24,5 +24,5 @@ export default function ExampleIsOpen() {
         onOpen={() => console.log('OnOpen Event Fired')}
       />
     </Wrapper>
-  );
+  )
 }

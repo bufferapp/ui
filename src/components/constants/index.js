@@ -1,1 +1,7 @@
-export const socialNetworks = ['facebook', 'twitter', 'instagram', 'linkedin', 'google'];
+export const socialNetworks = [
+  'facebook',
+  'twitter',
+  'instagram',
+  'linkedin',
+  'google',
+]

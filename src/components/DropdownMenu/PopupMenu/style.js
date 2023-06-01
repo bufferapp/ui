@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { blue, gray, white, grayShadow, grayLighter } from '../../style/colors';
+import styled from 'styled-components'
+import { blue, gray, white, grayShadow, grayLighter } from '../../style/colors'
 
 export const PopupMenuStyled = styled.ul`
   position: absolute;
@@ -8,9 +8,11 @@ export const PopupMenuStyled = styled.ul`
   box-sizing: border-box;
   box-shadow: ${grayShadow};
   border-radius: 4px;
-  max-height: calc(100vh - 64px); /* 56px navbar + 8px margin-top. If someone needs to adjust this again, we might consider creating a prop and set this as the default value */
+  max-height: calc(
+    100vh - 64px
+  ); /* 56px navbar + 8px margin-top. If someone needs to adjust this again, we might consider creating a prop and set this as the default value */
   scroll: auto;
-  display: ${props => (props.isOpen ? 'initial' : 'none')};
+  display: ${(props) => (props.isOpen ? 'initial' : 'none')};
   min-width: 200px;
   max-width: 200px;
   width: 200px;
@@ -21,17 +23,17 @@ export const PopupMenuStyled = styled.ul`
   margin-top: 8px;
   padding: 8px 0;
   transform: translateX(
-    ${props => (props.horizontalOffset ? props.horizontalOffset : '0')}
+    ${(props) => (props.horizontalOffset ? props.horizontalOffset : '0')}
   );
-  right: ${props => {
-    const { xPosition } = props;
-    if (xPosition === 'right') return 0;
-    return '';
+  right: ${(props) => {
+    const { xPosition } = props
+    if (xPosition === 'right') return 0
+    return ''
   }};
-  left: ${props => {
-    const { xPosition } = props;
-    if (xPosition === 'left') return 0;
-    return '';
+  left: ${(props) => {
+    const { xPosition } = props
+    if (xPosition === 'left') return 0
+    return ''
   }};
 
   &[role='menu'] > li {
@@ -40,9 +42,9 @@ export const PopupMenuStyled = styled.ul`
     }
   }
   &:focus {
-    outline: none
+    outline: none;
   }
-`;
+`
 
 export const ItemDivider = styled.li`
   background-color: ${grayLighter};
@@ -53,5 +55,6 @@ export const ItemDivider = styled.li`
   pointer-events: none;
   width: 100%;
   list-style: none;
-  margin-top: ${props => (props.type && props.type === 'header' ? '15px' : '')};
-`;
+  margin-top: ${(props) =>
+    props.type && props.type === 'header' ? '15px' : ''};
+`

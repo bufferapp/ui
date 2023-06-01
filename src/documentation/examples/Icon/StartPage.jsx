@@ -1,10 +1,7 @@
-
-import React from 'react';
-import StartPageIcon from '@bufferapp/ui/Icon/Icons/StartPage';
+import React from 'react'
+import StartPageIcon from '@bufferapp/ui/Icon/Icons/StartPage'
 
 /** StartPage */
 export default function StartPageIconExample() {
-  return (
-    <StartPageIcon size="large" />
-  );
+  return <StartPageIcon size="large" />
 }

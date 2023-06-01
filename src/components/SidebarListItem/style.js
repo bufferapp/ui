@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 import {
   blueLightest50,
   grayDarker,
@@ -6,8 +6,8 @@ import {
   gray,
   grayDark,
   blue,
-} from '../style/colors';
-import Text from '../Text/Text';
+} from '../style/colors'
+import Text from '../Text/Text'
 
 export const Badge = styled.span`
   margin-left: auto;
@@ -19,7 +19,7 @@ export const Badge = styled.span`
   text-align: right;
   margin-right: 8px;
   color: ${(props) => (props.selected ? blue : grayDarker)};
-`;
+`
 
 export const NameHandleWrapper = styled.div`
   display: flex;
@@ -28,7 +28,7 @@ export const NameHandleWrapper = styled.div`
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-`;
+`
 
 export const Handle = styled.span`
   font-family: Roboto;
@@ -38,7 +38,7 @@ export const Handle = styled.span`
   line-height: 14px;
   letter-spacing: -0.2px;
   color: ${grayDark};
-`;
+`
 
 export const LabelContainer = styled.div`
   display: flex;
@@ -47,14 +47,14 @@ export const LabelContainer = styled.div`
   overflow: hidden;
   white-space: nowrap;
   margin-right: 8px;
-`;
+`
 
 export const LabelStyled = styled(Text)`
   font-size: ${(props) => (props.hasUser ? '13px' : '15px')};
   font-weight: ${(props) => (props.hasUser ? '500' : '700')};
   line-height: ${(props) => (props.hasUser ? '20px' : '24px')};
   color: ${(props) => (props.selected ? blue : grayDarker)};
-`;
+`
 
 export const IconContainer = styled.span`
   margin-right: 8px;
@@ -66,7 +66,7 @@ export const IconContainer = styled.span`
   svg {
     fill: ${(props) => (props.selected ? blue : gray)};
   }
-`;
+`
 
 export const ItemStyled = styled.li`
   list-style-type: none;
@@ -90,11 +90,11 @@ export const ItemStyled = styled.li`
       fill: ${(props) => (props.selected ? blue : gray)};
     }
   }
-`;
+`
 
 export const BadgeIconContainer = styled(IconContainer)`
   margin-left: auto;
   svg {
     fill: ${(props) => (props.selected ? gray : 'currentColor')};
   }
-`;
+`

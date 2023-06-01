@@ -1,94 +1,94 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import * as Styles from './style';
-import Button from '../Button';
-import { Cross } from '../Icon';
+import React from 'react'
+import PropTypes from 'prop-types'
+import * as Styles from './style'
+import Button from '../Button'
+import { Cross } from '../Icon'
 
 function setCookie(cookie, cookieKey, days, value) {
-  const expiresInDays = days * 24 * 60 * 60;
-  document.cookie = `${cookieKey}=${value}; max-age=${expiresInDays}; ${cookie}`;
+  const expiresInDays = days * 24 * 60 * 60
+  document.cookie = `${cookieKey}=${value}; max-age=${expiresInDays}; ${cookie}`
 }
 
 export function hasDismissedCookie(cookie, cookieKey) {
-  const match = cookie.match(new RegExp(`${cookieKey}=dismissed;*`));
+  const match = cookie.match(new RegExp(`${cookieKey}=dismissed;*`))
   if (match) {
-    return true;
+    return true
   }
-  return false;
+  return false
 }
 
 class Modal extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     if (props.cookie) {
       this.state = {
         dismissed: hasDismissedCookie(props.cookie.store, props.cookie.store),
-      };
+      }
     }
   }
 
   componentDidMount() {
     if (this.ctaButton) {
-      this.ctaButton.focus();
+      this.ctaButton.focus()
     }
     if (this.modal) {
-      this.modal.addEventListener('keydown', this.onKeyDown);
-      this.modal.focus();
+      this.modal.addEventListener('keydown', this.onKeyDown)
+      this.modal.focus()
       if (this.props.closeButton) {
-        this.container.addEventListener('click', e => this.clickToClose(e));
+        this.container.addEventListener('click', (e) => this.clickToClose(e))
       }
     }
   }
 
   componentWillUnmount() {
     if (this.modal) {
-      this.modal.removeEventListener('keydown', this.onKeyDown);
+      this.modal.removeEventListener('keydown', this.onKeyDown)
     }
   }
 
-  onKeyDown = event => {
+  onKeyDown = (event) => {
     // ESC
     if (event.which === 27) {
-      event.preventDefault();
-      event.stopPropagation();
+      event.preventDefault()
+      event.stopPropagation()
       if (this.props.closeButton) {
-        this.props.closeButton.callback();
+        this.props.closeButton.callback()
       }
-      this.dismiss();
+      this.dismiss()
     }
-  };
+  }
 
-  validateAction = action => {
+  validateAction = (action) => {
     if (action && action.label && action.callback) {
-      return true;
+      return true
     }
-    return false;
-  };
+    return false
+  }
 
   handleAction(action) {
     if (action.callback) {
-      action.callback();
+      action.callback()
     }
     if (this.props.dismissible) {
-      this.dismiss();
+      this.dismiss()
     }
   }
 
   clickToClose(e) {
-    if (e.target !== this.container) return;
-    this.props.closeButton.callback();
-    this.dismiss();
+    if (e.target !== this.container) return
+    this.props.closeButton.callback()
+    this.dismiss()
   }
 
   /** this must be invoked to properly dismiss the modal */
   dismiss() {
-    const { cookie } = this.props;
-    this.setState({ dismissed: true });
+    const { cookie } = this.props
+    this.setState({ dismissed: true })
     if (cookie) {
-      setCookie(cookie.store, cookie.key, cookie.days, 'dismissed');
+      setCookie(cookie.store, cookie.key, cookie.days, 'dismissed')
     }
     if (this.props.previousFocus && this.props.previousFocus.current) {
-      this.props.previousFocus.current.focus();
+      this.props.previousFocus.current.focus()
     }
   }
 
@@ -102,17 +102,17 @@ class Modal extends React.Component {
       width,
       noBackground,
       closeButton,
-    } = this.props;
+    } = this.props
 
     if (this.state && this.state.dismissed) {
-      return null;
+      return null
     }
 
     return (
-      <Styles.Container ref={container => (this.container = container)}>
+      <Styles.Container ref={(container) => (this.container = container)}>
         <Styles.Modal
           background={background}
-          ref={modal => (this.modal = modal)}
+          ref={(modal) => (this.modal = modal)}
           width={width}
           tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
           noBackground={noBackground}
@@ -120,7 +120,7 @@ class Modal extends React.Component {
           {closeButton && (
             <Styles.IconContainer
               onClick={() => {
-                this.handleAction(closeButton);
+                this.handleAction(closeButton)
               }}
               noBackground={noBackground}
             >
@@ -134,7 +134,7 @@ class Modal extends React.Component {
               <Button
                 type="text"
                 onClick={() => {
-                  this.handleAction(secondaryAction);
+                  this.handleAction(secondaryAction)
                 }}
                 disabled={secondaryAction.disabled}
                 label={secondaryAction.label}
@@ -142,10 +142,10 @@ class Modal extends React.Component {
             )}
             {this.validateAction(action) && (
               <Button
-                ref={ctaButton => (this.ctaButton = ctaButton)}
-                type={action.type || "primary"}
+                ref={(ctaButton) => (this.ctaButton = ctaButton)}
+                type={action.type || 'primary'}
                 onClick={() => {
-                  this.handleAction(action);
+                  this.handleAction(action)
                 }}
                 disabled={action.disabled}
                 label={action.label}
@@ -154,7 +154,7 @@ class Modal extends React.Component {
           </Styles.Footer>
         </Styles.Modal>
       </Styles.Container>
-    );
+    )
   }
 }
 
@@ -195,7 +195,7 @@ Modal.propTypes = {
   closeButton: PropTypes.shape({
     callback: PropTypes.func.isRequired,
   }),
-};
+}
 
 Modal.defaultProps = {
   background: null,
@@ -208,6 +208,6 @@ Modal.defaultProps = {
   width: null,
   noBackground: false,
   closeButton: null,
-};
+}
 
-export default Modal;
+export default Modal

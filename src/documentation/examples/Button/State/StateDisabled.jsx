@@ -1,11 +1,11 @@
-import React from 'react';
-import Button from '@bufferapp/ui/Button';
-import styled from 'styled-components';
+import React from 'react'
+import Button from '@bufferapp/ui/Button'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   display: flex;
   column-gap: 16px;
-`;
+`
 
 /** Disabled */
 export default function ExampleDisabled() {
@@ -26,5 +26,5 @@ export default function ExampleDisabled() {
         label="Click Me"
       />
     </Wrapper>
-  );
+  )
 }

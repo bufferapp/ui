@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Cross from '../Icon/Icons/Cross';
-import Button from '../Button/Button';
-import { white, grayLight, grayDarker, grayDark } from '../style/colors';
+import styled from 'styled-components'
+import Cross from '../Icon/Icons/Cross'
+import Button from '../Button/Button'
+import { white, grayLight, grayDarker, grayDark } from '../style/colors'
 
 export const Container = styled.div`
   background: ${grayDarker};
@@ -18,11 +18,11 @@ export const Container = styled.div`
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   display: flex;
   flex-direction: column;
-`;
+`
 
 export const TextRow = styled.div`
   padding: 16px;
-`;
+`
 
 export const ButtonsRow = styled.div`
   background: ${grayDark};
@@ -31,7 +31,7 @@ export const ButtonsRow = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-`;
+`
 
 export const ButtonStyled = styled(Button)`
   color: ${grayLight};
@@ -41,7 +41,7 @@ export const ButtonStyled = styled(Button)`
   :hover {
     color: ${white};
   }
-`;
+`
 
 export const Text = styled.div`
   font-family: Roboto, serif;
@@ -50,7 +50,7 @@ export const Text = styled.div`
   line-height: 19px;
   font-size: 14px;
   margin-right: 20px;
-`;
+`
 
 export const Icon = styled(Cross)`
   position: absolute;
@@ -62,4 +62,4 @@ export const Icon = styled(Cross)`
   :hover {
     color: ${white};
   }
-`;
+`

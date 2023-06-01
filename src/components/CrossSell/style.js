@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { grayLighter } from '../style/colors';
+import styled from 'styled-components'
+import { grayLighter } from '../style/colors'
 
 export const CrossSellStyled = styled.div`
   width: 100vw;
@@ -9,7 +9,7 @@ export const CrossSellStyled = styled.div`
   align-items: center;
   overflow-y: scroll;
   overflow-x: hidden;
-`;
+`
 
 export const CrossSellHeader = styled.div`
   display: flex;
@@ -18,7 +18,7 @@ export const CrossSellHeader = styled.div`
   margin-top: 56px;
   text-align: center;
   z-index: 1;
-`;
+`
 
 export const SubHeaderWrapper = styled.div`
   width: 530px;
@@ -28,12 +28,12 @@ export const SubHeaderWrapper = styled.div`
 export const CardsContainer = styled.div`
   display: flex;
   z-index: 2;
-`;
+`
 
 export const ButtonsContainer = styled.div`
   display: flex;
   justify-content: center;
-`;
+`
 
 export const Footer = styled.div`
   display: flex;
@@ -42,7 +42,7 @@ export const Footer = styled.div`
   width: 100%;
   z-index: 1;
   margin-bottom: 56px;
-`;
+`
 
 export const Card = styled.div`
   width: 291px;
@@ -52,17 +52,17 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   z-index: 1;
-`;
+`
 
 export const TitleContainer = styled.div`
   margin-top: 16px;
   margin-bottom: 8px;
-`;
+`
 
 export const ButtonWrapper = styled.div`
   margin: 0 0 16px;
   width: 182px;
-`;
+`
 
 export const CardImage = styled.img`
   width: 100%;

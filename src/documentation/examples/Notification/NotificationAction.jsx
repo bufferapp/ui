@@ -1,5 +1,5 @@
-import React from 'react';
-import Notification from '@bufferapp/ui/Notification';
+import React from 'react'
+import Notification from '@bufferapp/ui/Notification'
 
 /** Notification with action buttons */
 export default function ExampleNotification() {
@@ -13,5 +13,5 @@ export default function ExampleNotification() {
         secondaryAction={{ label: 'Go Back' }}
       />
     </div>
-  );
+  )
 }

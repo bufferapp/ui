@@ -1,10 +1,7 @@
-
-import React from 'react';
-import TextItalicIcon from '@bufferapp/ui/Icon/Icons/TextItalic';
+import React from 'react'
+import TextItalicIcon from '@bufferapp/ui/Icon/Icons/TextItalic'
 
 /** TextItalic */
 export default function TextItalicIconExample() {
-  return (
-    <TextItalicIcon size="large" />
-  );
+  return <TextItalicIcon size="large" />
 }

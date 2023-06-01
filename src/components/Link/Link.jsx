@@ -1,10 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import { LinkStyled } from './style';
-import { fontWeightMedium } from '../style/fonts';
+import { LinkStyled } from './style'
+import { fontWeightMedium } from '../style/fonts'
 
-const Link = ({ children, href, newTab, download, className, title, fontWeight }) => (
+const Link = ({
+  children,
+  href,
+  newTab,
+  download,
+  className,
+  title,
+  fontWeight,
+}) => (
   <LinkStyled
     href={href}
     target={newTab ? '_blank' : '_self'}
@@ -16,7 +24,7 @@ const Link = ({ children, href, newTab, download, className, title, fontWeight }
   >
     {children}
   </LinkStyled>
-);
+)
 
 Link.propTypes = {
   /** Linkable content. */
@@ -33,7 +41,7 @@ Link.propTypes = {
   title: PropTypes.string,
   /** Font weight of the link. */
   fontWeight: PropTypes.oneOf([500, 700]),
-};
+}
 
 Link.defaultProps = {
   newTab: false,
@@ -41,6 +49,6 @@ Link.defaultProps = {
   className: undefined,
   title: '',
   fontWeight: fontWeightMedium,
-};
+}
 
-export default Link;
+export default Link

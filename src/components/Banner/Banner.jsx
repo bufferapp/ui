@@ -1,46 +1,46 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Button from '../Button';
-import Text from '../Text';
-import CrossIcon from '../Icon/Icons/Cross';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Button from '../Button'
+import Text from '../Text'
+import CrossIcon from '../Icon/Icons/Cross'
 
 import {
   BannerStyled,
   BannerCloseButton,
   Wrapper,
   ButtonWrapper,
-} from './style';
+} from './style'
 
-import { orangeDarker } from '../style/colors';
+import { orangeDarker } from '../style/colors'
 
 export default class Banner extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       isOpen: true,
-    };
+    }
 
-    this.closeBanner = this.closeBanner.bind(this);
+    this.closeBanner = this.closeBanner.bind(this)
   }
 
   closeBanner() {
-    this.setState({ isOpen: false });
-    const { onCloseBanner } = this.props;
+    this.setState({ isOpen: false })
+    const { onCloseBanner } = this.props
     if (onCloseBanner) {
-      onCloseBanner();
+      onCloseBanner()
     }
   }
 
   renderBannerContent(themeColor) {
-    const { customHTML, text, actionButton } = this.props;
+    const { customHTML, text, actionButton } = this.props
     if (customHTML) {
       return (
         <Wrapper>
           {/* eslint-disable-next-line */}
           <div dangerouslySetInnerHTML={customHTML} />
         </Wrapper>
-      );
+      )
     }
     return (
       <Wrapper>
@@ -56,12 +56,12 @@ export default class Banner extends React.Component {
           />
         </ButtonWrapper>
       </Wrapper>
-    );
+    )
   }
 
   render() {
-    const { isOpen } = this.state;
-    const { themeColor } = this.props;
+    const { isOpen } = this.state
+    const { themeColor } = this.props
 
     if (isOpen) {
       return (
@@ -74,7 +74,7 @@ export default class Banner extends React.Component {
                 <CrossIcon
                   color={themeColor === 'blue' ? '#fff' : orangeDarker}
                 />
-              )}
+)}
               hasIconOnly
               onClick={this.closeBanner}
               label="Close"
@@ -82,9 +82,9 @@ export default class Banner extends React.Component {
             />
           </BannerCloseButton>
         </BannerStyled>
-      );
+      )
     }
-    return null;
+    return null
   }
 }
 
@@ -106,7 +106,7 @@ Banner.propTypes = {
 
   /** Handler when the banner closes */
   onCloseBanner: PropTypes.func,
-};
+}
 
 Banner.defaultProps = {
   text: '',
@@ -114,4 +114,4 @@ Banner.defaultProps = {
   customHTML: null,
   themeColor: 'blue',
   onCloseBanner: null,
-};
+}

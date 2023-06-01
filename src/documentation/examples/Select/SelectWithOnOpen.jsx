@@ -1,5 +1,5 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
 
 /** Select With On Open Functionality */
 export default function ExampleOnOpn() {
@@ -39,13 +39,13 @@ export default function ExampleOnOpn() {
         {
           hotKey: 81,
           onKeyPress: () => {
-            console.info('hey');
+            console.info('hey')
           },
         },
         {
           hotKey: 87,
           onKeyPress: () => {
-            console.info('hello there');
+            console.info('hello there')
           },
         },
       ]}
@@ -54,5 +54,5 @@ export default function ExampleOnOpn() {
       customItemLabel="Create Tag"
       onOpen={() => console.log('OnOpen Event Trigged')}
     />
-  );
+  )
 }

@@ -1,26 +1,26 @@
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
-import * as Styles from './style';
+import PropTypes from 'prop-types'
+import * as Styles from './style'
 
 const Text = ({ children, type, ...props }) => {
   switch (type) {
     case 'h1':
-      return <Styles.H1 {...props}>{children}</Styles.H1>;
+      return <Styles.H1 {...props}>{children}</Styles.H1>
     case 'h2':
-      return <Styles.H2 {...props}>{children}</Styles.H2>;
+      return <Styles.H2 {...props}>{children}</Styles.H2>
     case 'h3':
-      return <Styles.H3 {...props}>{children}</Styles.H3>;
+      return <Styles.H3 {...props}>{children}</Styles.H3>
     case 'p':
-      return <Styles.Paragraph {...props}>{children}</Styles.Paragraph>;
+      return <Styles.Paragraph {...props}>{children}</Styles.Paragraph>
     case 'label':
-      return <Styles.Label {...props}>{children}</Styles.Label>;
+      return <Styles.Label {...props}>{children}</Styles.Label>
     case 'help':
-      return <Styles.Help {...props}>{children}</Styles.Help>;
+      return <Styles.Help {...props}>{children}</Styles.Help>
     default:
-      return <Styles.Span>{children}</Styles.Span>;
+      return <Styles.Span>{children}</Styles.Span>
   }
-};
+}
 
 Text.propTypes = {
   /** The actual text content. */
@@ -34,8 +34,8 @@ Text.propTypes = {
   /** The type can be: `h1`, `h2`, `h3`, `p`, `label`, `help`. <br><i>If omitted will return a `span`</i> */
   type: PropTypes.string,
   /** If you want to keep all the styling you've applied to a component but just switch out what's being ultimately rendered (be it a different HTML tag or a different custom component), you can use the "as" prop to do this at runtime. */
-  as: PropTypes.string
-};
+  as: PropTypes.string,
+}
 
 Text.defaultProps = {
   children: undefined,
@@ -43,6 +43,6 @@ Text.defaultProps = {
   htmlFor: undefined,
   color: 'grayDarker',
   type: 'span',
-};
+}
 
-export default Text;
+export default Text

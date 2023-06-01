@@ -1,6 +1,6 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
-import MoreIcon from '@bufferapp/ui/Icon/Icons/More';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
+import MoreIcon from '@bufferapp/ui/Icon/Icons/More'
 
 /** With Icon Only */
 export default function ExampleSelect() {
@@ -19,5 +19,5 @@ export default function ExampleSelect() {
       position="right"
       hideSearch
     />
-  );
+  )
 }

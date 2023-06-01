@@ -1,6 +1,6 @@
-import styled, { keyframes } from 'styled-components';
-import { easeOutQuart } from '../style/animations';
-import { white, red } from '../style/colors';
+import styled, { keyframes } from 'styled-components'
+import { easeOutQuart } from '../style/animations'
+import { white, red } from '../style/colors'
 
 const fadeIn = keyframes`
   0% {
@@ -10,7 +10,7 @@ const fadeIn = keyframes`
   100% {
     opacity: 1;
   }
-`;
+`
 
 export const Container = styled.div`
   background: rgba(0, 0, 0, 0.7);
@@ -21,13 +21,13 @@ export const Container = styled.div`
   position: fixed;
   box-sizing: border-box;
   width: 100%;
-  z-index: ${({NonDismissibleModal}) => NonDismissibleModal? '1' : '9999' };
+  z-index: ${({ NonDismissibleModal }) => (NonDismissibleModal ? '1' : '9999')};
   flex-direction: column;
   top: 0px;
   left: 0px;
 
   animation: 200ms ${fadeIn} ${easeOutQuart};
-`;
+`
 
 export const Modal = styled.div`
   background-color: ${white};
@@ -43,7 +43,7 @@ export const Modal = styled.div`
   align-items: center;
   justify-content: center;
   outline: none;
-`;
+`
 
 export const CloseButton = styled.button`
   background: none;
@@ -66,6 +66,4 @@ export const CloseButton = styled.button`
       fill: ${red};
     }
   }
-`;
-
-
+`

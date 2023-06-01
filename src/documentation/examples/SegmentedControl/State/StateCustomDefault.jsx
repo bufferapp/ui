@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import SegmentedControl from '@bufferapp/ui/SegmentedControl';
-import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon';
+import React, { useState } from 'react'
+import SegmentedControl from '@bufferapp/ui/SegmentedControl'
+import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon'
 
 const options = [
   {
@@ -12,7 +12,8 @@ const options = [
     label: 'Pinterest',
     icon: <Pinterest />,
     value: 'pinterest',
-  }, {
+  },
+  {
     default: true,
     label: 'Twitter',
     icon: <Twitter />,
@@ -24,7 +25,7 @@ const options = [
  * Custom default option
  */
 export default function ExampleStateDisabled() {
-  const [selected, setSelected] = useState('facebook');
+  const [selected, setSelected] = useState('facebook')
 
   return (
     <div style={{ display: 'inline-block' }}>
@@ -32,7 +33,7 @@ export default function ExampleStateDisabled() {
         {options.map(({ disabled, icon, label, value, tooltip }, index) => (
           <SegmentedControl.Option
             key={`${value}-${index}`}
-            optionType='textAndIcon'
+            optionType="textAndIcon"
             disabled={disabled}
             icon={icon}
             label={label}
@@ -44,5 +45,5 @@ export default function ExampleStateDisabled() {
         ))}
       </SegmentedControl>
     </div>
-  );
+  )
 }

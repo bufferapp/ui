@@ -1,10 +1,7 @@
-
-import React from 'react';
-import WorldIcon from '@bufferapp/ui/Icon/Icons/World';
+import React from 'react'
+import WorldIcon from '@bufferapp/ui/Icon/Icons/World'
 
 /** World */
 export default function WorldIconExample() {
-  return (
-    <WorldIcon size="large" />
-  );
+  return <WorldIcon size="large" />
 }

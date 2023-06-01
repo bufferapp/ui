@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
+import PropTypes from 'prop-types'
 import {
   CrossSellStyled,
   CrossSellHeader,
@@ -11,14 +11,14 @@ import {
   Footer,
   Card,
   TitleContainer,
-  CardImage
-} from './style';
-import Text from '../Text/Text';
-import Button from '../Button/Button';
+  CardImage,
+} from './style'
+import Text from '../Text/Text'
+import Button from '../Button/Button'
 
 export default class CrossSell extends React.Component {
   renderHeader = () => {
-    const { texts } = this.props;
+    const { texts } = this.props
 
     return (
       <CrossSellHeader>
@@ -27,11 +27,11 @@ export default class CrossSell extends React.Component {
           <Text type="h3">{texts.subtitle}</Text>
         </SubHeaderWrapper>
       </CrossSellHeader>
-    );
-  };
+    )
+  }
 
   renderBody = () => {
-    const { texts } = this.props;
+    const { texts } = this.props
 
     return (
       <CardsContainer>
@@ -45,11 +45,11 @@ export default class CrossSell extends React.Component {
           </Card>
         ))}
       </CardsContainer>
-    );
-  };
+    )
+  }
 
   renderFooter = () => {
-    const { button, priceTagline } = this.props.texts;
+    const { button, priceTagline } = this.props.texts
 
     return (
       <Footer>
@@ -66,8 +66,8 @@ export default class CrossSell extends React.Component {
         </ButtonsContainer>
         <Text type="p">{priceTagline}</Text>
       </Footer>
-    );
-  };
+    )
+  }
 
   render() {
     return (
@@ -76,7 +76,7 @@ export default class CrossSell extends React.Component {
         {this.renderBody()}
         {this.renderFooter()}
       </CrossSellStyled>
-    );
+    )
   }
 }
 
@@ -90,11 +90,12 @@ CrossSell.propTypes = {
         alt: PropTypes.string,
         title: PropTypes.string,
         description: PropTypes.string,
-    })),
+      }),
+    ),
     button: PropTypes.shape({
       label: PropTypes.string,
-      url: PropTypes.string
+      url: PropTypes.string,
     }),
     priceTagline: PropTypes.string,
   }).isRequired,
-};
+}

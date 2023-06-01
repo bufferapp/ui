@@ -1,10 +1,7 @@
-
-import React from 'react';
-import LayoutIcon from '@bufferapp/ui/Icon/Icons/Layout';
+import React from 'react'
+import LayoutIcon from '@bufferapp/ui/Icon/Icons/Layout'
 
 /** Layout */
 export default function LayoutIconExample() {
-  return (
-    <LayoutIcon size="large" />
-  );
+  return <LayoutIcon size="large" />
 }

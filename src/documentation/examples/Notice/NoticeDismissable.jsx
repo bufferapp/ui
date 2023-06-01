@@ -1,6 +1,6 @@
-import React from 'react';
-import Notice from '@bufferapp/ui/Notice';
-import Text from '@bufferapp/ui/Text';
+import React from 'react'
+import Notice from '@bufferapp/ui/Notice'
+import Text from '@bufferapp/ui/Text'
 
 /** Notice Dismissable */
 export default function ExampleNotice() {
@@ -12,5 +12,5 @@ export default function ExampleNotice() {
         your feedback!
       </Text>
     </Notice>
-  );
+  )
 }

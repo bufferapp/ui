@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import React from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import {
   Cross,
   Info as InfoIcon,
@@ -11,7 +11,7 @@ import {
   Facebook as FacebookIcon,
   Pinterest as PinterestIcon,
   LinkedIn as LinkedInIcon,
-} from '../Icon';
+} from '../Icon'
 
 import {
   gray,
@@ -19,55 +19,55 @@ import {
   grayLight,
   grayLighter,
   grayDark,
-} from '../style/colors';
+} from '../style/colors'
 
-import { fontWeightMedium, fontFamily } from '../style/fonts';
+import { fontWeightMedium, fontFamily } from '../style/fonts'
 
-import Link from '../Link';
-import DropdownMenu from '../DropdownMenu';
+import Link from '../Link'
+import DropdownMenu from '../DropdownMenu'
 
-import BufferLogo from './BufferLogo';
-import NavBarMenu from './NavBarMenu/NavBarMenu';
-import NavBarProducts from './NavBarProducts/NavBarProducts';
+import BufferLogo from './BufferLogo'
+import NavBarMenu from './NavBarMenu/NavBarMenu'
+import NavBarProducts from './NavBarProducts/NavBarProducts'
 
 export function getProductPath(baseUrl) {
-  const result = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/);
-  let productPath = baseUrl;
+  const result = baseUrl.match(/https*:\/\/(.+)\.buffer\.com/)
+  let productPath = baseUrl
   if (result instanceof Array) {
-    [, productPath] = result;
+    ;[, productPath] = result
   }
-  return productPath;
+  return productPath
 }
 
 function getRedirectUrl(baseUrl) {
-  const productPath = getProductPath(baseUrl);
-  return `https://${productPath}.buffer.com`;
+  const productPath = getProductPath(baseUrl)
+  return `https://${productPath}.buffer.com`
 }
 
 export function getLogoutUrl(baseUrl = '') {
-  const productPath = getProductPath(baseUrl);
+  const productPath = getProductPath(baseUrl)
   return `https://login${
     productPath.includes('local') ? '.local' : ''
-  }.buffer.com/logout?redirect=${getRedirectUrl(baseUrl)}`;
+  }.buffer.com/logout?redirect=${getRedirectUrl(baseUrl)}`
 }
 
 export function getAccountUrl(baseUrl = '', user) {
   return `https://account.buffer.com?redirect=${getRedirectUrl(
-    baseUrl
-  )}&username=${encodeURI(user.name)}`;
+    baseUrl,
+  )}&username=${encodeURI(user.name)}`
 }
 
-export const ORG_SWITCHER = 'org_switcher';
+export const ORG_SWITCHER = 'org_switcher'
 
 export function getStopImpersonationUrl() {
-  const { hostname } = window.location;
+  const { hostname } = window.location
   if (!hostname.endsWith('buffer.com')) {
-    return null;
+    return null
   }
 
   return `https://admin${
     hostname.includes('local') ? '-next.local' : ''
-  }.buffer.com/clearImpersonation`;
+  }.buffer.com/clearImpersonation`
 }
 
 const NavBarStyled = styled.nav`
@@ -79,19 +79,19 @@ const NavBarStyled = styled.nav`
   justify-content: space-between;
   position: relative;
   width: 100vw;
-`;
+`
 
 const NavBarLeft = styled.div`
   display: flex;
-`;
+`
 const NavBarRight = styled.nav`
   display: flex;
-`;
+`
 
 const NavBarHelp = styled.a`
   align-items: center;
   color: #fff;
-  color: ${props => (props.active ? blueDarker : grayDark)};
+  color: ${(props) => (props.active ? blueDarker : grayDark)};
   display: flex;
   font-size: 16px;
   font-family: ${fontFamily};
@@ -102,15 +102,15 @@ const NavBarHelp = styled.a`
   text-decoration: none;
   z-index: 2;
   &:hover {
-    color: ${props => (props.active ? blueDarker : grayDark)};
+    color: ${(props) => (props.active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
   }
   cursor: pointer;
-`;
+`
 
 const NavBarHelpText = styled.span`
   margin-left: 8px;
-`;
+`
 
 const NavBarVerticalRule = styled.div`
   background-color: ${grayLight};
@@ -122,7 +122,7 @@ const NavBarVerticalRule = styled.div`
   transform: translateY(-50%);
   width: 1px;
   z-index: 1;
-`;
+`
 
 /**
  * A11Y feature: A skip to main content link appears when a user is on a screen reader
@@ -147,57 +147,57 @@ const SkipToMainLink = styled(Link)`
     margin: auto;
     margin-left: 10px;
   }
-`;
+`
 
 export function appendMenuItem(ignoreMenuItems, menuItem) {
   if (!ignoreMenuItems) {
-    return menuItem;
+    return menuItem
   }
 
-  return ignoreMenuItems.includes(menuItem.id) ? null : menuItem;
+  return ignoreMenuItems.includes(menuItem.id) ? null : menuItem
 }
 
 function getNetworkIcon(item) {
-  if (!item.network) return null;
+  if (!item.network) return null
 
   switch (item.network) {
     case 'instagram':
-      return <InstagramIcon size="medium" />;
+      return <InstagramIcon size="medium" />
     case 'twitter':
-      return <TwitterIcon size="medium" />;
+      return <TwitterIcon size="medium" />
     case 'facebook':
-      return <FacebookIcon size="medium" />;
+      return <FacebookIcon size="medium" />
     case 'pinterest':
-      return <PinterestIcon size="medium" />;
+      return <PinterestIcon size="medium" />
     case 'linkedin':
-      return <LinkedInIcon size="medium" />;
+      return <LinkedInIcon size="medium" />
     default:
-      break;
+      break
   }
 }
 
 export function appendOrgSwitcher(orgSwitcher) {
   if (!orgSwitcher || !orgSwitcher.menuItems) {
-    return [];
+    return []
   }
 
   return orgSwitcher.menuItems.map((item, index) => {
-    item.type = ORG_SWITCHER;
+    item.type = ORG_SWITCHER
     if (orgSwitcher.title && index === 0) {
-      item.hasDivider = true;
-      item.dividerTitle = orgSwitcher.title;
+      item.hasDivider = true
+      item.dividerTitle = orgSwitcher.title
     }
     if (item.subItems) {
-      item.subItems.forEach(subItem => {
-        subItem.icon = getNetworkIcon(subItem);
-      });
+      item.subItems.forEach((subItem) => {
+        subItem.icon = getNetworkIcon(subItem)
+      })
     }
     if (!item.subItems || item.subItems.length === 0) {
-      item.defaultTooltipMessage = 'No channels connected yet.';
+      item.defaultTooltipMessage = 'No channels connected yet.'
     }
-    
-    return item;
-  });
+
+    return item
+  })
 }
 
 /**
@@ -211,7 +211,7 @@ class NavBar extends React.Component {
       nextProps.isImpersonation !== this.props.isImpersonation ||
       nextProps.products !== this.props.products ||
       nextProps.orgSwitcher !== this.props.orgSwitcher
-    );
+    )
   }
 
   render() {
@@ -224,10 +224,10 @@ class NavBar extends React.Component {
       displaySkipLink,
       isImpersonation,
       orgSwitcher,
-    } = this.props;
+    } = this.props
 
     const orgSwitcherHasItems =
-      orgSwitcher && orgSwitcher.menuItems && orgSwitcher.menuItems.length > 0;
+      orgSwitcher && orgSwitcher.menuItems && orgSwitcher.menuItems.length > 0
 
     return (
       <NavBarStyled aria-label="Main menu">
@@ -250,7 +250,7 @@ class NavBar extends React.Component {
                   <InfoIcon />
                   <NavBarHelpText>Help</NavBarHelpText>
                 </NavBarHelp>
-              )}
+)}
               items={helpMenuItems}
             />
           )}
@@ -273,8 +273,8 @@ class NavBar extends React.Component {
                 hasDivider: orgSwitcherHasItems,
                 onItemClick: () => {
                   window.location.assign(
-                    getAccountUrl(window.location.href, this.props.user)
-                  );
+                    getAccountUrl(window.location.href, this.props.user),
+                  )
                 },
               }),
               ...user.menuItems,
@@ -287,7 +287,7 @@ class NavBar extends React.Component {
                       icon: <Cross color={gray} />,
                       hasDivider: user.menuItems && user.menuItems.length > 0,
                       onItemClick: () => {
-                        window.location.assign(getStopImpersonationUrl());
+                        window.location.assign(getStopImpersonationUrl())
                       },
                     }
                   : {
@@ -296,18 +296,18 @@ class NavBar extends React.Component {
                       icon: <ArrowLeft color={gray} />,
                       hasDivider: user.menuItems && user.menuItems.length > 0,
                       onItemClick: () => {
-                        if (typeof onLogout === 'function') onLogout();
+                        if (typeof onLogout === 'function') onLogout()
                         window.location.assign(
-                          getLogoutUrl(window.location.href)
-                        );
+                          getLogoutUrl(window.location.href),
+                        )
                       },
-                    }
+                    },
               ),
-            ].filter(e => e)}
+            ].filter((e) => e)}
           />
         </NavBarRight>
       </NavBarStyled>
-    );
+    )
   }
 }
 
@@ -318,7 +318,7 @@ NavBar.propTypes = {
       id: PropTypes.string,
       isNew: PropTypes.bool,
       href: PropTypes.string,
-    })
+    }),
   ),
 
   /** The currently active (highlighted) product in the `NavBar`. */
@@ -338,7 +338,7 @@ NavBar.propTypes = {
         component: PropTypes.func,
         hasDivider: PropTypes.bool,
         onItemClick: PropTypes.func,
-      })
+      }),
     ).isRequired,
   }).isRequired,
   helpMenuItems: PropTypes.arrayOf(
@@ -348,7 +348,7 @@ NavBar.propTypes = {
       component: PropTypes.node,
       hasDivider: PropTypes.bool,
       onItemClick: PropTypes.func,
-    })
+    }),
   ),
   isImpersonation: PropTypes.bool,
 
@@ -364,10 +364,10 @@ NavBar.propTypes = {
         title: PropTypes.string.isRequired,
         selected: PropTypes.bool.isRequired,
         onItemClick: PropTypes.func,
-      })
+      }),
     ).isRequired,
   }),
-};
+}
 
 NavBar.defaultProps = {
   products: [],
@@ -377,6 +377,6 @@ NavBar.defaultProps = {
   onLogout: undefined,
   displaySkipLink: false,
   orgSwitcher: undefined,
-};
+}
 
-export default NavBar;
+export default NavBar

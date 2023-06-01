@@ -1,10 +1,7 @@
-
-import React from 'react';
-import MessageRoundOutlineIcon from '@bufferapp/ui/Icon/Icons/MessageRoundOutline';
+import React from 'react'
+import MessageRoundOutlineIcon from '@bufferapp/ui/Icon/Icons/MessageRoundOutline'
 
 /** MessageRoundOutline */
 export default function MessageRoundOutlineIconExample() {
-  return (
-    <MessageRoundOutlineIcon size="large" />
-  );
+  return <MessageRoundOutlineIcon size="large" />
 }

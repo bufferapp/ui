@@ -1,6 +1,6 @@
-import React from 'react';
-import Tooltip from '@bufferapp/ui/Tooltip';
-import Avatar from '@bufferapp/ui/Avatar'; // eslint-disable-line
+import React from 'react'
+import Tooltip from '@bufferapp/ui/Tooltip'
+import Avatar from '@bufferapp/ui/Avatar' // eslint-disable-line
 
 /** With custom opacity */
 export default function ExampleTooltip() {
@@ -15,5 +15,5 @@ export default function ExampleTooltip() {
         size="medium"
       />
     </Tooltip>
-  );
+  )
 }

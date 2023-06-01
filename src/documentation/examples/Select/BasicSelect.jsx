@@ -1,5 +1,5 @@
-import React from 'react';
-import Select from '@bufferapp/ui/Select';
+import React from 'react'
+import Select from '@bufferapp/ui/Select'
 
 /** Basic */
 export default function ExampleSelect() {
@@ -39,19 +39,19 @@ export default function ExampleSelect() {
         {
           hotKey: 81,
           onKeyPress: () => {
-            console.info('hey');
+            console.info('hey')
           },
         },
         {
           hotKey: 87,
           onKeyPress: () => {
-            console.info('hello there');
+            console.info('hello there')
           },
         },
       ]}
       hasCustomAction
-      onCustomItemClick={string => console.info(string)}
+      onCustomItemClick={(string) => console.info(string)}
       customItemLabel="Create Tag"
     />
-  );
+  )
 }

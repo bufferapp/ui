@@ -1,1 +1,1 @@
-export { default } from './NonDismissibleModal';
+export { default } from './NonDismissibleModal'

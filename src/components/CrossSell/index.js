@@ -1,1 +1,1 @@
-export { default } from './CrossSell';
+export { default } from './CrossSell'

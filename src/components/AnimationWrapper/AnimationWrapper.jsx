@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import { easeOutQuart } from '../style/animations';
+import React, { useEffect, useState } from 'react'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import { easeOutQuart } from '../style/animations'
 
 const AnimationContainer = styled.div`
   animation-fill-mode: forwards;
@@ -12,11 +12,13 @@ const AnimationContainer = styled.div`
   width: 100%;
 
   &.stageIn {
-    animation: ${({ duration }) => `${duration}ms`} ${({ stageInAnimation }) => stageInAnimation} ${({ easing }) => easing};
+    animation: ${({ duration }) => `${duration}ms`} ${({ stageInAnimation }) =>
+  stageInAnimation} ${({ easing }) => easing};
   }
 
   &.stageOut {
-    animation: ${({ duration }) => `${duration}ms`} ${({ stageOutAnimation }) => stageOutAnimation} ${({ easing }) => easing};
+    animation: ${({ duration }) => `${duration}ms`} ${({ stageOutAnimation }) =>
+  stageOutAnimation} ${({ easing }) => easing};
   }
 
   @media (prefers-reduced-motion) {
@@ -25,7 +27,7 @@ const AnimationContainer = styled.div`
       animation-name: dissolve;
     }
   }
-`;
+`
 
 const AnimationWrapper = ({
   align,
@@ -38,11 +40,11 @@ const AnimationWrapper = ({
   stageOutAnimation,
   onDismiss,
 }) => {
-  const [content, setContent] = useState(children);
-  const [hasChanged, setHasChanged] = useState(false);
-  const [dismissed, setDismissed] = useState(false);
-  const [animationLocked, setAnimationLocked] = useState(false);
-  const [className, setClassName] = useState('stageIn');
+  const [content, setContent] = useState(children)
+  const [hasChanged, setHasChanged] = useState(false)
+  const [dismissed, setDismissed] = useState(false)
+  const [animationLocked, setAnimationLocked] = useState(false)
+  const [className, setClassName] = useState('stageIn')
   const shouldUpdate = children !== content && !dismissing
 
   function lockAnimationDuringStaging() {
@@ -62,7 +64,7 @@ const AnimationWrapper = ({
 
   useEffect(() => {
     if (shouldUpdate) {
-      setHasChanged(true);
+      setHasChanged(true)
       setTimeout(() => {
         stageIn()
         setContent(children)
@@ -75,8 +77,8 @@ const AnimationWrapper = ({
     if (dismissing) {
       // we are dismissing a bit earlier then animation end to prevent accidental re-render
       setTimeout(() => {
-        setDismissed(true);
-        onDismiss();
+        setDismissed(true)
+        onDismiss()
       }, duration - 10)
     }
   }, [dismissing])
@@ -102,8 +104,8 @@ const AnimationWrapper = ({
     >
       {!dismissed && content}
     </AnimationContainer>
-  );
-};
+  )
+}
 
 AnimationWrapper.propTypes = {
   align: PropTypes.string,
@@ -115,7 +117,7 @@ AnimationWrapper.propTypes = {
   stageInAnimation: PropTypes.shape({}).isRequired,
   stageOutAnimation: PropTypes.shape({}).isRequired,
   onDismiss: PropTypes.func,
-};
+}
 
 AnimationWrapper.defaultProps = {
   align: 'center',
@@ -124,6 +126,6 @@ AnimationWrapper.defaultProps = {
   justify: 'center',
   easing: easeOutQuart,
   onDismiss: () => {},
-};
+}
 
-export default AnimationWrapper;
+export default AnimationWrapper

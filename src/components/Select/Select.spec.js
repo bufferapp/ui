@@ -1,4 +1,4 @@
-import snap from 'jest-auto-snapshots';
-import Select from './Select';
+import snap from 'jest-auto-snapshots'
+import Select from './Select'
 
-snap(Select, './Select.jsx');
+snap(Select, './Select.jsx')

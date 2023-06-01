@@ -1,10 +1,7 @@
-
-import React from 'react';
-import DayIcon from '@bufferapp/ui/Icon/Icons/Day';
+import React from 'react'
+import DayIcon from '@bufferapp/ui/Icon/Icons/Day'
 
 /** Day */
 export default function DayIconExample() {
-  return (
-    <DayIcon size="large" />
-  );
+  return <DayIcon size="large" />
 }

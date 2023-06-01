@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
-import SegmentedControl from '@bufferapp/ui/SegmentedControl';
-import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon';
+import React, { useState } from 'react'
+import SegmentedControl from '@bufferapp/ui/SegmentedControl'
+import { Facebook, Pinterest, Twitter } from '@bufferapp/ui/Icon'
 
 const options = [
   {
     label: 'Facebook',
     icon: <Facebook />,
     value: 'facebook',
-    tooltip: 'I\'m Facebook',
+    tooltip: "I'm Facebook",
   },
   {
     label: 'Pinterest',
     icon: <Pinterest />,
     value: 'pinterest',
-    tooltip: 'I\'m Pinterest',
-  }, {
+    tooltip: "I'm Pinterest",
+  },
+  {
     label: 'Twitter',
     icon: <Twitter />,
     value: 'twitter',
-    tooltip: 'I\'m Twitter',
+    tooltip: "I'm Twitter",
   },
 ]
 
@@ -26,7 +27,7 @@ const options = [
  * Custom tooltip message
  */
 export default function ExampleStateDisabled() {
-  const [selected, setSelected] = useState('facebook');
+  const [selected, setSelected] = useState('facebook')
 
   return (
     <div style={{ display: 'inline-block' }}>
@@ -34,7 +35,7 @@ export default function ExampleStateDisabled() {
         {options.map(({ disabled, icon, label, value, tooltip }, index) => (
           <SegmentedControl.Option
             key={`${value}-${index}`}
-            optionType='textAndIcon'
+            optionType="textAndIcon"
             disabled={disabled}
             icon={icon}
             label={label}
@@ -46,5 +47,5 @@ export default function ExampleStateDisabled() {
         ))}
       </SegmentedControl>
     </div>
-  );
+  )
 }

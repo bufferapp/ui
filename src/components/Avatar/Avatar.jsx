@@ -1,9 +1,9 @@
 /* eslint-disable */
-import React from 'react';
+import React from 'react'
 
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import * as Styles from './style';
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+import * as Styles from './style'
 import {
   facebook,
   googlebusiness,
@@ -16,7 +16,7 @@ import {
   startpage,
   mastodon,
   youtube,
-} from '../style/colors';
+} from '../style/colors'
 import {
   Facebook,
   Gbp,
@@ -28,16 +28,16 @@ import {
   Twitter,
   StartPage,
   Mastodon,
-  Youtube
-} from '../Icon';
+  Youtube,
+} from '../Icon'
 
 const Wrapper = styled.div`
   ${(props) => Styles.wrapper[props.size]}
-`;
+`
 
 const Image = styled.div`
   ${(props) => Styles.image[props.type][props.size]}
-`;
+`
 
 const socialIconMap = new Map([
   [
@@ -130,24 +130,23 @@ const socialIconMap = new Map([
       </Styles.SocialIconWrapper>
     ),
   ],
-]);
+])
 
-const Avatar = ({
-  src,
-  alt,
-  type,
-  size,
-  network,
-  fallbackUrl,
-}) => {
-  const SocialIcon = network && socialIconMap.get(network);
+const Avatar = ({ src, alt, type, size, network, fallbackUrl }) => {
+  const SocialIcon = network && socialIconMap.get(network)
   return (
     <Wrapper size={size}>
       {SocialIcon && <SocialIcon size={size} />}
-      <Image size={size} type={type} src={src} fallbackUrl={fallbackUrl} alt={alt} />
+      <Image
+        size={size}
+        type={type}
+        src={src}
+        fallbackUrl={fallbackUrl}
+        alt={alt}
+      />
     </Wrapper>
-  );
-};
+  )
+}
 
 Avatar.propTypes = {
   /** The source of the avatar image. */
@@ -175,13 +174,13 @@ Avatar.propTypes = {
     'mastodon',
     'youtube',
   ]),
-};
+}
 
 Avatar.defaultProps = {
   type: 'default',
   size: 'small',
   fallbackUrl: '',
   network: null,
-};
+}
 
-export default Avatar;
+export default Avatar

@@ -1,6 +1,6 @@
-import React from 'react';
-import Input from '@bufferapp/ui/Input';
-import SearchIcon from '@bufferapp/ui/Icon/Icons/Search';
+import React from 'react'
+import Input from '@bufferapp/ui/Input'
+import SearchIcon from '@bufferapp/ui/Icon/Icons/Search'
 
 /** Input with icon */
 export default function ExampleInput() {
@@ -11,5 +11,5 @@ export default function ExampleInput() {
       placeholder="Search channels"
       icon={<SearchIcon size="large" />}
     />
-  );
+  )
 }

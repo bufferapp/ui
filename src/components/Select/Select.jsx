@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-expressions, react/no-unused-state */
-import React from 'react';
-import PropTypes from 'prop-types';
-import helper from 'immutability-helper';
-import SearchIcon from '../Icon/Icons/Search';
+import React from 'react'
+import PropTypes from 'prop-types'
+import helper from 'immutability-helper'
+import SearchIcon from '../Icon/Icons/Search'
 import {
   Wrapper,
   SelectStyled,
@@ -12,12 +12,12 @@ import {
   NoMatchesContainer,
   CustomItemContainer,
   SelectItemDividerTitle,
-} from './style';
-import SelectItem from './SelectItem/SelectItem';
-import Button from '../Button/Button';
-import { ButtonSelect } from '../Button/style';
-import ChevronDown from '../Icon/Icons/ChevronDown';
-import Search from '../Search/Search';
+} from './style'
+import SelectItem from './SelectItem/SelectItem'
+import Button from '../Button/Button'
+import { ButtonSelect } from '../Button/style'
+import ChevronDown from '../Icon/Icons/ChevronDown'
+import Search from '../Search/Search'
 
 /** Select component that opens a popup menu on click and displays items that can be selected */
 export default class Select extends React.Component {
@@ -30,8 +30,8 @@ export default class Select extends React.Component {
         el.id === itemsB[ix].id &&
         el.title === itemsB[ix].title &&
         el.selected === itemsB[ix].selected &&
-        el.disabled === itemsB[ix].disabled
-    );
+        el.disabled === itemsB[ix].disabled,
+    )
 
   state = {
     isOpen: this.props.isOpen,
@@ -44,7 +44,7 @@ export default class Select extends React.Component {
     use it to determine if the custom item has focus and listen for up, down
     and enter and well as highlighting on hover */
     isCustomItemFocused: false,
-  };
+  }
 
   static getDerivedStateFromProps(props, state) {
     if (
@@ -52,27 +52,27 @@ export default class Select extends React.Component {
       !Select.sameItems(props.items, state.items) &&
       !state.isFiltering
     ) {
-      return { items: props.items, selectedItems: props.items };
+      return { items: props.items, selectedItems: props.items }
     }
-    return null;
+    return null
   }
 
   componentDidMount() {
     // When the selector is open and users click anywhere on the page,
     // the selector should close
     // Set capture to true so an open select will close when another select gets opened
-    document.addEventListener('click', this.closePopover, true);
+    document.addEventListener('click', this.closePopover, true)
 
     // catch the keypress to move the selected items up or down
     this.selectNode &&
-      this.selectNode.addEventListener('keydown', this.keyDownPressed);
+      this.selectNode.addEventListener('keydown', this.keyDownPressed)
   }
 
   componentDidUpdate(prevProps, prevState) {
     // Simulate button click if isOpen is being controlled
     if (prevProps.isOpen !== this.props.isOpen) {
       // focus the Select component in order to be able to catch the keyboard events
-      this.props.isOpen && this.onButtonClick();
+      this.props.isOpen && this.onButtonClick()
     }
 
     if (
@@ -80,82 +80,82 @@ export default class Select extends React.Component {
       this.state.isOpen &&
       this.props.onOpen
     ) {
-      this.props.onOpen();
+      this.props.onOpen()
     }
 
-    const menuIsOpening = !prevState.isOpen && !!this.state.isOpen;
+    const menuIsOpening = !prevState.isOpen && !!this.state.isOpen
     const shouldFilterOnMenuOpen =
-      !this.props.clearSearchOnBlur && !!this.state.searchValue;
-    if (menuIsOpening && shouldFilterOnMenuOpen) this.filterOnMenuOpen();
+      !this.props.clearSearchOnBlur && !!this.state.searchValue
+    if (menuIsOpening && shouldFilterOnMenuOpen) this.filterOnMenuOpen()
 
-    const menuIsClosing = !!prevState.isOpen && !this.state.isOpen;
+    const menuIsClosing = !!prevState.isOpen && !this.state.isOpen
     if (menuIsClosing && this.props.clearSearchOnBlur)
-      this.clearSearchOnMenuClose();
+      this.clearSearchOnMenuClose()
   }
 
   componentWillUnmount() {
-    document.removeEventListener('click', this.closePopover, true);
+    document.removeEventListener('click', this.closePopover, true)
     this.selectNode &&
-      this.selectNode.removeEventListener('keydown', this.keyDownPressed);
+      this.selectNode.removeEventListener('keydown', this.keyDownPressed)
   }
 
   filterOnMenuOpen = () => {
-    if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue);
-    this.onSearchChange(this.state.searchValue);
-  };
+    if (this.searchInput) this.searchInput.updateSearch(this.state.searchValue)
+    this.onSearchChange(this.state.searchValue)
+  }
 
   clearSearchOnMenuClose = () => {
-    if (this.searchInput) this.searchInput.updateSearch('');
-    this.onSearchChange('');
-  };
+    if (this.searchInput) this.searchInput.updateSearch('')
+    this.onSearchChange('')
+  }
 
   keyDownPressed = (e) => {
-    const { shortcutsEnabled, hotKeys } = this.props;
-    if (!shortcutsEnabled) return;
+    const { shortcutsEnabled, hotKeys } = this.props
+    if (!shortcutsEnabled) return
 
     if (hotKeys) {
       hotKeys.forEach((item) => {
         if (e.which === item.hotKey) {
-          item.onKeyPress();
+          item.onKeyPress()
         }
-      });
+      })
     }
 
     switch (e.which) {
       case 40: // Arrow down
-        return this.handleKeyPress(e, this.onMoveDown);
+        return this.handleKeyPress(e, this.onMoveDown)
       case 38: // Arrow up
-        return this.handleKeyPress(e, this.onMoveUp);
+        return this.handleKeyPress(e, this.onMoveUp)
       case 13: // Enter
-        return this.handleKeyPress(e, this.onAddItem);
+        return this.handleKeyPress(e, this.onAddItem)
       case 27: // Esc
-        return this.handleKeyPress(e, this.onClose);
+        return this.handleKeyPress(e, this.onClose)
       default:
-        return null;
+        return null
     }
-  };
+  }
 
   handleKeyPress = (event, keyHandler) => {
-    event.preventDefault();
-    event.stopPropagation();
-    keyHandler(event);
-  };
+    event.preventDefault()
+    event.stopPropagation()
+    keyHandler(event)
+  }
 
   // Close the popover
   closePopover = (e) => {
     if (this.selectNode && this.selectNode.contains(e.target)) {
-      return;
+      return
     }
 
-    const { isOpen } = this.state;
+    const { isOpen } = this.state
 
     if (isOpen) {
       this.setState({
         isOpen: false,
         hoveredItem: undefined,
-      });
+      })
     }
-  };
+  }
 
   updateItemsInState = (items, option, index) =>
     index > -1
@@ -164,14 +164,14 @@ export default class Select extends React.Component {
             selected: { $set: !option.selected },
           },
         })
-      : items;
+      : items
 
   handleSelectOption = (option, event) => {
-    const { onSelectClick, multiSelect } = this.props;
-    const { items } = this.state;
-    onSelectClick && onSelectClick(option, event);
+    const { onSelectClick, multiSelect } = this.props
+    const { items } = this.state
+    onSelectClick && onSelectClick(option, event)
 
-    const selectedIndex = items.findIndex((x) => x.selected === true);
+    const selectedIndex = items.findIndex((x) => x.selected === true)
 
     const deselectItems =
       !multiSelect && selectedIndex > -1
@@ -180,11 +180,11 @@ export default class Select extends React.Component {
               selected: { $set: false },
             },
           })
-        : items;
+        : items
 
     const optionIndex = deselectItems.findIndex(
-      (x) => this.getItemId(x) === this.getItemId(option)
-    );
+      (x) => this.getItemId(x) === this.getItemId(option),
+    )
 
     this.setState({
       isOpen: multiSelect,
@@ -194,55 +194,55 @@ export default class Select extends React.Component {
       selectedItems: this.updateItemsInState(
         deselectItems,
         option,
-        optionIndex
+        optionIndex,
       ),
-    });
-  };
+    })
+  }
 
   onClick = (e) => {
-    e.stopPropagation();
-    e.nativeEvent.stopImmediatePropagation();
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation()
     if (this.props.isSplit && !this.props.disabled) {
-      this.onButtonClick(e);
+      this.onButtonClick(e)
     }
-  };
+  }
 
   onKeyUp = (e) => {
-    e.stopPropagation();
-    e.nativeEvent.stopImmediatePropagation();
+    e.stopPropagation()
+    e.nativeEvent.stopImmediatePropagation()
     if (this.props.isSplit && !this.props.disabled) {
-      const altPlusUp = e.altKey && ['Up', 'ArrowUp'].indexOf(e.key) >= 0;
-      const altPlusDown = e.altKey && ['Down', 'ArrowDown'].indexOf(e.key) >= 0;
-      const space = ['Space', ' '].indexOf(e.key) >= 0;
-      const enter = ['Enter'].indexOf(e.key) >= 0;
+      const altPlusUp = e.altKey && ['Up', 'ArrowUp'].indexOf(e.key) >= 0
+      const altPlusDown = e.altKey && ['Down', 'ArrowDown'].indexOf(e.key) >= 0
+      const space = ['Space', ' '].indexOf(e.key) >= 0
+      const enter = ['Enter'].indexOf(e.key) >= 0
       if (altPlusUp || altPlusDown || space || enter) {
-        e.preventDefault();
-        this.onButtonClick(e);
+        e.preventDefault()
+        this.onButtonClick(e)
       }
     }
-  };
+  }
 
   onButtonClick = () => {
-    const { isOpen } = this.state;
-    const { isInputSearch, items } = this.props;
+    const { isOpen } = this.state
+    const { isInputSearch, items } = this.props
     this.setState(
       {
         isOpen: !isOpen,
         items,
       },
       () => {
-        !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus();
+        !isInputSearch && !isOpen && this.selectNode && this.selectNode.focus()
         this.scrollToItem(
           this.itemsNode,
-          document.getElementById(this.getItemId(items[0]))
-        );
-      }
-    );
-  };
+          document.getElementById(this.getItemId(items[0])),
+        )
+      },
+    )
+  }
 
   onMoveUp = () => {
-    const { items, isCustomItemFocused, hoveredItem } = this.state;
-    const itemsLength = items.length;
+    const { items, isCustomItemFocused, hoveredItem } = this.state
+    const itemsLength = items.length
 
     for (
       let i = hoveredItem - 1;
@@ -250,56 +250,56 @@ export default class Select extends React.Component {
       i -= 1
     ) {
       if (items[i]) {
-        this.setState({ hoveredItem: i % itemsLength });
+        this.setState({ hoveredItem: i % itemsLength })
         this.scrollToItem(
           this.itemsNode,
-          document.getElementById(this.getItemId(items[i]))
-        );
-        break;
+          document.getElementById(this.getItemId(items[i])),
+        )
+        break
       }
     }
 
     if (isCustomItemFocused) {
-      this.setState({ isCustomItemFocused: false });
+      this.setState({ isCustomItemFocused: false })
     }
-  };
+  }
 
   onMoveDown = () => {
-    const { items, hoveredItem } = this.state;
-    const { hasCustomAction } = this.props;
-    const itemsLength = items.length;
+    const { items, hoveredItem } = this.state
+    const { hasCustomAction } = this.props
+    const itemsLength = items.length
 
     if (itemsLength === 0 && hasCustomAction) {
-      this.setState({ isCustomItemFocused: true });
+      this.setState({ isCustomItemFocused: true })
     }
     if (!hoveredItem) {
       this.setState(
         {
           hoveredItem: 0,
         },
-        () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items)
-      );
+        () => this.updateHoveredItemPosition(hoveredItem, itemsLength, items),
+      )
     } else {
-      this.updateHoveredItemPosition(hoveredItem, itemsLength, items);
+      this.updateHoveredItemPosition(hoveredItem, itemsLength, items)
     }
-  };
+  }
 
   onAddItem = (event) => {
-    const { multiSelect } = this.props;
-    const { items, hoveredItem, isCustomItemFocused, searchValue } = this.state;
-    const selectedItem = items[hoveredItem];
+    const { multiSelect } = this.props
+    const { items, hoveredItem, isCustomItemFocused, searchValue } = this.state
+    const selectedItem = items[hoveredItem]
 
     if (isCustomItemFocused) {
-      this.props.onCustomItemClick(searchValue);
-      this.setState({ isCustomItemFocused: false, isOpen: multiSelect });
+      this.props.onCustomItemClick(searchValue)
+      this.setState({ isCustomItemFocused: false, isOpen: multiSelect })
     }
 
     if (selectedItem) {
       selectedItem.onItemClick
         ? this.handleSelectOption(selectedItem, selectedItem.onItemClick)
-        : this.handleSelectOption(selectedItem, event);
+        : this.handleSelectOption(selectedItem, event)
     }
-  };
+  }
 
   updateHoveredItemPosition = (hoveredItem, itemsLength, items) => {
     for (
@@ -308,60 +308,58 @@ export default class Select extends React.Component {
       i += 1
     ) {
       if (i === itemsLength) {
-        this.setState({ hoveredItem: 0 });
+        this.setState({ hoveredItem: 0 })
         this.scrollToItem(
           this.itemsNode,
-          document.getElementById(this.getItemId(items[i]))
-        );
-        break;
+          document.getElementById(this.getItemId(items[i])),
+        )
+        break
       }
       if (items[i]) {
-        this.setState({ hoveredItem: i % itemsLength });
+        this.setState({ hoveredItem: i % itemsLength })
         this.scrollToItem(
           this.itemsNode,
-          document.getElementById(this.getItemId(items[i]))
-        );
-        break;
+          document.getElementById(this.getItemId(items[i])),
+        )
+        break
       }
     }
-  };
+  }
 
   scrollToItem = (parent, child) => {
-    if (!parent || !child) return;
+    if (!parent || !child) return
 
     // Where is the parent on page
-    const parentRect = parent.getBoundingClientRect();
+    const parentRect = parent.getBoundingClientRect()
     // What can you see?
     const parentViewableArea = {
       height: parent.clientHeight,
       width: parent.clientWidth,
-    };
+    }
 
     // Where is the child
-    const childRect = child.getBoundingClientRect();
+    const childRect = child.getBoundingClientRect()
     // Is the child viewable?
     const isViewable =
       childRect.top >= parentRect.top &&
-      childRect.top <= parentRect.top + parentViewableArea.height;
+      childRect.top <= parentRect.top + parentViewableArea.height
 
     // if you can't see the child try to scroll parent
     if (!isViewable) {
       // scroll by offset relative to parent
-      parent.scrollTop = childRect.top + parent.scrollTop - parentRect.top;
+      parent.scrollTop = childRect.top + parent.scrollTop - parentRect.top
     }
-  };
+  }
 
   findItemInState = (item) => {
-    const { selectedItems } = this.state;
-    return selectedItems.find(
-      (x) => this.getItemId(x) === this.getItemId(item)
-    );
-  };
+    const { selectedItems } = this.state
+    return selectedItems.find((x) => this.getItemId(x) === this.getItemId(item))
+  }
 
   onSearchChange = (searchValue) => {
-    const { items, keyMap } = this.props;
-    const searchField = keyMap ? keyMap.title : 'title';
-    const isFiltering = !!searchValue;
+    const { items, keyMap } = this.props
+    const searchField = keyMap ? keyMap.title : 'title'
+    const isFiltering = !!searchValue
 
     // first, filter the items in the props that we get from the parent
 
@@ -373,8 +371,8 @@ export default class Select extends React.Component {
 
     const { startingWith, including } = items.reduce(
       (filtered, item) => {
-        const hideItemWhileSearching = isFiltering && !!item.hideOnSearch;
-        if (hideItemWhileSearching) return filtered;
+        const hideItemWhileSearching = isFiltering && !!item.hideOnSearch
+        if (hideItemWhileSearching) return filtered
 
         if (
           item[searchField].toLowerCase().startsWith(searchValue.toLowerCase())
@@ -390,7 +388,7 @@ export default class Select extends React.Component {
                   this.findItemInState(item).selected,
               },
             ],
-          };
+          }
         }
         if (
           item[searchField].toLowerCase().includes(searchValue.toLowerCase())
@@ -406,40 +404,40 @@ export default class Select extends React.Component {
                   this.findItemInState(item).selected,
               },
             ],
-          };
+          }
         }
 
-        return { ...filtered };
+        return { ...filtered }
       },
-      { startingWith: [], including: [] }
-    );
+      { startingWith: [], including: [] },
+    )
 
-    const arrayFinal = [...startingWith, ...including];
+    const arrayFinal = [...startingWith, ...including]
 
     this.setState({
       items: arrayFinal,
       isFiltering,
       searchValue,
-    });
-  };
+    })
+  }
 
   onClose = () => {
-    const { onClose } = this.props;
+    const { onClose } = this.props
     this.setState(
       {
         isOpen: false,
         isFiltering: false,
         hoveredItem: 0,
       },
-      onClose && onClose()
-    );
-  };
+      onClose && onClose(),
+    )
+  }
 
   getItemId = (item) => {
-    if (!item) return;
-    const { keyMap } = this.props;
-    return item[keyMap && keyMap.id ? keyMap.id : 'id'];
-  };
+    if (!item) return
+    const { keyMap } = this.props
+    return item[keyMap && keyMap.id ? keyMap.id : 'id']
+  }
 
   renderSelectButton = () => {
     const {
@@ -454,8 +452,8 @@ export default class Select extends React.Component {
       fullWidth,
       isInputSearch,
       textToLeft,
-    } = this.props;
-    const { items } = this.state;
+    } = this.props
+    const { items } = this.state
 
     if (isSplit) {
       return (
@@ -469,13 +467,13 @@ export default class Select extends React.Component {
             color={type === 'primary' && !disabled ? 'white' : 'grayDark'}
           />
         </ButtonSelect>
-      );
+      )
     }
     if (customButton && isInputSearch) {
-      return customButton(this.onButtonClick, this.onSearchChange);
+      return customButton(this.onButtonClick, this.onSearchChange)
     }
     if (customButton) {
-      return customButton(this.onButtonClick, null, this.state.isOpen);
+      return customButton(this.onButtonClick, null, this.state.isOpen)
     }
     if (hasIconOnly) {
       return (
@@ -486,7 +484,7 @@ export default class Select extends React.Component {
           onClick={this.onButtonClick}
           label="Click Me"
         />
-      );
+      )
     }
 
     return (
@@ -502,8 +500,8 @@ export default class Select extends React.Component {
         fullWidth={fullWidth}
         textToLeft={textToLeft}
       />
-    );
-  };
+    )
+  }
 
   renderCustomActionItem = (length, onCustomItemClick, customItemLabel) => {
     if (length === 0) {
@@ -514,20 +512,20 @@ export default class Select extends React.Component {
         >
           {`${customItemLabel} ${this.state.searchValue}`}
         </CustomItemContainer>
-      );
+      )
     }
-  };
+  }
 
   renderNoItems = (
     hideSearch,
     length,
     isInputSearch,
-    noResultsCustomMessage
+    noResultsCustomMessage,
   ) => {
     if (length === 0 && (!hideSearch || isInputSearch)) {
-      return <NoMatchesContainer>{noResultsCustomMessage}</NoMatchesContainer>;
+      return <NoMatchesContainer>{noResultsCustomMessage}</NoMatchesContainer>
     }
-  };
+  }
 
   renderSelectPopup = () => {
     const {
@@ -549,8 +547,8 @@ export default class Select extends React.Component {
       selectPopupVisible,
       noResultsCustomMessage,
       searchInputProps,
-    } = this.props;
-    const { isOpen, hoveredItem, items, isFiltering } = this.state;
+    } = this.props
+    const { isOpen, hoveredItem, items, isFiltering } = this.state
 
     return (
       <SelectStyled
@@ -582,13 +580,13 @@ export default class Select extends React.Component {
             ? this.renderCustomActionItem(
                 items.length,
                 onCustomItemClick,
-                customItemLabel
+                customItemLabel,
               )
             : this.renderNoItems(
                 hideSearch,
                 items.length,
                 isInputSearch,
-                noResultsCustomMessage
+                noResultsCustomMessage,
               )}
           {}
           {items.map((item, idx) => [
@@ -619,11 +617,11 @@ export default class Select extends React.Component {
           ])}
         </SelectItems>
       </SelectStyled>
-    );
-  };
+    )
+  }
 
   render() {
-    const { isSplit, tooltip, disabled, fullWidth } = this.props;
+    const { isSplit, tooltip, disabled, fullWidth } = this.props
 
     return (
       <Wrapper
@@ -641,7 +639,7 @@ export default class Select extends React.Component {
         {this.renderSelectButton()}
         {this.renderSelectPopup()}
       </Wrapper>
-    );
+    )
   }
 }
 
@@ -662,7 +660,7 @@ Select.propTypes = {
       title: PropTypes.string,
       /** If true, item will be hidden while searching */
       hideOnSearch: PropTypes.bool,
-    })
+    }),
   ).isRequired,
 
   /** Is the Select component part of the Split Button */
@@ -736,7 +734,7 @@ Select.propTypes = {
     PropTypes.shape({
       hotKey: PropTypes.number,
       onKeyPress: PropTypes.func,
-    })
+    }),
   ),
 
   /** Is the select full width */
@@ -765,7 +763,7 @@ Select.propTypes = {
 
   /** onOpen function to fire when the Select menu is open */
   onOpen: PropTypes.func,
-};
+}
 
 Select.defaultProps = {
   label: '',
@@ -804,4 +802,4 @@ Select.defaultProps = {
   },
   textToLeft: false,
   onOpen: null,
-};
+}

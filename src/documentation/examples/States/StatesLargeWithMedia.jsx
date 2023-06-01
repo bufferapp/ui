@@ -1,13 +1,13 @@
-import React from 'react';
-import States from '@bufferapp/ui/States';
-import Button from '@bufferapp/ui/Button';
-import styled from 'styled-components';
+import React from 'react'
+import States from '@bufferapp/ui/States'
+import Button from '@bufferapp/ui/Button'
+import styled from 'styled-components'
 
 const Wrapper = styled.div`
   height: 562px;
   width: 780px;
   border: 1px solid black;
-`;
+`
 
 /** States Large with Media Example */
 export default function ExampleStates() {
@@ -35,5 +35,5 @@ export default function ExampleStates() {
         </States.Buttons>
       </States>
     </Wrapper>
-  );
+  )
 }

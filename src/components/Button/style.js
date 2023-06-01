@@ -1,5 +1,5 @@
 /* eslint-disable no-confusing-arrow */
-import style, { css } from 'styled-components';
+import style, { css } from 'styled-components'
 import {
   grayDarker,
   blue,
@@ -17,15 +17,15 @@ import {
   redDarker,
   redLighter,
   orange as orangeColor,
-} from '../style/colors';
+} from '../style/colors'
 import {
   fontFamily,
   fontSize,
   lineHeight,
   fontWeightMedium,
-} from '../style/fonts';
-import { borderRadius } from '../style/borders';
-import { ButtonStyled } from './Button';
+} from '../style/fonts'
+import { borderRadius } from '../style/borders'
+import { ButtonStyled } from './Button'
 
 export const ButtonWrapperBase = css`
   -webkit-appearance: none;
@@ -64,7 +64,7 @@ export const ButtonWrapperBase = css`
     transition-duration: 0.1s;
     transition-timing-function: ease-in;
   }
-`;
+`
 
 export const ButtonContainerBase = css`
   -webkit-appearance: none;
@@ -76,7 +76,7 @@ export const ButtonContainerBase = css`
   user-select: none;
   width: 100%;
   height: 100%;
-`;
+`
 
 export const ButtonNestedBase = css`
   align-items: center;
@@ -94,7 +94,7 @@ export const ButtonNestedBase = css`
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
-`;
+`
 
 /* styles common to all buttons */
 export const ButtonBase = css`
@@ -131,7 +131,7 @@ export const ButtonBase = css`
     transition-duration: 0.1s;
     transition-timing-function: ease-in;
   }
-`;
+`
 
 /* theme variants */
 export const primary = css`
@@ -143,7 +143,7 @@ export const primary = css`
     border-color: ${blueDark};
     color: ${white};
   }
-`;
+`
 
 export const secondary = css`
   background-color: ${white};
@@ -159,7 +159,7 @@ export const secondary = css`
     border-color: ${blue};
     color: ${grayDarker};
   }
-`;
+`
 
 export const danger = css`
   background-color: ${(props) => (props.$loading ? redDarker : redDark)};
@@ -174,7 +174,7 @@ export const danger = css`
     box-shadow: 0 0 0 3px ${redLighter};
     background-color: ${redDark};
   }
-`;
+`
 
 export const link = css`
   background-color: transparent;
@@ -182,13 +182,13 @@ export const link = css`
   :hover {
     color: ${blueDark};
   }
-`;
+`
 export const text = css`
   background-color: transparent;
   :hover {
     color: ${grayDarker};
   }
-`;
+`
 
 export const orange = css`
   background-color: ${orangeDarker};
@@ -199,61 +199,61 @@ export const orange = css`
     border-color: ${orangeColor};
     color: ${white};
   }
-`;
+`
 
 /* size variants */
 export const small = css`
   padding-left: 8px;
   padding-right: 8px;
   height: 32px;
-`;
+`
 export const medium = css`
   padding-right: 16px;
   padding-left: 16px;
   height: 40px;
-`;
+`
 export const large = css`
   padding-right: 16px;
   padding-left: 16px;
   height: 48px;
-`;
+`
 
 const Sizes = {
   small,
   medium,
   large,
-};
+}
 
 /* state variants */
 export const secondaryDisabled = css`
   cursor: not-allowed;
   border: 1px solid ${grayLight};
   color: ${gray};
-`;
-export const Disabled = secondaryDisabled;
+`
+export const Disabled = secondaryDisabled
 
 export const primaryDisabled = css`
   background-color: #c6cbe4;
   cursor: not-allowed;
   border: 1px solid #c6cbe4;
   color: ${white};
-`;
+`
 
 export const disabled = css`
   cursor: not-allowed;
-`;
+`
 
 export const fullWidth = css`
   width: 100%;
   justify-content: center;
-`;
+`
 
 const getBackgroundColor = (isDisabled, type) => {
   if (isDisabled) {
-    return grayLight;
+    return grayLight
   }
-  return type === 'primary' ? blueLighter : gray;
-};
+  return type === 'primary' ? blueLighter : gray
+}
 
 export const ButtonSelect = style.div`
   :before {
@@ -287,16 +287,16 @@ export const ButtonSelect = style.div`
     border-color: ${blue};
       color: ${grayDarker};
   }
-`;
+`
 
 export const ButtonArrow = style.div`
   padding-left: 5px;
   display: flex;
   margin-right: -4px;
-  ${props => props.textToLeft && 'margin-left: auto;'}
-`;
+  ${(props) => props.textToLeft && 'margin-left: auto;'}
+`
 
 export const ButtonLabel = style.div`
-  margin-left: ${props => (props.hasIcon && !props.iconEnd ? '5px' : '0px')};
-  margin-right: ${props => (props.hasIcon && props.iconEnd ? '5px' : '0px')};
-`;
+  margin-left: ${(props) => (props.hasIcon && !props.iconEnd ? '5px' : '0px')};
+  margin-right: ${(props) => (props.hasIcon && props.iconEnd ? '5px' : '0px')};
+`
