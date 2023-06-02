@@ -55,6 +55,31 @@
     "component:new": "node ./scripts/newComponent.js",
     "gen:icons": "node ./scripts/generateIconComponents.js && eslint src/components/Icon/Icons/** --fix"
   },
+  "babel": {
+    "env": {
+      "production": {
+        "plugins": [
+          [
+            "babel-plugin-styled-components",
+            {
+              "pure": true,
+              "namespace": "bufferapp-ui",
+              "minify": true
+            }
+          ]
+        ]
+      }
+    },
+    "plugins": [
+      "@babel/plugin-transform-modules-commonjs",
+      "@babel/plugin-proposal-class-properties",
+      "@babel/plugin-proposal-export-default-from"
+    ],
+    "presets": [
+      "@babel/preset-env",
+      "@babel/react"
+    ]
+  },
   "browserslist": [
     ">0.2%",
     "not dead",
