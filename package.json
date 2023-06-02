@@ -38,7 +38,7 @@
 
 
     "deploy:docs": "gh-pages -d build",
-    "predeploy:docs": "yarn gen:docs && yarn build:docs",
+    "predeploy:docs": "yarn gen:docs && yarn build:typescript && yarn build:docs",
     "build:docs": "node scripts/build.js",
 
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
