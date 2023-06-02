@@ -2,7 +2,7 @@
 
 Here are the articles in this section:
 
-[AminationWrapper](ui/aminationwrapper)
+[AminationWrapper](ui/animationwrapper)
 [Avatar](ui/avatar)
 [Banner](ui/banner)
 [Button](ui/button)

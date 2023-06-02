@@ -31,7 +31,7 @@
   ],
   "scripts": {
     "prebuild:lib": "rimraf lib && yarn build:typescript",
-    "build:typescript": "rm -Rf built && tsc -p ./tsconfig.json",
+    "build:typescript": "rm -Rf built && tsc -p ./tsconfig.json && cp -Rf ./src/documentation/markdown ./built/documentation && cp -Rf ./src/index.css ./built",
     "build:lib": "concurrently 'yarn run build:commonjs' 'yarn run build:copy-files'",
     "build:commonjs": "cross-env NODE_ENV=production babel ./built/components --out-dir ./lib --ignore index.js",
     "build:copy-files": "node scripts/copyBuildFiles.js",
@@ -39,8 +39,6 @@
 
     "deploy:docs": "gh-pages -d build",
     "predeploy:docs": "yarn gen:docs && yarn build:docs",
-    "gen:docs": "node scripts/generateComponentData.js",
-    "gen:docs-watch": "yarn gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
 
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
@@ -51,9 +49,11 @@
     "publish": "./scripts/publish.sh",
     "publish:beta": "node ./scripts/betaPublish.js",
 
-    "prestart": "yarn gen:docs",
+    "prestart": "yarn gen:docs && yarn build:typescript",
     "start": "concurrently 'yarn run start:docs' 'yarn run gen:docs-watch'",
     "start:docs": "node scripts/start.js",
+    "gen:docs": "node scripts/generateComponentData.js",
+    "gen:docs-watch": "yarn gen:docs -- --watch",
 
     "test": "jest",
     "test-update": "jest --no-coverage -u",

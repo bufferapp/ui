@@ -97,10 +97,10 @@ const Component = ({ component, fullscreen }) => {
   const { name, description, props, examples, id } = component
   if (fullscreen) {
     // @ts-expect-error TS(7006) FIXME: Parameter 'folder' implicitly has an 'any' type.
-    return examples.map((folder, idx) => (
+    return examples.map((example, idx) => (
       <ComponentExample
         fullscreen
-        folder={folder}
+        folder={example}
         name={name}
         id={id}
         key={idx}

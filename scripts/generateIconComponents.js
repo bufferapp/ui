@@ -238,11 +238,11 @@ function generateReactIconComponents(icons, spinner) {
         const componentFilePath = path.join(
           pathToIconComponents,
           'Icons',
-          `${componentName}.jsx`,
+          `${componentName}.tsx`,
         )
         const exampleFilePath = path.join(
           pathToIconExamples,
-          `${componentName}.jsx`,
+          `${componentName}.tsx`,
         )
 
         await writeFileAsync(componentFilePath, prettyReactSource)
@@ -326,7 +326,7 @@ function generateReactIconIndex(icons) {
   const indexContent = sortedIcons
     .map((name) => `export ${name} from './Icons/${name}';`)
     .join('\n')
-  const pathToIndex = path.join(pathToIconComponents, 'index.js')
+  const pathToIndex = path.join(pathToIconComponents, 'index.ts')
   fs.writeFileSync(pathToIndex, `${indexContent}\n`)
 }
 
@@ -418,7 +418,7 @@ async function main() {
     spinner.succeed('Generate React components and examples')
 
     // Write index.js file
-    spinner.start('Generate `Icons/index.js`')
+    spinner.start('Generate `Icons/index.ts`')
     generateReactIconIndex(iconsGenerated)
     spinner.succeed()
 
