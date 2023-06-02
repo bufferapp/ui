@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Avatar from './Avatar'
 
-snap(Avatar, './Avatar.jsx')
+snap(Avatar, './Avatar.tsx')

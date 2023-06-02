@@ -2,25 +2,25 @@
 
 exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
 <React.Fragment>
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Tooltip))
+  <styled.div>
+    <Styled(Tooltip)
       label={
-        <ForwardRef(styled.div)>
-          <ForwardRef(styled.label)
+        <styled.div>
+          <styled.label
             color="#FFFFFF"
           >
-            <ForwardRef(styled.div)>
+            <styled.div>
               jest-auto-snapshots String Fixture
-              <ForwardRef(styled.label)
+              <styled.label
                 color="#B8B8B8"
                 isHotkey={true}
               >
                 jest-auto-snapshots String Fixture
-              </ForwardRef(styled.label)>
-            </ForwardRef(styled.div)>
-          </ForwardRef(styled.label)>
+              </styled.label>
+            </styled.div>
+          </styled.label>
           <NodeFixture />
-        </ForwardRef(styled.div)>
+        </styled.div>
       }
       opacity={1}
       position={[Function]}
@@ -41,8 +41,8 @@ exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`
       <div>
         <NodeFixture />
       </div>
-    </ForwardRef(Styled(Tooltip))>
-  </ForwardRef(styled.div)>
+    </Styled(Tooltip)>
+  </styled.div>
 </React.Fragment>
 `;
 

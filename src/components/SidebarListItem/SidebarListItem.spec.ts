@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import SidebarListItem from './SidebarListItem'
 
-snap(SidebarListItem, './SidebarListItem.jsx')
+snap(SidebarListItem, './SidebarListItem.tsx')

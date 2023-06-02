@@ -1,4 +1,11 @@
 module.exports = {
+  globals: {
+    'ts-jest': {
+      tsconfig: 'tsconfig.json',
+    },
+  },
+  clearMocks: true,
+  preset: 'ts-jest',
   collectCoverage: true,
   collectCoverageFrom: [
     'src/components/**/*.{js,jsx}',

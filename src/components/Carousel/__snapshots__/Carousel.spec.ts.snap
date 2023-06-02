@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "rightNavigation" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+<styled.div>
+  <styled.div
     aria-atomic="true"
     aria-live="polite"
     tabIndex={-1}
@@ -10,12 +10,12 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "righ
     Slide
     1
     out of
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div>
+    <styled.div
       width="jest-auto-snapshots String Fixture"
     >
-      <ForwardRef(styled.ul)
+      <styled.ul
         left={0}
       >
         <CarouselItems
@@ -23,15 +23,15 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "righ
         >
           <NodeFixture />
         </CarouselItems>
-      </ForwardRef(styled.ul)>
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "withIndicators" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+<styled.div>
+  <styled.div
     aria-atomic="true"
     aria-live="polite"
     tabIndex={-1}
@@ -39,12 +39,12 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "with
     Slide
     1
     out of
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div>
+    <styled.div
       width="jest-auto-snapshots String Fixture"
     >
-      <ForwardRef(styled.ul)
+      <styled.ul
         left={0}
       >
         <CarouselItems
@@ -52,15 +52,15 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "with
         >
           <NodeFixture />
         </CarouselItems>
-      </ForwardRef(styled.ul)>
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Carousel Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+<styled.div>
+  <styled.div
     aria-atomic="true"
     aria-live="polite"
     tabIndex={-1}
@@ -68,12 +68,12 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when passed all props 1
     Slide
     1
     out of
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div>
+    <styled.div
       width="jest-auto-snapshots String Fixture"
     >
-      <ForwardRef(styled.ul)
+      <styled.ul
         left={0}
       >
         <CarouselItems
@@ -81,15 +81,15 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when passed all props 1
         >
           <NodeFixture />
         </CarouselItems>
-      </ForwardRef(styled.ul)>
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Carousel Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+<styled.div>
+  <styled.div
     aria-atomic="true"
     aria-live="polite"
     tabIndex={-1}
@@ -97,12 +97,12 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when passed only requir
     Slide
     1
     out of
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div>
+    <styled.div
       width="jest-auto-snapshots String Fixture"
     >
-      <ForwardRef(styled.ul)
+      <styled.ul
         left={0}
       >
         <CarouselItems
@@ -110,8 +110,8 @@ exports[`jest-auto-snapshots > Carousel Matches snapshot when passed only requir
         >
           <NodeFixture />
         </CarouselItems>
-      </ForwardRef(styled.ul)>
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
 `;

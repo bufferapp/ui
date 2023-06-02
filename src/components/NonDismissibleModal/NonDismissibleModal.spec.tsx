@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import NonDismissibleModal from './NonDismissibleModal'
 
-snap(NonDismissibleModal, './NonDismissibleModal.jsx')
+snap(NonDismissibleModal, './NonDismissibleModal.tsx')

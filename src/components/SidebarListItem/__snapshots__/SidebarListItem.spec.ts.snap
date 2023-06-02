@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
-<ForwardRef(styled.li)
+<styled.li
   className="jest-auto-snapshots String Fixture"
   hasUser={
     Object {
@@ -16,12 +16,12 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
   onClick={[Function]}
   selected={false}
 >
-  <ForwardRef(styled.span)
+  <styled.span
     selected={false}
   >
     <NodeFixture />
-  </ForwardRef(styled.span)>
-  <ForwardRef(styled.div)>
+  </styled.span>
+  <styled.div>
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
@@ -31,8 +31,8 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
         src="jest-auto-snapshots String Fixture"
         type="social"
       />
-      <ForwardRef(styled.div)>
-        <ForwardRef(Styled(Text))
+      <styled.div>
+        <Styled(Text)
           hasUser={
             Object {
               "fallbackUrl": "jest-auto-snapshots String Fixture",
@@ -48,25 +48,25 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean pro
           type="label"
         >
           jest-auto-snapshots String Fixture
-        </ForwardRef(Styled(Text))>
-        <ForwardRef(styled.span)
+        </Styled(Text)>
+        <styled.span
           selected={false}
         >
           jest-auto-snapshots String Fixture
-        </ForwardRef(styled.span)>
-      </ForwardRef(styled.div)>
+        </styled.span>
+      </styled.div>
     </React.Fragment>
-  </ForwardRef(styled.div)>
-  <ForwardRef(Styled(styled.span))
+  </styled.div>
+  <Styled(styled.span)
     selected={false}
   >
     <NodeFixture />
-  </ForwardRef(Styled(styled.span))>
-</ForwardRef(styled.li)>
+  </Styled(styled.span)>
+</styled.li>
 `;
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.li)
+<styled.li
   className="jest-auto-snapshots String Fixture"
   hasUser={
     Object {
@@ -81,12 +81,12 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
   onClick={[Function]}
   selected={true}
 >
-  <ForwardRef(styled.span)
+  <styled.span
     selected={true}
   >
     <NodeFixture />
-  </ForwardRef(styled.span)>
-  <ForwardRef(styled.div)>
+  </styled.span>
+  <styled.div>
     <React.Fragment>
       <Avatar
         alt="jest-auto-snapshots String Fixture"
@@ -96,8 +96,8 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
         src="jest-auto-snapshots String Fixture"
         type="social"
       />
-      <ForwardRef(styled.div)>
-        <ForwardRef(Styled(Text))
+      <styled.div>
+        <Styled(Text)
           hasUser={
             Object {
               "fallbackUrl": "jest-auto-snapshots String Fixture",
@@ -113,38 +113,38 @@ exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all 
           type="label"
         >
           jest-auto-snapshots String Fixture
-        </ForwardRef(Styled(Text))>
-        <ForwardRef(styled.span)
+        </Styled(Text)>
+        <styled.span
           selected={true}
         >
           jest-auto-snapshots String Fixture
-        </ForwardRef(styled.span)>
-      </ForwardRef(styled.div)>
+        </styled.span>
+      </styled.div>
     </React.Fragment>
-  </ForwardRef(styled.div)>
-  <ForwardRef(Styled(styled.span))
+  </styled.div>
+  <Styled(styled.span)
     selected={true}
   >
     <NodeFixture />
-  </ForwardRef(Styled(styled.span))>
-</ForwardRef(styled.li)>
+  </Styled(styled.span)>
+</styled.li>
 `;
 
 exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.li)
+<styled.li
   className={null}
   hasUser={null}
   onClick={[Function]}
   selected={null}
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Text))
+  <styled.div>
+    <Styled(Text)
       selected={null}
       title="jest-auto-snapshots String Fixture"
       type="label"
     >
       jest-auto-snapshots String Fixture
-    </ForwardRef(Styled(Text))>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.li)>
+    </Styled(Text)>
+  </styled.div>
+</styled.li>
 `;

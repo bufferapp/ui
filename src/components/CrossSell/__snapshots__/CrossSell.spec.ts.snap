@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
+<styled.div>
+  <styled.div>
     <Text
       color="grayDarker"
       hasError={false}
@@ -10,7 +10,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
     >
       jest-auto-snapshots String Fixture
     </Text>
-    <ForwardRef(styled.div)>
+    <styled.div>
       <Text
         color="grayDarker"
         hasError={false}
@@ -18,15 +18,15 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
       >
         jest-auto-snapshots String Fixture
       </Text>
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.img
         alt="jest-auto-snapshots String Fixture"
         src="jest-auto-snapshots String Fixture"
       />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <Text
           color="grayDarker"
           hasError={false}
@@ -34,7 +34,7 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
         >
           jest-auto-snapshots String Fixture
         </Text>
-      </ForwardRef(styled.div)>
+      </styled.div>
       <Text
         color="grayDarker"
         hasError={false}
@@ -42,11 +42,11 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
       >
         jest-auto-snapshots String Fixture
       </Text>
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)>
-      <ForwardRef(styled.div)>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.div>
         <Button
           disabled={false}
           fullWidth={true}
@@ -61,8 +61,8 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
           size="large"
           type="primary"
         />
-      </ForwardRef(styled.div)>
-    </ForwardRef(styled.div)>
+      </styled.div>
+    </styled.div>
     <Text
       color="grayDarker"
       hasError={false}
@@ -70,6 +70,6 @@ exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only requi
     >
       jest-auto-snapshots String Fixture
     </Text>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;

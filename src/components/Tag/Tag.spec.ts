@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Tag from './Tag'
 
-snap(Tag, './Tag.jsx')
+snap(Tag, './Tag.tsx')

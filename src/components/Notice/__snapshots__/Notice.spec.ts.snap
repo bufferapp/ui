@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`jest-auto-snapshots > Notification Matches snapshot when passed all props 1`] = `
+exports[`jest-auto-snapshots > Notice Matches snapshot when boolean prop "disableAnimation" is set to: "false" 1`] = `
 <AnimationWrapper
   align="center"
   dismissing={false}
@@ -10,17 +10,17 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed all pro
   onDismiss={[MockFunction]}
   stageInAnimation={
     e {
-      "id": "sc-keyframes-ciDIsA",
+      "id": "sc-keyframes-jALQVJ",
       "inject": [Function],
-      "name": "ciDIsA",
+      "name": "jALQVJ",
       "rules": "
   0% {
-    transform: translateY(-200px);
+    transform: translateX(200px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 ",
@@ -47,32 +47,22 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed all pro
     }
   }
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)>
-      <ForwardRef(styled.div)>
-        jest-auto-snapshots String Fixture
-      </ForwardRef(styled.div)>
-      <ForwardRef(Styled(CrossIcon))
-        onClick={[Function]}
-      />
-    </ForwardRef(styled.div)>
-    <ForwardRef(styled.div)>
-      <ForwardRef(Styled(Button))
-        label="jest-auto-snapshots String Fixture"
-        onClick={[MockFunction]}
-        type="text"
-      />
-      <ForwardRef(Styled(Button))
-        label="jest-auto-snapshots String Fixture"
-        onClick={[MockFunction]}
-        type="text"
-      />
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
+  <styled.div
+    dismiss={[MockFunction]}
+    type="jest-auto-snapshots String Fixture"
+  >
+    <NodeFixture />
+    <styled.button
+      onClick={[Function]}
+      type="jest-auto-snapshots String Fixture"
+    >
+      <CrossIcon />
+    </styled.button>
+  </styled.div>
 </AnimationWrapper>
 `;
 
-exports[`jest-auto-snapshots > Notification Matches snapshot when passed only required props 1`] = `
+exports[`jest-auto-snapshots > Notice Matches snapshot when passed all props 1`] = `
 <AnimationWrapper
   align="center"
   dismissing={false}
@@ -80,19 +70,43 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed only re
   easing="cubic-bezier(0.25, 1, 0.5, 1)"
   justify="flex-end"
   onDismiss={[MockFunction]}
+>
+  <styled.div
+    dismiss={[MockFunction]}
+    type="jest-auto-snapshots String Fixture"
+  >
+    <NodeFixture />
+    <styled.button
+      onClick={[Function]}
+      type="jest-auto-snapshots String Fixture"
+    >
+      <CrossIcon />
+    </styled.button>
+  </styled.div>
+</AnimationWrapper>
+`;
+
+exports[`jest-auto-snapshots > Notice Matches snapshot when passed only required props 1`] = `
+<AnimationWrapper
+  align="center"
+  dismissing={false}
+  duration={300}
+  easing="cubic-bezier(0.25, 1, 0.5, 1)"
+  justify="flex-end"
+  onDismiss={null}
   stageInAnimation={
     e {
-      "id": "sc-keyframes-ciDIsA",
+      "id": "sc-keyframes-jALQVJ",
       "inject": [Function],
-      "name": "ciDIsA",
+      "name": "jALQVJ",
       "rules": "
   0% {
-    transform: translateY(-200px);
+    transform: translateX(200px);
     opacity: 0;
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateX(0);
     opacity: 1;
   }
 ",
@@ -119,15 +133,11 @@ exports[`jest-auto-snapshots > Notification Matches snapshot when passed only re
     }
   }
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.div)>
-      <ForwardRef(styled.div)>
-        jest-auto-snapshots String Fixture
-      </ForwardRef(styled.div)>
-      <ForwardRef(Styled(CrossIcon))
-        onClick={[Function]}
-      />
-    </ForwardRef(styled.div)>
-  </ForwardRef(styled.div)>
+  <styled.div
+    dismiss={null}
+    type="jest-auto-snapshots String Fixture"
+  >
+    <NodeFixture />
+  </styled.div>
 </AnimationWrapper>
 `;

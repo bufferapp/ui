@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Text from './Text'
 
-snap(Text, './Text.jsx')
+snap(Text, './Text.tsx')

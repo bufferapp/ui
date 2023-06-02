@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -10,8 +10,8 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "disabl
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.label)>
-    <ForwardRef(styled.input)
+  <styled.label>
+    <styled.input
       aria-checked={true}
       aria-readonly={false}
       checked={true}
@@ -21,15 +21,15 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "disabl
       role="switch"
       type="checkbox"
     />
-    <ForwardRef(styled.span)
+    <styled.span
       aria-hidden="true"
     />
-  </ForwardRef(styled.label)>
-</ForwardRef(styled.div)>
+  </styled.label>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "isOn" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -38,8 +38,8 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "isOn" 
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.label)>
-    <ForwardRef(styled.input)
+  <styled.label>
+    <styled.input
       aria-checked={false}
       aria-readonly={true}
       checked={false}
@@ -49,15 +49,15 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when boolean prop "isOn" 
       role="switch"
       type="checkbox"
     />
-    <ForwardRef(styled.span)
+    <styled.span
       aria-hidden="true"
     />
-  </ForwardRef(styled.label)>
-</ForwardRef(styled.div)>
+  </styled.label>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Switch Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -66,8 +66,8 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when passed all props 1`]
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.label)>
-    <ForwardRef(styled.input)
+  <styled.label>
+    <styled.input
       aria-checked={true}
       aria-readonly={true}
       checked={true}
@@ -77,15 +77,15 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when passed all props 1`]
       role="switch"
       type="checkbox"
     />
-    <ForwardRef(styled.span)
+    <styled.span
       aria-hidden="true"
     />
-  </ForwardRef(styled.label)>
-</ForwardRef(styled.div)>
+  </styled.label>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Switch Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -94,8 +94,8 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when passed only required
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.label)>
-    <ForwardRef(styled.input)
+  <styled.label>
+    <styled.input
       aria-checked={false}
       aria-readonly={false}
       checked={false}
@@ -105,9 +105,9 @@ exports[`jest-auto-snapshots > Switch Matches snapshot when passed only required
       role="switch"
       type="checkbox"
     />
-    <ForwardRef(styled.span)
+    <styled.span
       aria-hidden="true"
     />
-  </ForwardRef(styled.label)>
-</ForwardRef(styled.div)>
+  </styled.label>
+</styled.div>
 `;

@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Notice from './Notice'
 
-snap(Notice, './Notice.jsx')
+snap(Notice, './Notice.tsx')

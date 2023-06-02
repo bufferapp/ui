@@ -1,15 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -20,37 +20,37 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" h
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -61,37 +61,37 @@ exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" i
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={false}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={false}
@@ -103,37 +103,37 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabl
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={false}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -144,37 +144,37 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWi
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -185,40 +185,40 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIco
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.div)
+      <styled.div
         hasIcon={true}
         iconEnd={true}
       >
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.div)>
+      </styled.div>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -229,37 +229,37 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSe
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEnd" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -271,36 +271,36 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEn
       type="primary"
     >
       <NodeFixture />
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
-      <ForwardRef(styled.div)>
+      </styled.span>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -311,30 +311,30 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSele
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.img)
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -345,36 +345,36 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSpli
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.button>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={false}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -385,33 +385,33 @@ exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loadin
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-    </ForwardRef(styled.button)>
+      </styled.div>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={true}
   className="jest-auto-snapshots String Fixture"
   disabled={true}
   fullWidth={true}
   type="primary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       data-tip="jest-auto-snapshots String Fixture"
       disabled={true}
@@ -422,36 +422,36 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`]
       size="small"
       type="primary"
     >
-      <ForwardRef(styled.span)>
+      <styled.span>
         jest-auto-snapshots String Fixture
-      </ForwardRef(styled.span)>
+      </styled.span>
       <NodeFixture />
-      <ForwardRef(styled.div)>
+      <styled.div>
         <ChevronDownIcon
           color="white"
           isChevron={true}
           size="small"
         />
-      </ForwardRef(styled.div)>
-      <ForwardRef(styled.img)
+      </styled.div>
+      <styled.img
         alt="loading"
         src="./images/loading-gray.svg"
       />
-    </ForwardRef(styled.button)>
+    </styled.button>
     <NodeFixture />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   $loading={false}
   disabled={false}
   fullWidth={false}
   type="secondary"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(styled.button)
+  <styled.div>
+    <styled.button
       aria-haspopup="false"
       disabled={false}
       fullWidth={false}
@@ -460,11 +460,11 @@ exports[`jest-auto-snapshots > Button Matches snapshot when passed only required
       size="medium"
       type="secondary"
     >
-      <ForwardRef(styled.div)
+      <styled.div
         hasIcon={false}
         iconEnd={false}
       />
-    </ForwardRef(styled.button)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.button>
+  </styled.div>
+</styled.div>
 `;

@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import TextArea from './TextArea'
 
-snap(TextArea, './TextArea.jsx')
+snap(TextArea, './TextArea.tsx')

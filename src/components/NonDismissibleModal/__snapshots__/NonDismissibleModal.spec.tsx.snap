@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NonDismissibleModal Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   NonDismissibleModal={true}
   aria-modal="true"
   role="dialog"
@@ -52,9 +52,9 @@ exports[`jest-auto-snapshots > NonDismissibleModal Matches snapshot when passed 
       }
     }
   >
-    <ForwardRef(styled.div)>
+    <styled.div>
       <NodeFixture />
-    </ForwardRef(styled.div)>
+    </styled.div>
   </AnimationWrapper>
-</ForwardRef(styled.div)>
+</styled.div>
 `;

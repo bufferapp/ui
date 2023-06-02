@@ -8,7 +8,7 @@ import 'jest-styled-components'
 
 import SocialButton from './SocialButton'
 
-snap(SocialButton, './SocialButton.jsx')
+snap(SocialButton, './SocialButton.tsx')
 
 test('Disabled button is disabled', () => {
   const tree = renderer

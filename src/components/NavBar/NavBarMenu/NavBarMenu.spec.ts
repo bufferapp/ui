@@ -17,4 +17,4 @@ describe('Avatar', () => {
 
 describe('NavBarMenu methods', () => {})
 
-snap(NavBarMenu, './NavBarMenu.jsx')
+snap(NavBarMenu, './NavBarMenu.tsx')

@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.ul)
+<styled.ul
   aria-label="jest-auto-snapshots String Fixture"
   role="menubar"
   usingMouse={false}
 >
-  <ForwardRef(styled.li)
+  <styled.li
     menuOption={true}
     role="none"
   >
@@ -42,17 +42,17 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "it
       usingMouse={false}
       xPosition="jest-auto-snapshots String Fixture"
     />
-  </ForwardRef(styled.li)>
-</ForwardRef(styled.ul)>
+  </styled.li>
+</styled.ul>
 `;
 
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.ul)
+<styled.ul
   aria-label="jest-auto-snapshots String Fixture"
   role="menubar"
   usingMouse={false}
 >
-  <ForwardRef(styled.li)
+  <styled.li
     menuOption={true}
     role="none"
   >
@@ -88,17 +88,17 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all pro
       usingMouse={false}
       xPosition="jest-auto-snapshots String Fixture"
     />
-  </ForwardRef(styled.li)>
-</ForwardRef(styled.ul)>
+  </styled.li>
+</styled.ul>
 `;
 
 exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.ul)
+<styled.ul
   aria-label="jest-auto-snapshots String Fixture"
   role="menubar"
   usingMouse={false}
 >
-  <ForwardRef(styled.li)
+  <styled.li
     menuOption={true}
     role="none"
   >
@@ -134,6 +134,6 @@ exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only re
       usingMouse={false}
       xPosition="right"
     />
-  </ForwardRef(styled.li)>
-</ForwardRef(styled.ul)>
+  </styled.li>
+</styled.ul>
 `;

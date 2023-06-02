@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Link from './Link'
 
-snap(Link, './Link.jsx')
+snap(Link, './Link.tsx')

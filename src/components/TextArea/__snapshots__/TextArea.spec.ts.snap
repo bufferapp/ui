@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -10,7 +10,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "disa
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.textarea)
+  <styled.textarea
     disabled={false}
     fullHeight={true}
     hasError={true}
@@ -19,21 +19,21 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "disa
     placeholder="jest-auto-snapshots String Fixture"
     rows={1}
   />
-  <ForwardRef(styled.div)>
+  <styled.div>
     <WarningIcon
       size="medium"
     />
-    <ForwardRef(Styled(Text))
+    <Styled(Text)
       hasError={true}
       htmlFor="jest-auto-snapshots String Fixture"
       type="help"
     />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "fullHeight" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -42,7 +42,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "full
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.textarea)
+  <styled.textarea
     disabled={true}
     fullHeight={false}
     hasError={true}
@@ -51,21 +51,21 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "full
     placeholder="jest-auto-snapshots String Fixture"
     rows={1}
   />
-  <ForwardRef(styled.div)>
+  <styled.div>
     <WarningIcon
       size="medium"
     />
-    <ForwardRef(Styled(Text))
+    <Styled(Text)
       hasError={true}
       htmlFor="jest-auto-snapshots String Fixture"
       type="help"
     />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "hasError" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -74,7 +74,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "hasE
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.textarea)
+  <styled.textarea
     disabled={true}
     fullHeight={true}
     hasError={false}
@@ -83,11 +83,11 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when boolean prop "hasE
     placeholder="jest-auto-snapshots String Fixture"
     rows={1}
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -96,7 +96,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.textarea)
+  <styled.textarea
     disabled={true}
     fullHeight={true}
     hasError={true}
@@ -105,21 +105,21 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed all props 1
     placeholder="jest-auto-snapshots String Fixture"
     rows={1}
   />
-  <ForwardRef(styled.div)>
+  <styled.div>
     <WarningIcon
       size="medium"
     />
-    <ForwardRef(Styled(Text))
+    <Styled(Text)
       hasError={true}
       htmlFor="jest-auto-snapshots String Fixture"
       type="help"
     />
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > TextArea Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
+<styled.div>
   <Text
     color="grayDarker"
     hasError={false}
@@ -128,7 +128,7 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed only requir
   >
     jest-auto-snapshots String Fixture
   </Text>
-  <ForwardRef(styled.textarea)
+  <styled.textarea
     disabled={false}
     fullHeight={false}
     hasError={false}
@@ -136,5 +136,5 @@ exports[`jest-auto-snapshots > TextArea Matches snapshot when passed only requir
     onChange={[MockFunction]}
     rows={4}
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;

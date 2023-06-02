@@ -4,4 +4,4 @@ import 'jest-styled-components'
 
 import AnimationWrapper from './AnimationWrapper'
 
-snap(AnimationWrapper, './AnimationWrapper.jsx')
+snap(AnimationWrapper, './AnimationWrapper.tsx')

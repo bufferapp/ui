@@ -30,55 +30,37 @@
     "types"
   ],
   "scripts": {
+    "prebuild:lib": "rimraf lib && yarn build:typescript",
     "build:typescript": "rm -Rf built && tsc -p ./tsconfig.json",
     "build:lib": "concurrently 'yarn run build:commonjs' 'yarn run build:copy-files'",
-    "prebuild:lib": "rimraf lib",
-    "build:commonjs": "cross-env NODE_ENV=production babel ./src/components --out-dir ./lib --ignore index.js",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./built/components --out-dir ./lib --ignore index.js",
     "build:copy-files": "node scripts/copyBuildFiles.js",
+
+
     "deploy:docs": "gh-pages -d build",
     "predeploy:docs": "yarn gen:docs && yarn build:docs",
     "gen:docs": "node scripts/generateComponentData.js",
     "gen:docs-watch": "yarn gen:docs -- --watch",
     "build:docs": "node scripts/build.js",
+
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "pkg:clean": "rushx pkg:sort && rushx pkg:depcheck",
     "pkg:depcheck": "depcheck",
     "pkg:sort": "sort-package-json",
+
     "publish": "./scripts/publish.sh",
     "publish:beta": "node ./scripts/betaPublish.js",
+
     "prestart": "yarn gen:docs",
     "start": "concurrently 'yarn run start:docs' 'yarn run gen:docs-watch'",
     "start:docs": "node scripts/start.js",
+
     "test": "jest",
     "test-update": "jest --no-coverage -u",
     "test-watch": "jest --no-coverage --watch",
+
     "component:new": "node ./scripts/newComponent.js",
     "gen:icons": "node ./scripts/generateIconComponents.js && eslint src/components/Icon/Icons/** --fix"
-  },
-  "babel": {
-    "env": {
-      "production": {
-        "plugins": [
-          [
-            "babel-plugin-styled-components",
-            {
-              "pure": true,
-              "namespace": "bufferapp-ui",
-              "minify": true
-            }
-          ]
-        ]
-      }
-    },
-    "plugins": [
-      "@babel/plugin-transform-modules-commonjs",
-      "@babel/plugin-proposal-class-properties",
-      "@babel/plugin-proposal-export-default-from"
-    ],
-    "presets": [
-      "@babel/preset-env",
-      "@babel/react"
-    ]
   },
   "browserslist": [
     ">0.2%",
@@ -151,7 +133,7 @@
     "html-webpack-plugin": "4.0.0-alpha.2",
     "identity-obj-proxy": "3.0.0",
     "inquirer": "6.2.1",
-    "jest": "^24.7.1",
+    "jest": "27.4.2",
     "jest-auto-snapshots": "=3.0.1",
     "jest-styled-components": "^7.0.5",
     "markdown-to-jsx": "^6.11.4",
@@ -184,6 +166,7 @@
     "svgo": "1.1.1",
     "terser-webpack-plugin": "^4.1.0",
     "ts-loader": "8.4.0",
+    "ts-jest": "27.1.5",
     "ts-migrate": "^0.1.35",
     "typescript": "4.9.5",
     "url-loader": "1.1.1",

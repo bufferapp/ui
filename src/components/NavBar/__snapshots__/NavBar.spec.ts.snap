@@ -1,17 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Link))
+  <styled.div>
+    <Styled(Link)
       href="#main"
     >
       Skip to main content
-    </ForwardRef(Styled(Link))>
+    </Styled(Link)>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       activeProduct="publish"
       products={
@@ -24,8 +24,8 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
+  </styled.div>
+  <styled.nav>
     <DropdownMenu
       ariaLabel="Help Menu"
       ariaLabelPopup="Help"
@@ -41,17 +41,17 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)>
+        <styled.a>
           <InfoIcon />
-          <ForwardRef(styled.span)>
+          <styled.span>
             Help
-          </ForwardRef(styled.span)>
-        </ForwardRef(styled.a)>
+          </styled.span>
+        </styled.a>
       }
       onOpen={null}
       xPosition="right"
     />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -123,22 +123,22 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenuItems" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Link))
+  <styled.div>
+    <Styled(Link)
       href="#main"
     >
       Skip to main content
-    </ForwardRef(Styled(Link))>
+    </Styled(Link)>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       activeProduct="publish"
       products={
@@ -151,24 +151,24 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
         ]
       }
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
+  </styled.div>
+  <styled.nav>
     <DropdownMenu
       ariaLabel="Help Menu"
       ariaLabelPopup="Help"
       items={Array []}
       menubarItem={
-        <ForwardRef(styled.a)>
+        <styled.a>
           <InfoIcon />
-          <ForwardRef(styled.span)>
+          <styled.span>
             Help
-          </ForwardRef(styled.span)>
-        </ForwardRef(styled.a)>
+          </styled.span>
+        </styled.a>
       }
       onOpen={null}
       xPosition="right"
     />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -240,22 +240,22 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "helpMenu
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Link))
+  <styled.div>
+    <Styled(Link)
       href="#main"
     >
       Skip to main content
-    </ForwardRef(Styled(Link))>
+    </Styled(Link)>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       activeProduct="publish"
       products={
@@ -268,8 +268,8 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
         ]
       }
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
+  </styled.div>
+  <styled.nav>
     <DropdownMenu
       ariaLabel="Help Menu"
       ariaLabelPopup="Help"
@@ -285,17 +285,17 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)>
+        <styled.a>
           <InfoIcon />
-          <ForwardRef(styled.span)>
+          <styled.span>
             Help
-          </ForwardRef(styled.span)>
-        </ForwardRef(styled.a)>
+          </styled.span>
+        </styled.a>
       }
       onOpen={null}
       xPosition="right"
     />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -367,28 +367,28 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Link))
+  <styled.div>
+    <Styled(Link)
       href="#main"
     >
       Skip to main content
-    </ForwardRef(Styled(Link))>
+    </Styled(Link)>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       activeProduct="publish"
       products={Array []}
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
+  </styled.div>
+  <styled.nav>
     <DropdownMenu
       ariaLabel="Help Menu"
       ariaLabelPopup="Help"
@@ -404,17 +404,17 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)>
+        <styled.a>
           <InfoIcon />
-          <ForwardRef(styled.span)>
+          <styled.span>
             Help
-          </ForwardRef(styled.span)>
-        </ForwardRef(styled.a)>
+          </styled.span>
+        </styled.a>
       }
       onOpen={null}
       xPosition="right"
     />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -486,17 +486,17 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when array prop "products
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displaySkipLink" is set to: "false" 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
+  <styled.div>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       activeProduct="publish"
       products={
@@ -509,8 +509,8 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
         ]
       }
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
+  </styled.div>
+  <styled.nav>
     <DropdownMenu
       ariaLabel="Help Menu"
       ariaLabelPopup="Help"
@@ -526,17 +526,17 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)>
+        <styled.a>
           <InfoIcon />
-          <ForwardRef(styled.span)>
+          <styled.span>
             Help
-          </ForwardRef(styled.span)>
-        </ForwardRef(styled.a)>
+          </styled.span>
+        </styled.a>
       }
       onOpen={null}
       xPosition="right"
     />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -608,22 +608,22 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "displa
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpersonation" is set to: "false" 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Link))
+  <styled.div>
+    <Styled(Link)
       href="#main"
     >
       Skip to main content
-    </ForwardRef(Styled(Link))>
+    </Styled(Link)>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       activeProduct="publish"
       products={
@@ -636,8 +636,8 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
         ]
       }
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
+  </styled.div>
+  <styled.nav>
     <DropdownMenu
       ariaLabel="Help Menu"
       ariaLabelPopup="Help"
@@ -653,17 +653,17 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)>
+        <styled.a>
           <InfoIcon />
-          <ForwardRef(styled.span)>
+          <styled.span>
             Help
-          </ForwardRef(styled.span)>
-        </ForwardRef(styled.a)>
+          </styled.span>
+        </styled.a>
       }
       onOpen={null}
       xPosition="right"
     />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -735,22 +735,22 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when boolean prop "isImpe
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
-    <ForwardRef(Styled(Link))
+  <styled.div>
+    <Styled(Link)
       href="#main"
     >
       Skip to main content
-    </ForwardRef(Styled(Link))>
+    </Styled(Link)>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       activeProduct="publish"
       products={
@@ -763,8 +763,8 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
         ]
       }
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
+  </styled.div>
+  <styled.nav>
     <DropdownMenu
       ariaLabel="Help Menu"
       ariaLabelPopup="Help"
@@ -780,17 +780,17 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
         ]
       }
       menubarItem={
-        <ForwardRef(styled.a)>
+        <styled.a>
           <InfoIcon />
-          <ForwardRef(styled.span)>
+          <styled.span>
             Help
-          </ForwardRef(styled.span)>
-        </ForwardRef(styled.a)>
+          </styled.span>
+        </styled.a>
       }
       onOpen={null}
       xPosition="right"
     />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -862,23 +862,23 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed all props 1`]
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;
 
 exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.nav)
+<styled.nav
   aria-label="Main menu"
 >
-  <ForwardRef(styled.div)>
+  <styled.div>
     <BufferLogo />
-    <ForwardRef(styled.div) />
+    <styled.div />
     <NavBarProducts
       products={Array []}
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.nav)>
-    <ForwardRef(styled.div) />
+  </styled.div>
+  <styled.nav>
+    <styled.div />
     <DropdownMenu
       ariaLabel="Account Menu"
       ariaLabelPopup="Account"
@@ -940,6 +940,6 @@ exports[`jest-auto-snapshots > NavBar Matches snapshot when passed only required
       onOpen={null}
       xPosition="right"
     />
-  </ForwardRef(styled.nav)>
-</ForwardRef(styled.nav)>
+  </styled.nav>
+</styled.nav>
 `;

@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearSearchOnBlur" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.input)
+<styled.div>
+  <styled.input
     height="jest-auto-snapshots String Fixture"
     onChange={[Function]}
     onClick={[MockFunction]}
@@ -11,12 +11,12 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearS
     type="text"
     value=""
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearSearchOnFocus" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.input)
+<styled.div>
+  <styled.input
     height="jest-auto-snapshots String Fixture"
     onBlur={[Function]}
     onChange={[Function]}
@@ -25,12 +25,12 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "clearS
     type="text"
     value=""
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.input)
+<styled.div>
+  <styled.input
     height="jest-auto-snapshots String Fixture"
     onBlur={[Function]}
     onChange={[Function]}
@@ -40,12 +40,12 @@ exports[`jest-auto-snapshots > Search Matches snapshot when boolean prop "isOpen
     type="text"
     value=""
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.input)
+<styled.div>
+  <styled.input
     height="jest-auto-snapshots String Fixture"
     onBlur={[Function]}
     onChange={[Function]}
@@ -55,12 +55,12 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed all props 1`]
     type="text"
     value=""
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Search Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)>
-  <ForwardRef(styled.input)
+<styled.div>
+  <styled.input
     height="tall"
     onChange={[Function]}
     onClick={[Function]}
@@ -68,5 +68,5 @@ exports[`jest-auto-snapshots > Search Matches snapshot when passed only required
     type="text"
     value=""
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;

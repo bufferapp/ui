@@ -4,9 +4,9 @@ exports[`jest-auto-snapshots > States Matches snapshot when passed all props 1`]
 <Context.Provider
   value="small"
 >
-  <ForwardRef(styled.div)>
+  <styled.div>
     <NodeFixture />
-  </ForwardRef(styled.div)>
+  </styled.div>
 </Context.Provider>
 `;
 
@@ -14,8 +14,8 @@ exports[`jest-auto-snapshots > States Matches snapshot when passed only required
 <Context.Provider
   value="large"
 >
-  <ForwardRef(styled.div)>
+  <styled.div>
     <NodeFixture />
-  </ForwardRef(styled.div)>
+  </styled.div>
 </Context.Provider>
 `;

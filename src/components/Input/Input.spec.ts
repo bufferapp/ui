@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Input from './Input'
 
-snap(Input, './Input.jsx')
+snap(Input, './Input.tsx')

@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import SimpleModal from './SimpleModal'
 
-snap(SimpleModal, './SimpleModal.jsx')
+snap(SimpleModal, './SimpleModal.tsx')

@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import States from './States'
 
-snap(States, './States.jsx')
+snap(States, './States.tsx')

@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import CrossSell from './CrossSell'
 
-snap(CrossSell, './CrossSell.jsx')
+snap(CrossSell, './CrossSell.tsx')

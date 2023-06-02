@@ -55,4 +55,4 @@ describe('Append menu items', () => {
   })
 })
 
-snap(NavBar, './NavBar.jsx')
+snap(NavBar, './NavBar.tsx')

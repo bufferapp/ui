@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer'
 import Button from './Button'
 import 'jest-styled-components'
 
-snap(Button, './Button.jsx')
+snap(Button, './Button.tsx')
 
 test('Button renders styles properly', () => {
   const tree = renderer

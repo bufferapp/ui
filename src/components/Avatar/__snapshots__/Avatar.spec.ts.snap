@@ -1,32 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Avatar Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   size="large"
 >
   <Unknown
     size="large"
   />
-  <ForwardRef(styled.div)
+  <styled.div
     alt="jest-auto-snapshots String Fixture"
     fallbackUrl="jest-auto-snapshots String Fixture"
     size="large"
     src="jest-auto-snapshots String Fixture"
     type="default"
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Avatar Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   size="small"
 >
-  <ForwardRef(styled.div)
+  <styled.div
     alt="jest-auto-snapshots String Fixture"
     fallbackUrl=""
     size="small"
     src="jest-auto-snapshots String Fixture"
     type="default"
   />
-</ForwardRef(styled.div)>
+</styled.div>
 `;

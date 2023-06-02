@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import ProgressBar from './ProgressBar'
 
-snap(ProgressBar, './ProgressBar.jsx')
+snap(ProgressBar, './ProgressBar.tsx')

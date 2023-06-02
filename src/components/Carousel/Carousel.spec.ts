@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Carousel from './Carousel'
 
-snap(Carousel, './Carousel.jsx')
+snap(Carousel, './Carousel.tsx')

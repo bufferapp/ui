@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Banner from './Banner'
 
-snap(Banner, './Banner.jsx')
+snap(Banner, './Banner.tsx')

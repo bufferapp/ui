@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Tooltip from './Tooltip'
 
-snap(Tooltip, './Tooltip.jsx')
+snap(Tooltip, './Tooltip.tsx')

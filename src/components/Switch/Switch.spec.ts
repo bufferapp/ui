@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Switch from './Switch'
 
-snap(Switch, './Switch.jsx')
+snap(Switch, './Switch.tsx')

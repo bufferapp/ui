@@ -5,4 +5,4 @@ import 'jest-styled-components'
 
 import Loader from './Loader'
 
-snap(Loader, './Loader.jsx')
+snap(Loader, './Loader.tsx')

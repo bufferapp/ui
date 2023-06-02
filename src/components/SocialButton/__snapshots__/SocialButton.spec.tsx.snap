@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > SocialButton Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<ForwardRef(styled.button)
+<styled.button
   channel="twitter"
   disabled={false}
   onClick={[MockFunction]}
 >
-  <ForwardRef(styled.span)>
+  <styled.span>
     <TwitterIcon />
     <Text
       color="grayDarker"
@@ -15,7 +15,7 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when boolean prop "
     >
       Twitter
     </Text>
-  </ForwardRef(styled.span)>
+  </styled.span>
   <Text
     color="grayDarker"
     hasError={false}
@@ -23,15 +23,15 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when boolean prop "
   >
     Connect a Twitter profile
   </Text>
-</ForwardRef(styled.button)>
+</styled.button>
 `;
 
 exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.button)
+<styled.button
   channel="twitter"
   disabled={true}
 >
-  <ForwardRef(styled.span)>
+  <styled.span>
     <TwitterIcon />
     <Text
       color="grayDarker"
@@ -40,7 +40,7 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed all pro
     >
       Twitter
     </Text>
-  </ForwardRef(styled.span)>
+  </styled.span>
   <Text
     color="grayDarker"
     hasError={false}
@@ -48,16 +48,16 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed all pro
   >
     Connect a Twitter profile
   </Text>
-</ForwardRef(styled.button)>
+</styled.button>
 `;
 
 exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.button)
+<styled.button
   channel="twitter"
   disabled={false}
   onClick={[MockFunction]}
 >
-  <ForwardRef(styled.span)>
+  <styled.span>
     <TwitterIcon />
     <Text
       color="grayDarker"
@@ -66,7 +66,7 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed only re
     >
       Twitter
     </Text>
-  </ForwardRef(styled.span)>
+  </styled.span>
   <Text
     color="grayDarker"
     hasError={false}
@@ -74,5 +74,5 @@ exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed only re
   >
     Connect a Twitter profile
   </Text>
-</ForwardRef(styled.button)>
+</styled.button>
 `;

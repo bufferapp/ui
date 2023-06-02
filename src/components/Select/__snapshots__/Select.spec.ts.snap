@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -12,7 +12,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -20,8 +20,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -30,7 +30,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -54,13 +54,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" is an empty array: "[]" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -71,7 +71,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -79,8 +79,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -89,7 +89,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -113,13 +113,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys"
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -130,7 +130,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -138,8 +138,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -148,7 +148,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -172,13 +172,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" h
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capitalizeItemLabel" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -189,7 +189,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -197,8 +197,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -207,7 +207,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={false}
         getItemId={[Function]}
@@ -231,13 +231,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capita
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearSearchOnBlur" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -248,7 +248,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearS
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -256,8 +256,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearS
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -266,7 +266,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearS
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -290,13 +290,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearS
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip="jest-auto-snapshots String Fixture"
@@ -307,7 +307,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={false}
     onClick={[Function]}
     size="small"
@@ -316,8 +316,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     <ChevronDownIcon
       color="white"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -326,7 +326,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -350,13 +350,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabl
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -367,7 +367,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -375,8 +375,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={false}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -385,7 +385,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -409,13 +409,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWi
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCustomAction" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -426,7 +426,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -434,8 +434,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -444,7 +444,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -468,13 +468,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCus
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -485,7 +485,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -493,8 +493,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={false}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -503,7 +503,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -527,13 +527,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIco
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -544,7 +544,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -552,8 +552,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -562,7 +562,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -586,13 +586,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSe
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInputSearch" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -603,7 +603,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -611,8 +611,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -621,7 +621,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -645,13 +645,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInpu
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={false}
   aria-haspopup="true"
   data-tip=""
@@ -662,7 +662,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -670,8 +670,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -680,7 +680,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -704,13 +704,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -721,7 +721,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -730,7 +730,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -754,13 +754,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSpli
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiSelect" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -771,7 +771,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -779,8 +779,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -789,7 +789,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -813,13 +813,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiS
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "selectPopupVisible" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -830,7 +830,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -838,8 +838,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -848,7 +848,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -872,13 +872,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "select
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -889,7 +889,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -897,8 +897,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -907,7 +907,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -931,13 +931,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortc
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "textToLeft" is set to: "false" 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -948,7 +948,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "textTo
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -956,8 +956,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "textTo
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -966,7 +966,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "textTo
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -990,13 +990,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "textTo
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={true}
   aria-haspopup="true"
   data-tip=""
@@ -1007,7 +1007,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
   role="button"
   tabIndex={0}
 >
-  <ForwardRef(styled.div)
+  <styled.div
     disabled={true}
     size="small"
     type="primary"
@@ -1015,8 +1015,8 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     <ChevronDownIcon
       color="grayDark"
     />
-  </ForwardRef(styled.div)>
-  <ForwardRef(styled.div)
+  </styled.div>
+  <styled.div
     fullWidth={true}
     hasIconOnly={true}
     horizontalOffset="jest-auto-snapshots String Fixture"
@@ -1025,7 +1025,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
     xPosition="right"
     yPosition="top"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -1049,13 +1049,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`]
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
 
 exports[`jest-auto-snapshots > Select Matches snapshot when passed only required props 1`] = `
-<ForwardRef(styled.div)
+<styled.div
   aria-expanded={false}
   aria-haspopup="true"
   isSplit={false}
@@ -1089,13 +1089,13 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
     textToLeft={false}
     type="secondary"
   />
-  <ForwardRef(styled.div)
+  <styled.div
     hasIconOnly={false}
     isOpen={false}
     xPosition="left"
     yPosition="bottom"
   >
-    <ForwardRef(styled.ul)>
+    <styled.ul>
       <SelectItemTooltipWrapper
         capitalizeItemLabel={true}
         getItemId={[Function]}
@@ -1113,7 +1113,7 @@ exports[`jest-auto-snapshots > Select Matches snapshot when passed only required
         onClick={[Function]}
         onItemClick={[Function]}
       />
-    </ForwardRef(styled.ul)>
-  </ForwardRef(styled.div)>
-</ForwardRef(styled.div)>
+    </styled.ul>
+  </styled.div>
+</styled.div>
 `;
