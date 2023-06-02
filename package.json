@@ -135,6 +135,7 @@
     "inquirer": "6.2.1",
     "jest": "27.4.2",
     "jest-auto-snapshots": "=3.0.1",
+    "jest-environment-jsdom": "^27.5.1",
     "jest-styled-components": "^7.0.5",
     "markdown-to-jsx": "^6.11.4",
     "mini-css-extract-plugin": "0.4.3",
