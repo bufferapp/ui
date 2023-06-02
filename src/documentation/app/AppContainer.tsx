@@ -9,9 +9,8 @@ import componentData from '../config/componentData.json'
 import documentationData from '../config/documentsData.json'
 import NavBar from './layout/navbar/NavBar'
 import Home from './Home'
-// @ts-expect-error TS(2307) FIXME: Cannot find module '../markdown/UI.md' or its corr... Remove this comment to see the full error message
 import UIComponent from '../markdown/UI.md'
-// import pckage from '../../../package.json'
+import { LIB_VERSION } from '../version'
 
 const Container = styled.div`
   width: 100%;
@@ -173,7 +172,7 @@ export default class AppContainer extends React.Component {
 
     return (
       <Container>
-        <NavBar title="Buffer UI" version={'pckage.version'} />
+        <NavBar title="Buffer UI" version={LIB_VERSION} />
         <Wrapper>
           {/* @ts-expect-error TS(2322) FIXME: Type '{ navigationLinks: any[]; route: any; }' is ... Remove this comment to see the full error message */}
           <Sidebar navigationLinks={navigationLinks} route={route} />

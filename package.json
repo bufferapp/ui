@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "7.38.6-beta.0e953df0",
+  "version": "7.38.6-beta.4ac29864",
   "private": true,
   "description": "Shared UI components for buffer apps",
   "keywords": [
@@ -31,6 +31,7 @@
   ],
   "scripts": {
     "prebuild:lib": "rimraf lib && yarn build:typescript",
+    "prebuild:typescript": "node -p \"'export const LIB_VERSION = ' + JSON.stringify(require('./package.json').version)\" > src/documentation/version.ts && eslint --fix src/documentation/version.ts",
     "build:typescript": "rm -Rf built && tsc -p ./tsconfig.json && cp -Rf ./src/documentation/markdown ./built/documentation && cp -Rf ./src/index.css ./built",
     "build:lib": "concurrently 'yarn run build:commonjs' 'yarn run build:copy-files'",
     "build:commonjs": "cross-env NODE_ENV=production babel ./built/components --out-dir ./lib --ignore index.js",
