@@ -123,13 +123,14 @@ export default class DropdownMenu extends React.Component {
 
     return (
       <DropdownItems
-        // @ts-expect-error TS(7006) FIXME: Parameter 'itemsNode' implicitly has an 'any' type... Remove this comment to see the full error message
+        // @ts-expect-error TS(2339) FIXME: Property 'itemsNode' does not exist on type 'Dropd... Remove this comment to see the full error message
         ref={(itemsNode) => (this.itemsNode = itemsNode)}
         role="menubar"
         aria-label={ariaLabel}
-        // @ts-expect-error TS(2339) FIXME: Property 'usingMouse' does not exist on type 'Read... Remove this comment to see the full error message
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         usingMouse={this.state.usingMouse}
       >
+        {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
         <Item role="none" menuOption>
           <MenubarItem.type
             {...MenubarItem.props}

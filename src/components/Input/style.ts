@@ -63,20 +63,28 @@ export const InputWrapper = styled.div`
 
 export const InputFieldWrapper = styled.div`
   position: relative;
-  ${({ prefix }): string => (prefix ? inputPrefix : '')};
+  ${({ prefix }): string =>  
+// @ts-expect-error TS(2322) FIXME: Type 'FlattenInterpolation<ThemeProps<any>> | ""' ... Remove this comment to see the full error message
+ (prefix ? inputPrefix : '')};
 `
 
 export const InputStyled = styled.input`
   box-sizing: border-box;
   margin: 8px 0px;
-  background: ${({ hasError }): string => (hasError ? redLightest : white)};
+  background: ${({  
+// @ts-expect-error TS(2339) FIXME: Property 'hasError' does not exist on type 'Omit<D... Remove this comment to see the full error message
+ hasError }): string => (hasError ? redLightest : white)};
   border-radius: 4px;
-  border: 1px solid ${({ hasError }): string => (hasError ? redDark : gray)};
+  border: 1px solid ${({  
+// @ts-expect-error TS(2339) FIXME: Property 'hasError' does not exist on type 'Omit<D... Remove this comment to see the full error message
+ hasError }): string => (hasError ? redDark : gray)};
   box-shadow: 2px 2px 0 2px transparent;
   transition-property: border-width, border-color, box-shadow;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
-  color: ${({ hasError }): string => (hasError ? redDark : grayDarker)};
+  color: ${({  
+// @ts-expect-error TS(2339) FIXME: Property 'hasError' does not exist on type 'Omit<D... Remove this comment to see the full error message
+ hasError }): string => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
@@ -85,17 +93,24 @@ export const InputStyled = styled.input`
   width: 100%;
 
   ${({ prefix }): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'paddingLeft' does not exist on type 'str... Remove this comment to see the full error message
     prefix ? `padding-left: ${prefix.paddingLeft};` : ''}
-  ${({ icon }): string => (icon ? `padding-left: 32px;` : '')}
+  ${({  
+// @ts-expect-error TS(2339) FIXME: Property 'icon' does not exist on type 'Omit<Detai... Remove this comment to see the full error message
+ icon }): string => (icon ? `padding-left: 32px;` : '')}
 
   &::placeholder {
     color: ${grayDark};
   }
 
   &:focus {
-    border: 1px solid ${({ hasError }): string => (hasError ? redDark : blue)};
+    border: 1px solid ${({    
+// @ts-expect-error TS(2339) FIXME: Property 'hasError' does not exist on type 'Omit<D... Remove this comment to see the full error message
+ hasError }): string => (hasError ? redDark : blue)};
     box-shadow: 0px 0px 0px 3px
-      ${({ hasError }): string => (hasError ? redLighter : blueLighter)};
+      ${({      
+// @ts-expect-error TS(2339) FIXME: Property 'hasError' does not exist on type 'Omit<D... Remove this comment to see the full error message
+ hasError }): string => (hasError ? redLighter : blueLighter)};
     outline: none;
     transition-property: border-width, border-color, box-shadow;
     transition-duration: 0.1s;

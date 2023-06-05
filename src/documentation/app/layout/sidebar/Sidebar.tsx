@@ -155,7 +155,7 @@ class Sidebar extends React.Component {
             // no need to show those as those can be accesses by clicking on the parent
             link.children && link.isExpanded
               ? // @ts-expect-error TS(7006) FIXME: Parameter 'child' implicitly has an 'any' type.
-                link.children.map((child) =>
+                               link.children.map((child) =>
                   child.fileName !== child.parentName ? (
                     <SidebarListItem
                       isSelected={child.id === route}

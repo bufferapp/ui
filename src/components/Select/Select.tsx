@@ -528,6 +528,7 @@ export default class Select extends React.Component {
     if (isSplit) {
       return (
         <ButtonSelect
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           type={type}
           size={size}
           disabled={disabled}
@@ -580,6 +581,7 @@ export default class Select extends React.Component {
     if (length === 0) {
       return (
         <CustomItemContainer
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           isCustomItemFocused={this.state.isCustomItemFocused}
           onClick={() => onCustomItemClick(this.state.searchValue)}
         >
@@ -648,6 +650,7 @@ export default class Select extends React.Component {
 
     return (
       <SelectStyled
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         isOpen={isOpen || selectPopupVisible}
         xPosition={xPosition}
         yPosition={yPosition}
@@ -659,7 +662,7 @@ export default class Select extends React.Component {
         {!hideSearch && (items.length > 5 || isFiltering) && (
           <SearchBarWrapper
             id="searchInput"
-            // @ts-expect-error TS(7006) FIXME: Parameter 'node' implicitly has an 'any' type.
+            // @ts-expect-error TS(2339) FIXME: Property 'searchInputNode' does not exist on type ... Remove this comment to see the full error message
             ref={(node) => (this.searchInputNode = node)}
           >
             <SearchIcon />
@@ -673,7 +676,7 @@ export default class Select extends React.Component {
             />
           </SearchBarWrapper>
         )}
-        {/* @ts-expect-error TS(7006) FIXME: Parameter 'itemsNode' implicitly has an 'any' type... Remove this comment to see the full error message */}
+        {/* @ts-expect-error TS(2339) FIXME: Property 'itemsNode' does not exist on type 'Selec... Remove this comment to see the full error message */}
         <SelectItems ref={(itemsNode) => (this.itemsNode = itemsNode)}>
           {hasCustomAction
             ? this.renderCustomActionItem(
@@ -729,13 +732,12 @@ export default class Select extends React.Component {
     return (
       <Wrapper
         role="button"
-        // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
         onClick={(e) => this.onClick(e)}
-        // @ts-expect-error TS(7006) FIXME: Parameter 'e' implicitly has an 'any' type.
         onKeyUp={(e) => this.onKeyUp(e)}
         tabIndex={0}
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         isSplit={isSplit}
-        // @ts-expect-error TS(7006) FIXME: Parameter 'selectNode' implicitly has an 'any' typ... Remove this comment to see the full error message
+        // @ts-expect-error TS(2339) FIXME: Property 'selectNode' does not exist on type 'Sele... Remove this comment to see the full error message
         ref={(selectNode) => (this.selectNode = selectNode)}
         data-tip={disabled ? '' : tooltip}
         fullWidth={fullWidth}

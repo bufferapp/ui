@@ -31,6 +31,7 @@ const NavBarMenu = (props) => {
       <NavBarUser>
         {isImpersonation && (
           <NavBarImpersonating
+            // @ts-expect-error TS(2769) FIXME: No overload matches this call.
             user={user}
             aria-label="You are impersonating a user"
           >
@@ -40,6 +41,7 @@ const NavBarMenu = (props) => {
         <NavBarName>{user.name}</NavBarName>
         <NavBarEmail>{user.email}</NavBarEmail>
       </NavBarUser>
+      {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
       <NavBarAvatar avatar={getUserAvatar(user)} />
       <NavBarChavron>
         <ChevronDown color="grayLight" size="large" />

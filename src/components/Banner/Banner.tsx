@@ -72,6 +72,7 @@ export default class Banner extends React.Component {
 
     if (isOpen) {
       return (
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         <BannerStyled themeColor={themeColor}>
           {this.renderBannerContent(themeColor)}
           <BannerCloseButton>

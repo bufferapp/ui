@@ -26,16 +26,22 @@ const ProductLink = styled.a`
   font-size: 16px;
   text-decoration: none;
   align-items: center;
-  color: ${(props): string => (props.active ? blueDarker : grayDark)};
+  color: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'ThemedSt... Remove this comment to see the full error message
+active ? blueDarker : grayDark)};
   background-color: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'ThemedSt... Remove this comment to see the full error message
     props.active ? grayLighter : 'transparent'};
   &:hover {
-    color: ${(props): string => (props.active ? blueDarker : grayDark)};
+    color: ${(props): string => (props.    
+// @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'ThemedSt... Remove this comment to see the full error message
+active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
   }
   & svg {
     filter: grayscale(1) contrast(0.5);
     filter: ${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'ThemedSt... Remove this comment to see the full error message
       props.active ? 'grayscale(0) contrast(1)' : 'grayscale(1) contrast(.5)'};
   }
 `
@@ -144,6 +150,7 @@ const NavBarProducts = ({ products, activeProduct }) => (
     {/* @ts-expect-error TS(7031) FIXME: Binding element 'id' implicitly has an 'any' type. */}
     {products.map(({ id, href, isNew }) => (
       <ProductLink
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         active={activeProduct === id}
         href={href}
         key={id}

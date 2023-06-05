@@ -16,43 +16,67 @@ export const Wrapper = styled.div`
     outline-style: 0;
   }
   width: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'ThemedS... Remove this comment to see the full error message
     props.isSplit || props.fullWidth ? '100%' : 'auto'};
-  height: ${(props): string => (props.isSplit ? '100%' : 'auto')};
-  max-height: ${(props): string => (props.isSplit ? '100%' : '')};
-  position: ${(props): string => (props.isSplit ? 'initial' : 'relative')};
+  height: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'ThemedS... Remove this comment to see the full error message
+isSplit ? '100%' : 'auto')};
+  max-height: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'ThemedS... Remove this comment to see the full error message
+isSplit ? '100%' : '')};
+  position: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'isSplit' does not exist on type 'ThemedS... Remove this comment to see the full error message
+isSplit ? 'initial' : 'relative')};
   display: inline-block;
 `
 
 export const SelectStyled = styled.div`
-  right: ${(props): string => (props.hasIconOnly ? '6px' : '0')};
+  right: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'hasIconOnly' does not exist on type 'The... Remove this comment to see the full error message
+hasIconOnly ? '6px' : '0')};
   position: absolute;
   z-index: 1000;
   border: 1px solid ${gray};
   box-sizing: border-box;
   box-shadow: ${grayShadow};
   border-radius: 4px;
-  display: ${(props): string => (props.isOpen ? 'initial' : 'none')};
+  display: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'isOpen' does not exist on type 'ThemedSt... Remove this comment to see the full error message
+isOpen ? 'initial' : 'none')};
   min-width: 200px;
-  max-width: ${(props): string => (props.fullWidth ? '' : '200px')};
-  width: ${(props): string => (props.fullWidth ? '100%' : '200px')};
+  max-width: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'fullWidth' does not exist on type 'Theme... Remove this comment to see the full error message
+fullWidth ? '' : '200px')};
+  width: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'fullWidth' does not exist on type 'Theme... Remove this comment to see the full error message
+fullWidth ? '100%' : '200px')};
   background-color: ${white};
   bottom: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'yPosition' does not exist on type 'Theme... Remove this comment to see the full error message
     props.yPosition === 'top' ? '100%' : 'initial'};
   top: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'yPosition' does not exist on type 'Theme... Remove this comment to see the full error message
     props.yPosition === 'bottom' ? '100%' : 'initial'};
   margin-bottom: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'yPosition' does not exist on type 'Theme... Remove this comment to see the full error message
     props.yPosition === 'top' ? '8px' : '0'};
   margin-top: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'marginTop' does not exist on type 'Theme... Remove this comment to see the full error message
     props.marginTop
-      ? props.marginTop
-      : props.yPosition === 'bottom' || props.xPosition === 'right'
+      ? // @ts-expect-error TS(2339) FIXME: Property 'marginTop' does not exist on type 'Theme... Remove this comment to see the full error message
+        props.marginTop
+      : // @ts-expect-error TS(2339) FIXME: Property 'yPosition' does not exist on type 'Theme... Remove this comment to see the full error message
+        props.yPosition === 'bottom' || props.xPosition === 'right'
       ? '8px'
       : '0'};
   transform: translateX(
     ${(props): string =>
+      // @ts-expect-error TS(2339) FIXME: Property 'horizontalOffset' does not exist on type... Remove this comment to see the full error message
       props.horizontalOffset ? props.horizontalOffset : '0'}
   );
-  left: ${(props): string => (props.xPosition === 'left' ? 0 : '')};
+  left: ${(props): string =>  
+// @ts-expect-error TS(2322) FIXME: Type 'string | number' is not assignable to type '... Remove this comment to see the full error message
+ (props.xPosition === 'left' ? 0 : '')};
 `
 
 export const SelectItems = styled.ul`
@@ -130,5 +154,6 @@ export const CustomItemContainer = styled.li`
     background-color: ${grayLight};
   }
   background-color: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'isCustomItemFocused' does not exist on t... Remove this comment to see the full error message
     props.isCustomItemFocused ? `${grayLight}` : ''};
 `

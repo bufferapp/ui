@@ -63,7 +63,6 @@ export const StyledTextArea = styled.textarea<ITextArea>`
   padding: 8px;
   color: ${({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     hasError,
   }): string => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
@@ -72,20 +71,17 @@ export const StyledTextArea = styled.textarea<ITextArea>`
   line-height: ${lineHeight};
   height: ${({
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     fullHeight,
   }): string => (fullHeight ? '100%' : 'auto')};
   :focus {
     border: 1px solid
       ${({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
         hasError,
       }): string => (hasError ? redDark : blue)};
     box-shadow: 0px 0px 0px 3px
       ${({
         // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-        // @ts-ignore
         hasError,
       }): string => (hasError ? redLighter : boxShadow)};
     outline: none;

@@ -6,9 +6,11 @@ import { fontSize, fontFamily } from '../style/fonts'
 export const BannerStyled = styled.div`
   align-items: center;
   background: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'themeColor' does not exist on type 'Them... Remove this comment to see the full error message
     props.themeColor === 'blue' ? blueDarker : orangeLighter};
   box-sizing: border-box;
   color: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'themeColor' does not exist on type 'Them... Remove this comment to see the full error message
     props.themeColor === 'blue' ? white : orangeDarker};
   display: flex;
   font-family: ${fontFamily};
@@ -22,6 +24,7 @@ export const BannerStyled = styled.div`
   /** Style inline links */
   a {
     color: ${(props): string =>
+      // @ts-expect-error TS(2339) FIXME: Property 'themeColor' does not exist on type 'Them... Remove this comment to see the full error message
       props.themeColor === 'blue' ? white : orangeDarker};
   }
 `

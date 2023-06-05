@@ -270,8 +270,11 @@ const getBackgroundColor = (isDisabled, type) => {
 export const ButtonSelect = style.div`
   :before {
     background-color: ${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'Themed... Remove this comment to see the full error message
       getBackgroundColor(props.disabled, props.type)};
-    color: ${(props): string => (props.disabled ? gray : blueLighter)};
+    color: ${(props): string => (props.    
+// @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'Themed... Remove this comment to see the full error message
+disabled ? gray : blueLighter)};
     content: "";
     height: 24px;
     left: 0;
@@ -284,12 +287,15 @@ export const ButtonSelect = style.div`
   ${(props) =>
     // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     Sizes[props.size] || Sizes.medium};
-  cursor: ${(props): string => (props.disabled ? 'not-allowed' : 'inherit')};
+  cursor: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'Themed... Remove this comment to see the full error message
+disabled ? 'not-allowed' : 'inherit')};
   align-items: center;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'size' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
     props.size === 'small' ? 'padding: 0 6px' : 'padding 0 10px'};
   position: relative;
   width: 100%;
@@ -308,12 +314,16 @@ export const ButtonArrow = style.div`
   padding-left: 5px;
   display: flex;
   margin-right: -4px;
-  ${(props): string => props.textToLeft && 'margin-left: auto;'}
+  ${(props): string => props.  
+// @ts-expect-error TS(2339) FIXME: Property 'textToLeft' does not exist on type 'Them... Remove this comment to see the full error message
+textToLeft && 'margin-left: auto;'}
 `
 
 export const ButtonLabel = style.div`
   margin-left: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'hasIcon' does not exist on type 'ThemedS... Remove this comment to see the full error message
     props.hasIcon && !props.iconEnd ? '5px' : '0px'};
   margin-right: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'hasIcon' does not exist on type 'ThemedS... Remove this comment to see the full error message
     props.hasIcon && props.iconEnd ? '5px' : '0px'};
 `

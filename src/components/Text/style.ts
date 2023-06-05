@@ -19,7 +19,7 @@ export const Span = styled.span`
 
 export const Paragraph = styled.p`
   color: ${(props) =>
-    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
     textColors[props.color]};
   font-family: ${fontFamily};
   font-size: ${fontSize};
@@ -29,7 +29,7 @@ export const Paragraph = styled.p`
 
 export const H1 = styled.h1`
   color: ${(props) =>
-    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
     textColors[props.color]};
   font-family: ${fontFamily};
   font-size: 32px;
@@ -39,7 +39,7 @@ export const H1 = styled.h1`
 
 export const H2 = styled.h2`
   color: ${(props) =>
-    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
     textColors[props.color]};
   font-family: ${fontFamily};
   font-size: 24px;
@@ -49,7 +49,7 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   color: ${(props) =>
-    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
     textColors[props.color]};
   font-family: ${fontFamily};
   font-size: 18px;
@@ -59,7 +59,7 @@ export const H3 = styled.h3`
 
 export const Label = styled.label`
   color: ${(props) =>
-    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
     textColors[props.color]};
   font-family: ${fontFamily};
   font-size: ${fontSize};

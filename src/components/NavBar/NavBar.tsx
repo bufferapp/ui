@@ -94,7 +94,9 @@ const NavBarRight = styled.nav`
 const NavBarHelp = styled.a`
   align-items: center;
   color: #fff;
-  color: ${(props): string => (props.active ? blueDarker : grayDark)};
+  color: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'ThemedSt... Remove this comment to see the full error message
+active ? blueDarker : grayDark)};
   display: flex;
   font-size: 16px;
   font-family: ${fontFamily};
@@ -105,7 +107,9 @@ const NavBarHelp = styled.a`
   text-decoration: none;
   z-index: 2;
   &:hover {
-    color: ${(props): string => (props.active ? blueDarker : grayDark)};
+    color: ${(props): string => (props.    
+// @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'ThemedSt... Remove this comment to see the full error message
+active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
   }
   cursor: pointer;

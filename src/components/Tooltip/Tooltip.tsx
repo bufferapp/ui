@@ -134,7 +134,7 @@ class Tooltip extends React.Component {
     return (
       <React.Fragment>
         {renderTooltip ? (
-          // @ts-expect-error TS(7006) FIXME: Parameter 'node' implicitly has an 'any' type.
+          // @ts-expect-error TS(2339) FIXME: Property 'tooltipWrapper' does not exist on type '... Remove this comment to see the full error message
           <Styles.TooltipWrapper ref={(node) => (this.tooltipWrapper = node)}>
             <Styles.TooltipStyled
               label={this.renderLabel(label, hotkey, customLabel)}

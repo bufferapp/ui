@@ -52,10 +52,12 @@ export default class Input extends React.Component {
             {label}
           </Text>
         )}
+        {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
         <Styles.InputFieldWrapper prefix={prefix} size={size}>
           {icon && !prefix && <Styles.StyledIcon>{icon}</Styles.StyledIcon>}
           <Styles.InputStyled
             disabled={disabled}
+            // @ts-expect-error TS(2769) FIXME: No overload matches this call.
             hasError={hasError}
             maxLength={maxLength}
             id={id}

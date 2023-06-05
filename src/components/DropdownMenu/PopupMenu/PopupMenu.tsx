@@ -79,7 +79,7 @@ export default class PopupMenu extends React.Component {
 
     const newIndex = this.isLastItem(focusedItem)
       ? // @ts-expect-error TS(2551) FIXME: Property 'firstItem' does not exist on type 'Popup... Remove this comment to see the full error message
-        this.firstItem
+               this.firstItem
       : focusedItem + 1
 
     this.setFocusToItem(newIndex)
@@ -91,7 +91,7 @@ export default class PopupMenu extends React.Component {
 
     const newIndex = this.isFirstItem(focusedItem)
       ? // @ts-expect-error TS(2551) FIXME: Property 'lastItem' does not exist on type 'PopupM... Remove this comment to see the full error message
-        this.lastItem
+               this.lastItem
       : focusedItem - 1
 
     this.setFocusToItem(newIndex)
@@ -174,6 +174,7 @@ export default class PopupMenu extends React.Component {
 
       return [
         item.hasDivider && (
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <ItemDivider key={`${item.id}--divider`} role="none" type={type}>
             {item.dividerTitle && (
               <ItemDividerTitle>{item.dividerTitle}</ItemDividerTitle>
@@ -204,6 +205,7 @@ export default class PopupMenu extends React.Component {
             )
           }}
         >
+          {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
           <Item key={`item-${index}`} role="none" type={item.type}>
             <ButtonItem
               // @ts-expect-error TS(2322) FIXME: Type '{ index: any; item: any; shouldFocus: boolea... Remove this comment to see the full error message
@@ -236,17 +238,17 @@ export default class PopupMenu extends React.Component {
 
     return (
       <PopupMenuStyled
-        // @ts-expect-error TS(7006) FIXME: Parameter 'popup' implicitly has an 'any' type.
+        // @ts-expect-error TS(2339) FIXME: Property 'popup' does not exist on type 'PopupMenu... Remove this comment to see the full error message
         ref={(popup) => (this.popup = popup)}
         role="menu"
         aria-label={ariaLabelPopup}
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         isOpen={isOpen}
         xPosition={xPosition}
         horizontalOffset={horizontalOffset}
         onBlur={onBlur}
         // @ts-expect-error TS(2339) FIXME: Property 'tabIndex' does not exist on type 'Readon... Remove this comment to see the full error message
         tabIndex={this.state.tabIndex}
-        // @ts-expect-error TS(7006) FIXME: Parameter 'ev' implicitly has an 'any' type.
         onKeyDown={(ev) => this.handleKeydown(ev)}
       >
         {this.renderItems(items)}

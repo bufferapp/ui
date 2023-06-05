@@ -33,10 +33,12 @@ const SidebarListItem = ({
 }) => (
   <ItemStyled
     onClick={() => onItemClick()}
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     hasUser={user}
     selected={selected}
     className={className}
   >
+    {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
     {icon && <IconContainer selected={selected}>{icon}</IconContainer>}
     <LabelContainer>
       {user ? (
@@ -58,6 +60,7 @@ const SidebarListItem = ({
             >
               {user.name}
             </LabelStyled>
+            {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
             <Handle selected={selected}>{user.handle}</Handle>
           </NameHandleWrapper>
         </React.Fragment>
@@ -68,8 +71,10 @@ const SidebarListItem = ({
       )}
     </LabelContainer>
 
+    {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
     {!badgeIcon && badges && <Badge selected={selected}>{badges}</Badge>}
     {badgeIcon && (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <BadgeIconContainer selected={selected}>{badgeIcon}</BadgeIconContainer>
     )}
   </ItemStyled>

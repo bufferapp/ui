@@ -40,8 +40,12 @@ export const NavBarImpersonating = styled.div`
   color: ${white};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin-top: ${(props): string => (props.user.name ? '-8px' : '-21px')};
-  margin-bottom: ${(props): string => (props.user.name ? '0px' : '5px')};
+  margin-top: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'user' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
+user.name ? '-8px' : '-21px')};
+  margin-bottom: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'user' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
+user.name ? '0px' : '5px')};
   text-transform: uppercase;
 `
 
@@ -51,7 +55,9 @@ export const NavBarAvatar = styled.div`
   height: 40px;
   background: ${gray};
   background-size: cover;
-  background-image: url(${(props): string => props.avatar});
+  background-image: url(${(props): string => props.  
+// @ts-expect-error TS(2339) FIXME: Property 'avatar' does not exist on type 'ThemedSt... Remove this comment to see the full error message
+avatar});
 `
 
 export const NavBarName = styled.div`

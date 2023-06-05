@@ -13,7 +13,7 @@ export const Tag = styled.span`
     // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     textColors[props.textColor]};
   background-color: ${(props) =>
-    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
     Colors[props.color]};
 
   &:hover {
