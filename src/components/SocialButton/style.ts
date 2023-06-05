@@ -9,8 +9,7 @@ import {
 } from '../style/colors'
 import { ButtonBase, large } from '../Button/style'
 
-// @ts-expect-error TS(7006) FIXME: Parameter 'channel' implicitly has an 'any' type.
-function calculateBgColor(channel) {
+function calculateBgColor(channel: string): string {
   switch (channel) {
     case 'instagram':
       return instagramDark
@@ -27,14 +26,17 @@ function calculateBgColor(channel) {
   }
 }
 
-export const SocialButtonStyled = styled.button`
+export const SocialButtonStyled = styled.button<{
+  disabled: boolean
+  channel: string
+}>`
   ${ButtonBase};
   ${large};
-  background-color: ${(props) => calculateBgColor(props.channel)};
+  background-color: ${(props): string => calculateBgColor(props.channel)};
   color: ${white};
   width: 100%;
   justify-content: space-between;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props): string => (props.disabled ? 'not-allowed' : 'pointer')};
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0);
   transition: box-shadow 0.1s ease;
 

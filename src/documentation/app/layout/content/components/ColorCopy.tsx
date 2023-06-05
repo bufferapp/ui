@@ -4,12 +4,17 @@ import styled from 'styled-components'
 // @ts-expect-error TS(7016) FIXME: Could not find a declaration file for module 'reac... Remove this comment to see the full error message
 import Clipboard from 'react-clipboard.js'
 
-const ColorWrapper = styled(Clipboard)`
-  background: ${(props) => props.color};
-  width: ${(props) => props.width};
-  height: ${(props) => props.height};
+const ColorWrapper = styled(Clipboard)<{
+  color: string
+  width: string
+  height: string
+}>`
+  background: ${(props): string => props.color};
+  width: ${(props): string => props.width};
+  height: ${(props): string => props.height};
   display: flex;
-  flex-direction: ${(props) => (props.width === '33%' ? 'column' : 'row')};
+  flex-direction: ${(props): string =>
+    props.width === '33%' ? 'column' : 'row'};
   justify-content: space-between;
   cursor: pointer;
   border: 0;
@@ -20,20 +25,20 @@ const ColorWrapper = styled(Clipboard)`
   }
 `
 
-const ColorName = styled.div`
+const ColorName = styled.div<{ width?: string }>`
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
-  padding: ${(props) =>
+  padding: ${(props): string =>
     props.width === '100%' ? '50px 0px 0px 20px' : '0px 0px 0px 20px'};
 `
 
-const ColorValue = styled.span`
+const ColorValue = styled.span<{ width?: string }>`
   color: #ffffff;
   font-size: 14px;
   margin-right: 16px;
   font-weight: 500;
-  padding-left: ${(props) => (props.width === '100%' ? '20px' : '0px')};
+  padding-left: ${(props): string => (props.width === '100%' ? '20px' : '0px')};
 `
 
 /** Displays color and copies the color to clipboard on click */

@@ -71,8 +71,8 @@ export const Label = styled.label`
   cursor: inherit;
 `
 
-export const Help = styled.label`
-  color: ${({ hasError }) => (hasError ? redDark : grayDarker)};
+export const Help = styled.label<{ hasError?: boolean }>`
+  color: ${({ hasError }): string => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
   font-size: 14px;
   font-weight: ${fontWeightMedium};

@@ -67,13 +67,13 @@ export const SocialIconWrapper = styled.div`
   width: 16px;
   height: 16px;
   border-radius: 100%;
-  background: ${(props) => (props.bgColor ? props.bgColor : '#777')};
+  background: ${(props): string => (props.bgColor ? props.bgColor : '#777')};
   display: flex;
   justify-content: center;
   align-items: center;
 
   transform: translateX(8px)
-    translateY(${(props) => (props.size === 'small' ? '0' : '-2')}px);
+    translateY(${(props): string => (props.size === 'small' ? '0' : '-2')}px);
 `
 
 export const StartPageIcon = styled.span`

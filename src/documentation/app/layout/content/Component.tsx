@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 import Example from './components/Example'
 import Props from './components/Props'
 import Heading from './components/Heading'
@@ -47,13 +47,14 @@ const ExampleWrapper = styled.div`
   align-items: end;
 `
 
-const IconComponentWrapper = styled.div`
-  ${(props) =>
-    props.isIcon &&
-    css`
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-    `}
+const IconComponentWrapper = styled.div<{ isIcon: boolean }>`
+  ${(props): FlattenSimpleInterpolation =>
+    props.isIcon
+      ? css`
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        `
+      : css``}
 `
 
 // @ts-expect-error TS(7031) FIXME: Binding element 'fullscreen' implicitly has an 'an... Remove this comment to see the full error message

@@ -8,7 +8,8 @@ export const BannerStyled = styled.div`
   background: ${(props) =>
     props.themeColor === 'blue' ? blueDarker : orangeLighter};
   box-sizing: border-box;
-  color: ${(props) => (props.themeColor === 'blue' ? white : orangeDarker)};
+  color: ${(props): string =>
+    props.themeColor === 'blue' ? white : orangeDarker};
   display: flex;
   font-family: ${fontFamily};
   font-size: ${fontSize};
@@ -20,7 +21,8 @@ export const BannerStyled = styled.div`
 
   /** Style inline links */
   a {
-    color: ${(props) => (props.themeColor === 'blue' ? white : orangeDarker)};
+    color: ${(props): string =>
+      props.themeColor === 'blue' ? white : orangeDarker};
   }
 `
 

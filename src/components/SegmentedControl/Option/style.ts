@@ -38,29 +38,29 @@ const getGridTemplateAreas = (iconPosition) => {
 export const OptionStyled = styled.div`
   display: flex;
   align-items: center;
-  cursor: ${(props) => (props.disabled ? 'not-allowed' : 'pointer')};
+  cursor: ${(props): string => (props.disabled ? 'not-allowed' : 'pointer')};
   border-radius: ${borderRadius};
   margin-right: 4px;
   transition: all 0.1s ease-out;
 
-  border: ${(props) => {
+  border: ${(props): string => {
     if (props.selected) return `1px solid ${blueLightest}`
     if (props.selected) return `1px solid ${gray}`
     return `1px solid ${transparent}`
   }};
 
-  color: ${(props) => {
+  color: ${(props): string => {
     if (props.selected) return blue
     if (props.disabled) return gray
     return grayDark
   }};
 
-  background-color: ${(props) => {
+  background-color: ${(props): string => {
     if (props.selected) return blueLightest
     if (props.disabled) return grayLight
   }};
 
-  padding: ${(props) => {
+  padding: ${(props): string => {
     if (props.size === 'large') return '11px'
     if (props.size === 'small') return '3px 7px'
     return '7px'
@@ -93,7 +93,8 @@ export const ContentWrapper = styled.div`
   display: grid;
   place-items: center;
   // Calculate grid-template-rows value based on provided iconPosition
-  grid-template-areas: ${(props) => getGridTemplateAreas(props.iconPosition)};
+  grid-template-areas: ${(props): string =>
+    getGridTemplateAreas(props.iconPosition)};
   // if horizontal icon position, two columns one row
   grid-template-columns: ${(props) =>
     ['left', 'right'].includes(props.iconPosition) ? 'auto auto' : 'auto'};

@@ -19,8 +19,13 @@ export const Container = styled.div`
   height: 100%;
 `
 
-// @ts-expect-error TS(7031) FIXME: Binding element 'disabled' implicitly has an 'any'... Remove this comment to see the full error message
-const backgroundCss = ({ disabled, hasError }) => {
+interface ITextArea {
+  disabled?: boolean
+  fullHeight?: boolean
+  hasError?: boolean
+}
+
+const backgroundCss = ({ disabled, hasError }: ITextArea): string => {
   if (disabled) {
     return grayLight
   }
@@ -30,8 +35,7 @@ const backgroundCss = ({ disabled, hasError }) => {
   return white
 }
 
-// @ts-expect-error TS(7031) FIXME: Binding element 'disabled' implicitly has an 'any'... Remove this comment to see the full error message
-const borderCss = ({ disabled, hasError }) => {
+const borderCss = ({ disabled, hasError }: ITextArea): string => {
   if (disabled) {
     return 'none'
   }
@@ -41,30 +45,49 @@ const borderCss = ({ disabled, hasError }) => {
   return `1px solid ${gray}`
 }
 
-export const StyledTextArea = styled.textarea`
+export const StyledTextArea = styled.textarea<ITextArea>`
   border-radius: 4px;
   box-shadow: 2px 2px 0 2px transparent;
   transition-property: border-width, border-color, box-shadow;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
-  background-color: ${backgroundCss};
-  border: ${borderCss};
+  background-color: ${(props): string =>
+    backgroundCss({ disabled: props.disabled, hasError: props.hasError })};
+  border: ${(props): string =>
+    borderCss({ disabled: props.disabled, hasError: props.hasError })};
   box-sizing: border-box;
   margin-top: 8px;
   margin-bottom: 8px;
   resize: none;
-  cursor: ${({ disabled }) => (disabled ? 'not-allowed' : '')};
+  cursor: ${(props): string => (props.disabled ? 'not-allowed' : '')};
   padding: 8px;
-  color: ${({ hasError }) => (hasError ? redDark : grayDarker)};
+  color: ${({
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    hasError,
+  }): string => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
   line-height: ${lineHeight};
-  height: ${({ fullHeight }) => (fullHeight ? '100%' : 'auto')};
+  height: ${({
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
+    fullHeight,
+  }): string => (fullHeight ? '100%' : 'auto')};
   :focus {
-    border: 1px solid ${({ hasError }) => (hasError ? redDark : blue)};
+    border: 1px solid
+      ${({
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        hasError,
+      }): string => (hasError ? redDark : blue)};
     box-shadow: 0px 0px 0px 3px
-      ${({ hasError }) => (hasError ? redLighter : boxShadow)};
+      ${({
+        // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        hasError,
+      }): string => (hasError ? redLighter : boxShadow)};
     outline: none;
     transition-property: border-width, border-color, box-shadow;
     transition-duration: 0.1s;

@@ -70,10 +70,12 @@ const SimpleModal = ({ children, closeAction }) => {
   }, [])
 
   return (
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     <Container ref={containerRef} role="dialog" aria-modal="true">
       <AnimationWrapper {...animationProps}>
         <Modal
           ref={modalRef}
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
         >
           <CloseButton onClick={() => dismissAnimationWrapper()}>

@@ -15,29 +15,33 @@ export const Wrapper = styled.div`
   :focus {
     outline-style: 0;
   }
-  width: ${(props) => (props.isSplit || props.fullWidth ? '100%' : 'auto')};
-  height: ${(props) => (props.isSplit ? '100%' : 'auto')};
-  max-height: ${(props) => (props.isSplit ? '100%' : '')};
-  position: ${(props) => (props.isSplit ? 'initial' : 'relative')};
+  width: ${(props): string =>
+    props.isSplit || props.fullWidth ? '100%' : 'auto'};
+  height: ${(props): string => (props.isSplit ? '100%' : 'auto')};
+  max-height: ${(props): string => (props.isSplit ? '100%' : '')};
+  position: ${(props): string => (props.isSplit ? 'initial' : 'relative')};
   display: inline-block;
 `
 
 export const SelectStyled = styled.div`
-  right: ${(props) => (props.hasIconOnly ? '6px' : '0')};
+  right: ${(props): string => (props.hasIconOnly ? '6px' : '0')};
   position: absolute;
   z-index: 1000;
   border: 1px solid ${gray};
   box-sizing: border-box;
   box-shadow: ${grayShadow};
   border-radius: 4px;
-  display: ${(props) => (props.isOpen ? 'initial' : 'none')};
+  display: ${(props): string => (props.isOpen ? 'initial' : 'none')};
   min-width: 200px;
-  max-width: ${(props) => (props.fullWidth ? '' : '200px')};
-  width: ${(props) => (props.fullWidth ? '100%' : '200px')};
+  max-width: ${(props): string => (props.fullWidth ? '' : '200px')};
+  width: ${(props): string => (props.fullWidth ? '100%' : '200px')};
   background-color: ${white};
-  bottom: ${(props) => (props.yPosition === 'top' ? '100%' : 'initial')};
-  top: ${(props) => (props.yPosition === 'bottom' ? '100%' : 'initial')};
-  margin-bottom: ${(props) => (props.yPosition === 'top' ? '8px' : '0')};
+  bottom: ${(props): string =>
+    props.yPosition === 'top' ? '100%' : 'initial'};
+  top: ${(props): string =>
+    props.yPosition === 'bottom' ? '100%' : 'initial'};
+  margin-bottom: ${(props): string =>
+    props.yPosition === 'top' ? '8px' : '0'};
   margin-top: ${(props) =>
     props.marginTop
       ? props.marginTop
@@ -45,9 +49,10 @@ export const SelectStyled = styled.div`
       ? '8px'
       : '0'};
   transform: translateX(
-    ${(props) => (props.horizontalOffset ? props.horizontalOffset : '0')}
+    ${(props): string =>
+      props.horizontalOffset ? props.horizontalOffset : '0'}
   );
-  left: ${(props) => (props.xPosition === 'left' ? 0 : '')};
+  left: ${(props): string => (props.xPosition === 'left' ? 0 : '')};
 `
 
 export const SelectItems = styled.ul`

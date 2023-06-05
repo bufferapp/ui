@@ -11,7 +11,7 @@ import { grayDarker, white } from '../style/colors'
 export const TooltipWrapper = styled.div``
 
 export const TooltipStyled = styled(Tooltip)`
-  opacity: ${(props) => props.opacity};
+  opacity: ${(props): string => props.opacity};
 `
 
 export const TooltipStyle = {
@@ -26,11 +26,11 @@ export const TooltipStyle = {
   zIndex: 9999,
 }
 
-export const Label = styled.label`
-  color: ${(props) => props.color};
+export const Label = styled.label<{ color: string; isHotkey?: boolean }>`
+  color: ${(props): string => props.color};
   font-family: ${fontFamily};
-  font-size: ${(props) => (props.isHotkey ? '10px' : fontSizeSmall)};
-  margin-left: ${(props) => (props.isHotkey ? '8px' : '0')};
+  font-size: ${(props): string => (props.isHotkey ? '10px' : fontSizeSmall)};
+  margin-left: ${(props): string => (props.isHotkey ? '8px' : '0')};
   font-weight: ${fontWeight};
   line-height: ${lineHeightSmall};
   cursor: inherit;

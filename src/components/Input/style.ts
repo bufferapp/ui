@@ -18,7 +18,7 @@ const inputPadding = css`
   padding: ${({
     // @ts-expect-error TS(2339) FIXME: Property 'size' does not exist on type 'ThemeProps... Remove this comment to see the full error message
     size,
-  }) => {
+  }): string => {
     switch (size) {
       case 'small':
         return '5px 8px 4px 8px'
@@ -35,7 +35,7 @@ const inputPrefix = css`
     content: '${({
       // @ts-expect-error TS(2339) FIXME: Property 'prefix' does not exist on type 'ThemePro... Remove this comment to see the full error message
       prefix,
-    }) => prefix.text}';
+    }): string => prefix.text}';
     position: absolute;
     top: 0;
     left: 0;
@@ -43,7 +43,7 @@ const inputPrefix = css`
     width: ${({
       // @ts-expect-error TS(2339) FIXME: Property 'prefix' does not exist on type 'ThemePro... Remove this comment to see the full error message
       prefix,
-    }) => prefix.paddingLeft};
+    }): string => prefix.paddingLeft};
     z-index: 10;
     font-family: ${fontFamily};
     font-size: ${fontSize};
@@ -63,20 +63,20 @@ export const InputWrapper = styled.div`
 
 export const InputFieldWrapper = styled.div`
   position: relative;
-  ${({ prefix }) => (prefix ? inputPrefix : '')};
+  ${({ prefix }): string => (prefix ? inputPrefix : '')};
 `
 
 export const InputStyled = styled.input`
   box-sizing: border-box;
   margin: 8px 0px;
-  background: ${({ hasError }) => (hasError ? redLightest : white)};
+  background: ${({ hasError }): string => (hasError ? redLightest : white)};
   border-radius: 4px;
-  border: 1px solid ${({ hasError }) => (hasError ? redDark : gray)};
+  border: 1px solid ${({ hasError }): string => (hasError ? redDark : gray)};
   box-shadow: 2px 2px 0 2px transparent;
   transition-property: border-width, border-color, box-shadow;
   transition-duration: 0.1s;
   transition-timing-function: ease-in;
-  color: ${({ hasError }) => (hasError ? redDark : grayDarker)};
+  color: ${({ hasError }): string => (hasError ? redDark : grayDarker)};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
@@ -84,17 +84,18 @@ export const InputStyled = styled.input`
   ${inputPadding}
   width: 100%;
 
-  ${({ prefix }) => (prefix ? `padding-left: ${prefix.paddingLeft};` : '')}
-  ${({ icon }) => (icon ? `padding-left: 32px;` : '')}
+  ${({ prefix }): string =>
+    prefix ? `padding-left: ${prefix.paddingLeft};` : ''}
+  ${({ icon }): string => (icon ? `padding-left: 32px;` : '')}
 
   &::placeholder {
     color: ${grayDark};
   }
 
   &:focus {
-    border: 1px solid ${({ hasError }) => (hasError ? redDark : blue)};
+    border: 1px solid ${({ hasError }): string => (hasError ? redDark : blue)};
     box-shadow: 0px 0px 0px 3px
-      ${({ hasError }) => (hasError ? redLighter : blueLighter)};
+      ${({ hasError }): string => (hasError ? redLighter : blueLighter)};
     outline: none;
     transition-property: border-width, border-color, box-shadow;
     transition-duration: 0.1s;
@@ -122,7 +123,7 @@ export const HelpTextWrapper = styled.div`
 `
 
 export const HelpText = styled(Text)`
-  margin-left: ${(props) => (props.hasError ? '8px' : '0px')};
+  margin-left: ${(props): string => (props.hasError ? '8px' : '0px')};
 `
 
 export const StyledIcon = styled.div`

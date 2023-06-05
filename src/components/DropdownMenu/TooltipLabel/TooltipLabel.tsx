@@ -20,7 +20,7 @@ export const Label = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: ${(props) => (props.hasIcon ? '7px' : 0)};
+  margin-left: ${(props): string => (props.hasIcon ? '7px' : 0)};
 `
 
 export const EmptyLabel = styled.div`

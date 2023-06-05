@@ -40,8 +40,8 @@ export const NavBarImpersonating = styled.div`
   color: ${white};
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
-  margin-top: ${(props) => (props.user.name ? '-8px' : '-21px')};
-  margin-bottom: ${(props) => (props.user.name ? '0px' : '5px')};
+  margin-top: ${(props): string => (props.user.name ? '-8px' : '-21px')};
+  margin-bottom: ${(props): string => (props.user.name ? '0px' : '5px')};
   text-transform: uppercase;
 `
 
@@ -51,7 +51,7 @@ export const NavBarAvatar = styled.div`
   height: 40px;
   background: ${gray};
   background-size: cover;
-  background-image: url(${(props) => props.avatar});
+  background-image: url(${(props): string => props.avatar});
 `
 
 export const NavBarName = styled.div`

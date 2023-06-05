@@ -94,7 +94,7 @@ const NavBarRight = styled.nav`
 const NavBarHelp = styled.a`
   align-items: center;
   color: #fff;
-  color: ${(props) => (props.active ? blueDarker : grayDark)};
+  color: ${(props): string => (props.active ? blueDarker : grayDark)};
   display: flex;
   font-size: 16px;
   font-family: ${fontFamily};
@@ -105,7 +105,7 @@ const NavBarHelp = styled.a`
   text-decoration: none;
   z-index: 2;
   &:hover {
-    color: ${(props) => (props.active ? blueDarker : grayDark)};
+    color: ${(props): string => (props.active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
   }
   cursor: pointer;

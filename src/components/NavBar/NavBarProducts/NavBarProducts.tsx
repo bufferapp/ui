@@ -26,10 +26,11 @@ const ProductLink = styled.a`
   font-size: 16px;
   text-decoration: none;
   align-items: center;
-  color: ${(props) => (props.active ? blueDarker : grayDark)};
-  background-color: ${(props) => (props.active ? grayLighter : 'transparent')};
+  color: ${(props): string => (props.active ? blueDarker : grayDark)};
+  background-color: ${(props): string =>
+    props.active ? grayLighter : 'transparent'};
   &:hover {
-    color: ${(props) => (props.active ? blueDarker : grayDark)};
+    color: ${(props): string => (props.active ? blueDarker : grayDark)};
     background-color: ${grayLighter};
   }
   & svg {

@@ -16,7 +16,7 @@ export const ButtonWrapperStyled = styled.div`
   ${(props) =>
     // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
-  ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
+  ${(props): string => (props.fullWidth ? Styles.fullWidth : '')};
 `
 
 export const ButtonContainerStyled = styled.div`
@@ -31,7 +31,7 @@ export const ButtonStyled = styled.button`
   ${(props) =>
     // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     Styles[props.disabled ? 'disabled' : '']};
-  ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
+  ${(props): string => (props.fullWidth ? Styles.fullWidth : '')};
 `
 
 const Loading = styled.img`

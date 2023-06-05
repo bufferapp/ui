@@ -6,19 +6,21 @@ import { easeOutQuart } from '../style/animations'
 const AnimationContainer = styled.div`
   animation-fill-mode: forwards;
   display: flex;
-  align-items: ${({ align }) => align}}
-  justify-content: ${({ justify }) => justify}}
+  align-items: ${({ align }): string => align}}
+  justify-content: ${({ justify }): string => justify}}
   outline: none;
   width: 100%;
 
   &.stageIn {
-    animation: ${({ duration }) => `${duration}ms`} ${({ stageInAnimation }) =>
-  stageInAnimation} ${({ easing }) => easing};
+    animation: ${({ duration }): string => `${duration}ms`} ${({
+  stageInAnimation,
+}) => stageInAnimation} ${({ easing }): string => easing};
   }
 
   &.stageOut {
-    animation: ${({ duration }) => `${duration}ms`} ${({ stageOutAnimation }) =>
-  stageOutAnimation} ${({ easing }) => easing};
+    animation: ${({ duration }): string => `${duration}ms`} ${({
+  stageOutAnimation,
+}) => stageOutAnimation} ${({ easing }): string => easing};
   }
 
   @media (prefers-reduced-motion) {

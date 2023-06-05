@@ -12,7 +12,7 @@ const fadeIn = keyframes`
   }
 `
 
-export const Container = styled.div`
+export const Container = styled.div<{ NonDismissibleModal: boolean }>`
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   height: 100%;
@@ -21,7 +21,8 @@ export const Container = styled.div`
   position: fixed;
   box-sizing: border-box;
   width: 100%;
-  z-index: ${({ NonDismissibleModal }) => (NonDismissibleModal ? '1' : '9999')};
+  z-index: ${({ NonDismissibleModal }): string =>
+    NonDismissibleModal ? '1' : '9999'};
   flex-direction: column;
   top: 0px;
   left: 0px;

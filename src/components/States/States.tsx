@@ -13,9 +13,9 @@ const Wrapper = styled.div`
   flex-direction: column;
 `
 
-const MediaWrapper = styled.div`
-  width: ${(props) => (props.size === 'large' ? '420px' : '300px')};
-  height: ${(props) => (props.size === 'large' ? '280px' : '200px')};
+const MediaWrapper = styled.div<{ size: string }>`
+  width: ${(props): string => (props.size === 'large' ? '420px' : '300px')};
+  height: ${(props): string => (props.size === 'large' ? '280px' : '200px')};
 `
 
 const HeaderWrapper = styled.div`
@@ -36,11 +36,12 @@ const HeaderWrapper = styled.div`
   }
 `
 
-const DescriptionWrapper = styled.div`
+const DescriptionWrapper = styled.div<{ size: string }>`
   p {
     margin-top: 0px;
     margin-bottom: 16px;
-    max-width: ${(props) => (props.size === 'large' ? '500px' : '400px')};
+    max-width: ${(props): string =>
+      props.size === 'large' ? '500px' : '400px'};
     overflow: hidden;
     text-align: center;
   }
@@ -107,6 +108,7 @@ Image.defaultProps = {}
 // @ts-expect-error TS(7031) FIXME: Binding element 'children' implicitly has an 'any'... Remove this comment to see the full error message
 const Media = ({ children }) => {
   const size = useStatesContext()
+  // @ts-expect-error TS(2769) FIXME: No overload matches this call.
   return <MediaWrapper size={size}>{children}</MediaWrapper>
 }
 
@@ -137,6 +139,7 @@ Header.defaultProps = {}
 const Description = ({ children }) => {
   const size = useStatesContext()
   return (
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     <DescriptionWrapper size={size}>
       <Text type="p">{children}</Text>
     </DescriptionWrapper>

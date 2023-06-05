@@ -5,7 +5,7 @@ import { fontFamily, fontSize, lineHeight } from '../style/fonts'
 export const LinkStyled = styled.a`
   font-family: ${fontFamily};
   font-size: ${fontSize};
-  font-weight: ${(props) => props.fontWeight};
+  font-weight: ${(props): string => props.fontWeight};
   line-height: ${lineHeight};
   cursor: pointer;
   text-decoration: none;

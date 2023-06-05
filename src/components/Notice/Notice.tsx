@@ -60,7 +60,7 @@ const NoticeWrapper = styled.div`
     colorMap[props.type].background};
   border-radius: ${borderRadius};
   font-size: ${fontSize};
-  padding: 8px ${({ dismiss }) => (dismiss ? '28px' : '8px')} 8px 8px;
+  padding: 8px ${({ dismiss }): string => (dismiss ? '28px' : '8px')} 8px 8px;
   display: flex;
   justify-content: flex-start;
   align-items: center;

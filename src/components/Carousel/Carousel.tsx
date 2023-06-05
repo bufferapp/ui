@@ -15,7 +15,7 @@ const CarouselStyled = styled.div`
 
 const Window = styled.div`
   overflow: hidden;
-  width: ${(props) => props.width};
+  width: ${(props): string => props.width};
   margin: 8px;
   display: flex;
 `
@@ -39,7 +39,7 @@ const MainList = styled.ul`
   padding: 0;
   margin: 0;
   position: relative;
-  left: ${(props) => `${props.left}px`};
+  left: ${(props): string => `${props.left}px`};
   transition: left 0.4s ${easeOutQuart};
 `
 
@@ -90,9 +90,9 @@ const IndicatorButton = styled.button`
     position: absolute;
     top: 0;
     left: 4px;
-    transform: ${({ active }) => (active ? 'scale(1)' : 'scale(0)')};
-    transition: transform ${({ active }) => (active ? '250ms' : '150ms')}
-      ease-out;
+    transform: ${({ active }): string => (active ? 'scale(1)' : 'scale(0)')};
+    transition: transform
+      ${({ active }): string => (active ? '250ms' : '150ms')} ease-out;
   }
 
   &:before {
@@ -107,7 +107,7 @@ const IndicatorButton = styled.button`
     left: 2px;
     opacity: 0;
     transition: opacity 100ms ease-out;
-    transition-delay: ${({ active }) => (active ? '0' : '150ms')};
+    transition-delay: ${({ active }): string => (active ? '0' : '150ms')};
   }
 
   &:hover {
