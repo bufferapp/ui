@@ -1,5 +1,9 @@
 # Changelog
 
+## [8.1.0] - 2023-06-05
+
+- Export all existing Icons components
+
 ## [8.0.0] - 2023-06-05
 
 - Migration to TypeScript
