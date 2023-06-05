@@ -1,5 +1,9 @@
 # Changelog
 
+## [8.0.0] - 2023-06-05
+
+- Migration to TypeScript
+
 ## [7.38.6] - 2023-04-19
 
 - Add: Ability to fire function onOpen for DropdownMenu
