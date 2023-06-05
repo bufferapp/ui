@@ -60,7 +60,9 @@ const NoticeWrapper = styled.div`
     colorMap[props.type].background};
   border-radius: ${borderRadius};
   font-size: ${fontSize};
-  padding: 8px ${({ dismiss }) => (dismiss ? '28px' : '8px')} 8px 8px;
+  padding: 8px ${({  
+// @ts-expect-error TS(2339) FIXME: Property 'dismiss' does not exist on type 'Omit<De... Remove this comment to see the full error message
+ dismiss }): string => (dismiss ? '28px' : '8px')} 8px 8px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -84,7 +86,7 @@ const BufferIcon = styled(Buffer)`
 
 const CloseButton = styled.button`
   color: ${(props) =>
-    // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+    // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
     colorMap[props.type].color};
   border: 0;
   background: 0;
@@ -96,7 +98,7 @@ const CloseButton = styled.button`
   right: 16px;
   &:hover {
     color: ${(props) =>
-      // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
+      // @ts-expect-error TS(2538) FIXME: Type 'undefined' cannot be used as an index type.
       colorMap[props.type].color};
     opacity: 1;
     cursor: pointer;
@@ -120,6 +122,7 @@ function Notice({ children, dismiss, type, className, disableAnimation }) {
   })
 
   const noticeContent = (
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     <NoticeWrapper type={type} dismiss={dismiss} className={className}>
       {type === 'warning' && <WarningIcon />}
       {type === 'alert' && <WarningIcon />}

@@ -48,6 +48,7 @@ const socialIconMap = new Map([
     'instagram',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={instagram}>
         <Instagram size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -57,6 +58,7 @@ const socialIconMap = new Map([
     'facebook',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={facebook}>
         <Facebook size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -66,6 +68,7 @@ const socialIconMap = new Map([
     'twitter',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={twitter}>
         <Twitter size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -75,6 +78,7 @@ const socialIconMap = new Map([
     'linkedin',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={linkedin}>
         <LinkedIn size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -84,6 +88,7 @@ const socialIconMap = new Map([
     'pinterest',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={pinterest}>
         <Pinterest size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -93,6 +98,7 @@ const socialIconMap = new Map([
     'googlebusiness',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={googlebusiness}>
         <Gbp size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -102,6 +108,7 @@ const socialIconMap = new Map([
     'shopify',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={shopify}>
         <Shopify size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -111,6 +118,7 @@ const socialIconMap = new Map([
     'tiktok',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={tiktok}>
         <Tiktok size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -120,6 +128,7 @@ const socialIconMap = new Map([
     'startPage',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={startpage}>
         <Styles.StartPageIcon>
           <StartPage size="small" color="white" />{' '}
@@ -131,6 +140,7 @@ const socialIconMap = new Map([
     'mastodon',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={mastodon}>
         <Mastodon size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -140,6 +150,7 @@ const socialIconMap = new Map([
     'youtube',
     // @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
     ({ size }) => (
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       <Styles.SocialIconWrapper size={size} bgColor={youtube}>
         <Youtube size="small" color="white" />
       </Styles.SocialIconWrapper>
@@ -151,9 +162,11 @@ const socialIconMap = new Map([
 const Avatar = ({ src, alt, type, size, network, fallbackUrl }) => {
   const SocialIcon = network && socialIconMap.get(network)
   return (
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     <Wrapper size={size}>
       {SocialIcon && <SocialIcon size={size} />}
       <Image
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         size={size}
         type={type}
         src={src}

@@ -14,6 +14,8 @@ export const ContainerStyled = styled.div`
 export const ProgressStyled = styled.div`
   background-color: ${gray};
   height: 100%;
-  width: ${(props) => props.progress || '100%'};
+  width: ${(props): string => props.  
+// @ts-expect-error TS(2551) FIXME: Property 'progress' does not exist on type 'Themed... Remove this comment to see the full error message
+progress || '100%'};
   border-radius: ${borderRadius};
 `

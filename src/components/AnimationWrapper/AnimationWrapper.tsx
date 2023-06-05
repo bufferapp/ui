@@ -6,19 +6,33 @@ import { easeOutQuart } from '../style/animations'
 const AnimationContainer = styled.div`
   animation-fill-mode: forwards;
   display: flex;
-  align-items: ${({ align }) => align}}
-  justify-content: ${({ justify }) => justify}}
+  align-items: ${({  
+// @ts-expect-error TS(2339) FIXME: Property 'align' does not exist on type 'Omit<Deta... Remove this comment to see the full error message
+ align }): string => align}}
+  justify-content: ${({  
+// @ts-expect-error TS(2339) FIXME: Property 'justify' does not exist on type 'Omit<De... Remove this comment to see the full error message
+ justify }): string => justify}}
   outline: none;
   width: 100%;
 
   &.stageIn {
-    animation: ${({ duration }) => `${duration}ms`} ${({ stageInAnimation }) =>
-  stageInAnimation} ${({ easing }) => easing};
+    animation: ${({    
+// @ts-expect-error TS(2339) FIXME: Property 'duration' does not exist on type 'Omit<D... Remove this comment to see the full error message
+ duration }): string => `${duration}ms`} ${({
+  // @ts-expect-error TS(2339) FIXME: Property 'stageInAnimation' does not exist on type... Remove this comment to see the full error message
+  stageInAnimation,
+// @ts-expect-error TS(2339) FIXME: Property 'easing' does not exist on type 'Omit<Det... Remove this comment to see the full error message
+}) => stageInAnimation} ${({ easing }): string => easing};
   }
 
   &.stageOut {
-    animation: ${({ duration }) => `${duration}ms`} ${({ stageOutAnimation }) =>
-  stageOutAnimation} ${({ easing }) => easing};
+    animation: ${({    
+// @ts-expect-error TS(2339) FIXME: Property 'duration' does not exist on type 'Omit<D... Remove this comment to see the full error message
+ duration }): string => `${duration}ms`} ${({
+  // @ts-expect-error TS(2339) FIXME: Property 'stageOutAnimation' does not exist on typ... Remove this comment to see the full error message
+  stageOutAnimation,
+// @ts-expect-error TS(2339) FIXME: Property 'easing' does not exist on type 'Omit<Det... Remove this comment to see the full error message
+}) => stageOutAnimation} ${({ easing }): string => easing};
   }
 
   @media (prefers-reduced-motion) {
@@ -103,6 +117,7 @@ const AnimationWrapper = ({
 
   return (
     <AnimationContainer
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       align={align}
       duration={duration}
       easing={easing}

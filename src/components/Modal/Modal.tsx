@@ -141,13 +141,14 @@ class Modal extends React.Component {
     }
 
     return (
-      // @ts-expect-error TS(7006) FIXME: Parameter 'container' implicitly has an 'any' type... Remove this comment to see the full error message
+      // @ts-expect-error TS(2339) FIXME: Property 'container' does not exist on type 'Modal... Remove this comment to see the full error message
       <Styles.Container ref={(container) => (this.container = container)}>
         <Styles.Modal
           background={background}
-          // @ts-expect-error TS(7006) FIXME: Parameter 'modal' implicitly has an 'any' type.
+          // @ts-expect-error TS(2339) FIXME: Property 'modal' does not exist on type 'Modal'.
           ref={(modal) => (this.modal = modal)}
           width={width}
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           tabIndex="0" // this needs to have a tabIndex so that it can listen for the ESC key
           noBackground={noBackground}
         >
@@ -156,12 +157,14 @@ class Modal extends React.Component {
               onClick={() => {
                 this.handleAction(closeButton)
               }}
+              // @ts-expect-error TS(2769) FIXME: No overload matches this call.
               noBackground={noBackground}
             >
               <Cross size="large" />
             </Styles.IconContainer>
           )}
           {children}
+          {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
           <Styles.Footer background={background}>
             {footer}
             {this.validateAction(secondaryAction) && (

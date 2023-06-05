@@ -55,16 +55,21 @@ const stagingAnimation = keyframes`
 `
 
 export const Modal = styled.section`
-  background: ${(props) => props.background};
-  background-color: ${(props) => (props.noBackground ? 'transparent' : white)};
+  background: ${(props): string => props.  
+// @ts-expect-error TS(2339) FIXME: Property 'background' does not exist on type 'Them... Remove this comment to see the full error message
+background};
+  background-color: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'noBackground' does not exist on type 'Th... Remove this comment to see the full error message
+    props.noBackground ? 'transparent' : white};
   background-size: 100% auto;
   border-radius: ${borderRadius};
   box-shadow: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'noBackground' does not exist on type 'Th... Remove this comment to see the full error message
     props.noBackground ? 'none' : '0px 1px 4px rgba(0, 0, 0, 0.16)'};
   box-sizing: border-box;
   margin: 0 0 1rem;
   padding: 16px 0 16px 0;
-  width: ${(props) => getWidth(props)};
+  width: ${(props): string => getWidth(props)};
   overflow: hidden;
   position: absolute;
 
@@ -82,14 +87,20 @@ export const IconContainer = styled.button`
   background: none;
   border: none;
   position: absolute;
-  top: ${(props) => (props.noBackground ? '-4px' : '16px')};
-  right: ${(props) => (props.noBackground ? '47px' : '16px')};
+  top: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'noBackground' does not exist on type 'Th... Remove this comment to see the full error message
+noBackground ? '-4px' : '16px')};
+  right: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'noBackground' does not exist on type 'Th... Remove this comment to see the full error message
+noBackground ? '47px' : '16px')};
   cursor: pointer;
 
   transition: transform 0.15s ease-out;
   svg {
     fill: ${gray};
-    width: ${(props) => (props.noBackground ? '' : '16px')};
+    width: ${(props): string => (props.    
+// @ts-expect-error TS(2339) FIXME: Property 'noBackground' does not exist on type 'Th... Remove this comment to see the full error message
+noBackground ? '' : '16px')};
     transition: fill 0.15s ease-out;
   }
 
@@ -104,7 +115,9 @@ export const IconContainer = styled.button`
 export const Footer = styled.div`
   width: 100%;
   box-sizing: border-box;
-  background: ${(props) => (props.background ? 'transparent' : white)};
+  background: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'background' does not exist on type 'Them... Remove this comment to see the full error message
+background ? 'transparent' : white)};
   padding: 0 16px;
   margin-top: 16px;
 

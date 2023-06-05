@@ -106,14 +106,13 @@ export default class ButtonItem extends React.Component {
 
     return (
       <ButtonItemStyled
-        // @ts-expect-error TS(7006) FIXME: Parameter 'item' implicitly has an 'any' type.
+        // @ts-expect-error TS(2339) FIXME: Property 'item' does not exist on type 'ButtonItem... Remove this comment to see the full error message
         ref={(item) => (this.item = item)}
         type="button"
         role="menuitem"
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         fullWidth
-        // @ts-expect-error TS(7006) FIXME: Parameter 'ev' implicitly has an 'any' type.
         onKeyDown={(ev) => this.handleKeydown(ev)}
-        // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
         onClick={(event) => {
           if (onItemClick) onItemClick()
           event.stopPropagation()
@@ -127,6 +126,7 @@ export default class ButtonItem extends React.Component {
       >
         {selected && <CheckmarkIcon color={green} />}
         {icon || null}
+        {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
         <ButtonLabel hasIcon={hasIcon} type={type}>
           {title}
         </ButtonLabel>

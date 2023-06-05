@@ -12,7 +12,9 @@ export const PopupMenuStyled = styled.ul`
     100vh - 64px
   ); /* 56px navbar + 8px margin-top. If someone needs to adjust this again, we might consider creating a prop and set this as the default value */
   scroll: auto;
-  display: ${(props) => (props.isOpen ? 'initial' : 'none')};
+  display: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'isOpen' does not exist on type 'ThemedSt... Remove this comment to see the full error message
+isOpen ? 'initial' : 'none')};
   min-width: 200px;
   max-width: 200px;
   width: 200px;
@@ -23,15 +25,21 @@ export const PopupMenuStyled = styled.ul`
   margin-top: 8px;
   padding: 8px 0;
   transform: translateX(
-    ${(props) => (props.horizontalOffset ? props.horizontalOffset : '0')}
+    ${(props): string =>
+      // @ts-expect-error TS(2339) FIXME: Property 'horizontalOffset' does not exist on type... Remove this comment to see the full error message
+      props.horizontalOffset ? props.horizontalOffset : '0'}
   );
-  right: ${(props) => {
+  right: ${(props): string => {
+    // @ts-expect-error TS(2339) FIXME: Property 'xPosition' does not exist on type 'Omit<... Remove this comment to see the full error message
     const { xPosition } = props
+    // @ts-expect-error TS(2322) FIXME: Type 'number' is not assignable to type 'string'.
     if (xPosition === 'right') return 0
     return ''
   }};
-  left: ${(props) => {
+  left: ${(props): string => {
+    // @ts-expect-error TS(2339) FIXME: Property 'xPosition' does not exist on type 'Omit<... Remove this comment to see the full error message
     const { xPosition } = props
+    // @ts-expect-error TS(2322) FIXME: Type 'number' is not assignable to type 'string'.
     if (xPosition === 'left') return 0
     return ''
   }};
@@ -56,5 +64,6 @@ export const ItemDivider = styled.li`
   width: 100%;
   list-style: none;
   margin-top: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'type' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
     props.type && props.type === 'header' ? '15px' : ''};
 `

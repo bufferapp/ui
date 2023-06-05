@@ -16,8 +16,7 @@ const TableHeader = styled.thead`
   padding: 0 10px;
 `
 
-const Label = styled.th`
-  text-align: left;
+const Label = styled.th<{ right?: boolean }>`
   padding: 10px 0 10px 10px;
   padding-right: 25px;
   font-family: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas,
@@ -25,7 +24,8 @@ const Label = styled.th`
   font-weight: 500;
   font-size: 12px;
   opacity: 0.8;
-  ${(props) => props.right && 'text-align: right;'}
+  ${(props): string =>
+    props.right ? 'text-align: right;' : 'text-align: left;'}
 `
 
 const Row = styled.tr`
@@ -33,17 +33,17 @@ const Row = styled.tr`
   vertical-align: top;
 `
 
-const Item = styled.td`
+const Item = styled.td<{ paragraph?: boolean; bold?: boolean }>`
   border-top: 2px solid #e6ecf1;
   padding: 10px 0 10px 10px;
   padding-right: 25px;
   font-size: 14px;
-  font-family: ${(props) =>
+  font-family: ${(props): string =>
     props.paragraph
       ? 'inherit'
       : '"Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace'};
-  line-height: ${(props) => (props.paragraph ? '1.5' : 'inherit')};
-  ${(props) => (props.bold ? 'font-weight: 500;' : '')}
+  line-height: ${(props): string => (props.paragraph ? '1.5' : 'inherit')};
+  ${(props): string => (props.bold ? 'font-weight: 500;' : '')}
   code {
     background: #f3f3f3;
     border-radius: 4px;
@@ -74,9 +74,7 @@ const Props = ({ props }) => (
     <tbody>
       {Object.keys(props).map((key) => (
         <Row key={key}>
-          <PropNameItem bold prop>
-            {key}
-          </PropNameItem>
+          <PropNameItem bold>{key}</PropNameItem>
           <Item bold>{props[key].type.name}</Item>
           <Item>{props[key].required ? '✓' : ''}</Item>
           <Item>

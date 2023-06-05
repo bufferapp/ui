@@ -67,13 +67,17 @@ export const SocialIconWrapper = styled.div`
   width: 16px;
   height: 16px;
   border-radius: 100%;
-  background: ${(props) => (props.bgColor ? props.bgColor : '#777')};
+  background: ${(props): string => (props.  
+// @ts-expect-error TS(2551) FIXME: Property 'bgColor' does not exist on type 'ThemedS... Remove this comment to see the full error message
+bgColor ? props.bgColor : '#777')};
   display: flex;
   justify-content: center;
   align-items: center;
 
   transform: translateX(8px)
-    translateY(${(props) => (props.size === 'small' ? '0' : '-2')}px);
+    translateY(${(props): string => (props.    
+// @ts-expect-error TS(2339) FIXME: Property 'size' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
+size === 'small' ? '0' : '-2')}px);
 `
 
 export const StartPageIcon = styled.span`

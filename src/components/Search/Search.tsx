@@ -64,9 +64,8 @@ export default class Search extends React.Component {
           placeholder={placeholder}
           type="text"
           value={search}
-          // @ts-expect-error TS(7006) FIXME: Parameter 'inputRef' implicitly has an 'any' type.
+          // @ts-expect-error TS(2339) FIXME: Property 'inputRef' does not exist on type 'Search... Remove this comment to see the full error message
           ref={(inputRef) => (this.inputRef = inputRef)}
-          // @ts-expect-error TS(7006) FIXME: Parameter 'event' implicitly has an 'any' type.
           onChange={(event) => this.onChange(event)}
           onClick={onClick}
           onBlur={clearSearchOnBlur ? this.clearSearch : undefined}

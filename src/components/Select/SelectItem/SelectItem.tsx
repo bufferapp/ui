@@ -67,11 +67,13 @@ const SelectItem = ({
   return (
     <SelectItemStyled
       onClick={onItemClick || onClick}
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       hovered={hovered}
       id={getItemId(item)}
       disabled={item.disabled}
     >
       <SelectItemLabel
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         capitalizeItemLabel={capitalizeItemLabel}
         hideSearch={hideSearch}
         hasSelectedItems={hasSelectedItems}
@@ -83,16 +85,19 @@ const SelectItem = ({
           </IconWrapper>
         )}
         {!item.iconEnd && item.icon && (
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>
             {item.icon}
           </SelectItemIcon>
         )}
 
         <SelectItemTitle
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           moveRight={shouldItemMoveRight(item, hasSelectedItems, hideSearch)}
           title={title}
         >
           {item.component && (
+            // @ts-expect-error TS(2769) FIXME: No overload matches this call.
             <IconWrapper custom>
               <SelectItemCustom
                 dangerouslySetInnerHTML={{ __html: item.component(item) }}
@@ -102,11 +107,13 @@ const SelectItem = ({
           <Title>{item[keyMap ? keyMap.title : 'title']}</Title>
         </SelectItemTitle>
         {item.iconEnd && item.icon && (
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <SelectItemIcon iconEnd={item.iconEnd} hovered={hovered}>
             {item.icon}
           </SelectItemIcon>
         )}
         {item.hotKeyPrompt && (
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <HotKeyPrompt hovered={hovered}>{item.hotKeyPrompt}</HotKeyPrompt>
         )}
       </SelectItemLabel>

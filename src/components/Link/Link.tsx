@@ -27,6 +27,7 @@ const Link = ({
     download={download}
     className={className}
     title={title}
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     fontWeight={fontWeight}
   >
     {children}

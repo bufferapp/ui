@@ -6,6 +6,7 @@ import { ContainerStyled, ProgressStyled } from './style'
 // @ts-expect-error TS(7031) FIXME: Binding element 'progress' implicitly has an 'any'... Remove this comment to see the full error message
 const ProgressBar = ({ progress, className }) => (
   <ContainerStyled className={className}>
+    {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
     <ProgressStyled progress={progress} />
   </ContainerStyled>
 )

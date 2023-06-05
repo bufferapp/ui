@@ -28,7 +28,9 @@ export const DropdownItems = styled.ul`
     position: relative;
 
     & [role='menuitem']:focus {
-      outline: ${(props) => (props.usingMouse ? 'none' : `1px solid ${blue}`)};
+      outline: ${(props): string =>
+        // @ts-expect-error TS(2339) FIXME: Property 'usingMouse' does not exist on type 'Them... Remove this comment to see the full error message
+        props.usingMouse ? 'none' : `1px solid ${blue}`};
       outline-offset: -1px;
     }
   }
@@ -39,18 +41,25 @@ export const Item = styled.li`
   font-weight: ${fontWeightMedium};
   font-size: 14px;
   line-height: 16px;
-  position: ${(props) => (props.type === ORG_SWITCHER ? 'relative' : '')};
+  position: ${(props): string =>
+    // @ts-expect-error TS(2339) FIXME: Property 'type' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
+    props.type === ORG_SWITCHER ? 'relative' : ''};
   min-height: 32px;
   align-items: center;
-  color: ${(props) => (props.disabled ? grayLight : gray)};
+  color: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'disabled' does not exist on type 'Themed... Remove this comment to see the full error message
+disabled ? grayLight : gray)};
   cursor: pointer;
   display: flex;
   text-overflow: ellipsis;
   user-select: none;
   white-space: nowrap;
   background-color: transparent;
-  padding: ${(props) => (props.menuOption ? 0 : '0 8px')};
-  margin: ${(props) => {
+  padding: ${(props): string =>  
+// @ts-expect-error TS(2322) FIXME: Type 'string | number' is not assignable to type '... Remove this comment to see the full error message
+ (props.menuOption ? 0 : '0 8px')};
+  margin: ${(props): string => {
+    // @ts-expect-error TS(2339) FIXME: Property 'type' does not exist on type 'Omit<Detai... Remove this comment to see the full error message
     const { type } = props
     return type === 'header' ? '0 0 5px 5px' : ''
   }};
@@ -125,7 +134,7 @@ const getColor = (props, type, defaultColor) => {
 export const ButtonItemStyled = styled.button`
   ${buttonBase};
   ${medium};
-  color: ${(props) => getColor(props, 'title', grayDarker)};
+  color: ${(props): string => getColor(props, 'title', grayDarker)};
   background: none transparent;
   border-radius: 0;
   justify-content: flex-start;
@@ -140,22 +149,27 @@ export const ButtonItemStyled = styled.button`
   :hover {
     background-color: ${grayLight};
     svg {
-      fill: ${(props) => getColor(props, 'iconHover', grayDarker)};
+      fill: ${(props): string => getColor(props, 'iconHover', grayDarker)};
     }
   }
-  ${(props) => (props.disabled ? disabled : '')};
+  ${(props): string =>  
+// @ts-expect-error TS(2322) FIXME: Type 'FlattenSimpleInterpolation | ""' is not assi... Remove this comment to see the full error message
+ (props.disabled ? disabled : '')};
 `
 
 export const ButtonLabel = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: ${(props) => {
+  margin-left: ${(props): string => {
+    // @ts-expect-error TS(2339) FIXME: Property 'hasIcon' does not exist on type 'Omit<De... Remove this comment to see the full error message
     const { hasIcon, type } = props
     if (type === ORG_SWITCHER) {
       return hasIcon ? '5px' : '21px'
     }
     return hasIcon ? '5px' : '0px'
   }};
-  margin-right: ${(props) => (props.hasIcon ? '5px' : '0px')};
+  margin-right: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'hasIcon' does not exist on type 'ThemedS... Remove this comment to see the full error message
+hasIcon ? '5px' : '0px')};
 `

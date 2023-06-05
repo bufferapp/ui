@@ -166,7 +166,7 @@ export default class AppContainer extends React.Component {
       page && require(`../markdown/${location}/${page.fileName}.md`)
 
     if (view === 'fullscreen') {
-      // @ts-ignore
+      // @ts-expect-error TS(2322) FIXME: Type '{ name: string; description: string; props: ... Remove this comment to see the full error message
       return <Component component={component} fullscreen />
     }
 
@@ -174,7 +174,7 @@ export default class AppContainer extends React.Component {
       <Container>
         <NavBar title="Buffer UI" version={LIB_VERSION} />
         <Wrapper>
-          {/* @ts-expect-error TS(2322) FIXME: Type '{ navigationLinks: any[]; route: any; }' is ... Remove this comment to see the full error message */}
+          {/* @ts-expect-error TS(2322) FIXME: Type '{ navigationLinks: ({ id: string; fileName: ... Remove this comment to see the full error message */}
           <Sidebar navigationLinks={navigationLinks} route={route} />
           <PageLayout>
             <PageContainer>

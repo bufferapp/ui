@@ -18,7 +18,9 @@ export const Badge = styled.span`
   line-height: 14px;
   text-align: right;
   margin-right: 8px;
-  color: ${(props) => (props.selected ? blue : grayDarker)};
+  color: ${(props): string => (props.  
+// @ts-expect-error TS(2339) FIXME: Property 'selected' does not exist on type 'Themed... Remove this comment to see the full error message
+selected ? blue : grayDarker)};
 `
 
 export const NameHandleWrapper = styled.div`
@@ -50,10 +52,10 @@ export const LabelContainer = styled.div`
 `
 
 export const LabelStyled = styled(Text)`
-  font-size: ${(props) => (props.hasUser ? '13px' : '15px')};
-  font-weight: ${(props) => (props.hasUser ? '500' : '700')};
-  line-height: ${(props) => (props.hasUser ? '20px' : '24px')};
-  color: ${(props) => (props.selected ? blue : grayDarker)};
+  font-size: ${(props): string => (props.hasUser ? '13px' : '15px')};
+  font-weight: ${(props): string => (props.hasUser ? '500' : '700')};
+  line-height: ${(props): string => (props.hasUser ? '20px' : '24px')};
+  color: ${(props): string => (props.selected ? blue : grayDarker)};
 `
 
 export const IconContainer = styled.span`
@@ -64,7 +66,9 @@ export const IconContainer = styled.span`
   display: flex;
   justify-content: center;
   svg {
-    fill: ${(props) => (props.selected ? blue : gray)};
+    fill: ${(props): string => (props.    
+// @ts-expect-error TS(2339) FIXME: Property 'selected' does not exist on type 'Themed... Remove this comment to see the full error message
+selected ? blue : gray)};
   }
 `
 
@@ -76,18 +80,24 @@ export const ItemStyled = styled.li`
   border-radius: 4px;
   padding: 8px 0 8px 8px;
   background-color: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'selected' does not exist on type 'Themed... Remove this comment to see the full error message
     props.selected ? blueLightest50 : 'transparent'};
 
   &:hover {
     background-color: ${(props) =>
+      // @ts-expect-error TS(2339) FIXME: Property 'selected' does not exist on type 'Themed... Remove this comment to see the full error message
       props.selected ? blueLightest50 : grayLight50};
 
     ${Badge}, ${LabelStyled} {
-      color: ${(props) => (props.selected ? blue : grayDarker)};
+      color: ${(props): string => (props.      
+// @ts-expect-error TS(2339) FIXME: Property 'selected' does not exist on type 'Themed... Remove this comment to see the full error message
+selected ? blue : grayDarker)};
     }
 
     ${IconContainer} svg {
-      fill: ${(props) => (props.selected ? blue : gray)};
+      fill: ${(props): string => (props.      
+// @ts-expect-error TS(2339) FIXME: Property 'selected' does not exist on type 'Themed... Remove this comment to see the full error message
+selected ? blue : gray)};
     }
   }
 `
@@ -95,6 +105,8 @@ export const ItemStyled = styled.li`
 export const BadgeIconContainer = styled(IconContainer)`
   margin-left: auto;
   svg {
-    fill: ${(props) => (props.selected ? gray : 'currentColor')};
+    fill: ${(props): string => (props.    
+// @ts-expect-error TS(2339) FIXME: Property 'selected' does not exist on type 'Themed... Remove this comment to see the full error message
+selected ? gray : 'currentColor')};
   }
 `

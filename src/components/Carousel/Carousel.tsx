@@ -15,7 +15,9 @@ const CarouselStyled = styled.div`
 
 const Window = styled.div`
   overflow: hidden;
-  width: ${(props) => props.width};
+  width: ${(props): string => props.  
+// @ts-expect-error TS(2339) FIXME: Property 'width' does not exist on type 'ThemedSty... Remove this comment to see the full error message
+width};
   margin: 8px;
   display: flex;
 `
@@ -25,6 +27,7 @@ const ButtonOverlapContainer = styled.div`
   z-index: 3;
 
   ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'left' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
     props.left
       ? css`
           left: 20px;
@@ -39,7 +42,9 @@ const MainList = styled.ul`
   padding: 0;
   margin: 0;
   position: relative;
-  left: ${(props) => `${props.left}px`};
+  left: ${(props): string => `${props.  
+// @ts-expect-error TS(2339) FIXME: Property 'left' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
+left}px`};
   transition: left 0.4s ${easeOutQuart};
 `
 
@@ -90,9 +95,13 @@ const IndicatorButton = styled.button`
     position: absolute;
     top: 0;
     left: 4px;
-    transform: ${({ active }) => (active ? 'scale(1)' : 'scale(0)')};
-    transition: transform ${({ active }) => (active ? '250ms' : '150ms')}
-      ease-out;
+    transform: ${({    
+// @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'Omit<Det... Remove this comment to see the full error message
+ active }): string => (active ? 'scale(1)' : 'scale(0)')};
+    transition: transform
+      ${({      
+// @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'Omit<Det... Remove this comment to see the full error message
+ active }): string => (active ? '250ms' : '150ms')} ease-out;
   }
 
   &:before {
@@ -107,7 +116,9 @@ const IndicatorButton = styled.button`
     left: 2px;
     opacity: 0;
     transition: opacity 100ms ease-out;
-    transition-delay: ${({ active }) => (active ? '0' : '150ms')};
+    transition-delay: ${({    
+// @ts-expect-error TS(2339) FIXME: Property 'active' does not exist on type 'Omit<Det... Remove this comment to see the full error message
+ active }): string => (active ? '0' : '150ms')};
   }
 
   &:hover {
@@ -194,6 +205,7 @@ class Carousel extends React.Component {
           {children.length}
         </Announcement>
         {React.Children.count(children) > 1 && !rightNavigation && (
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <ButtonOverlapContainer left>
             {/* @ts-expect-error TS(2740) FIXME: Type '{ type: string; icon: Element; hasIconOnly: ... Remove this comment to see the full error message */}
             <Button
@@ -208,7 +220,9 @@ class Carousel extends React.Component {
           </ButtonOverlapContainer>
         )}
         <Content>
+          {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
           <Window width={width}>
+            {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
             <MainList left={left}>
               <CarouselItems currentSlideIndex={currentSlideIndex}>
                 {/* @ts-expect-error TS(2322) FIXME: Type 'ReactNode' is not assignable to type 'string... Remove this comment to see the full error message */}
@@ -223,6 +237,7 @@ class Carousel extends React.Component {
                   <IndicatorButton
                     type="button"
                     onClick={() => this.goToSlide(index)}
+                    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
                     active={index === currentSlideIndex}
                   >
                     <Announcement as="p">

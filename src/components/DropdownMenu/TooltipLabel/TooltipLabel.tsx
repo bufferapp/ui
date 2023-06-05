@@ -20,7 +20,9 @@ export const Label = styled.div`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: ${(props) => (props.hasIcon ? '7px' : 0)};
+  margin-left: ${(props): string =>  
+// @ts-expect-error TS(2322) FIXME: Type 'string | number' is not assignable to type '... Remove this comment to see the full error message
+ (props.hasIcon ? '7px' : 0)};
 `
 
 export const EmptyLabel = styled.div`
@@ -44,6 +46,7 @@ const TooltipLabel = ({ items, maxItems, defaultMessage }) => {
       {items.slice(0, maxItems).map((item, index) => (
         <LabelWrapper key={`tooltip-item-${index}`}>
           {item.icon}
+          {/* @ts-expect-error TS(2769) FIXME: No overload matches this call. */}
           <Label hasIcon>{item.title}</Label>
         </LabelWrapper>
       ))}

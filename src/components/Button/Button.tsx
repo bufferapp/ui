@@ -16,7 +16,9 @@ export const ButtonWrapperStyled = styled.div`
   ${(props) =>
     // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     Styles[[props.type, props.disabled ? 'Disabled' : ''].join('')]};
-  ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
+  ${(props): string =>  
+// @ts-expect-error TS(2322) FIXME: Type 'FlattenSimpleInterpolation | ""' is not assi... Remove this comment to see the full error message
+ (props.fullWidth ? Styles.fullWidth : '')};
 `
 
 export const ButtonContainerStyled = styled.div`
@@ -31,7 +33,9 @@ export const ButtonStyled = styled.button`
   ${(props) =>
     // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     Styles[props.disabled ? 'disabled' : '']};
-  ${(props) => (props.fullWidth ? Styles.fullWidth : '')};
+  ${(props): string =>  
+// @ts-expect-error TS(2322) FIXME: Type 'FlattenSimpleInterpolation | ""' is not assi... Remove this comment to see the full error message
+ (props.fullWidth ? Styles.fullWidth : '')};
 `
 
 const Loading = styled.img`
@@ -101,6 +105,7 @@ const Button = ({
 }) => (
   <ButtonWrapperStyled
     className={className}
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     disabled={disabled}
     type={type}
     fullWidth={fullWidth}
@@ -110,6 +115,7 @@ const Button = ({
       <ButtonStyled
         onClick={!disabled ? onClick : undefined}
         disabled={disabled}
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         isSplit={isSplit}
         icon={icon}
         hasIconOnly={hasIconOnly}
@@ -124,6 +130,7 @@ const Button = ({
         {!iconEnd && icon}
         {hasIconOnly && <VisuallyHiddenLabel>{label}</VisuallyHiddenLabel>}
         {!hasIconOnly && (
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <Styles.ButtonLabel hasIcon={!!icon} iconEnd={!!iconEnd}>
             {label}
           </Styles.ButtonLabel>
@@ -131,6 +138,7 @@ const Button = ({
         {iconEnd && icon}
 
         {isSelect && (type === 'primary' || type === 'secondary') && (
+          // @ts-expect-error TS(2769) FIXME: No overload matches this call.
           <Styles.ButtonArrow textToLeft={textToLeft}>
             <ChevronDown
               color={type === 'primary' ? 'white' : 'grayDark'}

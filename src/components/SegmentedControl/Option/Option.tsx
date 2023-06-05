@@ -41,10 +41,12 @@ const Option = (props) => {
   }
 
   const renderContent = () => (
+    // @ts-expect-error TS(2769) FIXME: No overload matches this call.
     <ContentWrapper iconPosition={iconPosition}>
       {icon && showIcon && <IconWrapper>{icon}</IconWrapper>}
 
       {label && showLabel && (
+        // @ts-expect-error TS(2769) FIXME: No overload matches this call.
         <Label optionType={optionType} iconPosition={iconPosition}>
           {label}
         </Label>
@@ -59,6 +61,7 @@ const Option = (props) => {
       disabled={disabled}
       size={size}
       onClick={handleClick}
+      // @ts-expect-error TS(2769) FIXME: No overload matches this call.
       tabIndex="0"
       role="button"
     >

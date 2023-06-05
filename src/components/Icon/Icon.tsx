@@ -10,6 +10,7 @@ const StyledIcon = styled.svg`
     // @ts-expect-error TS(7053) FIXME: Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
     styles[props.size]};
   vertical-align: ${(props) =>
+    // @ts-expect-error TS(2339) FIXME: Property 'verticalAlign' does not exist on type 'T... Remove this comment to see the full error message
     props.verticalAlign ? props.verticalAlign : null};
 `
 
