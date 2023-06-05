@@ -1,0 +1,150 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
+<styled.li
+  className="jest-auto-snapshots String Fixture"
+  hasUser={
+    Object {
+      "fallbackUrl": "jest-auto-snapshots String Fixture",
+      "handle": "jest-auto-snapshots String Fixture",
+      "id": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+      "network": "facebook",
+      "profileImageUrl": "jest-auto-snapshots String Fixture",
+    }
+  }
+  onClick={[Function]}
+  selected={false}
+>
+  <styled.span
+    selected={false}
+  >
+    <NodeFixture />
+  </styled.span>
+  <styled.div>
+    <React.Fragment>
+      <Avatar
+        alt="jest-auto-snapshots String Fixture"
+        fallbackUrl="jest-auto-snapshots String Fixture"
+        network="facebook"
+        size="small"
+        src="jest-auto-snapshots String Fixture"
+        type="social"
+      />
+      <styled.div>
+        <Styled(Text)
+          hasUser={
+            Object {
+              "fallbackUrl": "jest-auto-snapshots String Fixture",
+              "handle": "jest-auto-snapshots String Fixture",
+              "id": "jest-auto-snapshots String Fixture",
+              "name": "jest-auto-snapshots String Fixture",
+              "network": "facebook",
+              "profileImageUrl": "jest-auto-snapshots String Fixture",
+            }
+          }
+          selected={false}
+          title="jest-auto-snapshots String Fixture"
+          type="label"
+        >
+          jest-auto-snapshots String Fixture
+        </Styled(Text)>
+        <styled.span
+          selected={false}
+        >
+          jest-auto-snapshots String Fixture
+        </styled.span>
+      </styled.div>
+    </React.Fragment>
+  </styled.div>
+  <Styled(styled.span)
+    selected={false}
+  >
+    <NodeFixture />
+  </Styled(styled.span)>
+</styled.li>
+`;
+
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed all props 1`] = `
+<styled.li
+  className="jest-auto-snapshots String Fixture"
+  hasUser={
+    Object {
+      "fallbackUrl": "jest-auto-snapshots String Fixture",
+      "handle": "jest-auto-snapshots String Fixture",
+      "id": "jest-auto-snapshots String Fixture",
+      "name": "jest-auto-snapshots String Fixture",
+      "network": "facebook",
+      "profileImageUrl": "jest-auto-snapshots String Fixture",
+    }
+  }
+  onClick={[Function]}
+  selected={true}
+>
+  <styled.span
+    selected={true}
+  >
+    <NodeFixture />
+  </styled.span>
+  <styled.div>
+    <React.Fragment>
+      <Avatar
+        alt="jest-auto-snapshots String Fixture"
+        fallbackUrl="jest-auto-snapshots String Fixture"
+        network="facebook"
+        size="small"
+        src="jest-auto-snapshots String Fixture"
+        type="social"
+      />
+      <styled.div>
+        <Styled(Text)
+          hasUser={
+            Object {
+              "fallbackUrl": "jest-auto-snapshots String Fixture",
+              "handle": "jest-auto-snapshots String Fixture",
+              "id": "jest-auto-snapshots String Fixture",
+              "name": "jest-auto-snapshots String Fixture",
+              "network": "facebook",
+              "profileImageUrl": "jest-auto-snapshots String Fixture",
+            }
+          }
+          selected={true}
+          title="jest-auto-snapshots String Fixture"
+          type="label"
+        >
+          jest-auto-snapshots String Fixture
+        </Styled(Text)>
+        <styled.span
+          selected={true}
+        >
+          jest-auto-snapshots String Fixture
+        </styled.span>
+      </styled.div>
+    </React.Fragment>
+  </styled.div>
+  <Styled(styled.span)
+    selected={true}
+  >
+    <NodeFixture />
+  </Styled(styled.span)>
+</styled.li>
+`;
+
+exports[`jest-auto-snapshots > SidebarListItem Matches snapshot when passed only required props 1`] = `
+<styled.li
+  className={null}
+  hasUser={null}
+  onClick={[Function]}
+  selected={null}
+>
+  <styled.div>
+    <Styled(Text)
+      selected={null}
+      title="jest-auto-snapshots String Fixture"
+      type="label"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.li>
+`;

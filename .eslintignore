@@ -4,5 +4,6 @@ config/
 coverage/
 lib/
 types/
-/config/componentData.js
-/config/documentsData.js
+# Generated component data
+/src/documentation/config/componentData.json
+/src/documentation/config/documentsData.json

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SimpleModal Matches snapshot when passed only required props 1`] = `
+<styled.div
+  aria-modal="true"
+  role="dialog"
+>
+  <AnimationWrapper
+    align="center"
+    dismissing={false}
+    duration={400}
+    easing="cubic-bezier(0.25, 1, 0.5, 1)"
+    justify="center"
+    onDismiss={[MockFunction]}
+    stageInAnimation={
+      e {
+        "id": "sc-keyframes-bQtjaF",
+        "inject": [Function],
+        "name": "bQtjaF",
+        "rules": "
+  0% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+",
+        "toString": [Function],
+      }
+    }
+    stageOutAnimation={
+      e {
+        "id": "sc-keyframes-hsHpqF",
+        "inject": [Function],
+        "name": "hsHpqF",
+        "rules": "
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(.5);
+    opacity: 0;
+  }
+",
+        "toString": [Function],
+      }
+    }
+  >
+    <styled.div
+      tabIndex="0"
+    >
+      <styled.button
+        onClick={[Function]}
+      >
+        <CrossIcon />
+      </styled.button>
+      <NodeFixture />
+    </styled.div>
+  </AnimationWrapper>
+</styled.div>
+`;

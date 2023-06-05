@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<styled.ul
+  aria-label="jest-auto-snapshots String Fixture"
+  role="menubar"
+  usingMouse={false}
+>
+  <styled.li
+    menuOption={true}
+    role="none"
+  >
+    <NodeFixture
+      aria-expanded={false}
+      aria-haspopup="true"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    />
+    <PopupMenu
+      aria-label="jest-auto-snapshots String Fixture"
+      ariaLabelPopup={null}
+      closePopup={[Function]}
+      horizontalOffset={null}
+      isOpen={false}
+      items={
+        Array [
+          Object {
+            "colors": Object {
+              "iconHover": "jest-auto-snapshots String Fixture",
+              "title": "jest-auto-snapshots String Fixture",
+            },
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      onBlur={[Function]}
+      onOpen={[MockFunction]}
+      role="menu"
+      usingMouse={false}
+      xPosition="jest-auto-snapshots String Fixture"
+    />
+  </styled.li>
+</styled.ul>
+`;
+
+exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed all props 1`] = `
+<styled.ul
+  aria-label="jest-auto-snapshots String Fixture"
+  role="menubar"
+  usingMouse={false}
+>
+  <styled.li
+    menuOption={true}
+    role="none"
+  >
+    <NodeFixture
+      aria-expanded={false}
+      aria-haspopup="true"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    />
+    <PopupMenu
+      aria-label="jest-auto-snapshots String Fixture"
+      ariaLabelPopup={null}
+      closePopup={[Function]}
+      horizontalOffset={null}
+      isOpen={false}
+      items={
+        Array [
+          Object {
+            "colors": Object {
+              "iconHover": "jest-auto-snapshots String Fixture",
+              "title": "jest-auto-snapshots String Fixture",
+            },
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      onBlur={[Function]}
+      onOpen={[MockFunction]}
+      role="menu"
+      usingMouse={false}
+      xPosition="jest-auto-snapshots String Fixture"
+    />
+  </styled.li>
+</styled.ul>
+`;
+
+exports[`jest-auto-snapshots > DropdownMenu Matches snapshot when passed only required props 1`] = `
+<styled.ul
+  aria-label="jest-auto-snapshots String Fixture"
+  role="menubar"
+  usingMouse={false}
+>
+  <styled.li
+    menuOption={true}
+    role="none"
+  >
+    <NodeFixture
+      aria-expanded={false}
+      aria-haspopup="true"
+      onClick={[Function]}
+      onKeyDown={[Function]}
+      role="menuitem"
+      tabIndex="0"
+    />
+    <PopupMenu
+      aria-label={null}
+      ariaLabelPopup={null}
+      closePopup={[Function]}
+      horizontalOffset={null}
+      isOpen={false}
+      items={
+        Array [
+          Object {
+            "colors": Object {
+              "iconHover": "jest-auto-snapshots String Fixture",
+              "title": "jest-auto-snapshots String Fixture",
+            },
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          },
+        ]
+      }
+      onBlur={[Function]}
+      onOpen={null}
+      role="menu"
+      usingMouse={false}
+      xPosition="right"
+    />
+  </styled.li>
+</styled.ul>
+`;

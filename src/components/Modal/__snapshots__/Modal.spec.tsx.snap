@@ -1,0 +1,179 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "dismissible" is set to: "false" 1`] = `
+<styled.div>
+  <styled.section
+    background="jest-auto-snapshots String Fixture"
+    noBackground={true}
+    tabIndex="0"
+    width="jest-auto-snapshots String Fixture"
+  >
+    <styled.button
+      noBackground={true}
+      onClick={[Function]}
+    >
+      <CrossIcon
+        size="large"
+      />
+    </styled.button>
+    <NodeFixture />
+    <styled.div
+      background="jest-auto-snapshots String Fixture"
+    >
+      <NodeFixture />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        onOpen={null}
+        selectPosition="bottom"
+        size="medium"
+        type="text"
+      />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        onOpen={null}
+        selectPosition="bottom"
+        size="medium"
+        type="jest-auto-snapshots String Fixture"
+      />
+    </styled.div>
+  </styled.section>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Modal Matches snapshot when boolean prop "noBackground" is set to: "false" 1`] = `
+<styled.div>
+  <styled.section
+    background="jest-auto-snapshots String Fixture"
+    noBackground={false}
+    tabIndex="0"
+    width="jest-auto-snapshots String Fixture"
+  >
+    <styled.button
+      noBackground={false}
+      onClick={[Function]}
+    >
+      <CrossIcon
+        size="large"
+      />
+    </styled.button>
+    <NodeFixture />
+    <styled.div
+      background="jest-auto-snapshots String Fixture"
+    >
+      <NodeFixture />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        onOpen={null}
+        selectPosition="bottom"
+        size="medium"
+        type="text"
+      />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        onOpen={null}
+        selectPosition="bottom"
+        size="medium"
+        type="jest-auto-snapshots String Fixture"
+      />
+    </styled.div>
+  </styled.section>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Modal Matches snapshot when passed all props 1`] = `
+<styled.div>
+  <styled.section
+    background="jest-auto-snapshots String Fixture"
+    noBackground={true}
+    tabIndex="0"
+    width="jest-auto-snapshots String Fixture"
+  >
+    <styled.button
+      noBackground={true}
+      onClick={[Function]}
+    >
+      <CrossIcon
+        size="large"
+      />
+    </styled.button>
+    <NodeFixture />
+    <styled.div
+      background="jest-auto-snapshots String Fixture"
+    >
+      <NodeFixture />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        onOpen={null}
+        selectPosition="bottom"
+        size="medium"
+        type="text"
+      />
+      <Button
+        disabled={true}
+        fullWidth={false}
+        hasIconOnly={false}
+        hideSearch={true}
+        iconEnd={false}
+        label="jest-auto-snapshots String Fixture"
+        loading={false}
+        onClick={[Function]}
+        onOpen={null}
+        selectPosition="bottom"
+        size="medium"
+        type="jest-auto-snapshots String Fixture"
+      />
+    </styled.div>
+  </styled.section>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Modal Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <styled.section
+    background={null}
+    noBackground={false}
+    tabIndex="0"
+    width={null}
+  >
+    <NodeFixture />
+    <styled.div
+      background={null}
+    />
+  </styled.section>
+</styled.div>
+`;

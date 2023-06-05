@@ -1,0 +1,78 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > SocialButton Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<styled.button
+  channel="twitter"
+  disabled={false}
+  onClick={[MockFunction]}
+>
+  <styled.span>
+    <TwitterIcon />
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="p"
+    >
+      Twitter
+    </Text>
+  </styled.span>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    type="p"
+  >
+    Connect a Twitter profile
+  </Text>
+</styled.button>
+`;
+
+exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed all props 1`] = `
+<styled.button
+  channel="twitter"
+  disabled={true}
+>
+  <styled.span>
+    <TwitterIcon />
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="p"
+    >
+      Twitter
+    </Text>
+  </styled.span>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    type="p"
+  >
+    Connect a Twitter profile
+  </Text>
+</styled.button>
+`;
+
+exports[`jest-auto-snapshots > SocialButton Matches snapshot when passed only required props 1`] = `
+<styled.button
+  channel="twitter"
+  disabled={false}
+  onClick={[MockFunction]}
+>
+  <styled.span>
+    <TwitterIcon />
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="p"
+    >
+      Twitter
+    </Text>
+  </styled.span>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    type="p"
+  >
+    Connect a Twitter profile
+  </Text>
+</styled.button>
+`;

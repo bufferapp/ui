@@ -24,12 +24,10 @@ yarn-error.log*
 
 # built component library
 /lib
+/built
 
 # built docs
 /docs
-
-# Generated component data
-/config/componentData.js
 
 # Webstorm
 .idea

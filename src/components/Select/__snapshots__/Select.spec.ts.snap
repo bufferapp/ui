@@ -1,0 +1,1119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" has one item: "[object Object]" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when array prop "hotKeys" is an empty array: "[]" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "capitalizeItemLabel" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={false}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "clearSearchOnBlur" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip="jest-auto-snapshots String Fixture"
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={false}
+    onClick={[Function]}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="white"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={false}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={false}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasCustomAction" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={false}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={false}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isInputSearch" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isOpen" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={false}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={false}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "multiSelect" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={false}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "selectPopupVisible" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "shortcutsEnabled" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when boolean prop "textToLeft" is set to: "false" 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when passed all props 1`] = `
+<styled.div
+  aria-expanded={true}
+  aria-haspopup="true"
+  data-tip=""
+  fullWidth={true}
+  isSplit={true}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <styled.div
+    disabled={true}
+    size="small"
+    type="primary"
+  >
+    <ChevronDownIcon
+      color="grayDark"
+    />
+  </styled.div>
+  <styled.div
+    fullWidth={true}
+    hasIconOnly={true}
+    horizontalOffset="jest-auto-snapshots String Fixture"
+    isOpen={true}
+    marginTop="jest-auto-snapshots String Fixture"
+    xPosition="right"
+    yPosition="top"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={true}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        keyMap={
+          Object {
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={true}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Select Matches snapshot when passed only required props 1`] = `
+<styled.div
+  aria-expanded={false}
+  aria-haspopup="true"
+  isSplit={false}
+  onClick={[Function]}
+  onKeyUp={[Function]}
+  role="button"
+  tabIndex={0}
+>
+  <Button
+    disabled={false}
+    fullWidth={false}
+    hasIconOnly={false}
+    hideSearch={true}
+    iconEnd={false}
+    isSelect={true}
+    items={
+      Array [
+        Object {
+          "hideOnSearch": true,
+          "id": "jest-auto-snapshots String Fixture",
+          "title": "jest-auto-snapshots String Fixture",
+        },
+      ]
+    }
+    label=""
+    loading={false}
+    onClick={[Function]}
+    onOpen={null}
+    selectPosition="bottom"
+    size="medium"
+    textToLeft={false}
+    type="secondary"
+  />
+  <styled.div
+    hasIconOnly={false}
+    isOpen={false}
+    xPosition="left"
+    yPosition="bottom"
+  >
+    <styled.ul>
+      <SelectItemTooltipWrapper
+        capitalizeItemLabel={true}
+        getItemId={[Function]}
+        hasSelectedItems={false}
+        hideSearch={false}
+        hovered={false}
+        item={
+          Object {
+            "hideOnSearch": true,
+            "id": "jest-auto-snapshots String Fixture",
+            "title": "jest-auto-snapshots String Fixture",
+          }
+        }
+        multiSelect={false}
+        onClick={[Function]}
+        onItemClick={[Function]}
+      />
+    </styled.ul>
+  </styled.div>
+</styled.div>
+`;

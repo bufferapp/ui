@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Option Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<styled.div
+  aria-pressed={true}
+  disabled={false}
+  onClick={[Function]}
+  role="button"
+  selected={true}
+  size="small"
+  tabIndex="0"
+>
+  <Tooltip
+    customLabel=""
+    hotkey=""
+    label="jest-auto-snapshots String Fixture"
+    opacity={1}
+    position="bottom"
+    verticalAlign="center"
+  >
+    <styled.div
+      iconPosition="top"
+    >
+      <styled.span
+        iconPosition="top"
+        optionType="text"
+      >
+        jest-auto-snapshots String Fixture
+      </styled.span>
+    </styled.div>
+  </Tooltip>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Option Matches snapshot when boolean prop "selected" is set to: "false" 1`] = `
+<styled.div
+  aria-pressed={false}
+  disabled={true}
+  onClick={[Function]}
+  role="button"
+  selected={false}
+  size="small"
+  tabIndex="0"
+>
+  <Tooltip
+    customLabel=""
+    hotkey=""
+    label="jest-auto-snapshots String Fixture"
+    opacity={1}
+    position="bottom"
+    verticalAlign="center"
+  >
+    <styled.div
+      iconPosition="top"
+    >
+      <styled.span
+        iconPosition="top"
+        optionType="text"
+      >
+        jest-auto-snapshots String Fixture
+      </styled.span>
+    </styled.div>
+  </Tooltip>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Option Matches snapshot when passed all props 1`] = `
+<styled.div
+  aria-pressed={false}
+  disabled={true}
+  onClick={[Function]}
+  role="button"
+  selected={false}
+  size="small"
+  tabIndex="0"
+>
+  <Tooltip
+    customLabel=""
+    hotkey=""
+    label="jest-auto-snapshots String Fixture"
+    opacity={1}
+    position="bottom"
+    verticalAlign="center"
+  >
+    <styled.div
+      iconPosition="top"
+    >
+      <styled.span
+        iconPosition="top"
+        optionType="text"
+      >
+        jest-auto-snapshots String Fixture
+      </styled.span>
+    </styled.div>
+  </Tooltip>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Option Matches snapshot when passed only required props 1`] = `
+<styled.div
+  aria-pressed={true}
+  disabled={false}
+  onClick={[Function]}
+  role="button"
+  selected={true}
+  size="normal"
+  tabIndex="0"
+>
+  <styled.div
+    iconPosition="left"
+  >
+    <styled.span
+      iconPosition="left"
+      optionType="text"
+    >
+      jest-auto-snapshots String Fixture
+    </styled.span>
+  </styled.div>
+</styled.div>
+`;

@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed all props 1`] = `
+<React.Fragment>
+  <styled.div>
+    <Styled(Tooltip)
+      label={
+        <styled.div>
+          <styled.label
+            color="#FFFFFF"
+          >
+            <styled.div>
+              jest-auto-snapshots String Fixture
+              <styled.label
+                color="#B8B8B8"
+                isHotkey={true}
+              >
+                jest-auto-snapshots String Fixture
+              </styled.label>
+            </styled.div>
+          </styled.label>
+          <NodeFixture />
+        </styled.div>
+      }
+      opacity={1}
+      position={[Function]}
+      style={
+        Object {
+          "background": "#3D3D3D",
+          "border": "none",
+          "borderRadius": "4px",
+          "color": "#FFFFFF",
+          "maxWidth": "200px",
+          "padding": "8px",
+          "position": "absolute",
+          "whiteSpace": "normal",
+          "zIndex": 9999,
+        }
+      }
+    >
+      <div>
+        <NodeFixture />
+      </div>
+    </Styled(Tooltip)>
+  </styled.div>
+</React.Fragment>
+`;
+
+exports[`jest-auto-snapshots > Tooltip Matches snapshot when passed only required props 1`] = `
+<React.Fragment>
+  <div>
+    <NodeFixture />
+  </div>
+</React.Fragment>
+`;

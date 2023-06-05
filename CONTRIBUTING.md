@@ -54,7 +54,7 @@ For testing we're using automated snapshot testing with `jest-auto-snapshots`. I
 import snap from 'jest-auto-snapshots';
 import MyComponent from '../MyComponent';
 
-snap(MyComponent, '../MyComponent.jsx');
+snap(MyComponent, '../MyComponent.tsx');
 ```
 
 This will generate snapshot tests for all the different possible rendering state of that component by detecting the different prop types that component uses.

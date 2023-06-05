@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Link Matches snapshot when boolean prop "download" is set to: "false" 1`] = `
+<styled.a
+  className="jest-auto-snapshots String Fixture"
+  download={false}
+  fontWeight="0"
+  href="jest-auto-snapshots String Fixture"
+  rel="noopener noreferrer"
+  target="_blank"
+  title="jest-auto-snapshots String Fixture"
+>
+  <NodeFixture />
+</styled.a>
+`;
+
+exports[`jest-auto-snapshots > Link Matches snapshot when boolean prop "newTab" is set to: "false" 1`] = `
+<styled.a
+  className="jest-auto-snapshots String Fixture"
+  download={true}
+  fontWeight="0"
+  href="jest-auto-snapshots String Fixture"
+  target="_self"
+  title="jest-auto-snapshots String Fixture"
+>
+  <NodeFixture />
+</styled.a>
+`;
+
+exports[`jest-auto-snapshots > Link Matches snapshot when passed all props 1`] = `
+<styled.a
+  className="jest-auto-snapshots String Fixture"
+  download={true}
+  fontWeight="0"
+  href="jest-auto-snapshots String Fixture"
+  rel="noopener noreferrer"
+  target="_blank"
+  title="jest-auto-snapshots String Fixture"
+>
+  <NodeFixture />
+</styled.a>
+`;
+
+exports[`jest-auto-snapshots > Link Matches snapshot when passed only required props 1`] = `
+<styled.a
+  download={false}
+  fontWeight={500}
+  href="jest-auto-snapshots String Fixture"
+  target="_self"
+  title=""
+>
+  <NodeFixture />
+</styled.a>
+`;

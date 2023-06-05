@@ -9,8 +9,16 @@ const paths = {
   examples: path.join(__dirname, '../src', 'documentation', 'examples'),
   documents: path.join(__dirname, '../src', 'documentation', 'markdown'),
   components: path.join(__dirname, '../src', 'components'),
-  output: path.join(__dirname, '../config', 'componentData.js'),
-  documentsOutput: path.join(__dirname, '../config', 'documentsData.js'),
+  output: path.join(
+    __dirname,
+    '../src/documentation/config',
+    'componentData.json',
+  ),
+  documentsOutput: path.join(
+    __dirname,
+    '../src/documentation/config',
+    'documentsData.json',
+  ),
 }
 
 // some of the folders in components are not actual components, so ignore them
@@ -32,12 +40,18 @@ function writeFile(filepath, content) {
   fs.writeFile(filepath, content, (err) =>
     err
       ? console.info(chalk.red(err))
-      : console.info(chalk.green('Component data saved.')),
+      : console.info(chalk.green(`Component data saved: ${filepath}`)),
   )
 }
 
-function readFile(filePath) {
-  return fs.readFileSync(filePath, 'utf-8')
+function readFile(filePath, removeComments = true) {
+  const initialFile = fs.readFileSync(filePath, 'utf-8')
+  if (removeComments) {
+    const commentRegex = /(\/\/| *{\/\*) @ts-expect-error.*(\n)/g
+    const contentWithoutComments = initialFile.replace(commentRegex, '')
+    return contentWithoutComments
+  }
+  return initialFile
 }
 
 function getDocumentFiles(documentPath, folder) {
@@ -158,7 +172,7 @@ function getDocumentsData(documentsPath) {
  * and returns the metadata (comments, proptypes, examples...) */
 function getComponentData(componentPath, componentName) {
   const content = readFile(
-    path.join(paths.components, componentName, `${componentName}.jsx`),
+    path.join(paths.components, componentName, `${componentName}.tsx`),
   )
 
   const splitByUppercase = componentName.split(/(?=[A-Z])/)
@@ -195,6 +209,7 @@ function generate(componentPaths) {
         try {
           return getComponentData(componentPaths, componentName)
         } catch (error) {
+          console.info(error)
           errors.push(
             `An error occurred while attempting to generate metadata for ${componentName}. ${error}`,
           )
@@ -205,9 +220,7 @@ function generate(componentPaths) {
   // write the array of data to our output file
   writeFile(
     componentPaths.output,
-    `module.exports = ${JSON.stringify(
-      errors.length ? errors : componentData,
-    )}`,
+    `${JSON.stringify(errors.length ? errors : componentData)}`,
   )
 }
 
@@ -220,9 +233,7 @@ function generateDocumentation(documentPaths) {
   // write the array of data to our output file
   writeFile(
     documentPaths.documentsOutput,
-    `module.exports = ${JSON.stringify(
-      errors.length ? errors : documentsData,
-    )}`,
+    `${JSON.stringify(errors.length ? errors : documentsData)}`,
   )
 }
 

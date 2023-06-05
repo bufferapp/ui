@@ -1,0 +1,253 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<styled.div>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    htmlFor="jest-auto-snapshots String Fixture"
+    type="label"
+  >
+    jest-auto-snapshots String Fixture
+  </Text>
+  <styled.div
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
+    size="jest-auto-snapshots String Fixture"
+  >
+    <styled.input
+      aria-required={true}
+      disabled={false}
+      hasError={true}
+      icon={<NodeFixture />}
+      id="jest-auto-snapshots String Fixture"
+      maxLength="jest-auto-snapshots String Fixture"
+      name="jest-auto-snapshots String Fixture"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onKeyUp={[MockFunction]}
+      placeholder="jest-auto-snapshots String Fixture"
+      prefix={
+        Object {
+          "paddingLeft": "jest-auto-snapshots String Fixture",
+          "text": "jest-auto-snapshots String Fixture",
+        }
+      }
+      required={true}
+      size="jest-auto-snapshots String Fixture"
+      type="jest-auto-snapshots String Fixture"
+      value="jest-auto-snapshots String Fixture"
+    />
+  </styled.div>
+  <styled.div>
+    <WarningIcon
+      size="medium"
+    />
+    <Styled(Text)
+      hasError={true}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "hasError" is set to: "false" 1`] = `
+<styled.div>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    htmlFor="jest-auto-snapshots String Fixture"
+    type="label"
+  >
+    jest-auto-snapshots String Fixture
+  </Text>
+  <styled.div
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
+    size="jest-auto-snapshots String Fixture"
+  >
+    <styled.input
+      aria-required={true}
+      disabled={true}
+      hasError={false}
+      icon={<NodeFixture />}
+      id="jest-auto-snapshots String Fixture"
+      maxLength="jest-auto-snapshots String Fixture"
+      name="jest-auto-snapshots String Fixture"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onKeyUp={[MockFunction]}
+      placeholder="jest-auto-snapshots String Fixture"
+      prefix={
+        Object {
+          "paddingLeft": "jest-auto-snapshots String Fixture",
+          "text": "jest-auto-snapshots String Fixture",
+        }
+      }
+      required={true}
+      size="jest-auto-snapshots String Fixture"
+      type="jest-auto-snapshots String Fixture"
+      value="jest-auto-snapshots String Fixture"
+    />
+  </styled.div>
+  <styled.div>
+    <Styled(Text)
+      hasError={false}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Input Matches snapshot when boolean prop "required" is set to: "false" 1`] = `
+<styled.div>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    htmlFor="jest-auto-snapshots String Fixture"
+    type="label"
+  >
+    jest-auto-snapshots String Fixture
+  </Text>
+  <styled.div
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
+    size="jest-auto-snapshots String Fixture"
+  >
+    <styled.input
+      disabled={true}
+      hasError={true}
+      icon={<NodeFixture />}
+      id="jest-auto-snapshots String Fixture"
+      maxLength="jest-auto-snapshots String Fixture"
+      name="jest-auto-snapshots String Fixture"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onKeyUp={[MockFunction]}
+      placeholder="jest-auto-snapshots String Fixture"
+      prefix={
+        Object {
+          "paddingLeft": "jest-auto-snapshots String Fixture",
+          "text": "jest-auto-snapshots String Fixture",
+        }
+      }
+      required={false}
+      size="jest-auto-snapshots String Fixture"
+      type="jest-auto-snapshots String Fixture"
+      value="jest-auto-snapshots String Fixture"
+    />
+  </styled.div>
+  <styled.div>
+    <WarningIcon
+      size="medium"
+    />
+    <Styled(Text)
+      hasError={true}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Input Matches snapshot when passed all props 1`] = `
+<styled.div>
+  <Text
+    color="grayDarker"
+    hasError={false}
+    htmlFor="jest-auto-snapshots String Fixture"
+    type="label"
+  >
+    jest-auto-snapshots String Fixture
+  </Text>
+  <styled.div
+    prefix={
+      Object {
+        "paddingLeft": "jest-auto-snapshots String Fixture",
+        "text": "jest-auto-snapshots String Fixture",
+      }
+    }
+    size="jest-auto-snapshots String Fixture"
+  >
+    <styled.input
+      aria-required={true}
+      disabled={true}
+      hasError={true}
+      icon={<NodeFixture />}
+      id="jest-auto-snapshots String Fixture"
+      maxLength="jest-auto-snapshots String Fixture"
+      name="jest-auto-snapshots String Fixture"
+      onBlur={[MockFunction]}
+      onChange={[MockFunction]}
+      onKeyUp={[MockFunction]}
+      placeholder="jest-auto-snapshots String Fixture"
+      prefix={
+        Object {
+          "paddingLeft": "jest-auto-snapshots String Fixture",
+          "text": "jest-auto-snapshots String Fixture",
+        }
+      }
+      required={true}
+      size="jest-auto-snapshots String Fixture"
+      type="jest-auto-snapshots String Fixture"
+      value="jest-auto-snapshots String Fixture"
+    />
+  </styled.div>
+  <styled.div>
+    <WarningIcon
+      size="medium"
+    />
+    <Styled(Text)
+      hasError={true}
+      htmlFor="jest-auto-snapshots String Fixture"
+      type="help"
+    >
+      jest-auto-snapshots String Fixture
+    </Styled(Text)>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Input Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <styled.div
+    prefix={null}
+    size="regular"
+  >
+    <styled.input
+      disabled={false}
+      hasError={false}
+      id=""
+      name="jest-auto-snapshots String Fixture"
+      onBlur={[Function]}
+      onChange={[MockFunction]}
+      onKeyUp={[Function]}
+      placeholder=""
+      prefix={null}
+      required={false}
+      size="regular"
+      type="text"
+    />
+  </styled.div>
+</styled.div>
+`;

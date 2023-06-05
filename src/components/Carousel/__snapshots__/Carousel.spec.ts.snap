@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "rightNavigation" is set to: "false" 1`] = `
+<styled.div>
+  <styled.div
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+  </styled.div>
+  <styled.div>
+    <styled.div
+      width="jest-auto-snapshots String Fixture"
+    >
+      <styled.ul
+        left={0}
+      >
+        <CarouselItems
+          currentSlideIndex={0}
+        >
+          <NodeFixture />
+        </CarouselItems>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when boolean prop "withIndicators" is set to: "false" 1`] = `
+<styled.div>
+  <styled.div
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+  </styled.div>
+  <styled.div>
+    <styled.div
+      width="jest-auto-snapshots String Fixture"
+    >
+      <styled.ul
+        left={0}
+      >
+        <CarouselItems
+          currentSlideIndex={0}
+        >
+          <NodeFixture />
+        </CarouselItems>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when passed all props 1`] = `
+<styled.div>
+  <styled.div
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+  </styled.div>
+  <styled.div>
+    <styled.div
+      width="jest-auto-snapshots String Fixture"
+    >
+      <styled.ul
+        left={0}
+      >
+        <CarouselItems
+          currentSlideIndex={0}
+        >
+          <NodeFixture />
+        </CarouselItems>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Carousel Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <styled.div
+    aria-atomic="true"
+    aria-live="polite"
+    tabIndex={-1}
+  >
+    Slide
+    1
+    out of
+  </styled.div>
+  <styled.div>
+    <styled.div
+      width="jest-auto-snapshots String Fixture"
+    >
+      <styled.ul
+        left={0}
+      >
+        <CarouselItems
+          currentSlideIndex={0}
+        >
+          <NodeFixture />
+        </CarouselItems>
+      </styled.ul>
+    </styled.div>
+  </styled.div>
+</styled.div>
+`;

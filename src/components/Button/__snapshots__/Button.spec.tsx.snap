@@ -1,0 +1,470 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" has one item: "[object Object]" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when array prop "items" is an empty array: "[]" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "disabled" is set to: "false" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={false}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={false}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      onClick={[MockFunction]}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "fullWidth" is set to: "false" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={false}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={false}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hasIconOnly" is set to: "false" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={false}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.div
+        hasIcon={true}
+        iconEnd={true}
+      >
+        jest-auto-snapshots String Fixture
+      </styled.div>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "hideSearch" is set to: "false" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "iconEnd" is set to: "false" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <NodeFixture />
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSelect" is set to: "false" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "isSplit" is set to: "false" 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={false}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when boolean prop "loading" is set to: "false" 1`] = `
+<styled.div
+  $loading={false}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when passed all props 1`] = `
+<styled.div
+  $loading={true}
+  className="jest-auto-snapshots String Fixture"
+  disabled={true}
+  fullWidth={true}
+  type="primary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      data-tip="jest-auto-snapshots String Fixture"
+      disabled={true}
+      fullWidth={true}
+      hasIconOnly={true}
+      icon={<NodeFixture />}
+      isSplit={true}
+      size="small"
+      type="primary"
+    >
+      <styled.span>
+        jest-auto-snapshots String Fixture
+      </styled.span>
+      <NodeFixture />
+      <styled.div>
+        <ChevronDownIcon
+          color="white"
+          isChevron={true}
+          size="small"
+        />
+      </styled.div>
+      <styled.img
+        alt="loading"
+        src="./images/loading-gray.svg"
+      />
+    </styled.button>
+    <NodeFixture />
+  </styled.div>
+</styled.div>
+`;
+
+exports[`jest-auto-snapshots > Button Matches snapshot when passed only required props 1`] = `
+<styled.div
+  $loading={false}
+  disabled={false}
+  fullWidth={false}
+  type="secondary"
+>
+  <styled.div>
+    <styled.button
+      aria-haspopup="false"
+      disabled={false}
+      fullWidth={false}
+      hasIconOnly={false}
+      onClick={[MockFunction]}
+      size="medium"
+      type="secondary"
+    >
+      <styled.div
+        hasIcon={false}
+        iconEnd={false}
+      />
+    </styled.button>
+  </styled.div>
+</styled.div>
+`;

@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > CrossSell Matches snapshot when passed only required props 1`] = `
+<styled.div>
+  <styled.div>
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="h1"
+    >
+      jest-auto-snapshots String Fixture
+    </Text>
+    <styled.div>
+      <Text
+        color="grayDarker"
+        hasError={false}
+        type="h3"
+      >
+        jest-auto-snapshots String Fixture
+      </Text>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.img
+        alt="jest-auto-snapshots String Fixture"
+        src="jest-auto-snapshots String Fixture"
+      />
+      <styled.div>
+        <Text
+          color="grayDarker"
+          hasError={false}
+          type="h3"
+        >
+          jest-auto-snapshots String Fixture
+        </Text>
+      </styled.div>
+      <Text
+        color="grayDarker"
+        hasError={false}
+        type="p"
+      >
+        jest-auto-snapshots String Fixture
+      </Text>
+    </styled.div>
+  </styled.div>
+  <styled.div>
+    <styled.div>
+      <styled.div>
+        <Button
+          disabled={false}
+          fullWidth={true}
+          hasIconOnly={false}
+          hideSearch={true}
+          iconEnd={false}
+          label="jest-auto-snapshots String Fixture"
+          loading={false}
+          onClick={[Function]}
+          onOpen={null}
+          selectPosition="bottom"
+          size="large"
+          type="primary"
+        />
+      </styled.div>
+    </styled.div>
+    <Text
+      color="grayDarker"
+      hasError={false}
+      type="p"
+    >
+      jest-auto-snapshots String Fixture
+    </Text>
+  </styled.div>
+</styled.div>
+`;

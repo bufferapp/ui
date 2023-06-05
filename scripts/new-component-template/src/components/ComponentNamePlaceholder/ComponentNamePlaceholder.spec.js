@@ -4,4 +4,4 @@ import 'jest-styled-components'
 
 import ComponentNamePlaceholder from './ComponentNamePlaceholder'
 
-snap(ComponentNamePlaceholder, './ComponentNamePlaceholder.jsx')
+snap(ComponentNamePlaceholder, './ComponentNamePlaceholder.tsx')

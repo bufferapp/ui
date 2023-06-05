@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`jest-auto-snapshots > States Matches snapshot when passed all props 1`] = `
+<Context.Provider
+  value="small"
+>
+  <styled.div>
+    <NodeFixture />
+  </styled.div>
+</Context.Provider>
+`;
+
+exports[`jest-auto-snapshots > States Matches snapshot when passed only required props 1`] = `
+<Context.Provider
+  value="large"
+>
+  <styled.div>
+    <NodeFixture />
+  </styled.div>
+</Context.Provider>
+`;
