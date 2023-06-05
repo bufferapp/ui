@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "7.38.6-beta.4ac29864",
+  "version": "8.0.0",
   "private": true,
   "description": "Shared UI components for buffer apps",
   "keywords": [
