@@ -10,7 +10,7 @@ process.on('unhandledRejection', (err) => {
 })
 
 // Ensure environment variables are read.
-require('../config/env')
+require('./config/env')
 
 const path = require('path')
 const chalk = require('chalk')
@@ -23,8 +23,8 @@ const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages')
 const printHostingInstructions = require('react-dev-utils/printHostingInstructions')
 const FileSizeReporter = require('react-dev-utils/FileSizeReporter')
 const printBuildError = require('react-dev-utils/printBuildError')
-const config = require('../config/webpack.config.prod')
-const paths = require('../config/paths')
+const config = require('./config/webpack.config.prod')
+const paths = require('./config/paths')
 
 const { measureFileSizesBeforeBuild } = FileSizeReporter
 const { printFileSizesAfterBuild } = FileSizeReporter

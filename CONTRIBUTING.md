@@ -190,7 +190,7 @@ $ yarn gen:icons
 
 **Note**: ESLint Fix is applied as a part of this process, so make sure you've got its [CLI](https://eslint.org/docs/user-guide/command-line-interface) installed
 
-To help you out the script will automatically check the `lastModified` time on the Figma file and compare it what's in the [local icon cache](/config/cachedIconData.json). If the Figma file is newer, it'll pull down the new data, otherwise it'll build the icons based on the cache.
+To help you out the script will automatically check the `lastModified` time on the Figma file and compare it what's in the [local icon cache](/scripts/config/cachedIconData.json). If the Figma file is newer, it'll pull down the new data, otherwise it'll build the icons based on the cache.
 
 Once the icons are generated you can commit and push them as you would any other code changes.
 
