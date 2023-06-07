@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "8.3.0",
+  "version": "8.4.0",
   "private": true,
   "description": "Shared UI components for buffer apps",
   "keywords": [
@@ -194,7 +194,7 @@
     "webpack": "^4.41.5",
     "webpack-bundle-analyzer": "^4.6.1",
     "webpack-dev-server": "^3.11.0",
-    "webpack-manifest-plugin": "5.0.0",
+    "webpack-manifest-plugin": "2.0.4",
     "workbox-webpack-plugin": "3.6.3"
   },
   "engines": {
