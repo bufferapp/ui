@@ -1,9 +1,14 @@
-import styled, { css } from 'styled-components'
+import styled, { css, FlattenSimpleInterpolation } from 'styled-components'
 import { yellowDarker } from '../style/colors'
 import { fontWeightBold, fontFamily } from '../style/fonts'
 
-// @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
-const getImageCss = ({ size, type = 'default' }) =>
+const getImageCss = ({
+  size,
+  type = 'default',
+}: {
+  size: number
+  type?: string
+}) =>
   css`
     width: ${size}px;
     height: ${size}px;
@@ -32,8 +37,11 @@ export const image = {
   },
 }
 
-// @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
-const getWrapperCss = ({ size }) =>
+const getWrapperCss = ({
+  size,
+}: {
+  size: number
+}): FlattenSimpleInterpolation =>
   css`
     position: relative;
     width: ${size}px;
@@ -46,8 +54,7 @@ export const wrapper = {
   large: getWrapperCss({ size: 48 }),
 }
 
-// @ts-expect-error TS(7031) FIXME: Binding element 'size' implicitly has an 'any' typ... Remove this comment to see the full error message
-const getObjectCss = ({ size }) =>
+const getObjectCss = ({ size }: { size: number }): FlattenSimpleInterpolation =>
   css`
     border-radius: 100%;
     width: ${size}px;
@@ -60,24 +67,20 @@ export const object = {
   large: getObjectCss({ size: 48 }),
 }
 
-export const SocialIconWrapper = styled.div`
+export const SocialIconWrapper = styled.div<{ bgColor?: string; size: string }>`
   position: absolute;
   bottom: 0;
   right: 0;
   width: 16px;
   height: 16px;
   border-radius: 100%;
-  background: ${(props): string => (props.  
-// @ts-expect-error TS(2551) FIXME: Property 'bgColor' does not exist on type 'ThemedS... Remove this comment to see the full error message
-bgColor ? props.bgColor : '#777')};
+  background: ${(props): string => (props.bgColor ? props.bgColor : '#777')};
   display: flex;
   justify-content: center;
   align-items: center;
 
   transform: translateX(8px)
-    translateY(${(props): string => (props.    
-// @ts-expect-error TS(2339) FIXME: Property 'size' does not exist on type 'ThemedStyl... Remove this comment to see the full error message
-size === 'small' ? '0' : '-2')}px);
+    translateY(${(props): string => (props.size === 'small' ? '0' : '-2')}px);
 `
 
 export const StartPageIcon = styled.span`
