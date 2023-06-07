@@ -3,6 +3,7 @@ node_modules/
 config/
 coverage/
 lib/
+dist/
 types/
 # Generated component data
 /src/documentation/config/componentData.json
