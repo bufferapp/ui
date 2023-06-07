@@ -5,6 +5,8 @@ import * as Styles from './style'
 import { gray, white } from '../style/colors'
 
 class Tooltip extends React.Component {
+  tooltipWrapper: any = null
+
   // @ts-expect-error TS(7006) FIXME: Parameter 'props' implicitly has an 'any' type.
   constructor(props) {
     super(props)
@@ -26,11 +28,10 @@ class Tooltip extends React.Component {
 
   setTooltipPosition() {
     // Getting the first child width to calculate Tooltip position
-    // @ts-expect-error TS(2339) FIXME: Property 'tooltipWrapper' does not exist on type '... Remove this comment to see the full error message
     if (this.tooltipWrapper) {
-      // @ts-expect-error TS(2339) FIXME: Property 'tooltipWrapper' does not exist on type '... Remove this comment to see the full error message
-      const childWidth = this.tooltipWrapper.children[0].children[0].getBoundingClientRect()
-        .width
+      const childWidth =
+        this.tooltipWrapper.children[0].children[0].getBoundingClientRect()
+          .width
       this.setState({
         childWidth,
       })
@@ -134,7 +135,6 @@ class Tooltip extends React.Component {
     return (
       <React.Fragment>
         {renderTooltip ? (
-          // @ts-expect-error TS(2339) FIXME: Property 'tooltipWrapper' does not exist on type '... Remove this comment to see the full error message
           <Styles.TooltipWrapper ref={(node) => (this.tooltipWrapper = node)}>
             <Styles.TooltipStyled
               label={this.renderLabel(label, hotkey, customLabel)}
