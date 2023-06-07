@@ -16,7 +16,7 @@ echo -e $BLUE"Publishing a new" $newVersion "version"$NC
 git checkout main && \
 yarn version --$newVersion && \
 yarn build:lib && \
-cd ./lib && \
+cd ./dist && \
 yarn publish && \
 cd ../ &&\
 git push --follow-tags &&\

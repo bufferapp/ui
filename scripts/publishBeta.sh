@@ -20,5 +20,5 @@ echo -e $BLUE"Publishing a new" ${betaVersion} "version"$NC
 
 yarn version --new-version $betaVersion --no-git-tag-version && \
 yarn run build:lib && \
-cd ./lib && \
+cd ./dist && \
 yarn publish --tag=beta

@@ -1,6 +1,6 @@
 {
   "name": "@bufferapp/ui-template",
-  "version": "8.5.0",
+  "version": "8.5.0-beta.a864afad",
   "private": true,
   "description": "Shared UI components for buffer apps",
   "keywords": [
@@ -23,18 +23,18 @@
     "email": "ivanas.zuber@gmail.com",
     "url": "https://github.com/ivanaszuber"
   },
-  "main": "./lib/index.js",
+  "main": "./dist/index.js",
   "types": "./types/index.d.ts",
   "files": [
-    "lib",
+    "dist",
     "types"
   ],
   "scripts": {
-    "prebuild:lib": "rimraf lib && yarn build:typescript",
+    "prebuild:lib": "rimraf dist && yarn build:typescript",
     "prebuild:typescript": "node -p \"'export const LIB_VERSION = ' + JSON.stringify(require('./package.json').version)\" > src/documentation/version.ts && eslint --fix src/documentation/version.ts",
     "build:typescript": "rm -Rf built && tsc -p ./tsconfig.json && cp -Rf ./src/documentation/markdown ./built/documentation && cp -Rf ./src/index.css ./built",
     "build:lib": "concurrently 'yarn run build:commonjs' 'yarn run build:copy-files'",
-    "build:commonjs": "cross-env NODE_ENV=production babel ./built/components --out-dir ./lib --ignore index.js",
+    "build:commonjs": "cross-env NODE_ENV=production babel ./built/components --out-dir ./dist --ignore index.js",
     "build:copy-files": "node scripts/copyBuildFiles.js",
     "deploy:docs": "gh-pages -d build",
     "predeploy:docs": "yarn gen:docs && yarn build:typescript && yarn build:docs",

@@ -4,7 +4,7 @@ const fse = require('fs-extra')
 const files = ['README.md', 'LICENSE', 'types']
 
 function resolveBuildPath(file) {
-  return path.resolve(__dirname, '../lib/', path.basename(file))
+  return path.resolve(__dirname, '../dist/', path.basename(file))
 }
 
 function copyFile(file) {
@@ -68,7 +68,7 @@ function createPackageFile() {
       }
 
       return new Promise((resolve) => {
-        const libPath = path.resolve(__dirname, '../lib/package.json')
+        const libPath = path.resolve(__dirname, '../dist/package.json')
         const data = JSON.stringify(minimalPackage, null, 2)
         // Write to a new package.json file
         fse.writeFile(libPath, data, (err) => {

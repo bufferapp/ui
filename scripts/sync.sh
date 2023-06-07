@@ -12,6 +12,6 @@ fi
 
 yarn build:lib &&\
   # remove spec and test files
-  rm ./lib/*/*.test.* &&\
-  rm ./lib/*/*.spec.* &&\
-  rsync -r ./lib/ $1
+  rm ./dist/*/*.test.* &&\
+  rm ./dist/*/*.spec.* &&\
+  rsync -r ./dist/ $1
